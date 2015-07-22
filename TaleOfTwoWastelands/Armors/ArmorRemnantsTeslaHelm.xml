@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="00134094">ArmorRemnantsTeslaHelm</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorRemnantsTeslaHelm</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-11</X>
+        <Y>-14</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>10</X>
+        <Y>12</Y>
+        <Z>17</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Remnants Tesla Helmet</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D333">EnchTeslaArmorHelmet</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Head, Hair, Headband, Hat, Eyeglasses, Mask</Slots>
+      <Flags>-842150624</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">armor\headgear\TeslaEkArmor\TeslaEkArmorHelm.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">armor\headgear\TeslaEkArmor\TeslaEkArmorHelm.NIF</FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">armor\headgear\TeslaEkArmor\TeslaEkArmHelmGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">armor\headgear\TeslaEkArmor\TeslaEkArmHelmGO.NIF</FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">interface\icons\pipboyimages\apparel\apparel_remnants_power_armor_helmet.dds</Male>
+        <Female Tag="ICO2">interface\icons\pipboyimages\apparel\apparel_remnants_power_armor_helmet.dds</Female>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">interface\icons\pipboyimages_small\apparel_small\glow_apperal_power_armor_helmet.dds</Male>
+        <Female Tag="MIC2">interface\icons\pipboyimages_small\apparel_small\glow_apperal_power_armor_helmet.dds</Female>
+      </Message>
+    </Icon>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>0</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>5</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>6</DamageThreshold>
+      <Unknown>AQAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

@@ -1,0 +1,47 @@
+scn RestoreEquippedItems
+
+array_var equipArray
+
+array_var entry
+
+array_var items
+
+short i
+short j
+short count
+short type
+short mods
+
+ref baseObject
+ref item
+
+begin Function { equipArray }
+
+	let i := 0
+
+	while i < ar_Size equipArray
+		let entry := equipArray[i]
+
+		let baseObject := entry[0]
+		let count := GetItemCount baseObject
+
+		if ( count > 0 )
+			let items := GetInvRefsForItem baseObject
+
+			let j := 0
+
+			while j < ar_Size items
+				let item := items[j]
+				if eval ( entry[1] == item.GetCurrentHealth )
+					item.EquipMe
+					break
+				endif			
+
+				let j += 1
+			loop
+		endif
+
+		let i += 1
+	loop
+
+end

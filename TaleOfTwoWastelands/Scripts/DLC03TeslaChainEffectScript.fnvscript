@@ -1,0 +1,223 @@
+scn DLC03TeslaChainEffectScript
+
+Short DeleteMe
+Short SearchStage
+Short SearchAngle
+Short SearchAttempt
+Short DoOnce	
+Short Init
+Float randVal
+
+;// vars for vertibird
+ref triggerActor
+
+Begin OnLoad
+	if Init == 0
+		Set SearchStage to 1
+		Set SearchAngle to 1
+		Set SearchAttempt to 1
+		Set DeleteMe to 0
+		Set DoOnce to 0
+		Set randVal to getRandomPercent * 3.6
+		SetAngle z, randVal 
+		playgroup forward 0
+		Set Init to 1
+	endif
+End
+
+;; SearchStage 2 means we have a horizontal location.  SearchStage 3 means we have a target vector to fire.
+
+Begin OnTrigger
+
+	if SearchStage == 1
+		if SearchAngle == 1
+			Playgroup FastForward 0
+		elseif SearchAngle == 2
+			Playgroup FastLeft 0
+		elseif SearchAngle == 3
+			Playgroup FastBackward 0
+		elseif SearchAngle == 4
+			Playgroup FastRight 0
+		endif
+		set SearchAttempt to 1
+		set SearchStage to 2
+	endif
+
+	if SearchStage == 2
+		if SearchAttempt != 100
+			If GetDestructionStage < 1
+				Do 50
+				Set SearchStage to 3
+			endif
+		endif
+	elseif SearchStage== 3
+;Disabled 6/30 CES		FireWeapon DLC03WeapTeslaChainEffect
+		Set SearchStage to 4
+	endIf
+End
+
+Begin GameMode
+
+;;;	Delete me if I am ever disabled
+
+	If DeleteMe == 0
+		If getDisabled == 1
+			MarkForDelete
+			set DeleteMe to 1
+		endif
+	endif
+
+;;;	We know what of the four directions, time to aim more carefully twice.
+
+	if SearchStage == 2
+		If SearchAngle == 1
+			if SearchAttempt ==1
+				If isAnimPlaying FastForward == 0
+					playgroup FastForward 0
+					Set SearchAttempt to 2
+				endif
+			elseif SearchAttempt == 2
+				If isAnimPlaying FastForward == 0
+					Set SearchAttempt to 100
+					Set DoOnce to 2
+				endif
+			endif
+		endif
+;;
+		If SearchAngle == 2
+			if SearchAttempt ==1
+				If isAnimPlaying FastLeft == 0
+					playgroup FastLeft 0
+					Set SearchAttempt to 2
+				endif
+			elseif SearchAttempt == 2
+				If isAnimPlaying FastLeft == 0
+					Set SearchAttempt to 100
+					Set DoOnce to 2
+				endif
+			endif
+		endif
+;;
+		If SearchAngle == 3
+			if SearchAttempt ==1
+				If isAnimPlaying FastBackward == 0
+					playgroup FastLeft 0
+					Set SearchAttempt to 2
+				endif
+			elseif SearchAttempt == 2
+				If isAnimPlaying FastBackward == 0
+					Set SearchAttempt to 100
+					Set DoOnce to 2
+				endif
+			endif
+		endif
+;;
+		If SearchAngle == 4
+			if SearchAttempt ==1
+				If isAnimPlaying FastRight == 0
+					playgroup FastLeft 0
+					Set SearchAttempt to 2
+				endif
+			elseif SearchAttempt == 2
+				If isAnimPlaying FastRight == 0
+					Set SearchAttempt to 100
+					Set DoOnce to 2
+				endif
+			endif
+		endif
+	endif
+	
+
+;;;   We have no target; we search the four main directions. We do this search 2 times, then we delete ourselves.
+
+	if SearchStage == 1
+		if SearchAttempt ==1
+			If SearchAngle == 1
+				If isAnimPlaying Forward == 0
+					playgroup left 0
+					Set SearchAngle to 2
+				endif
+			endif
+
+			If SearchAngle == 2
+				If isAnimPlaying left == 0
+					playgroup backward 0
+					Set SearchAngle to 3
+				endif
+			endif
+
+			If SearchAngle == 3
+				If isAnimPlaying Backward == 0
+					playgroup right 0
+					Set SearchAngle to 4
+				endif
+			endif
+
+			If SearchAngle == 4
+				If isAnimPlaying Right == 0
+					playgroup Forward 0
+					Set SearchAngle to 1
+					Set SearchAttempt to 5
+				endif
+			endif
+		endif
+;;
+		if SearchAttempt ==5
+			If SearchAngle == 1
+				If isAnimPlaying Forward == 0
+					playgroup left 0
+					Set SearchAngle to 2
+				endif
+			endif
+
+			If SearchAngle == 2
+				If isAnimPlaying left == 0
+					playgroup backward 0
+					Set SearchAngle to 3
+				endif
+			endif
+
+			If SearchAngle == 3
+				If isAnimPlaying Backward == 0
+					playgroup right 0
+					Set SearchAngle to 4
+				endif
+			endif
+
+			If SearchAngle == 4
+				If isAnimPlaying Right == 0
+					playgroup Forward 0
+					Set SearchAngle to 1
+					Set SearchAttempt to 6
+					Set DoOnce to 2
+				endif
+			endif
+		endif
+	EndIf
+
+	If DoOnce == 2
+		Disable
+		set DoOnce to 3
+	endif
+
+	if DoOnce == 3
+		set DeleteMe to 1
+		MarkForDelete
+	endif
+End
+
+;///////////////////////////////////////////////////////
+;// VERTIBIRD EXPLOSION STUFF
+;////////////////////////////////////////////////////////
+BEGIN ONTRIGGERENTER
+
+	;// store who triggered us
+	set triggerActor to getActionRef
+	
+	;// if its in the vertibird list, blow it up!
+	IF triggerActor.isInList DLC03TeslaExplosionList
+			triggerActor.do 50000
+			IncrementScriptedChallenge TTWDLC03ChallengeVertibird				
+	ENDIF
+
+END

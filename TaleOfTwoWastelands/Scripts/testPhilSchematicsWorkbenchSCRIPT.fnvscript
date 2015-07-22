@@ -1,0 +1,391 @@
+scn testPhilSchematicsWorkbenchSCRIPT
+
+;workbench to create customized weapons
+; 1. Which schematics does the player have? Display as buttons.
+; 2. If has items needed to create, do it; otherwise display "error" message
+
+
+short HasItems
+short Button
+
+short item1
+short item2
+short item3
+short item4
+
+float weaponCondition		; calculate what condition the weapon is at when created
+
+; how many of these weapons has the player made? 
+;short countBottlecap
+;short countDartGun
+;short countDeathclaw
+;short countNuka
+;short countRailway
+;short countRockit
+;short countShishkebab 
+
+Begin OnActivate
+	if IsActionRef player == 1
+		; display message box of possible weapons
+		set HasItems to 0
+
+		if GetHasNote SchematicsBottlecapMineNote == 1  || GetHasNote SchematicsDartGunNote == 1  || GetHasNote SchematicsDeathclawGauntletNote == 1
+			set HasItems to 1
+		endif
+		if GetHasNote SchematicsNukaCocktailNote == 1  || GetHasNote SchematicsRailwayRifleNote == 1  || GetHasNote SchematicsRockitLauncherNote == 1  || GetHasNote SchematicsShishkebabNote == 1
+			set HasItems to 1
+		endif
+		if GetHasNote SchematicsBottlecapMineNote10 == 1  || GetHasNote SchematicsDartGunNote10 == 1  || GetHasNote SchematicsDeathclawGauntletNote10 == 1
+			set HasItems to 1
+		endif
+		if GetHasNote SchematicsNukaCocktailNote10 == 1  || GetHasNote SchematicsRailwayRifleNote10 == 1  || GetHasNote SchematicsRockitLauncherNote10 == 1  || GetHasNote SchematicsShishkebabNote10 == 1
+			set HasItems to 1
+		endif
+		if GetHasNote SchematicsBottlecapMineNote20 == 1  || GetHasNote SchematicsDartGunNote20 == 1  || GetHasNote SchematicsDeathclawGauntletNote20 == 1 || GetHasNote SchematicsRockitLauncherNote30 == 1
+			set HasItems to 1
+		endif
+		if GetHasNote SchematicsNukaCocktailNote20 == 1  || GetHasNote SchematicsRailwayRifleNote20 == 1  || GetHasNote SchematicsRockitLauncherNote20 == 1  || GetHasNote SchematicsShishkebabNote20 == 1
+			set HasItems to 1
+		endif
+
+		if HasItems == 1
+			ShowMessage SchematicsWorkbenchMsg
+		else
+			ShowMessage SchematicsWorkbenchNoneMsg
+		endif
+	endif
+
+End
+
+Begin GameMode
+
+	set Button to GetButtonPressed
+
+	if ( Button >0 )
+		; base condition is just repair skill
+		set weaponCondition to (player.getav Repair)/100 
+
+		if button == 1
+			; bottlecap mine
+			; 1. check for schematics
+			if GetHasNote SchematicsBottlecapMineNote == 0 && GetHasNote SchematicsBottlecapMineNote10 == 0 && GetHasNote SchematicsBottlecapMineNote20 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				; 2. check for components
+				if ( player.GetItemCount LunchBox > 0 ) && ( player.GetItemCount CherryBomb > 0 ) && ( player.GetItemCount SensorModule > 0 ) && ( player.GetItemCount Caps001 >= 10 )
+					; 3. make it
+					ShowMessage SchematicsWorkbenchSuccessBottlecapMsg
+					player.RemoveItem LunchBox 1 1
+					player.RemoveItem CherryBomb 1 1
+					player.RemoveItem SensorModule 1 1
+					player.RemoveItem Caps001 10 1
+					; Mines and Grenades are always 100%
+					if player.gethasNote SchematicsBottlecapMineNote
+						player.AddItemHealthPercent WeapMineBottlecap 1 100
+					elseif player.gethasNote SchematicsBottlecapMineNote10
+						player.AddItemHealthPercent WeapMineBottlecap 2 100
+					elseif player.gethasNote SchematicsBottlecapMineNote20
+						player.AddItemHealthPercent WeapMineBottlecap 3 100
+					endif
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countBottlecap to countBottlecap + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					; 4. failure message
+					set item1 to player.GetItemCount LunchBox 
+					set item2 to player.GetItemCount CherryBomb 
+					set item3 to player.GetItemCount SensorModule 
+					set item4 to player.GetItemCount Caps001 
+
+					ShowMessage SchematicsWorkbenchFailureBottlecapMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 2
+			; dart gun
+			; 1. check for schematics
+			if GetHasNote SchematicsDartGunNote == 0 && GetHasNote SchematicsDartGunNote10 == 0 && GetHasNote SchematicsDartGunNote20 == 0 
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				;2. check for components
+				if ( player.GetItemCount PaintGun > 0 ) && ( player.GetItemCount RadscorpionPoisonGland > 0 ) && ( player.GetItemCount ToyCar > 0 ) && ( player.GetItemCount SurgicalTubing > 0 )
+					;3. make it
+					;message "Dart Gun created."
+					ShowMessage SchematicsWorkbenchSuccessDartGunMsg
+					player.RemoveItem PaintGun 1 1
+					player.RemoveItem RadscorpionPoisonGland 1 1
+					player.RemoveItem ToyCar 1 1
+					player.RemoveItem SurgicalTubing 1 1
+					; calculate condition
+					set weaponCondition to (weaponCondition * countDartGunBonus)
+					if weaponCondition > 100
+						set weaponCondition to 100
+					endif
+					player.AddItemHealthPercent WeapDartGun 1 weaponCondition
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countDartgun to countDartgun + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					;failure message
+					set item1 to player.GetItemCount PaintGun 
+					set item2 to player.GetItemCount RadscorpionPoisonGland
+					set item3 to player.GetItemCount ToyCar 
+					set item4 to player.GetItemCount SurgicalTubing 
+					ShowMessage SchematicsWorkbenchFailureDartGunMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 3
+			; deathclaw gauntlet
+			; 1. check for schematics
+			if GetHasNote SchematicsDeathclawGauntletNote == 0 && GetHasNote SchematicsDeathclawGauntletNote10 == 0 && GetHasNote SchematicsDeathclawGauntletNote20 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				; 2. check for components
+				if ( player.GetItemCount WonderGlue > 0 ) && ( player.GetItemCount DeathclawHand > 0 ) && ( player.GetItemCount LeatherBelt > 0 ) && ( player.GetItemCount MedicalBrace > 0 )
+					; 3. make it
+					;message "Deathclaw Gauntlet created."
+					ShowMessage SchematicsWorkbenchSuccessDeathclawMsg
+					player.RemoveItem WonderGlue 1 1
+					player.RemoveItem DeathclawHand 1 1
+					player.RemoveItem LeatherBelt 1 1
+					player.RemoveItem MedicalBrace 1 1
+					; calculate condition
+					set weaponCondition to (weaponCondition * countDeathclawBonus)
+					if weaponCondition > 100
+						set weaponCondition to 100
+					endif
+					player.AddItemHealthPercent WeapDeathclawGauntlet 1 weaponCondition
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countDeathclaw to countDeathclaw + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					; 4. failure message
+					set item1 to player.GetItemCount WonderGlue
+					set item2 to player.GetItemCount DeathclawHand 
+					set item3 to player.GetItemCount LeatherBelt 
+					set item4 to player.GetItemCount MedicalBrace 
+
+					ShowMessage SchematicsWorkbenchFailureDeathclawMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 4
+			; nuka grenade
+			; 1. check for schematics
+			if GetHasNote SchematicsNukaCocktailNote == 0 && GetHasNote SchematicsNukaCocktailNote10 == 0 && GetHasNote SchematicsNukaCocktailNote20 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				; 2. check for components
+				if ( player.GetItemCount MS05NukaColaQtm > 0 ) && ( player.GetItemCount TinCan01 > 0 ) && ( player.GetItemCount Turpentine > 0 ) && ( player.GetItemCount AbraxoCleaner > 0 )
+					; 3. make it
+					;message "Nuka Cocktail created."
+					ShowMessage SchematicsWorkbenchSuccessNukaCocktailMsg
+					player.RemoveItem MS05NukaColaQtm 1 1
+					player.RemoveItem TinCan01 1 1
+					player.RemoveItem Turpentine 1 1
+					player.RemoveItem AbraxoCleaner 1 1
+					; Mines and Grenades are always 100%
+					if player.gethasNote SchematicsNukaCocktailNote
+						player.AddItemHealthPercent WeapNukaCocktail 1 100
+					elseif player.gethasNote SchematicsNukaCocktailNote10
+						player.AddItemHealthPercent WeapNukaCocktail 2 100
+					elseif player.gethasNote SchematicsNukaCocktailNote20
+						player.AddItemHealthPercent WeapNukaCocktail 3 100
+					endif
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countNuka to countNuka + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					; 4. failure message
+					set item1 to player.GetItemCount MS05NukaColaQtm
+					set item2 to player.GetItemCount TinCan01
+					set item3 to player.GetItemCount Turpentine 
+					set item4 to player.GetItemCount AbraxoCleaner 
+
+					ShowMessage SchematicsWorkbenchFailureNukaCocktailMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 5
+			; railway rifle
+			; 1. check for schematics
+			if GetHasNote SchematicsRailwayRifleNote == 0 && GetHasNote SchematicsRailwayRifleNote10 == 0 && GetHasNote SchematicsRailwayRifleNote20 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				; 2. check for components
+				if ( player.GetItemCount Crutch > 0 ) && ( player.GetItemCount SteamGaugeAssembly > 0 ) && ( player.GetItemCount FissionBattery > 0 ) && ( player.GetItemCount PressureCooker > 0 )
+					; 3. make it
+					;message "Railway Rifle created."
+					ShowMessage SchematicsWorkbenchSuccessRailwayRifleMsg
+					player.RemoveItem Crutch 1 1
+					player.RemoveItem SteamGaugeAssembly 1 1
+					player.RemoveItem FissionBattery 1 1
+					player.RemoveItem PressureCooker 1 1
+					; calculate condition
+					set weaponCondition to (weaponCondition * countRailwayBonus)
+					if weaponCondition > 100
+						set weaponCondition to 100
+					endif
+					player.AddItemHealthPercent WeapRailwayRifle 1 weaponCondition
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countRailway to countRailway + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					; 4. failure message
+					set item1 to player.GetItemCount Crutch
+					set item2 to player.GetItemCount SteamGaugeAssembly 
+					set item3 to player.GetItemCount FissionBattery 
+					set item4 to player.GetItemCount PressureCooker 
+
+					ShowMessage SchematicsWorkbenchFailureRailwayRifleMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 6
+			; rock-it launcher
+			; 1. check for schematics
+			if GetHasNote SchematicsRockItLauncherNote == 0 && GetHasNote SchematicsRockItLauncherNote10 == 0 && GetHasNote SchematicsRockItLauncherNote20 == 0 && GetHasNote SchematicsRockItLauncherNote30 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+				; 2. check for components
+				if ( player.GetItemCount VacuumCleaner > 0 ) && ( player.GetItemCount LeafBlower > 0 ) && ( player.GetItemCount FirehoseNozzle > 0 ) && ( player.GetItemCount Conductor > 0 )
+					; 3. make it
+					;message "Rock-It Launcher created."
+					ShowMessage SchematicsWorkbenchSuccessRockItMsg
+					player.RemoveItem VacuumCleaner 1 1
+					player.RemoveItem LeafBlower 1 1
+					player.RemoveItem FirehoseNozzle 1 1
+					player.RemoveItem Conductor 1 1
+					; calculate condition
+					set weaponCondition to (weaponCondition * countRockitBonus )
+					if weaponCondition > 100
+						set weaponCondition to 100
+					endif
+					player.AddItemHealthPercent WeapRockItLauncher 1 weaponCondition
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countRockit to countRockit + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+					; 4. failure message
+					set item1 to player.GetItemCount VacuumCleaner 
+					set item2 to player.GetItemCount LeafBlower 
+					set item3 to player.GetItemCount FirehoseNozzle 
+					set item4 to player.GetItemCount Conductor 
+
+					ShowMessage SchematicsWorkbenchFailureRockItMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif		
+		elseif button == 7
+			; Shishkebab
+			; 1. check for schematics
+			if GetHasNote SchematicsShishkebabNote == 0 && GetHasNote SchematicsShishkebabNote10 == 0 && GetHasNote SchematicsShishkebabNote20 == 0
+				ShowMessage SchematicsWorkbenchFailureGenericMsg
+			else
+			; 2. check for components
+				if ( player.GetItemCount MotorcycleGasTank > 0 ) && ( player.GetItemCount PilotLight > 0 ) && ( player.GetItemCount LawnmowerBlade > 0 ) && ( player.GetItemCount MotorcycleHandbrake > 0 )
+			; 3. make it
+					;message "Shishkebab created."
+					ShowMessage SchematicsWorkbenchSuccessShishkebabMsg
+					player.RemoveItem MotorcycleGasTank 1 1
+					player.RemoveItem PilotLight 1 1
+					player.RemoveItem LawnmowerBlade 1 1
+					player.RemoveItem MotorcycleHandBrake 1 1
+					; calculate condition
+					set weaponCondition to (weaponCondition * countShishkebabBonus )
+					if weaponCondition > 100
+						set weaponCondition to 100
+					endif
+					player.AddItemHealthPercent WeapShishkebab 1 weaponCondition
+					PlaySound UIRepairWeapon
+					; increment count
+					ModPCMiscStat "Weapons Created" 1
+					set countShishkebab to countShishkebab + 1
+
+					;If the player has made one of each item, add Achievement 40
+					if countWeapAchievement == 0
+						if countBottlecap >= 1 && countDartgun >= 1 && countDeathclaw >= 1 && countNuka >= 1 && countRailway >= 1 && countRockit >= 1 && countShishkebab >= 1 
+							addachievement 40
+							set countWeapAchievement to 1
+						endif
+					endif
+
+				else
+			; 4. failure message
+					set item1 to player.GetItemCount MotorcycleGasTank 
+					set item2 to player.GetItemCount PilotLight 
+					set item3 to player.GetItemCount LawnmowerBlade
+					set item4 to player.GetItemCount MotorcycleHandbrake 
+
+					ShowMessage SchematicsWorkbenchFailureShishkebabMsg, item1, item2, item3, item4
+					ShowMessage SchematicsWorkbenchMsg
+				endif
+			endif
+		endif
+	endif	
+
+End
+
+
+

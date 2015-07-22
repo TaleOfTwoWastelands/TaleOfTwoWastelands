@@ -1,0 +1,250 @@
+ScriptName VCG01SCRIPT
+
+short bChooseSex;
+short nButton;
+short bRunTimer;
+short bGiveTest;   dialogue conditional
+float fTimer;
+
+short bBeganTest;
+
+; Doc reacts to the player's stats after he uses the vigor tester. We 
+; choose a stat with an extreme value to react to.
+; 0 = average
+; 1= low int
+; 2 = high int
+; 3 = low luck
+; 4 = high luck
+; 5 = low str
+; 6 = high str
+; 7 = low end
+; 8 = high end
+; 9 = low cha
+; 10 = high cha
+; 11 = low per
+; 12 = high per
+; 13 = low agi
+; 14 = high agi
+short nDocReaction
+
+; Stat that deviates most from 5.5 (the average value of a 1-10 scale)
+; Doc will comment on it.
+; 1 = STR
+; 2 = PER
+; 3 = END
+; 4 = CHA
+; 5 = INT
+; 6 = AGI
+; 7 = LUC
+short nMostExtremeStat; 
+short bLow; set if the most extreme stat is below 5.5
+
+; deviation from the mean of nMostExtremeStat
+float fMaxDeviation;
+float fCurrentValue;
+float fAbsCurrentValue;
+
+BEGIN menumode 1036
+	if getstage VCG01 == 36
+		setstage VCG01 40
+	endif
+END
+
+BEGIN GameMode
+
+	if bRunTimer == 1
+		if fTimer > 0
+			set fTimer to fTimer - GetSecondsPassed
+		else
+			; anywhere we need a timer
+			if getstage VCG01 == 0
+				setstage VCG01 1;
+			elseif getstage VCG01 == 1
+				setstage VCG01 3;
+			elseif getstage VCG01 == 5
+				setstage VCG01 7;
+			elseif getstage VCG01 == 7
+				setstage VCG01 8
+			elseif	getstage VCG01 == 10
+				setstage VCG01 15
+			elseif getstage VCG01 == 20
+				setstage VCG01 25
+			elseif GetStage VCG01 == 30
+				setstage VCG01 35
+			elseif GetStage VCG01 == 45
+				setstage VCG01 50
+			elseif GetStage VCG01 == 65
+; BEGIN DOC REACTION BLOCK - Doc reacts based on the player's chosen stats
+				set fCurrentValue to Player.GetActorValue Intelligence
+				set fCurrentValue to fCurrentValue - 5.5;
+				if (fCurrentValue < 0)
+					set bLow to 1;
+				else 
+					set bLow to 0;
+				endif
+				set fMaxDeviation to abs fCurrentValue;
+				set nMostExtremeStat to 5;
+		
+				set fCurrentValue to Player.GetActorValue Luck
+				set fCurrentValue to fCurrentValue - 5.5;
+
+				set fAbsCurrentValue to abs fCurrentValue;
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 7
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				set fCurrentValue to Player.GetActorValue Strength
+				set fCurrentValue to fCurrentValue - 5.5;
+
+				set fAbsCurrentValue to abs fCurrentValue;
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 1
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				set fCurrentValue to Player.GetActorValue Endurance
+				set fCurrentValue to fCurrentValue - 5.5;
+
+				set fAbsCurrentValue to abs fCurrentValue;
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 3
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				set fCurrentValue to Player.GetActorValue Charisma
+				set fCurrentValue to fCurrentValue - 5.5;
+
+				set fAbsCurrentValue to abs fCurrentValue;
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 4
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				set fCurrentValue to Player.GetActorValue Perception
+				set fCurrentValue to fCurrentValue - 5.5;
+
+				set fAbsCurrentValue to abs fCurrentValue;
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 2
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				set fCurrentValue to Player.GetActorValue Agility
+				set fCurrentValue to fCurrentValue - 5.5;
+				set fAbsCurrentValue to abs fCurrentValue;
+
+				if (fAbsCurrentValue > fMaxDeviation)
+					set fMaxDeviation to fAbsCurrentValue;
+					set nMostExtremeStat to 6				
+					if (fCurrentValue < 0)
+						set bLow to 1;
+					else 
+						set bLow to 0;
+					endif
+				endif
+		
+				; now choose the appropriate reaction based on findings
+				; he reacts to stats >= 8 or <= 2
+				if ((fMaxDeviation >= 2.5 && bLow == 0) || (fMaxDeviation >= 3.5 && bLow == 1))
+					if(bLow)
+						if (nMostExtremeStat == 1)
+							Set VCG01.nDocReaction to 5;
+						elseif (nMostExtremeStat == 2)
+							Set VCG01.nDocReaction to 11;
+						elseif (nMostExtremeStat == 3)
+							Set VCG01.nDocReaction to 7;
+						elseif (nMostExtremeStat == 4)
+							Set VCG01.nDocReaction to 9;
+						elseif (nMostExtremeStat == 5)
+							Set VCG01.nDocReaction to 1;
+						elseif (nMostExtremeStat == 6)
+							Set VCG01.nDocReaction to 13;
+						elseif (nMostExtremeStat == 7)
+							Set VCG01.nDocReaction to 3;
+						endif
+					else
+						if (nMostExtremeStat == 1)
+							Set VCG01.nDocReaction to 6;
+						elseif (nMostExtremeStat == 2)
+							Set VCG01.nDocReaction to 12;
+						elseif (nMostExtremeStat == 3)
+							Set VCG01.nDocReaction to 8;
+						elseif (nMostExtremeStat == 4)
+							Set VCG01.nDocReaction to 10;
+						elseif (nMostExtremeStat == 5)
+							Set VCG01.nDocReaction to 2;
+						elseif (nMostExtremeStat == 6)
+							Set VCG01.nDocReaction to 14;
+						elseif (nMostExtremeStat == 7)
+						Set VCG01.nDocReaction to 4;
+					endif
+				endif
+			endif	
+
+; END DOC REACTION BLOCK
+				setstage VCG01 70
+			elseif GetStage VCG01 == 78
+				setstage VCG01 79
+			elseif GetStage VCG01 == 85
+				setstage VCG01 90
+			elseif GetStage VCG01 == 90
+				setstage VCG01 95
+			elseif GetStage VCG01 == 98
+				setstage VCG01 100;
+			elseif GetStage VCG01 == 100
+				setstage VCG01 102
+			elseif GetStage VCG01 == 102
+				setstage VCG01 105
+			endif
+		endif
+	endif
+
+
+	if bChooseSex== 0 && GetStage VCG01 == 17
+		;ShowMessage VCG01ChooseSexMessage
+		;set bChooseSex to 1
+		SetStage VCG01 20
+	endif
+
+
+	if bChooseSex== 1
+		set nButton to GetButtonPressed
+		if nButton> -1
+			set bChooseSex to 2
+			if nButton== 0
+				player.sexChange male 1
+			elseif nButton== 1
+				player.sexChange female 1
+			endif
+			SetStage VCG01 20
+		endif
+	endif
+END
+
+

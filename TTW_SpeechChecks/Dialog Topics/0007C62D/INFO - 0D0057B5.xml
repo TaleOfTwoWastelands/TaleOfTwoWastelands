@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>0</Flags>
+  <FormID ID="0D0057B5">INFO - 0D0057B5</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0602A274">MS10</Reference>
+    </Quest>
+    <Topic Tag="TPIC">
+      <Reference ID="000000FD">SpeechChallengeFailure</Reference>
+    </Topic>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0607C62E">INFO - 0607C62E</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">[FAILED] I understand your hesitation, but I can assure you that no harm will befall you.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>50</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Speech</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0602A275">OasisTreeFatherBirch</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="0002A46D">MS10BirchCT07</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0002A46C">MS10BirchCT08</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0002A46B">MS10BirchCT09</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0002A474">MS10BirchCTDirect02</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I'm not helping unless I know who this guy is.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004BB">AVSpeech</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

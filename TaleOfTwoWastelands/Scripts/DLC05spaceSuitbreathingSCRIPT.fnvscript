@@ -1,0 +1,66 @@
+scn DLC05spaceSuitbreathingSCRIPT
+
+short onLoad
+
+; script controls player's breath noise when wearing space suit in zero G
+
+BEGIN gameMode
+
+	if (onLoad == 0)
+		if (player.GetInCell DLC05SpaceBridge01) && (DLC05SpaceWalkQ.breathSFXon == 1)
+			DLC05SpacesuitBreath01.enable
+		endif
+		if (player.GetInCell DLC05SpaceBridge02) && (DLC05SpaceWalkQ.breathSFXon == 1)
+			DLC05SpacesuitBreath02.enable
+		endif
+		if (player.GetInCell DLC05ExLab01) && (DLC05SpaceWalkQ.breathSFXon == 1)
+			DLC05SpacesuitBreath03.enable
+		endif
+		set onLoad to 1
+	endif
+
+	if DLC05SpaceWalkQ.breathSFXon == 0
+		if DLC05SpaceWalkQ.zeroAtmo == 1 && (player.getEquipped DLC05AstronautSuit == 1 || ((player.getEquipped ArmorNVSpaceSuit == 1) && (player.getEquipped HelmetNVSpaceSuit == 1)))
+			if (player.GetInCell DLC05SpaceBridge01)
+				DLC05SpacesuitBreath01.enable
+				DLC05SpacesuitBreath01.moveto Player
+			endif
+			if (player.GetInCell DLC05SpaceBridge02)
+				DLC05SpacesuitBreath02.enable
+				DLC05SpacesuitBreath02.moveto Player
+			endif
+			if (player.GetInCell DLC05ExLab01)
+				DLC05SpacesuitBreath03.enable
+				DLC05SpacesuitBreath03.moveto Player
+			endif
+			set DLC05SpaceWalkQ.breathSFXon to 1
+		endif
+	else
+		if player.getEquipped DLC05AstronautSuit == 0
+			if (player.GetInCell DLC05SpaceBridge01)
+				DLC05SpacesuitBreath01.disable
+			endif
+			if (player.GetInCell DLC05SpaceBridge02)
+				DLC05SpacesuitBreath02.disable
+			endif
+			if (player.GetInCell DLC05ExLab01)
+				DLC05SpacesuitBreath03.disable
+			endif
+			set  DLC05SpaceWalkQ.breathSFXon to 0
+		endif
+		if DLC05SpaceWalkQ.zeroAtmo == 0
+			if (player.GetInCell DLC05SpaceBridge01)
+				DLC05SpacesuitBreath01.disable
+			endif
+			if (player.GetInCell DLC05SpaceBridge02)
+				DLC05SpacesuitBreath02.disable
+			endif
+			if (player.GetInCell DLC05ExLab01)
+				DLC05SpacesuitBreath03.disable
+			endif
+			set  DLC05SpaceWalkQ.breathSFXon to 0
+		endif
+	endif			
+
+
+END

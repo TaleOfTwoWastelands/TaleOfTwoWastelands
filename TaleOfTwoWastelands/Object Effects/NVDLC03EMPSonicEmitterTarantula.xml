@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ENCH">
+  <Flags>0</Flags>
+  <FormID ID="030130C5">NVDLC03EMPSonicEmitterTarantula</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC03EMPSonicEmitterTarantula</EditorID>
+    <Name Tag="FULL">Electromagnetic Pulse</Name>
+    <Data Tag="ENIT">
+      <Type>Weapon</Type>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00033595">DamageHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>50</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetInFaction</Type>
+              <Faction ID="0301365D">NVDLC03RobotFaction</Faction>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetIsCreatureType</Type>
+              <CreatureType>Robot</CreatureType>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="03015213">NVDLC03PulseDisableMagicEffect</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>8</Duration>
+          <Type>Touch</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetEquipped</Type>
+              <InventoryObject ID="0016A0DE">AllPowerArmor</InventoryObject>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetIsCreatureType</Type>
+              <CreatureType>Robot</CreatureType>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00033595">DamageHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>20</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetEquipped</Type>
+              <InventoryObject ID="0016A0DE">AllPowerArmor</InventoryObject>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetInFaction</Type>
+              <Faction ID="0301365D">NVDLC03RobotFaction</Faction>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00121158">DummyNVEMPDamage</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="030130A4">NVDLC03DummyCriticalIncendiaryBE</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

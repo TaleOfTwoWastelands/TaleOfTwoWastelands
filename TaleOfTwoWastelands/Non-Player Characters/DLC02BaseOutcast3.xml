@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="07004DE6">DLC02BaseOutcast3</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02BaseOutcast3</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brotherhood Outcast</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, AutoCalcStats, PCLevelMult, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="07000E21">DLC02OutcastFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="060C58F1">DeathItemOutcast75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="07004DCA">DLC02MaleGeneric2</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0700A7A7">DLC02BaseOutcastScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06000A9E">ArmorOutcastRanged3Energy</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00BD01">Outcast3WeaponGun</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Annoyed</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0700767C">DLC02OA4Outcast3WaitAtMarker</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="06015673">BrotherhoodSoldierDC</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>7</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005DC77">HairBuzzCutF</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>18</Red>
+        <Green>19</Green>
+        <Blue>17</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">8J0lvYj1rD5gq5M+aHLKvvoeeb7AmFA+LP7JPkxbzL5ifxc/HAKhPrBoBb90NJi+sl81v8C/uj0arwy/NmDCPlApm77UphG/vPj7v1oQkr/IfKy++Kp+vXAA+b1qKP8+gOXlPRaVmT9qI4A/WM30PpC9or4wgQ7A2y/kviCRkL6XNABA8s6Nvx+YED8Upli/RKnQvyBpgz3L7l5A/l0GQJqkL8AAdC8+dAe1v7ZNqr+A4bi/AeVrQFhCOj5DnoRA6jI+wNhTGT8=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">uBKQv2CS4r0dIBo/tmi3P/u6vL46vCo/bEqevv23R79a0rK/osulP6Ctjr4Am9m9jPf4Ph65lz8IJ9E+0FQQP9oIyr6I9U4/1j/DP5/WqD9xg8E/jsPzPmSQ875BOqa/flJwP3BMTz2ZEky/vtNmPxQh/766kpS/APzzPOiogb1A3i8/leAOvyXw677kiiS/iJKkPkY97z87dM8/7ItWPwjQSD60fA0/4RITP4BNdj7EaeO9TGqDv6IhOT8/eBk/ocCDv9I16D8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

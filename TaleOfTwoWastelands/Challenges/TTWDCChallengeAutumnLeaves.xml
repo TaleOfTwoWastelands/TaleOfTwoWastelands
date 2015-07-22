@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A4">TTWDCChallengeAutumnLeaves</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDCChallengeAutumnLeaves</EditorID>
+    <Name Tag="FULL">Autumn Leaves **</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E1">TTWChallengeTwoStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Colonel Autumn with any One-Handed Energy weapon.</Description>
+    <Data Tag="DATA">
+      <Type>KillASpecificFormID</Type>
+      <Threshold>1</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>_1HandPistolEnergy</WeaponCategory>
+    </Data>
+    <Actor Tag="SNAM">
+      <Reference ID="06019A1F">ColonelAutumn</Reference>
+    </Actor>
+  </Subrecords>
+</Record>

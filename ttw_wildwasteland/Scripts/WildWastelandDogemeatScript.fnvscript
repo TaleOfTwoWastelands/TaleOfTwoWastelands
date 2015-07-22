@@ -1,0 +1,14 @@
+scn WildWastelandDogemeatScript
+
+short doonce
+
+Begin GameMode
+
+	if doonce == 0
+		if player.hasperk WildWasteland
+			DogmeatREF.SetActorFullName WildWastelandTTWDogemeat
+		endif
+		set doonce to 1
+	endif
+
+End

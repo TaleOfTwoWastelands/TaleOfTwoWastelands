@@ -1,0 +1,50 @@
+scn FortCaesarTentEntranceScript
+
+begin OnActivate
+
+	if IsActionRef player
+		if (FortPraetorianTentGuardRef.GetDead == 0 && GetStageDone VMQ02 110 == 0)
+
+			if (VNPCFollowers.ArcadeHired) && (ArcadeRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.bLilyHired) && (LilyRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.RexHired) && (RexRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player	
+			elseif (VNPCFollowers.RaulHired) && (RaulRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.bBooneHired) && (CraigBooneREF.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.bVeronicaHired) && (VeronicaREF.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.bEDEHired) && (EDE1REF.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (VNPCFollowers.bCassHired) && (RoseofSharonCassidyREF.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.CharonHired) && (CharonRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.DogmeatHired) && (DogmeatRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.ButchHired) && (ButchRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.CloverHired) && (CloverRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.JerichoHired) && (JerichoRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.FawkesHired) && (MQ08FawkesRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.RL3Hired) && (RL3REF.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			elseif (Followers.StarPaladinCrossHired) && (StarPaladinCrossRef.Waiting == 0)
+				FortPraetorianTentGuardRef.StartConversation player
+			else
+				Activate
+			endif
+		else
+			Activate
+		endif
+	elseif ( IsActionRef CraigBooneREF || IsActionRef VeronicaREF || IsActionREF RexREF || IsActionRef LilyREF || IsActionRef ArcadeREF || IsActionRef RaulREF || IsActionRef EDE1Ref || IsActionRef EDE2Ref || IsActionRef EDE3Ref || IsActionRef CharonRef || IsActionRef DogmeatRef || IsActionRef ButchRef || IsActionRef CloverRef || IsActionRef JerichoRef || IsActionRef MQ08FawkesRef || IsActionRef RL3REF || IsActionRef StarPaladinCrossRef)
+		Activate;
+	endif
+
+end

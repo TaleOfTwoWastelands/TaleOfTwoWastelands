@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="09000805">DLC03EnclaveTower</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03EnclaveTower</EditorID>
+    <Name Tag="FULL">Satellite Control Tower</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>48</Red>
+          <Green>48</Green>
+          <Blue>54</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>46</Red>
+          <Green>68</Green>
+          <Blue>75</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>128</Near>
+        <Far>5000</Far>
+        <ClipDistance>5000</ClipDistance>
+        <Power>0.600000024</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0008F58B">EnclaveLightingTemplate01</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="00084457">EnclaveImageSpace01</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="09006FE7">DLC03AdamsAFBEncZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0609AF4A">IntEnclaveDefault</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090907">DefaultDungeon</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

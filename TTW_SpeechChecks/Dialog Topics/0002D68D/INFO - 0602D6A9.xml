@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0602D6A9">INFO - 0602D6A9</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0603D204">MS13Slaves</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0602D6A8">INFO - 0602D6A8</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Fear</Emotion>
+          <EmotionValue>100</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Good luck...</ResponseText>
+        <ScriptNotes Tag="NAM2">afraid and about to die</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>100</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Hey!... I think it worked!</ResponseText>
+        <ScriptNotes Tag="NAM2">relieved</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetInFaction</Type>
+          <Faction ID="000448D1">MS13CanMez</Faction>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>50</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Science</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>50</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetRandomPercent</Type>
+          <UnusedArg1>AAAAAA==</UnusedArg1>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>10</ReferenceCount>
+          <CompiledSize>177</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">gBEFAAEAcgIAgBEFAAEAcgMAfxEKAAIAcgQAbgAAAAAWABMABQAPACBYLxAFAAEAcgUAIDAgPhUACgByBgBzIQACACAxUhAKAAIAcgUAbgEAAAAWABcAAQATACByAQBYLxAFAAEAcgcAIDAgPT0cAAEAAhAKAAIAcgcAbgEAAAAZAAAAFwACAAMAUhAKAAIAcggAbgEAAAAEEgUAAQBHCQBfEAgAAgByAQByCgAZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">RemoveFromFaction SlaveFaction
+RemoveFromFaction ParadiseFallsSlaveFaction
+AddToFaction FreedSlaveFaction 0
+if getItemCount MS13Collar &gt; 0
+; MS13 slave
+  set MS13Slaves.playerRemovedCollar to 1
+  removeItem MS13Collar 1
+  if player.getItemCount MS13CollarMiscObj == 0
+    player.addItem MS13CollarMiscObj 1
+  endif
+else
+; generic slave
+  removeItem SlaveCollar 1
+  RewardKarma FreeSlaveKarma
+  SendAssaultAlarm Player SlaverFaction
+endif</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0002F560">SlaveFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000389DE">ParadiseFallsSlaveFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0002F561">FreedSlaveFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0003D1FE">MS13Collar</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0603D204">MS13Slaves</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00022FF0">MS13CollarMiscObj</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0002F563">SlaveCollar</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0002F7A6">FreeSlaveKarma</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00028D95">SlaverFaction</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Huh. There's like, four extra wires in here.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004B8">AVScience</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

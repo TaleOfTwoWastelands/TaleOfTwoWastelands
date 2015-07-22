@@ -1,0 +1,141 @@
+ScriptName DLC05HomingBeaconScript
+
+Short DoOnce
+
+float timer
+
+
+Begin OnActivate
+
+	if ( IsActionRef Player == 1 )
+		Set DLC05Post.DLC05PQTeleport to 1
+		DisablePlayerControls
+
+
+
+		if ( JerichoRef.HasBeenHired == 1 )
+			set JerichoRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( CharonRef.HasBeenHired == 1 )
+			set CharonRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( DogmeatRef.HasBeenHired == 1 )
+			set DogmeatRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( ButchRef.HasBeenHired == 1 )
+			set ButchRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( CloverRef.HasBeenHired == 1 )
+			set CloverRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( RL3Ref.HasBeenHired == 1 )
+			set RL3Ref.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( MQ08FawkesRef.HasBeenHired == 1 )
+			set MQ08FawkesRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( StarPaladinCrossRef.HasBeenHired == 1 )
+			set StarPaladinCrossRef.Waiting to 1
+			set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.bBooneHired == 1 )
+			set CraigBooneREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.bCassHired == 1 )
+			set RoseofSharonCassidyREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.bVeronicaHired == 1 )
+			set VeronicaREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.bLilyHired == 1 )
+			set LilyREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.RaulHired == 1 )
+			set RaulREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.ArcadeHired == 1 )
+			set ArcadeREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+		if ( vNPCFollowers.bEDEHired == 1 )
+			if EDE1Ref.GetDisabled == 0
+				set EDE1Ref.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			elseif EDE2Ref.GetDisabled == 0
+				set EDE2Ref.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			elseif EDE3Ref.GetDisabled == 0
+				set EDE3Ref.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+		endif
+		if ( vNPCFollowers.RexHired == 1 )
+			set RexREF.Waiting to 1
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+		endif
+
+
+
+		set timer to 3
+	else
+		;do nothing
+	endif
+
+End
+
+Begin GameMode
+
+	if ( DLC05Post.DLC05PQTeleport == 1 )
+		DLC05TeleporterWastelandToShip.Playgroup Forward 1
+		if ( DoOnce == 0 )
+			set DoOnce to 1
+		endif
+		set DLC05Post.DLC05PQTeleport to 2
+	elseif ( DLC05Post.DLC05PQTeleport == 2 )
+		if ( timer <= 0 )
+			set DLC05Post.DLC05PQTeleport to 3
+			if ( RadioGalaxyNewsRef01.GetDisabled == 0 )
+				RadioGalaxyNewsRef01.Disable
+			endif
+			if ( RadioGalaxyNewsRef02.GetDisabled == 0 )
+				RadioGalaxyNewsRef02.Disable
+			endif
+			if ( MS16Vault101ExternalRadioREF.GetDisabled == 0 )
+				set DLC05Post.DLC05PQMS16Check to 1
+				MS16Vault101ExternalRadioREF.Disable
+			endif
+			RadioEnclaveRef.Disable
+			if ( MS17RadioRef.GetDisabled == 0 )
+				MS17RadioRef.Disable
+			endif
+	
+			PipBoyRadioOff
+
+			IMOD DLC05TeleportInISFX
+			DLC05TeleporterWastelandToShip.Activate Player
+		else
+			set timer to ( timer - GetSecondsPassed )
+		endif
+	endif
+
+	if ( DoOnce == 1 )
+		if ( IsAnimPlaying Forward == 0 )
+			if ( IsAnimPlaying SpecialIdle == 0 )
+				PlayGroup SpecialIdle 1	
+			endif
+		endif
+	endif
+
+End

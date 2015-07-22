@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="0006F590">MS10BarkskinSpell</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS10BarkskinSpell</EditorID>
+    <Name Tag="FULL">Barkskin</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

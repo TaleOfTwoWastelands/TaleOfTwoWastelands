@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="00027DED">CaravanHoffBrahmin</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CaravanHoffBrahmin</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-40</X>
+        <Y>-80</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>40</X>
+        <Y>80</Y>
+        <Z>80</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Hoff's Pack Brahmin</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Brahmin\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>brahminpack.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAnu6QdiuZgQdm5pB2K+mBB2bmkadD6FZlbu3wli/ngJR25fCWIDeQlHbmkadD6FZlbz3wli/ngJR3NfCWIDeQlHbmkadD6FZlbu6QtwsjFoV25pC3C3MWhXbmkedEX4IxTu3w1wdyWyQG5fDXB8JbJAbmkedEX4IxTz3w1wdyWyQHNfDXB8JbJAbmkedEX4IxSxsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, PCLevelMult, CannotOpenDoors, TiltFrontBack</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1250</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>20</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseActorEffectList, UseAIData, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021472">BrahminFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005FF9F">AnimalFriendFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00065374">TraderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009D413">DeathItemBrahmin100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0001CFA2">CrBrahmin</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="0602D588">CaravanDocHoffBrahminSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06027DEF">CaravanHoffBrahminFollow</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000200D5">DefaultStayAtEditorLocation</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedAnimal</CreatureType>
+      <Skill>
+        <Combat>10</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>100</Health>
+      <Damage>8</Damage>
+      <Strength>5</Strength>
+      <Perception>3</Perception>
+      <Endurance>10</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">32</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A371">CSBrahmin</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00015833">BrahminBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">11.0500002</TurningSpeed>
+    <BaseScale Tag="BNAM">1.25</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000A9268">AudioTemplateBrahminPack</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007DB64">NPCHandtoHandDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

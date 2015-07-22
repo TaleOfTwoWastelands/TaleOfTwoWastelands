@@ -1,0 +1,13 @@
+ScriptName VPreorderCaravanSCRIPT
+
+BEGIN GameMode
+	if (VDLCPackQuest.bCaravanItemsGiven == 0) && ((GetQuestCompleted VCG01 == 1) || (GetQuestCompleted CG04 == 1))
+		ShowMessage PreorderMessageInventoryCaravan;
+		Player.AddItem PreordArmorLeather 1;
+		Player.AddItem WeapPreordCaravanShotgun 1;
+		Player.AddItem Ammo20Ga 40
+		Player.AddItem NVRepairKit 4;
+		Player.AddItem WeapNVBinoculars 1;
+		set VDLCPackQuest.bCaravanItemsGiven to 1;
+	endif
+END

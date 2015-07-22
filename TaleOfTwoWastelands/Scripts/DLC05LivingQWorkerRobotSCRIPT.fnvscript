@@ -1,0 +1,82 @@
+scn DLC05LivingQWorkerRobotSCRIPT
+
+short unconOnce
+float sciSkill
+
+;// messagebox vals
+short menuSelect
+short button
+short walkingBomb
+
+BEGIN ONLOAD
+
+	;// first time we load, set unconscious
+	IF ( unconOnce == 0 )
+		set unconOnce to 1
+		setUnconscious 1
+		set sciSkill to 50
+
+	ENDIF
+
+END
+
+BEGIN ONACTIVATE
+
+	;// if the player can activate it
+	IF ( getUnconscious == 1 )
+		IF ( getActionRef == player && player.getAV Science >= 50 )
+			showMessage DLC05InteractLQWorkerRobotMsg
+			set menuSelect to 1
+		ELSE
+			showMessage DLC05InteractLowSkillScienceMsg, sciSkill
+
+		ENDIF
+	ELSE
+		activate
+
+	ENDIF
+
+END
+
+BEGIN GAMEMODE
+
+	;////////////
+	;// check for the player's menu input
+	;////////////
+	IF ( menuSelect == 1 )
+		set button to getButtonPressed
+		
+		IF ( button > - 1 )
+			set menuSelect to 0
+
+			;// activate the robot
+			IF ( button == 0 )
+				setUnconscious 0
+				EVP
+
+			;// make the robot an ally
+			ELSEIF ( button == 1 )
+				addToFaction playerFaction 5
+				removeFromFaction robotFaction
+				removeFromFaction DLC05RobotFaction
+				EVP
+
+			;// exit
+			ELSEIF ( button == 2 )
+				set menuSelect to 0
+
+			ENDIF
+		ENDIF
+	ENDIF
+END
+
+BEGIN ONHIT
+
+	;// the walking bomb check!	
+	IF ( walkingBomb == 1 && getHealthPercentage <= .1 )
+		kill player
+		placeAtMe MinePlasmaExplosion 1
+		set walkingBomb to -1
+	ENDIF		
+
+END

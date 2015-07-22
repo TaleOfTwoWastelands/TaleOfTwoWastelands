@@ -1,0 +1,126 @@
+scn DLC05AlienControllerSCRIPT
+
+;// menu vars
+short menuSelect
+short button
+
+;// turret variables
+ref linkedTurret
+short turretAttached
+
+;// overload timer vars
+float overloadTimer
+short overloadSeq
+
+;// the science skill needed
+float skillLevel
+
+BEGIN ONLOAD
+
+	set linkedTurret to getLinkedRef
+	set overloadTimer to 0
+	set overloadSeq to 0
+
+	;// get the attached turret to see which menu we throw out
+	IF ( linkedTurret.getIsCreatureType 6 == 1 && linkedTurret.getDead == 0)
+		set turretAttached to 1
+
+	ELSE
+		set turretAttached to 0
+
+	ENDIF
+
+	set skillLevel to 50.0
+
+END
+
+BEGIN ONACTIVATE PLAYER
+
+	;//////////
+	;// check to see if the player's science is high enough
+	;//////////
+	if overloadSeq < 1			;if they overload it, don't let the player activate again
+	IF ( player.getAV science >= 50 )
+
+		;// check to see which message to use (turret or no turret) and start the menu poll
+		IF ( turretAttached == 0 || linkedTurret.getDead == 1)
+			showMessage DLC05trapAlienCommMSG
+			set menuSelect to 1
+
+		ELSEIF ( turretAttached == 1)
+			showMessage DLC05trapAlienCommTurretMSG
+			set menuSelect to 1
+
+		ENDIF
+	ELSE
+		showMessage DLC05InteractLowSkillScienceMsg skillLevel
+	ENDIF
+	endif
+END
+
+begin onTrigger
+
+	if overloadSeq > 1
+		
+		do 500
+
+	endif
+
+end
+
+BEGIN GAMEMODE
+
+	;////////////
+	;// check for the player's menu input
+	;////////////
+	IF ( menuSelect == 1 )
+		set button to getButtonPressed
+		
+		IF ( button > - 1 )
+			set menuSelect to 0
+
+			;// if theyre overloading the terminal
+			IF ( button == 1 )
+				set overloadSeq to 1
+				set overloadTimer to 5
+
+			;// if theyre overloading the turret and it's still alive
+			ELSEIF ( button == 2)
+				IF ( linkedTurret.getDead == 0 )
+
+					;// get the turret, kill it and update the variable
+					set linkedTurret to getLinkedRef
+					linkedTurret.setAV health 1
+					linkedTurret.placeatme MinePlasmaExplosion 1
+					set turretAttached to 0
+
+				ENDIF
+			ENDIF
+		ENDIF
+	ENDIF
+
+	;////////////
+	;// if the player decides to overload
+	;////////////
+	IF ( overloadSeq == 1 )
+		IF ( overloadTimer > 0 )
+			set overloadTimer to overloadTimer - getSecondsPassed
+	
+		ELSE
+
+			;// swap the mine and the terminal
+			;placeAtMe dlc05AlienControllerMine 1
+			;disable
+			set overloadSeq to 2
+
+		ENDIF
+	ENDIF
+
+END
+
+BEGIN ONDEATH
+
+	;// if the player manually kills the controller, frenzy the turret
+	linkedTurret.damageAV braincondition 100
+
+END

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0605CF93">Vault101ExitScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Vault101ExitScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>21</ReferenceCount>
+        <CompiledSize>902</CompiledSize>
+        <VariableCount>5</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACALgAAAAAABYAFAALABAAIFhpEAUAAQByAQAgMSA9PRYALAAHACgAIFg4EAUAAQByAwAgMSA9PSBYOxAKAAIAcgMAbpYAAAAgMCA9PSAmJhwAAQABEQAAFgANAAIACQAgcwMAIDAgPT0VAAcAcwMAAgAgMRcSAAAYAA0AAQAJACBzAwAgMyA+PVkQCwABAHIEAAAAAAAAABkAAAAXAAIAAQANEAIAAAAZAAAAFwACAAEADRACAAAAGQAAABEAAAAQAAYAAAB/AgAAFgANAAMACQAgcwQAIDIgPT0VAAcAcwQAAgAgMBwAAgDlEQUAAQByAQAcAAIA3xEIAAIAcgEARwUAGQAAABYADQABAAkAIHMDACAxID09FQAHAHMDAAIAIDIYAA0AAgAJACBzAwAgMiA9PRUABwBzAwACACAzWRALAAEAcgQAAAAAAAAAGQAAABYADQACAAkAIHMCACAxID09FQAHAHMCAAIAIDANEAoAAgByAQBuAQAAABkAAAAVAAsAcwEABgAgWB8QAAAWAA4AIwAKACBzAQAgMSB+ID4WAA0AAgAJACBzAQAgNSA9PTkQCgACAHIDAG6WAAAADRAFAAEAcgEAFwACAB4AFgANAAIACQAgcwEAIDAgPT0VAAkAcwUABAAgcwEA4REAABgADQACAAkAIHMBACAxID09FQAHAHMEAAIAIDHaEAAAGAANAAEACQAgcwEAIDIgPT0YEgcAAQBuKAAAABgADQARAAkAIHMBACAzID09HAABAKgRBQABAHIGABwAAQCoEQUAAQByBwAcAAEAqBEFAAEAcggAHAABAKgRBQABAHIJABwAAQCoEQUAAQByCgAcAAEAqBEFAAEAcgsAHAABAKgRBQABAHIMABwAAQCoEQUAAQByDQAcAAEAqBEFAAEAcg4AHAABAKgRBQABAHIPABwAAQCoEQUAAQByEAAcAAEAqBEFAAEAchEAHAABAKgRBQABAHISABwAAQCoEQUAAQByEwAcAAEAqBEFAAEAchQAHAABAKgRBQABAHIVAGgSAAAYAA0AAQAJACBzAQAgNCA9PRoSBwABAG4DAAAAGQAAABUABwBzAgACACAxGQAAABkAAAARAAAAEAANAAEAJAAAAAEAbgwEAAAWAA0AAQAJACBzBAAgMSA9PRUABwBzBAACACAyGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="Vault101ExitScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">reactivate</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">saved</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">updateDad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">tempVar</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06019D09">MQDadRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E86">CG04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0005CF94">CG04VaultExitMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00071F09">CGMatchFace</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00137B02">BuiltToDestroy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135EC7">FastShot</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135EC4">FourEyes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00137AFE">GoodNatured</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135EC5">HeavyHanded</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F05">Kamikaze</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00164ED1">LooseCannon</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135EC6">SmallFrame</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135EC8">TriggerDiscipline</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000ED568">WildWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="030133AE">NVDLC03TraitClaustrophobia</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="03012767">NVDLC03TraitEarlyBird</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0301276D">NVDLC03TraitHoarder</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0301276B">NVDLC03TraitHotBlooded</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0301276E">NVDLC03TraitLogansLoophole</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="03012B86">NVDLC03TraitSkilled</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>CantWait_PlatformSpecificTexture_Dead</Flags>
+  <FormID ID="080011AD">DLC01AshurPalace</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01AshurPalace</EditorID>
+    <Name Tag="FULL">Haven</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>24</Red>
+          <Green>24</Green>
+          <Blue>23</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>24</Red>
+          <Green>87</Green>
+          <Blue>92</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>91</Red>
+          <Green>130</Green>
+          <Blue>118</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>32</Near>
+        <Far>3000</Far>
+        <ClipDistance>3000</ClipDistance>
+        <Power>1.5</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>240</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="00064ECE">ShackInteriorWaste01</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0800B72E">DLC01PittZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="060717DB">IntBuildingNeoClassicalA</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090907">DefaultDungeon</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

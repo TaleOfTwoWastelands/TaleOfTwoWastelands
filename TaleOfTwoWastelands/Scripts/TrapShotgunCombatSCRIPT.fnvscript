@@ -1,0 +1,100 @@
+scn TrapShotgunSCRIPT
+;
+;This script runs the shotgun trap. If activated by a remote source, it shoud fire indefinitely.
+;The player can loot some shotgun shells if able to deactivate it.
+;
+;VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+;Commented out combat shotgun reward.
+
+short armed
+short button
+short skillPassed
+short init
+short doOnce
+
+short rewardXPOnce
+short XPForDisarm 
+;====================================================
+begin OnLoad
+
+	setStage NQlvl 1
+
+	if init == 0
+		set armed to 1
+		set init to 1
+	endif
+
+end
+;====================================================
+
+
+
+
+;====================================================
+begin onActivate
+
+	if armed == 1
+	;is the trap already activated/disarmed?
+		if isActionRef player == 1
+			;can the player disarm the trap?
+			if player.getAV Repair >= NQlvl.TRAPShotgunSkillReq
+				ShowMessage TrapShotgunDetectMsg
+				set skillPassed to 1
+			else
+				;Message "Your Repair skill is not high enough to disarm this trap."
+				ShowMessage TrapLowSkillRepairMsg NQlvl.TRAPShotgunSkillReq
+			endIf
+		else
+			if doOnce == 0
+				fireWeapon WeapNVSingleShotgun
+				set doOnce to 1
+			endif
+		endif
+	endif
+
+end
+;====================================================
+
+
+
+
+;====================================================
+
+begin gameMode
+
+	if skillPassed == 1				;don't run stuff in game mode unless recently activated 
+		set button to getButtonPressed		;grab the button state, you don't know when this will be set
+		if button > -1			;if a valid response is received start doing stuff
+			if button == 1
+				ShowMessage TrapDisarmMsg
+				set armed to 0		;disarm the trap
+
+					if rewardXPOnce == 0
+						if NQlvl.TRAPShotgunSkillReq< getGS iLockLevelMaxVeryEasy
+							set XPForDisarm to 0
+						elseif NQlvl.TRAPShotgunSkillReq< getGS iLockLevelMaxEasy
+							set XPForDisarm to TrapXPRewardVeryEasy
+						elseif NQlvl.TRAPShotgunSkillReq< getGS iLockLevelMaxAverage
+							set XPForDisarm to TrapXPRewardEasy
+						elseif NQlvl.TRAPShotgunSkillReq< getGS iLockLevelMaxHard
+							set XPForDisarm to TrapXPRewardAverage
+						elseif NQlvl.TRAPShotgunSkillReq< getGS iLockLevelMaxVeryHard
+							set XPForDisarm to TrapXPRewardHard
+						else
+							set XPForDisarm to TrapXPRewardVeryHard
+						endif
+
+						set rewardXPOnce to 1
+						rewardXP XPforDisarm
+					endif	
+				placeatme shotgunTrapShell01 1
+				;player.additemHealthpercent WeapNVSingleShotgun 1 0.3
+				player.additem Ammo20Ga 1
+				disable
+
+			endif
+			set skillPassed to 0	;stop running stuff 
+		endif
+	endif
+
+end

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>0</Flags>
+  <FormID ID="0A00422D">DLC04FF03Moonshine</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04FF03Moonshine</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-8</X>
+        <Y>-8</Y>
+        <Z>-12</Z>
+      </Point1>
+      <Point2>
+        <X>8</X>
+        <Y>8</Y>
+        <Z>12</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Moonshine</Name>
+    <Model>
+      <FileName Tag="MODL">DLC04\Clutter\Moonshine\DLC04MoonshineJug01.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">DLC04\Interface\Icons\Items_Jug.dds</Large>
+    </Icon>
+    <PickUpSound Tag="YNAM">
+      <Reference ID="000864D3">ITMBottleUp</Reference>
+    </PickUpSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="000864D4">ITMBottleDown</Reference>
+    </DropSound>
+    <EquipmentType Tag="ETYP">Alcohol</EquipmentType>
+    <Weight Tag="DATA">2</Weight>
+    <Data Tag="ENIT">
+      <Value>50</Value>
+      <Flags>NoAutoCalc, FoodItem</Flags>
+      <WithdrawalEffect ID="0006698C">WithdrawalAlcohol</WithdrawalEffect>
+      <AddictionChance>0.100000001</AddictionChance>
+      <ConsumeSound ID="00026138">NPCHumanDrinkingSoda</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00066988">ChemIncSTAlcohol</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>Strength</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00066989">ChemRedINAlcohol</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>Intelligence</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0015C60D">WhiskeyRose</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00066EB2">ChemIncCHAlcohol</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>Charisma</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

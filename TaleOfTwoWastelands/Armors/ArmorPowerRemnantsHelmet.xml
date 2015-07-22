@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="00133167">ArmorPowerRemnantsHelmet</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorPowerRemnantsHelmet</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-11</X>
+        <Y>-14</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>10</X>
+        <Y>12</Y>
+        <Z>16</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Remnants Power Helmet</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0004443D">EnchEnclaveArmorHelmet</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Head, Hair, Headband, Hat, Eyeglasses, Mask</Slots>
+      <Flags>-842150624</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">armor\headgear\AdvancedPowerArmorHelm\AdPowerArmorHelm.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">armor\headgear\AdvancedPowerArmorHelm\AdPowerArmorHelm.NIF</FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">armor\headgear\AdvancedPowerArmorHelm\AdPowArmHelmGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">armor\headgear\AdvancedPowerArmorHelm\AdPowArmHelmGO.NIF</FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">interface\icons\pipboyimages\apparel\apparel_remnants_power_armor_helmet.dds</Male>
+        <Female Tag="ICO2">interface\icons\pipboyimages\apparel\apparel_remnants_power_armor_helmet.dds</Female>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_enclave _power_armor_helmet.dds</Male>
+        <Female Tag="MIC2">interface\icons\pipboyimages_small\apparel_small\glow_apperal_power_armor_helmet.dds</Female>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075210">RepairEnclaveArmorHelmet</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>2800</Value>
+      <MaxCondition>75</MaxCondition>
+      <Weight>5</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>ModulatesVoice</Flags>
+      <DamageThreshold>8</DamageThreshold>
+      <Unknown>AQAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

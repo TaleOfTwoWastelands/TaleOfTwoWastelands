@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0D0047A0">INFO - 0D0047A0</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06014E96">MS03</Reference>
+    </Quest>
+    <Topic Tag="TPIC">
+      <Reference ID="000000FD">SpeechChallengeFailure</Reference>
+    </Topic>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="06030FEA">INFO - 06030FEA</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>35</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">[FAILED] Believe what you like, but I've got a gift, and...and it'd be wrong not to try to use it!</ResponseText>
+        <ScriptNotes Tag="NAM2">Begin with an indignant "harrumf!" noise</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>60</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Speech</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="06014E96">MS03</Quest>
+          <VariableIndex>53</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="06014E96">MS03</Quest>
+          <VariableIndex>8</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0602D3C0">MoiraBrown</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <LinkedFromList>
+      <LinkedFrom Tag="TCLF">
+        <Reference ID="00030FC9">MS03ReasonForHelp3C</Reference>
+      </LinkedFrom>
+    </LinkedFromList>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>14</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHM1AAIAIDA=</CompiledScript>
+      <ScriptSource Tag="SCTX">Set MS03.MS03Convince to 0</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E96">MS03</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>14</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHIBAHM1AAIAIDA=</CompiledScript>
+        <ScriptSource Tag="SCTX">Set MS03.MS03Convince to 0</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="06014E96">MS03</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Seriously, don't waste time with this book. Stick to helping the caravans.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004BB">AVSpeech</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

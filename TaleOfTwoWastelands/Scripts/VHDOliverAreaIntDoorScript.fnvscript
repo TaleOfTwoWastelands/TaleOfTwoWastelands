@@ -1,0 +1,102 @@
+scn VHDOliverAreaIntDoorScript
+
+ref ActivatingObject
+
+begin OnActivate
+
+	set ActivatingObject to GetActionRef
+	
+	;if VHDOliverCombatDialogTriggerREF.LegateSceneStarted == 1
+	if GetActionREF == Player && VHDOliverCombatDialogTriggerREF.LegateSceneStarted == 1
+		DisablePlayerControls
+
+		; Make sure all the troopers in Power Plant 04 are gone\
+		VHDLegionNCRHeavyTrooperGuard02REF.disable
+		VHDLegionNCRHeavyTrooperGuard02REF.disable
+
+		VHDLegionPowerPlant04Trooper01REF.disable
+		VHDLegionPowerPlant04Trooper02REF.disable
+		VHDLegionPowerPlant04Trooper03REF.disable
+		VHDLegionPowerPlant04Trooper04REF.disable
+		VHDLegionPowerPlant04Trooper05REF.disable
+		VHDLegionPowerPlant04Trooper06REF.disable
+		VHDLegionPowerPlant04Trooper07REF.disable
+		VHDLegionPowerPlant04Trooper08REF.disable
+		VHDLegionPowerPlant04Trooper09REF.disable
+		VHDLegionPowerPlant04Trooper10REF.disable
+		VHDLegionPowerPlant04Trooper11REF.disable
+		VHDLegionPowerPlant04Trooper12REF.disable
+		VHDLegionPowerPlant04Trooper13REF.disable
+		VHDLegionPowerPlant04Trooper14REF.disable
+		VHDLegionPowerPlant04Trooper15REF.disable
+		VHDLegionPowerPlant04Trooper16REF.disable
+		VHDLegionPowerPlant04Trooper17REF.disable
+		VHDLegionPowerPlant04Trooper18REF.disable
+		VHDLegionPowerPlant04Trooper19REF.disable
+		VHDLegionPowerPlant04Trooper20REF.disable
+		VHDLegionPowerPlant04Trooper21REF.disable
+		VHDLegionPowerPlant04Trooper22REF.disable
+
+		; Make the Legate non-aggressive so he doesn't go off to kill people
+		VLegionLegateLaniusREF.SetAV Aggression 0
+	endif
+
+	Activate
+	if GetActionRef == Player && VHDBattleController.iBattleState == 1
+		if (VNPCFollowers.bBooneHired)
+			CraigBooneREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif
+		if (VNPCFollowers.bCassHired) 
+			RoseofSharonCassidyREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (VNPCFollowers.bVeronicaHired)
+			VeronicaREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif
+		if (VNPCFollowers.bLilyHired)
+			LilyREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif
+		if (VNPCFollowers.RaulHired)
+			RaulREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif
+		if (VNPCFollowers.ArcadeHired)
+			ArcadeREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif
+		if (VNPCFollowers.bEDEHired)
+			if EDE1Ref.GetDisabled == 0
+				EDE1Ref.MoveTo VHDLegionLegateFinalTalkMarker
+			elseif EDE2Ref.GetDisabled == 0
+				EDE2Ref.MoveTo VHDLegionLegateFinalTalkMarker
+			elseif EDE3Ref.GetDisabled == 0
+				EDE3Ref.MoveTo VHDLegionLegateFinalTalkMarker
+			endif
+		endif
+		if (VNPCFollowers.RexHired)
+			RexREF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif	
+		if (Followers.CharonHired) 
+			CharonRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.ButchHired) 
+			ButchRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.CloverHired) 
+			CloverRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.JerichoHired) 
+			JerichoRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.FawkesHired) 
+			MQ08FawkesRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.StarPaladinCrossHired) 
+			StarPaladinCrossRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.DogmeatHired) 
+			DogmeatRef.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+		if (Followers.RL3Hired) 
+			RL3REF.MoveTo VHDLegionLegateFinalTalkMarker;
+		endif		
+	endif
+
+end

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C001C48">TTWHardcoreSCPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWHardcoreSCPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>262</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAPgAAAAWAA8AAQALACBYIhIFAAEAcgIANxAFAAEAcgMAGQAAABYAIAACABwAIHMBACAwID09IFgiEgUAAQByBAAgMSA9PSAmJlkQCwABAHIFAAAAAQAAABUABwBzAQACACAxGQAAABYADQAKAAkAIHMBACAxID09FQALAHMDAAYAIFgfEAAAFgAZAAcAFQAgcwMAIDAgPj0gcwEAIDEgPT0gJiYWAA0AAQAJACBzAwAgMSA9PRwAAQBLEgcAAQBuAQAAABcAAgABABwAAQBLEgcAAQBuAAAAABkAAAAVAAcAcwEAAgAgMjcQBQABAHIDABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWHardcoreSCPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nButton</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C1C">VCG01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001C47">TTWHardcoreExit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E86">CG04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E661">VCG01CasualHardcoreMessage</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

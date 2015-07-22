@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C0185E5">TTWChallengesManagerSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengesManagerSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>14</ReferenceCount>
+        <CompiledSize>860</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAE4DAAAVAA4AcwIACQAgcgEAWFAQAAAWAA8AAQALACBzAgAgcwMAICE9FQAJAHMDAAQAIHMCABkAAAAWABcACAATACByAQBYthAFAAEAcgIAIDEgPT0WAA0AAgAJACBzCAAgMSA9PRUAFABzCQAPACBYOBEEAAEAIwAgMTAgKxUABwBzCAACACAyGAANAAMACQAgcwgAIDIgPT0WABUAAQARACBYOBEEAAEAIwAgcwkAID49dRIFAAEAcgMAGQAAABkAAAAXAAIAAQAVAAcAcwgAAgAgMBkAAAAWAA8ABQALACByBABzBQAgMCA+FgAOAAMACgAgRwUAIHMBACA+FQATAHIEAHMFAAsAIHIEAHMFACAxIC0VABYAcwEAEQAgRwUAIHIEAHMFACAyICogKyYQBQABAHIGABkAAAAZAAAAFgAIABMABAAgRwcAFgAUAAgAEAAgWM8UCgACAEcIAG43AAAAFgAUAAYAEAAgcwYAIFg4EQQAAQABACA8FQAPAHMGAAoAIFg4EQQAAQABABYADgABAAoAIHMGACA0NCA8PXUSBQABAHIJABgADwABAAsAIHMGACAxMTAgPD11EgUAAQByCgAZAAAAGQAAABgAFAAIABAAIFjPFAoAAgBHCABuAD4AABYAFAAGABAAIHMHACBYOBEEAAEAAQAgPBUADwBzBwAKACBYOBEEAAEAAQAWAA4AAQAKACBzBwAgNTAgPD11EgUAAQByCwAYAA8AAQALACBzBwAgMTI1IDw9dRIFAAEAcgwAGQAAABkAAAAZAAAAFwACABMAFgAIAAgABAAgRw0AFgAUAAYAEAAgcwYAIFg4EQQAAQABACA8FQAPAHMGAAoAIFg4EQQAAQABABYADgABAAoAIHMGACA0NCA8PXUSBQABAHIJABgADwABAAsAIHMGACAxMTAgPD11EgUAAQByCgAZAAAAGQAAABgACAAIAAQAIEcOABYAFAAGABAAIHMHACBYOBEEAAEAAQAgPBUADwBzBwAKACBYOBEEAAEAAQAWAA4AAQAKACBzBwAgNTAgPD11EgUAAQByCwAYAA8AAQALACBzBwAgMTI1IDw9dRIFAAEAcgwAGQAAABkAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWChallengesManagerSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FEVaquaPuraDays</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iCurrLevel</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iPrevLevel</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iTemp</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fTemp</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">prevLocationDC</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">prevLocationNV</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">firedMIRV</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">preMIRVKillCount</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603422B">WeapUniqueMIRV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185AC">TTWChallengeDidntWantTo</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09000801">DLC03CreatorQuest</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003DC5E">UIHealthChemsWearOff</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FA6">TTWHasNVSE</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C018585">TTWChallengeTourist</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C018586">TTWChallengeGuide</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015EB33">NVChallengeExplore</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001690E6">NVChallengeMojaveMaster</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156F6">Charon</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Charon</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Charon</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>50</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EB">UnderworldResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005A7D4">MS06DoorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0004C5FB">DeathItemCharon</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06061EA7">MaleGenericGhoulDC</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00003B3E">Ghoul</Reference>
+    </Race>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000617BD">RadResistGhoul</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000617BE">GhoulRadHeal</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="06031939">CharonSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000E86F2">Ammo20Ga</Item>
+          <Count>20</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>12</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060372B8">FollowersCharonShotgun</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06064093">FollowersCharonCombatKnife</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06066C74">FollowersOutfitCharon</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Angry</Mood>
+      <Services>Food</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="09000AFF">DLC03MQ11CharonActivatePanel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="09000B00">DLC03MQ11CharonCodeWaitForAirlock</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000371E1">FollowersCharonFiredWaitNinthCircle</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371D7">FollowersCharonFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371D5">FollowersCharonFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371D4">FollowersCharonFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371E3">UnderworldCharonKillAhzrukhalSceneTalkToPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371E2">UnderworldCharonKillAhzrukhalSceneKill</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060371DA">UnderworldCharonKillAhzrukhalSceneDialogue</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00030763">UnderworldCharolGuardNinthCircle0x24</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0003075A">UnderworldCharonGuardSleepingAhzrukhal3x6</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00019460">SoldierScout</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>7</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0004518F">HairGhoul01</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>82</Red>
+        <Green>18</Green>
+        <Blue>24</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">12mOvlDwvD8twFJAwosDP8kQ1cDIq7+/jBJdPswdAEAoAC6+9DIjv5hYrT9GJxY/ZfeFvmYqVT8eYYC/jDFKv0a6bkBETNC+wIKyv2FojT/iTtA/grQ6QPzcVr8Acoc7ui1DvgjKbz8gWCg+D35gwEAjA8AY15U/iqgzP8Anmb7k1nc/JOPiP0j/lz5Q2GE+keTnP2DlnT4RohvASP+kP1dKHkBlAGlA1woAwIJqlL92NBvAajWpvuDiJz9W07U/eI2VvtPSpT8=</Symmetric>
+        <Asymmetric Tag="FGGA">bjONvlqmrb9dShY/oFnNPux7vL1KKde8cuw+vjw95b7BNJa+vn48v0AlLb5s4TK/576VPlexVT/aUWe/uKsZv9snIj5iWDI/95L5PkJ8I76zLAk+1i5nvwwxvb/Cgoa++rIrP34khr1ZkQQ/CJ1fv6/Jb7547xo/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">VBoKwIKrZz/rdWa/rlkCPhzLAz/JLShAC0eGP+p3Ub9p9Us/Bw+GvzJrDUD8tMY+8rPbv2r2iD/IRmJAXK5pvk5AGj90HQo99O9yQJMRsr8XcTRAv4yOv00riD88hje/nQGqP8/hSL8kQP2+mB77P9dvgUCnK31AOuKlP+/gCsDTINnAkNuVv9t4fj8SjLa/AVWsP8iv5j8SZGy/DpFyvRfqocC9cbU/s8zdwGAAAMA2Oy5Af0TDvwXcLcDiRi1Akh4WQBIzgcA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

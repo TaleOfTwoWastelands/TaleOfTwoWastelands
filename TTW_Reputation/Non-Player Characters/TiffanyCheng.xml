@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156DD">TiffanyCheng</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TiffanyCheng</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tiffany Cheng</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>4</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00019019">ChengFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FD5">FemaleOld04</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000987DF">CaucasianOldAged</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="06003124">TiffanyChengScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005BB6F">OutfitPrewarCasualwear2Dirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>99</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060289C4">TiffanyChengEat1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602863D">TiffanyChengSleepAvoidHusbad</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06019257">TiffanyChengSleepWhileHusbandGone</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06028EAF">TiffanyChengLoungeAvoidHusbandInApparel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06028D9D">TiffanyChengLoungeAvoidHusbandInBotique</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06028BB2">TiffanyChengLoungeWhileHusbandGone</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015672">Settler</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>43</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00022E50">FemaleC</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>139</Red>
+        <Green>131</Green>
+        <Blue>122</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">CWJrv7//jT/AXsu8pwkDPxoDzj9W0HS/pniNv4R/PD+mgsG/cA6KPd55ST+iF7o+QJ6WPQAHir2sKYA/BDYhv7ailb+wSay+7iRPPwjbqT0o04E+bA18P9BRAj+Q2bS+hHinv2B+Bb9WtQfAcNsUwPariz9GyQs/MBpwPiCp2744Wos/LJzCP0D6SUAMHJO/oDb6PWTEK7/gk5Y/eLTBvxHWCsB+/hNAaDgLv2CsMsAETq++l8ODQMt03r9QdtE/YNU7P8iaCkA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">WAmAv3LktL/okJg/uHDvvq2KbD/97Zk+fY1qPyDysj2syls/nOMYv3guND07n6k/X9/zv0QqUj+RkKo+gP+MvJCzXj/gUuQ9lRGLv6/y+L8qv1k/TjoSQDhQWr/MFIk/zuaiPtKFmD8+WyFAuRycv4hM678kSGu/5Tsjv8FCYkBo4pk+DekhwED1G0A3H4O+3hqHwG8tesDdRXbAlckhv+wmT79vRLy/dmfdQGVenr+wxXvAgEuVQK45PL/IfdTAkM7FwJ3QS8A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

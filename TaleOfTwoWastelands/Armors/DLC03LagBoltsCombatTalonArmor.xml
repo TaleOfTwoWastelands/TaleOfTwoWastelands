@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0900B95F">DLC03LagBoltsCombatTalonArmor</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03LagBoltsCombatTalonArmor</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Lag-Bolt's Combat Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="000E29CA">DLC03LagBoltsArmorEffect</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150648</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\CombatArmor\M\OutfitM.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms1</Name>
+                <TextureSet ID="060B0276">TalonCompanyM</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="060B0276">TalonCompanyM</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="060B0276">TalonCompanyM</TextureSet>
+                <Index>7</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\CombatArmor\F\OutfitF.nif</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms02</Name>
+                <TextureSet ID="060B0275">TalonCompanyF</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="060B0275">TalonCompanyF</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="060B0275">TalonCompanyF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\CombatArmor\M\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>CombatArmorGO</Name>
+                <TextureSet ID="060B0276">TalonCompanyM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_combat_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_combat_armor.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075206">RepairCombatArmor</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>6650</Value>
+      <MaxCondition>500</MaxCondition>
+      <Weight>30</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>18</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B6">ArmorHeavyAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

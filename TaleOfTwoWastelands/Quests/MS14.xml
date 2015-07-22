@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA1">MS14</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS14</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0602AE1D">MS14Script</Reference>
+    </Script>
+    <Name Tag="FULL">You Gotta Shoot 'Em in the Head</Name>
+    <Data Tag="DATA">
+      <Flags>25</Flags>
+      <Priority>49</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>597</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG4UAAAAbgEAAACjEQ8AAwByAgBuHgAAAG4BAAAAoxEPAAMAcgIAbigAAABuAQAAAFUQBQABAHIDAFUQBQABAHIEABwAAQC8ERMAAwByBQBuAQAAAHozMzMzMzPjPxwAAQACEAoAAgByBgBuAQAAABUACgByAgBzJAACACAxFgASAAEADgAgcgcAWC4QAAAgMSA9PaIRDwADAHICAG4KAAAAbgEAAAAZAAAAFgASAAIADgAgcggAWC4QAAAgMSA9PaIRDwADAHICAG4UAAAAbgEAAACjEQ8AAwByAgBuGQAAAG4BAAAAGQAAABYAFwACABMAIHIBAFgvEAUAAQByCQAgMSA+PaIRDwADAHICAG4ZAAAAbgEAAACjEQ8AAwByAgBuPAAAAG4BAAAAGQAAABYAEgACAA4AIHIKAFguEAAAIDEgPT2iEQ8AAwByAgBuHgAAAG4BAAAAoxEPAAMAcgIAbiMAAABuAQAAABkAAAAWABcAAgATACByAQBYLxAFAAEAcgsAIDEgPj2iEQ8AAwByAgBuIwAAAG4BAAAAoxEPAAMAcgIAbkYAAABuAQAAABkAAAAWABIAAgAOACByDABYLhAAACAxID09ohEPAAMAcgIAbigAAABuAQAAAKMRDwADAHICAG4tAAAAbgEAAAAZAAAAFgAXAAIAEwAgcgEAWC8QBQABAHINACAxID49ohEPAAMAcgIAbi0AAABuAQAAAKMRDwADAHICAG5QAAAAbgEAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS14 10 1
+SetObjectiveDisplayed MS14 20 1
+SetObjectiveDisplayed MS14 30 1
+SetObjectiveDisplayed MS14 40 1
+ShowMap DukovMapMarker
+ShowMap RepDaveMapMarker
+Player.AddItemHealthPercent WeapSniperRifle 1 .60
+Player.Additem ClipSniperRifle5 1
+Set MS14.LieTimer to 1
+If AllistairTenpennyRef.GetDead == 1
+    SetObjectiveCompleted MS14 10 1
+EndIf
+If DukovRef.GetDead == 1
+    SetObjectiveCompleted MS14 20 1
+    SetObjectiveDisplayed MS14 25 1
+EndIf
+If Player.GetItemCount MS14DukovsKey &gt;= 1
+    SetObjectiveCompleted MS14 25 1
+    SetObjectiveDisplayed MS14 60 1
+EndIf
+If TedStrayerRef.GetDead == 1
+    SetObjectiveCompleted MS14 30 1
+    SetObjectiveDisplayed MS14 35 1
+EndIf
+If Player.GetItemCount MS14TedsKey &gt;= 1
+    SetObjectiveCompleted MS14 35 1
+    SetObjectiveDisplayed MS14 70 1
+EndIf
+If DaveRef.GetDead == 1
+    SetObjectiveCompleted MS14 40 1
+    SetObjectiveDisplayed MS14 45 1
+EndIf
+If Player.GetItemCount MS14DavesKey &gt;= 1
+    SetObjectiveCompleted MS14 45 1
+    SetObjectiveDisplayed MS14 80 1
+EndIf
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA1">MS14</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602F21A">DukovMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060031CB">RepDaveMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00004353">WeapSniperRifle</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002964A">ClipSniperRifle5</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06017A0D">AllistairTenpennyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE1F">DukovRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002B8DB">MS14DukovsKey</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E757">TedStrayerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002B8DA">MS14TedsKey</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B89E">DaveRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002BF5A">MS14DavesKey</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>85</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAAAVABAAcgIAZi4ACAAgRwMAIDEgKxUACgByAgBzNQACACAxrREFAAEAcgQAHAABAJcQBQABAHIFADcQBQABAHIEADYQBQABAHIGAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+Set RadioGalaxyNewsQuest.MS14Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+CompleteAllObjectives MS14
+MisterCrowleyRef.AddScriptPackage MS14CrowleyStartTrip
+StopQuest MS14
+StartQuest MS14Fin
+;AddAchievement 26
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B8E0">MisterCrowleyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA1">MS14</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607E405">MS14CrowleyStartTrip</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D881">MS14Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAACtEQUAAQByAQA2EAUAAQByAgA3EAUAAQByAQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Armor is acquired without ever talking to Crowley
+RewardXP 300
+CompleteAllObjectives MS14
+StartQuest MS14fin
+Stopquest MS14</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA1">MS14</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D881">MS14Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">255</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAArREFAAEAcgIANxAFAAEAcgIANhAFAAEAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Crowley killed before all keys are collected
+ShowMessage MS14QuestFail
+CompleteAllObjectives MS14
+StopQuest MS14
+StartQuest MS14Fin</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C01A4">MS14QuestFail</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA1">MS14</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D881">MS14Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Kill Allistair Tenpenny.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06017A0D">AllistairTenpennyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Kill Dukov and get his key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602AE1F">DukovRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Kill Ted Strayer and get his key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E757">TedStrayerRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Kill Dave and get his key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B89E">DaveRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Bring Dukov's key to Mister Crowley.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B8E0">MisterCrowleyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Bring Ted Strayer's key to Mister Crowley.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B8E0">MisterCrowleyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Bring Dave's key to Mister Crowley.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B8E0">MisterCrowleyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Tell Mister Crowley that Allistair Tenpenny is dead.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B8E0">MisterCrowleyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Find Dukov's key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602AE1F">DukovRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">35</Index>
+        <Description Tag="NNAM">Find Ted Strayer's key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E757">TedStrayerRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">45</Index>
+        <Description Tag="NNAM">Find Dave's key.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B89E">DaveRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">(Optional) Kill Mister Crowley.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B8E0">MisterCrowleyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Collect reward from Allistair Tenpenny.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06017A0D">AllistairTenpennyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="00038705">CRBrahminScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CRBrahminScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>434</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAMAAAAAAABYAFAANABAAIFhpEAUAAQByAgAgMSA9PRUACwBmAQAGACBYzhAAABYADwAIAAsAIFguEAAAIDAgPT0WABIABgAOACByAgBYHhEAACAxID09FgASAAQADgAgcgIAWGUQAAAgMCA9PRUABwBzAgACACAxFQAJAGYDAAQAIDAuOBwAAQAmEAUAAQByAwB1EgUAAQByBAAZAAAAGQAAABcAAgABAA0QAgAAABkAAAAXAAIAAQANEAIAAAAZAAAAEQAAABAABgAAANgAAAAWAA0AAQAJACBzAgAgMSAhPR4AAAAYAA0ACwAJACBzAgAgMSA9PRYADwABAAsAIFiIEQAAIDEgPT0cAAIAkBEYAAEAFABMb29zZTFzdFBCcmFobWluUHVzaBcAAgABABwAAgCQERgAAQAUAExvb3NlM3JkUEJyYWhtaW5QdXNoGQAAABYADQACAAkAIGYDACAwIDw9HAACAIoRCgACAHIBAG4BAAAAFQAHAHMCAAIAIDAXAAIAAQAVABEAZgMADAAgZgMAIFgMEAAAIC0ZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="CRBrahminScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Self</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Push</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">PushTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">1</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00021827">NPCBrahminIdleMoo</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C018580">TTWChallengeBrahminTipper</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

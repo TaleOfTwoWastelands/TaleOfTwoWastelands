@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0D00279B">TTWRequisitionWeapAssaultCarbine</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWRequisitionWeapAssaultCarbine</EditorID>
+    <Name Tag="FULL">Assault Carbine</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="0008F21E">WeapNVAssaultCarbine</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>None</Skill>
+      <Level>0</Level>
+      <Category ID="0D002793">TTWDLC02RequisitionRecipes</Category>
+      <SubCategory ID="0D002795">TTWDLC02WeapReqRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0D0017C7">TTWDLC02ReqChits</Reference>
+        </Item>
+        <Quantity Tag="RCQY">30</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="0008F21E">WeapNVAssaultCarbine</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

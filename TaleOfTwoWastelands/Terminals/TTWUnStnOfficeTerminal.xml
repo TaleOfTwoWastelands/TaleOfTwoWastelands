@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="TERM">
+  <Flags>0</Flags>
+  <FormID ID="0C012029">TTWUnStnOfficeTerminal</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWUnStnOfficeTerminal</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-20</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>24</X>
+        <Y>20</Y>
+        <Z>37</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Terminal</Name>
+    <Model>
+      <FileName Tag="MODL">Terminals\TerminalDesk01.NIF</FileName>
+    </Model>
+    <WelcomeText Tag="DESC">Union Station Maintenance Terminal</WelcomeText>
+    <LoopingSound Tag="SNAM">
+      <Reference ID="00018EC0">OBJComputerTerminalLP</Reference>
+    </LoopingSound>
+    <Data Tag="DNAM">
+      <HackingDifficulty>VeryEasy</HackingDifficulty>
+      <Flags>Unlocked</Flags>
+      <ServerType>Server7</ServerType>
+    </Data>
+    <Selections>
+      <Selection>
+        <ItemText Tag="ITXT">Messages</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <SubMenu Tag="TNAM">
+          <Reference ID="0C01202A">TTWUnStnOfficeTerminalSub1</Reference>
+        </SubMenu>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Urgent Notice</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <DisplayNote Tag="INAM">
+          <Reference ID="0C011FDD">TTWUnStnTerminalNote01</Reference>
+        </DisplayNote>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+    </Selections>
+  </Subrecords>
+</Record>

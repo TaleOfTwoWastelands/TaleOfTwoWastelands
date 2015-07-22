@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="TERM">
+  <Flags>0</Flags>
+  <FormID ID="080040CC">DLC01MillAmmoTerminal</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01MillAmmoTerminal</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>-18</Y>
+        <Z>-86</Z>
+      </Point1>
+      <Point2>
+        <X>62</X>
+        <Y>22</Y>
+        <Z>48</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Ammo Press Terminal</Name>
+    <Model>
+      <FileName Tag="MODL">Terminals\Terminal02.NIF</FileName>
+    </Model>
+    <WelcomeText Tag="DESC">----Ammo Press Status Screen----
+---------------------------------
+-Ammo Press 01 Status: Active
+-Ammo Press 02 Status: Active</WelcomeText>
+    <LoopingSound Tag="SNAM">
+      <Reference ID="00018EC0">OBJComputerTerminalLP</Reference>
+    </LoopingSound>
+    <Data Tag="DNAM">
+      <HackingDifficulty>VeryEasy</HackingDifficulty>
+      <Flags>Unlocked</Flags>
+      <ServerType>Server8</ServerType>
+    </Data>
+    <Selections>
+      <Selection>
+        <ItemText Tag="ITXT">Operating Instructions</ItemText>
+        <ResultText Tag="RNAM">Authorized Users Only</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Operating Instructions</ItemText>
+        <ResultText Tag="RNAM">Displaying...</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <DisplayNote Tag="INAM">
+          <Reference ID="08007370">DLC01MillAmmoInstructions</Reference>
+        </DisplayNote>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Material Meltdown</ItemText>
+        <ResultText Tag="RNAM">Access Denied</ResultText>
+        <Flags Tag="ANAM">ForceRedraw</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Material Meltdown</ItemText>
+        <ResultText Tag="RNAM">Error - No Usable Materials In Bin</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018089">AmmoMillLargeCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018087">AmmoMillSmallCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018088">AmmoMillMedCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEB">Hull12Ga</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEA">Hull20Ga</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140C2F">Lead</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AB2">PowderPistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AB3">PowderRifle</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAC">Primer50MG</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAA">PrimerLargePistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAB">PrimerLargeRifle</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEC">PrimerShotshell</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AA9">PrimerSmallPistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AE0">PrimerSmallRifle</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Material Meltdown</ItemText>
+        <ResultText Tag="RNAM">Access Granted</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>23</ReferenceCount>
+            <CompiledSize>584</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+          <CompiledScript Tag="SCDA">FQBmAHICAHMXAF4AIHIBAFgvEAUAAQByAwAgMyAqIHIBAFgvEAUAAQByBAAgNCAqICsgcgEAWC8QBQABAHIFACA2ICogKyByAQBYLxAFAAEAcgYAICsgcgEAWC8QBQABAHIHACA1ICogKxUALgByAgBzGAAmACByAQBYLxAFAAEAcggAIDMgKiByAQBYLxAFAAEAcgkAIDQgKiArFQAuAHICAHMZACYAIHIBAFgvEAUAAQByCgAgMiAqIHIBAFgvEAUAAQByCwAgMyAqICsVADoAcgIAcxoAMgAgcgEAWC8QBQABAHIMACByAQBYLxAFAAEAcgYAICsgcgEAWC8QBQABAHIHACA1ICogKxUAZgByAgBzGwBeACByAQBYLxAFAAEAcg0AIHIBAFgvEAUAAQByDgAgMiAqICsgcgEAWC8QBQABAHIPACAyICogKyByAQBYLxAFAAEAchAAIDMgKiArIHIBAFgvEAUAAQByEQAgNSAqICsVACMAcgIAcxsAGwAgcgIAcxsAIHIBAFgvEAUAAQByEgAgMiAqICscAAEAUhAKAAIAchMAbn+WmAAcAAEAUhAKAAIAcgMAbn+WmAAcAAEAUhAKAAIAcgQAbn+WmAAcAAEAUhAKAAIAcgUAbn+WmAAcAAEAAhALAAIAchQAcgIAcxcAHAABAAIQCwACAHIVAHICAHMYABwAAQACEAsAAgByFgByAgBzGQAcAAEAAhALAAIAcgwAcgIAcxoAHAABAAIQCwACAHIXAHICAHMbACMSAAA=</CompiledScript>
+          <ScriptSource Tag="SCTX">set DLC01Quest03fin.ibrass to (DLC01MillAmmoBoxREF.getItemCount AmmoMillSmallCases * 3) + (DlC01MillAmmoBoxREF.getitemcount AmmoMillMedCases * 4) + (DLC01MillAmmoBoxREF.getitemcount AmmoMillLargeCases * 6) + (dlc01MillAmmoBoxREF.getitemcount spareparts) + (dlc01MillAmmoBoxRef.getitemcount DLC01SteelPlate * 5)
+set DLC01Quest03fin.iplastic to (DLC01MillAmmoBoxREF.getItemCount Hull20ga * 3) + (DLC01MillAmmoBoxREF.getItemCount Hull12ga * 4)
+set DLC01Quest03fin.ipowder to (DLC01MillAmmoBoxRef.getitemcount PowderPistol * 2) + (DLC01MillAmmoBoxREF.getitemcount PowderRifle * 3)
+set DLC01Quest03fin.ilead to (dlc01millammoboxref.getitemcount lead) + (dlc01MillAmmoBoxREF.getitemcount spareparts) + (dlc01MillAmmoBoxRef.getitemcount DLC01SteelPlate * 5)
+set DLC01Quest03fin.iPrimer to DLC01MillAmmoBoxREF.getitemcount primersmallpistol + (DLC01MillAmmoBoxRef.getItemcount primerlargepistol * 2) + (dlc01millammoboxref.getitemcount primersmallrifle * 2) + (dlc01millammoboxref.getitemcount primerlargerifle * 3) + (dlc01millammoboxref.getitemcount primer50mg * 5)
+set DLC01Quest03fin.iPrimer to DLC01Quest03fin.iPrimer + (DLC01MillAmmoBoxREF.getItemCount primershotshell * 2)
+
+DLC01MillAmmoBoxREF.removeitem TTWMillMasterList 9999999
+DLC01MillAmmoBoxREF.removeitem AmmoMillSmallCases 9999999
+DLC01MillAmmoBoxREF.removeitem AmmoMillMedCases 9999999
+DLC01MillAmmoBoxREF.removeitem AmmoMillLargeCases 9999999
+DLC01MillAmmoBoxREF.additem TTWBrass DLC01Quest03fin.ibrass
+DLC01MillAmmoBoxREF.additem TTWPlastic DLC01Quest03fin.iplastic
+DLC01MillAmmoBoxREF.additem TTWPowder DLC01Quest03fin.ipowder
+DLC01MillAmmoBoxREF.additem Lead DLC01Quest03fin.iLead
+DLC01MillAmmoBoxREF.additem TTWPrimer DLC01Quest03fin.iPrimer
+forceterminalback</ScriptSource>
+          <References>
+            <Reference Tag="SCRO">
+              <Reference ID="0800736B">DLC01MillAmmoBoxREF</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="08007353">DLC01Quest03fin</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C018087">AmmoMillSmallCases</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C018088">AmmoMillMedCases</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C018089">AmmoMillLargeCases</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00031944">SpareParts</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="080032DE">DLC01SteelPlate</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AEA">Hull20Ga</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AEB">Hull12Ga</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AB2">PowderPistol</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AB3">PowderRifle</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140C2F">Lead</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AA9">PrimerSmallPistol</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AAA">PrimerLargePistol</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AE0">PrimerSmallRifle</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AAB">PrimerLargeRifle</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AAC">Primer50MG</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="00140AEC">PrimerShotshell</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C0C27CC">TTWMillMasterList</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01808A">TTWBrass</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01808B">TTWPlastic</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01808C">TTWPowder</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01808D">TTWPrimer</Reference>
+            </Reference>
+          </References>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018089">AmmoMillLargeCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018088">AmmoMillMedCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0C018087">AmmoMillSmallCases</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEB">Hull12Ga</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEA">Hull20Ga</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AB2">PowderPistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AB3">PowderRifle</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAC">Primer50MG</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAA">PrimerLargePistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AAB">PrimerLargeRifle</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AEC">PrimerShotshell</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00140AA9">PrimerSmallPistol</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="00031944">SpareParts</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>Or</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="080032DE">DLC01SteelPlate</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="0800736B">DLC01MillAmmoBoxREF</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Ammo Press</ItemText>
+        <ResultText Tag="RNAM">Crafting...</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>4</ReferenceCount>
+            <CompiledSize>44</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+          <CompiledScript Tag="SCDA">HAABAK0QBQABAHICABwAAgBQEgUAAQByAwAVAAoAcgQAcxwAAgAgMSMSAAA=</CompiledScript>
+          <ScriptSource Tag="SCTX">DLC01MillAmmoBoxRef.removeallitems TTWDLC01AmmoCorpseREF
+TTWDLC01AmmoCorpseREF.showRecipeMenu TTWAmmoPressRecipes
+set DLC01Quest03fin.iSwap to 1
+forceterminalback</ScriptSource>
+          <References>
+            <Reference Tag="SCRO">
+              <Reference ID="0800736B">DLC01MillAmmoBoxREF</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01808E">TTWDLC01AmmoCorpseREF</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C01806E">TTWAmmoPressRecipes</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="08007353">DLC01Quest03fin</Reference>
+            </Reference>
+          </References>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>200</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetStage</Type>
+              <Quest ID="0800108D">DLC01Quest03</Quest>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+    </Selections>
+  </Subrecords>
+</Record>

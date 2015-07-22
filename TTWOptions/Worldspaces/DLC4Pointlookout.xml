@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0A000802">DLC4Pointlookout</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC4Pointlookout</EditorID>
+    <Name Tag="FULL">Point Lookout</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0A00E3C6">DLC04PointLookoutZone</Reference>
+    </EncounterZone>
+    <Climate Tag="CNAM">
+      <Reference ID="0A003122">DLC04PointLookoutBoardwalk</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00030009">Potomac</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">-1700</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>-1700</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">DLC04\Interface\Worldmap\DLC04WorldMap.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>2048</X>
+        <Y>2048</Y>
+      </UsableSize>
+      <MinX>-7</MinX>
+      <MinY>8</MinY>
+      <MaxX>7</MaxX>
+      <MaxY>-6</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>0.910000026</WorldMapScale>
+      <Offset>
+        <CellX>-3800</CellX>
+        <CellY>2200</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <WorldspaceFlags Tag="DATA">SmallWorld, NeedsWaterAdjustment</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-139264</X>
+        <Y>-77824</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>184320</X>
+        <Y>110592</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

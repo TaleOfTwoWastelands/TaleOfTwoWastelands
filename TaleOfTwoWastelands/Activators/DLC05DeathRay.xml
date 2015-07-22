@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0B004941">DLC05DeathRay</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05DeathRay</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Model>
+      <FileName Tag="MODL">DLC05\Dungeons\MZ\Room\DLC05MZRmWinFloor01DeathRay.NIF</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0B004942">DLC05DeathRaySCRIPT</Reference>
+    </Script>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>500</Health>
+        <Count>1</Count>
+        <Flags>0</Flags>
+        <Unknown>Ukk=</Unknown>
+      </Header>
+      <DestructionStages>
+        <DestructionStage>
+          <StageData Tag="DSTD">
+            <HealthPercentage>20</HealthPercentage>
+            <Index>0</Index>
+            <Stage>0</Stage>
+            <Flags>Disable, Destroy</Flags>
+            <SelfDamagePerSecond>0</SelfDamagePerSecond>
+            <Explosion ID="0007078C">MinePlasmaExplosion</Explosion>
+            <Debris ID="00000000">NullReference</Debris>
+            <DebrisCount>0</DebrisCount>
+          </StageData>
+          <EndMarker Tag="DSTF" />
+        </DestructionStage>
+      </DestructionStages>
+    </Destructable>
+  </Subrecords>
+</Record>

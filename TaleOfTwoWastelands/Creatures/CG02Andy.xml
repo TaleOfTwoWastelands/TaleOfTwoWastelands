@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="00020456">CG02Andy</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG02Andy</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-26</X>
+        <Y>-26</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>26</X>
+        <Y>26</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Andy</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\MisterGutsy\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88B">MrHandyDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>brainhandy.nif</Entry>
+      <Entry>fxmrhandyjetaddon.nif</Entry>
+      <Entry>gutsybuzzsaw.nif</Entry>
+      <Entry>gutsyflametank.nif</Entry>
+      <Entry>gutsyflamethrower.nif</Entry>
+      <Entry>handyfrontclaw.nif</Entry>
+      <Entry>misterhandy.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">BwAAAAOxsAltHWtJ3TEwCW0ia0ndeWQedFMn06zu3wttHkv+K25fC20jS/4reWQedFMn06zz3wttHkv+K3NfC20jS/4reWQedFMn06wD5fQHZkXSDphldAdmStIOmHN0EHSz4clt7t8OZl2ZtxpuXw5mYpm3GnN0EHSz4clt8uUNZsB5e3RyZQ1mxXl7dHN0EHSz4cltA/PuEm0C8SIwc24SbQfxIjB5cx50xBxprO7fFG0HPmeRbl8UbQw+Z5F5cx50xBxprPPfFG0HPmeRc18UbQw+Z5F5cx50xBxprAPz7hJtAvEiMHNuEm0H8SIweXMedMQcaazu3xRtBz5nkW5fFG0MPmeReXMedMQcaazz3xRtBz5nkXNfFG0MPmeReXMedMQcaawD8+4SbQLxIjBzbhJtB/EiMHlzHnTEHGms7t8UbQc+Z5FuXxRtDD5nkXlzHnTEHGms898UbQc+Z5FzXxRtDD5nkXlzHnTEHGmsBLGwCW0da0ndMTAJbSJrSd15ZB50UyfTrO7fC20eS/4rbl8LbSNL/it5ZB50UyfTrPPfC20eS/4rc18LbSNL/it5ZB50UyfTrOffC20eS/4rZ18LbSNL/it5ZB50UyfTrAexsAltHWtJ3TEwCW0ia0ndeWQedFMn06zu3wttHkv+K25fC20jS/4reWQedFMn06zz3wttHkv+K3NfC20jS/4reWQedFMn06zn3wttHkv+K2dfC20jS/4reWQedFMn06zw4Qxo+/QCN3BhDGgA9QI3ZXINdDh6OHHu3w5oStIFHW5fDmhP0gUdZXINdDh6OHHz3w5oStIFHXNfDmhP0gUdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, AllowPCDialogue, NotPushable, NoRotatingToHeadTrack</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>3</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseActorEffectList, UseInventory</TemplateFlags>
+    </BaseStats>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C960">DeathItemMrHandy75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FDC">RobotMisterHandy02</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0002977A">CrMisterHandy</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="06070ECD">CG02AndySCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029372">AmmoFlamerFuel75</Item>
+          <Count>32</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029642">ClipFlamer60</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003BC6F">MisterHandyBuzzsaw</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000A0C02">MisterHandyFlamer2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Annoyed</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0609F64C">CG02AndyCutCake</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002045C">CG02AndyPatrol</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002B796">CG02SurprisePartyHoldPosition</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlattackspin.kf</Entry>
+      <Entry>2hlattackspindown.kf</Entry>
+      <Entry>2hlattackspinup.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>18</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>50</Health>
+      <Damage>9</Damage>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A378">CSMisterHandy</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00070F7A">MRHandyBodyPartDataNoBrain</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">100</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0004D036">AudioTemplateRobotMrHandy</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0005FD3F">PipeImpactSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

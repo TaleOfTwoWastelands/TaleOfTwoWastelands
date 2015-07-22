@@ -1,0 +1,126 @@
+ScriptName VDialogueCraigBooneSCRIPT
+
+; Current coordinates - used for location checks
+short xCoord;
+short yCoord;
+
+short nFinalState;			1 for Survival, 2 for Assault
+
+short bPlayerMetManny;
+
+; true after Boone has answered "were you at bitter springs" with the highest openness node. Opens question about whether his wife's fate was punishment for it.
+short bAdmittedBitterSprings;
+
+; true if the player knows how Boone's wife died.
+short bHeardWifeStory;
+
+; true if Boone is ready to speak his GREETING that initiates his companion quest.
+short bInitiateQuest;
+
+; set when the player arrives at Bitter Springs with Boone.
+short bDoArrivalDialogue;
+
+; set to the day at which Boone should be willing to start the quest. Will be the day after the player suggests it.
+short nInitiateDay;
+
+short bWarnNelson;
+short bWarnCottonwoodCove;
+short bWarnFort;
+short bWarnRep;
+short bDoneNCRWarn1;
+short bDoneNCRWarn2;
+short bDoneCLWarn1;
+short bDoneCLWarn2;
+
+short bGreetCaesarDead;
+short bGreetCCComplete;
+short bGreetNelsonComplete;
+short bGreetNiptonComplete;
+
+; set when any NPC tells the player that Bitter Springs was an NCR battle that First Recon was involved in and civilians were killed.
+short bPlayerHeardOfBitterSprings;
+
+short bBooneInBitterSprings;
+
+; Player is added to Boone's faction when Boone's in the party. Makes the player hostile to the Legion by default.
+; If the player tells Boone to wait, that faction is removed and he can be non-hostile to the Legion.
+; This variable overrides that, and is set in cases where the player is near a major Legion encampment.
+short bBooneRogue;
+
+short bBooneBSAlone;		set if the player tells Boone to go to Bitter Springs on his own.
+
+; increases as the player completes objectives Boone favors.
+short nOpenness;
+
+BEGIN GameMode
+
+	if (VNPCFollowers.bBooneHired)
+		set xCoord to CraigBooneREF.GetPos X;
+		set yCoord to CraigBooneREF.GetPos Y;
+
+		; Boone activates specific dialogue if he is in the vicinity of Nelson or Cottonwood Cove.
+		if (xCoord > 41244 && xCoord < 63420 && yCoord > -41146 && yCoord < -21000) && bInNVWasteland
+				if (bWarnNelson == 0)
+					set bWarnNelson to 1;
+					CraigBooneREF.Evp;
+				endif
+				set bBooneRogue to 1;
+		elseif (xCoord > 54195 && xCoord < 68776 && yCoord > -102114 && yCoord < -82904) && bInNVWasteland
+			if (bWarnCottonwoodCove == 0)
+				set bWarnCottonwoodCove to 1;
+				CraigBooneREF.EVP;
+			endif
+; 			Removing for Cottonwood Cove - testers were leaving Boone there and then warping to the Fort with the expectation of not aggroing the Legion. - EPF 8/11/10
+;			set bBooneRogue to 1;
+		elseif (CraigBooneREF.GetInWorldSpace TheFortWorld)
+			set bBooneRogue to 1;
+		else
+			set bBooneRogue to 0;
+			if (bWarnNelson == 1)
+				set bWarnNelson to 0;
+			endif
+			if (bWarnCottonwoodCove == 1)
+				set bWarnCottonwoodCove to 0;
+	   endif
+
+		endif;
+
+		if (xCoord > 50634 && xCoord < 75800 && yCoord > 72200 && yCoord < 98675) && bInNVWasteland
+			set bBooneInBitterSprings to 1;
+		else
+			set bBooneInBitterSprings to 0;
+		endif
+	endif
+
+	; Boone warns the player about negative NCR rep or positive CL rep. Conditions cover both first and second offenses.
+	if (VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0 && VNPCFollowers.bBooneQuit == 0  && CraigBooneREF.IsInCombat == 0 )
+
+		; second offense, NCR
+		if (VBooneRepNCRWarn1 > 0 && GetReputationThreshold RepNVNCR 2 > VBooneRepNCRWarn1 && bDoneNCRWarn2 == 0)
+			set bWarnRep to 1;
+			CraigBooneREF.ResetAI;
+
+		; first offense, NCR
+		elseif  (VBooneRepNCRWarn1 == 0 && GetReputationThreshold RepNVNCR 2 > 1 && bDoneNCRWarn1 == 0)
+			set bWarnRep to 1;
+			CraigBooneREF.ResetAI;
+
+		; first offense, CL
+		elseif (VBooneCLRepWarn1 == 0 && VBooneCLRepInitial > 0 && VBooneCLRepInitial < GetReputationThreshold RepNVCaesarsLegion 1 && bDoneCLWarn1 == 0)
+			set bWarnRep to 1;
+			CraigBooneREF.ResetAI;
+
+		; second offense, CL
+		elseif (VBooneCLRepWarn1 > 0 && GetReputationThreshold RepNVCaesarsLegion 1 > VBooneCLRepWarn1 && bDoneCLWarn2 == 0)
+			set bWarnRep to 1;
+			CraigBooneREF.ResetAI;
+		else
+			set bWarnRep to 0;
+			CraigBooneREF.EVP;
+		endif
+	ElseIf (bWarnRep == 1) && (CraigBooneREF.IsInCombat == 0)
+		set bWarnRep to 0;
+		CraigBooneREF.EVP;
+	endif
+
+END

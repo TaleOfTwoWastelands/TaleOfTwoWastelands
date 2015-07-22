@@ -1,0 +1,82 @@
+scn CG00SCRIPT
+
+; timer
+float timer
+short runTimer		; set to 1 to start running timer
+
+; choose sex
+short chooseSex
+short button
+
+short iDoOnce
+
+begin MenuMode
+	if iDoOnce == 1
+		RETURN
+	else
+		; Move Player to startupCell
+		if getStage TTWCG00 < 5 && getStage CG00 < 5 && getStage VCG00 < 5
+				setstage TTWCG00 0
+				set iDoOnce to 1
+		endif
+	endif
+end
+
+begin gamemode
+
+	if (TTWCG00.iGameChoice == 2)
+	else
+		return
+	endif 
+	
+	if runTimer == 1
+		if timer > 0
+			set timer to timer - GetSecondsPassed
+		else
+			; anywhere we need a timer
+			if getstage CG00 == 5
+				setstage CG00 6
+			elseif getstage CG00 == 6
+				setstage CG00 8
+			elseif getstage CG00 == 8
+				setstage CG00 9
+			elseif getstage CG00 == 9
+				setstage CG00 10
+			elseif getStage CG00 == 18
+				; choose sex -- for now just use message box
+				setstage CG00 20
+				set chooseSex to 1
+				ShowMessage CG00ChooseSexMessage
+			elseif getStage CG00 == 20
+				setstage CG00 22
+			elseif getStage CG00 == 38
+				setstage CG00 40
+			elseif getStage CG00 == 40
+				setstage CG00 42
+			elseif getStage CG00 == 61
+				setstage CG00 62
+			elseif getstage CG00 == 90
+				setstage CG00 100
+			endif
+		endif
+	endif
+
+	if chooseSex == 1
+		set button to GetButtonPressed
+		if button > -1
+			set chooseSex to 2
+			if button == 0
+				player.sexChange male 1
+			elseif button == 1
+				player.sexChange female 1
+			endif
+		endif
+	endif
+
+end
+
+begin menumode
+	if getstage CG00 == 60
+		setstage CG00 61
+	endif
+end

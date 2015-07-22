@@ -1,0 +1,292 @@
+ScriptName MQ11PPurityControlPanelScript
+
+short PanelActivated
+short Button
+short DeathAnim		;flag set to 1 when player activates panel; wait for 1st person before actually playing anim
+short FadeSound		;do once flag for fading sounds out
+short explosionstep	;flag updated for explosions if no one puts the code in
+
+short Num1				;set to 0-9 depending on key press
+short Set1				;flag set when first button is pressed
+short Num2
+short Set2
+short Num3
+short Set3
+
+float timer				;var used to track time between when panel is activated and playing the end movies
+float DeathTimer		;var used to track time between entering the code and the player's death
+
+
+;Script for control panel for Project Purity
+
+
+Begin OnActivate
+
+
+
+	if ( PanelActivated == 0 )
+		if ( IsActionRef Player == 1 )
+
+;show message if panel's not active (any time before endgame)
+
+			if ( GetStage MQ11 < 40 )
+				ShowMessage PPurityControlNoPowerMessage
+			elseif ( GetStage MQ11 >= 40 )
+
+;check to make sure last three digits entered are the correct ones
+
+				if ( Num1 == 2 )
+					if ( Num2 == 1 )
+						if ( Num3 == 6 )
+
+;if so, start by disabling player controls after updating var for game block
+
+
+							MQ05Radiation1.Disable
+							MQ05Radiation2.Disable
+							MQ05Klaxon1.Disable
+							MQ05Klaxon2.Disable
+							PlaySound ObjSwitchButtonBPass
+							set PanelActivated to 1
+							RewardKarma 600
+                                   AddReputation RepTTWBrotherhood 1 5
+							if ( GetPCIsSex Male == 1 )
+								SetNoActivationSound QSTDyingGaspMale
+							else
+								SetNoActivationSound QSTDyingGaspFemale
+							endif
+							DisablePlayerControls 1 1 1 1 0 1 1
+							Activate
+
+;play death anim (varies by perspective)
+
+							set DeathAnim to 1
+							set DeathTimer to 1
+					
+;							if ( IsPC1stPerson == 1 )
+;								Player.playidle LooseMQ11PlayersDeath1stperson
+;							else
+;								Player.playIdle LooseMQ11PlayersDeath
+;							endif
+
+;start purifier animation
+
+							PPurityFXTankEffectRef.Playgroup Backward 1
+							IMod MQ11PPurityTankISFX
+							PipBoyRadioOff
+							Playsound MUSProjPurityActivate
+
+;set timer that determines when quest ends and binks play
+
+							set timer to 38
+							return
+						else
+
+;show incorrect code message if numbers aren't right
+
+		
+							PlaySound ObjSwitchButtonBFail
+							Activate
+						endif			
+					else
+
+						PlaySound ObjSwitchButtonBFail
+						Activate
+					endif
+				else
+
+					PlaySound ObjSwitchButtonBFail
+					Activate
+				endif
+			endif
+		elseif ( IsActionRef MQ01SarahRef == 1 )
+			Set PanelActivated to 2
+			Set Timer to 20
+			PPurityFXTankEffectRef.Playgroup Backward 1
+			IMod MQ11PPurityTankISFX
+			MQ01SarahRef.PlayIdle LooseMQ11SarahLyonsDeath
+			Activate
+			return
+	;		SetStage MQ11 200
+		elseif ( IsActionRef MQ08FawkesRef == 1 )
+			Set PanelActivated to 2
+			Set Timer to 20
+			PPurityFXTankEffectRef.Playgroup Backward 1
+			MQ08FawkesRef.PlayIdle DLC03FawkesWaitsPurity
+			IMod MQ11PPurityTankISFX
+			Activate
+			return
+		elseif ( IsActionRef CharonRef == 1 )
+			Set PanelActivated to 2
+			Set Timer to 20
+			PPurityFXTankEffectRef.Playgroup Backward 1
+			CharonRef.PlayIdle LOOSEDLC03CharonWaitsPurity
+			IMod MQ11PPurityTankISFX
+			Activate
+			return
+		elseif ( IsActionRef RL3Ref == 1 )
+			Set PanelActivated to 2
+			Set Timer to 20
+			PPurityFXTankEffectRef.Playgroup Backward 1
+			RL3Ref.PlayIdle DLC03MisterGutsyWaitsPurity
+			IMod MQ11PPurityTankISFX
+			Activate
+			return
+		endif
+	endif
+		
+End
+
+
+Begin OnLoad
+
+	PPurityFXTankEffectRef.PlayGroup Forward 1
+
+end
+
+
+
+Begin GameMode
+
+
+;If player activated the panel, DeathAnim is 1
+;wait until we're in 1st person before playing the animation
+
+	if ( DeathAnim == 1 )
+		if ( IsPC1stPerson == 1 )
+
+			set DeathAnim to 2
+			Player.addscriptpackage MQ11PlayerDeathPackage
+		endif
+	endif
+
+;Scripting for handling MQ11.EndTimer
+;added here because it needs to run every frame
+;if time runs out before code gets put in, set EndDeath var so correct bink runs
+;and run the binks
+;Make sure PanelActivated is still 0 during this whole thing, so we don't bash one of the other endings
+
+
+	if ( PanelActivated == 0 )
+		if ( MQ11.EndTimerInit == 1 )
+	
+			if ( MQ11.EndTimer <= 2.5 )
+				if ( ExplosionStep == 0 )
+					MQ11ExplosionMarker1.PlaceAtMe MQ05Explosion
+					set ExplosionStep to 1
+				endif
+
+				DisablePlayerControls
+				PipBoyRadioOff
+				imod FadetoWhiteandBackISFX
+				set MQ11.EndTimerInit to 2
+			else
+				set MQ11.EndTimer to ( MQ11.EndTimer - GetSecondsPassed )
+			endif
+		elseif ( MQ11.EndTimerInit == 2 ) 
+			if ( ExplosionStep == 1 )
+				if ( MQ11.EndTimer <=1.8 )
+					MQ11ExplosionMarker4.PlaceAtMe MQ05Explosion
+					set ExplosionStep to 2
+				endif
+			elseif ( ExplosionStep == 2 )
+				if ( MQ11.EndTimer <= 0.6 )
+					MQ11ExplosionMarker5.PlaceAtMe MQ05Explosion
+					MQ11ExplosionMarker6.PlaceAtMe MQ05Explosion
+					set ExplosionStep to 3
+				endif				
+			endif	
+			if ( MQ11.EndTimer <= 0 )
+				Set EndingBinks.EndDeath to 3
+
+				StartQuest EndingBinks
+			else
+				set MQ11.EndTimer to ( MQ11.EndTimer - GetSecondsPassed )
+			endif
+		endif
+	endif
+
+;Run the bink if the correct code is put in
+
+	if ( PanelActivated == 1 ) && GetStageDone MQ11 200 == 0
+
+;fade sounds out before end bink  
+
+		if (FadeSound == 0)
+			if ( timer <= 4.15 )
+				FadeSFX 4.0
+				set FadeSound to 2
+			endif
+		endif
+			
+		if ( timer <= 0 )
+			set EndingBinks.EndDeath to 1
+;			SetStage MQ11 200
+			StartQuest EndingBinks			
+		else
+			set timer to ( timer - GetSecondsPassed )
+		endif
+	endif
+
+;Run the end if Sarah put the code in
+
+
+;give a delay so her idle (called through package) can play
+	
+	if ( PanelActivated == 2 )
+		set timer to 2
+
+		set PanelActivated to 3
+
+	elseif ( PanelActivated == 3 )
+
+;when timer runs out, start the purifier animation, her death animation
+;and reset timer before binks play
+
+		if ( timer <= 0 )
+			set PanelActivated to 4
+			Playsound MUSProjPurityActivate
+			MQ05Radiation1.Disable
+			MQ05Radiation2.Disable
+			MQ05Klaxon1.Disable
+			PipBoyRadioOff
+			PPurityFXTankEffectRef.Playgroup Backward 1
+			IMod MQ11PPurityTankISFX
+			if ( MQ11.DLC03FollowerCode == 0 )
+				MQ01SarahRef.PlayIdle LooseMQ11SarahLyonsDeath
+			elseif ( MQ11.DLC03FollowerCode == 1 )
+				MQ08FawkesRef.PlayIdle DLC03FawkesWaitsPurity
+			elseif ( MQ11.DLC03FollowerCode == 2 )
+				CharonRef.PlayIdle LOOSEDLC03CharonWaitsPurity
+			elseif ( MQ11.DLC03FollowerCode == 3 )
+				RL3Ref.PlayIdle DLC03MisterGutsyWaitsPurity
+			endif
+			set timer to 38
+		else 
+			set timer to ( timer - GetSecondsPassed )
+		endif
+
+	elseif ( PanelActivated == 4 ) && GetStageDone MQ11 200 == 0
+
+;fade sounds out before end bink   
+
+		if (FadeSound == 0)
+			if ( timer <= 4.15)
+				FadeSFX 4
+				set FadeSound to 2
+			endif
+		endif
+
+;when timer runs out again, set stage so binks run
+
+		if ( timer <= 0 )
+;			SetStage MQ11 200
+			StartQuest EndingBinks
+		else
+			set timer to ( timer - GetSecondsPassed )
+		endif
+	endif
+
+
+End
+		

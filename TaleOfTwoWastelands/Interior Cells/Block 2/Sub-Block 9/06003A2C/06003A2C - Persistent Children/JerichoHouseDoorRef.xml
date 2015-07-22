@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="06003A4B">REFR - 06003A4B</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">JerichoHouseDoorRef</EditorID>
+    <Base Tag="NAME">
+      <Reference ID="0001CCD2">MetalScrapDoor01</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="06002DFF">REFR - 06002DFF</Door>
+      <Position>
+        <X>-1083.84534</X>
+        <Y>-25343.5059</Y>
+        <Z>12674.5654</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>3.90209198</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <Owner Tag="XOWN">
+      <Reference ID="06000A71">Jericho</Reference>
+    </Owner>
+    <Lock Tag="XLOC">
+      <Level>20</Level>
+      <Key ID="000430CB">MegatonJerichoHouseKey</Key>
+      <Flags>IsLeveledLock</Flags>
+    </Lock>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="06044F82">NAVM - 06044F82</NavigationMesh>
+      <Unknown>276234264</Unknown>
+    </NavigationDoorLink>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>268.6427</X>
+        <Y>95.87883</Y>
+        <Z>-96</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

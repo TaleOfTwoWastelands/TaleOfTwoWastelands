@@ -1,0 +1,182 @@
+scn ACEquipHandlerSCPT
+
+int go
+ref ammoType
+short dummyAmmo
+short hasAmmo
+short giveAmmo
+
+begin GameMode
+
+if go
+
+	set go to 0
+	player.removeallitems
+
+	set DLC02StrikeTeam.STHaveReq to 0
+
+	set ammoType to Ammo10mm
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo10mmHollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo20ga
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo20gaSlug
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo308
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo308ArmorPiercing
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo308HollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo40mmGrenade
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo50MG
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo50MGArmorPiercing
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo556mm
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo556mmArmorPiercing
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo556mmHollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo5mm
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo5mmArmorPiercing
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo5mmHollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo9mm
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to Ammo9mmHollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoElectronChargePack
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoFatMans
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoFlamerFuel
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoMicrofusionCell
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoMissile
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to AmmoSmallEnergyCell
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to NVDLC02Ammo45Auto
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	set ammoType to NVDLC02Ammo45AutoHollowPoint
+	set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+	set hasAmmo to player.GetItemCount ammoType
+	set giveAmmo to dummyAmmo - hasAmmo
+	player.additem ammoType giveAmmo
+
+	TTWRequisitionDummyRef.RemoveAllTypedItems player 0 0 24
+	TTWRequisitionDummyRef.RemoveAllTypedItems player 0 0 40
+	TTWRequisitionDummyRef.RemoveAllTypedItems player 0 0 103
+
+	Player.Additem TTWJumpsuitArmy 1 1
+	Player.EquipItem TTWJumpsuitArmy 0 1
+endif
+
+end

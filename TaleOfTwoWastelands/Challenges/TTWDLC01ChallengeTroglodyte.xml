@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01858E">TTWDLC01ChallengeTroglodyte</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC01ChallengeTroglodyte</EditorID>
+    <Name Tag="FULL">Troglodyte Dundee</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EAA9">ChallengeMediumXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Trogs.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>50</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>10</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185BB">TTWDLC01ChallengeTroglodyteList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,53 @@
+scn SchematicsRailwayRifleItemSCRIPT
+
+short AddOnce
+
+BEGIN OnAdd player
+	
+	if (AddOnce == 0)
+
+		;If the player already has a copy of the schematic, getting another improves the quality of the created item.
+		;Second Improvement
+		if (player.gethasnote SchematicsRailwayRifleNote10 == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countRailwayBonus to 1.25
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsRailwayRifleNote10
+			player.addNote SchematicsRailwayRifleNote20
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;First Improvement
+		elseif (player.gethasnote SchematicsRailwayRifleNote == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countRailwayBonus to 1
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsRailwayRifleNote
+			player.addNote SchematicsRailwayRifleNote10
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;Otherwise, just add the note
+		elseif (player.gethasnote SchematicsRailwayRifleNote20 == 0)
+
+			IncrementScriptedChallenge TTWChallengeSchematics		; Added by Gribbleshnibit8 8/26/2014
+
+			;Add the Schematic Note
+			player.addNote SchematicsRailwayRifleNote
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		endif
+
+	endif
+
+END

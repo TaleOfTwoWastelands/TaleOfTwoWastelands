@@ -1,0 +1,42 @@
+scn BumbleSCRIPT
+
+begin ONHIT
+	if (getIsCurrentPackage BumbleFollowPlayerToSlaver == 1)
+	   sayto player LLBumbleStopFollowing
+	   set DialogueLilLamplight.LamplightSlaver to -1
+	endif
+end
+
+
+
+begin ONSTARTCOMBAT
+
+	if (getIsCurrentPackage BumbleFollowPlayerToSlaver == 1)
+	   sayto player LLBumbleStopFollowing
+	   set DialogueLilLamplight.LamplightSlaver to -1
+	endif
+
+end
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && BumbleREF.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

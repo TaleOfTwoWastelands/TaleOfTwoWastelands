@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0C001E09">TTWTrainEnginePowerDown01Trig</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWTrainEnginePowerDown01Trig</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-62</X>
+        <Y>-300</Y>
+        <Z>-116</Z>
+      </Point1>
+      <Point2>
+        <X>62</X>
+        <Y>300</Y>
+        <Z>116</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Gas Valve</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C001E1F">TTWTrainPowerDownDisableScript</Reference>
+    </Script>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="0015E250">EMTWaterPressure</Reference>
+      </Looping>
+      <Activation Tag="VNAM">
+        <Reference ID="0001F92B">NPCHumanDrinkingWaterValve</Reference>
+      </Activation>
+    </Sound>
+  </Subrecords>
+</Record>

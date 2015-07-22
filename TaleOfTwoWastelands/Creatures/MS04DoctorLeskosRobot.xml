@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="06031810">MS04DoctorLeskosRobot</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS04DoctorLeskosRobot</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Protectron</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Protectron\skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88E">ProtectronDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>1hprhandlaser.nif</Entry>
+      <Entry>2hlheadlaser.nif</Entry>
+      <Entry>blowawaybrain.nif</Entry>
+      <Entry>blowawaydome.nif</Entry>
+      <Entry>protectron.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">BQAAAAAABe7vCnA4jbfdbm8KcD2Nt91ubx10G92qsu7fDHB3Hwahbl8McHwfBqFubx10G92qsvPfDHB3Hwahc18McHwfBqFubx10G92qsuXfCGNiCwEVZV8IY2cLARVzdBB0s+HJbe3lDXDyoAC7bWUNcPegALtubx10G92qsgPz8w9wb3F6JHNzD3B0cXokbm8ddBvdqrLu3xFwL1mwB25fEXA0WbAHbm8ddBvdqrLz3xFwL1mwB3NfEXA0WbAHbm8ddBvdqrII7u8KcDiNt91ubwpwPY233W5vHXQb3aqy7t8McHcfBqFuXwxwfB8GoW5vHXQb3aqy898McHcfBqFzXwxwfB8GoW5vHXQb3aqy5d8IY2ILARVlXwhjZwsBFXN0EHSz4clt7eUNcPKgALttZQ1w96AAu25vHXQb3aqy8OEMaPv0AjdwYQxoAPUCN2VyDXQ4ejhx7t8OaErSBR1uXw5oT9IFHWVyDXQ4ejhx898OaErSBR1zXw5oT9IFHWVyDXQ4ejhx</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, AllowPCDialogue</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>3</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseActorEffectList, UseModelAnimation, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001FFB6">RobotFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0003181F">MS04AntFriend</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95B">DeathItemProtectron75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FDA">RobotProtectron02</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0C0C8608">CrProtectronDC</Reference>
+    </Template>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00018B9E">ProtectronHandLaser1HP</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00018B9F">ProtectronHeadLaser2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029377">AmmoSmallEnergyCell75</Item>
+          <Count>15</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000B0279">RobotFissionBattery20</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>75</EnergyLevel>
+      <Responsibility>90</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06086469">MS04FinPostQuest</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>1hpaim.kf</Entry>
+      <Entry>1hpaimdown.kf</Entry>
+      <Entry>1hpaimup.kf</Entry>
+      <Entry>1hpattackright.kf</Entry>
+      <Entry>1hpattackrightdown.kf</Entry>
+      <Entry>1hpattackrightup.kf</Entry>
+      <Entry>1hpequip.kf</Entry>
+      <Entry>1hpidle.kf</Entry>
+      <Entry>1hpreloada.kf</Entry>
+      <Entry>1hpunequip.kf</Entry>
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlaimdown.kf</Entry>
+      <Entry>2hlaimup.kf</Entry>
+      <Entry>2hlattackright.kf</Entry>
+      <Entry>2hlattackrightdown.kf</Entry>
+      <Entry>2hlattackrightup.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlidle.kf</Entry>
+      <Entry>2hlreloada.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>50</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>45</Health>
+      <Damage>2</Damage>
+      <Strength>5</Strength>
+      <Perception>4</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A708">CSProtectron</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00017F2C">ProtectronBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">50</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">20</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0005FCCB">AudioTemplateRobotProtectron</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

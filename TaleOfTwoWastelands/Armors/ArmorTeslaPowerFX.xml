@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0008F571">ArmorTeslaPowerFX</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorTeslaPowerFX</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tesla Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0004443C">EnchEnclaveArmor</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>BodyAddon1</Slots>
+      <Flags>Unknown4, PowerArmor, Heavy</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\TeslaPowerArmor\FXTesla.NIF</FileName>
+          <TextureHashes Tag="MODT">sbASZsiCeg0xMBJmzYJ6DXN0EHSz4clt+fcPZoTmEjF5dw9mieYSMXN0EHSz4clt</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2"></FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_tesla_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_tesla_armor.dds</Male>
+      </Message>
+    </Icon>
+    <RagdollConstraintTemplate Tag="BMCT">RagdollConstraint\default.rdt</RagdollConstraintTemplate>
+    <RepairList Tag="REPL">
+      <Reference ID="00061551">RepairTeslaArmorList</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0005FD0A">ArmorPowerEnclaveList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>3000</Value>
+      <MaxCondition>1500</MaxCondition>
+      <Weight>45</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>4000</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

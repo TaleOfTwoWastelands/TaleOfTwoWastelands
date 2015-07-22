@@ -1,0 +1,11 @@
+scn DLC02MicroFusionSCRIPT
+
+Begin OnActivate
+	if (IsActionRef player == 1)
+		player.additem AmmoMicroFusionCell 5
+		disable
+	endif
+End
+
+
+

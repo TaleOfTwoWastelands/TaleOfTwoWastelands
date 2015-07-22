@@ -1,0 +1,1555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E9E">MS11</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS11</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06014EBA">MS11Script</Reference>
+    </Script>
+    <Name Tag="FULL">The Power of the Atom</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbgsAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>55</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMGAAIAIDEcAAEAAhAKAAIAcgMAbgEAAABVEAUAAQByBAA5EAoAAgByBQBuCwAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">Set MS11.BlowUp to 1
+player.additem FusionPulseCharge 1
+ShowMap TenpennyTowerMapMarker
+setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9E">MS11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014F81">FusionPulseCharge</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600320B">TenpennyTowerMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>70</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgsAAAAVAAkARwMABAAgMSB+HAABAF4QAAAWABAAAQAMACByBABzCgAgMCA8PQQSBwABAG7IAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up
+set MegatonDestroyed to -1
+LucasSimmsRef.evp
+;reward karma
+if MS11.SimmsBonus &lt;= 0
+   rewardKarma 200
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B46">LucasSimmsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001EECD">MegatonDestroyed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9E">MS11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAADkQCgACAHICAG4LAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">MS11DetonatorRef.enable
+setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E99F">MS11DetonatorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="06014F77">MisterBurkeRef</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>13</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">MisterBurkeRef.MoveToMarker xMS11BurkeStandTenpenny
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014F77">MisterBurkeRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014F8A">xMS11BurkeStandTenpenny</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="06014F77">MisterBurkeRef</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbjIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Burke is dead, so just go push the button yourself
+setStage MS11 50</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9E">MS11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Activate the detonator at Tenpenny Tower.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbgsAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Activate the detonator at Tenpenny Tower.
+setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>132</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAoADAAgcgQAcwwAIDAgPT0VAAcARwUAAgAgMRwAAQAiEAIAAADzEQAAHAACACIQAgAAABwAAwAhEAIAAABVEAoAAgByAwBuAQAAABUABwBHBgACACAwFQAJAEcHAAQAIDEwMDkQCgACAHIIAG4LAAAABBIHAAEAbhj8//8ZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">if MegatonBombRef.explodeMe == 0
+
+;Report to Mister Burke in Tenpenny Tower.
+set MegatonDestroyed to 1
+MS11MegatonToggle.disable
+TriggerLODApocalypse
+MegatonMapMarkerREF.disable
+MegatonDestroyedMapMarkerRef.enable
+showMap MegatonDestroyedMapMarkerRef 1
+set MegatonNormalWeatherChance to 0
+set MegatonDestroyedWeatherChance to 100
+setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up
+
+rewardKarma -1000
+
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606D4AE">MS11MegatonToggle</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062743">MegatonMapMarkerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060438B2">MegatonDestroyedMapMarkerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014BC8">MegatonBombRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001EECD">MegatonDestroyed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00073A79">MegatonNormalWeatherChance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00073A78">MegatonDestroyedWeatherChance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>27</ReferenceCount>
+                <CompiledSize>1327</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgcgEAWEMQBQABAHIYACByAQBYNhEFAAEAchkAIHx8HAABAJ4QBQABAHIaABkAAAAWACMAAQAfACByAgBYQxAFAAEAchgAIHICAFg2EQUAAQByGQAgfHwcAAIAnhAFAAEAchoAGQAAABYAIwABAB8AIHIDAFhDEAUAAQByGAAgcgMAWDYRBQABAHIZACB8fBwAAwCeEAUAAQByGgAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHIYACByBABYNhEFAAEAchkAIHx8HAAEAJ4QBQABAHIaABkAAAAWACMAAwAfACByBQBYQxAFAAEAchgAIHIFAFg2EQUAAQByGQAgfHwWAB8AAQAbACByGwBzBgAgMCAhPSByGwBzBgAgMCAhPSB8fBwABQCeEAUAAQByGgAZAAAAGQAAABYAIwABAB8AIHIGAFhDEAUAAQByGAAgcgYAWDYRBQABAHIZACB8fBwABgCeEAUAAQByGgAZAAAAFgAjAAEAHwAgcgcAWEMQBQABAHIYACByBwBYNhEFAAEAchkAIHx8HAAHAJ4QBQABAHIaABkAAAAWACMAAQAfACByCABYQxAFAAEAchgAIHIIAFg2EQUAAQByGQAgfHwcAAgAnhAFAAEAchoAGQAAABYAIwABAB8AIHIJAFhDEAUAAQByGAAgcgkAWDYRBQABAHIZACB8fBwACQCeEAUAAQByGgAZAAAAFgAjAAEAHwAgcgoAWEMQBQABAHIYACByCgBYNhEFAAEAchkAIHx8HAAKAJ4QBQABAHIaABkAAAAWACMAAQAfACByCwBYQxAFAAEAchgAIHILAFg2EQUAAQByGQAgfHwcAAsAnhAFAAEAchoAGQAAABYAIwABAB8AIHIMAFhDEAUAAQByGAAgcgwAWDYRBQABAHIZACB8fBwADACeEAUAAQByGgAZAAAAFgAjAAEAHwAgcg0AWEMQBQABAHIYACByDQBYNhEFAAEAchkAIHx8HAANAJ4QBQABAHIaABkAAAAWACMAAQAfACByDgBYQxAFAAEAchgAIHIOAFg2EQUAAQByGQAgfHwcAA4AnhAFAAEAchoAGQAAABYAIwABAB8AIHIPAFhDEAUAAQByGAAgcg8AWDYRBQABAHIZACB8fBwADwCeEAUAAQByGgAZAAAAFgAjAAEAHwAgchAAWEMQBQABAHIYACByEABYNhEFAAEAchkAIHx8HAAQAJ4QBQABAHIaABkAAAAWACMAAQAfACByEQBYQxAFAAEAchgAIHIRAFg2EQUAAQByGQAgfHwcABEAnhAFAAEAchoAGQAAABYAIwABAB8AIHISAFhDEAUAAQByGAAgchIAWDYRBQABAHIZACB8fBwAEgCeEAUAAQByGgAZAAAAFgAjAAEAHwAgchMAWEMQBQABAHIYACByEwBYNhEFAAEAchkAIHx8HAATAJ4QBQABAHIaABkAAAAWACMAAQAfACByFABYQxAFAAEAchgAIHIUAFg2EQUAAQByGQAgfHwcABQAnhAFAAEAchoAGQAAABYAIwABAB8AIHIVAFhDEAUAAQByGAAgchUAWDYRBQABAHIZACB8fBwAFQCeEAUAAQByGgAZAAAAFgAjAAEAHwAgchYAWEMQBQABAHIYACByFgBYNhEFAAEAchkAIHx8HAAWAJ4QBQABAHIaABkAAAAWACMAAQAfACByFwBYQxAFAAEAchgAIHIXAFg2EQUAAQByGQAgfHwcABcAnhAFAAEAchoAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Move followers out
+if ButchRef.GetInCell Megaton || ButchRef.GetInWorldSpace MegatonWorld
+    ButchRef.moveto xMS11FollowersMoveToHere
+endif
+
+if RL3REF.GetInCell Megaton || RL3REF.GetInWorldSpace MegatonWorld
+    RL3REF.moveto xMS11FollowersMoveToHere
+endif
+
+if MQ08FawkesRef.GetInCell Megaton || MQ08FawkesRef.GetInWorldSpace MegatonWorld
+    MQ08FawkesRef.moveto xMS11FollowersMoveToHere
+endif
+
+if StarPaladinCrossREF.GetInCell Megaton || StarPaladinCrossREF.GetInWorldSpace MegatonWorld
+    StarPaladinCrossREF.moveto xMS11FollowersMoveToHere
+endif
+
+
+if JerichoRef.GetInCell Megaton || JerichoRef.GetInWorldSpace MegatonWorld
+   if Followers.JerichoHired != 0 || Followers.JerichoHired != 0 
+       JerichoRef.moveto xMS11FollowersMoveToHere
+   endif
+endif
+
+if CloverRef.GetInCell Megaton || CloverRef.GetInWorldSpace MegatonWorld
+    CloverRef.moveto xMS11FollowersMoveToHere
+endif
+
+if CharonRef.GetInCell Megaton || CharonRef.GetInWorldSpace MegatonWorld
+    CharonRef.moveto xMS11FollowersMoveToHere
+endif
+
+if DogMeatRef.GetInCell Megaton || DogMeatRef.GetInWorldSpace MegatonWorld
+    DogMeatRef.moveto xMS11FollowersMoveToHere
+endif
+
+if MS15SydneyRef.GetInCell Megaton || MS15SydneyRef.GetInWorldSpace MegatonWorld
+    MS15SydneyRef.moveto xMS11FollowersMoveToHere
+endif
+
+if StickyRef.GetInCell Megaton || StickyRef.GetInWorldSpace MegatonWorld
+    StickyRef.moveto xMS11FollowersMoveToHere
+endif
+
+if RedRef.GetInCell Megaton || RedRef.GetInWorldSpace MegatonWorld
+    RedRef.moveto xMS11FollowersMoveToHere
+endif
+
+if ShortyRef.GetInCell Megaton || ShortyRef.GetInWorldSpace MegatonWorld
+    ShortyRef.moveto xMS11FollowersMoveToHere
+endif
+
+if VictoriaWattsRef.GetInCell Megaton || VictoriaWattsRef.GetInWorldSpace MegatonWorld
+    VictoriaWattsRef.moveto xMS11FollowersMoveToHere
+endif
+
+if CraigBooneREF.GetInCell Megaton || CraigBooneREF.GetInWorldSpace MegatonWorld
+    CraigBooneREF.moveto xMS11FollowersMoveToHere
+endif
+
+if RoseofSharonCassidyREF.GetInCell Megaton || RoseofSharonCassidyREF.GetInWorldSpace MegatonWorld
+    RoseofSharonCassidyREF.moveto xMS11FollowersMoveToHere
+endif
+
+if VeronicaREF.GetInCell Megaton || VeronicaREF.GetInWorldSpace MegatonWorld
+    VeronicaREF.moveto xMS11FollowersMoveToHere
+endif
+
+if LilyREF.GetInCell Megaton || LilyREF.GetInWorldSpace MegatonWorld
+    LilyREF.moveto xMS11FollowersMoveToHere
+endif
+
+if RaulREF.GetInCell Megaton || RaulREF.GetInWorldSpace MegatonWorld
+    RaulREF.moveto xMS11FollowersMoveToHere
+endif
+
+if ArcadeREF.GetInCell Megaton || ArcadeREF.GetInWorldSpace MegatonWorld
+    ArcadeREF.moveto xMS11FollowersMoveToHere
+endif
+
+if EDE1Ref.GetInCell Megaton || EDE1Ref.GetInWorldSpace MegatonWorld
+    EDE1Ref.moveto xMS11FollowersMoveToHere
+endif
+
+if EDE2Ref.GetInCell Megaton || EDE2Ref.GetInWorldSpace MegatonWorld
+    EDE2Ref.moveto xMS11FollowersMoveToHere
+endif
+
+if EDE3Ref.GetInCell Megaton || EDE3Ref.GetInWorldSpace MegatonWorld
+    EDE3Ref.moveto xMS11FollowersMoveToHere
+endif
+
+if RexREF.GetInCell Megaton || RexREF.GetInWorldSpace MegatonWorld
+    RexREF.moveto xMS11FollowersMoveToHere
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06094285">RL3REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062735">StarPaladinCrossREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5D">JerichoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060384D8">CloverREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B8E1">CharonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A775">DogmeatREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00096BCE">CraigBooneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E32A9">VeronicaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0013D830">LilyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E6105">RaulREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8EB">ArcadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D1">EDE1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D0">EDE2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732CF">EDE3Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8DF">RexREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060790F8">xMS11FollowersMoveToHere</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000371D1">Followers</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>318</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgcgEAWEMQBQABAHIHACByAQBYNhEFAAEAcggAIHx8HAABAIsQAgAAABkAAAAWACMAAQAfACByAgBYQxAFAAEAcgcAIHICAFg2EQUAAQByCAAgfHwcAAIAixACAAAAGQAAABYAIwABAB8AIHIDAFhDEAUAAQByBwAgcgMAWDYRBQABAHIIACB8fBwAAwCLEAIAAAAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHIHACByBABYNhEFAAEAcggAIHx8HAAEAIsQAgAAABkAAAAWACMAAQAfACByBQBYQxAFAAEAcgcAIHIFAFg2EQUAAQByCAAgfHwcAAUAixACAAAAGQAAABYAIwABAB8AIHIGAFhDEAUAAQByBwAgcgYAWDYRBQABAHIIACB8fBwABgCLEAIAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">
+if AndyStahlRef.GetInCell Megaton || AndyStahlRef.GetInWorldSpace MegatonWorld
+    AndyStahlRef.Kill
+endif
+
+if BillyCreelRef.GetInCell Megaton || BillyCreelRef.GetInWorldSpace MegatonWorld 
+    BillyCreelRef.Kill
+endif
+
+if ColinMoriartyRef.GetInCell Megaton || ColinMoriartyRef.GetInWorldSpace MegatonWorld
+    ColinMoriartyRef.Kill
+endif
+
+if ConfessorCromwellRef.GetInCell Megaton || ConfessorCromwellRef.GetInWorldSpace MegatonWorld
+    ConfessorCromwellRef.Kill
+endif
+
+if DocChurchRef.GetInCell Megaton || DocChurchRef.GetInWorldSpace MegatonWorld 
+    DocChurchRef.Kill
+endif
+
+if GobRef.GetInCell Megaton || GobRef.GetInWorldSpace MegatonWorld
+    GobRef.Kill
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B55">AndyStahlRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5A">BillyCreelRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B3C">ColinMoriartyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B48">ConfessorCromwellRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B56">DocChurchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B3D">GobRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>251</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgcgEAWEMQBQABAHIFACByAQBYNhEFAAEAcgYAIHx8HAABACIQAgAAABkAAAAWACMAAQAfACByAgBYQxAFAAEAcgUAIHICAFg2EQUAAQByBgAgfHwcAAIAixACAAAAGQAAABYAIwADAB8AIHIDAFhDEAUAAQByBQAgcgMAWDYRBQABAHIGACB8fBYAHwABABsAIHIHAHMGACAwID09IHIHAHMGACAwID09ICYmHAADAIsQAgAAABkAAAAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHIFACByBABYNhEFAAEAcgYAIHx8HAAEAIsQAgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if HardenSimmsRef.GetInCell Megaton || HardenSimmsRef.GetInWorldSpace MegatonWorld 
+    HardenSimmsRef.disable
+endif
+
+if JennyStahlRef.GetInCell Megaton || JennyStahlRef.GetInWorldSpace MegatonWorld 
+    JennyStahlRef.Kill
+endif
+
+if JerichoRef.GetInCell Megaton || JerichoRef.GetInWorldSpace MegatonWorld
+   if Followers.JerichoHired == 0 &amp;&amp; Followers.JerichoHired == 0 
+       JerichoRef.Kill
+   endif
+endif
+
+if LeoStahlRef.GetInCell Megaton || LeoStahlRef.GetInWorldSpace MegatonWorld 
+    LeoStahlRef.Kill
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B45">HardenSimmsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B53">JennyStahlRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5D">JerichoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B54">LeoStahlRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000371D1">Followers</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>212</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgcgEAWEMQBQABAHIFACByAQBYNhEFAAEAcgYAIHx8HAABAIsQAgAAABkAAAAWACMAAQAfACByAgBYQxAFAAEAcgUAIHICAFg2EQUAAQByBgAgfHwcAAIAixACAAAAGQAAABYAIwABAB8AIHIDAFhDEAUAAQByBQAgcgMAWDYRBQABAHIGACB8fBwAAwAiEAIAAAAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHIFACByBABYNhEFAAEAcgYAIHx8HAAEAIsQAgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if LucasSimmsRef.GetInCell Megaton || LucasSimmsRef.GetInWorldSpace MegatonWorld 
+    LucasSimmsRef.Kill
+endif
+
+if LucyWestRef.GetInCell Megaton || LucyWestRef.GetInWorldSpace MegatonWorld 
+    LucyWestRef.Kill
+endif
+
+if MaggieRef.GetInCell Megaton || MaggieRef.GetInWorldSpace MegatonWorld
+    MaggieRef.disable
+endif
+
+if MegManyaRef.GetInCell Megaton || MegManyaRef.GetInWorldSpace MegatonWorld
+    MegManyaRef.Kill
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B46">LucasSimmsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5B">LucyWestRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5C">MaggieRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B58">MegManyaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>265</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgcgEAWEMQBQABAHIGACByAQBYNhEFAAEAcgcAIHx8HAABAIsQAgAAABkAAAAWACMAAQAfACByAgBYQxAFAAEAcgYAIHICAFg2EQUAAQByBwAgfHwcAAIAixACAAAAGQAAABYAIwABAB8AIHIDAFhDEAUAAQByBgAgcgMAWDYRBQABAHIHACB8fBwAAwCLEAIAAAAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHIGACByBABYNhEFAAEAcgcAIHx8HAAEAIsQAgAAABkAAAAWACMAAQAfACByBQBYQxAFAAEAcgYAIHIFAFg2EQUAAQByBwAgfHwcAAUAixACAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">if MegatonSettler1Ref.GetInCell Megaton || MegatonSettler1Ref.GetInWorldSpace MegatonWorld 
+    MegatonSettler1Ref.Kill
+endif
+
+if MegatonSettler2Ref.GetInCell Megaton || MegatonSettler2Ref.GetInWorldSpace MegatonWorld 
+    MegatonSettler2Ref.Kill
+endif
+
+if MegatonSettler3Ref.GetInCell Megaton || MegatonSettler3Ref.GetInWorldSpace MegatonWorld 
+    MegatonSettler3Ref.Kill
+endif
+
+if MegatonSettler4Ref.GetInCell Megaton || MegatonSettler4Ref.GetInWorldSpace MegatonWorld 
+    MegatonSettler4Ref.Kill
+endif
+
+if MegatonSettler5Ref.GetInCell Megaton || MegatonSettler5Ref.GetInWorldSpace MegatonWorld  
+    MegatonSettler5Ref.Kill
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060043C5">MegatonSettler1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060043C7">MegatonSettler2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060043CB">MegatonSettler3ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060043C9">MegatonSettler4Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014F1A">MegatonSettler5Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>22</ReferenceCount>
+                <CompiledSize>511</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAA0AHwAgcgMAWEMQBQABAHILACByAwBYNhEFAAEAcgwAIHx8HAABAJ4QBQABAHINABwAAgAiEAIAAAAcAAMAnhAFAAEAcg4AHAADAOURBQABAHIPABUACgByEABzOgACACAxHAADABwQBQABAHIRABwAAwCAEQUAAQByEgAcAAMAfxEKAAIAchMAbgEAAAAWABIAAwAOACByAwBYMhAAACAwID09FQAKAHIQAHM6AAIAIDIcAAMAnhAFAAEAchQAHAADAJcQBQABAHIVABkAAAAZAAAAFgAjAAEAHwAgcgQAWEMQBQABAHILACByBABYNhEFAAEAcgwAIHx8HAAEAIsQAgAAABkAAAAWACMAAQAfACByBQBYQxAFAAEAcgsAIHIFAFg2EQUAAQByDAAgfHwcAAUAixACAAAAGQAAABYAIwABAB8AIHIGAFhDEAUAAQByCwAgcgYAWDYRBQABAHIMACB8fBwABgCLEAIAAAAZAAAAFgAjAAEAHwAgcgcAWDYRBQABAHIWACByBwBYNhEFAAEAcgwAIHx8HAAHAIsQAgAAABkAAAAcAAgAixACAAAAFgAjAAEAHwAgcgkAWEMQBQABAHILACByCQBYNhEFAAEAcgwAIHx8HAAJAIsQAgAAABkAAAAcAAoAixACAAAAHAAKACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">if MoiraBrownREF.GetInCell Megaton || MoiraBrownREF.GetInWorldSpace MegatonWorld  
+    vendorContainerMoiraBrownREF.moveto VendorContainerMoiraBrownGhoulREF
+    underworldFloorBufferREF.disable
+    ;VendorContainerMoiraBrownGhoulREF.enable
+    ;VendorContainerMoiraBrownGhoulREF.removeitem SchematicsRockItLauncherItem 1
+    MoiraBrownREF.moveto MoiraWaitMarker
+    MoiraBrownREF.matchRace tulipRef
+    set MS03.MoiraGhoul to 1
+    ;MoiraBrownREF.addspell RadHealGhoul
+    MoiraBrownREF.addspell RadResistGhoul
+    MoiraBrownREF.removeFromFaction MegatonResidentFaction
+    MoiraBrownREF.AddToFaction UnderworldResidentFaction 1
+    if (MoiraBrownREF.getTalkedToPC == 0)
+       set MS03.MoiraGhoul to 2
+       MoiraBrownREF.moveto MuseumAmericanMarker
+       MoiraBrownREF.addscriptpackage MoiraGhoulTravelToUnderworld
+    endif
+endif
+
+if MotherMayaRef.GetInCell Megaton || MotherMayaRef.GetInWorldSpace MegatonWorld  
+    MotherMayaRef.Kill
+endif
+
+if NathanRef.GetInCell Megaton || NathanRef.GetInWorldSpace MegatonWorld  
+    NathanRef.Kill
+endif
+
+if NovaRef.GetInCell Megaton || NovaRef.GetInWorldSpace MegatonWorld  
+    NovaRef.Kill
+endif
+
+if StockholmInteriorRef.GetInWorldSpace Wasteland || StockholmInteriorRef.GetInWorldSpace MegatonWorld 
+    StockholmInteriorRef.Kill
+endif
+
+  StockholmExteriorRef.Kill
+
+if WalterRef.GetInCell Megaton || WalterRef.GetInWorldSpace MegatonWorld  
+    WalterRef.Kill
+endif
+
+WaterBeggar01Ref.kill
+WaterBeggar01Ref.disable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601FF19">VendorContainerMoiraBrownREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609E7A7">underworldFloorBufferREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B49">MotherMayaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B57">NathanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B3F">NovaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601942F">StockholmInteriorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B26">StockholmExteriorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B59">WalterRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C6E91">WaterBeggar01Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060151D4">Megaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06000A74">MegatonWorld</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06051E78">VendorContainerMoiraBrownGhoulREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFBE">MoiraWaitMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B7622">TulipRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000617BD">RadResistGhoul</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000043F7">MegatonResidentFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000179EB">UnderworldResidentFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CBDF">MuseumAmericanMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0005CFBF">MoiraGhoulTravelToUnderworld</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607EA1F">Wasteland</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>10</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; DLC03 Megaton stuff should go in here to get disabled/handled when Megaton goes boom
+DLC03EncountersMegatonMarker.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002659">DLC03EncountersMegatonMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>204</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgIAdxEHAAEAbiwBAAAWABAAAQAMACByAgBzCQAgMSA+PRwAAQACEAoAAgByAwBu6AMAABcAAgABABwAAQACEAoAAgByAwBu9AEAABkAAAAcAAEAAhAKAAIAcgQAbgEAAAAcAAEAAhAKAAIAcgUAbgEAAAAVABAAcgYAZisACAAgRwcAIDEgKxUACgByBgBzNQACACAxFQAKAHICAHMGAAIAIDQ5EAoAAgByCABuCwAAADcQBQABAHICAEoRBwABAG4XAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">completeAllObjectives MS11
+
+;Get Burke Reward
+rewardxp 300
+
+if MS11.BurkeBonus &gt;= 1
+player.additem caps001 1000
+else
+player.additem caps001 500
+endif
+
+player.additem TenpennySuiteKey 1
+player.additem HouseDeedTenpenny 1
+Set RadioGalaxyNewsQuest.MS11Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+set MS11.BlowUp to 4
+;TenpennyPlayerDoorRef.Enable
+;TenpennyUnocSuiteDoorRef.Disable
+setStage MSObjectives 11	;handles making sure the correct objectives / fail messages show up
+stopQuest MS11
+addachievement 23
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9E">MS11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001522E">TenpennySuiteKey</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C402C">HouseDeedTenpenny</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C0F66">MSObjectives</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">210</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>10</ReferenceCount>
+                <CompiledSize>252</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgQAdxEHAAEAbiwBAAAVABAAcgUAZisACAAgRwYAIDEgKxUACgByBQBzNQACACAxFgAQAAEADAAgcgQAcwoAIDEgPT0cAAEAAhAKAAIAcgcAbmQAAAAYABAAAQAMACByBABzCgAgMiA9PRwAAQACEAoAAgByBwBu9AEAABkAAAAcAAEAAhAKAAIAcggAbgEAAAAcAAEAAhAKAAIAcgkAbgEAAAAcAAIAUxAKAAIAcgEAbksAAAA3EAUAAQByBAAWABcAAgATACByAwBYIBAFAAEAcgEAIDAgPT0cAAMAIhACAAAAFQAKAHIKAHMJAAIAIDEZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">completeAllObjectives MS11
+
+;Get Simms Reward
+rewardxp 300
+Set RadioGalaxyNewsQuest.MS11Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+if MS11.SimmsBonus == 1
+player.additem caps001 100
+elseif MS11.SimmsBonus == 2
+player.additem caps001 500
+endif
+
+player.AddItem MegatonHouseKey 1
+player.AddItem HouseDeedMegaton 1
+LucasSimmsRef.modDisposition player 75
+stopQuest MS11
+
+;make Burke disappear
+if MisterBurkeRef.getInSameCell player == 0
+     MisterBurkeRef.disable
+    set MS11Fin.moved to 1
+endif
+
+;addachievement 23
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B46">LucasSimmsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014F77">MisterBurkeRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9E">MS11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000151E4">MegatonHouseKey</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C402B">HouseDeedMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603DA2A">MS11Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">255</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;FAIL</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">0</Index>
+        <Description Tag="NNAM"></Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014F77">MisterBurkeRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B46">LucasSimmsRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014BC8">MegatonBombRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B54">LeoStahlRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Disarm Megaton's atomic bomb.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014BC8">MegatonBombRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Rig Megaton's atomic bomb to explode.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014BC8">MegatonBombRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Report to Lucas Simms in Megaton.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B46">LucasSimmsRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Report to Mister Burke in Tenpenny Tower.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014F77">MisterBurkeRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018351">TenpennyTowerDoor01cto03REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601798C">TenpennyTowerDoor03toBalconyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Activate the detonator at Tenpenny Tower.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E99F">MS11DetonatorRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018351">TenpennyTowerDoor01cto03REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601798C">TenpennyTowerDoor03toBalconyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Receive reward from Mister Burke in Tenpenny Tower.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014F77">MisterBurkeRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018351">TenpennyTowerDoor01cto03REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F34">Tenpenny01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F33">Tenpenny02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601798C">TenpennyTowerDoor03toBalconyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060178B8">Tenpenny03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Disarm Megaton's atomic bomb... or rig it to explode.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014BC8">MegatonBombRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">31</Index>
+        <Description Tag="NNAM">Report to Lucas Simms' son, Harden, in Megaton.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B45">HardenSimmsRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">1</Index>
+        <Description Tag="NNAM">[Optional] Ask Leo Stahl at the Brass Lantern about buying Mentats.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B54">LeoStahlRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E9E">MS11</Quest>
+                  <QuestStage>30</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E9E">MS11</Quest>
+                  <QuestStage>40</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">2</Index>
+        <Description Tag="NNAM">[Optional] Meet Leo Stahl at the water treatment plant for Mentats .</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B54">LeoStahlRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">3</Index>
+        <Description Tag="NNAM">[Optional] Loot Leo Stahl's stash at the water treatment plant for Mentats.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602010D">VendorLeoStahlDrugsREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

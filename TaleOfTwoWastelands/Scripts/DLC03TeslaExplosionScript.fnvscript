@@ -1,0 +1,45 @@
+scn DLC03TeslaExplosionScript
+
+ref triggerActor
+short disableTimerInit
+float disableTimer
+
+short spellOnce
+short targetAcquired
+
+BEGIN GAMEMODE
+
+	;//////////
+	;// if we're active but havent hit a vertibird yet, wait a few seconds then disable
+	;//////////
+	IF getDisabled == 0
+			IF disableTimerInit == 0
+				set disableTimer to 2
+				set disableTimerInit to 1
+
+			ENDIF
+
+			;// the cleanup timer, if we're around for X seconds without being triggered, disable
+			IF disableTimer > 0
+				set disableTimer to disableTimer - getSecondsPassed
+			ELSE
+				disable
+			ENDIF
+			
+
+	ENDIF
+END
+
+BEGIN ONTRIGGERENTER
+
+	;// store who triggered us
+	set triggerActor to getActionRef
+	
+	;// if its in the vertibird list, blow it up!
+	IF triggerActor.isInList DLC03TeslaExplosionList
+			set targetAcquired to 1
+			triggerActor.do 50000
+			IncrementScriptedChallenge TTWDLC03ChallengeVertibird
+	ENDIF
+
+END

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D006C10">TTWStartingInNewVegasQuestSCR</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWStartingInNewVegasQuestSCR</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>10</ReferenceCount>
+        <CompiledSize>298</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAABwBAAAVAAsAZgIABgAgMC4wMDEWAA0AAQAJACBzAwAgMiA9PR4AAAAYAA0AAgAJACBzAwAgMCA9PRUACQBmAQAEACAzMDAVAAcAcwMAAgAgMRkAAAAYAA0AEAAJACBzAwAgMSA9PRYADAABAAgAIGYBACAwID4VABEAZgEADAAgZgEAIFgMEAAAIC0XAAIADABZEAsAAQByAwAAAAAAAAB8EQUAAQByBABxEAUAAQByBQBxEAUAAQByBgBxEAUAAQByBwBxEAUAAQByCAA2EAUAAQByCQCiEQ8AAwByCQBuUAAAAG4BAAAAORAKAAIAcgkAbsgAAAAcAAEAIRACAAAAHAACACIQAgAAADcQBQABAHIKABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWStartingInNewVegasQuestSCR.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fQuestDelayTime</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnce</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602F006">SpringvaleEyebotREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060ACD96">REFR - 060ACD96</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D006C13">TTWStartingInNewVegasMsg1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D006C12">TTWStartingInNewVegasLetter</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001F388">CG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E83">CG01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00014E84">CG02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E85">CG03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E86">CG04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D006C11">TTWStartingInNewVegasQuest</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

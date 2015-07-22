@@ -1,0 +1,2173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E8B">MQ05</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ05</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601B52E">MQ05Script</Reference>
+    </Script>
+    <Name Tag="FULL">The Waters of Life</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>20</ReferenceCount>
+                <CompiledSize>439</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAADkQCgACAHIRAG4KAAAAFgAQAB4ADAAgchIAcwQAIDE0IDwcAAIAixACAAAAHAADAIsQAgAAABwABACLEAIAAAAcAAUAixACAAAAHAAGAIsQAgAAABwABwCLEAIAAAAcAAgAixACAAAAHAAJAIsQAgAAABYAFwABABMAIHIKAFhDEAUAAQByEwAgMCA9PRwACgCeEAUAAQByFAAZAAAAFgAXAAEAEwAgcgsAWEMQBQABAHITACAwID09HAALAJ4QBQABAHIUABkAAAAWABcAAQATACByDABYQxAFAAEAchMAIDAgPT0cAAwAnhAFAAEAchQAGQAAABYAFwABABMAIHINAFhDEAUAAQByEwAgMCA9PRwADQCeEAUAAQByFAAZAAAAFgAXAAEAEwAgcg4AWEMQBQABAHITACAwID09HAAOAJ4QBQABAHIUABkAAAAWABcAAQATACByDwBYQxAFAAEAchMAIDAgPT0cAA8AnhAFAAEAchQAGQAAABwAEAAiEAIAAAAWAA8AAQALACByEgBzBAAgOCA8FQAKAHISAHMEAAIAIDgZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">MQDadRef.Enable
+SetStage MQ05 10
+
+; check on and react to Mutant residents @ project Purity
+if MQ03.bodyCount &lt; 14
+     ; Kill any Purity resident mutants in PPurity01 and PPurity03
+     MQ03Mutant01.kill
+     MQ03Mutant02.kill
+     MQ03Mutant09.kill
+     MQ03Mutant10.kill
+     MQ03Mutant11.kill
+     MQ03Mutant12.kill
+     MQ03Mutant13.kill
+     MQ03Mutant14.kill
+
+     ; Check for any errant wanderers, send home
+     if MQ03Mutant03.getInCell PPurity02== 0
+          MQ03Mutant03.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     if MQ03Mutant04.getInCell PPurity02 == 0
+          MQ03Mutant04.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     if MQ03Mutant05.getInCell PPurity02 == 0
+          MQ03Mutant05.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     if MQ03Mutant06.getInCell PPurity02 == 0
+          MQ03Mutant06.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     if MQ03Mutant07.getInCell PPurity02 == 0
+          MQ03Mutant07.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     if MQ03Mutant08.getInCell PPurity02 == 0
+          MQ03Mutant08.moveTo MQ05ControlRoomMarkTEMP
+     endif
+     MQ03MutantEnableMarker.Disable
+     if ( MQ03.BodyCount &lt; 8 )
+          set MQ03.Bodycount to 8
+     endif
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF53">MQ03Mutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF54">MQ03Mutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF55">MQ03Mutant09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF56">MQ03Mutant10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF57">MQ03Mutant11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF58">MQ03Mutant12</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF59">MQ03Mutant13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF5A">MQ03Mutant14</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06078801">MQ03Mutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06078805">MQ03Mutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06078806">MQ03Mutant05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06078804">MQ03Mutant06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF51">MQ03Mutant07</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609AF52">MQ03Mutant08</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BD690">MQ03MutantEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06018521">PPurity02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019CE8">MQ05ControlRoomMarkTEMP</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;this stage set to allow Dad's dialogue immediately upon leaving Tranquility Lane</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>63</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgQAbjwAAAAcAAEAIRACAAAAHAABAJ4QBQABAHIFABwAAgCeEAUAAQByBQAcAAMAnhAFAAEAcgUA</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage mq05 60
+mqdadref.enable
+mqdadref.moveto player
+janicekaplinskiref.moveto player
+doctorliref.moveto player
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC6">JaniceKaplinskiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>70</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgoAAABuAQAAABwAAQCeEAUAAQByAwAWABAAAQAMACByAgBzIQAgMSAhPRUACgByBABzAgACACAxGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ05 10 1
+DoctorLiRef.Moveto ScienceLabMarker
+; TTW sesom see questscript for changelog.
+if ( MQ05.TTWBridgeOpend != 1 )
+  set RCExBridge1Ref.bForceOpen to 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F00E">ScienceLabMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060594CE">RCExBridge1Ref</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>140</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgARAAMADQAgcgQAcwQAIDE0ID49HAABACIQAgAAABwAAgAhEAIAAAAcAAMAIRACAAAAGQAAABYAEAABAAwAIHIEAHMEACAxNCA8FQAKAHIFAHMeAAIAIDEZAAAAohEPAAMAcgUAbgoAAABuAQAAAKMRDwADAHIFAG4UAAAAbgEAAABVEAUAAQByBgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( MQ03.Bodycount &gt;= 14 )
+MQ05PReexistingTurret.disable
+AlexDargonRef.Enable
+DanielAgincourtRef.Enable
+endif
+if ( MQ03.BodyCount &lt; 14 )
+Set MQ05.AllClear to 1
+endif
+SetObjectiveCompleted MQ05 10 1
+SetObjectiveDisplayed MQ05 20 1
+ShowMap PPMapMarker</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AA1C3">MQ05PReexistingTurret</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCAB">AlexDargonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCBA">DanielAgincourtRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600326B">PPMapMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4ZAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 20 1
+SetObjectiveDisplayed MQ05 25 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">26</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhkAAABuAQAAAKMRDwADAHIBAG4aAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 25 1
+SetObjectiveDisplayed MQ05 26 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">27</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>90</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgcAbhoAAABuAQAAAKMRDwADAHIHAG4bAAAAbgEAAAAcAAEAIRACAAAAHAACACEQAgAAABwAAwBeEAAAHAAEAF4QAAAcAAUAXhAAABwABgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 26 1
+SetObjectiveDisplayed MQ05 27 1
+AlexDargonRef.Enable
+DanielAgincourtRef.Enable
+JaniceKaplinskiRef.EVP
+GarzaRef.EVP
+AnnaHoltRef.EVP
+DoctorLiRef.EVP</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCAB">AlexDargonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCBA">DanielAgincourtRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC6">JaniceKaplinskiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E764">GarzaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06038DF6">AnnaHoltRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>67</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbhQAAABuAQAAAKIRDwADAHICAG4bAAAAbgEAAACjEQ8AAwByAgBuHgAAAG4BAAAAHAABACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 20 1
+
+SetObjectiveCompleted MQ05 27 1
+
+SetObjectiveDisplayed MQ05 30 1
+
+MQ05LabMoved.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607E6D5">MQ05LabMoved</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAIARBQABAHIFABwAAgCAEQUAAQByBQAcAAMAgBEFAAEAcgUAHAAEAIARBQABAHIFAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Remove Lyons Pride NPCs from GNR faction (so they don't pick up GNR dialogue)
+MQ01SarahRef.removefromfaction MQ01BrotherhoodDCFaction
+MQ01VargasREF.removefromfaction MQ01BrotherhoodDCFaction
+MQ01ReddinREF.removefromfaction MQ01BrotherhoodDCFaction
+MQ01ColvinREF.removefromfaction MQ01BrotherhoodDCFaction
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000213FB">MQ01BrotherhoodDCFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAKMRDwADAHIBAG4oAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 30 1
+SetObjectiveDisplayed MQ05 40 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbigAAABuAQAAAKMRDwADAHIBAG4yAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 40 1
+SetObjectiveDisplayed MQ05 50 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG48AAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 50 1
+SetObjectiveDisplayed MQ05 60 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjwAAABuAQAAAKMRDwADAHIBAG5BAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 60 1
+SetObjectiveDisplayed MQ05 65 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbkEAAABuAQAAAKMRDwADAHICAG5GAAAAbgEAAAAcAAEAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 65 1
+SetObjectiveDisplayed MQ05 70 1
+PPMapMarker.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600326B">PPMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>40</ReferenceCount>
+                <CompiledSize>1219</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAciIAbkYAAABuAQAAAKMRDwADAHIiAG5LAAAAbgEAAAAcAAEAIRACAAAAFgASAAEADgAgcgIAWC4QAAAgMCA9PRwAAgCeEAUAAQByIwAZAAAAFgASAAEADgAgcgMAWC4QAAAgMCA9PRwAAwCeEAUAAQByIwAZAAAAFgASAAEADgAgcgQAWC4QAAAgMCA9PRwABACeEAUAAQByIwAZAAAAHAAFAJ4QBQABAHIkABwABgCeEAUAAQByJQAcAAcAnhAFAAEAciYAHAAIACEQAgAAABwACQAhEAIAAAAcAAoAIRACAAAAFgASAAEADgAgcgsAWC4QAAAgMCA9PRwACwCeEAUAAQByJwAZAAAAFgAZAAEAFQAgcgwAWAEQBQABAHIoACA1NjAgPD0cAAwAixACAAAAGQAAABYAGQABABUAIHINAFgBEAUAAQByKAAgNTYwIDw9HAANAIsQAgAAABkAAAAWABkAAQAVACByDgBYARAFAAEAcigAIDU2MCA8PRwADgCLEAIAAAAZAAAAFgAZAAEAFQAgcg8AWAEQBQABAHIoACA1NjAgPD0cAA8AixACAAAAGQAAABYAGQABABUAIHIQAFgBEAUAAQByKAAgNTYwIDw9HAAQAIsQAgAAABkAAAAWABkAAQAVACByEQBYARAFAAEAcigAIDU2MCA8PRwAEQCLEAIAAAAZAAAAFgAZAAEAFQAgchIAWAEQBQABAHIoACA1NjAgPD0cABIAixACAAAAGQAAABYAGQABABUAIHITAFgBEAUAAQByKAAgNTYwIDw9HAATAIsQAgAAABkAAAAWABkAAQAVACByFABYARAFAAEAcigAIDU2MCA8PRwAFACLEAIAAAAZAAAAFgAZAAEAFQAgchUAWAEQBQABAHIoACA1NjAgPD0cABUAixACAAAAGQAAABYAGQABABUAIHIWAFgBEAUAAQByKAAgNTYwIDw9HAAWAIsQAgAAABkAAAAWABkAAQAVACByFwBYARAFAAEAcigAIDU2MCA8PRwAFwCLEAIAAAAZAAAAFgAZAAEAFQAgchgAWAEQBQABAHIoACA1NjAgPD0cABgAixACAAAAGQAAABYAGQABABUAIHIZAFgBEAUAAQByKAAgNTYwIDw9HAAZAIsQAgAAABkAAAAWABkAAQAVACByGgBYARAFAAEAcigAIDU2MCA8PRwAGgCLEAIAAAAZAAAAFgAZAAEAFQAgchsAWAEQBQABAHIoACA1NjAgPD0cABsAixACAAAAGQAAABYAGQABABUAIHIcAFgBEAUAAQByKAAgNTYwIDw9HAAcAIsQAgAAABkAAAAWABkAAQAVACByHQBYARAFAAEAcigAIDU2MCA8PRwAHQCLEAIAAAAZAAAAFgAZAAEAFQAgch4AWAEQBQABAHIoACA1NjAgPD0cAB4AixACAAAAGQAAABYAGQABABUAIHIfAFgBEAUAAQByKAAgNTYwIDw9HAAfAIsQAgAAABkAAAAWABkAAQAVACByIABYARAFAAEAcigAIDU2MCA8PRwAIACLEAIAAAAZAAAAFgAZAAEAFQAgciEAWAEQBQABAHIoACA1NjAgPD0cACEAixACAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 70 1
+SetObjectiveDisplayed MQ05 75 1
+
+;set up Autumn scene in Control room
+
+MQ05EnclaveTroopsMarker.enable
+if ( DanielAgincourtRef.GetDead == 0 )
+DanielAgincourtRef.Moveto MQ05TaftTunnelStartMark
+endif
+if ( AlexDargonRef.GetDead == 0 )
+AlexDargonRef.Moveto MQ05TaftTunnelStartMark
+endif
+if ( GarzaRef.GetDead == 0 )
+GarzaRef.Moveto MQ05TaftTunnelStartMark
+endif
+JaniceKaplinskiRef.Moveto MQ05Stage75JaniceMarker
+MQDadRef.Moveto MQ05Stage75DadMarker
+DoctorLiRef.Moveto MQ05DoctorLiStage75Marker
+MQ05EnclaveGoon1.Enable
+MQ05EnclaveGoon2.Enable
+MQ05ColonelAutumnRef.Enable
+if ( AnnaHoltRef.GetDead == 0 )
+AnnaHoltRef.Moveto MQ09AnnaMarker
+endif
+
+;if player has left anyone waiting in the control room, kill 'em
+
+if ( JerichoRef.GetDistance MQ05Radiation2 &lt;= 560 )
+JerichoRef.Kill
+endif
+if ( RL3REF.GetDistance MQ05Radiation2 &lt;= 560 )
+RL3Ref.Kill
+endif
+if ( CloverRef.GetDistance MQ05Radiation2 &lt;= 560 )
+CloverRef.Kill
+endif
+if ( DogmeatRef.GetDistance MQ05Radiation2 &lt;= 560 )
+DogmeatRef.Kill
+endif
+if ( ButchRef.GetDistance MQ05Radiation2 &lt;= 560 )
+ButchRef.Kill
+endif
+if ( CharonRef.GetDistance MQ05Radiation2 &lt;= 560 )
+CharonRef.Kill
+endif
+if ( MS15SydneyRef.GetDistance MQ05Radiation2 &lt;= 560 )
+MS15SydneyRef.Kill
+endif
+if ( StickyRef.GetDistance MQ05Radiation2 &lt;= 560 )
+StickyRef.Kill
+endif
+if ( RedRef.GetDistance MQ05Radiation2 &lt;= 560 )
+RedRef.Kill
+endif
+if ( ShortyRef.GetDistance MQ05Radiation2 &lt;= 560 )
+ShortyRef.Kill
+endif
+if ( CherryRef.GetDistance MQ05Radiation2 &lt;= 560 )
+CherryRef.Kill
+endif
+if ( VictoriaWattsRef.GetDistance MQ05Radiation2 &lt;= 560 )
+VictoriaWattsRef.Kill
+endif
+if ( CraigBooneREF.GetDistance MQ05Radiation2 &lt;= 560 )
+CraigBooneREF.Kill
+endif
+if ( RoseofSharonCassidyREF.GetDistance MQ05Radiation2 &lt;= 560 )
+RoseofSharonCassidyREF.Kill
+endif
+if ( VeronicaREF.GetDistance MQ05Radiation2 &lt;= 560 )
+VeronicaREF.Kill
+endif
+if ( LilyREF.GetDistance MQ05Radiation2 &lt;= 560 )
+LilyREF.Kill
+endif
+if ( RaulREF.GetDistance MQ05Radiation2 &lt;= 560 )
+RaulREF.Kill
+endif
+if ( ArcadeREF.GetDistance MQ05Radiation2 &lt;= 560 )
+ArcadeREF.Kill
+endif
+if ( EDE1Ref.GetDistance MQ05Radiation2 &lt;= 560 )
+EDE1Ref.Kill
+endif
+if ( EDE2Ref.GetDistance MQ05Radiation2 &lt;= 560 )
+EDE2Ref.Kill
+endif
+if ( EDE3Ref.GetDistance MQ05Radiation2 &lt;= 560 )
+EDE3Ref.Kill
+endif
+if ( RexREF.GetDistance MQ05Radiation2 &lt;= 560 )
+RexREF.Kill
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AA1C1">MQ05EnclaveTroopsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCBA">DanielAgincourtRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCAB">AlexDargonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E764">GarzaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC6">JaniceKaplinskiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFEA">MQ05EnclaveGoon1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFE9">Mq05EnclaveGoon2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A24F9">MQ05ColonelAutumnRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06038DF6">AnnaHoltRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5D">JerichoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06094285">RL3REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060384D8">CloverREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A775">DogmeatREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B8E1">CharonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00096BCE">CraigBooneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E32A9">VeronicaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0013D830">LilyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E6105">RaulREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8EB">ArcadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D1">EDE1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D0">EDE2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732CF">EDE3Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8DF">RexREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062AC1">MQ05TaftTunnelStartMark</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFE2">MQ05Stage75JaniceMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFE1">MQ05Stage75DadMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06088225">MQ05DoctorLiStage75Marker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06066FE2">MQ09AnnaMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A98F7">MQ05Radiation2</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>118</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAABwAAgAhEAIAAAAcAAMAIhACAAAAHAAEACIQAgAAAGAQAgAAABwABQBzEAIAAAAcAAYAcxACAAAAohEPAAMAcgcAbksAAABuAQAAAKMRDwADAHIHAG5QAAAAbgEAAAA5EAoAAgByCABulgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Joel - enable Enclave energy fence around Purity
+EnclavePurityDefensesMarker.enable
+EnclavePurityDefensesForcefieldsMarker.enable
+MQ05VertibirdLandREF.disable
+Mq05VertibirdLandREF02.disable
+EnablePlayerControls
+TaftExitRef.Unlock
+TaftEntranceRef.Unlock
+SetObjectiveCompleted MQ05 75 1
+SetObjectiveDisplayed MQ05 80 1
+SetStage MQ01LD 150</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B5C52">EnclavePurityDefensesMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060740B2">EnclavePurityDefensesForcefieldsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06079FEE">MQ05VertibirdLandREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AE06E">Mq05VertibirdLandREF02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602F876">TaftExitRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CC7D">TaftEntranceRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">85</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>139</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgkAblAAAABuAQAAAKMRDwADAHIJAG5VAAAAbgEAAAAcAAEAIRACAAAAHAACACEQAgAAABwAAwBeEAAAHAAEAF4QAAAcAAUAXhAAABwABgByEAcAAQBu/wAAABwABwCeEAUAAQByCgAcAAcAXhAAABwACACeEAUAAQByCwAcAAgAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 80 1
+SetObjectiveDisplayed MQ05 85 1
+FFEnclaveEncampmentMasterREF.enable
+EnclaveCamp11DeathClawCollision.enable
+GarzaRef.EVP
+DanielAgincourtRef.EVP
+AlexDargonRef.EVP
+MQ05TaftToPPurityLadderRef.Lock 255
+ElderLyonsRef.Moveto MQ05ElderLyonsMarker
+ElderLyonsRef.EVP
+MQ01SarahRef.Moveto MQ05SarahLyonsMarker
+MQ01SarahRef.EVP
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06086764">FFEnclaveEncampmentMasterREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A600F">EnclaveCamp11DeathClawCollision</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E764">GarzaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCBA">DanielAgincourtRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCAB">AlexDargonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CF55">MQ05TaftToPPurityLadderRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB21A">MQ05ElderLyonsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB21B">MQ05SarahLyonsMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbloAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">
+SetObjectiveDisplayed MQ05 90 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>37</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbloAAABuAQAAABwAAQCJEAoAAgByAwBuAAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 90 1
+Player.SetFactionRank MQPlayerBOSAllyFaction 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000410B5">MQPlayerBOSAllyFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">Escort Doctor Li inside the Citadel.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>160</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgYAblUAAABuAQAAABwAAQAiEAIAAAA3EAUAAQByBgAVAAoAcgcAZhsAAgAgMBUAEAByBwBmHAAIACBHCAAgMSArFQAKAHIHAHM1AAIAIDE2EAUAAQByCQA5EAoAAgByCQBuAAAAABwAAgAiEAIAAAAcAAMAIhACAAAAHAAEACIQAgAAABwABQAiEAIAAAB3EQcAAQBuvAIAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ05 85 1
+MQ05ColonelAutumnRef.Disable
+StopQuest MQ05
+  Set RadioGalaxyNewsQuest.MQ04Clear to 0
+  Set RadioGalaxyNewsQuest.MQ05Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+StartQuest MQ06
+SetStage MQ06 0
+;addachievement 08
+MQDadRef.Disable
+JaniceKaplinskiRef.Disable
+MQ05EnclaveGoon1.Disable
+MQ05EnclaveGoon2.Disable
+RewardXP 700</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A24F9">MQ05ColonelAutumnRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC6">JaniceKaplinskiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFEA">MQ05EnclaveGoon1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CFE9">Mq05EnclaveGoon2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8C">MQ06</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="06014E8C">MQ06</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Join the scientists at Project Purity.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06072A0B">MQ05ScientistExteriorWaitMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>256</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDistance</Type>
+                  <ObjectReferences ID="06072A0B">MQ05ScientistExteriorWaitMarker</ObjectReferences>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>14</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E89">MQ03</Quest>
+                  <VariableIndex>4</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>14</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E89">MQ03</Quest>
+                  <VariableIndex>4</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601ECC0">MQ05ControlRoomMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>14</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E89">MQ03</Quest>
+                  <VariableIndex>4</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>256</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDistance</Type>
+                  <ObjectReferences ID="06072A0B">MQ05ScientistExteriorWaitMarker</ObjectReferences>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>14</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E89">MQ03</Quest>
+                  <VariableIndex>4</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Go to the Rivet City Science Lab.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601F00E">ScienceLabMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Turn on the Flood Control Pump Power.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FF7">MQ05FloodControlPumpRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>30</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Get the fuses from Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>40</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Replace the damaged fuses.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FF9">MQ05FuseBoxRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>50</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Boot up the mainframe.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FFC">MQ05MainframeControlPanelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>60</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Return to the control room.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>75</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Escort Doctor Li to the evacuation point.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FC5">DoctorLiRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>80</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">85</Index>
+        <Description Tag="NNAM">Escort Doctor Li through Taft Tunnel to the Citadel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601CC7D">TaftEntranceRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060341E9">CitCraneREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601B56C">TaftTunnel01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0606A8FF">TaftTunnel02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0603DC6F">REFR - 0603DC6F</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0606A8FF">TaftTunnel02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605CF9F">MQ05LiEndMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601B56C">TaftTunnel01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FC5">DoctorLiRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">Deal with the Garza "situation."</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E764">GarzaRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>85</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>11</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Escort Doctor Li through Taft Tunnel to the Citadel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605CF9F">MQ05LiEndMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601B56C">TaftTunnel01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0603DC6F">REFR - 0603DC6F</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0606A8FF">TaftTunnel02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018521">PPurity02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018520">PPurity01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601DEB0">PPurity03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601DEAE">PPurity05</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605CF9F">MQ05LiEndMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0606A8FF">TaftTunnel02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601B56C">TaftTunnel01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FC5">DoctorLiRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060341E9">CitCraneREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601B56C">TaftTunnel01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0606A8FF">TaftTunnel02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Drain the intake pipes.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601DEC1">MQ05PipeDoor02Ref</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601DEAE">PPurity05</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060382F4">MQ11AutumnExitMarker2</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018520">PPurity01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601DEB0">PPurity03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060A69FE">REFR - 060A69FE</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018521">PPurity02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601FDB4">MQ05PipeControlPanelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060AAE57">PPurity</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Clear Project Purity of any remaining Mutant threat.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">27</Index>
+        <Description Tag="NNAM">Escort the scientists inside Project Purity.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>27</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E8B">MQ05</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">26</Index>
+        <Description Tag="NNAM">Tell Dad it's safe to enter Project Purity.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">65</Index>
+        <Description Tag="NNAM">Speak with Dad over the intercom.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0608536F">MQ05MainframeIntercomRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

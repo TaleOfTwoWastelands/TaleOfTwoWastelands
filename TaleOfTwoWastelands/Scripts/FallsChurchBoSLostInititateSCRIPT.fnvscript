@@ -1,0 +1,34 @@
+SCN FallsChurchBoSLostInititateSCRIPT
+
+Short	Rescued
+
+BEGIN OnDeath
+
+	if ( GetStageDone FreeformDC 14 == 1 )
+		SetStage FreeformDC 15
+	endif
+
+END
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && FF02InititiateREF.GetPlayerTeammate == 1  
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

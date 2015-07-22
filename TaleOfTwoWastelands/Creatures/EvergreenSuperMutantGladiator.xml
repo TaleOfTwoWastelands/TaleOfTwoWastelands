@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="00029035">EvergreenSuperMutantGladiator</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">EvergreenSuperMutantGladiator</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Super Mutant</Name>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>WeaponAndShield, Walks, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseActorEffectList, UseAIData, UseModelAnimation</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001B2A4">PlayerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <Template Tag="TPLT">
+      <Reference ID="06094ED0">VarSupermutant1MeleeDC</Reference>
+    </Template>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Average</Confidence>
+      <EnergyLevel>2</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0002903D">EvergreenSuperMutantGladiatorEntrance</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Animal</CreatureType>
+      <Skill>
+        <Combat>50</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>50</Health>
+      <Damage>0</Damage>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">32</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0000003D">DefaultCombatstyle</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0000001D">DefaultBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">0</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">3</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+  </Subrecords>
+</Record>

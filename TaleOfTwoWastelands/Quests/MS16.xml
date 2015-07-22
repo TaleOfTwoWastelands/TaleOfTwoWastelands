@@ -1,0 +1,1656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA3">MS16</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS16</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0603D343">MS16script</Reference>
+    </Script>
+    <Name Tag="FULL">Trouble on the Homefront</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics, AllowRepeatedStages</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00083511">MS16Vault101ExternalRadio</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>IsInList</Type>
+          <List ID="00020ECA">NPCVault101ResidentLIST</List>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">This is called to prepare the quest, once the player has completed MQ05.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>49</ReferenceCount>
+                <CompiledSize>983</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIeAHMMAAIAIDEVAAoAch8AcwEAAgAgMRwAAQCAEQUAAQByIAAcAAIAIRACAAAAHAACANURBwABAG4BAAAAHAADACIQAgAAADcQBQABAHIhABwABAAhEAIAAAAcAAUAIhACAAAAAxAKAAIAciIAbgAAAAAWABIAAwAOACByIwBYLhAAACAwID09HAAGACIQAgAAABwABwCXEAUAAQByJAAcAAcAnhAFAAEAciUAFwACAAQAHAAHACIQAgAAABwABgCXEAUAAQByJAAcAAYAnhAFAAEAciUAFQAKAHIeAHMQAAIAIDEZAAAAFgASAAEADgAgciYAWC4QAAAgMCA9PRwACACeEAUAAQByJwAXAAIAAQAcAAgAIhACAAAAGQAAABYAEgABAA4AIHIoAFguEAAAIDAgPT0cAAkAnhAFAAEAcicAFwACAAEAHAAJACIQAgAAABkAAAAWABIAAQAOACByKQBYLhAAACAwID09HAAKAJ4QBQABAHInABcAAgABABwACgAiEAIAAAAZAAAAFgASAAIADgAgcioAWC4QAAAgMCA9PRwACwCeEAUAAQByJwAcAAwAIhACAAAAFwACAAIAHAAMAJ4QBQABAHInABwACwAiEAIAAAAZAAAAFgASAAEADgAgcisAWC4QAAAgMCA9PRwADQCeEAUAAQByLAAXAAIAAQAcAA0AIhACAAAAGQAAABYAEgABAA4AIHItAFguEAAAIDAgPT0cAA4AnhAFAAEAcicAFwACAAEAHAAOACIQAgAAABkAAAAWABIAAQAOACByLgBYLhAAACAwID09HAAPAJ4QBQABAHInABcAAgABABwADwAiEAIAAAAZAAAAHAAQAJ4QBQABAHIsABwAEQCeEAUAAQByLwAcABIAnhAFAAEAciwAHAATAJ4QBQABAHIsABwAFACeEAUAAQByLAAcABUAnhAFAAEAciwAHAAWAJ4QBQABAHInABwAFwCeEAUAAQByJwAWABIAAQAOACBY5hAIAAIAcjAAchgAHAAYAJ4QBQABAHIxABkAAAAWABIAAQAOACBY5hAIAAIAcjAAchkAHAAZAJ4QBQABAHIxABkAAAAWABIAAQAOACBY5hAIAAIAcjAAchoAHAAaAJ4QBQABAHIxABkAAAAWABIAAQAOACBY5hAIAAIAcjAAchsAHAAbAJ4QBQABAHIxABkAAAAWABIAAQAOACBY5hAIAAIAcjAAchwAHAAcAJ4QBQABAHIxABkAAAAWABIAAQAOACBY5hAIAAIAcjAAch0AHAAdAJ4QBQABAHIxABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">set MS16.Begin1 to 1
+set MS16ControlPanelVault101REF.mode to 1
+player.removefromfaction Vault101SecurityEnemyFaction
+
+;Turn on Radio 101 listening area
+MS16Vault101ExternalRadioREF.enable
+MS16Vault101ExternalRadioREF.setBroadcastState 1
+radioVault101REF.disable
+;ShowWarning "Radio 101 turned on"
+
+;End CG04 and DialogueVault101 so their dialogue doesn't interfere with MS16 dialogue.
+stopQuest CG04
+
+;Switch Vault 101 external doors
+MS16Vault101CaveDoorExterior.enable
+Vault101CaveDoorExterior.disable
+
+;Set destruction and lockdown lighting for Vault101
+;Vault101RedLightsREF.enable
+;MS16DestructionREF.enable
+
+;Set Amata as non-essential. Poo on essential quest characters.
+SetEssential Amata 0
+
+;Set Overseer
+if (CG04OverseerREF.GetDead == 0)
+   AllenMackREF.disable
+   OverseerREF.addScriptPackage MS16OverseerGreetPlayer
+   OverseerREF.moveto MS16OverseerOfficeMarker
+else 
+   OverseerREF.disable
+   AllenMackREF.addScriptPackage MS16OverseerGreetPlayer
+   AllenMackREF.moveto MS16OverseerOfficeMarker
+   set MS16.AllenOverseer to 1
+endif
+
+;Set Security
+if CG04Vault101Security01REF.GetDead == 0
+   Vault101Security01REF.moveto Vault101DinerMarkerREF
+else
+   Vault101Security01REF.disable
+endif
+if CG04Vault101Security02REF.GetDead == 0
+   Vault101Security02REF.moveto Vault101DinerMarkerREF
+else
+   Vault101Security02REF.disable
+endif
+if CG04Vault101Security03REF.GetDead == 0
+   Vault101Security03REF.moveto Vault101DinerMarkerREF
+else
+   Vault101Security03REF.disable
+endif
+
+;Set Gomez/Taylor
+if CG04Vault101Security04REF.GetDead == 0
+   Vault101Security04REF.moveto Vault101DinerMarkerREF
+   Vault101Security07REF.disable
+else
+   Vault101Security07REF.moveto Vault101DinerMarkerREF
+   Vault101Security04REF.disable
+endif
+
+;Move Butch and Ellen, if they survived
+if CG04ButchREF.GetDead == 0
+   ButchREF.moveto RebelHQMarker
+else
+   ButchREF.disable
+endif
+if CG04EllenDeLoriaREF.GetDead == 0
+   EllenDeLoriaREF.moveto Vault101DinerMarkerREF
+else
+   EllenDeLoriaREF.disable
+endif
+if CG04StanleyREF.GetDead == 0
+   StanleyREF.moveto Vault101DinerMarkerREF
+else
+   StanleyREF.disable
+endif
+
+;Move NPCs to the MS16 version of Vault 101
+AmataREF.moveto RebelHQMarker
+MrBrotchREF.moveto MS16JailMarker
+OldLadyPalmerREF.moveto RebelHQMarker
+ChristineKendallREF.moveto RebelHQMarker
+SusieMackREF.moveto RebelHQMarker
+FreddieGomezREF.moveto RebelHQMarker
+PepperGomezREF.moveto Vault101DinerMarkerREF
+WallyMackREF.moveto Vault101DinerMarkerREF
+
+;Move non-hired followers out of the area, if inside.
+if getInCellParam Vault101 MS15SydneyREF
+   MS15SydneyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 StickyREF
+   StickyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 RedREF
+   RedREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 ShortyREF
+   ShortyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 VictoriaWattsREF
+   VictoriaWattsREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 CherryREF
+   CherryREF.moveto EvacuationMarker
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607161F">RadioVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609B5A0">MS16Vault101CaveDoorExterior</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06018612">Vault101CaveDoorExterior</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029079">AllenMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BC">OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602985A">Vault101Security01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4C2">Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BB">Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A901">Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09D9">Vault101Security07REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D6">EllenDeLoriaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFD9">StanleyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D4">AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029077">MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029076">OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029078">ChristineKendallREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06042E76">SusieMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907C">FreddieGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907B">PepperGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907A">WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B5544">MS16ControlPanelVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AE26">Vault101SecurityEnemyFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602549E">Amata</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872A5">MS16OverseerGreetPlayer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609A086">MS16OverseerOfficeMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606490E">CG04Vault101Security01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029067">Vault101DinerMarkerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064912">CG04Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064913">CG04Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064914">CG04Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605157C">RebelHQMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E2">CG04EllenDeLoriaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606B23B">CG04StanleyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600346A">MS16JailMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E7FC">Vault101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309D6">EvacuationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Vault 101 door can be opened</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>30</ReferenceCount>
+                <CompiledSize>444</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAchAAbgoAAABuAQAAABwAAQB8EQUAAQByEQAVAAoAchIAcwEAAgAgMRYAEgACAA4AIHITAFguEAAAIDAgPT0cAAIAnhAFAAEAchQAHAACAJcQBQABAHIVABcAAgACABwAAwCeEAUAAQByFAAcAAMAlxAFAAEAchUAGQAAABwABACeEAUAAQByFgAcAAUAnhAFAAEAchcAHAAGAAIQCgACAHIYAG4BAAAAHAAHAAIQCgACAHIYAG4BAAAAHAAIAAIQCgACAHIYAG4BAAAAHAACAAIQCgACAHIYAG4BAAAAHAADAAIQCgACAHIYAG4BAAAAHAAFAAIQCgACAHIYAG4BAAAAHAAEAAIQCgACAHIZAG4BAAAAHAAJAAIQCgACAHIaAG4BAAAAHAAKAAIQCgACAHIbAG4BAAAAHAALAAIQCgACAHIYAG4BAAAAHAAMAAIQCgACAHIcAG4BAAAAHAANAAIQCgACAHIdAG4BAAAAHAANAAIQCgACAHIeAG4BAAAAHAANAO4QCgACAHIeAG4BAAAAHAAOAAIQCgACAHIYAG4BAAAAHAAPAAIQCgACAHIYAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 10 1
+player.addNote MS16Vault101DoorPassword
+set MS16ControlPanelVault101REF.mode to 1
+
+;Move Gomez/Armstrong into position
+if CG04Vault101Security04ref.GetDead == 0
+   Vault101Security04ref.moveto VaultDoorGuardMarker
+   Vault101Security04ref.addScriptPackage MS16GomezGreetPlayer
+else
+   Vault101Security07ref.moveto VaultDoorGuardMarker
+   Vault101Security07ref.addScriptPackage MS16GomezGreetPlayer
+endif
+
+;Move Atrium Scene into position
+FreddieGomezREF.moveto MS16RebelSceneStart
+Vault101Security08REF.moveto MS16GuardShootFrom02REF
+
+;Arm guards
+Vault101Security01REF.additem WithAmmo10mmPistolNPC 1
+Vault101Security02REF.additem WithAmmo10mmPistolNPC 1
+Vault101Security03REF.additem WithAmmo10mmPistolNPC 1
+Vault101Security04REF.additem WithAmmo10mmPistolNPC 1
+Vault101Security07REF.additem WithAmmo10mmPistolNPC 1
+Vault101Security08REF.additem WithAmmo10mmPistolNPC 1
+FreddieGomezREF.additem CondSwitchbladeNPC 1
+ChristineKendallREF.additem CondTireIronNPC 1
+SusieMackREF.additem CondLeadPipeNPC 1
+AmataREF.additem WithAmmo10mmPistolNPC 1
+WallyMackREF.additem CondBaseballBatNPC 1
+AllenMackREF.additem WithAmmoAssaultRifleNPC 1
+AllenMackREF.additem ArmorVault101Security 1
+AllenMackREF.equipitem ArmorVault101Security 1
+ButchREF.additem WithAmmo10mmPistolNPC 1
+OverseerREF.additem WithAmmo10mmPistolNPC 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A901">Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09D9">Vault101Security07REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907C">FreddieGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09DD">Vault101Security08REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602985A">Vault101Security01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4C2">Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BB">Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029078">ChristineKendallREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06042E76">SusieMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D4">AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907A">WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029079">AllenMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BC">OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024860">MS16Vault101DoorPassword</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B5544">MS16ControlPanelVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064914">CG04Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602E431">VaultDoorGuardMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024866">MS16GomezGreetPlayer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09DE">MS16RebelSceneStart</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601EC4E">MS16GuardShootFrom02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002935D">WithAmmo10mmPistolNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000A282B">CondSwitchbladeNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003A8CF">CondTireIronNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003A8C1">CondLeadPipeNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003A8B5">CondBaseballBatNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029367">WithAmmoAssaultRifleNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CBDD">ArmorVault101Security</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Vault 101 door has been opened. Player will be greeted by Officer Gomez.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>135</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbgoAAABuAQAAAKMRDwADAHIEAG4UAAAAbgEAAAAcAAEAlxAFAAEAcgUAFgASAAIADgAgcgYAWC4QAAAgMCA9PRwAAgCeEAUAAQByBwAcAAIAlxAFAAEAcggAFwACAAIAHAADAJ4QBQABAHIHABwAAwCXEAUAAQByCAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS16 10 1
+setObjectiveDisplayed MS16 20 1
+AmataREF.addScriptPackage MS16AmataGreetPlayer
+
+;Move Gomez/Armstrong into position
+if CG04Vault101Security04REF.getDead == 0
+   Vault101Security04ref.moveto VaultDoorGuardMarker
+   Vault101Security04ref.addScriptPackage MS16GomezGreetPlayer
+else
+   Vault101Security07ref.moveto VaultDoorGuardMarker
+   Vault101Security07ref.addScriptPackage MS16GomezGreetPlayer
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D4">AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A901">Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09D9">Vault101Security07REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605157B">MS16AmataGreetPlayer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064914">CG04Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602E431">VaultDoorGuardMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024866">MS16GomezGreetPlayer</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Through talking with one of Vault 101's residents, the lockdown's reasons have been explained, as well as one or two possible solutions.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4eAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS16 20 1
+setObjectiveDisplayed MS16 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has pledged to stop the Overseer.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has pledged to stop the rebels.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbjwAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 60 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has learned that he could sabotage Vault 101's water chip and force people to leave.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAblAAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 80 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has voluntarily chosen to leave the Vault forever. He can still change his mind by talking to a rebel or Gomez and saying he won't actually leave.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbloAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed ms16 90 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">140</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has stopped or killed the Overseer. Now he must report back to the head of the rebels, Amata.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>114</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAKIRDwADAHIBAG4oAAAAbgEAAACjEQ8AAwByAQBujAAAAG4BAAAAoxEPAAMAcgEAbjwAAABuAAAAAKMRDwADAHIBAG5QAAAAbgAAAACjEQ8AAwByAQBuWgAAAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS16 30 1
+setObjectiveCompleted MS16 40 1
+setObjectiveDisplayed MS16 140 1
+setObjectiveDisplayed MS16 60 0
+setObjectiveDisplayed MS16 80 0
+setObjectiveDisplayed MS16 90 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">160</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has stopped or killed Amata. Now he must report back to the head of the vault, the Overseer.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>114</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAKIRDwADAHIBAG48AAAAbgEAAACjEQ8AAwByAQBuoAAAAG4BAAAAoxEPAAMAcgEAbigAAABuAAAAAKMRDwADAHIBAG5QAAAAbgAAAACjEQ8AAwByAQBuWgAAAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS16 30 1
+setObjectiveCompleted MS16 60 1
+setObjectiveDisplayed MS16 160 1
+setObjectiveDisplayed MS16 40 0
+setObjectiveDisplayed MS16 80 0
+setObjectiveDisplayed MS16 90 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">180</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has sabotaged the vault's water chip. Everyone evacuates the Vault, and the Overseer comes to attack the player. Amata will meet the player at the Vault entrance.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>30</ReferenceCount>
+                <CompiledSize>645</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIVAHMIAAIAIDQcAAEABBIHAAEAbgb///8WACMAAgAfACByFQBzEAAgMCA9PSBYVBAFAAEAchYAIDAgPT0gJiYcAAIAnhAFAAEAchcAHAACAJcQBQABAHIYABgAIwACAB8AIHIVAHMQACAxID09IFhUEAUAAQByGQAgMCA9PSAmJhwAAwCeEAUAAQByFwAcAAMAlxAFAAEAchgAGQAAABYAFAACABAAIFhUEAUAAQByGgAgMCA9PRwABACeEAUAAQByGwAcAAQAlxAFAAEAchwAGQAAABwABQCeEAUAAQByHQAcAAUAlxAFAAEAch4AHAAGACIQAgAAABwABwAiEAIAAAAcAAgAIhACAAAAHAAJACIQAgAAABwACgAiEAIAAAAcAAsAIhACAAAAHAAMACIQAgAAABwADQAiEAIAAAAcAA4AIhACAAAAHAAPACIQAgAAABwAEAAiEAIAAAAcABEAIhACAAAAHAASACIQAgAAABwAEwAiEAIAAAAcABQAIhACAAAAFgAQAAEADAAgchUAcxAAIDAgPT0cAAMAIhACAAAAGQAAAKIRDwADAHIVAG4eAAAAbgEAAACiEQ8AAwByFQBuUAAAAG4BAAAAoxEPAAMAchUAbrQAAABuAQAAAKMRDwADAHIVAG4oAAAAbgAAAACjEQ8AAwByFQBuPAAAAG4AAAAAoxEPAAMAchUAbloAAABuAAAAABYAGQABABUAIFikEQoAAgByFQBuoAAAACAwID09ohEPAAMAchUAbqAAAABuAAAAABkAAAAWABkAAQAVACBYpBEKAAIAchUAbowAAAAgMCA9PaIRDwADAHIVAG6MAAAAbgAAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set "evacuation" finish
+Set MS16.Finish to 4
+
+;Karma hit
+player.rewardkarma -250
+
+;Move Amata and the Overseer to positions to ambush the player with dialogue
+If (MS16.AllenOverseer == 0 &amp;&amp; GetDeadCount Overseer == 0)
+   OverseerREF.moveto MS16ReactorEntranceMarker
+   OverseerREF.addscriptpackage MS16OverseerEvacuation
+elseif (MS16.AllenOverseer == 1 &amp;&amp; GetDeadCount AllenMack == 0)
+   AllenMackREF.moveto MS16ReactorEntranceMarker
+   AllenMackREF.addscriptpackage MS16OverseerEvacuation
+endif
+if (GetDeadCount Amata == 0)
+   AmataREF.moveto AmataEvacuationMarker
+   AmataREF.addscriptpackage MS16AmataEvacuate
+endif
+
+;Get Butch the hell out of there. To the bar!
+ButchREF.moveto BelleBonnyREF
+ButchREF.addscriptpackage MS16finButchRCBar
+
+;Disable all other Vault members as they run away
+;Vault101NPCMarkerREF.disable
+Vault101Security01REF.disable
+Vault101Security02REF.disable
+Vault101Security03REF.disable
+Vault101Security04REF.disable
+Vault101Security07REF.disable
+Vault101Security08REF.disable
+BeatriceREF.disable
+EllenDeLoriaREF.disable
+PepperGomezREF.disable
+WallyMackREF.disable
+MrBrotchREF.disable
+OldLadyPalmerREF.disable
+ChristineKendallREF.disable
+SusieMackREF.disable
+FreddieGomezREF.disable
+if (MS16.AllenOverseer == 0)
+   AllenMackREF.disable
+endif
+
+
+setObjectiveCompleted MS16 30 1
+setObjectiveCompleted MS16 80 1
+setObjectiveDisplayed MS16 180 1
+setObjectiveDisplayed MS16 40 0
+setObjectiveDisplayed MS16 60 0
+setObjectiveDisplayed MS16 90 0
+if (getObjectiveCompleted MS16 160 == 0)
+   setObjectiveCompleted MS16 160 0
+endif
+if (getObjectiveCompleted MS16 140 == 0)
+   setObjectiveCompleted MS16 140 0
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BC">OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029079">AllenMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D4">AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602985A">Vault101Security01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4C2">Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BB">Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A901">Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09D9">Vault101Security07REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C09DD">Vault101Security08REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFC5">BeatriceREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060282D6">EllenDeLoriaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907B">PepperGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907A">WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029077">MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029076">OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06029078">ChristineKendallREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06042E76">SusieMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602907C">FreddieGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D043">Overseer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609A6FE">MS16ReactorEntranceMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DC">MS16OverseerEvacuation</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603D346">AllenMack</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602549E">Amata</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060438B1">AmataEvacuationMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DB">MS16AmataEvacuate</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E75B">BelleBonnyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DE">MS16finButchRCBar</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">190</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">For one reason or another, the player must leave Vault 101 forever.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbr4AAABuAQAAAKMRDwADAHIBAG5aAAAAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 190 1
+setObjectiveDisplayed MS16 90 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <LogEntry Tag="CNAM">Both faction leaders are dead - Amata and Overseer/Allen Mack</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>203</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAEAFQAgWKURCgACAHICAG6MAAAAIDEgPT2jEQ8AAwByAgBujAAAAG4AAAAAGQAAABYAGQABABUAIFilEQoAAgByAgBuoAAAACAxID09oxEPAAMAcgIAbqAAAABuAAAAABkAAABZEAsAAQByAwAAAAAAAAA3EAUAAQByAgA2EAUAAQByBAAVAAoAcgQAcwgAAgAgMRYAEgACAA4AIHIBAFguEAAAIDAgPT0cAAEAnhAFAAEAcgUAHAABAJcQBQABAHIGABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if (getObjectiveDisplayed MS16 140== 1)
+   setObjectiveDisplayed MS16 140 0
+endif
+if (getObjectiveDisplayed MS16 160== 1)
+   setObjectiveDisplayed MS16 160 0
+endif
+
+showMessage MS16ChaosFailedMSG
+stopQuest MS16
+startQuest MS16fin
+set MS16fin.Chaos to 1
+if ButchRef.GetDead == 0
+   ;Get Butch the hell out of there. To the bar!
+   ButchREF.moveto BelleBonnyREF
+   ButchREF.addscriptpackage MS16finButchRCBar
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C20C7">MS16ChaosFailedMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024863">MS16fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E75B">BelleBonnyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DE">MS16finButchRCBar</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">210</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">The player has been barred from Vault 101, either by killing the Overseer and being banished by Amata, stopping the rebels and allowing the Overseer to close the vault, or by simply refusing to be involved and leaving.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>16</ReferenceCount>
+                <CompiledSize>417</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgkAbr4AAABuAQAAADcQBQABAHIJABYAEAABAAwAIHIJAHMIACAyID09NhAFAAEAcgoAGQAAABUAEAByCwBmMAAIACBHDAAgMSArFQAKAHILAHM1AAIAIDEWABIAAgAOACByAQBYLhAAACAwID09HAABAJ4QBQABAHINABwAAQCXEAUAAQByDgAZAAAAdxEHAAEAbiwBAAAcAAIAIhACAAAAHAACANURBwABAG4AAAAAFgASAAEADgAgWOYQCAACAHIPAHIDABwAAwCeEAUAAQByEAAZAAAAFgASAAEADgAgWOYQCAACAHIPAHIEABwABACeEAUAAQByEAAZAAAAFgASAAEADgAgWOYQCAACAHIPAHIFABwABQCeEAUAAQByEAAZAAAAFgASAAEADgAgWOYQCAACAHIPAHIGABwABgCeEAUAAQByEAAZAAAAFgASAAEADgAgWOYQCAACAHIPAHIHABwABwCeEAUAAQByEAAZAAAAFgASAAEADgAgWOYQCAACAHIPAHIIABwACACeEAUAAQByEAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS16 190 1
+;setObjectiveDisplayed MS16 210 1
+;setObjectiveCompleted MS16 210 1
+stopQuest MS16
+if MS16.Finish == 2
+   startQuest MS16fin
+endif
+Set RadioGalaxyNewsQuest.MS16Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+;Get Butch the hell out of there. To the bar!
+if ButchRef.GetDead == 0
+   ButchREF.moveto BelleBonnyREF
+   ButchREF.addscriptpackage MS16finButchRCBar
+endif
+
+RewardXP 300
+;addachievement 28
+
+;Turn off Radio 101 listening area
+MS16Vault101ExternalRadioREF.disable
+MS16Vault101ExternalRadioREF.setBroadcastState 0
+
+;Move non-hired followers out of the area, if inside.
+if getInCellParam Vault101 MS15SydneyREF
+   MS15SydneyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 StickyREF
+   StickyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 RedREF
+   RedREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 ShortyREF
+   ShortyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 VictoriaWattsREF
+   VictoriaWattsREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 CherryREF
+   CherryREF.moveto EvacuationMarker
+endif
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024863">MS16fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E75B">BelleBonnyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DE">MS16finButchRCBar</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E7FC">Vault101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309D6">EvacuationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">215</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <LogEntry Tag="CNAM">The player has voluntarily left Vault 101, and the passwords have been changed behind him. QUEST FAILED - NO ACHIEVEMENT OR REWARD!</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>292</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcggAWRALAAEAcgkAAAAAAAAANxAFAAEAcggAHAABACIQAgAAABwAAQDVEQcAAQBuAAAAABYAEgABAA4AIFjmEAgAAgByCgByAgAcAAIAnhAFAAEAcgsAGQAAABYAEgABAA4AIFjmEAgAAgByCgByAwAcAAMAnhAFAAEAcgsAGQAAABYAEgABAA4AIFjmEAgAAgByCgByBAAcAAQAnhAFAAEAcgsAGQAAABYAEgABAA4AIFjmEAgAAgByCgByBQAcAAUAnhAFAAEAcgsAGQAAABYAEgABAA4AIFjmEAgAAgByCgByBgAcAAYAnhAFAAEAcgsAGQAAABYAEgABAA4AIFjmEAgAAgByCgByBwAcAAcAnhAFAAEAcgsAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">completeAllObjectives MS16
+showMessage MS16AbandonedFailedMSG
+stopQuest MS16
+
+;Turn off Radio 101 listening area
+MS16Vault101ExternalRadioREF.disable
+MS16Vault101ExternalRadioREF.setBroadcastState 0
+
+;Move non-hired followers out of the area, if inside.
+if getInCellParam Vault101 MS15SydneyREF
+   MS15SydneyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 StickyREF
+   StickyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 RedREF
+   RedREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 ShortyREF
+   ShortyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 VictoriaWattsREF
+   VictoriaWattsREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 CherryREF
+   CherryREF.moveto EvacuationMarker
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C20C8">MS16AbandonedFailedMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E7FC">Vault101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309D6">EvacuationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">230</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">The events inside have been resolved peacefully, but the player is still exiled from Vault 101.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>16</ReferenceCount>
+                <CompiledSize>412</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgkAbloAAABuAAAAAKIRDwADAHIJAG6+AAAAbgEAAAA3EAUAAQByCQA2EAUAAQByCgAVABAAcgsAZjAACAAgRwwAIDEgKxUACgByCwBzNQACACAxFgASAAIADgAgcgEAWC4QAAAgMCA9PRwAAQCeEAUAAQByDQAcAAEAlxAFAAEAcg4AGQAAAHcRBwABAG4sAQAAHAACACIQAgAAABwAAgDVEQcAAQBuAAAAABYAEgABAA4AIFjmEAgAAgByDwByAwAcAAMAnhAFAAEAchAAGQAAABYAEgABAA4AIFjmEAgAAgByDwByBAAcAAQAnhAFAAEAchAAGQAAABYAEgABAA4AIFjmEAgAAgByDwByBQAcAAUAnhAFAAEAchAAGQAAABYAEgABAA4AIFjmEAgAAgByDwByBgAcAAYAnhAFAAEAchAAGQAAABYAEgABAA4AIFjmEAgAAgByDwByBwAcAAcAnhAFAAEAchAAGQAAABYAEgABAA4AIFjmEAgAAgByDwByCAAcAAgAnhAFAAEAchAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 90 0
+setObjectiveCompleted MS16 190 1
+;setObjectiveDisplayed MS16 230 1
+;setObjectiveCompleted MS16 230 1
+stopQuest MS16
+startQuest MS16fin
+Set RadioGalaxyNewsQuest.MS16Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+;Get Butch the hell out of there. To the bar!
+if ButchRef.GetDead == 0
+   ButchREF.moveto BelleBonnyREF
+   ButchREF.addscriptpackage MS16finButchRCBar
+endif
+
+RewardXP 300
+;addachievement 28
+
+;Turn off Radio 101 listening area
+MS16Vault101ExternalRadioREF.disable
+MS16Vault101ExternalRadioREF.setBroadcastState 0
+
+;Move non-hired followers out of the area, if inside.
+if getInCellParam Vault101 MS15SydneyREF
+   MS15SydneyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 StickyREF
+   StickyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 RedREF
+   RedREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 ShortyREF
+   ShortyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 VictoriaWattsREF
+   VictoriaWattsREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 CherryREF
+   CherryREF.moveto EvacuationMarker
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024863">MS16fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E75B">BelleBonnyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060446DE">MS16finButchRCBar</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E7FC">Vault101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309D6">EvacuationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">240</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">The Overseer has been told to evacuate Vault 101, and it is now empty and poisoned, and its citizens are all either dead or wandering the wastes.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>14</ReferenceCount>
+                <CompiledSize>389</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgkAbloAAABuAAAAAKIRDwADAHIJAG5uAAAAbgEAAACiEQ8AAwByCQButAAAAG4BAAAANhAFAAEAcgoANxAFAAEAcgkAHAABAIsQAgAAAHcRBwABAG4sAQAAFQAQAHILAGYwAAgAIEcMACAxICsVAAoAcgsAczUAAgAgMRwAAgAiEAIAAAAcAAIA1REHAAEAbgAAAAAWABIAAQAOACBY5hAIAAIAcg0AcgMAHAADAJ4QBQABAHIOABkAAAAWABIAAQAOACBY5hAIAAIAcg0AcgQAHAAEAJ4QBQABAHIOABkAAAAWABIAAQAOACBY5hAIAAIAcg0AcgUAHAAFAJ4QBQABAHIOABkAAAAWABIAAQAOACBY5hAIAAIAcg0AcgYAHAAGAJ4QBQABAHIOABkAAAAWABIAAQAOACBY5hAIAAIAcg0AcgcAHAAHAJ4QBQABAHIOABkAAAAWABIAAQAOACBY5hAIAAIAcg0AcggAHAAIAJ4QBQABAHIOABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS16 90 0
+setObjectiveCompleted MS16 110 1
+setObjectiveCompleted MS16 180 1
+startQuest MS16fin
+
+;Quest is stopped in dialogue, at the end of MS16PostEvacuate3A/B/C/D
+;Unless Amata is dead
+stopQuest MS16
+OverseerREF.kill
+
+RewardXP 300
+;addachievement 28
+Set RadioGalaxyNewsQuest.MS16Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+;Turn off Radio 101 listening area
+MS16Vault101ExternalRadioREF.disable
+MS16Vault101ExternalRadioREF.setBroadcastState 0
+
+;Move non-hired followers out of the area, if inside.
+if getInCellParam Vault101 MS15SydneyREF
+   MS15SydneyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 StickyREF
+   StickyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 RedREF
+   RedREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 ShortyREF
+   ShortyREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 VictoriaWattsREF
+   VictoriaWattsREF.moveto EvacuationMarker
+endif
+if getInCellParam Vault101 CherryREF
+   CherryREF.moveto EvacuationMarker
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BC">OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AE22">CherryRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024863">MS16fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E7FC">Vault101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309D6">EvacuationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Return to Vault 101.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060B553F">MS16VaultGearDoorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Learn what happened to Vault 101.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060282D4">AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">End Vault 101's troubles.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060282D4">AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D4BC">OverseerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06029079">AllenMackREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Stop the Overseer.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D4BC">OverseerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06029079">AllenMackREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">140</Index>
+        <Description Tag="NNAM">Talk to Amata.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060282D4">AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Stop the Rebels.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060282D4">AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">160</Index>
+        <Description Tag="NNAM">Talk to the Overseer.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D4BC">OverseerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06029079">AllenMackREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA3">MS16</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">(Optional) Sabotage Vault 101.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025C67">MS16WaterChipTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">180</Index>
+        <Description Tag="NNAM">Evacuate the Vault</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06099F16">MS16VaultDoorExit</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">190</Index>
+        <Description Tag="NNAM">Leave Vault 101 forever.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018612">Vault101CaveDoorExterior</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">200</Index>
+        <Description Tag="NNAM">Everyone in Vault 101 has been killed.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">210</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">220</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">230</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">240</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">0</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">215</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">(Optional) Leave Vault 101 forever.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018612">Vault101CaveDoorExterior</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

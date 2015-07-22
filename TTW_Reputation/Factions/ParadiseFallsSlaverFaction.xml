@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="00037135">ParadiseFallsSlaverFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ParadiseFallsSlaverFaction</EditorID>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="000179D8">ParadiseFallsResidentFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00021476">RaiderFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Friend</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00027FA6">SlaverMemorialFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00028D95">SlaverFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0002F561">FreedSlaveFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="000710BA">ParadiseFallsSlaverHOSTILEFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="000B4023">MQ07RoryMaclarenFaction</Faction>
+        <Modifier>-100</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>Evil</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

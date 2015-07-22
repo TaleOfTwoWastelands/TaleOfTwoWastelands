@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0601569F">EulogyJones</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">EulogyJones</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Eulogy Jones</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>10</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-900</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D8">ParadiseFallsResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00047CD1">MS08NoteOwnerFactionEulogyJones</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06061E99">MaleUniqueEulogy</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042BF">AfricanAmericanOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="060314AD">EulogyJonesScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004330">WeapGrenadeFrag</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029649">ClipScoped44Magnum8</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031748">PFallsSlavePenKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00034125">OutfitEulogyJones</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0008F215">WeapNV44Revolver</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000B175C">PFallsEulogyPassword</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="060831BC">ParadiseFallsEulogyJonesHostilePKG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B8D4B">ParadiseFallsEulogyBalconyINTRO</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06038B49">ParadiseFallsEulogyJonesDialogCrimson9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06038B4A">ParadiseFallsEulogyJonesDialogClover9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06038B47">ParadiseFallsEulogyJonesDialogForty9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038B44">ParadiseFallsEulogyJonesObserveSlavePen9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038B45">ParadiseFallsEulogyJonesObserveStage9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06038B46">ParadiseFallsEulogyJonesDialogCutter9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038B4B">ParadiseFallsEulogyJonesObserveCafe9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06038B48">ParadiseFallsEulogyJonesDialogPronto9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038B4C">ParadiseFallsEulogyJonesObservationDeck9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038866">ParadiseFallsEulogyJonesSandboxEulogysPadBASE</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00019460">SoldierScout</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>75</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>7</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>67</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>65</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>65</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="00066FD4">BeardGoateeWide</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BA476">BeardMustacheCurlyCircle</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BCBED">BeardSoulPatchCircle</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000306BE">HairAfricanAmericanBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>45</Red>
+        <Green>40</Green>
+        <Blue>40</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">MtCWvsBInj3ENCU+p1ezv32KCECWZRm/QNZZvd+hwj585RdA/EOavwxlEUC03BxA3ptXQP0vDD8Ic7O/esMCPxY8Mb8k9VG/SG0UQEBuhL2f/SC/fG+/v4a69b8AQonAaJgqwfpto0CUxHw/8I2KvvsmHEC3E4bAQ6D5QJ/7GcFFj4hAPtJ+QHnIpD9ByCdAlPc2QGLKpr84B3xAFP3jP4aDN8A8+/s+gEzCPCbzB8CIuNk/0A+ivwHo68Bw+01AAnSpwEoGskA=</Symmetric>
+        <Asymmetric Tag="FGGA">fUG3vUBejj/hpLa9qfllvjwqvj00J469/m0Ov5yp6T4AAr2+gpJTPSZVeL6G1Ju/thvnvs0g3z3UCYo+1LyFP7iiWT4Anva9pkOMPjrUTr92ZmC/tOHsvmvWjj8itBE/YHSJPkwO576R3pQ/QlgYPkQ57T7kG+y9</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">zhGTv3zrAD/qWSS//PskP3n+IT8gB+Y+CAF9P0oBEL9CrJ8+oHCjvyg3XL8m3o+/qD2vPiIBLUAojd0+dK0Ev/wmCb+0KBhAfI5dQBZgGMDo2wQ/t2sSQKIvab/W/YY/frkawPrfG7+EagvAliEjQKyyQ7+rfAQ/GzSxP6hew73FU4dACIM5wLiTmb63bc7AZ4HNP8yVMz9aeldA3IkAQATknr+CfpJAZjD8Pq7M80C+f/Y/UKILPolzGcAGcKFAg7XKwF1Cz78=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

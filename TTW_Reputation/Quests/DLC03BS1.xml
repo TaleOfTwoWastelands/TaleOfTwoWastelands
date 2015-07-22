@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="09000802">DLC03BS1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03BS1</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0900090D">DLC03BS1QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Death From Above</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">;INITIAL STAGING</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>41</ReferenceCount>
+                <CompiledSize>640</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxIIAAIAch0Ach4AHAABACIQAgAAABwAAgAiEAIAAAAcAAMAIhACAAAAHAAEACIQAgAAABYAEgABAA4AIHIFAFguEAAAIDAgPT0cAAUAIhACAAAAGQAAABYAEgABAA4AIHIGAFguEAAAIDAgPT0cAAYAIhACAAAAGQAAABwABwAhEAIAAAAWABIAAgAOACByCABYLhAAACAwID09HAAIAJ4QBQABAHIfABwACABeEAAAGQAAABYAEgACAA4AIHIJAFguEAAAIDAgPT0cAAkAnhAFAAEAch8AHAAJAF4QAAAZAAAAHAAKAJ4QBQABAHIgABwACgBeEAAAHAALACIQAgAAABwADAAiEAIAAAAcAA0AIRACAAAAHAANAJ4QBQABAHIhABwADgAhEAIAAAAcAA8AIRACAAAAHAAQAFIQCgACAHIiAG4BAAAAORAKAAIAciMAbgAAAAA5EAoAAgByJABuAAAAABwAEQAhEAIAAAAcABIAIhACAAAAHAATACEQAgAAABwAFAAhEAIAAAAcABUAIRACAAAAHAAWACEQAgAAABwAFwAiEAIAAAAcABgAIhACAAAAHAAZAA8QCQACAAAAbgEAAAAcABoADxAJAAIAAABuAQAAABwAGwAPEAkAAgAAAG4BAAAA/REAABwAHAAhEAIAAAAWABAAAwAMACByJQBzCAAgMiA9PRYAEAABAAwAIHIlAHMfACAwID09FQAKAHImAHMDAAIAIDEZAAAAGQAAABUADgBHJwAJACBHJwAgMTQgKxUACwBHKAAGACAyMy45OBUACgByJgBzAQACACAxFQAKAHImAGYCAAIAIDY5EAoAAgByKQBuCgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;All Stage Change Stuff Goes Here
+RemapWaterType DLC03TBPotomacWater DLC03TBCleanWater
+MQ11EnclaveStructureMarker.disable
+MQ01VargasRef.Disable
+MQ01SarahRef.Disable
+DoctorLiRef.Disable
+if ( GarzaRef.GetDead == 0 )
+GarzaRef.Disable
+endif
+if ( NathanRef.GetDead == 0 )
+NathanRef.Disable
+endif
+MQ11BaileyMasterEnableRef.Enable
+if ( AlexDargonRef.GetDead == 0 )
+AlexDargonRef.Moveto DLC03WQScribeSandboxCenter
+AlexDargonRef.EVP
+endif
+if ( DanielAgincourtRef.GetDead == 0 )
+DanielAgincourtREF.Moveto DLC03WQScribeSandboxCenter
+DanielAgincourtREF.EVP
+endif
+ElderLyonsRef.Moveto DLC03BS1ElderStartMarker
+ElderLyonsRef.EVP
+MQ11PrimeStartMarker.Disable
+MQ11LibertyPrimeCraneRef.Disable
+DLC03TristanREF.Enable
+DLC03TristanREF.Moveto DLC03BS1TristanStartMarker
+DLC03ScribeVallincourtREF.Enable
+DLC03BS1KnightGuard1REF.Enable
+player.removeitem MQ09FEVVial 1 ;In case player still has vial
+SetStage DLC03ConvCitadel 0
+SetStage DLC03DialogueCitadel 0
+;DLC03WastelandtoPP02REF.Enable ;enables the door to the new Project Purity
+DLC03RavenrockDebrisMarker.enable ;destroy Raven Rock
+RadioEnclaveRef.Disable  ;Enclave Radio is now disabled, if it wasn't already
+DLC03FFELDMasterEnabler.Enable ;enables freeform LD encounters in Wasteland and DC Worldspaces
+DLC03PresMetroEntranceClutter.Enable
+PPMapMarker.Enable
+DLC03CitadelWater.Enable
+DLC03PrimeElevatorCollision01REF.disable
+DLC03PrimeElevatorCollision02REF.disable
+KnightDillonRef.SetAv Aggression 1
+KnightFinleyRef.SetAv Aggression 1
+KnightWilksRef.SetAv Aggression 1
+ClearNoActivationSound
+;DisableNavMesh 010094CC ;disables navmesh ProjectPurityNavmesh01a
+;DisableNavMesh 010094CE ;disables navmesh ProjectPurityNavmesh02a
+;DisableNavMesh 010094CF ;disables navmesh ProjectPurityNavmesh03a
+;DisableNavMesh 010094D0 ;disables navmesh ProjectPurityNavmesh04a
+;DisableNavMesh 010094D1 ;disables navmesh ProjectPurityNavmesh05a
+;DisableNavMesh 010094D4 ;disables navmesh ProjectPurityNavmesh06a
+;DisableNavMesh 010094D6 ;disables navmesh ProjectPurityNavmesh07a
+;EnableNavMesh 010094CD  ;enables navmesh ProjectPurityNavmesh01b
+;EnableNavMesh 010094D2 ;enables navmesh ProjectPurityNavmesh02b
+;EnableNavMesh 010094D3 ;enables navmesh ProjectPurityNavmesh03b
+;EnableNavMesh 010094D5 ;enables navmesh ProjectPurityNavmesh06b
+;EnableNavMesh 010094D7 ;enables navmesh ProjectPurityNavmesh07b
+DLC03ProjectPurityWaterFlowMarker.Enable  ;enables water flowing from pipes at project purity
+;----------------------------------------------
+;Set var in quest if Sarah died in MQ11
+if ( MQ11.Code == 2 )
+    if ( MQ11.DLC03FollowerCode == 0 )
+        Set DLC03BS1.SarahDead to 1
+    endif
+endif
+Set GameDay to ( GameDay + 14 )
+Set GameHour to 23.98
+;ShowMessage DLC03TransitionBink
+Set DLC03BS1.RunTimer to 1
+Set DLC03BS1.Timer to 6
+setstage DLC03Encounters 10
+
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060603E4">MQ11EnclaveStructureMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E764">GarzaRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B57">NathanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060920D3">MQ11BaileyMasterEnableRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCAB">AlexDargonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CCBA">DanielAgincourtRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605FD27">MQ11PrimeStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607E100">MQ11LibertyPrimeCraneRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09005689">DLC03TristanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900672E">DLC03ScribeVallincourtREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002DC1">DLC03BS1KnightGuard1REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D3D4">DLC03RavenrockDebrisMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602248E">RadioEnclaveREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09006727">DLC03FFELDMasterEnabler</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900B3BB">DLC03PresMetroEntranceClutter</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600326B">PPMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900C979">DLC03CitadelWater</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B1069">REFR - 060B1069</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B1079">REFR - 060B1079</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025956">KnightDillonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025957">KnightFinleyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025958">KnightWilksRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900A62D">DLC03ProjectPurityWaterFlowMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C2A">DLC03TBPotomacWater</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C29">DLC03TBCleanWater</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09003866">DLC03WQScribeSandboxCenter</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090009E0">DLC03BS1ElderStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002DC5">DLC03BS1TristanStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003BD33">MQ09FEVVial</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002DC4">DLC03ConvCitadel</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002DC3">DLC03DialogueCitadel</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000037">GameDay</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090011AB">DLC03Encounters</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">;Water Quest Start Stuff</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetStage DLC03WQFunctions 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09005C28">DLC03WQFunctions</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">;Disabling MQ11 Enclave and prime elevator</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>49</ReferenceCount>
+                <CompiledSize>490</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAABwAAgAiEAIAAAAcAAMAIRACAAAAHAAEACEQAgAAABwABQAiEAIAAAAcAAYAIhACAAAAHAAHACIQAgAAABwACAAiEAIAAAAcAAkAIhACAAAAHAAKACIQAgAAABwACwAiEAIAAAAcAAwAIhACAAAAHAANACIQAgAAABwADgAiEAIAAAAcAA8AIhACAAAAHAAQACIQAgAAABwAEQAiEAIAAAAcABIAIhACAAAAHAATACIQAgAAABwAFAAiEAIAAAAcABUAIhACAAAAHAAWACIQAgAAABwAFwAiEAIAAAAcABgAIhACAAAAHAAZACIQAgAAABwAGgAiEAIAAAAcABsAIhACAAAAHAAcACIQAgAAABwAHQAiEAIAAAAcAB4AIhACAAAAHAAfACIQAgAAABwAIAAiEAIAAAAcACEAIhACAAAAHAAiACIQAgAAABwAIwAiEAIAAAAcACQAIhACAAAAHAAlACIQAgAAABwAJgAiEAIAAAAcACcAIhACAAAAHAAoACIQAgAAABwAKQAiEAIAAAAcACoAIhACAAAAHAArACIQAgAAABwALAAiEAIAAAAcAC0AIhACAAAAHAAuACIQAgAAABwALwAiEAIAAAAcADAAIhACAAAAHAAxACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">PrimeElevatorRef.Disable
+PrimeBlastDoorsRef.Disable
+DLC03UTElevatorPlatformREF.Enable
+DLC03LibertyPrimeBlastDoorsREF.Enable
+BasinSpawn01a.Disable
+BasinSpawn01b.Disable
+BasinSpawn01c.Disable
+BasinSpawn02a.Disable
+BasinSpawn02b.Disable
+BasinSpawn02c.Disable
+BasinSpawn02d.Disable
+MQ11BuildingFodder01.Disable
+MQ11BuildingFodder02.Disable
+MQ11BuildingFodder03.Disable
+MQ11RampFodder01.Disable
+MQ11RampFodder02.Disable
+MQ11RampFodder03.Disable
+MQ11Gate03Fodder01.Disable
+MQ11Gate03Fodder02.Disable
+MQ11Gate03Fodder03.Disable
+MQ11RuinsFodder01.Disable
+MQ11RuinsFodder02.Disable
+MQ11RuinsFodder03.Disable
+MQ11Gate02Fodder01.Disable
+MQ11Gate02Fodder02.Disable
+MQ11Gate02Fodder03.Disable
+MQ11CourtyardFodder01.Disable
+MQ11CourtyardFodder02.Disable
+MQ11AlleyFodder01.Disable
+MQ11AlleyFodder02.Disable
+MQ11AlleyFodder03.Disable
+MQ11SkybridgeFodder01.Disable
+MQ11SkybridgeFodder02.Disable
+MQ11BridgeEndFodder01.Disable
+MQ11BridgeEndFodder02.Disable
+MQ11BridgeFodder04a01.Disable
+MQ11EnclaveRiverSniper01.Disable
+MQ11Bridge02bFodder01.Disable
+MQ11Bridge02bFodder02.Disable
+MQ11Bridge02bFodder03.Disable
+MQ11Swarm01c.Disable
+MQ11BridgeVertibirdMarkerREF.Disable ;disables an xmarker that two enclave soldiers are parented to
+MQ11FinalFodder01.Disable
+MQ11FinalFodder02.Disable
+MQ11FinalFodder03.Disable
+MQ11FinalFodder04.Disable
+MQ11FinalFodder06.Disable
+MQ05LandingOfficerREF.Disable
+MQ05Extra01.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06081923">PrimeElevatorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06081925">PrimeBlastDoorsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900C7D6">DLC03UTElevatorPlatformREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900C7D7">DLC03LibertyPrimeBlastDoorsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06091122">BasinSpawn01a</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06091123">BasinSpawn01b</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06091124">BasinSpawn01c</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609111B">BasinSpawn02a</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609111C">BasinSpawn02b</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06091118">BasinSpawn02c</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06091119">BasinSpawn02d</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607882B">MQ11BuildingFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7FF">MQ11BuildingFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7FE">MQ11BuildingFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7F8">MQ11RampFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7FA">MQ11RampFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7F9">MQ11RampFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06060A38">MQ11Gate03Fodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06060A25">MQ11Gate03Fodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7FB">MQ11Gate03Fodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C5F">MQ11RuinsFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C60">MQ11RuinsFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C61">MQ11RuinsFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C5B">MQ11Gate02Fodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C5C">MQ11Gate02Fodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C5D">MQ11Gate02Fodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7F4">MQ11CourtyardFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C7F5">MQ11CourtyardFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C50">MQ11AlleyFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C54">MQ11AlleyFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06089C55">MQ11AlleyFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06077C99">MQ11SkybridgeFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06077C92">MQ11SkybridgeFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06077CAD">MQ11BridgeEndFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06077CAE">MQ11BridgeEndFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06082DFE">MQ11BridgeFodder04a01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06078846">MQ11EnclaveRiverSniper01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06082E01">MQ11Bridge02bFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06088AF6">MQ11Bridge02bFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06088AF8">MQ11Bridge02bFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06079F1C">MQ11Swarm01c</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060740A5">REFR - 060740A5</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060787EB">MQ11FinalFodder01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060787EC">MQ11FinalFodder02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060787ED">MQ11FinalFodder03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060787EE">MQ11FinalFodder04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060787F5">MQ11FinalFodder06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AE074">MQ05LandingOfficerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AE20F">MQ05Extra01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>105</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgIAHAABAJcQBQABAHIDABUADQByBABmAgAFACAxMS4zkhEFAAEAcgUAFgAZAAIAFQAgWDsQCgACAHIGAG5kAAAAIDAgPT0VAAcARwcAAgAgMBUACQBHCAAEACAxMDAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Start Player Wake-Up animation
+imod DLC03IntroFadeInFromBlackISFX
+Player.AddScriptPackage DLC03PlayerWakeUp
+Set DLC03BS1.Timer to 11.3
+rimod MQ11PPurityTankISFX
+
+; Aqua Pura
+if GetStageDone MQA 100 == 0
+    Set DLC03AquaPuraChance to 0
+    Set DLC03FEVAquaPuraChance to 100
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C66">DLC03IntroFadeInFromBlackISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090009E2">DLC03PlayerWakeUp</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000B67BA">MQ11pPurityTankISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E93">MQA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090011B1">DLC03AquaPuraChance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090011B2">DLC03FEVAquaPuraChance</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>59</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMBAAIAIDAcAAEAmBAAADASBQABAHIEAGAQAgAAABUACgByAwBzCgACACAxHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;player waking up is done
+Set DLC03BS1.RunTimer to 0
+Player.RemoveScriptPackage DLC03PlayerWakeUp
+SetLastExtDoorActivated CitadelExteriorDoorREF
+EnablePlayerControls
+set DLC03BS1.DLC03LyonsGreet to 1
+ElderLyonsRef.EVP</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060155F5">REFR - 060155F5</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG4PAAAAbgEAAAAcAAEAcxACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC03BS1 10 1
+SetObjectiveDisplayed DLC03BS1 15 1
+DLC03RocklandTunnelExtDoorREF.Unlock</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09001491">DLC03RocklandTunnelExtDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4eAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC03BS1 20 1
+SetObjectiveDisplayed DLC03BS1 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbh4AAABuAQAAAKMRDwADAHIDAG4oAAAAbgEAAAAcAAEAIhACAAAAHAACACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC03BS1 30 1
+SetObjectiveDisplayed DLC03BS1 40 1
+DLC03BS1CarTunnelEnableMarker.Disable
+DLC03BS1KnightGuard1REF.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D2AC">DLC03BS1CarTunnelEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002DC1">DLC03BS1KnightGuard1REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>79</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbigAAABuAQAAAKMRDwADAHIEAG4yAAAAbgEAAAAcAAEAnhAFAAEAcgUAHAABAF4QAAAcAAIAIhACAAAAHAADACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC03BS1 40 1
+SetObjectiveDisplayed DLC03BS1 50 1
+DLC03TristanREF.Moveto CitEntranceHallMARKER
+DLC03TristanREF.EVP
+DLC03BS1RelayEnableMarker.Disable
+DLC03BS1PrimeBOSEnableMarker.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09005689">DLC03TristanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D2AD">DLC03BS1RelayEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D2AE">DLC03BS1PrimeBOSEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06021076">CitEntranceHallMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>87</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAQAHIBAGY4AAgAIEcCACAxICsVAAoAcgEAczUAAgAgMTcQBQABAHIDAHcRBwABAG4UBQAAORIPAAMAcgQAbgEAAABuAgAAADkQCgACAHIFAG4KAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">Set RadioGalaxyNewsQuest.DLC03BS1Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+StopQuest DLC03BS1
+RewardXP 1300
+AddReputation RepTTWBrotherhood 1 2
+;AddAchievement 59
+SetStage DLC03BS2 10</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000802">DLC03BS1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E7">RepTTWBrotherhood</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09000AFD">DLC03BS2</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="09000AFD">DLC03BS2</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Speak with Scribe Rothchild.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601F0C7">ScribeRothchildRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Assist Paladin Tristan during the assault.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09005689">DLC03TristanREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Retrieve data from the Satellite Relay.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="090087E8">DLC03RelayTerminalRef1</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Deliver the data to Scribe Rothchild.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601F0C7">ScribeRothchildRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Report to Elder Lyons.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060210E6">ElderLyonsREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Meet Paladin Tristan at the Rockland Car Tunnel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09005689">DLC03TristanREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06024D12">INFO - 06024D12</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06014E9B">MS08</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Surprise</Emotion>
+          <EmotionValue>100</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Harkness, you say? Yes... Yes, that makes sense. He used to work for a special branch of the Commonwealth Police, after all...</ResponseText>
+        <ScriptNotes Tag="NAM2">caught by surprise</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">And he's right here in Rivet City! Excellent! I must wait... find an opportune moment to confront him...</ResponseText>
+        <ScriptNotes Tag="NAM2">unintentionally but definitely condescending</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>4</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Thank you for your discreet assistance, and continued discretion regarding this matter.</ResponseText>
+        <ScriptNotes Tag="NAM2">unintentionally but definitely condescendingEmphasis on the "continued."</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>5</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">And now for your payment. This combat module will directly affect your central nervous system. I think you will find it quite beneficial.</ResponseText>
+        <ScriptNotes Tag="NAM2">unintentionally but definitely condescending</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156B9">Zimmer</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStageDone</Type>
+          <Quest ID="06014E9B">MS08</Quest>
+          <QuestStage>100</QuestStage>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>6</ReferenceCount>
+          <CompiledSize>158</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">oxEPAAMAcgIAbmQAAABuAAAAAHEQBQABAHICAFkQCwABAHIDAAAAAAAAABwAAQB2EQUAAQByBAAVAAoAcgUAcwIAAgAgMRUACgByBQBzAwACACAxBBIHAAEAbjj///8WABAAAgAMACByAgBzbAAgMCA9PXcRBwABAG4sAQAAFQAKAHICAHNsAAIAIDEZAAAADREKAAIAcgYAbgAAAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS08 100 0
+completequest MS08
+showmessage MS08PerkMessage
+player.addPerk MS08RewardPerk
+set MS08Fin.endSceneType to 1
+set MS08Fin.endSceneStage to 1
+RewardKarma -200
+if MS08.finishedXPAwarded == 0
+   rewardxp 300
+   set MS08.finishedXPAwarded to 1
+endif
+;addachievement 20
+setQuestobject MS08AndroidComponent 0</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06014E9B">MS08</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0004C5C6">MS08PerkMessage</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00024D5C">MS08RewardPerk</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06063BF3">MS08Fin</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C8503">MS08AndroidComponent</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

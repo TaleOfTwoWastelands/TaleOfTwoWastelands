@@ -1,0 +1,80 @@
+scn MS15SydneyScript
+
+;This script causes Sydney to Evp whenever the SydneyFollow variable is toggled in Dialog
+
+short DoOnce													;a DoOnce variable
+short Leaves													;a DoOnce variable so Sydney won't keep disabling every frame
+short Check														;a DoOnce variable so Sydney won't keep EVP'ing every frame
+short StimUse													;1= The Player just gave Sydney a Stimpak in dialog
+
+begin gamemode
+
+	if ( DoOnce == 0 )											;This will be reset to 0 in dialog whenever player issues commands
+		if ( MS15.SydneyFollow >= 1 )						;This will be set in Dialog as either 1 (Follow) or 2 (Wait)
+			Evp													;Evp Sydney for immediate response in case the Dialog exit doesn't hack it
+			Set DoOnce to 1
+		endif
+	endif
+
+;This block is a Failsafe to make sure Sydney EVP's after dialog (even though system should do it)
+
+	if ( Check == 0 )
+		if ( MS15.SydneyJoin == 2 )							;This flag is set in dialog
+			Evp													;Evp Sydney
+			Set Check to 1										;Set the DoOnce
+		endif
+	endif
+
+;This is for Sydney using Stimpaks... unlike normal NPCs, she will use them immediately
+
+	if ( StimUse == 1 )
+		if ( MS15SydneyRef.GetItemCount Stimpak >= 1 )
+			cios Stimpak
+			MS15SydneyRef.RemoveItem Stimpak 1
+			set StimUse to 0
+		endif
+	endif
+
+end
+
+;This block handles Sydney running from the Player on a no join result in dialog
+
+begin OnPackageEnd MS15SydneyLeavesNoJoin	;At the end of Sydney's run to the X-Marker in this package
+
+	if ( Leaves == 0 )
+		if ( Player.GetInSameCell MS15SydneyRef == 0 )
+			MS15SydneyRef.Disable							;Disable Sydney (as if she exited buidling)
+			Set Leaves to 1										;Set the DoOnce
+		endif
+	endif
+
+end
+
+begin OnDeath
+
+	RemoveItem WeapUniqueSydneys10mmSubGunFollwerVersion 1
+
+end
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && MS15SydneyRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

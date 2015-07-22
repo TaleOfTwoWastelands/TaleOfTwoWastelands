@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="0004443B">TalonCompany</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TalonCompany</EditorID>
+    <Name Tag="FULL">Talon Company</Name>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001F1D6">RCSecurityFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0004443B">TalonCompany</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0007B81A">CapitalBuildingTalonFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>HiddenFromPC</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017F5">RepTTWTalonCompany</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

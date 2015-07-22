@@ -1,0 +1,134 @@
+scn DLC03TeslaChainEffectVTwo01Script
+
+Short DoOnce
+Short DeleteMe
+Short Init
+Float Timer
+
+float zAngle
+float thisX
+float thisY
+float targetX
+float targetY
+float deltaX
+float deltaY
+float tanZAngle
+
+
+float distance
+float triggerZCoord
+float targetZCoord
+float deltaZ
+float AimAngleX
+float RatioDist
+
+;// vars for vertibird
+ref TriggerObject
+ref triggerActor
+
+
+
+Begin OnLoad
+	if Init == 0
+		Set Timer to (0.5 + getRandomPercent * 0.003)
+		Set DeleteMe to 0
+		Set DoOnce to 0
+		Set Init to 1
+	endif
+end
+
+;///////////////////////////////////////////////////////
+;// VERTIBIRD EXPLOSION STUFF
+;////////////////////////////////////////////////////////
+BEGIN ONTRIGGEREnter
+
+	;// store who triggered us
+	set TriggerObject to getActionRef
+	
+	;// if its in the vertibird list, blow it up!
+	IF TriggerObject.isInList DLC03TeslaExplosionList
+			TriggerObject.do 50000
+			IncrementScriptedChallenge TTWDLC03ChallengeVertibird
+	ENDIF
+	
+	if TriggerObject.isActor == 1
+		if TriggerObject.GetDead == 0
+			set triggerActor to getActionRef
+		endif
+	endif
+	
+END
+
+
+Begin GameMode
+
+	If DeleteMe == 1
+		MarkForDelete
+	endif
+	
+	If Timer <= 0
+		Disable
+		set DeleteMe to 1
+	endif
+
+	if timer < 0.3
+		if DoOnce == 0
+			if triggerActor.isActor == 1
+				if triggerActor.GetDead == 0
+					set distance to GetDistance triggerActor
+					if distance > 100
+						Set thisX to GetPos X
+						Set thisY to GetPos Y
+						Set targetX to triggerActor.GetPos X
+						Set targetY to triggerActor.GetPos Y
+						Set deltaX to (targetX - thisX)
+						Set deltaY to (targetY - thisY)
+
+						if deltaX < 0
+							if deltaY < 0
+								Set tanZAngle  to (deltaY / deltaX)
+								Set zAngle to Tan tanZAngle 1
+								Set zAngle to 270 - zAngle
+							else
+								Set tanZAngle  to (deltaY / -deltaX)
+								Set zAngle to Tan tanZAngle 1
+								Set zAngle to zAngle - 90
+							endif
+						else
+							if deltaY < 0
+								Set tanZAngle  to (-deltaY / deltaX)
+								Set zAngle to Tan tanZAngle 1
+								Set zAngle to zAngle + 90
+							else
+								Set tanZAngle  to (deltaY / deltaX)
+								Set zAngle to Tan tanZAngle 1
+								Set zAngle to 90 - zAngle
+							endif
+						endif
+	
+						set triggerZCoord to GetPos Z 						;;// you want the z component of the triggers location
+						set targetZCoord to triggerActor.GetPos Z		;;// you want the z component of the targets location
+
+						set targetZCoord to targetZCoord + 64 			;; Aim for the middle of the target (fudge)
+
+						set deltaZ to (triggerZCoord - targetZCoord)
+						set RatioDist to (deltaZ / distance)
+						set AimAngleX to Sin RatioDist 1 					;// the extra 1 is what tells the script to use arcsine and not sine
+
+						if deltaY < 0
+							Set AimAngleX to (0 - AimAngleX)
+						endif
+						SetAngle X AimAngleX
+
+						setangle z zAngle
+
+						FireWeapon DLC03WeapTeslaChainEffect
+						set DoOnce to 1
+					endIf
+				endIf
+			endif
+		endIf
+	endif
+
+	Set Timer to (Timer - GetSecondsPassed)
+End

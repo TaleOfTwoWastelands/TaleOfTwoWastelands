@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0000432C">WeapFatman</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WeapFatman</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-20</X>
+        <Y>-46</Y>
+        <Z>-22</Z>
+      </Point1>
+      <Point2>
+        <X>7</X>
+        <Y>44</Y>
+        <Z>1</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Fat Man</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\2HandLauncher\Fatman.NIF</FileName>
+      <TextureFileHash Tag="MODT">4u0KZvlmgoNibQpm/maCg3JlHnR/m+N77t8MZi4o/DtuXwxmMyj8O3JlHnR/m+N7898MZi4o/DtzXwxmMyj8O3JlHnR/m+N77uEGZp+mE75uYQZmpKYTvnJlHnR/m+N77t8IZuzxj5VuXwhm8fGPlXJlHnR/m+N7898IZuzxj5VzXwhm8fGPlXJlHnR/m+N7srAIZuzxj5UyMAhm8fGPlXJlHnR/m+N77t8KZm5aUINuXwpmc1pQg3JlHnR/m+N7898KZm5aUINzXwpmc1pQg3JlHnR/m+N7598KZm5aUINnXwpmc1pQg3JlHnR/m+N7</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_fatman.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="00020799">AmmoFatMans</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="0003423A">RepairFatMan</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BigGuns</EquipmentType>
+    <ModelWithMod1 Tag="MWD1">weapons\2handlauncher\fatmanLittleBoy.nif</ModelWithMod1>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="0001C4CF">ScorchBigImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="0002604A">1stPersonFatman</Reference>
+    </FirstPersonModel>
+    <FirstPersonModelWithMod1 Tag="WNM1">
+      <Reference ID="00137D07">1stPersonFatmanLittleBoy</Reference>
+    </FirstPersonModelWithMod1>
+    <WeaponMod1 Tag="WMI1">
+      <Reference ID="0010C1AD">ModNVFatManLittleBoyKit</Reference>
+    </WeaponMod1>
+    <Sound>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="00036B97">WPNFatManFire3D</Reference>
+          </_3D>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="00036B98">WPNFatManFire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="0001CCD3">WPNHeavy0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0001D540">WPNHeavy0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <Data Tag="DATA">
+      <Value>6000</Value>
+      <Health>100</Health>
+      <Weight>30</Weight>
+      <BaseDamage>400</BaseDamage>
+      <ClipSize>1</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandLauncher</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>DontUse1stPersonIronSightAnimations</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0.5</MinSpread>
+      <Spread>2</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>40</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00015226">FatMan</Projectile>
+      <BaseVATSToHitChance>30</BaseVATSToHitChance>
+      <AttackAnimation>AttackLeft</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>2000</Max>
+      </Range>
+      <LimbKillBehavior>ExplodeOnly</LimbKillBehavior>
+      <Flags2>NPCsUseAmmo, NoJamAfterReload, OverrideActionPointCost, DontUse3rdPersonIronSightAnimations</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>65</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.400000006</LeftMotorStrength>
+        <RightMotorStrength>0.800000012</RightMotorStrength>
+        <Duration>0.5</Duration>
+        <Pattern>Triangle</Pattern>
+        <Wavelength>0.25</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>1.57894695</AttackShotsPerSecond>
+      <ReloadTime>3</ReloadTime>
+      <JamTime>3</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Explosives</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0.100000001</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>DecreaseWeight</Effect>
+          <ValueA>15</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>8</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>100</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>0</Damage>
+      <ChanceMult>0</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Loud</SoundLevel>
+  </Subrecords>
+</Record>

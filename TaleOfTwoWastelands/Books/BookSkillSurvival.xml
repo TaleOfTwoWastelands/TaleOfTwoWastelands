@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="BOOK">
+  <Flags>0</Flags>
+  <FormID ID="00160227">BookSkillSurvival</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">BookSkillSurvival</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-71</X>
+        <Y>-91</Y>
+        <Z>-3</Z>
+      </Point1>
+      <Point2>
+        <X>54</X>
+        <Y>90</Y>
+        <Z>13</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Scout Handbook</Name>
+    <Model>
+      <FileName Tag="MODL">clutter\junk\bookchinesearmy.nif</FileName>
+      <AlternateTextures Tag="MODS">
+        <Textures>
+          <Texture>
+            <Name>BookChinese:0</Name>
+            <TextureSet ID="0C01702E">TTWScoutHandbookTex</TextureSet>
+            <Index>0</Index>
+          </Texture>
+        </Textures>
+      </AlternateTextures>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">interface\icons\pipboyimages\items\glow_items_skill books_scout.dds</Large>
+    </Icon>
+    <Description Tag="DESC">Scout Handbook</Description>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Skill>ActionPoints</Skill>
+      <Value>50</Value>
+      <Weight>2</Weight>
+    </Data>
+  </Subrecords>
+</Record>

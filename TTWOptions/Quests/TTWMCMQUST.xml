@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0D000801">TTWMCMQUST</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWMCMQUST</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0D0017E8">TTWMCMSCPT</Reference>
+    </Script>
+    <Name Tag="FULL">TTW MCM</Name>
+    <Data Tag="DATA">
+      <Flags>25</Flags>
+      <Priority>0</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">GameMode Work</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>20</ReferenceCount>
+                <CompiledSize>702</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAjAAEAHwAgRwMAIDEgPT0gcgEAWMERBQABAHIEACAwID09ICYmHAABAHYRBQABAHIEABgAIwABAB8AIEcDACAwID09IHIBAFjBEQUAAQByBAAgMSA9PSAmJhwAAQCoEQUAAQByBAAXAAIAAAAZAAAAFgAcAAIAGAAgRwUAIDEgPT0gcgYAcw8AIDAgPT0gJiYcAAIAIRACAAAAFQAKAHIGAHMPAAIAIDEYABwAAgAYACBHBQAgMCA9PSByBgBzDwAgMSA9PSAmJhwAAgAiEAIAAAAVAAoAcgYAcw8AAgAgMBcAAgAAABkAAAAWABwADgAYACBHBwAgMSA9PSByBgBzDgAgMCA9PSAmJggUCgACAG7oAwAAcggACBQKAAIAbpABAAByCQAIFAoAAgBukAEAAHIKAAgUCgACAG6QAQAAcgsACBQKAAIAbpABAAByDAAIFAoAAgBuEwEAAHINAAgUCgACAG6vAAAAcg4ACBQKAAIAbq8AAAByDwAIFAoAAgBuEwEAAHIQAAgUCgACAG6vAAAAchEACBQKAAIAbhMBAAByEgAIFAoAAgBuEwEAAHITAAgUCgACAG6vAAAAchQAFQAKAHIGAHMOAAIAIDEYABwADgAYACBHBwAgMCA9PSByBgBzDgAgMSA9PSAmJggUCgACAG7QBwAAcggACBQKAAIAbiADAAByCQAIFAoAAgBuIAMAAHIKAAgUCgACAG4gAwAAcgsACBQKAAIAbiADAAByDAAIFAoAAgBuaAEAAHINAAgUCgACAG76AAAAcg4ACBQKAAIAbvoAAAByDwAIFAoAAgBuaAEAAHIQAAgUCgACAG76AAAAchEACBQKAAIAbmgBAAByEgAIFAoAAgBuaAEAAHITAAgUCgACAG76AAAAchQAFQAKAHIGAHMOAAIAIDAXAAIAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">	;XP Reduction
+	if (XPReduction == 1 &amp;&amp; player.hasperk TTWXPReduction == 0)
+		player.addperk TTWXPReduction
+	Elseif (XPReduction == 0 &amp;&amp; player.hasperk TTWXPReduction == 1)
+		player.RemovePerk TTWXPReduction
+	else
+	endif
+	;More Cooking
+	if (MoreCooking == 1 &amp;&amp; TTWMCMQUST.iLastMoreCooking == 0)
+		TTWCookingMarkerREF.Enable
+		set TTWMCMQUST.iLastMoreCooking to 1
+	elseif (MoreCooking == 0 &amp;&amp; TTWMCMQUST.iLastMoreCooking == 1)
+		TTWCookingMarkerREF.Disable
+		set TTWMCMQUST.iLastMoreCooking to 0
+	else
+	endif
+	;SM Rebalance
+	if (SMRebalance == 1 &amp;&amp; TTWMCMQUST.iLastSMRebalance == 0)
+		SetHealth 1000 CrSuperMutantBehemoth
+		SetHealth 400 DLC03CrSuperMutant4GatlingLaserA
+		SetHealth 400 DLC03CrSuperMutant4GunA
+		SetHealth 400 DLC03CrSuperMutant4MeleeA
+		SetHealth 400 DLC03CrSuperMutant4MissileLauncherA
+		SetHealth 275 CrSuperMutant3MinigunADC
+		SetHealth 175 CrSuperMutant2GunADC
+		SetHealth 175 CrSuperMutant2MeleeADC
+		SetHealth 275 CrSuperMutant3MissileLauncherADC
+		SetHealth 175 CrSuperMutant2MissileLauncherADC
+		SetHealth 275 CrSuperMutant3GunADC
+		SetHealth 275 CrSuperMutant3MeleeADC
+		SetHealth 175 CrSuperMutant2MinigunADC
+		
+		set TTWMCMQUST.iLastSMRebalance to 1
+	elseif (SMRebalance == 0 &amp;&amp; TTWMCMQUST.iLastSMRebalance == 1)
+		SetHealth 2000 CrSuperMutantBehemoth
+		SetHealth 800 DLC03CrSuperMutant4GatlingLaserA
+		SetHealth 800 DLC03CrSuperMutant4GunA
+		SetHealth 800 DLC03CrSuperMutant4MeleeA
+		SetHealth 800 DLC03CrSuperMutant4MissileLauncherA
+		SetHealth 360 CrSuperMutant3MinigunADC
+		SetHealth 250 CrSuperMutant2GunADC
+		SetHealth 250 CrSuperMutant2MeleeADC
+		SetHealth 360 CrSuperMutant3MissileLauncherADC
+		SetHealth 250 CrSuperMutant2MissileLauncherADC
+		SetHealth 360 CrSuperMutant3GunADC
+		SetHealth 360 CrSuperMutant3MeleeADC
+		SetHealth 250 CrSuperMutant2MinigunADC
+	
+		set TTWMCMQUST.iLastSMRebalance to 0
+	else
+	endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000802">TTWCookingMarkerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018655">XPReduction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017FC">TTWXpReduction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C11865D">MoreCooking</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000801">TTWMCMQUST</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018656">SMRebalance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001CF95">CrSuperMutantBehemoth</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C19">DLC03CrSuperMutant4GatlingLaserA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C1A">DLC03CrSuperMutant4GunA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C1B">DLC03CrSuperMutant4MeleeA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E2C1C">DLC03CrSuperMutant4MissileLauncherA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06027FB2">CrSuperMutant3MinigunADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06027FB3">CrSuperMutant2GunADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A148">CrSuperMutant2MeleeADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A149">CrSuperMutant3MissileLauncherADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06092C49">CrSuperMutant2MissileLauncherADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06092C4D">CrSuperMutant3GunADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06092C4E">CrSuperMutant3MeleeADC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06092C4F">CrSuperMutant2MinigunADC</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Logo Code 1</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>273</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQBcAHIBAGYJAFQAIFikFB8AAQAbAFN0YXJ0TWVudS9NQ00vTUNNX09wdGlvbnMveCBYpBQjAAEAHwBTdGFydE1lbnUvTUNNL01DTV9PcHRpb25zL3dpZHRoIDIgLyArFQA9AHIBAGYKADUAIFjCIQ8AAwBuAAAAAG4AAAAAAQB5IFjCIRQAAwBuAAAAAG4AAAAABgBoZWlnaHQgMiAvICsVABUAcgEAZgsADQAgcgEAZgkAIDI1OCAtFQAVAHIBAGYMAA0AIHIBAGYKACAxNTAgLcMhGwAEAG4BAAAAbgEAAAAHAGltYWdlL3hyAQBmCwDDIRsABABuAQAAAG4BAAAABwBpbWFnZS95cgEAZgwA</CompiledScript>
+              <ScriptSource Tag="SCTX">			set TTWMCMQUST.centerX to getUIFloat "StartMenu/MCM/MCM_Options/x" + (getUIFloat "StartMenu/MCM/MCM_Options/width" / 2)
+			set TTWMCMQUST.centerY to getMCMFloat 0 0 "y" + (getMCMFloat 0 0 "height" / 2)
+			set TTWMCMQUST.fX to TTWMCMQUST.centerX - 258
+			set TTWMCMQUST.fY to TTWMCMQUST.centerY - 150
+			SetMCMFloat 1 1 "image/x" TTWMCMQUST.fX
+			SetMCMFloat 1 1 "image/y" TTWMCMQUST.fY</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000801">TTWMCMQUST</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Logo Code 2</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>550</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">wyEfAAQAbgAAAABuAQAAAAgAX2NvbHVtbnN6AAAAAAAA8D/DIR4ABABuCQAAAG4AAAAABwB2aXNpYmxlegAAAAAAAPA/xCFJAAQAbgAAAABuCQAAAAYAc3RyaW5nMwBFbmFibGUgb3IgZGlzYWJsZSBUYWxlIG9mIFR3byBXYXN0ZWxhbmRzIE9wdGlvbmFscy7DIR4ABABuAQAAAG4BAAAABwBfZW5hYmxlegAAAAAAAPA/xCEXAAQAbgEAAABuAQAAAAYAX3RpdGxlAQAgwyEcAAQAbgEAAABuAQAAAAUAX3R5cGV6AAAAAAAAAADDISEABABuAQAAAG4BAAAACgBfaGlnaGxpZ2h0egAAAAAAAAAAwyEkAAQAbgEAAABuAQAAAA0AaW1hZ2UvdmlzaWJsZXoAAAAAAADwP8MhIgAEAG4BAAAAbgEAAAALAGltYWdlL3dpZHRoegAAAAAAIIBAwyEjAAQAbgEAAABuAQAAAAwAaW1hZ2UvaGVpZ2h0egAAAAAAwHJAwyEoAAQAbgEAAABuAQAAABEAaW1hZ2Uvc3lzdGVtY29sb3J6AAAAAAAAAADDISIABABuAQAAAG4BAAAACwBpbWFnZS9kZXB0aHoAAAAAAAAsQMQhRwAEAG4BAAAAbgEAAAAOAGltYWdlL2ZpbGVuYW1lKQBUYWxlT2ZUd29XYXN0ZWxhbmRzXE1DTVxUVFdMb2dvTWVyZ2VkLmRkcw==</CompiledScript>
+              <ScriptSource Tag="SCTX">				setMCMFloat 0 1 "_columns" 1
+				setMCMFloat 9 0 "visible" 1
+				setMCMString 0 9 "string" "Enable or disable Tale of Two Wastelands Optionals."
+				SetMCMFloat 1 1 "_enable" 1
+				SetMCMString 1 1 "_title" " "
+				SetMCMFloat 1 1 "_type" 0
+				SetMCMFloat 1 1 "_highlight" 0
+				SetMCMFloat 1 1 "image/visible" 1
+				SetMCMFloat 1 1 "image/width" 516
+				SetMCMFloat 1 1 "image/height" 300
+				SetMCMFloat 1 1 "image/systemcolor" 0
+				SetMCMFloat 1 1 "image/depth" 14
+				SetMCMString 1 1 "image/filename" "TaleOfTwoWastelands\MCM\TTWLogoMerged.dds"</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0D000801">TTWMCMQUST</Quest>
+                  <VariableIndex>5</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <LogEntry Tag="CNAM">RESET Submenus</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>639</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMEAAIAIDHDISQABABuAQAAAG4BAAAADQBpbWFnZS92aXNpYmxlegAAAAAAAAAAwyEfAAQAbgAAAABuAQAAAAgAX2NvbHVtbnN6AAAAAAAAAEDDIR4ABABuAQAAAG4BAAAABwBfZW5hYmxlegAAAAAAAPA/xCEiAAQAbgEAAABuAQAAAAYAX3RpdGxlDABYUCBSZWR1Y3Rpb27DIRwABABuAQAAAG4BAAAABQBfdHlwZXoAAAAAAAAUQMMhFwAEAG4BAAAAbgEAAAAGAF92YWx1ZUcCAMMhHgAEAG4BAAAAbgIAAAAHAF9lbmFibGV6AAAAAAAA8D/EISwABABuAQAAAG4CAAAABgBfdGl0bGUWAFN1cGVyIE11dGFudCBSZWJhbGFuY2XDIRwABABuAQAAAG4CAAAABQBfdHlwZXoAAAAAAAAUQMMhFwAEAG4BAAAAbgIAAAAGAF92YWx1ZUcDAMMhHgAEAG4BAAAAbgMAAAAHAF9lbmFibGV6AAAAAAAA8D/EISoABABuAQAAAG4DAAAABgBfdGl0bGUUAEJvYmJsZWhlYWQgUmViYWxhbmNlwyEcAAQAbgEAAABuAwAAAAUAX3R5cGV6AAAAAAAAFEDDIRcABABuAQAAAG4DAAAABgBfdmFsdWVHBADDIR4ABABuAQAAAG4EAAAABwBfZW5hYmxlegAAAAAAAPA/xCEqAAQAbgEAAABuBAAAAAYAX3RpdGxlFABNb3JlIENvb2tpbmcgT3B0aW9uc8MhHAAEAG4BAAAAbgQAAAAFAF90eXBlegAAAAAAABRAwyEXAAQAbgEAAABuBAAAAAYAX3ZhbHVlRwUA</CompiledScript>
+              <ScriptSource Tag="SCTX">				set TTWMCMQUST.activeSubmenu to 1
+				SetMCMFloat 1 1 "image/visible" 0
+				SetMCMFloat 0 1 "_columns" 2
+				
+				;XP Reduction
+				SetMCMFloat 1 1 "_enable" 1
+				SetMCMString 1 1 "_title" "XP Reduction"
+				SetMCMFloat 1 1 "_type" 5
+				SetMCMFloat 1 1 "_value" XPReduction
+				
+				;Super Mutant Rebalance
+				SetMCMFloat 1 2 "_enable" 1
+				SetMCMString 1 2 "_title" "Super Mutant Rebalance"
+				SetMCMFloat 1 2 "_type" 5
+				SetMCMFloat 1 2 "_value" SMRebalance
+				
+				;Bobblehead
+				SetMCMFloat 1 3 "_enable" 1
+				SetMCMString 1 3 "_title" "Bobblehead Rebalance"
+				SetMCMFloat 1 3 "_type" 5
+				SetMCMFloat 1 3 "_value" BobbleHeadOverhaul
+				
+				;More Cooking Locations
+				SetMCMFloat 1 4 "_enable" 1
+				SetMCMString 1 4 "_title" "More Cooking Options"
+				SetMCMFloat 1 4 "_type" 5
+				SetMCMFloat 1 4 "_value" MoreCooking
+				
+				;No Karma DC Followers
+				
+				;Stash Pack Options</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000801">TTWMCMQUST</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018655">XPReduction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018656">SMRebalance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C01865C">BobbleHeadOverhaul</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C11865D">MoreCooking</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0D000801">TTWMCMQUST</Quest>
+                  <VariableIndex>5</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <LogEntry Tag="CNAM">DEFAULT Submenus</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAHAEcBAAIAIDAVAAcARwIAAgAgMBUABwBHAwACACAwFQAHAEcEAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">				;XP Reduction
+				set XPReduction to 0
+				
+				;Super Mutant Rebalance
+				set SMRebalance to 0
+				
+				;Bobblehead
+				set BobbleHeadOverhaul to 0
+				
+				;More Cooking Locations
+				Set MoreCooking to 0
+				
+				;No Karma DC Followers
+			
+				;Stash Pack Options
+			</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018655">XPReduction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018656">SMRebalance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C01865C">BobbleHeadOverhaul</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C11865D">MoreCooking</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0D000801">TTWMCMQUST</Quest>
+                  <VariableIndex>5</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <LogEntry Tag="CNAM">NEW VALUE Submenus</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>148</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgEAcwMAIDEgPT0VAAwARwIABwAgcgEAZggAGAAQAAEADAAgcgEAcwMAIDIgPT0VAAwARwMABwAgcgEAZggAGAAQAAEADAAgcgEAcwMAIDMgPT0VAAwARwQABwAgcgEAZggAGAAQAAEADAAgcgEAcwMAIDQgPT0VAAwARwUABwAgcgEAZggAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">				;XP Reduction
+				if (TTWMCMQUST.iOption == 1)
+					set XPReduction to TTWMCMQUST.fValue
+				
+				;Super Mutant Rebalance
+				elseif (TTWMCMQUST.iOption == 2)
+					set SMRebalance to TTWMCMQUST.fValue
+				
+				;Bobblehead
+				elseif (TTWMCMQUST.iOption == 3)
+					set BobbleHeadOverhaul to TTWMCMQUST.fValue
+					
+				;More Cooking Locations
+				elseif (TTWMCMQUST.iOption == 4)
+					set MoreCooking to TTWMCMQUST.fValue
+				;No Karma DC Followers
+			
+				;Stash Pack Options
+				endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000801">TTWMCMQUST</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018655">XPReduction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018656">SMRebalance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C01865C">BobbleHeadOverhaul</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C11865D">MoreCooking</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MouseOver</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>466</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Quest</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAlAHIBAHMCAB0AIFjCIRcAAwBuAAAAAG4BAAAACQBfb3B0aW9uSUQWABAACwAMACByAQBzBQAgMSA9PRYAEAABAAwAIHIBAHMCACAxID09xCE7AAQAbgAAAABuCQAAAAYAc3RyaW5nJQBFbmFibGUgb3IgRGlzYWJsZSBUVFcncyBYUCBSZWR1Y3Rpb24uGAAQAAEADAAgcgEAcwIAIDIgPT3EIUUABABuAAAAAG4JAAAABgBzdHJpbmcvAEVuYWJsZSBvciBEaXNhYmxlIFRUVydzIFN1cGVyIE11dGFudCBSZWJhbGFuY2UuGAAQAAEADAAgcgEAcwIAIDMgPT3EIUIABABuAAAAAG4JAAAABgBzdHJpbmcsAEVuYWJsZSBvciBEaXNhYmxlIFRUVydzIEJvYmJsZWhlYWQgT3ZlcmhhdWwuGAAQAAEADAAgcgEAcwIAIDQgPT3EIUMABABuAAAAAG4JAAAABgBzdHJpbmctAEVuYWJsZSBvciBEaXNhYmxlIFRUVydzIE1vcmUgQ29va2luZyBPcHRpb25zLhcAAgABAMMhHgAEAG4AAAAAbgkAAAAHAHZpc2libGV6AAAAAAAAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">			set TTWMCMQUST.iMouseover to GetMCMFloat 0 1 "_optionID"
+			;setstage TTWMCMQUST 7
+			if TTWMCMQUST.iSubMenu == 1
+			
+				;XP Reduction
+				if TTWMCMQUST.iMouseover == 1
+					SetMCMString 0 9 "string" "Enable or Disable TTW's XP Reduction."
+				
+				;Super Mutant Rebalance
+				elseif TTWMCMQUST.iMouseover == 2
+					SetMCMString 0 9 "string" "Enable or Disable TTW's Super Mutant Rebalance."
+					
+				;Bobblehead
+				elseif TTWMCMQUST.iMouseover == 3
+					SetMCMString 0 9 "string" "Enable or Disable TTW's Bobblehead Overhaul."
+					
+				;More Cooking Locations
+				elseif TTWMCMQUST.iMouseover == 4
+					SetMCMString 0 9 "string" "Enable or Disable TTW's More Cooking Options."
+				
+				;No Karma DC Followers
+			
+				;Stash Pack Options
+				
+				else
+					SetMCMFloat 0 9 "visible" 0
+				endif
+			endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D000801">TTWMCMQUST</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

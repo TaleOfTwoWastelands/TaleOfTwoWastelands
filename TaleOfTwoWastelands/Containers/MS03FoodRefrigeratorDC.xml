@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>0</Flags>
+  <FormID ID="0604BDA8">MS03FoodRefrigeratorDC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS03FoodRefrigeratorDC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-30</X>
+        <Y>-20</Y>
+        <Z>9</Z>
+      </Point1>
+      <Point2>
+        <X>31</X>
+        <Y>18</Y>
+        <Z>138</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Food Storage</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Fridge\FridgeClosed01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAIZrC+DhQxMAhmtb4OFGVnF3Sa3Zni7t8KZjEFrXduXwpmNgWtd2VnF3Sa3Zni898KZjEFrXdzXwpmNgWtd2VnF3Sa3Zni</TextureFileHash>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0602D39F">MS03FoodRefrigeratorScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0004BDAD">MS03FoodSDM100</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0004BDAE">MS03FoodSDM75</Item>
+          <Count>4</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0603789A">FoodGeneric75DC</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <Random_LoopingSound Tag="RNAM">
+      <Reference ID="00152628">EMTRefrigeratorCompressorLP</Reference>
+    </Random_LoopingSound>
+  </Subrecords>
+</Record>

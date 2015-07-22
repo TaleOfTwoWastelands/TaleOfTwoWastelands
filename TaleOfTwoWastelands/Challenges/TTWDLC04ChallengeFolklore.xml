@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01858C">TTWDLC04ChallengeFolklore</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC04ChallengeFolklore</EditorID>
+    <Name Tag="FULL">Maryland Folklore</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EAAA">ChallengeLowXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Swampfolks.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>50</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>10</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185B9">TTWDLC04ChallengeFolkloreList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

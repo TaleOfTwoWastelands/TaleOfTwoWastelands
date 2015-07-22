@@ -1,0 +1,88 @@
+scn MS13MesmetronEffectScript
+
+;This script is used by the mesmetron to place an appropriate spell effect on the victim
+;!!!!!---- This script assumes the player is the only person who will use this gun ----!!!!!!
+;!!!!!---- make sure "MS13Mesmetron" weapon is marked "player only"			  -----!!!!!!
+
+
+short dieRoll
+
+short frenzyChance
+short mezzChance
+
+Begin ScriptEffectStart
+	; if already running a sub effect (already hit by mesmetron), do nothing
+	if IsSpellTarget MS13FrenzySpell == 1 || IsSpellTarget MS13MezzedSpell == 1 || MS13HeadExplodeSpell == 1
+		; already a target
+		if MS13Slaves.debug == 1
+			ShowWarning "I've already been hit by mesmetron"
+		endif
+		return
+	endif
+
+	; if wearing MS13 collar, just explode their head
+	if GetEquipped MS13Collar == 1
+		CastImmediateOnSelf MS13HeadExplodeSpell
+		return
+	endif
+
+	; track anyone actually mezzed here
+	ModPCMiscStat "People Mezzed", 1
+
+	set dieRoll to getRandomPercent
+	if MS13Slaves.debug == 1
+		ShowWarning "Mesmetron die roll: %.0f" dieRoll
+	endif
+
+	if getInFaction MS13AlwaysMez == 1 
+		if MS13Slaves.debug == 1
+			ShowWarning "Always Mez"
+		endif
+
+		
+		if MS13Slaves.Mezzed == 0			 ;only one person can be mezzed at a time for ease of implementation of the script collar behavior
+			if MS13Slaves.debug == 1
+				ShowWarning "CastImmediateOnSelf MS13MezzedSpell"
+			endif
+			CastImmediateOnSelf MS13MezzedSpell
+		else
+			;nothing happens, fails to work
+		endif
+
+	else
+		if MS13Slaves.debug == 1
+			ShowWarning "Random effects"
+		endif
+
+		; 20% chance head explodes
+		; 80% chance it does something else:
+		set frenzyChance to 80
+		if getInFaction MS13CanMez == 1 && getInFaction MS13CantMez == 0 && MS13Slaves.Mezzed == 0 && isEssential == 0 && IsChild == 0 ;only one person can be mezzed at a time for ease of implementation of the script collar behavior
+			set mezzChance to 50
+		else
+			;the target is not in either MS13AlwaysMez or MS13CanMez factions OR is in the MS13CantMez faction OR MS13Slaves.Mezzed != 0
+			set mezzChance to 0
+		endif
+
+		if dieRoll < mezzChance 
+			if MS13Slaves.debug == 1
+				showwarning "Mezzed"
+			endif
+			;Mezzed
+			CastImmediateOnSelf MS13MezzedSpell
+
+		elseif dieRoll < frenzyChance
+			if MS13Slaves.debug == 1
+				showwarning "Frenzied"
+			endif
+			;Frenzy
+			CastImmediateOnSelf MS13FrenzySpell
+
+		else 
+			;head explodes
+			CastImmediateOnSelf MS13HeadExplodeSpell
+		
+		endif
+	endif
+
+End

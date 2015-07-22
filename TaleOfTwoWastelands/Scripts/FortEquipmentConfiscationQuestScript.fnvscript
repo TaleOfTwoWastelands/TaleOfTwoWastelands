@@ -1,0 +1,688 @@
+scn FortEquipmentConfiscationQuestScript
+
+short bFortEquipmentStored
+short bHoldout
+short bGimme
+
+begin GameMode
+; RETURN PLAYER & COMPANION ITEMS SECTION
+	if bFortEquipmentStored == 1
+		if bGimme == 1
+			NVCCPlayerStorageREF.RemoveAllTypedItems player 1 1
+
+			if VNPCFollowers.ArcadeHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems ArcadeRef 1 0
+			elseif VNPCFollowers.bBooneHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CraigBooneRef 1 0
+			elseif VNPCFollowers.bCassHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems RoseOfSharonCassidyRef 1 0
+			elseif VNPCFollowers.bLilyHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems LilyRef 1 0
+			elseif VNPCFollowers.RaulHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems RaulRef 1 0
+			elseif VNPCFollowers.bVeronicaHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems VeronicaRef 1 0
+			elseif Followers.CharonHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CharonRef 1 0
+			elseif Followers.ButchHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems ButchRef 1 0
+			elseif Followers.CloverHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CloverRef 1 0
+			elseif Followers.JerichoHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems JerichoRef 1 0
+			elseif Followers.FawkesHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems MQ08FawkesRef 1 0
+			elseif Followers.StarPaladinCrossHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems StarPaladinCrossRef 1 0
+			else
+
+				; Check to see if each companion has his/her weapons. If not, assume they were confiscated and give the companion a new set.
+				if (ArcadeRef.GetItemCount NVArcadeWeapons == 0)
+					ArcadeRef.AddItem NVArcadeWeapons 1
+				endif
+
+				if (CraigBooneRef.GetItemCount NVBooneWeapons == 0)
+					CraigBooneRef.AddItem NVBooneWeapons 1
+				endif
+
+				if (RoseOfSharonCassidyRef.GetItemCount NVCassWeapons == 0)
+					RoseOfSharonCassidyRef.AddItem NVCassWeapons 1
+				endif
+
+				if (LilyRef.GetItemCount NVLilyWeapons == 0)
+					LilyRef.AddItem NVLilyWeapons 1
+				endif
+
+				if (RaulRef.GetItemCount NVRaulWeapons == 0)
+					RaulRef.AddItem NVRaulWeapons 1
+				endif
+
+				if (VeronicaRef.GetItemCount NVVeronicaWeapons == 0)
+					VeronicaRef.AddItem NVVeronicaWeapons 1
+				endif
+
+				if (CharonRef.GetItemCount TTWCharonWeapons == 0)
+					CharonRef.AddItem TTWCharonWeapons 1
+				endif
+
+				if (ButchRef.GetItemCount TTWButchWeapons == 0)
+					ButchRef.AddItem TTWButchWeapons 1
+				endif
+
+				if (CloverRef.GetItemCount TTWCloverWeapons == 0)
+					CloverRef.AddItem TTWCloverWeapons 1
+				endif
+
+				if (JerichoRef.GetItemCount TTWJerichoWeapons == 0)
+					JerichoRef.AddItem TTWJerichoWeapons 1
+				endif
+
+				if (MQ08FawkesRef.GetItemCount TTWFawkesWeapons == 0)
+					MQ08FawkesRef.AddItem TTWFawkesWeapons 1
+				endif
+
+				if (StarPaladinCrossRef.GetItemCount TTWCrossWeapons == 0)
+					StarPaladinCrossRef.AddItem TTWCrossWeapons 1
+				endif
+	
+				; Clear out the humanoid container of any companion weapons.
+				FortHumanoidCompanionContainer.RemoveItem NVCompanionWeapons 1000
+
+				; Give the player the rest of the humanoid companion stuff.
+				FortHumanoidCompanionContainer.RemoveAllTypedItems player 1 1
+			endif
+
+			if VNPCFollowers.bEDEHired
+				if (EDE1Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE1Ref 1 0
+				elseif (EDE2Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE2Ref 1 0
+				elseif (EDE3Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE3Ref 1 0
+				endif
+			elseif VNPCFollowers.RexHired
+				FortCritterCompanionContainer.RemoveAllTypedItems RexRef 1 0
+			elseif Followers.DogmeatHired
+				FortCritterCompanionContainer.RemoveAllTypedItems DogmeatRef 1 0
+			elseif Followers.RL3Hired
+				FortCritterCompanionContainer.RemoveAllTypedItems RL3REF 1 0
+			else
+				
+				; Check to see if each companion has his/her weapons. If not, assume they were confiscated and give the companion a new set.
+				if (EDE1REF.GetItemCount EDEZapGun == 0)
+					EDE1REF.AddItem EDEZapGun 1;
+				endif
+
+				if (EDE2REF.GetItemCount EDEZapGunUpgrade == 0)
+					EDE2REF.AddItem EDEZapGunUpgrade 1;
+				endif
+
+				if (EDE3REF.GetItemCount EDEZapGun == 0)
+					EDE3REF.AddItem EDEZapGun 1;
+				endif
+
+				;if (RexRef.GetItemCount NVRexWeapons == 0)
+				;	RexRef.AddItem NVRexWeapons 1
+				;endif
+
+				if (RL3REF.GetItemCount TTWRL3Weapons == 0)
+					RL3REF.AddItem TTWRL3Weapons 1
+				endif
+
+				; Clear out the critter container of any companion weapons.
+				FortCritterCompanionContainer.RemoveItem NVCompanionWeapons 1000
+
+				; Give the player the rest of the critter companion stuff.
+				FortCritterCompanionContainer.RemoveAllTypedItems player 1 1
+			endif
+
+				set VFreeformTheFort.bEquipmentConfiscated to 0
+				set bFortEquipmentStored to 0
+				set bGimme to 0
+				if player.getincell FortificationHillWeatherStation == 0
+					ShowMessage FortEquipmentRestoredMsg
+				endif
+				
+				StopQuest FortEquipmentConfiscationQuest
+		elseif (player.GetInCell SecuritronVault) || (player.GetInCell FortificationHillWeatherStation) || (player.GetInWorldspace TheFortWorld)
+			return
+		elseif (IsPlayerInRegion VMapTheFortRegion) || (player.GetDistance TheFortMapMarker < 12288)
+			return
+		else
+			NVCCPlayerStorageREF.RemoveAllTypedItems player 1 1
+
+			if VNPCFollowers.ArcadeHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems ArcadeRef 1 0
+			elseif VNPCFollowers.bBooneHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CraigBooneRef 1 0
+			elseif VNPCFollowers.bCassHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems RoseOfSharonCassidyRef 1 0
+			elseif VNPCFollowers.bLilyHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems LilyRef 1 0
+			elseif VNPCFollowers.RaulHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems RaulRef 1 0
+			elseif VNPCFollowers.bVeronicaHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems VeronicaRef 1 0
+			elseif Followers.CharonHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CharonRef 1 0
+			elseif Followers.ButchHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems ButchRef 1 0
+			elseif Followers.CloverHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems CloverRef 1 0
+			elseif Followers.JerichoHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems JerichoRef 1 0
+			elseif Followers.FawkesHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems MQ08FawkesRef 1 0
+			elseif Followers.StarPaladinCrossHired
+				FortHumanoidCompanionContainer.RemoveAllTypedItems StarPaladinCrossRef 1 0
+			else
+				
+				; Check to see if each companion has his/her weapons. If not, assume they were confiscated and give the companion a new set.
+				if (ArcadeRef.GetItemCount NVArcadeWeapons == 0)
+					ArcadeRef.AddItem NVArcadeWeapons 1
+				endif
+
+				if (CraigBooneRef.GetItemCount NVBooneWeapons == 0)
+					CraigBooneRef.AddItem NVBooneWeapons 1
+				endif
+
+				if (RoseOfSharonCassidyRef.GetItemCount NVCassWeapons == 0)
+					RoseOfSharonCassidyRef.AddItem NVCassWeapons 1
+				endif
+
+				if (LilyRef.GetItemCount NVLilyWeapons == 0)
+					LilyRef.AddItem NVLilyWeapons 1
+				endif
+
+				if (RaulRef.GetItemCount NVRaulWeapons == 0)
+					RaulRef.AddItem NVRaulWeapons 1
+				endif
+
+				if (VeronicaRef.GetItemCount NVVeronicaWeapons == 0)
+					VeronicaRef.AddItem NVVeronicaWeapons 1
+				endif
+
+				if (CharonRef.GetItemCount TTWCharonWeapons == 0)
+					CharonRef.AddItem TTWCharonWeapons 1
+				endif
+
+				if (ButchRef.GetItemCount TTWButchWeapons == 0)
+					ButchRef.AddItem TTWButchWeapons 1
+				endif
+
+				if (CloverRef.GetItemCount TTWCloverWeapons == 0)
+					CloverRef.AddItem TTWCloverWeapons 1
+				endif
+
+				if (JerichoRef.GetItemCount TTWJerichoWeapons == 0)
+					JerichoRef.AddItem TTWJerichoWeapons 1
+				endif
+
+				if (MQ08FawkesRef.GetItemCount TTWFawkesWeapons == 0)
+					MQ08FawkesRef.AddItem TTWFawkesWeapons 1
+				endif
+
+				if (StarPaladinCrossRef.GetItemCount TTWCrossWeapons == 0)
+					StarPaladinCrossRef.AddItem TTWCrossWeapons 1
+				endif
+	
+				; Clear out the humanoid container of any companion weapons.
+				FortHumanoidCompanionContainer.RemoveItem NVCompanionWeapons 1000
+
+				; Give the player the rest of the humanoid companion stuff.
+				FortHumanoidCompanionContainer.RemoveAllTypedItems player 1 1
+			endif
+
+			if VNPCFollowers.bEDEHired
+				if (EDE1Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE1Ref 1 0
+				elseif (EDE2Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE2Ref 1 0
+				elseif (EDE3Ref.GetDisabled == 0)
+					FortCritterCompanionContainer.RemoveAllTypedItems EDE3Ref 1 0
+				endif
+			elseif VNPCFollowers.RexHired
+				FortCritterCompanionContainer.RemoveAllTypedItems RexRef 1 0
+			elseif Followers.DogmeatHired
+				FortCritterCompanionContainer.RemoveAllTypedItems DogmeatRef 1 0
+			elseif Followers.RL3Hired
+				FortCritterCompanionContainer.RemoveAllTypedItems RL3REF 1 0
+			else
+				
+				; Check to see if each companion has his/her weapons. If not, assume they were confiscated and give the companion a new set.
+				if (EDE1REF.GetItemCount EDEZapGun == 0)
+					EDE1REF.AddItem EDEZapGun 1;
+				endif
+
+				if (EDE2REF.GetItemCount EDEZapGunUpgrade == 0)
+					EDE2REF.AddItem EDEZapGunUpgrade 1;
+				endif
+
+				if (EDE3REF.GetItemCount EDEZapGun == 0)
+					EDE3REF.AddItem EDEZapGun 1;
+				endif
+
+				;if (RexRef.GetItemCount NVRexWeapons == 0)
+				;	RexRef.AddItem NVRexWeapons 1
+				;endif
+
+				if (RL3REF.GetItemCount TTWRL3Weapons == 0)
+					RL3REF.AddItem TTWRL3Weapons 1
+				endif
+
+				; Clear out the critter container of any companion weapons.
+				FortCritterCompanionContainer.RemoveItem NVCompanionWeapons 1000
+
+				; Give the player the rest of the critter companion stuff.
+				FortCritterCompanionContainer.RemoveAllTypedItems player 1 1
+			endif
+
+			set VFreeformTheFort.bEquipmentConfiscated to 0
+			set bFortEquipmentStored to 0
+			ShowMessage FortEquipmentRestoredMsg
+			StopQuest FortEquipmentConfiscationQuest
+		endif
+
+; REMOVE PLAYER & COMPANION ITEMS SECTION
+
+	elseif bFortEquipmentStored == 0
+		disableplayercontrols
+; Make sure Lucullus is at The Fort in case the player fast travels.
+		if VCCLucullusREF.getdead == 0
+			VCCLucullusREF.moveto LucullusFortMarker
+			set VCCLucullusREF.iGate to 1
+		endif
+; Player didn't speech for meds
+		if VFreeformCottonwoodCove.iFortMedicalChems < 2
+			EnablePlayerControls
+			if VStoryEventCaesarMeetsPlayer == 0 && player.GetItemCount VPlatinumChip > 0
+				player.RemoveItem VPlatinumChip 1
+
+				; JSH 8/16 - Making sure Caesar doesn't end up with more than 1 Chip
+				if (FortCaesarRef.GetItemCount VPlatinumChip == 0)
+					FortCaesarRef.AddItem VPlatinumChip 1
+				endif
+
+				set VStoryChipOwner to 3
+			endif
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40 NVHoldoutWeapons
+			else
+				player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40
+			endif
+			player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 47 NVLegionChemsList
+			set NVCCBargeREF.iStripped to 1
+
+		if VNPCFollowers.ArcadeHired && ArcadeRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.bBooneHired && CraigBooneRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons 
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.bLilyHired && LilyRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.RaulHired && RaulRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.bVeronicaHired && VeronicaRef.GetInSameCell player
+			if player.GetAV Sneak >=50 && bHoldout == 1
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.CharonHired && CharonRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.ButchHired && ButchRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.CloverHired && CloverRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.JerichoHired && JerichoRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.FawkesHired && MQ08FawkesRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+		endif
+
+		if VNPCFollowers.bEDEHired
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+			EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+			EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif VNPCFollowers.RexHired && RexRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.DogmeatHired && DogmeatRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+
+		elseif Followers.RL3Hired && RL3REF.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionChemsList
+		endif
+		set VFreeformTheFort.bEquipmentConfiscated to 1
+		set bFortEquipmentStored to 1
+		EnablePlayerControls
+; Player used speech for meds
+	else
+		DisablePlayerControls
+		if VStoryEventCaesarMeetsPlayer == 0 && player.GetItemCount VPlatinumChip > 0
+			player.RemoveItem VPlatinumChip 1
+
+			; JSH 8/16 - Making sure Caesar doesn't end up with more than 1 Chip
+			if (FortCaesarRef.GetItemCount VPlatinumChip == 0)
+				FortCaesarRef.AddItem VPlatinumChip 1
+			endif
+
+			set VStoryChipOwner to 3
+		endif
+		if player.GetAV Sneak >= 50 && bHoldout == 1
+			player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40 NVImprovedHoldoutWeapons
+		elseif player.GetAV Sneak < 50 && bHoldout == 1
+			player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40 NVHoldoutWeapons
+		else
+			player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 40
+		endif
+		player.RemoveAllTypedItems NVCCPlayerStorageREF 1 0 47 NVLegionAllButMedsChemsList
+		set NVCCBargeREF.iStripped to 1
+
+		if VNPCFollowers.ArcadeHired && ArcadeRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			ArcadeRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.bBooneHired && CraigBooneRef.GetInSameCell player	
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			CraigBooneRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons 
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			RoseOfSharonCassidyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.bLilyHired && LilyRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			LilyRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.RaulHired && RaulRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			RaulRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.bVeronicaHired && VeronicaRef.GetInSameCell player
+			if player.GetAV Sneak >=50 && bHoldout == 1
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 40
+			endif
+			VeronicaRef.RemoveAllTypedItems FortHumanoidCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.CharonHired && CharonRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			CharonRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.ButchHired && ButchRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			ButchRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.CloverHired && CloverRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			CloverRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.JerichoHired && JerichoRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			JerichoRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.FawkesHired && MQ08FawkesRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			MQ08FawkesRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			StarPaladinCrossRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+		endif
+
+		if VNPCFollowers.bEDEHired
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			else
+				EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+				EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+				EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			EDE1REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+			EDE2REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+			EDE3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif VNPCFollowers.RexHired && RexRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			RexRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.DogmeatHired && DogmeatRef.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			DogmeatRef.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+
+		elseif Followers.RL3Hired && RL3REF.GetInSameCell player
+			if player.GetAV Sneak >= 50 && bHoldout == 1
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVHoldoutWeapons
+			elseif player.GetAV Sneak < 50 && bHoldout == 1
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 40
+			endif
+			RL3REF.RemoveAllTypedItems FortCritterCompanionContainer 1 0 47 NVLegionAllButMedsChemsList
+		endif
+		set VFreeformTheFort.bEquipmentConfiscated to 1	
+		set bFortEquipmentStored to 1
+		EnablePlayerControls
+	endif
+endif
+
+end

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C018609">SaveEquippedItems</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">SaveEquippedItems</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>3</ReferenceCount>
+        <CompiledSize>343</CompiledSize>
+        <VariableCount>14</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAAEAANAD8BAAABAQMAAQILAAwAORUaAAEZAFYDAAALAFgAAE8VCwABAAUAQXJyYXkAORUTAAESAFYEAAAGAFgAAM4QBAAAAAA5FQwAAQsAVgEAAAoAQgAAPRUUAEYBAAABDwBWBAAAAgBWBAAABgAaFgAxAAYALQAgcgEAWLkVAAAgMSA9PSByAQBYrBUCAAAAIDEgPT0gcwMAIDAgPT0gfHwgJiY5FRMAARIAVgQAAAUAWAEAAxQEAAAAADkVGgABGQBWAwAADABYAABPFQsAAQAFAEFycmF5ADkVFgABFQBWAwAADABCABhYAQADFAQAAAAAORUWAAEVAFYDAAAMAEIBGFgBAFEUBAAAAAA5FRcAARYAVgMAAAsAVgEAAAoAGFYDAAAMAAA5FQwAAQsAVgEAAAoAQgEcGQAAADwVAABGFQkAAQgAVgMAAAsAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="SaveEquippedItems.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bOnlyPlayable</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">baseItem</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">self</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">i</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">equipArray</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">entry</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">itemType</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">mods</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRV">6</Reference>
+        <Reference Tag="SCRV">5</Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

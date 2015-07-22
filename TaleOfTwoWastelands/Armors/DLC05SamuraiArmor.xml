@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0B006940">DLC05SamuraiArmor</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05SamuraiArmor</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Samurai Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0B00AB71">DLC05SamuraiArmorEffect</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>Heavy</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">DLC05\Armor\SamuraiArmor\outfitm.nif</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">DLC05\Armor\SamuraiArmor\outfitf.nif</FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">DLC05\Armor\SamuraiArmor\GO.nif</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">DLC05\Interface\Icons\Apparel_samurai.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages\Apparel\appearal_cowboy_duster_outfit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075205">RepairMetalArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0B00693E">OutfitSamuraiList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>10000</Value>
+      <MaxCondition>500</MaxCondition>
+      <Weight>20</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>14</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B6">ArmorHeavyAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

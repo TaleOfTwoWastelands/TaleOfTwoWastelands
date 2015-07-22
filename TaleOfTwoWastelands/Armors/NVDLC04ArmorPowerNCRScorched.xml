@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0400C717">NVDLC04ArmorPowerNCRScorched</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC04ArmorPowerNCRScorched</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Scorched Sierra Power Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0400D357">NVDLC04ArmorPowerNCRScorchedOE</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150496</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">NVDLC04\Armor\sierra\sm_powerarmor.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">NVDLC04\Armor\sierra\sm_powerarmor_GO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">interface\icons\pipboyimages\apparel\apparel_NCR_salvaged_power_armor.dds</Male>
+        <Female Tag="ICO2">interface\icons\pipboyimages\apparel\apparel_NCR_salvaged_power_armor.dds</Female>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_power_armor.dds</Male>
+        <Female Tag="MIC2">interface\icons\pipboyimages_small\apparel_small\glow_power_armor.dds</Female>
+      </Message>
+    </Icon>
+    <RagdollConstraintTemplate Tag="BMCT">RagdollConstraint\default.rdt</RagdollConstraintTemplate>
+    <RepairList Tag="REPL">
+      <Reference ID="0400D4CC">RepairNVDLC04ScorchedPowerArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="00144F36">ArmorNCRPowerList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>6500</Value>
+      <MaxCondition>1600</MaxCondition>
+      <Weight>40</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>24</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013F297">ArmorPowerAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

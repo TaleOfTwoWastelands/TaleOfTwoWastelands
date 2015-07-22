@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0C0180A3">TTW32To22ForBadModConversions</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTW32To22ForBadModConversions</EditorID>
+    <Name Tag="FULL">.22LR Round</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="060207F7">Ammo32Caliber</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>Repair</Skill>
+      <Level>25</Level>
+      <Category ID="00153621">ReloadingBenchRecipes</Category>
+      <SubCategory ID="0013E44E">AmmoSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="060207F7">Ammo32Caliber</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="0007EA27">Ammo22LR</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

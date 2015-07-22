@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="0003A38C">MQ09EnclaveGuardFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ09EnclaveGuardFaction</EditorID>
+    <Name Tag="FULL">Enclave Guard Faction</Name>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="0003A38D">MQ09EnclaveRobotFaction</Faction>
+        <Modifier>-100</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>3</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Ranks>
+      <Rank>
+        <Rank Tag="RNAM">0</Rank>
+        <Title>
+          <Male Tag="MNAM">Soldier</Male>
+        </Title>
+      </Rank>
+    </Ranks>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017E8">RepTTWEnclave</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

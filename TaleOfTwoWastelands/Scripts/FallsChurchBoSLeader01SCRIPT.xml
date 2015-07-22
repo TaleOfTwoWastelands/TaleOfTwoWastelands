@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="06015A63">FallsChurchBoSLeader01SCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FallsChurchBoSLeader01SCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>216</CompiledSize>
+        <VariableCount>2</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAAKAC8AAAAAABYAGQABABUAIFg7EAoAAgByAgBuEwAAACAwID09HAABAIsQAgAAABkAAAARAAAAEAAIAAIAVAAAAAAAFgAgAAMAHAAgWGkQBQABAHIDACByBABYxhEAACAxID09ICYmFQAHAHMCAAIAIDHFEQcAAQBuAAAAAA0QAgAAABcAAgABAA0QAgAAABkAAAARAAAAEAAGAAAALwAAABYADQACAAkAIHMCACAxID09FQAHAHMCAAIAIDDFEQcAAQBuAQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="FallsChurchBoSLeader01SCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FallsChurchStage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TeammateSwapped</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0601993B">FF02InititiateREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060173D1">FreeformDC</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06015501">FallsChurchBoSLeader01REF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0C0180A4">TTWShellsto20GAForBadModConversions</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWShellsto20GAForBadModConversions</EditorID>
+    <Name Tag="FULL">20 Ga.</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="06028EEA">AmmoShotgunShell</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>Repair</Skill>
+      <Level>10</Level>
+      <Category ID="00153621">ReloadingBenchRecipes</Category>
+      <SubCategory ID="0013E44E">AmmoSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="06028EEA">AmmoShotgunShell</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="000E86F2">Ammo20Ga</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

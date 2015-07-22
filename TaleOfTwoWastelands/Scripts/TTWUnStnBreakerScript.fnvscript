@@ -1,0 +1,36 @@
+scn TTWUnStnBreakerScript
+
+short bActivated
+
+BEGIN OnActivate
+	if (GetActionRef == Player)
+		if (GetQuestRunning TTWUnStnPowerQuest)
+			if (bActivated == 0) && (TTWUnStnPowerQuest.bGeneratorOn == 1)
+				if (TTWUnStnPowerQuest.iButtonCount == 0)
+					SetObjectiveCompleted TTWUnStnPowerQuest 26 1
+					SetObjectiveDisplayed TTWUnStnPowerQuest 26 1
+				elseif (TTWUnStnPowerQuest.iButtonCount == 1)
+					SetObjectiveDisplayed TTWUnStnPowerQuest 26 0
+					SetObjectiveCompleted TTWUnStnPowerQuest 27 1
+					SetObjectiveDisplayed TTWUnStnPowerQuest 27 1
+				elseif (TTWUnStnPowerQuest.iButtonCount == 2)
+					SetObjectiveDisplayed TTWUnStnPowerQuest 27 0
+					SetObjectiveCompleted TTWUnStnPowerQuest 28 1
+					SetObjectiveDisplayed TTWUnStnPowerQuest 28 1
+				elseif (TTWUnStnPowerQuest.iButtonCount == 3)
+					SetObjectiveDisplayed TTWUnStnPowerQuest 28 0
+					SetObjectiveCompleted TTWUnStnPowerQuest 29 1
+					SetObjectiveDisplayed TTWUnStnPowerQuest 29 1
+					SetObjectiveDisplayed TTWUnStnPowerQuest 30 1
+					TTWUnStnFlapBoardONRef.enable
+				endif
+				set TTWUnStnPowerQuest.iButtonCount to TTWUnStnPowerQuest.iButtonCount + 1
+				Activate
+				set bActivated to 1
+				SetDestroyed 1
+			else
+				ShowMessage TTWUnStnPowerOffSwitchMsg
+			endif
+		endif
+	endif
+END

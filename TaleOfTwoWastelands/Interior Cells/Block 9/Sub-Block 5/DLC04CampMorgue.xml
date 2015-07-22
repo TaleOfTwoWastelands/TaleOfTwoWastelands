@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0A00D6AF">DLC04CampMorgue</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04CampMorgue</EditorID>
+    <Name Tag="FULL">Morgue</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>41</Red>
+          <Green>41</Green>
+          <Blue>24</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>57</Red>
+          <Green>49</Green>
+          <Blue>28</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>0</Near>
+        <Far>3000</Far>
+        <ClipDistance>3100</ClipDistance>
+        <Power>0.5</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00065332">IndustrialDefaultTemplate</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">0</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0A0028D5">DLC04MansionImageSpace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="060A86F3">DefaultFeralGhoul</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="060C293A">IntWoodSmall</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

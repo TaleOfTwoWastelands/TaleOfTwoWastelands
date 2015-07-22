@@ -1,0 +1,66 @@
+ScriptName DLC02PlayerContainerScript
+
+short doonce
+
+;When player is back in real world after combat sim, put all objects back in his inventory
+;Also script player's pod to open
+
+
+Begin GameMode
+	if ( DoOnce == 1 )
+		ResetPipboyManager	;reset manager frame after we get the pipboy back
+		set DoOnce to 2
+	endif
+
+	if ( Doonce == 0 )
+		if ( GetStage DLC02OA4 >= 40 )
+			if ( Player.GetinCell DLC02VSS01 == 1 )
+				set doonce to 1
+
+				; Player.RemoveAllItems 			;pull everything off the player he may have acquired in sim
+				RemoveAllItems Player 0 1				;pull everything out of this container and put it back in player inventory
+				player.removespell TTWOANoNeeds
+				Player.Additem DLC02ArmorSimSuit2 1 1
+				Player.EquipItem DLC02ArmorSimSuit2 0 1
+
+;re-enable GNR and Enclave Radio Broadcast Refs
+	
+
+;check stage in MQ09; if player hasn't left yet, enable radio again
+;otherwise check RRDestroy var
+	
+				if ( GetStage MQ09 < 60 )
+					RadioEnclaveRef.Enable
+				else
+					if ( MQ09.RRDestroy == 0 )
+						RadioEnclaveRef.Enable
+					endif
+				endif
+
+;check whether player did MQ02 or not, and enable the proper ref
+
+				if ( GNRDishDone == 0 )
+					RadioGalaxyNewsRef01.Enable
+				elseif ( GNRDishDone == 1 )
+					RadioGalaxyNewsRef02.Enable
+				endif
+
+;Re-enable Agatha's station if that was running prior to entering the sim
+
+				if ( GetStageDone MS17 100 == 1 )
+					MS17RadioRef.Enable
+				endif
+
+;finally, check if MS16 is running. If so, re-enable radio ref
+
+				if ( DLC02MS16Check == 1 )
+					MS16Vault101ExternalRadioREF.Enable
+				endif
+				DLC02SimActivatorRef.PlayGroup Forward 1
+				DLC02SimActivatorRef.PlaySound OBJTranquilityLanePodOpen2D
+			endif
+		endif
+	endif
+
+
+End

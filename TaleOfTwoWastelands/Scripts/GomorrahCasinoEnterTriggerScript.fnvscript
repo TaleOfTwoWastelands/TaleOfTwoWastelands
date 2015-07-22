@@ -1,0 +1,76 @@
+scn GomorrahCasinoEnterTriggerScript
+
+ref Companion1REF
+ref Companion2REF
+
+begin onTriggerEnter
+;	pcb
+end
+
+begin onActivate
+		; Checks for followers
+			if VNPCFollowers.bBooneHired == 1
+				set Companion1REF to CraigBooneREF
+			elseif VNPCFollowers.bCassHired == 1
+				set Companion1REF to RoseofSharonCassidyREF
+			elseif VNPCFollowers.bVeronicaHired == 1
+				set Companion1REF to VeronicaREF
+			elseif VNPCFollowers.bLilyHired == 1
+				set Companion1REF to LilyREF
+			elseif VNPCFollowers.RaulHired == 1
+				set Companion1REF to RaulREF
+			elseif VNPCFollowers.ArcadeHired == 1
+				set Companion1REF to ArcadeREF
+			elseif Followers.CharonHired == 1
+				set Companion1REF to CharonRef
+			elseif Followers.ButchHired == 1
+				set Companion1REF to ButchRef
+			elseif Followers.CloverHired == 1
+				set Companion1REF to CloverRef
+			elseif Followers.JerichoHired == 1
+				set Companion1REF to JerichoRef
+			elseif Followers.FawkesHired == 1
+				set Companion1REF to MQ08FawkesRef
+			elseif Followers.StarPaladinCrossHired == 1
+				set Companion1REF to StarPaladinCrossRef
+			endif
+			if VNPCFollowers.bEDEHired == 1
+				if EDE1Ref.GetDisabled == 0
+					set Companion2REF to EDE1REF
+				elseif EDE2Ref.GetDisabled == 0
+					set Companion2REF to EDE2REF
+				elseif EDE3Ref.GetDisabled == 0
+					set Companion2REF to EDE3REF
+				endif
+			elseif VNPCFollowers.RexHired == 1
+					set Companion2REF to RexREF
+			elseif Followers.DogmeatHired == 1
+					set Companion2REF to DogmeatRef
+			elseif Followers.RL3Hired == 1
+					set Companion2REF to RL3REF
+			endif
+
+	if vDialogueGomorrah.iInGomorrah == 1
+		if Companion1REF != 0
+			Companion1REF.RemoveAllTypedItems vGOMCompanion1EquipmentContainer 1 0 40
+		endif
+		if Companion2REF!= 0
+			Companion2REF.RemoveAllTypedItems vGOMCompanion2EquipmentContainer 1 0 40
+		endif
+	elseif vDialogueGomorrah.iInGomorrah == 2
+		if Companion1REF != 0
+			if Player.GetActorValue Sneak >= 50
+				Companion1REF.RemoveAllTypedItems vGOMCompanion1EquipmentContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				Companion1REF.RemoveAllTypedItems vGOMCompanion1EquipmentContainer 1 0 40 NVHoldoutWeapons 
+			endif
+		endif
+		if Companion2REF != 0
+			if Player.GetActorValue Sneak >= 50
+				Companion2REF.RemoveAllTypedItems vGOMCompanion2EquipmentContainer 1 0 40 NVImprovedHoldoutWeapons
+			else
+				Companion2REF.RemoveAllTypedItems vGOMCompanion2EquipmentContainer 1 0 40 NVHoldoutWeapons 
+			endif 
+		endif
+	endif
+end

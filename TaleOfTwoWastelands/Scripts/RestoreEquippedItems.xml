@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01860A">RestoreEquippedItems</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RestoreEquippedItems</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>2</ReferenceCount>
+        <CompiledSize>371</CompiledSize>
+        <VariableCount>19</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAAEgANAFkBAAABAQgAAwMIAAYACgA5FQwAAQsAVgEAAAcAQgAAOxUeAG8BAAABGQBWAQAABwBYAABQFQsAAQgAVgMAAAgABzkVFwABFgBWAwAABgBWAwAACABWAQAABwAYADkVEwABEgBWBAAACQBWAwAABgBCABgAORUWAAEVAFYBAAAMAFgAAC8QBwABAHICAAAWAAwACgAIACBzDAAgMCA+ORUWAAEVAFYDAAAKAFgAALoVBwABAHICAAA5FQwAAQsAVgEAAAsAQgAAOxUeAFcBAAABGQBWAQAACwBYAABQFQsAAQgAVgMAAAoABzkVFwABFgBWBAAADwBWAwAACgBWAQAACwAYABYAIAACABwAIFg6FRYAARUAVgMAAAYAQgEYWAEAURQEAAAABBwAAQC3FQAAPxUAABkAAAA5FQwAAQsAVgEAAAsAQgEcPBUAABkAAAA5FQwAAQsAVgEAAAcAQgEcPBUAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="RestoreEquippedItems.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">entry</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">i</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">equipArray</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">baseObject</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">items</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">j</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">type</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">mods</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">15</Reference>
+        <Reference Tag="SCRV">9</Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

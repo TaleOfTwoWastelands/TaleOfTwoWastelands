@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0B0040A2">DLC05MZ1AlienGuard</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05MZ1AlienGuard</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-30</X>
+        <Y>-24</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>30</X>
+        <Y>21</Y>
+        <Z>135</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Alien</Name>
+    <Model>
+      <FileName Tag="MODL">DLC05\Creatures\Alien\Skeleton.nif</FileName>
+    </Model>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>dlc05alien1.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Swims, Walks, NoLowLevelProcessing, AllowPickpocket</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>10</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseFactions, UseBaseData</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0B003C46">DLC05AlienFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0B0034CC">DLC05CreatureAlien</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0B003C79">DLC05crAlien1MeleeATemplate</Reference>
+    </Template>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0B0058DD">DLC05CondWeapAlienBaton</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0B0040A9">DLC05MZ1AlienGuardTravelToLinkedRef</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0B0040A6">DLC05MZ1AlienGuardHoldatStartMarker</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Abomination</CreatureType>
+      <Skill>
+        <Combat>75</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>50</Health>
+      <Damage>10</Damage>
+      <Strength>6</Strength>
+      <Perception>4</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>6</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">150</AttackReach>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="001690AD">AlienBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">0.850000024</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicBug</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0B00481B">DLC05AlienWeaponList</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

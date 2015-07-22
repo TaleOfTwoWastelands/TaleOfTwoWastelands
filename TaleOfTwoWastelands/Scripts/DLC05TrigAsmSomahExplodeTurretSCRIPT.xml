@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00AAAF">DLC05TrigAsmSomahExplodeTurretSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05TrigAsmSomahExplodeTurretSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>3</ReferenceCount>
+        <CompiledSize>90</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAaAEcAAAABAHICABYADQADAAkAIHMBACAwID09FQAHAHMBAAIAIDEcAAEADxAJAAIAEABuAQAAABwAAQAlEAoAAgByAwBuAQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05TrigAsmSomahExplodeTurretSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0031A6">RAsmTurretC2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000988">DLC05SomahREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007078C">MinePlasmaExplosion</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

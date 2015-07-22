@@ -1,0 +1,377 @@
+scn FerociousLoyaltyScript
+
+short bFLArcadeActive
+; 1 = Yes
+
+short bFLBooneActive
+; 1 = Yes
+
+short bFLCassActive
+; 1 = Yes
+
+short bFLEDEActive
+; 1 = Yes
+
+short bFLLilyActive
+; 1 = Yes
+
+short bFLRaulActive
+; 1 = Yes
+
+short bFLRexActive
+; 1 = Yes
+
+short bFLVeronicaActive
+; 1 = Yes
+
+short bFLCharonActive
+; 1 = Yes
+
+short bFLDogmeatActive
+; 1 = Yes
+
+short bFLVButchActive
+; 1 = Yes
+
+short bFLCloverActive
+; 1 = Yes
+
+short bFLJerichoActive
+; 1 = Yes
+
+short bFLFawkesActive
+; 1 = Yes
+
+short bFLRL3Active
+; 1 = Yes
+
+short bFLCrossActive
+; 1 = Yes
+
+Begin GameMode
+
+; For Arcade ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.ArcadeHired) == 1 && bFLArcadeActive == 0
+		ArcadeREF.AddSpell FerociousLoyaltyEffect
+		Set bFLArcadeActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.ArcadeHired) == 1 && bFLArcadeActive == 1
+		ArcadeREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLArcadeActive to 0
+	EndIf
+
+EndIf
+
+; For Boone ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bBooneHired) == 1 && bFLBooneActive == 0
+		CraigBooneREF.AddSpell FerociousLoyaltyEffect
+		Set bFLBooneActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bBooneHired) == 1 && bFLBooneActive == 1
+		CraigBooneREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLBooneActive to 0
+	EndIf
+
+EndIf
+
+; For Cass ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bCassHired) == 1 && bFLCassActive == 0
+		RoseofSharonCassidyREF.AddSpell FerociousLoyaltyEffect
+		Set bFLCassActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bCassHired) == 1 && bFLCassActive == 1
+		RoseofSharonCassidyREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLCassActive to 0
+	EndIf
+
+EndIf
+
+; For ED-E ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bEDEHired) == 1 && bFLEDEActive == 0
+		EDE1REF.AddSpell FerociousLoyaltyEffect
+		EDE2REF.AddSpell FerociousLoyaltyEffect
+		EDE3REF.AddSpell FerociousLoyaltyEffect
+		Set bFLEDEActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bEDEHired) == 1 && bFLEDEActive == 1
+		EDE1REF.RemoveSpell FerociousLoyaltyEffect
+		EDE2REF.RemoveSpell FerociousLoyaltyEffect
+		EDE3REF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLEDEActive to 0
+	EndIf
+
+EndIf
+
+; For Lily ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bLilyHired) == 1 && bFLLilyActive == 0
+		LilyREF.AddSpell FerociousLoyaltyEffect
+		Set bFLLilyActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bLilyHired) == 1 && bFLLilyActive == 1
+		LilyREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLLilyActive to 0
+	EndIf
+
+EndIf
+
+; For Raul ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.RaulHired) == 1 && bFLRaulActive == 0
+		RaulREF.AddSpell FerociousLoyaltyEffect
+		Set bFLRaulActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.RaulHired) == 1 && bFLRaulActive == 1
+		RaulREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLRaulActive to 0
+	EndIf
+
+EndIf
+
+; For Rex ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.RexHired) == 1 && bFLRexActive == 0
+		RexREF.AddSpell FerociousLoyaltyEffect
+		Set bFLRexActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.RexHired) == 1 && bFLRexActive == 1
+		RexREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLRexActive to 0
+	EndIf
+
+EndIf
+
+; For Veronica ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bVeronicaHired) == 1 && bFLVeronicaActive == 0
+		VeronicaREF.AddSpell FerociousLoyaltyEffect
+		Set bFLVeronicaActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (VNPCFollowers.bVeronicaHired) == 1 && bFLVeronicaActive == 1
+		VeronicaREF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLVeronicaActive to 0
+	EndIf
+
+EndIf
+
+; For Charon ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.CharonHired) == 1 && bFLCharonActive == 0
+		CharonRef.AddSpell FerociousLoyaltyEffect
+		Set bFLCharonActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.CharonHired) == 1 && bFLCharonActive == 1
+		CharonRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLCharonActive to 0
+	EndIf
+
+EndIf
+
+; For Dogmeat ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.DogmeatHired) == 1 && bFLDogmeatActive == 0
+		DogmeatRef.AddSpell FerociousLoyaltyEffect
+		Set bFLDogmeatActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.DogmeatHired) == 1 && bFLDogmeatActive == 1
+		DogmeatRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLDogmeatActive to 0
+	EndIf
+
+EndIf
+
+; For Butch ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.ButchHired) == 1 && bFLVButchActive == 0
+		ButchRef.AddSpell FerociousLoyaltyEffect
+		Set bFLVButchActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.ButchHired) == 1 && bFLVButchActive == 1
+		ButchRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLVButchActive to 0
+	EndIf
+
+EndIf
+
+; For Clover ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.CloverHired) == 1 && bFLCloverActive == 0
+		CloverRef.AddSpell FerociousLoyaltyEffect
+		Set bFLCloverActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.CloverHired) == 1 && bFLCloverActive == 1
+		CloverRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLCloverActive to 0
+	EndIf
+
+EndIf
+
+; For Jericho ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.JerichoHired) == 1 && bFLJerichoActive == 0
+		JerichoRef.AddSpell FerociousLoyaltyEffect
+		Set bFLJerichoActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.JerichoHired) == 1 && bFLJerichoActive == 1
+		JerichoRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLJerichoActive to 0
+	EndIf
+
+EndIf
+
+; For Fawkes ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.FawkesHired) == 1 && bFLFawkesActive == 0
+		MQ08FawkesRef.AddSpell FerociousLoyaltyEffect
+		Set bFLFawkesActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.FawkesHired) == 1 && bFLFawkesActive == 1
+		MQ08FawkesRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLFawkesActive to 0
+	EndIf
+
+EndIf
+
+; For RL-3 ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.RL3Hired) == 1 && bFLRL3Active == 0
+		RL3REF.AddSpell FerociousLoyaltyEffect
+		Set bFLRL3Active to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.RL3Hired) == 1 && bFLRL3Active == 1
+		RL3REF.RemoveSpell FerociousLoyaltyEffect
+		Set bFLRL3Active to 0
+	EndIf
+
+EndIf
+
+; For Cross ***************************
+
+If Player.GetHealthPercentage < 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.StarPaladinCrossHired) == 1 && bFLCrossActive == 0
+		StarPaladinCrossRef.AddSpell FerociousLoyaltyEffect
+		Set bFLCrossActive to 1
+	EndIf
+
+EndIf
+
+If Player.GetHealthPercentage >= 0.5 && (VNPCFollowers.bPlayerHasFollower) == 1
+
+	If (Followers.StarPaladinCrossHired) == 1 && bFLCrossActive == 1
+		StarPaladinCrossRef.RemoveSpell FerociousLoyaltyEffect
+		Set bFLCrossActive to 0
+	EndIf
+
+EndIf
+
+End

@@ -1,0 +1,68 @@
+scn vNellisMoveToPearlSCRIPT
+
+int doonce
+
+begin gamemode
+
+	player.moveto PlayerMeetPearlXMarker
+	NellisPearlREF.moveto NellisPearlMarker
+	Boomer00FREF.moveto PearlBackup1MarkerREF
+	Boomer00MREF.moveto PearlBackup2MarkerREF
+
+		if (VNPCFollowers.bBooneHired) && (CraigBooneREF.Waiting != 1)
+			CraigBooneREF.MoveTo MeetPearlCompanionXMarker;
+		endif
+		if (VNPCFollowers.bCassHired) && (RoseofSharonCassidyREF.Waiting != 1)
+			RoseofSharonCassidyREF.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (VNPCFollowers.bVeronicaHired) && (VeronicaREF.Waiting != 1)
+			VeronicaREF.MoveTo MeetPearlCompanionXMarker;
+		endif
+		if (VNPCFollowers.bLilyHired) && (LilyREF.Waiting != 1)
+			LilyREF.MoveTo MeetPearlCompanionXMarker;
+		endif
+		if (VNPCFollowers.RaulHired) && (RaulREF.Waiting != 1)
+			RaulREF.MoveTo MeetPearlCompanionXMarker;
+		endif
+		if (VNPCFollowers.ArcadeHired) && (ArcadeREF.Waiting != 1)
+			ArcadeREF.MoveTo MeetPearlCompanionXMarker;
+		endif
+		if (VNPCFollowers.bEDEHired) && (EDE1REF.Waiting != 1)
+			if EDE1Ref.GetDisabled == 0
+				EDE1Ref.MoveTo MeetPearlCompanionXMarker
+			elseif EDE2Ref.GetDisabled == 0
+				EDE2Ref.MoveTo MeetPearlCompanionXMarker
+			elseif EDE3Ref.GetDisabled == 0
+				EDE3Ref.MoveTo MeetPearlCompanionXMarker
+			endif
+		endif
+		if (VNPCFollowers.RexHired) && (RexREF.Waiting != 1)
+			RexREF.MoveTo MeetPearlCompanionXMarker;
+		endif	
+		if (Followers.CharonHired) && (CharonRef.Waiting != 1)
+			CharonRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.ButchHired) && (ButchRef.Waiting != 1)
+			ButchRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.CloverHired) && (CloverRef.Waiting != 1)
+			CloverRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.JerichoHired) && (JerichoRef.Waiting != 1)
+			JerichoRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.FawkesHired) && (MQ08FawkesRef.Waiting != 1)
+			MQ08FawkesRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.StarPaladinCrossHired) && (StarPaladinCrossRef.Waiting != 1)
+			StarPaladinCrossRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.DogmeatHired) && (DogmeatRef.Waiting != 1)
+			DogmeatRef.MoveTo MeetPearlCompanionXMarker;
+		endif		
+		if (Followers.RL3Hired) && (RL3REF.Waiting != 1)
+			RL3REF.MoveTo MeetPearlCompanionXMarker;
+		endif		
+	Autosave
+	stopquest vNellisMoveToPearl
+end

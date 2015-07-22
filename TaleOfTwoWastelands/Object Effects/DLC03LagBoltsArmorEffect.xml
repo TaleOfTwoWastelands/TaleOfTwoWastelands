@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ENCH">
+  <Flags>0</Flags>
+  <FormID ID="000E29CA">DLC03LagBoltsArmorEffect</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03LagBoltsArmorEffect</EditorID>
+    <Name Tag="FULL">Lag-Bolt's Armor</Name>
+    <Data Tag="ENIT">
+      <Type>Armor</Type>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D72">IncreaseSkillGuns</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>10</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Guns</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D77">IncreaseActionPoints</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>10</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>ActionPoints</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

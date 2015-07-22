@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="090088E8">DLC03LabCoat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03LabCoat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Lab Coat</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D322">EnchClothingScienceLabCoat</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ProjectPurityDoctor\outfitm.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="00072622">RivetCityScientistM</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="00072622">RivetCityScientistM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="00072622">RivetCityScientistM</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="00072622">RivetCityScientistM</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="00072622">RivetCityScientistM</TextureSet>
+                <Index>6</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\DoctorLi\F\OutfitF.NIF</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>Arms01</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>10</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>8</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>9</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody1</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\DoctorLi\F\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>GO</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\DoctorLi\F\GO.NIF</FileName>
+          <AlternateTextures Tag="MO4S">
+            <Textures>
+              <Texture>
+                <Name>GO</Name>
+                <TextureSet ID="00058948">RivetCityScientistF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_rivet_city_scientist.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_rivet_city_scientist.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9E7">RepairClothingScientist</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="000372C0">DoctorLiOutfitList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>150</Value>
+      <MaxCondition>200</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C0185FB">TTWPierceDTPERK</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWPierceDTPERK</EditorID>
+    <Name Tag="FULL">TTWPLSolution</Name>
+    <Description Tag="DESC">Final version of the PL Solution --TJ</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>Yes</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>40</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+          <Condition>
+            <RunOn Tag="PRKC">Weapon</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>IsInList</Type>
+                  <List ID="0C0185F9">TTWPierceDTFLST</List>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">0.5</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>30</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>40</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+          <Condition>
+            <RunOn Tag="PRKC">Weapon</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>IsInList</Type>
+                  <List ID="0C0185F9">TTWPierceDTFLST</List>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">0.600000024</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>30</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+          <Condition>
+            <RunOn Tag="PRKC">Weapon</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>IsInList</Type>
+                  <List ID="0C0185F9">TTWPierceDTFLST</List>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">0.699999988</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>20</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+          <Condition>
+            <RunOn Tag="PRKC">Weapon</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>IsInList</Type>
+                  <List ID="0C0185F9">TTWPierceDTFLST</List>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">0.800000012</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>5</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetLevel</Type>
+                  <UnusedArg1>+YUBDA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+          <Condition>
+            <RunOn Tag="PRKC">Weapon</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>IsInList</Type>
+                  <List ID="0C0185F9">TTWPierceDTFLST</List>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">0.899999976</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

@@ -1,0 +1,75 @@
+ScriptName CherryScript
+
+Short	SwitchClothes
+Short StopFollow
+Float	DayStart
+Float	DebugGDP
+
+short GotWeapon
+
+Begin SayToDone DukovGirlSteal
+	DukovRef.SayTo CherryRef DukovReplySteal
+End
+
+Begin GameMode
+	If SwitchClothes == 0
+		If DialogueDukovsPlace.CherryGone == 2
+			If GetDistance Player > 6000
+				RemoveItem OutfitPrewarNegligee 99
+				AddItem OutfitWasteland03 1
+				AddItemHealthPercent WeapKnife 1 .5
+				Additem CapsChange100 1
+				Set SwitchClothes to 1
+			EndIf
+		EndIf
+	EndIf
+
+
+	If DialogueDukovsPlace.CherryGone == 1
+		If GetDistance HarknessGreetPC < 2000
+			SayTo Player CherryThanks
+			Set DialogueDukovsPlace.CherryGone to 2
+			RewardKarma 50
+		ElseIf StopFollow == 0
+			If DayStart > 0
+				If GameDaysPassed > DayStart + 5
+					Set StopFollow to 1
+					Set DebugGDP to GameDaysPassed
+					Set DialogueDukovsPlace.CherryGone to 0
+					SayTo Player CherryQuit
+				EndIf
+			EndIf
+		EndIf
+	EndIf
+
+	If GotWeapon == 0
+		If IsInCombat == 1														; She pulls a switchblade from a hidden place
+			set GotWeapon to 1
+			AddItemHealthPercent WeapSwitchBlade 1 0.25
+			ResetAI
+		EndIf
+	endif
+End
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && CherryRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

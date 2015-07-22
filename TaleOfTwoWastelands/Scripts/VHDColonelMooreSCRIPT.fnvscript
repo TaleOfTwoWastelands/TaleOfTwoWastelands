@@ -1,0 +1,299 @@
+scn VHDColonelMooreSCRIPT
+
+short bDoOnce
+short bDoOnceCombat
+short bPlayerHitDoOnce
+
+short Button
+short bStartedEndGame
+
+Short bSaveGame;
+Float fSaveTimer;
+Short nSaveEvent;
+
+;------------------------------------------------------------------------------------------------------------------------------------
+begin OnPackageDone VHDMooreSpeechPackage
+
+	if bDoOnce == 0
+		set bDoOnce to 1
+		VHDColonelMooreREF.SayTo VHDColonelMooreREF VHDKimballSpeech02
+		set VHDKimballSpeech.iMooreSpeechStage to 1
+
+		set VHDKimballSpeech.iKimballStage to 2
+		VHDRangerKimballGuard01REF.evp
+		VHDRangerKimballGuard02REF.evp
+	endif
+end
+;------------------------------------------------------------------------------------------------------------------------------------
+
+;------------------------------------------------------------------------------------------------------------------------------------
+begin OnStartCombat Player
+
+	if (GetQR VMQ03a)
+		if bDoOnceCombat == 0
+			;If Kimball hasn't arrived, trigger the vertibird to arrive, then leave, then blow up.
+			if (VHDBearForceOneREF.Active == 0) && (GetStage VMQ03a == 20)
+				set VHDBearForceOneREF.Active to -1
+				set VMQ03a.iKimballFlee to 1
+			elseif (GetStage VMQ03a == 20)
+				set VMQ03a.iKimballFlee to 1
+				VHDKimballREF.evp
+	
+				set VMQ03a.iCrowdPanic to 1
+				VHDColonelMooreREF.ResetAI
+				set bDoOnceCombat to 1
+			else
+				set VMQ03a.bVisitCancelled to 1
+				;if House assigned player to protect Kimball, return and tell him visit cancelled
+				If getobjectivedisplayed VMQHouse6 70 == 1 && getobjectivecompleted VMQHouse6 70 == 0
+					setobjectivedisplayed VMQHouse6 71 1
+				endif
+	
+				;if Yes Man assigned player optional objective to protect Kimball, return and tell him visit cancelled
+				If getobjectivedisplayed VMQYesMan03 75 == 1 && getobjectivecompleted VMQYesMan03 75 == 0
+					setobjectivedisplayed VMQYesMan03 75 0 ;fade out optional objective
+					setobjectivedisplayed VMQYesMan03 80 0 ;fade out el dorado objective to be replaced by 77
+					setobjectivedisplayed VMQYesMan03 77 1
+				endif
+				SetStage VMQ03a 110
+			endif
+		endif
+	endif
+end
+;------------------------------------------------------------------------------------------------------------------------------------
+
+begin SayToDone VHDKimballSpeech02
+
+	if VHDKimballSpeech.MooreSpeechLine < 1 && VHDKimballSpeech.iSpeechInterrupted == 0 && (VMQ03a.iKimballFlee == 0)
+		VHDColonelMooreREF.SayTo VHDColonelMooreREF VHDKimballSpeech02
+	else
+		if VMQ03a.iKimballFlee == 0
+			set VMQ03a.iMooreLocation to 4
+			VHDColonelMooreREF.evp
+			VHDKimballREF.AddScriptPackage VHDKimballSpeechPackage
+			set VHDKimballSpeech.iMooreSpeechStage to 2
+		endif
+	endif
+
+end
+
+;------------------------------------------------------------------------------------------------------------------------------------
+
+begin OnActivate
+
+	If GetActionRef == player
+		if (VMQ03a.iMooreLocation == 2) || (VMQ03a.iMooreLocation == 3) || (VMQ03a.iMooreLocation == 4)
+			return
+		else
+			activate
+		endif
+	else
+		Activate
+	endif
+
+end
+
+;------------------------------------------------------------------------------------------------------------------------------------
+
+BEGIN GameMode
+
+	;This code runs the savegame.
+	If (bSaveGame == 1)
+		If (fSaveTimer > 0)
+			Set fSaveTimer to fSaveTimer - GetSecondsPassed
+		Else
+			If (nSaveEvent == 0)
+	
+				SystemSave;
+				Set fSaveTimer to 1.0;
+				Set nSaveEvent to 1;
+	
+			ElseIf (nSaveEvent == 1)
+	
+				EnablePlayerControls;
+	
+				;Show Message Script
+				ShowMessage VEndGameWarningMsgNCR;
+	
+				Set nSaveEvent to 0;
+				Set bSaveGame to 2;
+			EndIf
+		EndIf
+	EndIf
+
+
+	if ( bStartedEndGame == 0 )
+		set Button to GetButtonPressed
+		if ( Button == 0 )
+			;Reset Dialog Options So Moore Redoes the "Are you ready" stuff.
+
+			; Add objective to talk to Moore so players have some direction after saying no
+			SetObjectiveDisplayed VMQ05 70 1
+
+		elseif ( Button == 1 )
+			set bStartedEndGame to 1
+
+			;Start NCR Stuff
+			; Send player to General Oliver
+			;SetObjectiveDisplayed VMQ05 70 1
+			;set vHDBattleController.iOliverDoor to 1
+			;VHDOliverDoorREF.Unlock
+
+			; Complete Moore's quest
+			if GetObjectiveDisplayed VMQ05 70 == 1
+				SetObjectiveCompleted VMQ05 70 1
+			endif
+
+			SetStage VMQ05 100
+
+			Player.moveto vHDOliverTeleportMarker
+			DisablePlayerControls 1 1 1 1 0 1 1						;AH - Added to stop player from sneaking out of Oliver's range.
+
+			;Move Companions with the Player
+			if (VNPCFollowers.bBooneHired)
+				CraigBooneREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (VNPCFollowers.bCassHired)
+				RoseofSharonCassidyREF.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (VNPCFollowers.bVeronicaHired)
+				VeronicaREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (VNPCFollowers.bLilyHired)
+				LilyREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (VNPCFollowers.RaulHired)
+				RaulREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (VNPCFollowers.ArcadeHired)
+				ArcadeREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (VNPCFollowers.bEDEHired)
+				if EDE1Ref.GetDisabled == 0
+					EDE1REF.MoveTo vHDOliverTPCompanionMarker
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2REF.MoveTo vHDOliverTPCompanionMarker
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3REF.MoveTo vHDOliverTPCompanionMarker
+				endif
+			endif
+			if (VNPCFollowers.RexHired)
+				RexREF.MoveTo vHDOliverTPCompanionMarker
+			endif
+			if (Followers.CharonHired)
+				CharonRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.ButchHired)
+				ButchRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.CloverHired)
+				CloverRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.JerichoHired)
+				JerichoRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.FawkesHired)
+				MQ08FawkesRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.StarPaladinCrossHired)
+				StarPaladinCrossRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.DogmeatHired)
+				DogmeatRef.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			if (Followers.RL3Hired)
+				RL3REF.MoveTo vHDOliverTPCompanionMarker
+			endif	
+			
+			;Autosave Game Here
+			autosave
+
+			VHDGeneralOliverREF.AddToFaction NCRFactionNV 1			; Added factions to stop Oliver from shooting the player in the face - Akil
+			VHDGeneralOliverREF.AddToFaction VNCRSnifferFaction 1
+			; Update global story state since we've finished a faction's
+			; late-game quests
+			if VStoryState < 50
+				Set VStoryState to 50
+			endif
+
+			; Update NCR global state
+			set VStoryNCRState to 3
+			set VFreeformHooverDam.bMooreFinalBattleDialogue to 2
+		endif
+	endif
+
+END
+
+;------------------------------------------------------------------------------------------------------------------------------------
+
+begin OnDeath
+	set VMQNCRFail.iObjTrack to 3		; This sends the NCR questline into its fail state
+	set VMQNCRFail.fTimer to .5
+
+	; Fail NCR Faction quest if not yet completed
+	If GetStage VMQ05 < 100
+		SetStage VMQ05 200
+	endif
+end
+
+;------------------------------------------------------------------------------------------------------------------------------------
+
+begin OnHit Player
+	if (GetQR VMQ03a) || (GetQR VMQ03b)
+		if bPlayerHitDoOnce == 0
+			if VMQ03a.iKimballFlee == 0
+
+				;This checks to see if the quest hasn't even started yet, then updates the quest as the visit was cancelled.
+				if (GetStage VMQ03a < 20)
+					set VMQ03a.bVisitCancelled to 1
+				endif
+	
+				set VMQ03a.iKimballFlee to 1  ;Moved this out of the if statement
+	
+				;check to see if on Stage
+				;If VHDKimballSpeech.iKimballStage != 2
+					VHDKimballREF.evp
+					VHDRangerKimballGuard01REF.evp	
+					VHDRangerKimballGuard02REF.evp		
+				;endif
+		
+				set VMQ03a.iCrowdPanic to 1
+				VHDSpeechNPC01REF.evp
+				VHDSpeechNPC02REF.evp
+				VHDSpeechNPC03REF.evp
+				VHDSpeechNPC04REF.evp
+				VHDSpeechNPC05REF.evp
+				VHDSpeechNPC06REF.evp
+				VHDSpeechNPC07REF.evp
+				VHDSpeechNPC08REF.evp
+				VHDSpeechNPC09REF.evp
+				VHDSpeechNPC10REF.evp
+				VHDSpeechNPC11REF.evp
+				VHDSpeechNPC12REF.evp
+				VHDSpeechNPC13REF.evp
+				VHDSpeechNPC14REF.evp
+				VHDSpeechNPC15REF.evp
+				VHDSpeechNPC16REF.evp
+				VHDSpeechNPC17REF.evp
+				VHDSpeechNPC18REF.evp
+				VHDSpeechNPC19REF.evp
+				VHDSpeechNPC20REF.evp
+		
+				;VHDKimballMP01REF.evp
+				;VHDKimballMP02REF.evp
+				;VHDKimballMP03REF.evp
+				;VHDKimballMP04REF.evp
+				VHDKimballMP01REF.ResetAI
+				VHDKimballMP02REF.ResetAI
+				VHDKimballMP03REF.ResetAI
+				VHDKimballMP04REF.ResetAI
+		
+				VHDKimballK9Trooper01REF.evp
+				VHDColonelMooreREF.evp
+				VHDCaptainGrahamREF.evp
+				VHDPrivateWatsonREF.evp
+			endif
+		endif
+	endif
+
+end ;OnHit Player

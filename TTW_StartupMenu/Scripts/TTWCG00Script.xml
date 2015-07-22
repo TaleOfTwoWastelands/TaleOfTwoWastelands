@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D001515">TTWCG00Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWCG00Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>8</ReferenceCount>
+        <CompiledSize>600</CompiledSize>
+        <VariableCount>8</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAEoCAAAWAAgAAAAEACBzAQAXAAIACwAWAA0ABAAJACBzCAAgMCA9PRUABwBzAQACACAxFQAHAHMDAAIAIDEVAAcAZgcAAgAgNVkQCwABAHIBAAAAAAAAABgADQAEAAkAIHMIACAxID09FQAHAHMBAAIAIDIVAAcAcwMAAgAgMRUABwBmBwACACA1WRALAAEAcgIAAAAAAAAAGQAAABkAAAAWAAgAGAAEACBzAwAVAAsAcwIABgAgWB8QAAAWAA4AFQAKACBzAgAgMSB+ID4VAAcAcwMAAgAgMBYACAASAAQAIHMBABYADQAJAAkAIHMCACAwID09FQAHAHMEAAIAIDEVAAcARwMAAgAgMBUABwBHBAACACAxORAKAAIAcgUAbgAAAAA5EAoAAgByBQBuAwAAADkQCgACAHIGAG5VAAAAcRAFAAEAcgYANxAFAAEAcgYAORAKAAIAcgcAbgAAAAAYAA0ABgAJACBzAgAgMSA9PRUABwBzBAACACAyFQAHAEcDAAIAIDEVAAcARwQAAgAgMDkQCgACAHIFAG4BAAAAORAKAAIAcgUAbgIAAAA5EAoAAgByBgBuAAAAABkAAAAZAAAAGQAAABkAAAAWAAwAAQAIACBmBwAgMCA+FQARAGYHAAwAIGYHACBYDBAAACAtFwACAAUAFgANAAMACQAgcwQAIDAgPT0VAAcAcwgAAgAgMRUABwBzAQACACAwFQAHAHMDAAIAIDAZAAAAGQAAABYACAABAAQAIHMEADcQBQABAHIIABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWCG00Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iMessageShown</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iMessageToShow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iButtonPressed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iAwaitingInput</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iGameChoice</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iDoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0D001513">TTWNewGameStartMSG</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D002F3F">TTWNewGameStartTryAgainMSG</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAB">TTWFunctions</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001F388">CG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00102037">VCG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D001514">TTWCG00</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

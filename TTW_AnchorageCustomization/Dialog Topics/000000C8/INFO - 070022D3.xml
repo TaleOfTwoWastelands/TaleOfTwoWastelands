@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="070022D3">INFO - 070022D3</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>SayOnce</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="070009C0">DLC02OA3</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0700222C">INFO - 0700222C</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>90</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">So... you're in charge of Patterson's Suicide Squad, huh?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="070009C3">DLC02LtMorgan</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="070009C0">DLC02OA3</Quest>
+          <VariableIndex>4</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="070022C8">DLC02OA3MorganStart01</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="070022C7">DLC02OA3MorganStart02</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="070022C6">DLC02OA3MorganStart03</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>109</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAAIQCgACAHIDAG4FAAAAHAACAAIQCAACAHIEAEcFABwAAQACEAoAAgByBgBuAgAAAKIRDwADAHIHAG4PAAAAbgEAAACjEQ8AAwByBwBuFAAAAG4BAAAAoxEPAAMAcgcAbh4AAABuAQAAAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">Player.AddItem DLC02RecruitmentMarker 5
+TTWRequisitionDummyRef.AddItem TTWDLC02ReqChits TTWDLC02Chits
+Player.AddItem DLC02Charges 2
+SetObjectiveCompleted DLC02OA3 15 1
+SetObjectiveDisplayed DLC02OA3 20 1
+SetObjectiveDisplayed DLC02OA3 30 1</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D004795">TTWRequisitionDummyRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="070029C8">DLC02RecruitmentMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0017C7">TTWDLC02ReqChits</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D002790">TTWDLC02Chits</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="070015F3">DLC02Charges</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="070009C0">DLC02OA3</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

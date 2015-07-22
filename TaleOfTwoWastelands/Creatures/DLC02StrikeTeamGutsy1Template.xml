@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="07002D01">DLC02StrikeTeamGutsy1Template</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02StrikeTeamGutsy1Template</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-26</X>
+        <Y>-26</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>26</X>
+        <Y>26</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Strike Team Mister Gutsy</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\MisterGutsy\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88C">MrGutsyDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>dlcanchsnowgutsy.nif</Entry>
+      <Entry>dlcanchsnowgutsybrain.nif</Entry>
+      <Entry>dlcanchsnowgutsyfrontclaw.nif</Entry>
+      <Entry>fxmrhandyjetaddon.nif</Entry>
+      <Entry>gutsyflametank(army).nif</Entry>
+      <Entry>gutsyflamethrower(army).nif</Entry>
+      <Entry>gutsyplasmagun(army).nif</Entry>
+      <Entry>gutsyplasmapack(army).nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Flies, Walks, AllowPCDialogue</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>3</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="07002D09">DLC02StrikeTeamFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="07003487">DLC02FFSaluteHelloFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="070043F2">DLC02CombatAmericanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="07005002">DLC02StrikeTeamFaction3Points</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0700B559">DLC02RezInFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0700CB0B">DLC02RobotFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95F">DeathItemMrGutsy75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FDD">RobotMisterGutsy02</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="07005886">DLC02StrikeTeamMemberScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029372">AmmoFlamerFuel75</Item>
+          <Count>32</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029377">AmmoSmallEnergyCell75</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029642">ClipFlamer60</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003954F">MisterGutsyPlasma1HP</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00039550">MisterGutsyFlamer2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="07007552">DLC02StrikeTeamGutsyMinesPOS1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07007551">DLC02StrikeTeamGutsyMinesPOS5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07007550">DLC02StrikeTeamGutsyMinesPOS10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700754F">DLC02StrikeTeamGutsyMinesPOS15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700754E">DLC02StrikeTeamGutsyMinesPOS20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700754D">DLC02StrikeTeamGutsyMinesPOS25</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="070071EC">DLC02StrikeTeamGutsyLPostPOS1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="070071ED">DLC02StrikeTeamGutsyLPostPOS5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700822E">DLC02StrikeTeamGutsyIceCampPOS1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700822F">DLC02StrikeTeamGutsyIceCampPOS5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008230">DLC02StrikeTeamGutsyIceCampPOS10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008231">DLC02StrikeTeamGutsyIceCampPOS15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008232">DLC02StrikeTeamGutsyIceCampPOS20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008233">DLC02StrikeTeamGutsyIceCampPOS25</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008285">DLC02StrikeTeamGutsyDepotPOS1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008286">DLC02StrikeTeamGutsyDepotPOS5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008287">DLC02StrikeTeamGutsyDepotPOS10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008288">DLC02StrikeTeamGutsyDepotPOS15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07008289">DLC02StrikeTeamGutsyDepotPOS20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700828A">DLC02StrikeTeamGutsyDepotPOS25</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700A71D">DLC02StrikeTeamGutsyTrenchesPOS1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700A71E">DLC02StrikeTeamGutsyTrenchesPOS5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700A71F">DLC02StrikeTeamGutsyTrenchesPOS10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700A720">DLC02StrikeTeamGutsyTrenchesPOS15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700A721">DLC02StrikeTeamGutsyTrenchesPOS20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07007518">DLC02StrikeTeamRallyPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07005471">DLC02StrikeTeamRallyHQ</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700CCD8">DLC02StrikeTeamRallyPointMinesWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700546E">DLC02StrikeTeamRallyPointMines</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700CCD9">DLC02StrikeTeamRallyPointListeningWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07005470">DLC02StrikeTeamRallyPointListening</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700CCDA">DLC02StrikeTeamRallyPointCampWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700546D">DLC02StrikeTeamRallyPointCamp</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700CCDB">DLC02StrikeTeamRallyPointChimeraWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700546F">DLC02StrikeTeamRallyPointChimera</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0700CC6E">DLC02StrikeTeamStandAtCurrentLocation</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>1hpaim.kf</Entry>
+      <Entry>1hpaimdown.kf</Entry>
+      <Entry>1hpaimup.kf</Entry>
+      <Entry>1hpattackright.kf</Entry>
+      <Entry>1hpequip.kf</Entry>
+      <Entry>1hpholster.kf</Entry>
+      <Entry>1hpunequip.kf</Entry>
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlattackspin.kf</Entry>
+      <Entry>2hlattackspindown.kf</Entry>
+      <Entry>2hlattackspinup.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlholster.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>30</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>50</Health>
+      <Damage>20</Damage>
+      <Strength>5</Strength>
+      <Perception>6</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A377">CSMisterGutsy</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00036C17">MRGutsyBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">40</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0004D036">AudioTemplateRobotMrHandy</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0005FD3F">PipeImpactSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

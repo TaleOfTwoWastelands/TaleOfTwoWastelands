@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>0</Flags>
+  <FormID ID="0C018096">TTWBrainFreeze</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWBrainFreeze</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-4</X>
+        <Y>-4</Y>
+        <Z>-11</Z>
+      </Point1>
+      <Point2>
+        <X>4</X>
+        <Y>4</Y>
+        <Z>16</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brain Freeze</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Junk\SodaBottleClosed01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAScwP1nDwxMBJzCPWcPGtuFXTeQ2aF7t8UcwRCX/luXxRzCUJf+WtuFXTeQ2aF898UcwRCX/lzXxRzCUJf+WtuFXTeQ2aF5d8Nc6saOn9lXw1zsBo6f3N0EHSz4clt7d8OczhwKDxtXw5zPXAoPGtuFXTeQ2aF</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_cola.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Items_small\glow_items_cola.dds</Small>
+    </Icon>
+    <PickUpSound Tag="YNAM">
+      <Reference ID="000864D3">ITMBottleUp</Reference>
+    </PickUpSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="000864D4">ITMBottleDown</Reference>
+    </DropSound>
+    <EquipmentType Tag="ETYP">Food</EquipmentType>
+    <Weight Tag="DATA">1</Weight>
+    <Data Tag="ENIT">
+      <Value>20</Value>
+      <Flags>NoAutoCalc</Flags>
+      <WithdrawalEffect ID="00000000">NullReference</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="0007494B">NPCHumanDrinkingNukaCola</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0000014E">RestoreHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>4</Magnitude>
+          <Area>0</Area>
+          <Duration>30</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00020516">DamageRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>6</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00162BCB">DamageDehydrationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>20</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Dehydration</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00162C8E">RestoreSleepDeprivationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>30</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>SleepDeprivation</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00032DE1">ReduceIntelligence</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>120</Duration>
+          <Type>Self</Type>
+          <ActorValue>Intelligence</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

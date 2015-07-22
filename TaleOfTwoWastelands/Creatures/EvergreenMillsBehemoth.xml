@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="00028FED">EvergreenMillsBehemoth</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">EvergreenMillsBehemoth</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-62</X>
+        <Y>-58</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>62</X>
+        <Y>58</Y>
+        <Z>224</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Super Mutant Behemoth</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\SMBehemoth\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0C004B8C">BehemothDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>smbehemoth.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAvo9Apz9PJPIGh0CnP58k8gaHQddBRYeN7u3wxzaGhUMG5fDHNtaFQwaHQddBRYeN7z3wxzaGhUMHNfDHNtaFQwaHQddBRYeN6xsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHHu6RJtV7SAdW5pEm1ctIB1aHQddBRYeN7u3xRtnKXpJ25fFG2hpeknaHQddBRYeN7z3xRtnKXpJ3NfFG2hpeknaHQddBRYeN7y7w9zvlFeJHJvD3PDUV4kaHQddBRYeN7u3xFzAQGHum5fEXMGAYe6aHQddBRYeN4=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>WeaponAndShield, Walks, NoLowLevelProcessing, CannotOpenDoors</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>15</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseActorEffectList, UseBaseData, UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0007D408">EvergreenMillsBehemothFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00022429">CreatureSupMutBehemoth</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0001CF95">CrSuperMutantBehemoth</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="000A302F">BehemothAchievementSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000378A0">Caps75Leveled</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0601B335">EvergreenMillsBehemothSandbox</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601B334">EvergreenMillsBehemothTravel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06054F2D">EvergreenMillsBehemothDoorOpenTravel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001B33D">EvergreenMillsBehemothStayAtCurrentLocation</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>SuperMutant</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>2000</Health>
+      <Damage>33</Damage>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="00026544">CSSupermutantBehemoth</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00021379">BehemothrBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">500</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="00024103">AudioTemplateSuperMutantBehemoth</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007E618">BehemothFistDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003C8FD">BehemothWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0800A740">DLC01DowntownAmbushControlSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01DowntownAmbushControlSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>30</ReferenceCount>
+        <CompiledSize>1428</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAIYFAAAWAA0AAgAJACBzAQAgMSA9PRwAAQByEAcAAQBu/wAAABUACQBzAQAEACAxIH4ZAAAAFgAgAAUAHAAgcwMAIDEgPT0gWCAQBQABAHIHACAxID09ICYmYRACAAAAORAKAAIAcgsAbscAAAAcAAIAlxAFAAEAcgwAFQAKAHINAHMOAAIAIDEVAAkAcwMABAAgMSB+GQAAABYADQA/AAkAIHMFACAxID09FQARAGYHAAwAIGYHACBYDBAAACAtFgANAAgACQAgcwgAIDEgPT0VABEAZgkADAAgZgkAIFgMEAAAIC0WAA0ABQAJACBmCQAgMCA8PRYAEAACAAwAIFhNEAAAIDMzIDw9RBECAAAA+xEdAAMAegAAAAAAAOA/egAAAAAAAOA/egAAAAAAAOA/GQAAABUACQBmCQAEACAuNTAZAAAAGQAAABYADQAKAAkAIHMGACAwID09HAADAF4QAAAcAAQAXhAAABwABQBeEAAAHAAGAF4QAAAcAAIAlxAFAAEAcg4AFQAIAGYHAAMAIDMwFQAJAGYJAAQAIC4yNRUABwBzCAACACAxkREFAAEAcg8AFQAHAHMGAAIAIDEZAAAAFgAaAAIAFgAgcwYAIDEgPT0gZgcAIDI4IDw9ICYmHAAHAJcQBQABAHIQABUABwBzBgACACAyGQAAABYAGgADABYAIHMGACAyID09IGYHACAyNCA8PSAmJhwAAgCXEAUAAQByEQAVAAkAcwgABAAgMSB+FQAHAHMGAAIAIDMZAAAAFgAaAAYAFgAgcwYAIDMgPT0gZgcAIDE0IDw9ICYmkREFAAEAchIAHAAHAJ4QBQABAHITABwACACeEAUAAQByFAAcAAgAlxAFAAEAchUAFQAHAHMEAAIAIDEVAAcAcwYAAgAgNBkAAAAWABoAAgAWACBzBgAgNCA9PSBmBwAgMTMgPD0gJiYcAAgANBASAAQAcgcAchYAbgEAAABuAQAAABUABwBzBgACACA1GQAAABYAGQACABUAIHMGACA1ID09IGYHACA4IDw9ICYmHAAIADQQEgAEAHIHAHIWAG4BAAAAbgEAAAAVAAcAcwYAAgAgNhkAAAAWABkAAgAVACBzBgAgNiA9PSBmBwAgMyA8PSAmJhwACAA0EBIABAByBwByFgBuAQAAAG4BAAAAFQAHAHMGAAIAIDcZAAAAFgAZAAIAFQAgcwYAIDcgPT0gZgcAIDAgPD0gJiYcAAcAmBAAABUABwBzBgACACA4GQAAABYAGQAFABUAIHMGACA4ID09IGYHACAwIDw9ICYmYBACAAAAHAAIAJgQAAAcAAgAlxAFAAEAchcAFQAJAHMGAAQAIDEgfhUACQBzBQAEACAxIH4ZAAAAGQAAABYADQATAAkAIHMEACAxID09DREKAAIAchgAbgAAAAANEQoAAgByGQBuAAAAABwABwBSEA8AAwByGABuAQAAAG4BAAAAHAAHAFIQDwADAHIZAG4BAAAAbgEAAAAcAAcAUhAPAAMAchoAbgEAAABuAQAAABwABwCtEAUAAQByCQAcAAcAAhAPAAMAchsAbgEAAABuAQAAABwABwDuEA8AAwByGgBuAAAAAG4BAAAAHAAJAEkSFAAEAHIHAG4BAAAAbgEAAABuKAAAABwACQBJEhQABAByBwBuAQAAAG4BAAAAbikAAAAWABcAAQATACByBwBYDhAEAAEAKgAgNTAgPj0cAAcASRIXAAUAcgkAbgEAAABuAAAAAG4oAAAAchwAFwACAAEAHAAHAEkSFwAFAHIJAG4BAAAAbgAAAABuKAAAAHIdABkAAAAcAAIAmBAAABwAAgCeEAUAAQByHgAcAAoAIhACAAAAFQAJAHMEAAQAIDEgfhkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC01DowntownAmbushControlSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushCheck</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushSetup</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushGo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushCleanUp</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushBlackout</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Tick</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushBeating</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">HitTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0800150C">PittWorldtoMarketSquareREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="080045FF">DLC01ReddupREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7E8">DLC01RaiderDowntownAmbush01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7E9">DLC01RaiderDowntownAmbush02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800B608">DLC01RaiderDowntownAmbush03REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800B606">DLC01RaiderDowntownAmbush04REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="08003099">DLC01MideaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="08002E49">DLC01PlayerItemContainerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A743">DLC01DowntownAmbushEnableMARKER</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800108C">DLC01Quest01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7E5">DLC01DowntownAmbushReddupGreetPlayer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800108B">DLC01Quest02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00003939">DefaultStayAtCurrentLocation</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00092BD0">DLC01AmbushFadeToBlackISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060B78C9">MQ08PlayerFallsDownPackage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7F2">DLC01DowntownAmbushReddupTalkRaider</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000164">ImageSpaceConcussion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7F0">DLC01DowntownAmbushPlayerMoveMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7ED">DLC01DowntownAmbushMideaMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7EE">DLC01MideaDowntownAmbushHelpPlayer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7D2">DLC01DowntownAmbushMideaHelpPlayer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7EF">DLC01MideaDowntownAmbushGreetPlayer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A829">DLC01ConcealedPistol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A828">DLC01ConcealedSwitchblade</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800087A">DLC01SlaveOutfit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800B7EF">DLC01CondSlaveOutfit01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129876">NVImprovedHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000F0F05">NVHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="080054DF">DLC01HavenMapMarkerREF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

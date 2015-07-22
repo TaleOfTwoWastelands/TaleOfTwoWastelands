@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="AMMO">
+  <Flags>0</Flags>
+  <FormID ID="06029384">AmmoRailwaySpikes</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AmmoRailwaySpikes</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-6</X>
+        <Y>-1</Y>
+        <Z>-4</Z>
+      </Point1>
+      <Point2>
+        <X>4</X>
+        <Y>4</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Railway Spikes</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\2HandRifle\RailwaySpikesGO.NIF</FileName>
+      <TextureFileHash Tag="MODT">5ewMcokNcQhlbAxyjg1xCGVsG3SjDAM07t8OcoKG3y5uXw5yh4bfLmVsG3SjDAM0898OcoKG3y5zXw5yh4bfLmVsG3SjDAM0</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_railway_spikes.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Items_small\glow_items_railway_spikes.dds</Small>
+    </Icon>
+    <PickUpSound Tag="YNAM">
+      <Reference ID="00088B16">ITMAmmunitionUp</Reference>
+    </PickUpSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="00088B17">ITMAmmunitionDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Speed>1</Speed>
+      <Flags>0</Flags>
+      <Value>2</Value>
+      <ClipRounds>20</ClipRounds>
+    </Data>
+    <ExtraData Tag="DAT2">
+      <ProjectilesPerShot>0</ProjectilesPerShot>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <Weight>0.100000001</Weight>
+      <ConsumedAmmo ID="00000000">NullReference</ConsumedAmmo>
+      <ConsumedPercentage>0</ConsumedPercentage>
+    </ExtraData>
+    <ShortName Tag="ONAM">Spikes</ShortName>
+  </Subrecords>
+</Record>

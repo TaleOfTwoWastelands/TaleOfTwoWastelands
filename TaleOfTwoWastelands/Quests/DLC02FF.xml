@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="070034DA">DLC02FF</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02FF</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="07004A5B">DLC02FFQuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">DLC02FF</Name>
+    <Data Tag="DATA">
+      <Flags>29</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">4</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Handles award player with "Intel"</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>47</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQANAEcBAAgAIEcBACAxICtZEBEAAQByAgACAEcBAEcDAAAAAAB1EgUAAQByBAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">set DLC02IntelFound to DLC02IntelFound + 1
+showmessage DLC02FF004IntelMessage DLC02IntelFound DLC02IntelTotal
+IncrementScriptedChallenge TTWDLC02ChallengeCovert</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0700B4D8">DLC02IntelFound</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0700B4DC">DLC02FF004IntelMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0700B4D9">DLC02IntelTotal</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C018584">TTWDLC02ChallengeCovert</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="07004DD4">DLC02FF006SniperRef</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>51</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMGAAIAIDEcAAEA+hEAABUACgByAgBzBwACACAxFQALAHICAGYGAAMAIDEw</CompiledScript>
+              <ScriptSource Tag="SCTX">set DLC02FF006SniperRef.iShouldShoot to 1
+DLC02FF006SniperRef.resetAI
+set DLC02FF006SoldierHeadExplodeRef.iShouldDie to 1
+set DLC02FF006SoldierHeadExplodeRef.killMeTimer to 10
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="07004DD4">DLC02FF006SniperRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="07004A50">DLC02FF006SoldierHeadExplodeRef</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">start doctor healing</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>80</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">3BEOAAIAcgEAevyp8dJNYlA/FQAKAHIBAHMFAAIAIDFhEAIAAAA5EAoAAgByAgBuCgAAADkQCgACAHICAG4UAAAAORAKAAIAcgIAbh4AAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetQuestDelay DLC02FF .001
+Set DLC02FF.FF007DoctorHeal to 1
+DisablePlayerControls
+setstage Doctors 10
+setstage Doctors 20
+setstage Doctors 30</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="070034DA">DLC02FF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000963D4">Doctors</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

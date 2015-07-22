@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="001735E2">PreordArmorTribalRaiding</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">PreordArmorTribalRaiding</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tribal Raiding Armor</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">NVDLCPre2\Armor\PreordArmorTribalRaiding\OutfitM.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">NVDLCPre2\Armor\PreordArmorTribalRaiding\OutfitF.NIF</FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">NVDLCPre2\Armor\PreordArmorTribalRaiding\Outfit_go.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">NVDLCPre2\interface\icons\pipboyimages\apparel\apperal_raider_4.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_raider_4.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075207">RepairRaiderArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="00079ED3">ArmorRaider04List</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>180</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>15</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>4</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

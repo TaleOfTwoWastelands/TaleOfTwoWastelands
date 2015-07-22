@@ -1,0 +1,13 @@
+ScriptName VPreorderMercenarySCRIPT
+
+BEGIN GameMode
+	if (VDLCPackQuest.bMercenaryItemsGiven == 0) && ((GetQuestCompleted VCG01 == 1) || (GetQuestCompleted CG04 == 1))
+		ShowMessage PreorderMessageInventoryMercenary;
+		Player.AddItem PreordArmorMetal 1;
+		Player.AddItem WeapPreordGrenadeRifle 1;
+		Player.AddItem Ammo40mmGrenade 20;
+		Player.AddItem NVDoctorBag 3;
+		Player.AddItem NVSuperStimpak 3;
+		set VDLCPackQuest.bMercenaryItemsGiven to 1;
+	endif
+END

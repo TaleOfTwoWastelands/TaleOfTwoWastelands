@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06083C5C">MS09VancesOutfit</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS09VancesOutfit</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>16</X>
+        <Y>21</Y>
+        <Z>13</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Vance's Longcoat Outfit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="000BE4F3">MS09EnchClothingVancesCoat</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>Heavy</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\LucasSimms\M\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CnNtGXS4I7Me7t8JbwDNHjVuXwlvBc0eNXNtGXS4I7Me898JbwDNHjVzXwlvBc0eNXNtGXS4I7MesbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84Hg6/MQdYhA96JrcxB1jUD3omVsGHTW84Hg</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\LucasSimms\F\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+5vQHbwcx/gpmdAdvDDH+CnNtGXS4I7Me7t8Jb/nMHjVuXwlv/sweNXNtGXS4I7Me898Jb/nMHjVzXwlv/sweNXNtGXS4I7MesbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\LucasSimms\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CnNtGXS4I7Me7t8JbwDNHjVuXwlvBc0eNXNtGXS4I7Me898JbwDNHjVzXwlvBc0eNXNtGXS4I7Me</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_cowboy_duster_outfit.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages\Apparel\appearal_cowboy_duster_outfit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075211">RepairLeatherArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0008A3CC">OutfitRegulatorList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>100</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>4</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>4</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

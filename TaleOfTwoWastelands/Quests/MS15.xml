@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA2">MS15</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS15</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601D6BD">MS15QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Stealing Independence</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhQAAABuAQAAABUACgByAQBzGgACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS15 20 1
+set MS15.IKnowAbe to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Defend the Rotunda</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>34</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbh4AAABuAQAAABUACwByAQBmBQADACAxMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS15 30 1
+set MS15.RotundaTimer to 10</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS15 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMCAAIAIDY=</CompiledScript>
+              <ScriptSource Tag="SCTX">Set MS15.SydneyStage to 6</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>83</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHwRBQABAHICABUACgByAwBzAgACACA33BEOAAIAcgMAegAAAAAAAAAAoxEPAAMAcgMAbjwAAABuAQAAAKIRDwADAHIDAG4UAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">Player.AddNote MS15ComputerSafePassword
+Set MS15.SydneyStage to 7
+SetQuestDelay MS15 0
+SetObjectiveDisplayed MS15 60 1
+SetObjectiveCompleted MS15 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605B5A7">MS15ComputerSafePassword</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>116</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAACtEQUAAQByAwA3EAUAAQByAwAVABAAcgQAZi8ACAAgRwUAIDEgKxUACgByBABzNQACACAxHAABACEQAgAAADYQBQABAHIGABYAEAABAAwAIHIDAHMBACAxID09HAACACEQAgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+CompleteAllObjectives MS15
+StopQuest MS15
+Set RadioGalaxyNewsQuest.MS15Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+MS15DecEndRef.Enable
+StartQuest MS15Fin
+;addachievement 27
+
+if MS15.SydneyJoin == 1
+     VendorContainerSydneyRef.enable
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06055EAC">MS15DecEndRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B422D">VendorContainerSydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA2">MS15</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022581">MS15Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Retrieve the Declaration of Independence from the National Archives.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06020122">MS15ButtonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA2">MS15</Quest>
+                  <VariableIndex>1</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605B342">MS15DeclarationWallSafeRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA2">MS15</Quest>
+                  <VariableIndex>25</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Defend the Rotunda.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Return to Abraham Washington in Rivet City.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E769">AbrahamWashingtonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">(Optional) Bring Button Gwinnett the ink.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06073EB9">MS15InkBoxRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="00003AA2">MS15Ink</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06020122">MS15ButtonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="00003AA2">MS15Ink</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

@@ -1,0 +1,55 @@
+scn DLC01FFCollectionSCRIPT
+;
+;
+
+;===============================================================
+;These variables are handled in stages DLC01FFCollection 11, 12 and 13. 
+;Stage 11 is called during Everett's greeting, the other two stages are called
+;		in DLC01FFCollectionIHaveIngots topic.
+
+
+int ingotsTurnedIn 	;how many ingots the player has turned in
+int ingotPotential		;how many ingots the player has + ingotsTurnedIn
+int currentIngots		;How many ingots the player has currently
+
+;Revied collection variables:
+short reward1			;Has the player collected the first reward? 
+short reward2			;Has the player collected the second reward? 
+short reward3			;Has the player collected the third reward? 
+short reward4			;Has the player collected the fourth reward? 
+short reward5			;Has the player collected the fifth reward? 
+short reward6			;Has the player collected the sixth reward? 
+short reward7			;Has the player collected the seventh reward? 
+short reward8			;Has the player collected the eighth reward? 
+short reward9			;Has the player collected the ninth reward? 
+short reward10			;Has the player collected the tenth and final reward? 
+
+short AchievementGo			;Has the player earned enough for the achievement?
+short AchievementAdded	;Has the achievement been added yet?
+
+;Old collection variables - left so as not to accidentally break anything
+int rewardsLeft			;how many rewards the player can get.
+int set1					;number of ingots the player must turn in to unlock set 1
+int set2					;number of ingots the player must turn in to unlock set 2
+int set3					;number of ingots the player must turn in to unlock set 3
+int set4					;number of ingots the player must turn in to unlock set 4
+;If the player has already taken the reward, set to 1.
+int Reward01Taken
+int Reward02Taken
+int Reward03Taken
+int Reward04Taken
+;================================================================
+
+int EverettWalks
+int EvTopicsLeft
+int EvConvStage
+int EvIsTalking
+
+BEGIN Gamemode
+
+	if AchievementGo == 1 && AchievementAdded == 0
+		;AddAchievement 58
+		set AchievementAdded to 1
+	endif
+
+END

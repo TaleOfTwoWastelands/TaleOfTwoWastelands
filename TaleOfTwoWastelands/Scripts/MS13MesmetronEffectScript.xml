@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="060448DE">MS13MesmetronEffectScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS13MesmetronEffectScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>8</ReferenceCount>
+        <CompiledSize>799</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Effect</Type>
+        <Flags>0</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgARABEDAAAWADMABAAvACBY3xAFAAEAcgEAIDEgPT0gWN8QBQABAHICACAxID09IHx8IFoDACAxID09IHx8FgAQAAEADAAgcgQAcyIAIDEgPT25ESgAAQAiAEkndmUgYWxyZWFkeSBiZWVuIGhpdCBieSBtZXNtZXRyb24AABkAAAAeAAAAGQAAABYAFAACABAAIFi2EAUAAQByBQAgMSA9PdkRBQABAHIDAB4AAAAZAAAANxEJAAIAEgBuAQAAABUACwBzBgAGACBYTRAAABYAEAABAAwAIHIEAHMiACAxID09uREhAAEAGABNZXNtZXRyb24gZGllIHJvbGw6ICUuMGYBAHMGABkAAAAWABQACgAQACBYRxAFAAEAcgYAIDEgPT0WABAAAQAMACByBABzIgAgMSA9PbkREAABAAoAQWx3YXlzIE1legAAGQAAABYAEAAEAAwAIHIEAHMZACAwID09FgAQAAEADAAgcgQAcyIAIDEgPT25ESkAAQAjAENhc3RJbW1lZGlhdGVPblNlbGYgTVMxM01lenplZFNwZWxsAAAZAAAA2REFAAEAcgIAFwACAAAAGQAAABcAAgAWABYAEAABAAwAIHIEAHMiACAxID09uREUAAEADgBSYW5kb20gZWZmZWN0cwAAGQAAABUACABzBwADACA4MBYAUgABAE4AIFhHEAUAAQByBwAgMSA9PSBYRxAFAAEAcggAIDAgPT0gJiYgcgQAcxkAIDAgPT0gJiYgWGIRAAAgMCA9PSAmJiBYbREAACAwID09ICYmFQAIAHMIAAMAIDUwFwACAAEAFQAHAHMIAAIAIDAZAAAAFgAOAAQACgAgcwYAIHMIACA8FgAQAAEADAAgcgQAcyIAIDEgPT25EQwAAQAGAE1lenplZAAAGQAAANkRBQABAHICABgADgAEAAoAIHMGACBzBwAgPBYAEAABAAwAIHIEAHMiACAxID09uREOAAEACABGcmVuemllZAAAGQAAANkRBQABAHIBABcAAgABANkRBQABAHIDABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MS13MesmetronEffectScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">dieRoll</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">frenzyChance</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">mezzChance</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="000448E0">MS13FrenzySpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000448E2">MS13MezzedSpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001E004">MS13HeadExplodeSpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603D204">MS13Slaves</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D1FE">MS13Collar</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D1FC">MS13AlwaysMez</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000448D1">MS13CanMez</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000448D2">MS13CantMez</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

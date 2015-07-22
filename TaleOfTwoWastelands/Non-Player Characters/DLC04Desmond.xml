@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0A0035B4">DLC04Desmond</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04Desmond</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Desmond</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential, AutoCalcStats, PCLevelMult, NotPushable</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1300</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>30</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001B2A4">PlayerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0A006645">DLC04DesmondFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0A005A3B">DLC04UniqueDesmond</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00003B3E">Ghoul</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0A0035DA">DLC04DesmondSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000609DC">CondPrewarBusinesswearDirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.699999988</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000E86F2">Ammo20Ga</Item>
+          <Count>60</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06004327">WeapShotgunCombat</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.800000012</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A00832E">DLC04DesmondGlasses</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.899999976</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0A010F3F">DLC04MQPQDesmondGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A010F3E">DLC04MQPQDesmondSandBoxBASE</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00E1E2">DLC04MQ05aDesmondRunToBrainDoorST50</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0088FE">DLC04MQ05bDesmondTalkToBrainST100</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00A412">DLC04MQ05bDesmondRunToBrainST100</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0088FF">DLC04MQ05bDesmondWaitForPlayerST50</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00832F">DLC04MQ05aDesmondTalkToBrainST50</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A008327">DLC04MQ05aDesmondRunToBrainST50</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A006C01">DLC04MQ05aDesmondWaitForPlayerST15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A006C00">DLC04MQ05aDesmondWaitForPlayerST10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A005A25">DLC04MQ04DesmondWaitForPlayerst10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A006649">DLC04MQ04DesmondWaitForPlayerBASE</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A010762">DLC04ManDesmondWaitForPlayer01</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0102C0">DLC04ManDesmondTravelAfterFinalWave</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0102BF">DLC04ManDesmondGuardForFinalWave</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00D016">DLC04ManDesmondReadyForFinalWave</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00D015">DLC04MansionDesmondStage02SayTo04</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00D017">DLC04MansionDesmondStage02SayTo03</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00B7F7">DLC04MansionDesmondStage02SayTo02</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A003636">DLC04MansionDesmondStage02SayTo01</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00B7FD">DLC04MansionDesmondReturnsToCameras03</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00363A">DLC04MansionDesmondReturnsToCameras02</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0035CE">DLC04MansionDesmondReturnsToCameras01</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0035D2">DLC04MansionDesmondSaytoGreet04</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0035CC">DLC04MansionDesmondSaytoGreet03</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0035CB">DLC04MansionDesmondSaytoGreet02</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A0035C8">DLC04MansionDesmondSaytoGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C39">DLC04LabDesmondRunToPOS05</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C3A">DLC04LabDesmondRunToPOS10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C3B">DLC04LabDesmondRunToPOS12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C3C">DLC04LabDesmondRunToPOS15</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C3D">DLC04LabDesmondRunToPOS20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011C3E">DLC04LabDesmondRunToPOS25</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001873D">WastelandAdventurer</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>300</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>47</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>47</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>47</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0009F920">BeardMustacheFull</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005DC7A">HairWavyGhoul</Reference>
+      </Type>
+      <Length Tag="LNAM">0.810000002</Length>
+      <Color Tag="HCLR">
+        <Red>21</Red>
+        <Green>0</Green>
+        <Blue>0</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00035E4F">EyeGhoul</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">QDDMPRD91rwwelk+eGWjPe1zqb/cV5W+95O7vyhpkr6ATAG/RJ2ZPmyY4r86S4O/DWP6PxCCC71zmsU/PKCGv0KILcBKHUg/dE/Wvjg/4L/UEii/yEFcvhzwbj+cv2w+Uoh0P+G3gEBWoY4/BtwgwCYoBEC8j7G+q7BfvwAIlboisAjA1ATbvziXqL+gNRc/PpYFwAitoj4ekWA/IMeWPQxJl8Br91hAMZIlwDjlMUDsZtU/YkEewORE68AXF03Arf2qP9gkjMA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">jnhSv0LXxb4Y2yu+u379PrUIiT/E4MA9XDi/Ps4aFkAOC8K/jdWEvzkU+D/YBoU/fA5Kv+5lI7yXLO8/T8ONvhAIcj9M/n6/sHWsPwuaAECioZZAnkEYvldF974r0YE/0DfBP8D1+r8sp/I/ZkoPv0PPeUAsicK98tM3Pzk1Bb/TtFnA1nsGwL8/cD/E7RDAS3EKP72jIMAk3jm/NV3pv6kKX8B80sc/+60YwGBGRL9sh1Y/ObeLv/5ksb98qhq/R7Mhv8BTFbw=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

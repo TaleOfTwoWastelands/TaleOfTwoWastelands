@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C010FBA">TTWWildWastelandScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWWildWastelandScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>19</ReferenceCount>
+        <CompiledSize>686</CompiledSize>
+        <VariableCount>8</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAKACAAAWABcAAQATACByAQBYwREFAAEAcgIAIDAgPT0eAAAAFwACACUAFgANAAIACQAgcwUAIDEgIT0VAA0AZgEACAAgRwMAIDEgLRUABwBzBQACACAxGQAAABYACAAFAAQAIEcEABYAFAABABAAIFjPFAoAAgBHBQBuAgAAABUABwBzAgACACAxFwACAAEAFQAHAHMCAAIAIDAZAAAAFwACAAcAFgASAAUADgAgcgEAWCwRAAAgMCA9PRYAzQABAMkAIHIBAFg2EQUAAQByBgAgcgEAWDYRBQABAHIHACB8fCByAQBYNhEFAAEAcggAIHx8IHIBAFg2EQUAAQByCQAgfHwgcgEAWDYRBQABAHIKACB8fCByAQBYNhEFAAEAcgsAIHx8IHIBAFg2EQUAAQByDAAgfHwgcgEAWDYRBQABAHINACB8fCByAQBYNhEFAAEAcg4AIHx8IHIBAFg2EQUAAQByDwAgfHwgcgEAWDYRBQABAHIQACB8fCByAQBYNhEFAAEAchEAIHx8FQAHAHMCAAIAIDEXAAIAAQAVAAcAcwIAAgAgMBkAAAAZAAAAGQAAABYADAABAAgAIGYIACAwID4VABEAZggADAAgZggAIFgMEAAAIC0XAAIADgAVABEAZggADAAgMjUwIFhNEAAAICsVAAsAcwMABgAgWE0QAAAVABMAcwQADgAgRwMAIGYBACAtIDUgKhYADQABAAkAIHMEACA1MCA+FQAIAHMEAAMAIDUwGQAAABUADgBzBAAJACA5OSBzBAAgLRYADwAFAAsAIHMDACBzBAAgPj0WAAgAAgAEACBzAgBZEAsAAQByEgAAAAAAAAD/EQUAAQByEwAZAAAAFQAJAGYBAAQAIEcDABkAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWWildWastelandScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fLastPlayedDrums</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bInDC</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iRand</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">fChance</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000ED568">WildWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FA6">TTWHasNVSE</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06018DE6">DCworld01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A26C">DCworld03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A26A">DCworld05</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A269">DCworld06</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A267">DCworld08</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A266">DCworld09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A265">DCworld10</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A263">DCworld11</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A264">DCworld12</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A260">DCworld15</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A25E">DCworld17</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601A25D">DCworld18</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00174AC6">WildWastelandMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FB8">TTWWildWDrums</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

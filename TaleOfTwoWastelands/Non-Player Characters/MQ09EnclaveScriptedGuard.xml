@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0603C182">MQ09EnclaveScriptedGuard</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ09EnclaveScriptedGuard</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Enclave Soldier</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, AutoCalcStats, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>7</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001D3FD">EnclaveFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0609C466">MaleGroupEnclaveDC</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0605218F">MQ09ScriptedGuardScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00AD1F">ArmorEnclaveTier2Combined</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00AD23">WeapRifleEnclaveTier2</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>0</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0603C186">MQ09ScriptedGuardAssistOfficer</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00029629">EnclaveEnergyGuns</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>53</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>53</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>53</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <Hair>
+      <Color Tag="HCLR">
+        <Red>28</Red>
+        <Green>26</Green>
+        <Blue>28</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">IT11vZuSDEB+wJu9c2QWP8ggtj5FOn5AJdKUP5aT678W89c+QwyYP9E+Uj5IBQA/tMDZv18sI8Be2ZDA5sUMv5J9O0BS20TA+KhQwApYXL4pUk7AV/P0PuJ9qb9QLTvAGg9IQIRjfUB0DLA/D69fP09VI8AerSfA6EsCwPeJo7/q0TRA8OQ6P7xuAcCi9Do/mifJvihi6j0AfW1A6ixmQAy+o8ANv4C+1mjsP06pzj5mGhW/JYFywABZCz/30tu/1ioEP1jO5EA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">XF6Wv4mhub+GGne+sWsEQDLPcT9Q02E/XEujP5xJlb5IY9W9kwyOP3JkMD8YXyHAkzRJv/oGuL+jm/e+u7kNwGNMM0DE5JU+1gj6vrDA2r+ce8q+PzSBQB4lDL9Y/7W/MEBcvQx9qz6HScC+eYr+Pw8aCsDqESHALAolv8v3gL/y15hA+Cx7P7jjCUBzAonAs6CTvj3tY0DL/5lAfuBBQI6ZD7/sCSBAZI6mP3pOyj9x8AbAfvwXwBrbVj9kXkNAI5+hPiUR7EA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

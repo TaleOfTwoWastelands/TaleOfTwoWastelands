@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed, CantWait_PlatformSpecificTexture_Dead</Flags>
+  <FormID ID="060614ED">BrotherhoodOfSteel1GunAFDEADDC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">BrotherhoodOfSteel1GunAFDEADDC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brotherhood of Steel Initiate</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>2</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseFactions, UseActorEffectList, UseAIData, UseAIPackages, UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00030512">BrotherhoodSteelGenericFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="06071881">DeathitemBrotherhood100DC</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1E">FemaleAdult13</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="060181D2">BrotherhoodOfSteel1GunAAFTEMPLATEDC</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000038E6">Asian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00014C08">ArmorPowerT45dHelmet</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.0500000007</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001EDC5">FFDCBrotherhoodDogtag</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00075201">ArmorPowerBrotherhoodOfSteelT45D</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.0500000007</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="06025928">BrotherhoodKnightDC</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>0</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>7</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>35</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>37</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>35</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>35</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005DC75">HairDefaultF</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>13</Red>
+        <Green>13</Green>
+        <Blue>13</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

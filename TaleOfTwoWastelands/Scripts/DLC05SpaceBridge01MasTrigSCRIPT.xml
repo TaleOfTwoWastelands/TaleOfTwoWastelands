@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B004715">DLC05SpaceBridge01MasTrigSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05SpaceBridge01MasTrigSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>29</ReferenceCount>
+        <CompiledSize>1518</CompiledSize>
+        <VariableCount>12</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAOAFAAAWAA0ABAAJACBzAQAgMCA9PTYQBQABAHIZABUACgByGQBzAgACACA1FQAHAHMEAAIAIDUVAAcAcwEAAgAgMRkAAAAWAFIAAwBOACByGQBzAQAgMSA9PSByAQBYthAFAAEAchoAIDAgPT0gcgEAWLYQBQABAHIbACAwID09IHIBAFi2EAUAAQByHAAgMCA9PSB8fCAmJiAmJlkQCwABAHIdAAAAAAAAABwAAQCLEAoAAgByAQBuAQAAABUACgByGQBzAQACACAyGQAAABYADQBmAAkAIHMDACAxID09FgANAAcACQAgcwQAIDUgPT0WAAwAAwAIACBmAgAgMCA8HAACACEQAgAAABUACABmAgADACAuNRUACABzBAADACAxMBcAAgABABUAEQBmAgAMACBmAgAgWAwQAAAgLRkAAAAZAAAAFgAOAAgACgAgcwQAIDEwID09FgAMAAQACAAgZgIAIDAgPBwAAwByEAcAAQBu/wAAABUABwBzBgACACAxFQAIAGYCAAMAIC41FQAIAHMEAAMAIDE1FwACAAEAFQARAGYCAAwAIGYCACBYDBAAACAtGQAAABkAAAAWAA4ACwAKACBzBAAgMTUgPT0WAAwABwAIACBmAgAgMCA8HAAEACEQAgAAABwABQAhEAcAAQBuAAAAABwABgAhEAcAAQBuAAAAABwABwAiEAcAAQBuAAAAABwACAAiEAcAAQBuAAAAABUABwBmAgACACAyFQAIAHMEAAMAIDIwFwACAAEAFQARAGYCAAwAIGYCACBYDBAAACAtGQAAABkAAAAWAA4AEAAKACBzBAAgMjAgPT0WAAwADAAIACBmAgAgMCA8HAAJACEQBwABAG4BAAAAHAAKACEQBwABAG4BAAAAHAALACEQBwABAG4BAAAAHAAMACEQBwABAG4BAAAAHAANACEQBwABAG4BAAAAHAAOACEQBwABAG4BAAAAHAAPACEQBwABAG4BAAAAHAAQACEQBwABAG4BAAAAHAARACEQBwABAG4BAAAAHAASACEQBwABAG4BAAAAFQAHAGYCAAIAIDgVAAgAcwQAAwAgMjUXAAIAAQAVABEAZgIADAAgZgIAIFgMEAAAIC0ZAAAAGQAAABYADgAHAAoAIHMEACAyNSA9PRYADAADAAgAIGYCACAwIDwVAAoAchkAcwEAAgAgMRUACABmAgADACAuNRUACABzBAADACAzMBcAAgABABUAEQBmAgAMACBmAgAgWAwQAAAgLRkAAAAZAAAAFgAOABAACgAgcwQAIDMwID09FgAMAAwACAAgZgIAIDAgPBwACQAiEAcAAQBuAQAAABwACgAiEAcAAQBuAQAAABwACwAiEAcAAQBuAQAAABwADAAiEAcAAQBuAQAAABwADQAiEAcAAQBuAQAAABwADgAiEAcAAQBuAQAAABwADwAiEAcAAQBuAQAAABwAEAAiEAcAAQBuAQAAABwAEQAiEAcAAQBuAQAAABwAEgAiEAcAAQBuAQAAABUABwBmAgACACAyFQAIAHMEAAMAIDM1FwACAAEAFQARAGYCAAwAIGYCACBYDBAAACAtGQAAABkAAAAWAA4ADgAKACBzBAAgMzUgPT0WAAwACgAIACBmAgAgMCA8HAATACIQAgAAABwAFAAiEAcAAQBuAAAAABwAFQAiEAcAAQBuAAAAABwAFgAhEAcAAQBuAAAAABwAFwAhEAcAAQBuAAAAABwAGABzEAIAAAAcABgA3RAHAAEAbgEAAAAVAAcAcwUAAgAgMRUACABmAgADACAuNRUACABzBAADACA0MBcAAgABABUAEQBmAgAMACBmAgAgWAwQAAAgLRkAAAAZAAAAFgAOAAcACgAgcwQAIDQwID09FgAMAAMACAAgZgIAIDAgPBwAAgAiEAIAAAAVAAgAZgIAAwAgLjUVAAgAcwQAAwAgNDUXAAIAAQAVABEAZgIADAAgZgIAIFgMEAAAIC0ZAAAAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05SpaceBridge01MasTrigSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">onLoad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">seqTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">seqInit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">seqStage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">decompressionCompleted</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">decompressionBegun</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">hasSuitOn</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">killTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">playerDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">damageCount</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F3">DLC05SpaceBridge01Alarm01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0043CA">DLC05SpaceBridge01DecompressionDoor01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F8">DLC05SpaceBridge01LockLight01bREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F4">DLC05SpaceBridge01LockLight02BonREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F6">DLC05SpaceBridge01LockLight01BonREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F5">DLC05SpaceBridge01LockLight02BoffREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F7">DLC05SpaceBridge01LockLight01BoffREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F9">DLC05SpaceBridge01Spray01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B3">DLC05SpaceBridge01Spray02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B8">DLC05SpaceBridge01Spray03REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B9">DLC05SpaceBridge01Spray04REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B7">DLC05SpaceBridge01Spray05REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B6">DLC05SpaceBridge01Spray06REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B4">DLC05SpaceBridge01Spray07REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059B5">DLC05SpaceBridge01Spray08REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059C8">DLC05SpaceBridge01Spray09REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059C7">DLC05SpaceBridge01Spray10REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F0">DLC05SpaceBridge01LockLight01aREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058EE">DLC05SpaceBridge01LockLight02AonREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058EF">DLC05SpaceBridge01LockLight01AonREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F1">DLC05SpaceBridge01LockLight02AoffREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058F2">DLC05SpaceBridge01LockLight01AoffREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0043C9">DLC05SpaceBridge01DecompressionDoor02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00422E">DLC05SpaceWalkQ</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058EB">DLC05AstronautSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CE552">ArmorNVSpaceSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CEE21">HelmetNVSpaceSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059BC">DLC05DeathInSpaceMessage</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,58 @@
+scn MS03MoleRatRepellantScript
+
+ref HitTarget		;Refers to the target of this script
+ref Explode			;Tests whether or not the molerat will explode
+
+BEGIN ScriptEffectStart
+
+;	Check to make sure the player isn't beating a Dead Mole-Rat
+	set HitTarget to GetSelf
+	if (HitTarget.getdead == 0)
+		set MS03.MS03b1Target to GetSelf	
+		startCombat player
+
+		;If the target is a mole-rat, enact effects
+		if (HitTarget.GetInFaction MoleRatFaction == 1 && MS03.MS03b1Target != MS03.MS03b1HitID)
+			Set MS03.MS03b1HitID to GetSelf
+			Set Explode to 1
+
+			;Cause frenzy
+			setAv Confidence 4
+			; try to restart combat so he picks up his new confidence
+			scaonactor
+	
+			;If MS03b1 isn't completed, update it
+			if (MS03.MS03b1 == 1 || MS03.MS03b1 == 2)
+				Set MS03.MS03b1RatKill to MS03.MS03b1RatKill + 1
+				if (MS03.MS03b1 == 1 && MS03.MS03b1RatKill >= 3)
+					Set MS03.MS03b1 to 2
+					SetObjectiveCompleted MS03 40 1
+					SetObjectiveDisplayed MS03 46 1
+				elseif (MS03.MS03b1 == 2 && MS03.MS03b1RatKill >= 10)
+					Set MS03.MS03b1 to 3
+					SetObjectiveCompleted MS03 44 1
+				endif
+			endif
+		endif
+	endif
+
+END
+
+BEGIN ScriptEffectFinish
+
+	;If the target is a mole-rat, they explode at the end of the fight
+	if (HitTarget.GetInFaction MoleRatFaction == 1 && Explode == 1)
+
+		;And then, the mole-rat's limbs explode
+		;ShowWarning "Killing"
+		kill player 1, 6
+		;kill HitTarget 7, 6
+		;kill HitTarget 8, 6
+		;kill HitTarget 10, 6
+		;kill HitTarget 11, 6
+		;ModPcMiscStat "Creatures Killed" 1
+		player.rewardxp 5		;As if the player killed the mole-rat
+		IncrementScriptedChallenge TTWChallengeWhackAMole
+	endif
+
+END

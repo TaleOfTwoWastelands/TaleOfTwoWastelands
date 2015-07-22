@@ -1,0 +1,108 @@
+Scriptname DLC05HoloControlScript
+
+
+short activationState
+ref Link
+
+
+BEGIN ONACTIVATE
+
+	IF ( activationState == 0 )
+		set Link to GetLinkedRef
+		if ( GetSelf == DLC05HoloControlPaulsonRef )
+			Player.AddNote DLC05CaptiveHolotape05
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControlTercorienREF )
+			Player.Addnote DLC05CaptiveHolotape06
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControlSamuraiREF )
+			Player.Addnote DLC05CaptiveHolotape07
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControlAstronautREF )
+			Player.Addnote DLC05CaptiveHolotape08
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControlSallyREF )
+			Player.Addnote DLC05CaptiveHolotape21
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControlSomahREF )
+			Player.Addnote DLC05CaptiveHolotape22
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl15REF )
+			Player.Addnote DLC05CaptiveHolotape15
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl01REF )
+			Player.Addnote DLC05CaptiveHolotape01
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl03REF )
+			Player.Addnote DLC05CaptiveHolotape03
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl12REF )
+			Player.Addnote DLC05CaptiveHolotape12
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl14REF )
+			Player.Addnote DLC05CaptiveHolotape14
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl11REF )
+			Player.Addnote DLC05CaptiveHolotape11
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl04REF )
+			Player.Addnote DLC05CaptiveHolotape04
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl02REF )
+			Player.Addnote DLC05CaptiveHolotape02
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl16REF )
+			Player.Addnote DLC05CaptiveHolotape16
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl25REF )
+			Player.Addnote DLC05CaptiveHolotape25
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl13REF )
+			Player.Addnote DLC05CaptiveHolotape13
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl23REF )
+			Player.Addnote DLC05CaptiveHolotape23
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl19REF )
+			Player.Addnote DLC05CaptiveHolotape19
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl09BREF )
+			Player.Addnote DLC05CaptiveHolotape09
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl20REF )
+			Player.Addnote DLC05CaptiveHolotape20
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl10REF )
+			Player.Addnote DLC05CaptiveHolotape10
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl18REF )
+			Player.Addnote DLC05CaptiveHolotape18
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl17REF )
+			Player.Addnote DLC05CaptiveHolotape17
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		elseif ( GetSelf == DLC05HoloControl24REF )
+			Player.Addnote DLC05CaptiveHolotape24
+			set DLC05Generic.DLC05HoloCount to ( DLC05Generic.DLC05HoloCount + 1 )
+		endif
+
+		IncrementScriptedChallenge DLC05ChallengeArchivist
+
+		playgroup forward 0
+		set activationState to 1
+	activate
+	ENDIF
+
+END
+
+BEGIN GAMEMODE
+
+	IF ( activationState == 1 )
+		IF ( isAnimPlaying forward == 0 )
+			set activationState to -1
+			playgroup backward 0
+			Link.Disable
+		ENDIF
+	ENDIF
+
+END

@@ -1,0 +1,14 @@
+scn DLC05TrigAsmSomahExplodeTurretSCRIPT
+
+int doOnce
+
+
+begin onTriggerEnter DLC05SomahRef
+
+	if doOnce == 0
+		set doOnce to 1
+		RAsmTurretC2.setav health 1
+		RAsmTurretC2.placeatme MinePlasmaExplosion 1
+	endif
+
+end

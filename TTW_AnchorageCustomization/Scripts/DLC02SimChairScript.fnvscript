@@ -1,0 +1,115 @@
+Scriptname DLC02SimChairScript
+
+
+;Placed on DLC02SimChair in cell
+;handles animations for player sitting in chair
+;as well as updating quest variables for getting into sim
+
+float ChairTimer
+short IModTrigger
+
+Begin OnActivate
+	
+	if IsActionRef player == 1
+
+;If Player isn't in the suit, have the Outcast NPC comment on it
+;otherwise allow activation of the chair
+
+
+		if ( GetStage DLC02OA1 == 50 )
+			if ( Player.GetEquipped DLC02ArmorSimSuit == 1 )
+				if ( DLC02SimActivatorREF.IsAnimPlaying Backward == 1 )
+					return
+				else
+					Activate
+				endif
+			else
+				DLC02SpecialistOlinREF.SayTo Player DLC02OlinPodWarning
+
+			endif
+		elseif ( GetStage DLC02OA1 >= 200 )
+			if ( Player.GetSitting == 0 )
+				; do nothing
+			else
+				Activate
+			endif
+		else
+			DLC02SpecialistOlinRef.SayTo Player DLC02OlinPodWarning
+		endif
+	endif
+
+End
+
+
+Begin GameMode
+
+;Check for player sitting in chair
+
+
+	if ( GetStage DLC02OA4 < 40 )
+	
+		if ( DLC02OA1.PlayerInChair == 0 )
+			if ( Player.GetSitting == 3 )
+				if ( Player.GetDistance DLC02SimChairREF < 100 )
+
+;if he is, update DLC02OA1.PlayerInChair and start a timer as the pod animation plays
+
+
+
+					Player.ResetHealth
+					Player.RemoveSpell WithdrawalAlcohol
+					Player.RemoveSpell WithdrawalAntNectar
+					Player.RemoveSpell WithdrawalBuffout
+					Player.RemoveSpell WithdrawalJet
+					Player.RemoveSpell WithdrawalMentats
+					Player.RemoveSpell WithdrawalMorphine
+					Player.RemoveSpell WithdrawalPsycho
+					Player.RemoveSpell WithdrawalQuantumNukacola
+					Player.RemoveSpell MS09WithdrawalUltraJet
+					Set Generic.Addicted to 0
+
+					player.addspell TTWOANoNeeds					;Added April 18, 2013 Jax
+					player.restoreAV Dehydration 1000				;Technically, OA should remember these values and restore them after, including all the addictions
+					player.restoreAV SleepDeprevation 1000		;FO3 didn't do it that way, so I'm restoring needs values and adding a spell that keeps them at 0
+					player.restoreAV Hunger 1000						;is removed in the container script
+					player.addperk TTWAnchorageNoRepair			
+					
+					player.RestoreAV RadiationRads 1000
+					DisablePlayerControls
+					PlaySound OBJPodSimClose2D
+					DLC02SimActivatorRef.Playgroup Backward 1
+					set ChairTimer to 14
+					DLC02SimActivatorRef.PlaySound OBJTranquilityLanePodClose2D
+					StartQuest DLC02OA2	
+					Set DLC02OA2.OA2GetUpGo to 1
+					SetQuestDelay DLC02OA1 0.05
+					Set DLC02OA1.OA1AnimSetup to 1
+					set DLC02OA1.PlayerInChair to 1
+				endif
+			endif
+		endif
+	endif
+
+
+
+;when timer is done, update DLC02OA1.PlayerInChair
+;DLC02OA1 quest script takes over from here (could be a delay of a second or two before script fires off)
+
+	if ( DLC02OA1.PlayerInChair == 1 )
+		if ( IModTrigger == 0 )
+			if ( ChairTimer <= 3 )
+				iMod MQ04PodFadetoWhiteISFX
+				set IModTrigger to 1
+			else
+				set ChairTimer to ( ChairTimer - GetSecondsPassed )
+			endif
+		elseif ( IModTrigger == 1 )
+	
+			if ( ChairTimer > 0 )
+				set ChairTimer to  ( ChairTimer - GetSecondsPassed )
+			elseif ( ChairTimer <= 0 )
+				Set DLC02OA1.PlayerInChair to 2
+			endif
+		endif
+	endif
+End

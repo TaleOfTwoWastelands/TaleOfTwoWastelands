@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06031EC9">UncleRoe</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">UncleRoe</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Uncle Roe</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>6</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00059410">CantCommonsFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D9A">DeathItemUncleRoe</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1A">MaleAdult13</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="06068E7C">UncleRoeSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000220FF">VacuumCleaner</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0002210A">WonderGlue</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00022238">NPCSettlerCaps50</Item>
+          <Count>50</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000250A5">SurgicalScalpel01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003A8BC">CondHuntingRifleNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005BB70">OutfitPrewarSpring2Dirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.649999976</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006B53C">Ammo308</Item>
+          <Count>62</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Cautious</Confidence>
+      <EnergyLevel>25</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Weapons, Armor, Books, Stimpacks, Miscellaneous, Repair</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="060B2948">MS02HideDuringFight</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060960A5">MS02UncleRoeGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059423">UncleRoeDerekDinner19x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059422">UncleRoeSocializeDiner12x7</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059436">UncleRoeDerekBreakfast8x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0005942F">UncleRoeHomeDefault</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="000173E8">Entrepreneur</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>40</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>4</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>4</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>55</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>49</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>55</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="00066FD0">BeardMustache</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDC">HairCombOver</Reference>
+      </Type>
+      <Length Tag="LNAM">0.460000008</Length>
+      <Color Tag="HCLR">
+        <Red>77</Red>
+        <Green>49</Green>
+        <Blue>43</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004252">EyeGreen</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">ZeyLv9CYSj+o0ii/X9T4v6cIb78z4Sc/6zMeP0M/DsBLeTzAJVkdv75bcT+163E/VPzqvWQ2KsCQzHO/6N4hvmdMBUCIg42/5LjDP8vERED82yW/bqTyv0BPYD5SbeE/mL7CPvbpDj8M3am/fKBnwPJRpD+tIso/QJ1TvVetEcCc4AFBIvILwHo8/b8Fcn8/CzGcwFfZC8BgRRW+HFMXPvZ4dcD0cGy/JSR5QHy9WMATVIA/UNszQDSJMD8qgqO/RvNewMqA8T8=</Symmetric>
+        <Asymmetric Tag="FGGA">rdZSP2Fz/b/sJY6++BV2ve4TGT5+HYU/2CkMP5aEzj/KjUm/sIHEPs8rKj/mO5e/UIYTv4YgR7zIIcC/g/sFv4uDsb1HTsG+Tn2dP5QtSr/mtba/3JeMvsggf78ap2O/dKrMvgr9Az/QRx4/3cp/Pzd0Z7/Qalu+</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">/DocwNEhsb5PVUo/qpWKP86PiD/J6yo/6x32P617gr+yVh2/AC5bPwqCmb5U7TM+LdTcPyYH/j7Ybwg/u2Fpv7zIob43PU2/5hHDPyBYfz8o7/I/ACi8vTrEgb40LDK/KfbAPzCBFD4u6K+/GfkNP14cXz9gzvM/HAcHP7SFjL+MEzXApG2bPlDb7j4B7iG//+w0PhjsTT7k3j3AohGRvqiMRcDY4yU+TKxVv6c/+r4lSp4/eGrgPum0379yYbq/IrdbP+T65L8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">1.29999995</Weight>
+  </Subrecords>
+</Record>

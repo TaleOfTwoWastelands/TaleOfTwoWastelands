@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E8A">MQ04</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ04</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="060254C9">MQ04Script</Reference>
+    </Script>
+    <Name Tag="FULL">Tranquility Lane</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>41</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgUAAABuAQAAABwAAQCeEAUAAQByAwA3EAUAAQByBAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ04 5 1
+MQ01SarahREF.MoveTo CitTheDenMARKER
+StopQuest MQ01</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602107D">CitTheDenMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ04 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4PAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 10 1
+SetObjectiveDisplayed MQ04 15 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>63</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbg8AAABuAQAAAKMRDwADAHIBAG4UAAAAbgEAAAAEEgcAAQBuzv///xUACgByAQBzBgACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 15 1
+SetObjectiveDisplayed MQ04 20 1
+rewardkarma -50
+set MQ04.BettyRefuse to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>96</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbhQAAABuAQAAAKMRDwADAHIFAG4ZAAAAbgEAAAAcAAEAIhACAAAAHAACACEQAgAAABwAAwBeEAAAHAADAOwQBwABAG4BAAAAHAAEAOwQBwABAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 20 1
+SetObjectiveDisplayed MQ04 25 1
+TimmyNeusbaumRef.Disable
+MQ04GnomeRef.Enable
+JanetRockwellRef.EVP
+JanetRockwellRef.SetGhost 1
+RogerRockwellRef.SetGhost 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025094">TimmyNeusbaumRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609A1FA">MQ04GnomeRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025095">JanetRockwellRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025096">RogerRockwellRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>93</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbhkAAABuAQAAAKMRDwADAHIDAG4eAAAAbgEAAAAEEgcAAQBuzv///xUACgByAwBzBgACACAwHAABAOwQBwABAG4AAAAAHAACAOwQBwABAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 25 1
+SetObjectiveDisplayed MQ04 30 1
+rewardkarma -50
+set MQ04.BettyRefuse to 0
+JanetRockwellRef.SetGhost 0
+RogerRockwellRef.SetGhost 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025095">JanetRockwellRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025096">RogerRockwellRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">32</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbiAAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ04 32 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAKMRDwADAHIBAG4jAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 30 1
+SetObjectiveDisplayed MQ04 35 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>63</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbiMAAABuAQAAAKMRDwADAHIBAG4oAAAAbgEAAAAEEgcAAQBuzv///xUACgByAQBzBgACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 35 1
+SetObjectiveDisplayed MQ04 40 1
+rewardkarma -50
+set MQ04.BettyRefuse to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbigAAABuAQAAAKMRDwADAHIBAG4tAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 40 1
+SetObjectiveDisplayed MQ04 45 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbi0AAABuAQAAAKMRDwADAHIBAG4yAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 45 1
+SetObjectiveDisplayed MQ04 50 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG48AAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;(Only relevant if the player does not use the failsafe computer).
+SetObjectiveCompleted MQ04 50 1
+SetObjectiveDisplayed MQ04 60 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>53</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbkYAAABuAQAAABwAAQAhEAIAAAAcAAIAIRACAAAAORAKAAIAcgQAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ04 70 1
+MQ04ExitDoorActRef.Enable
+MQDadRef.Enable
+SetStage MQ05 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060553ED">MQ04ExitDoorActRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbkYAAABuAQAAAKMRDwADAHIBAG5LAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 70 1
+SetObjectiveDisplayed MQ04 75 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>167</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgUAAABuAQAAAK0RBQABAHICADkQCgACAHIDAG4KAAAAFQAKAHIEAGYaAAIAIDAVAAoAcgQAZhkAAgAgMBUACgByBABmGAACACAwFQAQAHIEAGYbAAgAIEcFACAxICsVAAoAcgQAczUAAgAgMTcQBQABAHICAHcRBwABAG5YAgAAHAABAO4QDwADAHIGAG4BAAAAbgEAAABgEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ04 5 1
+CompleteAllObjectives MQ04 
+SetStage MQ05 10
+  Set RadioGalaxyNewsQuest.MQ03Clear to 0
+  Set RadioGalaxyNewsQuest.MQ02Clear to 0
+  Set RadioGalaxyNewsQuest.MQ01Clear to 0
+  Set RadioGalaxyNewsQuest.MQ04Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+StopQuest MQ04
+RewardXP 600
+;addachievement 07
+player.equipitem pipboy 1 1
+enableplayercontrols
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8A">MQ04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="06014E8B">MQ05</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find and speak to Betty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025098">BettyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Make Timmy Neusbaum cry.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025094">TimmyNeusbaumRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Report back to Betty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025098">BettyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Break up the Rockwells marriage, without killing either of them.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025095">JanetRockwellRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025096">RogerRockwellRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Report back to Betty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025098">BettyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">35</Index>
+        <Description Tag="NNAM">Arrange a creative death for Mabel Henderson.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025090">MabelHendersonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Report back to Betty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025098">BettyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">45</Index>
+        <Description Tag="NNAM">Retrieve the mask and knife from behind the Abandoned House.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06021006">MQ04DoghouseRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Kill all the residents of Tranquility Lane.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602508F">OldLadyDithersRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06095B4A">BillFosterRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025090">MabelHendersonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025091">GeorgeNeusbaumRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025092">PatNeusbaumRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025095">JanetRockwellRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025096">RogerRockwellRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025097">MarthaSimpsonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Report back to Betty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025098">BettyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Exit Tranquility Lane.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060252D8">MQ04ExitDoorRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">32</Index>
+        <Description Tag="NNAM">(Optional) Find and activate Tranquility Lane's Failsafe computer.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Find Dad.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Talk to Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019D09">MQDadRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

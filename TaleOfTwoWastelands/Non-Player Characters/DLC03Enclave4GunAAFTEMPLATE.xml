@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0900101E">DLC03Enclave4GunAAFTEMPLATE</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03Enclave4GunAAFTEMPLATE</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Enclave Soldier</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, AutoCalcStats, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>24</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>34</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001D3FD">EnclaveFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="060C58F5">DeathItemEnclave75DC</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0609C466">MaleGroupEnclaveDC</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006DFEF">LootMinePulse15</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006DFF2">LootMinePlasma25</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00AD21">ArmorEnclaveTier4Combined</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00AD25">WeapRifleEnclaveTier4</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00029629">EnclaveEnergyGuns</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>110</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0002E379">BeardFull</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000306BE">HairAfricanAmericanBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>22</Red>
+        <Green>20</Green>
+        <Blue>24</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">3TLZv+lIwz/AjhQ8cH07PjxLCEBoR/++iGOGvpmUSsCBOcG/YEe9v++U3L98tdi/h0SKQImSKUBXzibAciVSP1lx08DGSTS/oyfBwKkiD8AGy6zAfJp7wLvVvMBRWttAGu87wHgo0L8IjbjArIEjP7CbkkDP84PAgX+RQA4HkcChuZNAwEO8vwxxtL9Y5TRBl35yQCb+oj8I/52+KAqJQObnRsG0+v4+8pE/wKA55j4/H8HAW6inv3avRz9BbwrBtqPYP8B2Qz0=</Symmetric>
+        <Asymmetric Tag="FGGA">ffeZvmI0ib9onyw+ZVqjPgsJgT+jbf8+uSJVvjCwP7110CS/KYmYPznywz7/Jac+4LYTu0/2Tr8EW1o9lL+0Pqfupz6SUWG/znqSv6q/hL6yuvQ+S/4Ovpdgyb5SqUy/mHG6v1p0j754uxC/RlODP6sfez+WhxW+</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">/K65v9bE77+IuMA/FGXQP86tuz85FC9AbeNCP5oNxT5oCWm+bP+iPcgopr8Hr4m/qN+vvwCf+zpovWI/Wh+Cv7ZRzz861rA+AtE+v0hUO78qlwlA84sgQH6fc79F1pk/wGT6PWbrBT/UDU2+piaOP18rir8kIMO/AGAXQBRSSj64mBY+uM6kwFnYs7/RVq+/JlOqv5elCD9RKWy+bG/4PzBT/r5vXC5AJLQ5wJL7ab+E4n7AJHJJvsmBkr+F6AI/Wx1VwMQxbz8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

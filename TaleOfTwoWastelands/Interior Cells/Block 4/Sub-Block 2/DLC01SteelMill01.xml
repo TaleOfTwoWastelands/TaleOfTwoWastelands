@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="080011AC">DLC01SteelMill01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01SteelMill01</EditorID>
+    <Name Tag="FULL">The Mill</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>69</Red>
+          <Green>33</Green>
+          <Blue>16</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>71</Red>
+          <Green>30</Green>
+          <Blue>14</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>255</Red>
+          <Green>145</Green>
+          <Blue>45</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>400</Near>
+        <Far>6800</Far>
+        <ClipDistance>6900</ClipDistance>
+        <Power>1.08000004</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>25</XY>
+        <Z>150</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00065332">IndustrialDefaultTemplate</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">0</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="00092BCF">DLCPittSteelMillInterior</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0800B72E">DLC01PittZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="08005FBE">IntPittSteelMill01</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

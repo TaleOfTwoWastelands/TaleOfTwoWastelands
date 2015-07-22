@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="000340EF">VaultSuit112</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VaultSuit112</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-19</X>
+        <Y>-15</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>20</X>
+        <Y>15</Y>
+        <Z>12</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Vault 112 Jumpsuit</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0604B1D0">VaultSuit112Script</Reference>
+    </Script>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00072E30">EnchClothingVaultSuitNormal</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\VaultSuit\M\Outfit.NIF</FileName>
+          <TextureHashes Tag="MODT">7bEKb7ZGYNptMQpvu0Zg2nRpGHTnx3X67t8Mb7LqryBuXwxvt+qvIHRpGHTnx3X6898Mb7LqryBzXwxvt+qvIHRpGHTnx3X6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>7</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>8</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>9</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\VaultSuit\F\Outfit.NIF</FileName>
+          <TextureHashes Tag="MO3T">5rEKb7ZGYNpmMQpvu0Zg2nRpGHTnx3X67t8Mb6vqryBuXwxvsOqvIHRpGHTnx3X6898Mb6vqryBzXwxvsOqvIHRpGHTnx3X6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="000B73E9">VaultSuit112F</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="000B73E9">VaultSuit112F</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOn</Name>
+                <TextureSet ID="000B73E9">VaultSuit112F</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOn</Name>
+                <TextureSet ID="000B73E9">VaultSuit112F</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="000B73E9">VaultSuit112F</TextureSet>
+                <Index>4</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\VaultSuit\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7bEKb7ZGYNptMQpvu0Zg2nRpGHTnx3X67t8Mb7LqryBuXwxvt+qvIHRpGHTnx3X6898Mb7LqryBzXwxvt+qvIHRpGHTnx3X6</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>MaleOutfit01</Name>
+                <TextureSet ID="000B73EE">VaultSuit112M</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\vault_suit_112.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9F2">RepairVaultSuit</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>6</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

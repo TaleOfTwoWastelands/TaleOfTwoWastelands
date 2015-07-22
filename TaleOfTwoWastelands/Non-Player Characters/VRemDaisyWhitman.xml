@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="00133958">VRemDaisyWhitman</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VRemDaisyWhitman</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Daisy Whitman</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>30</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0013F89B">vMojaveCivilianDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0013F8A0">vMojaveCivilianScavengerDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001680A8">RemnantsFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00019FD5">FemaleOld01</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000987DF">CaucasianOldAged</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0015A374">VRemDaisyWhitmanScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004334">WeapKnife</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029376">WithAmmoHuntingRifleNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000EF1CD">OutfitRepublican03</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0010A427">CowboyHat04</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.209999993</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Pleasant</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00168A9E">VRemDaisyWhitmanSleep21x9</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00168AA1">VRemDaisyWhitmanOutside6x4</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00168AA2">VRemDaisyWhitmanInside12x9</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00168A9F">VRemDaisyWhitmanEat11x1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015A767">VRemDaisyWhitmanAtBunker</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001875D">SoldierBigGuns</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00044529">FemaleBOld</Reference>
+      </Type>
+      <Length Tag="LNAM">0.762099981</Length>
+      <Color Tag="HCLR">
+        <Red>192</Red>
+        <Green>192</Green>
+        <Blue>192</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004253">EyeBlue</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">pkmIPjODEr4OVCS+StM0P4MvY787AWu/6wQSv/WfkL/SS56+SjaLP2opDb3QBg+/Qo8pv81GEj64Ka09PWSev7FdBD8ZKaY+AAGPv4XaQb4LPcW/sQqWP2S9iL/eFU8/6eWKv9Pduz/CKgU/7RoAQLgy/D6ASoi8DD+fv8bOhz8MwcK/MjRTvxYP6T+20jnAcFcdvx63PT/4i1Q/BK8KvrA7qL8PdZU/RLdbPzLaPz/iqh6/F+/pvjrkG78JMiW/Sq6uP8mM1j8=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">BzrGvviHTz6PDsG9ll+lvmCkT794Seo9wXKhv9CDJD96SDM/c+NUvhYDBz+wMB2+vEFmv3wCLD9QFPE+VO+4vtBhkD4vDo6+ulSlP2yzzT/cqKO+NDtQPqbvjL7ugOo+ligYQAiYdD5DBgE/6cdAP7THrD88br4+as5cP0Bnij5yEgo/8f4SwBTuzD8RUuc+v9wnPgWUDr9gft6/pDogvpAHYD7GeEo/+Cf6voMWur9Z0pM/uG9Mv9bgML5wDxo/eCSlvdbw+T4=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

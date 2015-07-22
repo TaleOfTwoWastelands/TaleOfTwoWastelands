@@ -1,0 +1,186 @@
+scn MrHouseSCRIPT
+
+;this is the computer Mr House, if you are looking for fleshy house, see NVCRMrHouse (and Script)
+
+short Button
+short YesManHouse
+short bStartedEndGame
+
+Short bSaveGame;
+Float fSaveTimer;
+Short nSaveEvent;
+
+;this sets the Computer Mr House to unuseable if Fleshy House is dead.
+;need to add snow fx screens 
+
+BEGIN OnActivate player
+	if (getStage Vdialoguemrhouse == 20) 
+	
+	elseif vStoryEventSecuritronsFort ==2
+
+	elseif getdestroyed == 1
+
+	else
+		activate
+	endif
+	endif
+END
+
+Begin OnLoad
+	setignorefriendlyhits 1
+End
+
+BEGIN GameMode
+
+	;This code runs the savegame.
+	If (bSaveGame == 1)
+		If (fSaveTimer > 0)
+			Set fSaveTimer to fSaveTimer - GetSecondsPassed
+		Else
+			If (nSaveEvent == 0)
+	
+				SystemSave;
+				Set fSaveTimer to 1.0;
+				Set nSaveEvent to 1;
+	
+			ElseIf (nSaveEvent == 1)
+	
+				EnablePlayerControls;
+	
+				;Show Message Script
+				ShowMessage VEndGameWarningMsgHouse;
+	
+				Set nSaveEvent to 0;
+				Set bSaveGame to 2;
+			EndIf
+		EndIf
+	EndIf
+
+	if ( bStartedEndGame == 0 )
+		set Button to GetButtonPressed
+		if ( Button == 0 )
+			;Reset Dialog Options So House Redoes the "Are you ready" stuff.
+			SetObjectiveDisplayed VMQHouse8 80 1
+		elseif ( Button == 1 )
+			set bStartedEndGame to 1
+
+			if GetObjectiveDisplayed VMQHouse8 80 == 1
+				SetObjectiveCompleted VMQHouse8 80 1
+			endif
+
+			SetStage VMQHouse8 80
+
+
+			;Start House Stuff
+			; Start the Emergency Radio Quest - AH
+			vNCREmergencyRadioTARef.enable
+			StartQuest vNCREmergencyRadio
+			player.moveto VHDHouseIndyBattleStartMarker
+
+			;Move Companions with the Player
+			if (VNPCFollowers.bBooneHired)
+				CraigBooneREF.MoveTo VHDHouseIndyCompanionMarker
+				SET CraigBooneREF.Waiting TO 0;
+				CraigBooneREF.evp;
+			endif
+			if (VNPCFollowers.bCassHired)
+				RoseofSharonCassidyREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RoseofSharonCassidyREF.Waiting TO 0;
+				RoseofSharonCassidyREF.evp;
+			endif	
+			if (VNPCFollowers.bVeronicaHired)
+				VeronicaREF.MoveTo VHDHouseIndyCompanionMarker
+				SET VeronicaREF.Waiting TO 0;
+				VeronicaREF.evp;
+			endif
+			if (VNPCFollowers.bLilyHired)
+				LilyREF.MoveTo VHDHouseIndyCompanionMarker
+				SET LilyREF.Waiting TO 0;
+				LilyREF.evp;
+			endif
+			if (VNPCFollowers.RaulHired)
+				RaulREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RaulREF.Waiting TO 0;
+				RaulREF.evp;
+			endif
+			if (VNPCFollowers.ArcadeHired)
+				ArcadeREF.MoveTo VHDHouseIndyCompanionMarker
+				SET ArcadeREF.Waiting TO 0;
+				ArcadeREF.evp;
+			endif
+			if (Followers.CharonHired)
+				CharonRef.MoveTo VHDHouseIndyCompanionMarker
+				SET CharonRef.Waiting TO 0;
+				CharonRef.evp;
+			endif	
+			if (Followers.ButchHired)
+				ButchRef.MoveTo VHDHouseIndyCompanionMarker
+				SET ButchRef.Waiting TO 0;
+				ButchRef.evp;
+			endif	
+			if (Followers.CloverHired)
+				CloverRef.MoveTo VHDHouseIndyCompanionMarker
+				SET CloverRef.Waiting TO 0;
+				CloverRef.evp;
+			endif	
+			if (Followers.JerichoHired)
+				JerichoRef.MoveTo VHDHouseIndyCompanionMarker
+				SET JerichoRef.Waiting TO 0;
+				JerichoRef.evp;
+			endif	
+			if (Followers.FawkesHired)
+				MQ08FawkesRef.MoveTo VHDHouseIndyCompanionMarker
+				SET MQ08FawkesRef.Waiting TO 0;
+				MQ08FawkesRef.evp;
+			endif	
+			if (Followers.StarPaladinCrossHired)
+				StarPaladinCrossRef.MoveTo VHDHouseIndyCompanionMarker
+				SET StarPaladinCrossRef.Waiting TO 0;
+				StarPaladinCrossRef.evp;
+			endif	
+			if (VNPCFollowers.bEDEHired)
+				if EDE1Ref.GetDisabled == 0
+					EDE1Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE1Ref.Waiting TO 0;
+					EDE1Ref.evp;
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE2Ref.Waiting TO 0;
+					EDE2Ref.evp;
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE3Ref.Waiting TO 0;
+					EDE3Ref.evp;
+				endif
+			endif
+			if (VNPCFollowers.RexHired)
+				RexREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RexREF.Waiting TO 0;
+				RexREF.evp;
+			endif
+			if (Followers.DogmeatHired)
+				DogmeatRef.MoveTo VHDHouseIndyCompanionMarker
+				SET DogmeatRef.Waiting TO 0;
+				DogmeatRef.evp;
+			endif
+			if (Followers.RL3Hired)
+				RL3REF.MoveTo VHDHouseIndyCompanionMarker
+				SET RL3REF.Waiting TO 0;
+				RL3REF.evp;
+			endif
+
+			setstage VHDHouseBattle 10
+			VHDIndependentStartTriggerREF.enable
+			set gamehour to 14
+
+			;Autosave Game Here
+			autosave
+
+			;disables use if the player has destroyed the fort secs 
+			if vStoryEventSecuritronsFort == 2
+				setdestroyed 1
+			endif
+		endif
+	endif
+
+END

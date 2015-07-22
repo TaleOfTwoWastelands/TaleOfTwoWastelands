@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0011C225">INFO - 0011C225</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Conversation</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0010C721">vDialogueGomorrah</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0011C224">INFO - 0011C224</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Hey, I'll take care of them when you're ready, just say the word. I suggest doing it while they're talking to get the drop on them.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetObjectiveDisplayed</Type>
+          <Quest ID="00110A63">VMS21</Quest>
+          <ObjetiveIndex>66</ObjetiveIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0010C6F5">VMS21Cachino</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>30</ReferenceCount>
+        <CompiledSize>999</CompiledSize>
+        <VariableCount>2</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HAABAHIQBwABAG7/AAAAHAACAK0QBQABAHIYABUACgByGQBzGQACACAxFQAKAHIaAHMFAAIAIDMcAAMAFBIAABwAAwB/EQoAAgByGwBuAAAAABwABAAUEgAAHAAEAH8RCgACAHIbAG4AAAAAFQAKAHIZAHMZAAIAIDEcAAUAzBAHAAEAbgAAAAAVAAoAchoAcxwAAgAgMRYAGgABABYAIHIcAHMGACByBgBzCAAgMSAhPSAmJhwABgBPEgUAAQByHQAZAAAAFgAaAAEAFgAgchwAcxUAIHIHAHMBACAxICE9ICYmHAAHAE8SBQABAHIdABkAAAAWABoAAQAWACByHABzGwAgcggAcwkAIDEgIT0gJiYcAAgATxIFAAEAch0AGQAAABYAGgABABYAIHIcAHMhACByCQBzAQAgMSAhPSAmJhwACQBPEgUAAQByHQAZAAAAFgAaAAEAFgAgchwAcwkAIHIKAHMDACAxICE9ICYmHAAKAE8SBQABAHIdABkAAAAWABoAAQAWACByHABzDAAgcgsAcwEAIDEgIT0gJiYcAAsATxIFAAEAch0AGQAAABYAGgAHABYAIHIcAHMeACByDABzAQAgMSAhPSAmJhYAEgABAA4AIHIMAFgjEAAAIDAgPT0cAAwATxIFAAEAch0AGAASAAEADgAgcg0AWCMQAAAgMCA9PRwADQBPEgUAAQByHQAYABIAAQAOACByDgBYIxAAACAwID09HAAOAE8SBQABAHIdABkAAAAZAAAAFgAaAAEAFgAgchwAcw8AIHIPAHMIACAxICE9ICYmHAAPAE8SBQABAHIdABkAAAAWABoAAQAWACByHgBzAgAgchAAcw8AIDEgIT0gJiYcABAATxIFAAEAch0AGQAAABYAGgABABYAIHIeAHMOACByEQBzCwAgMSAhPSAmJhwAEQBPEgUAAQByHQAZAAAAFgAaAAEAFgAgch4AcxIAIHISAHMIACAxICE9ICYmHAASAE8SBQABAHIdABkAAAAWABoAAQAWACByHgBzBgAgchMAcwkAIDEgIT0gJiYcABMATxIFAAEAch0AGQAAABYAGgABABYAIHIeAHMIACByFABzCAAgMSAhPSAmJhwAFABPEgUAAQByHQAZAAAAFgAaAAEAFgAgch4AcwoAIHIVAHMIACAxICE9ICYmHAAVAE8SBQABAHIdABkAAAAWABoAAQAWACByHgBzFAAgchYAcwgAIDEgIT0gJiYcABYATxIFAAEAch0AGQAAABYAGgABABYAIHIeAHMWACByFwBzCAAgMSAhPSAmJhwAFwBPEgUAAQByHQAZAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">vms21NeroDoor.lock 255
+VMS21WeaponLockerRef.removeallitems player
+set vDialogueGomorrah.bGunsAllowed to 1
+set VMS21.iBossesReady to 3
+VMS21NeroRef.RemoveFromAllFactions
+VMS21NeroRef.AddToFaction OmertaBossFaction 0
+VMS21BigSalRef.RemoveFromAllFactions
+VMS21BigSalRef.AddToFaction OmertaBossFaction 0
+set vDialogueGomorrah.bGunsAllowed to 1
+VMS21NeroCouchRef.setdestroyed 0
+set vms21.iSalDialogue to 1
+if (VNPCFollowers.bBooneHired) &amp;&amp; (CraigBooneREF.Waiting != 1)
+	CraigBooneREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (VNPCFollowers.bCassHired) &amp;&amp; (RoseofSharonCassidyREF.Waiting != 1)
+	RoseofSharonCassidyREF.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (VNPCFollowers.bVeronicaHired) &amp;&amp; (VeronicaREF.Waiting != 1)
+	VeronicaREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (VNPCFollowers.bLilyHired) &amp;&amp; (LilyREF.Waiting != 1)
+	LilyREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (VNPCFollowers.RaulHired) &amp;&amp; (RaulREF.Waiting != 1)
+	RaulREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (VNPCFollowers.ArcadeHired) &amp;&amp; (ArcadeREF.Waiting != 1)
+	ArcadeREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (VNPCFollowers.bEDEHired) &amp;&amp; (EDE1REF.Waiting != 1)
+	if EDE1Ref.GetDisabled == 0
+		EDE1Ref.MoveToFade VMS21CompanionTeleportMarker
+	elseif EDE2Ref.GetDisabled == 0
+		EDE2Ref.MoveToFade VMS21CompanionTeleportMarker
+	elseif EDE3Ref.GetDisabled == 0
+		EDE3Ref.MoveToFade VMS21CompanionTeleportMarker
+	endif
+endif
+if (VNPCFollowers.RexHired) &amp;&amp; (RexREF.Waiting != 1)
+	RexREF.MoveToFade VMS21CompanionTeleportMarker;
+endif
+if (Followers.CharonHired) &amp;&amp; (CharonRef.Waiting != 1)
+	CharonRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.ButchHired) &amp;&amp; (ButchRef.Waiting != 1)
+	ButchRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.CloverHired) &amp;&amp; (CloverRef.Waiting != 1)
+	CloverRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.JerichoHired) &amp;&amp; (JerichoRef.Waiting != 1)
+	JerichoRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.FawkesHired) &amp;&amp; (MQ08FawkesRef.Waiting != 1)
+	MQ08FawkesRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.StarPaladinCrossHired) &amp;&amp; (StarPaladinCrossRef.Waiting != 1)
+	StarPaladinCrossRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.DogmeatHired) &amp;&amp; (DogmeatRef.Waiting != 1)
+	DogmeatRef.MoveToFade VMS21CompanionTeleportMarker;
+endif		
+if (Followers.RL3Hired) &amp;&amp; (RL3REF.Waiting != 1)
+	RL3REF.MoveToFade VMS21CompanionTeleportMarker;
+endif		</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0011C230">VMS21NeroDoor</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011C23E">VMS21WeaponLockerRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00112DC9">VMS21NeroREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011267A">VMS21BigSalREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00117DAB">VMS21NeroCouchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010C721">vDialogueGomorrah</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00110A63">VMS21</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011C554">OmertaBossFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0017B05B">VMS21CompanionTeleportMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

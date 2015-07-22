@@ -1,0 +1,96 @@
+scn DLC02ElevDoorSCRIPT
+
+; this script runs on the DOOR object elevator in bailey's crossroads and sends the player to DLC02VSS01
+
+
+begin onActivate
+
+	if getActionRef == player
+		player.scaonactor
+		set DLC02LD.elevFlag to 1
+		setRumble 0.2 0.1 3
+		triggerHitShader 1
+
+;While we're running this block, set any followers to Waiting so they don't wander into Anchorage
+
+			if ( JerichoRef.HasBeenHired == 1 )
+				set JerichoRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( CharonRef.HasBeenHired == 1 )
+				set CharonRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( DogmeatRef.HasBeenHired == 1 )
+				set DogmeatRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( ButchRef.HasBeenHired == 1 )
+				set ButchRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( CloverRef.HasBeenHired == 1 )
+				set CloverRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( RL3Ref.HasBeenHired == 1 )
+				set RL3Ref.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( MQ08FawkesRef.HasBeenHired == 1 )
+				set MQ08FawkesRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( StarPaladinCrossRef.HasBeenHired == 1 )
+				set StarPaladinCrossRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bBooneHired == 1 )
+				set CraigBooneREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bCassHired == 1 )
+				set RoseofSharonCassidyREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bVeronicaHired == 1 )
+				set VeronicaREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bLilyHired == 1 )
+				set LilyREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.RaulHired == 1 )
+				set RaulREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.ArcadeHired == 1 )
+				set ArcadeREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.RexHired == 1 )
+				set RexREF.Waiting to 1
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bEDEHired == 1 )
+				if EDE1Ref.GetDisabled == 0
+					set EDE1Ref.Waiting to 1
+				elseif EDE2Ref.GetDisabled == 0
+					set EDE2Ref.Waiting to 1
+				elseif EDE3Ref.GetDisabled == 0
+					set EDE3Ref.Waiting to 1
+				endif
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+
+
+
+
+
+		.activate player
+	else
+		; do nothing
+	endif
+
+end

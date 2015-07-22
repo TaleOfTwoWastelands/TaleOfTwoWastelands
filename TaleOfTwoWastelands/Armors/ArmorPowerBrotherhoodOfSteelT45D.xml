@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="00075201">ArmorPowerBrotherhoodOfSteelT45D</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorPowerBrotherhoodOfSteelT45D</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-22</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>17</X>
+        <Y>24</Y>
+        <Z>26</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brotherhood T-45d Power Armor</Name>
+    <Script Tag="SCRI">
+      <Reference ID="00134B6F">BrotherhoodFactionOutfitWarningScript</Reference>
+    </Script>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D330">EnchPowerArmor</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>PowerArmor, Heavy</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\PowerArmor\PowerArmorComplete.NIF</FileName>
+          <TextureHashes Tag="MODT">+eQOcJzQH7d5ZA5wodAft3JvGXQEg8Y57t8QcDHur3VuXxBwNu6vdXJvGXQEg8Y5898QcDHur3VzXxBwNu6vdXJvGXQEg8Y5sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\PowerArmor\PowerArmorComplete.NIF</FileName>
+          <TextureHashes Tag="MO3T">+eQOcJzQH7d5ZA5wodAft3JvGXQEg8Y57t8QcDHur3VuXxBwNu6vdXJvGXQEg8Y5898QcDHur3VzXxBwNu6vdXJvGXQEg8Y5sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\PowerArmor\PowerArmorGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">+eQOcJzQH7d5ZA5wodAft3JvGXQEg8Y57t8QcDHur3VuXxBwNu6vdXJvGXQEg8Y5898QcDHur3VzXxBwNu6vdXJvGXQEg8Y5</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\PowerArmor\PowerArmorGO.NIF</FileName>
+          <TextureHashes Tag="MO4T">+eQOcJzQH7d5ZA5wodAft3JvGXQEg8Y57t8QcDHur3VuXxBwNu6vdXJvGXQEg8Y5898QcDHur3VzXxBwNu6vdXJvGXQEg8Y5</TextureHashes>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\power_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_power_armor.dds</Male>
+      </Message>
+    </Icon>
+    <RagdollConstraintTemplate Tag="BMCT">RagdollConstraint\default.rdt</RagdollConstraintTemplate>
+    <RepairList Tag="REPL">
+      <Reference ID="00075213">RepairPowerArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0C00DF99">ArmorPowerListBoS</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>4500</Value>
+      <MaxCondition>1000</MaxCondition>
+      <Weight>45</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>22</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013F297">ArmorPowerAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

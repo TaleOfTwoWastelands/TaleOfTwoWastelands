@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01860C">RestoreHotkeys</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RestoreHotkeys</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>2</ReferenceCount>
+        <CompiledSize>203</CompiledSize>
+        <VariableCount>10</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAADgANALUAAAABAQUAAwEFADkVDAABCwBWAQAAAwBCAAA5FQwAAQsAVgEAAAQAQgEAOxUQAMcAAAABCwBWAQAAAwBCCAc5FRcAARYAVgQAAAIAVgMAAAUAVgEAAAMAGAAWAA8ABAALACBYuhQFAAEAcgEAFgAPAAIACwAgZgIAIFoCACAhPbsVCAACAHMEAHIBAD8VAAAZAAAAGQAAADkVDAABCwBWAQAAAwBCARw5FQwAAQsAVgEAAAQAQgEcPBUAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="RestoreHotkeys.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">i</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">j</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">hotkeys</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01860D">TTWNoHotkeyDummy</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

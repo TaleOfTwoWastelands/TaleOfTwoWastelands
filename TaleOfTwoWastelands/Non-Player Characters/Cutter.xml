@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156A3">Cutter</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Cutter</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Cutter</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-900</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D8">ParadiseFallsResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000251D8">DoctorsDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00047CC8">MS08NoteOwnerFactionCutter</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0001C2A2">DeathItemCutter</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1E">FemaleAdult13</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="000A060F">DocAATEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000042C3">CaucasianOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0001FF00">DoctorTemplateSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340FE">OutfitWastelandDoctor01</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000ABD6A">WastelanderDoctorApparel</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0602F6EE">WithAmmoChinesePistolRaider</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Cautious</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Chems, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00078FE7">DoctorGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078F40">DoctorHoldPosition</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038874">ParadiseFallsCutterSleepClinic0x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038863">ParadiseFallsCutterSandboxClinicBASE</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015679">Doctor</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>5</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005DC73">HairMessy01F</Reference>
+      </Type>
+      <Length Tag="LNAM">0.899999976</Length>
+      <Color Tag="HCLR">
+        <Red>168</Red>
+        <Green>168</Green>
+        <Blue>168</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004252">EyeGreen</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">wEqRv+Barb5WZZM/sgy1vjCcsL5sI0W/QDnWvVJis7+48Yu/0TD6v4AgAz7D1eY/sINyvmxtLD8OaQA/nynTv68nLkB0h/O/SwemQMxjEcByVATABJg/vkDi777IwVI/wCfmvWBg+z5qmaTAUFhePvWROj8z8YpABm2QQCxOlL8ccUJALeWCP/xaFb7Twvo+hPSqv9xaRT/ubr4/V2WmwB5l/sDEtSRAuXLGP1KUMkA0IpG/BZrkwMJ0pD+i85JAzKH5vxSyoEA=</Symmetric>
+        <Asymmetric Tag="FGGA">kPGJvvWf2T41eLA+38Kiv2cAtT6OH94+LqlLvxv9frzKOls+uqh7P9DjxD8sJgi/jEsWP0Q/6b5KVH8/4MEsPw0AAj+0ZTs/vkKHv2xGuj+GdxY+1I12vt7ay70VxFQ/qDQmv993Bj+uJDK/ytmMviRRb78rvdQ/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">ssNLv+Xqor5uJtc9OUQ4v80chr5FNG+/PrsPv5pfbL8W2ko/PmgGPljGfL9w7kk8HSpzP6qKST+YRhI+tLMPwFYmWr4Quim+8cCAvqa/sL90HwhAR5IWQILzTr+AmTQ/Ad6+v2nUEcBCcSpAB5g5wOG9KL9oDy6/yTDHv0Ckhj6f1cc+dHDtQHyi/kA5tgXAUgBQv4CobDxSmCnAwGa9v7lgXL90NrxAnC/0v1jMdj8nQg/Ar4XsP9xbJsA5YFJA3IeQQMH2ub8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

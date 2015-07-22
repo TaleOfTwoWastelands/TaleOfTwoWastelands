@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed, CantWait_PlatformSpecificTexture_Dead</Flags>
+  <FormID ID="060B87B4">FFER21NPC1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FFER21NPC1</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Wasteland Junkie</Name>
+    <Model>
+      <FileName Tag="MODL">marker_creature.nif</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseFactions, UseActorEffectList, UseAIData, UseModelAnimation, UseBaseData, UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00041E7D">WastelanderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A4">SmokerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A6">GeneralIdleFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B761F">FFEChemVendorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1A">MaleAdult13</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="060B7620">FFEChemVendor</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000038E5">Hispanic</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000544A0">VendorCaravanChemsAll100</Item>
+          <Count>20</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000AB48D">WastelanderApparelHat25</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060295F6">RaiderWeaponGunDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0602E2A6">WastelanderApparelDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C0180C6">TTWSESAdvSpawner</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Average</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Chems, Stimpacks</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>300</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="000B87BA">FFER21Sandbox</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00000801">VaultDweller</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>50</Green>
+        <Blue>25</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">AAAAAA==</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAA==</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">AAAAAA==</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">1</Height>
+    <Weight Tag="NAM7">1</Weight>
+  </Subrecords>
+</Record>

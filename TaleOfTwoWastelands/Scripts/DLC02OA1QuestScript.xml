@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="07000E25">DLC02OA1QuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02OA1QuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>28</ReferenceCount>
+        <CompiledSize>1164</CompiledSize>
+        <VariableCount>26</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAH4EAAAWAA0ADQAJACBzGgAgMCA9PTMSCAACAHIIAHIJADMSCAACAHIIAHIKADMSCAACAHILAHIJADMSCAACAHILAHIKADMSCAACAHIMAHINADMSCAACAHIMAHIOADMSCAACAHIMAHIPADMSCAACAHIMAHIQADMSCAACAHIMAHIRADMSCAACAHIMAHISADMSCAACAHIMAHITADMSCAACAHIMAHIUABUABwBzGgACACAxGQAAABYADQAHAAkAIHMBACAwID09FgASAAIADgAgcgYAWCMQAAAgMCA9PRUABwBzAQACACAxFQAIAGYYAAMAIDYwGAAVAAIAEQAgWDoQBQABAHIVACA2MCA+PRUABwBzAQACACAxFQAIAGYYAAMAIDYwGQAAABgADQAJAAkAIHMBACAxID09FgANAAUACQAgZhgAIDAgPD0cAAEAIRACAAAALBIAAAESAAA5EAoAAgByFgBuCgAAABUABwBzAQACACAyFwACAAEAFQARAGYYAAwAIGYYACBYDBAAACAtGQAAABkAAAAWABIABgAOACByFwBYyxAAACAwID09FgAMAAEACAAgZgYAIDAgPhUAEQBmBgAMACBmBgAgWAwQAAAgLRcAAgACABwAAQDWEQIAAAAVAAgAZgYAAwAgMTAZAAAAGQAAABYAFwADABMAIHICAFhDEAUAAQByGAAgMSA9PRYAEgABAA4AIHIBAFgjEAAAIDAgPT0cAAEAIhACAAAAGQAAABkAAAAWAAwABgAIACBzFQAgMCA+FgAUAAQAEAAgWDoQBQABAHIWACA0NSA8FgAVAAEAEQAgWDoQBQABAHIWACA0MCA9PaMRDwADAHIWAG4oAAAAbgAAAAAZAAAAORAKAAIAchYAbh4AAAAZAAAAGQAAABYAFAADABAAIFg6EAUAAQByFgAgNDUgPBYAFgABABIAIHICAFgvEAUAAQByGQAgMCA+ORAKAAIAchYAbi0AAAAZAAAAGQAAABYAFQADABEAIFg6EAUAAQByFgAgNDUgPT0WABcAAQATACByAgBYthAFAAEAchkAIDEgPT05EAoAAgByFgBuMgAAABkAAAAZAAAAFgANABYACQAgcwQAIDIgPT0WABcAFAATACByAgBYQxAFAAEAchgAIDEgPT0cAAIAUhAPAAMAchkAbgEAAABuAQAAABwAAgCtEAUAAQByGgAcAAIAQhEFAAEAchsAYRAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAAAAAG4BAAAAbgEAAAAcAAIAnhAFAAEAchwAFQAJAHMEAAQAIDEgfhYAEgABAA4AIHIDAFgjEAAAIDAgPT0cAAMAIhACAAAAGQAAABYAEgABAA4AIHIEAFgjEAAAIDAgPT0cAAQAIhACAAAAGQAAABYAEgABAA4AIHIFAFgjEAAAIDAgPT0cAAUAIhACAAAAGQAAABwABgAiEAIAAAAWABIAAQAOACByBwBYIxAAACAwID09HAAHACIQAgAAABkAAAAkEgAAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC02OA1QuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RadioEnabled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerHelped</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">McGrawTalked</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerInChair</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerinSim</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">RadioTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MorrillGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MorrillClear</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MorrillFooled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">OA1AnimSetup</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">AnimTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">OlinGoodSide</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SibleyTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TrigPlayerAhead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SibleyMcGrawConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RuinsBattleDone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">OutcastsHostile</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SibleyOlinConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IntroDeadCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BaseDeadCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GuardGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SibleyCRTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">StartTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">listsUpdated</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="070013FE">DLC02OutcastRadioSignalREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602248E">RadioEnclaveREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0608A6DB">MS17RadioRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B01D2">DialogueAnimationBulkyArmors</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07001F09">DLC02ArmorPowerT51b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C18D">DLC02ArmorPowerT51bWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0008945E">AnimationRestrictedArmors</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CC824">AnimationRestrictedHeadGear</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003F39">DLC02ArmorChineseHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C18A">DLC02ArmorChineseHelmetWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003AFC">DLC02ArmorCombatSnowHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C18C">DLC02ArmorCombatSnowHelmetWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07001F08">DLC02ArmorPowerT51bHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C18E">DLC02ArmorPowerT51bHelmetWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003A03">DLC02ArmorStealthHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C190">DLC02ArmorStealthHelmetWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8F">MQ09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009BE">DLC02OA1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070013FC">DLC02OutcastRadioREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070012B8">DLC02VSS01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700A6C0">DLC02ArmorSimSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07001EC2">DLC02PlayerContainerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00043E94">StealthBoy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070015EF">DLC02SimulationStart</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

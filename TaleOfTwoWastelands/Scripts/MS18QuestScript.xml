@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="06028108">MS18QuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS18QuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>17</ReferenceCount>
+        <CompiledSize>1237</CompiledSize>
+        <VariableCount>38</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAMcEAAAWAA0ACwAJACBzDgAgMCA9PRYAJQAJACEAIHMLACAxID09IHMMACAxID09ICYmIHMNACAxID09ICYmWRALAAEAcgUAAAAAAAAAORAKAAIAcgYAbjIAAACjEQ8AAwByBgBuBQAAAG4AAAAAoxEPAAMAcgYAbhQAAABuAAAAAKMRDwADAHIGAG4ZAAAAbgAAAACjEQ8AAwByBgBuHAAAAG4AAAAAoxEPAAMAcgYAbh4AAABuAAAAAKMRDwADAHIGAG4oAAAAbgAAAAAVAAcAcw4AAgAgMRkAAAAZAAAAFgANAAcACQAgcx0AIDAgPT0WABUABQARACBYOhAFAAEAcgYAIDMwID49FgAXAAMAEwAgcgcAWC8QBQABAHIIACAxID49ohEPAAMAcgYAbhkAAABuAQAAAKMRDwADAHIGAG4cAAAAbgEAAAAVAAcAcx0AAgAgMRkAAAAZAAAAGQAAABYADQAJAAkAIHMWACAxID09FgAVAAcAEQAgWDoQBQABAHIGACAzMCA+PRwAAQC8ERMAAwByCQBuAQAAAHozMzMzMzPjPxwAAQACEAoAAgByCgBuCgAAABwAAgC8ERMAAwByCQBuAQAAAHoAAAAAAADgPxwAAgACEAoAAgByCgBuCgAAABwAAwACEAoAAgByCwBuCgAAABwAAwC8ERMAAwByDABuAQAAAHoAAAAAAADgPxUABwBzFgACACAyGQAAABkAAAAWABUAAwARACBYOhAFAAEAcgYAIDEwID09FgASAAEADgAgcgcAWEMQBQABAHINADkQCgACAHIGAG4UAAAAGQAAABkAAAAWAA0AAgAJACBzEAAgNSA9PTkQCgACAHIGAG4yAAAAFQAHAHMQAAIAIDYZAAAAFgANAAgACQAgcwoAIDIgPT0WABUABgARACBYOhAFAAEAcgYAIDUwID49FgAXAAQAEwAgcgcAWEMQBQABAHIOACAwID09HAADACIQAgAAABwAAwCeEAUAAQByDwAVAAoAcgYAcx4AAgAgMRUACgByBgBzCgACACAzGQAAABkAAAAZAAAAFgAZAAwAFQAgcwYAIDIgPT0gcxoAIDAgPT0gJiYWAAwAAQAIACBmIgAgMCA+FQARAGYiAAwAIGYiACBYDBAAACAtFwACAAgAFQAHAHMaAAIAIDEcAAQAExAJAAIAAwBuAQAAALIQBQABAHIQADkQCgACAHIGAG4oAAAAFQAHAHMIAAIAIDEcAAIAXhAAABwAAwBeEAAAHAABAF4QAAAZAAAAGQAAABYADQAEAAkAIHMjACAxID09HAABAIsQAgAAABwAAgCLEAIAAAAcAAMAixACAAAAFQAHAHMjAAIAIDIZAAAAFgANAAsACQAgcxUAIDAgPT0WABQABAAQACBYOhAFAAEAcgYAIDMwIDwWABcAAgATACByBwBYQxAFAAEAchEAIDEgPT2iEQ8AAwByBgBuDAAAAG4BAAAAFQAHAHMVAAIAIDEZAAAAGAAVAAQAEQAgWDoQBQABAHIGACAzMCA+PRYAGQACABUAIFikEQoAAgByBgBuDAAAACAwID09oxEPAAMAcgYAbgwAAABuAAAAABUABwBzFQACACAxGQAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MS18QuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TalkedBarrows</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ReillyNeg</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ProposalDone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BarrowsActive</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DonCell</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RoofReady</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AllMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Ambush</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButcherTalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButcherDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DonDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BrickDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">EndEarly</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushCounter</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DocRevive</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AltReward</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">EquipCheck</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Sidearm</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MS18Good</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MS18Bad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Order</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Fixed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoneWalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>28</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waypoint</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Battery</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">EndAIButcher</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>31</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">EndAIBrick</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">EndAIDonovan</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>33</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DonFixed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>34</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">FixitTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>35</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DeadMode</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>36</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmmoGivenBrick</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>37</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmmoGivenButcher</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>38</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmmoGivenDon</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B831">BrickRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B833">DonovanRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B832">ButcherRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060AF604">MS18PanelRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060388AC">MS18RangersDeadMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014EA5">MS18</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033BC6">FissionBattery</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000434F">Weap10mmPistol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00004241">Ammo10mm</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002937E">Ammo44magnum</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0008F215">WeapNV44Revolver</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06017F43">OurLadyHope01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06017F4F">StatesmanHotel01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06051F3E">MS18FinButcherRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603F29E">AMBElevatorMonumentPowerUp</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060314AE">zDCint12RangerCompound</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="000A6F77">ArmorPowerT51b</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorPowerT51b</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-15</X>
+        <Y>-22</Y>
+        <Z>-12</Z>
+      </Point1>
+      <Point2>
+        <X>15</X>
+        <Y>16</Y>
+        <Z>12</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">T-51b Power Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00061544">EnchT51bArmor</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150496</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\T-51bPowerArmor\Outfit.NIF</FileName>
+          <TextureHashes Tag="MODT">8u8QdANlqFlybxB0CGWoWXJvHnSX6FcQ7t8SdMbB8WduXxJ0y8HxZ3JvHnSX6FcQ898SdMbB8WdzXxJ0y8HxZ3JvHnSX6FcQsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\T-51bPowerArmor\ArmorGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">8u8QdANlqFlybxB0CGWoWXJvHnSX6FcQ7t8SdMbB8WduXxJ0y8HxZ3JvHnSX6FcQ898SdMbB8WdzXxJ0y8HxZ3JvHnSX6FcQ</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\power_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_power_armor.dds</Male>
+      </Message>
+    </Icon>
+    <RagdollConstraintTemplate Tag="BMCT">RagdollConstraint\default.rdt</RagdollConstraintTemplate>
+    <RepairList Tag="REPL">
+      <Reference ID="00075213">RepairPowerArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="000B8AA4">ArmorPower51bList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>5200</Value>
+      <MaxCondition>2000</MaxCondition>
+      <Weight>40</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>25</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013F297">ArmorPowerAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

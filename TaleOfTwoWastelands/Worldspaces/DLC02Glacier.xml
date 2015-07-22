@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="07000BF2">DLC02Glacier</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02Glacier</EditorID>
+    <Name Tag="FULL">Anchorage Cliffs</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0700848A">DLC02AnchorageBattleZone</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="07000E28">DLC02AnchorageBattle</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">UseMapData</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="070097EA">DLC02AnchPreDawnClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="0700CE70">DLC02OceanWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="0700CE70">DLC02OceanWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>-10000</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1.5</WorldMapScale>
+      <Offset>
+        <CellX>95000</CellX>
+        <CellY>-50000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="070022E7">DLC02AnchBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, CannotFastTravel, NoLODNoise</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-73728</X>
+        <Y>-73728</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>73728</X>
+        <Y>94208</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <SwappedImpacts>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="0001E37D">BalisticDirtImpact</OldImpact>
+        <NewImpact ID="070034FD">BalisticSnowImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="000A9D70">ExplosionDirtLargeImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="00094B90">ExplosionDirtImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+    </SwappedImpacts>
+    <FootstepMaterial Tag="IMPF">
+      <ConcreteSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteSolid>
+      <ConcreteBroken>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteBroken>
+      <MetalSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSolid>
+      <MetalHollow>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalHollow>
+      <MetalSheet>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSheet>
+      <Wood>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Wood>
+      <Sand>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Sand>
+      <Dirt>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Dirt>
+      <Grass>U25vdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Grass>
+      <Water>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Water>
+    </FootstepMaterial>
+  </Subrecords>
+</Record>

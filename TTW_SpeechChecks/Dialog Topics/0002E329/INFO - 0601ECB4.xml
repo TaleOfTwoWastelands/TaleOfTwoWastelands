@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0601ECB4">INFO - 0601ECB4</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0602E377">DialogueAndale</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0602E348">INFO - 0602E348</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Surprise</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">[SUCCEEDED] You're right, it sure would have. You know, you're a breath of fresh air. Every time someone discovers our little secret, we have to hear about it.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">It's always "oh, how can you do this", or "you're such terrible people", or "please, not me, I have a kid in Rivet City". Well, I have kids too!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Family first, that's the way it works in Andale -- from the day that the first four families decided to stay here.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>4</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">You're not bad, stranger. Stop on by anytime and ask Linda for one of her special meat pies.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>40</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Speech</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="0602E377">DialogueAndale</Quest>
+          <VariableIndex>11</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06029AA1">JackSmith</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>10</ReferenceCount>
+          <CompiledSize>145</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAMAHIJAHMMAAQAIDEgfhUACgByCQBzBwACACAxHAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAAcAAUAXhAAABwABQCeEAUAAQByCgAcAAYAXhAAABwABgCeEAUAAQByCgAcAAcAchAHAAEAbhkAAAAcAAgAchAHAAEAbhkAAAB3EQcAAQBuKAAAAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">set DialogueAndale.AndaleConfrontation to -1
+set DialogueAndale.PlayerHasJoinedCannibals to 1
+JackSmithREF.evp
+BillWilsonREF.evp
+LindaSmithREF.evp
+MarthaWilsonREF.evp
+JennyWilsonREF.evp
+JennyWilsonREF.MoveTo JennyWilsonRoomMARKER
+JuniorSmithREF.evp
+JuniorSmithREF.MoveTo JennyWilsonRoomMARKER
+AndaleOldManHarrisFrontDoorREF.Lock 25
+AndaleOldManHarrisBackDoorREF.Lock 25
+rewardxp 40</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DCA3">JackSmithREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06093EDC">BillWilsonREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DCA4">LindaSmithREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DC74">MarthaWilsonREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DC70">JennyWilsonREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DCA1">JuniorSmithREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DB45">AndaleOldManHarrisFrontDoorREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602DCD9">AndaleOldManHarrisBackDoorREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0602E377">DialogueAndale</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0601A33B">JennyWilsonRoomMARKER</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I would have grabbed myself a snack while I was in there, but that'd be rude.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004BB">AVSpeech</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

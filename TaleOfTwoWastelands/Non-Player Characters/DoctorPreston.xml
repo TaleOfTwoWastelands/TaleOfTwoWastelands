@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156D0">DoctorPreston</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DoctorPreston</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Doctor Preston</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D9">RCResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000251D8">DoctorsDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00047CCA">MS08NoteOwnerFactionDoctorPreston</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000ABFEE">RCGenericVoiceFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B0298">RCWeatherlyChairEast</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D81">DeathItemDoctorPreston</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0602AB62">MaleAdult14</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="000A060F">DocAATEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000042C1">AsianOld</Reference>
+    </Race>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000A5F1E">TrainingMedicine</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0001FF00">DoctorTemplateSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001C296">GlassesReading</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D9">OutfitRivetCityScientist</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00037828">LootChemsHealing75</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003A2B2">LootChemsHealing100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF5E">DoctorPrestonRoomKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000A1BF2">ClutterDoctor100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06038805">FoodGeneric100DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Cautious</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Chems, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0003098F">WeddingFrontRight</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078FE7">DoctorGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078F40">DoctorHoldPosition</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F0E9">DoctorPrestonEat16x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F24B">DoctorPrestonVisitDoctorLiThu20x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F0E8">DoctorPrestonClinic8x13</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F0E7">DoctorPrestonEat6x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F0E6">DoctorPrestonSleep22x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F0E5">DoctorPrestonHomeDefault</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015679">Doctor</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>5</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0002F21F">BeardThin</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000A9D6F">HairMessy01</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>191</Red>
+        <Green>183</Green>
+        <Blue>183</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">jHUHvt4jv772GEc/A82bv1RkY79ImjC/tdLMvuI1Er8A+5Q9O4clvglstz/NVkM+1lGlPVxnKb8gCE+/FwwRwFQvX784Wlu+7n4oQEQGiT+BzoY/P28hP11l+D98OPa/+A2HP/1Nbj+vV/6/XTQ5P7ioWUAmVeM/oqG6P/r+6b+mBI9AJPw+v8lP578EnaI/tmiwPw3DPD+iNYw/uq4kQECwUkDNMrxACL/uPxA9sEB592u/CgagwJgP8j90XvxAn55bwIRlG0A=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">FLiyvxhckT5IOQ6/hIN5vwNZnz+giB09IGwiPvAngr2+xJ2/wvl+vzr/jj7sC4Y/Oy7Gv/C8qj7gmXo+bVjXv9nGuT+AKUK+qa17v5qbAcCkTTU/LitiQNEmVj5qrZA/YuCnv/7WZj+Ahsi+AqbVPnqGbb8YyHy9DBKmP8ptBr9qolZAD3f9PlR/Y8Ag3VDA+3uMvwhh+77JZ/E/pGPXP2zgMr8iDCtAnCALP7DlNEDD77i/qkajvjycxL+KYNU/zpOqv6RUlEA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

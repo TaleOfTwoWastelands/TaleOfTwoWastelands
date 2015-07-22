@@ -1,0 +1,135 @@
+scn MQ05FollowerCatchupTrigSCRIPT
+; this script runs on a trigger in TaftTunnel01 that fakes followers moving through a load door 
+;    in case they've been left behind somewhere at Project Purity or Taft Tunnel
+; Erik may want ot make this more robust later on.
+
+short doOnce
+
+begin onTriggerEnter player
+
+	if doOnce == 0
+		set doOnce to 1
+
+		MQ05EnclaveTaftBarrier.enable										; enable Enclave energy field to prevent backtracking in 02
+		DisableNavmesh TaftMinMesh										; disable navmesh under that energy field to prevent NPC pathing in low?
+		TaftCheckpointDoor.unlock												; unlock door @ Brotherhood checkpoint
+	
+		if getStage MQ05 >= 80 && getStage MQ05 < 100
+		;; // Check for here/dead on all the MQ05 tagalong NPCs
+			if DoctorLiRef.getInCell TaftTunnel01 == 0
+				if DoctorLiRef.getDead == 0
+					DoctorLiRef.moveto MQ05FollowerCatchupMarker
+				endif				
+			endif
+			if GarzaRef.getInCell TaftTunnel01 == 0
+				if GarzaRef.getDead == 0
+					GarzaRef.moveto MQ05FollowerCatchupMarker
+				endif				
+			endif
+			if DanielAgincourtRef.getInCell TaftTunnel01 == 0
+				if DanielAgincourtRef.getDead == 0
+					DanielAgincourtRef.moveto MQ05FollowerCatchupMarker
+				endif				
+			endif
+			if AlexDargonRef.getInCell TaftTunnel01 == 0
+				if AlexDargonRef.getDead == 0
+					AlexDargonRef.moveto MQ05FollowerCatchupMarker
+				endif				
+			endif
+
+		;; // Check for hired/here/dead on all the NPC followers the player might have
+			if followers.CharonHired == 1 && CharonREF.getInCell TaftTunnel01 == 0
+				if CharonREF.getDead == 0
+					CharonREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.FawkesHired == 1 && MQ08FawkesREF.getInCell TaftTunnel01 == 0
+				if MQ08FawkesREF.getDead == 0
+					MQ08FawkesREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.JerichoHired== 1 && JerichoREF.getInCell TaftTunnel01 == 0
+				if JerichoREF.getDead == 0
+					JerichoREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.StarPaladinCrossHired== 1 && StarPaladinCrossREF.getInCell TaftTunnel01 == 0
+				if StarPaladinCrossREF.getDead == 0
+					StarPaladinCrossREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.ButchHired== 1 && ButchREF.getInCell TaftTunnel01 == 0
+				if ButchREF.getDead == 0
+					ButchREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.RL3Hired== 1 && RL3REF.getInCell TaftTunnel01 == 0
+				if RL3REF.getDead == 0
+					RL3REF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.CloverHired== 1 && CloverREF.getInCell TaftTunnel01 == 0
+				if CloverREF.getDead == 0
+					CloverREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if followers.DogmeatHired== 1 && DogmeatREF.getInCell TaftTunnel01 == 0
+				if DogmeatREF.getDead == 0
+					DogmeatREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bBooneHired == 1 && CraigBooneREF.getInCell TaftTunnel01 == 0
+				if CraigBooneREF.getDead == 0
+					CraigBooneREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bCassHired == 1 && RoseofSharonCassidyREF.getInCell TaftTunnel01 == 0
+				if RoseofSharonCassidyREF.getDead == 0
+					RoseofSharonCassidyREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bVeronicaHired == 1 && VeronicaREF.getInCell TaftTunnel01 == 0
+				if VeronicaREF.getDead == 0
+					VeronicaREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bLilyHired == 1 && LilyREF.getInCell TaftTunnel01 == 0
+				if LilyREF.getDead == 0
+					LilyREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.RaulHired == 1 && RaulREF.getInCell TaftTunnel01 == 0
+				if RaulREF.getDead == 0
+					RaulREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.ArcadeHired == 1 && ArcadeREF.getInCell TaftTunnel01 == 0
+				if ArcadeREF.getDead == 0
+					ArcadeREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.RexHired == 1 && RexREF.getInCell TaftTunnel01 == 0
+				if RexREF.getDead == 0
+					RexREF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bEDEHired == 1 && EDE1REF.getInCell TaftTunnel01 == 0 && EDE1REF.GetDisabled == 0
+				if EDE1REF.getDead == 0
+					EDE1REF.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bEDEHired == 1 && EDE2Ref.getInCell TaftTunnel01 == 0 && EDE2Ref.GetDisabled == 0
+				if EDE2Ref.getDead == 0
+					EDE2Ref.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+			if vNPCFollowers.bEDEHired == 1 && EDE3Ref.getInCell TaftTunnel01 == 0 && EDE3Ref.GetDisabled == 0
+				if EDE3Ref.getDead == 0
+					EDE3Ref.moveto MQ05FollowerCatchUpMarker
+				endif
+			endif
+		endif
+	endif
+
+end
+		

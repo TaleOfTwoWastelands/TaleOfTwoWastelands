@@ -1,0 +1,11 @@
+scn TTWTrigPlayerEnable01SCRIPT
+
+; This trigger is triggered by the player only and Disables its Linked ref.  
+
+ref targetREF
+
+Begin onTriggerEnter Player
+		set targetREF to getLinkedRef
+		targetREF.Disable
+	endif
+End

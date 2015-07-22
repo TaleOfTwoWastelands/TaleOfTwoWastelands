@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="MESG">
+  <Flags>0</Flags>
+  <FormID ID="0C001BE1">TTWPreorderMenu</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWPreorderMenu</EditorID>
+    <Content Tag="DESC">Which Courier's Stash Packs would you like to enable?</Content>
+    <Header Tag="FULL">Choose Courier's Stash Packs</Header>
+    <Icon Tag="INAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </Icon>
+    <MessageFlags Tag="DNAM">MessageBox</MessageFlags>
+    <Buttons>
+      <Button>
+        <ButtonText Tag="ITXT">Enable Caravan Pack (Currently Disabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>1</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Disable Caravan Pack (Currently Enabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>1</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Enable Classic Pack (Currently Disabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>2</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Disable Classic Pack (Currently Enabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>2</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Enable Mercenary Pack (Currently Disabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>3</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Disable Mercenary Pack (Currently Enabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>3</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Enable Tribal Pack (Currently Disabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>7</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Disable Tribal Pack (Currently Enabled)</ButtonText>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetQuestVariable</Type>
+              <Quest ID="0C001BE7">TTWVPreorder00</Quest>
+              <VariableIndex>7</VariableIndex>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Done</ButtonText>
+      </Button>
+    </Buttons>
+  </Subrecords>
+</Record>

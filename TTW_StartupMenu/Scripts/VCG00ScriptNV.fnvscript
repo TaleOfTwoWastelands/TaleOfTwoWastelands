@@ -1,0 +1,97 @@
+scn VCG00ScriptNV
+
+short bRunTimer	;
+float fTimer	;
+short iDoOnce
+
+begin MenuMode
+	if iDoOnce == 1
+		RETURN
+	else
+		; Move Player to startupCell
+		if getStage TTWCG00 < 5 && getStage CG00 < 5 && getStage VCG00 < 5
+				setstage TTWCG00 0
+				set iDoOnce to 1
+		endif
+	endif
+end
+
+begin gamemode
+	
+	;if (TTWCG00.iGameChoice == 1) || getQuestCompleted CG04
+	;else
+	;	return
+	;endif
+	
+	if bRunTimer == 1
+		if fTimer > 0
+			set fTimer to fTimer - GetSecondsPassed
+		else
+			; anywhere we need a timer
+			if getstage VCG00 == 0
+				setstage VCG00 5
+			elseif getstage VCG00 == 5
+				setStage VCG00 7
+			elseif getstage VCG00 == 10
+				setstage vcg00 11
+			elseif getstage VCG00 == 11
+				setStage VCG00 12
+			elseif getstage VCG00 == 12						; Pistol whip!
+				setStage VCG00 13
+			elseif getstage VCG00 == 14						
+				setStage VCG00 15
+			elseif getstage VCG00 == 15	;benny smokes 
+				setstage VCG00 20
+			elseif getstage VCG00 == 20	;benny loads his gun
+				setstage VCG00 23
+			elseif getstage VCG00 == 23
+				setstage VCG00 24
+			elseif getstage VCG00 == 24
+				setstage VCG00 25
+			elseif getstage VCG00 == 25
+				SetStage VCG00 27
+			elseif getstage VCG00 == 27
+				SetStage VCG00 30
+			elseif getstage VCG00 == 30
+				SetStage VCG00 33
+			elseif getstage VCG00 == 33
+				SetStage VCG00 35
+			elseif getstage VCG00 == 35
+				SetStage VCG00 36
+			elseif getstage VCG00 == 36
+				SetStage VCG00 37
+			elseif getstage VCG00 == 37
+				SetStage VCG00 38
+			elseif getstage VCG00 == 38
+				SetStage VCG00 39
+			elseif getstage VCG00 == 39
+				SetStage VCG00 40
+			elseif getstage VCG00 == 40
+				SetStage VCG00 43
+			elseif getstage VCG00 == 43
+				SetStage VCG00 50
+			elseif getstage VCG00 == 50
+				SetStage VCG00 53
+			elseif getstage VCG00 == 53
+				SetStage VCG00 54
+			elseif getstage VCG00 == 54
+				SetStage VCG00 55
+			elseif getstage VCG00 == 55
+				SetStage VCG00 60
+			elseif getstage VCG00 == 60
+				SetStage VCG00 70
+			elseif getstage VCG00 == 70
+				SetStage VCG00 75
+			elseif getstage VCG00 == 80
+				SetStage VCG00 85
+			elseif getstage VCG00 == 85
+				SetStage VCG00 90
+			elseif getstage VCG00 == 90
+				SetStage VCG00 95
+			elseif getstage VCG00 == 95
+				SetStage VCG00 100
+			endif
+		endif
+	endif
+
+end  

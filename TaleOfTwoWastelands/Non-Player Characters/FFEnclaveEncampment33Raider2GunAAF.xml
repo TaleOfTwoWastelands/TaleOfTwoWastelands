@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060C7D5C">FFEnclaveEncampment33Raider2GunAAF</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FFEnclaveEncampment33Raider2GunAAF</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Raider</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, Respawn, AutoCalcStats, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>4</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseFactions, UseActorEffectList, UseAIData, UseAIPackages, UseModelAnimation, UseBaseData, UseScript</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021476">RaiderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A4">SmokerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A6">GeneralIdleFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B87B3">RaiderHumanVoiceFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="060B7CC0">DeathItemRaider15DC</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0609C468">FemaleGroupRaiderDC</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="06029604">Raider2GunAAFTEMPLATEDC</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="0004BF72">AfricanAmericanRaider</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0004E6A0">HelmetEyebot</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.200000003</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000ABED7">WithAmmoLaserPistolEnclave0</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060A84DC">Raider2WeaponGunDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060BDA3B">RaiderLootDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060C5C24">Raider2WeaponGunBackup25DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00AD1E">ArmorEnclaveTier1Combined</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0601945E">RaiderSmallGun</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>25</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>7</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>43</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>45</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00072E34">HairRaiderF05</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>167</Red>
+        <Green>104</Green>
+        <Blue>168</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0002A44B">CSRaider</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">oOlavdpM7T7Aw6M+gMhgPiyomT/eCwS/Dvt/P7o2tD5Id9W+ABlDvVyC3r/fqsQ+vRnDvgBrMD71jbe/ALIowO8D8T/woMS/pLwZP7KhST9QM03ACM8VP8wb7r44Scc/z+HTP6XnEEB4w+y+fNOaP+w0pL5qbZ8+KFpSP7C/Vr7y6WG/uBlkvxMbYcDgsLS/stMowJRE7z5dTBa/dBMyQOC8Jb06pgdAWqHxQKZgob849ClAaraQP40RscCpQJm/SJ7bv5XQ9r8=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">+BSNvgT91b8zsAg/cNXpPk74a77+Is++VLl5v/sair7YR/69tNWYPgwNZ75akTq/GE1iPitf0j6ZEty/ml3iv2IFBT5dwAo/GuwwwLcEGj/MGOm+9xMfQGce3r+SIbI/cnG2voWdhj43ang/brKTvwzenb6aPy3ABXNqP6ae8D9aG4dAyhVyPpMnfL0NHIY+ooN7v+diQ8Bwawo9cKRUP9MZ0D/QrN08gzymQKReSD+QFNK/bNI8P8oQCD8pYILA6hM1wLadkEA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">1</Height>
+    <Weight Tag="NAM7">1</Weight>
+  </Subrecords>
+</Record>

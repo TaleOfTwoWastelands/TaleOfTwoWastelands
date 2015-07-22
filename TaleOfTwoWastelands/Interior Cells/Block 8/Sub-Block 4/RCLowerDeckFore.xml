@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="06067488">RCLowerDeckFore</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RCLowerDeckFore</EditorID>
+    <Name Tag="FULL">Broken Bow</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, HasWater</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>22</Red>
+          <Green>24</Green>
+          <Blue>29</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>30</Red>
+          <Green>50</Green>
+          <Blue>45</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>500</Near>
+        <Far>4000</Far>
+        <ClipDistance>4000</ClipDistance>
+        <Power>1</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0006A0C0">RCUpperDecksTemplate</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, FogNear, FogFar, FogClipDistance, FogPower</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WaterFlowRippleNoise01.dds</WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0006A0A2">RCDefaultImageSpace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="06071989">RivetCityForeZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="060B25B2">IntRivetCityDefault01</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090906">DefaultPublic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0B000F95">DLC05Hangar</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05Hangar</EditorID>
+    <Name Tag="FULL">Hangar</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>45</Red>
+          <Green>40</Green>
+          <Blue>36</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>105</Red>
+          <Green>109</Green>
+          <Blue>92</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>500</Near>
+        <Far>120000</Far>
+        <ClipDistance>40000</ClipDistance>
+        <Power>0.300000012</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">3.40282347E+38</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0B000851">DLC05MZImageSpace01</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0B0058D3">DLC05ZetaZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0B00B31F">IntDLC05MothershipGeneral</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

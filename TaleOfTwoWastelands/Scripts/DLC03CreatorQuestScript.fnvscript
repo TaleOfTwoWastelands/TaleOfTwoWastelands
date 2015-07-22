@@ -1,0 +1,133 @@
+ScriptName DLC03CreatorQuestScript
+
+short playerSleep
+short DLC03DeathClawControl
+short NukaCount
+short Quantums
+Short FEVaquaPuraCount
+Short NukaConverted
+Short DLC03MessageRan
+short ThirtyGood
+short ThirtyBad
+short ThirtyNeutral
+short PuppiesActive
+
+float DLC03StartTimer
+
+begin menumode
+	; player has the Deep Sleep perk and is sleeping
+	if Player.HasPerk DLC03DeepSleep == 1 && IsPCSleeping == 1
+		set playerSleep to 2
+	endif
+
+	; player has the Puppies! perk
+	If DogmeatRef.GetDead == 1 && Player.HasPerk DLC03Puppies
+		If Player.GetDistance DogmeatRef > 8000
+			If PuppiesActive == 0
+				Set PuppiesActive to 1
+				DogmeatRef.SetActorFullName DLC03Freshmeat
+				DogmeatREF.AddSpell DLC03PuppiesEffect
+			EndIf
+			DogmeatRef.Enable
+			DogmeatRef.Resurrect
+			DogmeatRef.AddToFaction FollowerFaction 0
+			Set Followers.PlayerHasFollower to 1
+			Set Followers.DogmeatHired to 1
+			Set DogmeatRef.Waiting to 1
+			Set DogmeatRef.IsFollowingDefault to 1
+			Set DogmeatRef.IsFollowingLong to 0
+			Set DogmeatRef.IsFollowingShort to 0
+			Set DogmeatRef.CombatStyleRanged to 0
+			Set DogmeatRef.CombatStyleMelee to 1
+			DogmeatRef.SetCombatStyle FollowersCombatStyleMelee
+			DogmeatRef.SetPlayerTeammate 1
+			DogmeatRef.AddToFaction TeammateFaction 1
+		EndIf
+	EndIf
+
+end
+
+begin gamemode
+
+
+
+; if Enclave Radio ref has been enabled, it means the player is out of the vault, which means it's time to run the message box
+
+	if ( DLC03MessageRan == 0 )
+		if ( RadioEnclaveRef.GetDisabled == 0 )
+
+			Set DLC03MessageRan to 1
+			set DLC03StartTimer to 60
+		elseif ( GetStage MQ09 >= 60 )
+			Set DLC03MessageRan to 1
+			Set DLC03StartTimer to 60
+		endif
+	elseif ( DLC03MessageRan == 1 )
+		if ( DLC03StartTimer <= 0 )
+			ShowMessage DLC03StartMessage
+			Set DLC03MessageRan to 2
+		else
+			set DLC03StartTimer to ( DLC03StartTimer - GetSecondsPassed )
+		endif
+		
+	endif
+
+
+
+	if playerSleep == 2
+		; player has actually slept in this bed
+		; give player Well-Rested spell and then clear variable
+		player.CastImmediateOnSelf WellRestedSpell
+		set playerSleep to 0
+	endif
+
+	; player has Quantum Chemist perk
+	If Player.HasPerk DLC03QuantumChemist == 1
+		If Player.GetItemCount NukaCola > 9
+			Set NukaCount to Player.GetItemCount NukaCola
+			Set Quantums to NukaCount / 10
+			Set NukaConverted to Quantums * 10
+			Player.RemoveItem NukaCola NukaConverted
+			Player.AddItem MS05NukaColaQtm Quantums
+		EndIf
+	EndIf
+
+;These are for the Level 30 Achievements
+
+	If ThirtyBad == 0
+		If Player.GetLevel >= 30
+			 If Player.GetAv Karma < -250
+				;AddAchievement 62
+				Set ThirtyGood to -1
+				Set ThirtyNeutral to -1
+				Set ThirtyBad to 1 
+			endif
+		endif
+	endif
+
+	If ThirtyNeutral == 0
+		If Player.GetLevel >= 30
+			If Player.GetAv Karma >= -250
+				If Player.GetAv Karma <= 250
+					;AddAchievement 63
+					Set ThirtyGood to -1
+					Set ThirtyNeutral to 1
+					Set ThirtyBad to -1 
+				endif
+			endif
+		endif
+	endif
+
+
+	If ThirtyGood == 0
+		If Player.GetLevel >= 30
+			 If Player.GetAv Karma > 250
+				;AddAchievement 64
+				Set ThirtyGood to 1
+				Set ThirtyNeutral to -1
+				Set ThirtyBad to -1 
+			endif
+		endif
+	endif
+
+end

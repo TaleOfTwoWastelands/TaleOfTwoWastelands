@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E95">MS02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06037364">MS02QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">The Superhuman Gambit</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Called when the player begins the quest and agrees to stop the "heroes".</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>39</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbhQAAABuAQAAABwAAQAhEAIAAAAcAAIAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS02 20 1
+AntAgonizerRef.enable
+mechanistRef.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037225">AntAgonizerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037224">MechanistRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Uncle Roe has been killed, somehow... I'm looking at you, player.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAIAFQAgWKURCgACAHIBAG54AAAAIDEgPT2jEQ8AAwByAQBueAAAAG4AAAAAoxEPAAMAcgEAboIAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if GetObjectiveDisplayed MS02 120 == 1
+   SetObjectiveDisplayed MS02 120 0
+   SetObjectiveDisplayed MS02 130 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The Mechanist raids the AntAgonizer's base! Just when the player said he'd join up with the AntAgonizer! What are the odds?!?! Time for a fight!</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>144</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIGABwAAgAhEAIAAAAcAAMAIRACAAAAHAAEACEQAgAAABUACgByBwBzLgACACAxHAABAF4QAAAcAAUAXhAAABwAAwAWEAUAAQByAgAcAAQAFhAFAAEAcgIAHAADABYQBQABAHIBABwABAAWEAUAAQByAQCjEQ8AAwByBwBuRgAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Make the Mechanist and his robot appear, and have him dialogue the player and then attack
+MechanistREF.moveto MS02MechanistAttack1Marker
+MS02RaidRobotREF.enable
+MS02AntAttack1REF.enable
+MS02AntAttack2REF.enable
+set MS02.MechanistRaiding to 1
+MechanistREF.evp
+AntAgonizerREF.evp
+MS02AntAttack1REF.startcombat MS02RaidRobotREF
+MS02AntAttack2REF.startcombat MS02RaidRobotREF
+MS02AntAttack1REF.startcombat MechanistREF
+MS02AntAttack2REF.startcombat MechanistREF
+setObjectiveDisplayed MS02 70 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037224">MechanistRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B294F">MS02RaidRobotREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AC048">MS02AntAttack1REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AC047">MS02AntAttack2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037225">AntAgonizerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B2951">MS02MechanistAttack1Marker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The AntAgonizer raids the Mechanist's base! Just when the player said he'd join up with the Mechanist! What are the odds?!?! Time for a fight!</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>145</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIKABwAAgAhEAIAAAAcAAMAIRACAAAAHAAEACEQAgAAABwABQAhEAIAAAAcAAYAIRACAAAAFQAKAHILAHMvAAIAIDEcAAEAXhAAABwABwBeEAAAHAAHABYQBQABAHIGAKMRDwADAHILAG5LAAAAbgEAAAAcAAgAcxACAAAAHAAJAHMQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Make the AntAgonizer and her ants appear, and have him dialogue the player and then attack
+AntAgonizerREF.moveto MS02AntAgonizerAttack1Marker
+MS02RaidAnt1REF.enable
+MS02RaidAnt2REF.enable
+MS02RaidAnt3REF.enable
+MS02RaidAnt4REF.enable
+MS02RaidAnt5REF.enable
+set MS02.AntAgonizerRaiding to 1
+AntAgonizerREF.evp
+MechanistREF.evp
+MechanistREF.startcombat MS02RaidAnt5REF
+setObjectiveDisplayed MS02 75 1
+ElevatorForge01to03REF.unlock
+ElevatorForge03to01REF.unlock</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037225">AntAgonizerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B294C">MS02RaidAnt1REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B294B">MS02RaidAnt2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C5C29">MS02RaidAnt3REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C5C2A">MS02RaidAnt4REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C5C2B">MS02RaidAnt5REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037224">MechanistRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603D3DF">ElevatorForge01to03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603D811">ElevatorForge03to01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B294E">MS02AntAgonizerAttack1Marker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has convinced the AntAgonizer to retire</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>224</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG5kAAAAFQAKAHICAHM0AAIAIDEWADEAAgAtACBYOxAKAAIAcgIAblUAAAAgMSA9PSBYOxAKAAIAcgIAbl8AAAAgMSA9PSB8fKIRDwADAHICAG5zAAAAbgEAAAA5EAoAAgByAgBueAAAABgAMQADAC0AIFg7EAoAAgByAgBuVQAAACAwID09IFg7EAoAAgByAgBuXwAAACAwID09ICYmoxEPAAMAcgIAbm4AAABuAQAAADkQCgACAHICAG5kAAAAoxEPAAMAcgIAbngAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Reward karma for non-violent solution and therapy
+player.rewardkarma 100
+set MS02.AARetired to 1
+
+;If the player has dealt with the other super
+if (getStageDone MS02 85 == 1 || getStageDone MS02 95 == 1)
+   setObjectiveCompleted ms02 115 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 85 == 0 &amp;&amp; getStageDone MS02 95 == 0)
+   setObjectiveDisplayed ms02 110 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">81</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has let the AntAgonizer continue on into the Wasteland</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>224</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG6c////FQAKAHICAHM1AAIAIDEWADEAAgAtACBYOxAKAAIAcgIAblUAAAAgMSA9PSBYOxAKAAIAcgIAbl8AAAAgMSA9PSB8fKIRDwADAHICAG5zAAAAbgEAAAA5EAoAAgByAgBueAAAABgAMQADAC0AIFg7EAoAAgByAgBuVQAAACAwID09IFg7EAoAAgByAgBuXwAAACAwID09ICYmoxEPAAMAcgIAbm4AAABuAQAAADkQCgACAHICAG5kAAAAoxEPAAMAcgIAbngAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Karma penalty for letting them continue their actions
+player.rewardkarma -100
+set MS02.AALeft to 1
+
+;If the player has dealt with the other super
+if (getStageDone MS02 85 == 1 || getStageDone MS02 95 == 1)
+   setObjectiveCompleted ms02 115 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 85 == 0 &amp;&amp; getStageDone MS02 95 == 0)
+   setObjectiveDisplayed ms02 110 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">85</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has convinced the Mechanist to retire</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>224</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG5kAAAAFQAKAHICAHM3AAIAIDEWADEAAgAtACBYOxAKAAIAcgIAblAAAAAgMSA9PSBYOxAKAAIAcgIAbloAAAAgMSA9PSB8fKIRDwADAHICAG5uAAAAbgEAAAA5EAoAAgByAgBueAAAABgAMQADAC0AIFg7EAoAAgByAgBuUAAAACAwID09IFg7EAoAAgByAgBuWgAAACAwID09ICYmoxEPAAMAcgIAbnMAAABuAQAAADkQCgACAHICAG5kAAAAoxEPAAMAcgIAbngAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Reward karma for non-violent solution and therapy
+player.rewardkarma 100
+set MS02.MRetired to 1 
+
+;If the player has dealt with the other super
+if (getStageDone MS02 80 == 1 || getStageDone MS02 90 == 1)
+   setObjectiveCompleted ms02 110 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 80 == 0 &amp;&amp; getStageDone MS02 90 == 0)
+   setObjectiveDisplayed ms02 115 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">86</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has let the Mechanist continue on, into the wasteland.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>224</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG6c////FQAKAHICAHM4AAIAIDEWADEAAgAtACBYOxAKAAIAcgIAblAAAAAgMSA9PSBYOxAKAAIAcgIAbloAAAAgMSA9PSB8fKIRDwADAHICAG5uAAAAbgEAAAA5EAoAAgByAgBueAAAABgAMQADAC0AIFg7EAoAAgByAgBuUAAAACAwID09IFg7EAoAAgByAgBuWgAAACAwID09ICYmoxEPAAMAcgIAbnMAAABuAQAAADkQCgACAHICAG5kAAAAoxEPAAMAcgIAbngAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Karma penalty for letting them continue their actions
+player.rewardkarma -100
+set MS02.MLeft to 1
+
+;If the player has dealt with the other super
+if (getStageDone MS02 80 == 1 || getStageDone MS02 90 == 1)
+   setObjectiveCompleted ms02 110 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 80 == 0 &amp;&amp; getStageDone MS02 90 == 0)
+   setObjectiveDisplayed ms02 115 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has killed the AntAgonizer.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>247</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgEAcwIAIDEgPT0VAAoAcgIAcyMAAgAgMRkAAAAVAAoAcgIAczMAAgAgMRYAMQACAC0AIFg7EAoAAgByAgBuVQAAACAxID09IFg7EAoAAgByAgBuXwAAACAxID09IHx8ohEPAAMAcgIAbnMAAABuAQAAADkQCgACAHICAG54AAAAGAAxAAMALQAgWDsQCgACAHICAG5VAAAAIDAgPT0gWDsQCgACAHICAG5fAAAAIDAgPT0gJiajEQ8AAwByAgBubgAAAG4BAAAAORAKAAIAcgIAbmQAAACjEQ8AAwByAgBueAAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;If the player is with the Mechanist, he wants her suit
+if MechanistRef.sideKick == 1
+   set MS02.MechanistWantsSuit to 1	
+endif
+
+set MS02.AADead to 1
+
+;If the player has dealt with the other super
+if (getStageDone MS02 85 == 1 || getStageDone MS02 95 == 1)
+   setObjectiveCompleted ms02 115 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 85 == 0 &amp;&amp; getStageDone MS02 95 == 0)
+   setObjectiveDisplayed ms02 110 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037224">MechanistRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has killed the Mechanist</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>247</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHM2AAIAIDEWABAAAQAMACByAgBzAgAgMSA9PRUACgByAQBzJAACACAxGQAAABYAMQACAC0AIFg7EAoAAgByAQBuUAAAACAxID09IFg7EAoAAgByAQBuWgAAACAxID09IHx8ohEPAAMAcgEAbm4AAABuAQAAADkQCgACAHIBAG54AAAAGAAxAAMALQAgWDsQCgACAHIBAG5QAAAAIDAgPT0gWDsQCgACAHIBAG5aAAAAIDAgPT0gJiajEQ8AAwByAQBucwAAAG4BAAAAORAKAAIAcgEAbmQAAACjEQ8AAwByAQBueAAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set MS02.MDead to 1
+
+if AntAgonizerRef.sideKick == 1
+   set MS02.AntAgonizerWantsSuit to 1	
+endif
+
+;If the player has dealth with the other super
+if (getStageDone MS02 80 == 1 || getStageDone MS02 90 == 1)
+   setObjectiveCompleted ms02 110 1
+   setStage MS02 120
+
+;If the player hasn't
+elseif (getStageDone MS02 80 == 0 &amp;&amp; getStageDone MS02 90 == 0)
+   setObjectiveDisplayed ms02 115 1
+   setStage MS02 100
+
+   ;Add Objective to report to town
+   setObjectiveDisplayed ms02 120 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037225">AntAgonizerRef</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">One of the supers has been dealt with - the player can collect the basic reward and end the quest.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS02 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">120</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Both of the supers have been dealt with - the player can collect the bonus reward and end the quest.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>10</ReferenceCount>
+                <CompiledSize>524</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAoAAEAJAAgcgQAcyoAIDEgPT0gWDsQCgACAHIEAG54AAAAIDEgPT0gJiYcAAEAAhAKAAIAcgUAblgCAAAYACgAAQAkACByBABzKgAgMSA9PSBYOxAKAAIAcgQAbngAAAAgMCA9PSAmJhwAAQACEAoAAgByBQBukAEAABgAKAABACQAIFg7EAoAAgByBABueAAAACAxID09IHIEAHMqACAwID09ICYmHAABAAIQCgACAHIFAG6QAQAAFwACAAEAHAABAAIQCgACAHIFAG7IAAAAGQAAAHcRBwABAG4sAQAAFQAQAHIGAGYjAAgAIEcHACAxICsVAAoAcgYAczUAAgAgMTkSDwADAHIIAG4BAAAAbgUAAAAWAB8ABQAbACByBABzMwAgMCA9PSByBABzNAAgMCA9PSAmJhUACgByBABzNQACACAxFQAKAHIEAHMlAAIAIDEWABkAAQAVACByAgBYARAFAAEAcgEAIDIwMDAgPhwAAgCeEAUAAQByCQAZAAAAGAAfAAUAGwAgcgQAczYAIDAgPT0gcgQAczcAIDAgPT0gJiYVAAoAcgQAczgAAgAgMRUACgByBABzMQACACAxFgAZAAEAFQAgcgMAWAEQBQABAHIBACAyMDAwID4cAAMAIhACAAAAGQAAABkAAACtEQUAAQByBAA3EAUAAQByBAA2EAUAAQByCgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if MS02.DoublePay == 1 &amp;&amp; getStageDone MS02 120 == 1
+   player.additem caps001 600
+elseif MS02.DoublePay == 1 &amp;&amp; getStageDone MS02 120 == 0
+   player.additem caps001 400
+elseif getStageDone MS02 120 == 1 &amp;&amp; MS02.DoublePay == 0
+   player.additem caps001 400
+else
+   player.additem caps001 200
+endif
+rewardxp 300
+Set RadioGalaxyNewsQuest.MS02Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+AddReputation RepTTWCanterburyCommons 1 5
+
+if (MS02.AADead == 0 &amp;&amp; MS02.AARetired == 0)
+   set MS02.AALeft to 1
+   set MS02.AntAgonizerLeave to 1
+   if (AntAgonizerREF.getDistance Player &gt; 2000)
+      AntAgonizerREF.moveto FFER70Marker1
+   endif
+elseif (MS02.MDead == 0 &amp;&amp; MS02.MRetired == 0)
+   set MS02.MLeft to 1
+   set MS02.MechanistLeave to 1
+   if (MechanistREF.getDistance Player &gt; 2000)
+      MechanistREF.disable
+   endif
+endif
+
+completeAllObjectives MS02
+stopQuest MS02
+startQuest MS02Fin
+;addachievement 15</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037225">AntAgonizerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06037224">MechanistRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017ED">RepTTWCanterburyCommons</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006F586">FFER70Marker1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A82C">MS02Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">210</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">The player has killed the Mechanist and/or AntAgonizer before the quest began, and is immediately rewarded by Roe. CHANGED! If the player does this, now they don't even get the quest, the rewardxp, or the achievement. CHOICE &amp; CONSEQUENCES, PUNK!</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>146</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAnAAEAIwAgWFQQBQABAHICACAxID49IFhUEAUAAQByAwAgMSA+PSAmJhwAAQACEAoAAgByBABukAEAABcAAgABABwAAQACEAoAAgByBABuyAAAABkAAAB3EQcAAQBuLAEAAKMRDwADAHIFAG4UAAAAbgEAAACtEQUAAQByBQA3EAUAAQByBQA2EAUAAQByBgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if (getDeadCount Mechanist &gt;= 1 &amp;&amp; getDeadCount AntAgonizer &gt;= 1)
+   player.additem caps001 400
+else
+   player.additem caps001 200
+endif
+rewardxp 300
+
+setObjectiveDisplayed MS02 20 1
+completeAllObjectives MS02
+stopQuest MS02
+startQuest MS02Fin
+;addachievement 13</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06036C1B">Mechanist</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06036C1C">AntAgonizer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E95">MS02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A82C">MS02Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Find the Mechanist or Antagonizer, and stop their rivalry.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037225">AntAgonizerRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E95">MS02</Quest>
+                  <VariableIndex>39</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037224">MechanistRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E95">MS02</Quest>
+                  <VariableIndex>40</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">120</Index>
+        <Description Tag="NNAM">Report back to town for your reward.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06036F73">UncleRoeRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06031EC9">UncleRoe</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06036F74">DerekPacionRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06031EC9">UncleRoe</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">110</Index>
+        <Description Tag="NNAM">(Optional) Find the Mechanist and stop him.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037224">MechanistRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E95">MS02</Quest>
+                  <VariableIndex>40</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">115</Index>
+        <Description Tag="NNAM">(Optional) Find the AntAgonizer and stop her.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037225">AntAgonizerRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E95">MS02</Quest>
+                  <VariableIndex>39</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">(Optional) Ask Derek for information about the Mechanist and Antagonizer.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06036F74">DerekPacionRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Defend the Forge from the AntAgonizer!</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037225">AntAgonizerRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Defend the Lair from the Mechanist!</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06037224">MechanistRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

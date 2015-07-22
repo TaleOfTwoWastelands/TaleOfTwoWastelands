@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018587">TTWChallengeGhoulGlowing</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeGhoulGlowing</EditorID>
+    <Name Tag="FULL">Glowing, Glowing, Gone!</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EAA9">ChallengeMediumXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Killing Glowing Ones.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>20</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>5</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185B5">TTWChallengeGhoulGlowingList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

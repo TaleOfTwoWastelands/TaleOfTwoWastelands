@@ -1,0 +1,234 @@
+scn PowderGangOutfitWarningScript
+
+float fUpdatedNegNCR
+float fUpdatedPosNCR
+
+float fUpdatedNegCL
+float fUpdatedPosCL
+
+float fUpdatedNegBoS
+float fUpdatedPosBoS
+
+float fUpdatedNegGK
+float fUpdatedPosGK
+
+float fUpdatedNegPG
+float fUpdatedPosPG
+
+Begin OnEquip Player
+
+	;Check to see if player was wearing faction armor. 
+	if DisguiseFactionPulseQuest.bFactionArmorEquipped == 0
+
+		;Set variable to track wearing faction armor
+		set DisguiseFactionPulseQuest.bFactionArmorEquipped to 1
+
+		;Player was not wearing faction armor - so we store their reputation values, we don't need to clear it here, it'll get cleared below
+		;Store Reputations
+		set DisguiseFactionPulseQuest.fNCRNegReputation to GetReputation RepNVNCR 0
+		set DisguiseFactionPulseQuest.fNCRPosReputation to GetReputation RepNVNCR 1
+	
+		set DisguiseFactionPulseQuest.fLegionNegReputation to GetReputation RepNVCaesarsLegion 0
+		set DisguiseFactionPulseQuest.fLegionPosReputation to GetReputation RepNVCaesarsLegion 1
+	
+		set DisguiseFactionPulseQuest.fBoSNegReputation to GetReputation RepNVBrotherhood 0
+		set DisguiseFactionPulseQuest.fBoSPosReputation to GetReputation RepNVBrotherhood 1
+	
+		set DisguiseFactionPulseQuest.fKhanNegReputation to GetReputation RepNVGreatKhans 0
+		set DisguiseFactionPulseQuest.fKhanPosReputation to GetReputation RepNVGreatKhans 1
+	
+		set DisguiseFactionPulseQuest.fPowderNegReputation to GetReputation RepNVPowderGanger 0
+		set DisguiseFactionPulseQuest.fPowderPosReputation to GetReputation RepNVPowderGanger 1
+
+	else
+		;Get Current Faction Values and add stored values
+		set DisguiseFactionPulseQuest.fNCRNegReputation to GetReputation RepNVNCR 0 + DisguiseFactionPulseQuest.fNCRNegReputation
+		set DisguiseFactionPulseQuest.fNCRPosReputation to GetReputation RepNVNCR 1+ DisguiseFactionPulseQuest.fNCRPosReputation
+
+		set DisguiseFactionPulseQuest.fLegionNegReputation to GetReputation RepNVCaesarsLegion 0 + DisguiseFactionPulseQuest.fLegionNegReputation
+		set DisguiseFactionPulseQuest.fLegionPosReputation to GetReputation RepNVCaesarsLegion 1 + DisguiseFactionPulseQuest.fLegionPosReputation
+
+		set DisguiseFactionPulseQuest.fBoSNegReputation to GetReputation RepNVBrotherhood 0 + DisguiseFactionPulseQuest.fBoSNegReputation
+		set DisguiseFactionPulseQuest.fBoSPosReputation to GetReputation RepNVBrotherhood 1 + DisguiseFactionPulseQuest.fBoSPosReputation
+
+		set DisguiseFactionPulseQuest.fKhanNegReputation to GetReputation RepNVGreatKhans 0 + DisguiseFactionPulseQuest.fKhanNegReputation
+		set DisguiseFactionPulseQuest.fKhanPosReputation to GetReputation RepNVGreatKhans 1 + DisguiseFactionPulseQuest.fKhanPosReputation
+
+		set DisguiseFactionPulseQuest.fPowderNegReputation to GetReputation RepNVPowderGanger 0 + DisguiseFactionPulseQuest.fPowderNegReputation
+		set DisguiseFactionPulseQuest.fPowderPosReputation to GetReputation RepNVPowderGanger 1 + DisguiseFactionPulseQuest.fPowderPosReputation
+
+	endif
+
+	if VFactionArmorTutorial == 0
+		ShowMessage VFactionOutfitTutorial
+		set VFactionArmorTutorial to 1
+	endif
+
+	ShowMessage PowderGangerFactionOutfitWarning
+	StartQuest DisguiseFactionPulseQuest ;Kicks the pulse placing quest
+	setally ArmorPowderGangerFactionNV PlayerFaction 1 1
+	player.addtofaction ArmorPowderGangerFactionNVEnemy 0
+
+	;Clear Reputations
+	SetReputation RepNVNCR 0 0.0
+	SetReputation RepNVNCR 1 0.0
+
+	SetReputation RepNVCaesarsLegion 0 0.0
+	SetReputation RepNVCaesarsLegion 1 0.0
+
+	SetReputation RepNVBrotherhood 0 0.0
+	SetReputation RepNVBrotherhood 1 0.0
+
+	SetReputation RepNVGreatKhans 0 0.0
+	SetReputation RepNVGreatKhans 1 0.0
+
+	SetReputation RepNVPowderGanger 0 0.0
+	SetReputation RepNVPowderGanger 1 0.0
+
+end
+
+Begin OnUnequip Player
+	if Player.GetEquipped FactionGearNVPowder == 0
+		SetEnemy ArmorPowderGangerFactionNV PlayerFaction 1 1
+		player.RemoveFromFaction ArmorPowderGangerFactionNVEnemy
+		ShowMessage PowderGangerFactionOutfitWarningOff
+
+		;Restore Factions
+		;Get Current Values and add stored values
+		set fUpdatedNegNCR to GetReputation RepNVNCR 0 + DisguiseFactionPulseQuest.fNCRNegReputation
+		set fUpdatedPosNCR to GetReputation RepNVNCR 1+ DisguiseFactionPulseQuest.fNCRPosReputation
+
+		set fUpdatedNegCL to GetReputation RepNVCaesarsLegion 0 + DisguiseFactionPulseQuest.fLegionNegReputation
+		set fUpdatedPosCL to GetReputation RepNVCaesarsLegion 1 + DisguiseFactionPulseQuest.fLegionPosReputation
+
+		set fUpdatedNegBoS to GetReputation RepNVBrotherhood 0 + DisguiseFactionPulseQuest.fBoSNegReputation
+		set fUpdatedPosBoS to GetReputation RepNVBrotherhood 1 + DisguiseFactionPulseQuest.fBoSPosReputation
+
+		set fUpdatedNegGK to GetReputation RepNVGreatKhans 0 + DisguiseFactionPulseQuest.fKhanNegReputation
+		set fUpdatedPosGK to GetReputation RepNVGreatKhans 1 + DisguiseFactionPulseQuest.fKhanPosReputation
+
+		set fUpdatedNegPG to GetReputation RepNVPowderGanger 0 + DisguiseFactionPulseQuest.fPowderNegReputation
+		set fUpdatedPosPG to GetReputation RepNVPowderGanger 1 + DisguiseFactionPulseQuest.fPowderPosReputation
+
+	endif
+
+	;If the player is not wearing ANY faction armor, clear this variable.
+	if (Player.GetEquipped FactionGearNVNCR == 0) && (Player.GetEquipped FactionGearNVCaesar == 0) && (Player.GetEquipped FactionGearNVBrotherhood == 0) && (Player.GetEquipped FactionGearNVGreatKhans == 0) && (Player.GetEquipped FactionGearNVPowder == 0) && (player.GetEquipped VMS18WhiteGloveMask == 0 || (Player.GetEquipped OutfitFormalWear == 0 && player.GetEquipped ArmorWhiteGloveSociety == 0))
+		;Clear Wearing Faction Armor Variable
+		set DisguiseFactionPulseQuest.bFactionArmorEquipped to 0
+
+		;Set Reputation Values to Updated
+		SetReputation RepNVNCR 0 fUpdatedNegNCR
+		SetReputation RepNVNCR 1 fUpdatedPosNCR
+
+		SetReputation RepNVCaesarsLegion 0 fUpdatedNegCL
+		SetReputation RepNVCaesarsLegion 1 fUpdatedPosCL
+
+		SetReputation RepNVBrotherhood 0 fUpdatedNegBoS
+		SetReputation RepNVBrotherhood 1 fUpdatedPosBoS
+
+		SetReputation RepNVGreatKhans 0 fUpdatedNegGK
+		SetReputation RepNVGreatKhans 1 fUpdatedPosGK
+
+		SetReputation RepNVPowderGanger 0 fUpdatedNegPG
+		SetReputation RepNVPowderGanger 1 fUpdatedPosPG
+	endif
+
+end
+
+Begin OnAdd PrimmDeputyRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+;Restriction on Companions
+
+Begin OnAdd CraigBooneREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd RoseofSharonCassidyREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd VeronicaREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd LilyREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd RaulREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd ArcadeREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd EDE1REF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd EDE2REF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd EDE3REF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd RexREF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd CharonRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd DogmeatRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd ButchRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd CloverRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd JerichoRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd MQ08FawkesRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd RL3REF
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End
+
+Begin OnAdd StarPaladinCrossRef
+	ShowMessage CompanionFactionArmorMsg
+	DropMe
+End

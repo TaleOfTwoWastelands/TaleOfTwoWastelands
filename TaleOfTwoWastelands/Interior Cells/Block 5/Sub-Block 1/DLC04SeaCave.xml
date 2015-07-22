@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0A00928B">DLC04SeaCave</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04SeaCave</EditorID>
+    <Name Tag="FULL">Sea Cave</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, HasWater</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>24</Red>
+          <Green>35</Green>
+          <Blue>41</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>43</Red>
+          <Green>79</Green>
+          <Blue>70</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>0</Near>
+        <Far>6000</Far>
+        <ClipDistance>8000</ClipDistance>
+        <Power>0.600000024</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0606532F">CavesDefaultTemplateDC</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">0</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-829.207703</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WaterFlowRippleNoise01.dds</WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0A004E2C">DLC04SeaCaveImagespace</Reference>
+    </ImageSpace>
+    <Water Tag="XCWT">
+      <Reference ID="0A00A23E">WaterTypeDLC04SeaCave</Reference>
+    </Water>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0608655F">IntCaveGreatChamberWater</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090907">DefaultDungeon</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

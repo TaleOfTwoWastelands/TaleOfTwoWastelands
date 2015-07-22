@@ -1,0 +1,146 @@
+scn vCCmovetothefortSCRIPT
+
+int doonce
+
+begin gamemode
+	
+	if player.getinsamecell nvccbargeref
+		PlaySound DRSCCBoat
+		player.moveto TheFortEntryMarker
+		vCCFortGateREF.enable
+		NVCCBargeREF.enable
+		NVCCBargeStaticREF.disable
+		set VCCLucullusREF.iGate to 1
+		set NVCCBargeREF.iStripped to 2
+		set VCCLucullusREF.iTripCounter to VCCLucullusREF.iTripCounter + 1
+		if VCCLucullusREF.getdead == 0
+			VCCLucullusREF.moveto LucullusFortMarker
+		endif
+
+		if (VNPCFollowers.bBooneHired) && (CraigBooneREF.Waiting != 1)
+			CraigBooneREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.bCassHired) && (RoseofSharonCassidyREF.Waiting != 1)
+			RoseofSharonCassidyREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.bVeronicaHired) && (VeronicaREF.Waiting != 1)
+			VeronicaREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.bLilyHired) && (LilyREF.Waiting != 1)
+			LilyREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.RaulHired) && (RaulREF.Waiting != 1)
+			RaulREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.ArcadeHired) && (ArcadeREF.Waiting != 1)
+			ArcadeREF.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.CharonHired) && (CharonRef.Waiting != 1)
+			CharonRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.ButchHired) && (ButchRef.Waiting != 1)
+			ButchRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.CloverHired) && (CloverRef.Waiting != 1)
+			CloverRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.JerichoHired) && (JerichoRef.Waiting != 1)
+			JerichoRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.FawkesHired) && (MQ08FawkesRef.Waiting != 1)
+			MQ08FawkesRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (Followers.StarPaladinCrossHired) && (StarPaladinCrossRef.Waiting != 1)
+			StarPaladinCrossRef.MoveTo TheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.bEDEHired) && (EDE1REF.Waiting != 1)
+			if EDE1Ref.GetDisabled == 0
+				EDE1Ref.MoveTo TheFortCompanionMarker;
+			elseif EDE2Ref.GetDisabled == 0
+				EDE2Ref.MoveTo TheFortCompanionMarker;
+			elseif EDE3Ref.GetDisabled == 0
+				EDE3Ref.MoveTo TheFortCompanionMarker;
+			endif
+		endif	
+		if (VNPCFollowers.RexHired) && (RexREF.Waiting != 1)
+			RexREF.MoveTo TheFortCompanionMarker;
+		endif
+		if (Followers.DogmeatHired) && (DogmeatRef.Waiting != 1)
+			DogmeatRef.MoveTo TheFortCompanionMarker;
+		endif
+		if (Followers.RL3Hired) && (RL3REF.Waiting != 1)
+			RL3REF.MoveTo TheFortCompanionMarker;
+		endif
+
+	else
+		PlaySound DRSGateOasis01Open
+		player.moveto FromTheFortPlayerMarker
+		set VCCLucullusREF.iGate to 0
+		set NVCCBargeREF.iStripped to 0
+		set VCCLucullusREF.iTripCounter to VCCLucullusREF.iTripCounter + 1
+
+		if VCCLucullusREF.getdead == 0
+			VCCLucullusREF.moveto FromTheFortMarker
+			NVCCBargeREF.disable
+			NVCCBargeStaticREF.enable
+		endif
+
+		if (VNPCFollowers.bBooneHired) && (CraigBooneREF.Waiting != 1)
+			CraigBooneREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (VNPCFollowers.bCassHired) && (RoseofSharonCassidyREF.Waiting != 1)
+			RoseofSharonCassidyREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (VNPCFollowers.bVeronicaHired) && (VeronicaREF.Waiting != 1)
+			VeronicaREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (VNPCFollowers.bLilyHired) && (LilyREF.Waiting != 1)
+			LilyREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (VNPCFollowers.RaulHired) && (RaulREF.Waiting != 1)
+			RaulREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (VNPCFollowers.ArcadeHired) && (ArcadeREF.Waiting != 1)
+			ArcadeREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (Followers.CharonHired) && (CharonRef.Waiting != 1)
+			CharonRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (Followers.ButchHired) && (ButchRef.Waiting != 1)
+			ButchRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (Followers.CloverHired) && (CloverRef.Waiting != 1)
+			CloverRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (Followers.JerichoHired) && (JerichoRef.Waiting != 1)
+			JerichoRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (Followers.FawkesHired) && (MQ08FawkesRef.Waiting != 1)
+			MQ08FawkesRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (Followers.StarPaladinCrossHired) && (StarPaladinCrossRef.Waiting != 1)
+			StarPaladinCrossRef.MoveTo FromTheFortCompanionMarker;
+		endif	
+		if (VNPCFollowers.bEDEHired) && (EDE1REF.Waiting != 1)
+			if EDE1Ref.GetDisabled == 0
+				EDE1Ref.MoveTo FromTheFortCompanionMarker;
+			elseif EDE2Ref.GetDisabled == 0
+				EDE2Ref.MoveTo FromTheFortCompanionMarker;
+			elseif EDE3Ref.GetDisabled == 0
+				EDE3Ref.MoveTo FromTheFortCompanionMarker;
+			endif
+		endif
+		if (VNPCFollowers.RexHired) && (RexREF.Waiting != 1)
+			RexREF.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (Followers.DogmeatHired) && (DogmeatRef.Waiting != 1)
+			DogmeatRef.MoveTo FromTheFortCompanionMarker;
+		endif
+		if (Followers.RL3Hired) && (RL3REF.Waiting != 1)
+			RL3REF.MoveTo FromTheFortCompanionMarker;
+		endif
+	endif
+	SetPCSleepHours 3
+	;Autosave
+	stopquest vccmovetothefort
+end

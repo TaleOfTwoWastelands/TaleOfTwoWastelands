@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0A006AB4">DLC04HatSlasherMask</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04HatSlasherMask</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-13</X>
+        <Y>-6</Y>
+        <Z>-10</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>-1</Y>
+        <Z>40</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Pint-Sized Slasher Mask</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0A0109D5">DLC04EnchSlasherMask</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Hair, Headband, Hat, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">DLC04\Armor\DLC04SlasherMask.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\ClownMask\M\ClownMaskGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">DLC04\Interface\Icons\Apparel_ClownHat.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="0A0109D7">DLC04RepairSlasherMask</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>60</Value>
+      <MaxCondition>15</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>ModulatesVoice</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

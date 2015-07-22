@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="06003A78">MS15ButtonGwinnett</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS15ButtonGwinnett</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Button Gwinnett</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Protectron\skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88E">ProtectronDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>1hprhandlaser.nif</Entry>
+      <Entry>2hlheadlaser.nif</Entry>
+      <Entry>blowawaybrain.nif</Entry>
+      <Entry>blowawaydome.nif</Entry>
+      <Entry>decalbarm.nif</Entry>
+      <Entry>decalbleg.nif</Entry>
+      <Entry>decalbstripe.nif</Entry>
+      <Entry>powderedwig.nif</Entry>
+      <Entry>protectron.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">CQAAAAAABe7vCnA4jbfdbm8KcD2Nt91ubx10G92qsu7fDHB3Hwahbl8McHwfBqFubx10G92qsvPfDHB3Hwahc18McHwfBqFubx10G92qsuXfCGNiCwEVZV8IY2cLARVzdBB0s+HJbe3lDXDyoAC7bWUNcPegALtubx10G92qsgPz8w9wb3F6JHNzD3B0cXokbm8ddBvdqrLu3xFwL1mwB25fEXA0WbAHbm8ddBvdqrLz3xFwL1mwB3NfEXA0WbAHbm8ddBvdqrID8+wGZGjg+r9zbAZkbeD6v25vHXQb3aqy7t8IZO/Zb4huXwhk9NlviG5vHXQb3aqy898IZO/Zb4hzXwhk9NlviG5vHXQb3aqyA/PsBmRo4Pq/c2wGZG3g+r9ubx10G92qsu7fCGTv2W+Ibl8IZPTZb4hubx10G92qsvPfCGTv2W+Ic18IZPTZb4hubx10G92qsgPz7AZkaOD6v3NsBmRt4Pq/bm8ddBvdqrLu3whk79lviG5fCGT02W+Ibm8ddBvdqrLz3whk79lviHNfCGT02W+Ibm8ddBvdqrID5+kLcJQ9PTBnaQtwmT09MHJpGHSb8nzg7t8NcFJg+9huXw1wV2D72HJpGHSb8nzg898NcFJg+9hzXw1wV2D72HJpGHSb8nzgCO7vCnA4jbfdbm8KcD2Nt91ubx10G92qsu7fDHB3Hwahbl8McHwfBqFubx10G92qsvPfDHB3Hwahc18McHwfBqFubx10G92qsuXfCGNiCwEVZV8IY2cLARVzdBB0s+HJbe3lDXDyoAC7bWUNcPegALtubx10G92qsvDhDGj79AI3cGEMaAD1Ajdlcg10OHo4ce7fDmhK0gUdbl8OaE/SBR1lcg10OHo4cfPfDmhK0gUdc18OaE/SBR1lcg10OHo4cQ==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, NoBloodSpray, NoBloodDecal, AllowPCDialogue</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>3</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseActorEffectList, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0006E793">MS15ButtonFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0007D496">MS15ButtonDeathItem</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607C235">MaleUniqueButton</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0C0C8608">CrProtectronDC</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="06089B21">ButtonGwinnettScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00018B9E">ProtectronHandLaser1HP</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00018B9F">ProtectronHeadLaser2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029377">AmmoSmallEnergyCell75</Item>
+          <Count>15</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000B0279">RobotFissionBattery20</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0606B193">MS15ButtonGwinnettGreets</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060205D3">LOBE03Guard01</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>1hpaim.kf</Entry>
+      <Entry>1hpaimdown.kf</Entry>
+      <Entry>1hpaimup.kf</Entry>
+      <Entry>1hpattackright.kf</Entry>
+      <Entry>1hpattackrightdown.kf</Entry>
+      <Entry>1hpattackrightup.kf</Entry>
+      <Entry>1hpequip.kf</Entry>
+      <Entry>1hpidle.kf</Entry>
+      <Entry>1hpreloada.kf</Entry>
+      <Entry>1hpunequip.kf</Entry>
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlaimdown.kf</Entry>
+      <Entry>2hlaimup.kf</Entry>
+      <Entry>2hlattackright.kf</Entry>
+      <Entry>2hlattackrightdown.kf</Entry>
+      <Entry>2hlattackrightup.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlidle.kf</Entry>
+      <Entry>2hlreloada.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>50</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>45</Health>
+      <Damage>2</Damage>
+      <Strength>5</Strength>
+      <Perception>4</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A708">CSProtectron</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00017F2C">ProtectronBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">50</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">20</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0005FCCB">AudioTemplateRobotProtectron</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,20 @@
+ScriptName NVDLC05PulseSlugScript
+
+; Inflicts EMP damage on impact
+; JES 4.12.11 - Created
+; J.S. 4/12/11 - Modified script to handle effects as if the target were the object where the script runs (that's how actor effects, and enchantment effects, get applied with custom effect scripts).
+; J.S. 8/11/11 - Added call to cast the PulseDisableSpell right away - its own timer will take care of removing the shaders.
+
+Begin ScriptEffectStart
+
+	If (GetIsCreatureType 6 == 1)
+		CIOS PulseDisableSpell;
+		DamageAV Health 50;
+	Endif
+
+	If (GetEquipped AllPowerArmor  == 1)
+		CIOS PulseDisableSpell;
+		DamageAV Health 25;
+	Endif
+
+END

@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E88">MQ02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0602446D">MQ02QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Galaxy News Radio</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find the Museum of Technology</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>69</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbgoAAABuAQAAABwAAQBzEAIAAABVEAUAAQByBABVEAUAAQByBQBVEAUAAQByBgAcAAIAfBEFAAEAcgcA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ02 10 1
+GNR02toDupontCircle01REF.Unlock
+ShowMap WashMonMapMarker
+ShowMap MusTechMapMarker
+ShowMap DupontStationMapMarker
+Player.AddNote MQ02WashPassword</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602625A">GNR02toDupontCircle01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601BD30">WashMonMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06076158">MustechMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607615E">DupontStationMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062186">MQ02WashPassword</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Retrieve the Virgo II Communications Dish</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbhQAAABuAQAAAKIRDwADAHIDAG4KAAAAbgEAAAAcAAEAIRACAAAAHAACACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ02 20 1
+SetObjectiveCompleted MQ02 10 1
+MQ02MonumentGuard01REF.enable ;enables two BoS guards near Washington Monument
+MQ02MallSideMutantsMarker.disable ;disables two mutants on the side of the mall on the players way to the washington monument</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605CB4D">MQ02MonumentGuard01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605A198">MQ02MallSideMutantsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find the Washington Monument</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbh4AAABuAQAAAKIRDwADAHIBAG4UAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ02 30 1
+SetObjectiveCompleted MQ02 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Repair the damaged radio relay</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAKIRDwADAHIBAG4eAAAAbgEAAAA5Eg8AAwByAgBuAQAAAG4DAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ02 40 1
+SetObjectiveCompleted MQ02 30 1
+AddReputation RepTTWBrotherhood 1 3</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E7">RepTTWBrotherhood</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Return to the Galaxy News Radio station and speak with Three Dog.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>119</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgANAAEACQAgRwIAIDAgPT2jEQ8AAwByAwBuMgAAAG4BAAAAGAANAAEACQAgRwIAIDEgPT2jEQ8AAwByAwBuNwAAAG4BAAAAGQAAAKIRDwADAHIDAG4oAAAAbgEAAAAVAAoAcgQAcwEAAgAgMRwAAQAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( MQ02WeaponsPromise == 0 )
+SetObjectiveDisplayed MQ02 50 1
+elseif ( MQ02WeaponsPromise == 1 )
+SetObjectiveDisplayed MQ02 55 1
+endif
+SetObjectiveCompleted MQ02 40 1
+Set DialogueGNR.Complete to 1
+MQ02MallSideMutantsMarker.enable  ;enables two mutants on the side of the mall near the museum of tech</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605A198">MQ02MallSideMutantsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0005A75E">MQ02WeaponsPromise</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025960">DialogueGNR</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>93</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">VRAFAAEAcgIArREFAAEAcgMAdxEHAAEAbpABAAAWABQAAgAQACBYOhAFAAEAcgQAIDAgPT0cAAEAfBEFAAEAcgUAORAKAAIAcgQAbgAAAAAZAAAANxAFAAEAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">ShowMap RivetCityMapMarker
+CompleteAllObjectives MQ02
+RewardXP 400
+if ( GetStage MQ03 == 0 )
+Player.AddNote MQ02LiPhotoNote
+SetStage MQ03 0
+endif
+StopQuest MQ02
+;addachievement 05
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06002E8F">RivetCityMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062187">MQ02LiPhotoNote</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">250</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAADREKAAIAcgIAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player killed Three Dog
+Showmessage MQ02QuestFailedMessage
+SetQuestObject MQ02VirgoIIDish 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00069B7B">MQ02QuestFailedMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002393C">MQ02VirgoIIDish</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find the Museum of Technology.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0606CA60">MQ02PathingWaypointtoTechMuseum</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601A279">GNR02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601A26F">GNR01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0607E927">MQ02carTunnelQT</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06045219">zDCWorld03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602324B">MetroCenter07toDCWorld09bREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06023226">MetroCenter07</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601B89D">REFR - 0601B89D</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0601A26C">DCworld03</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602393B">MQ02MuseumMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601A279">GNR02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601A26F">GNR01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06023226">MetroCenter07</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0601A26C">DCworld03</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Retrieve the Communications Relay Dish.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0604D189">MQ02DishRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Find the Washington Monument.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018626">REFR - 06018626</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>30</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Repair the damaged radio relay.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602864C">MQ02RelayWithoutDish</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>40</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Speak to Three Dog about Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06023943">ThreeDogRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>50</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">55</Index>
+        <Description Tag="NNAM">Speak to Three Dog about the Weapons Cache.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06023943">ThreeDogRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>50</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E88">MQ02</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

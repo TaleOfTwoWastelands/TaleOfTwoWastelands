@@ -1,0 +1,23 @@
+scn DLC02SniperRifleActivatorSCRIPT
+
+short hasAmmo
+short giveAmmo
+
+
+Begin OnActivate
+
+
+	if (IsActionRef player == 1)
+
+		if (player.GetItemCount WeapSniperRifle < 1)
+			player.additem WeapSniperRifle 1
+		endif
+
+		player.AddItem Ammo308 10 1
+		TTWRequisitionDummyRef.AddItem Ammo308 10
+		disable
+
+	endif
+
+
+End

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A0">TTWChallengeThatsMine</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeThatsMine</EditorID>
+    <Name Tag="FULL">That's Mine! **</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E1">TTWChallengeTwoStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Arkansas with a frag mine</Description>
+    <Data Tag="DATA">
+      <Type>KillASpecificFormID</Type>
+      <Threshold>1</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <Actor Tag="SNAM">
+      <Reference ID="0602BD23">Arkansas</Reference>
+    </Actor>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185C4">TTWChallengeThatsMineWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

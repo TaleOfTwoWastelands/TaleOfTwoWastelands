@@ -1,0 +1,161 @@
+ScriptName DoctorLiScript
+
+;Script placed on NPC RivetCityDoctorLi
+;Reference ID is DoctorLiRef, starts in cell RivetCity01
+
+short Stage75Hello			;flag set when Li says line during stage 75 of MQ05
+short WaveTrig				;flag set when Li passes through trigger in TaftTunnel02
+short Stage80Greet			;flag set when player attempts to leave Taft starting area without talking to Doctor Li
+short DadMove					;flag set if dad is moved to the science lab during MQ05
+short CitadelForceGreet		;flag set for talking to player once we've reached the Citadel.
+
+Begin OnLoad
+
+	IgnoreCrime 1
+
+End
+
+
+Begin GameMode
+
+;When Li is in Science Lab at MQ05 beginning, warp dad to the marker just inside the door if the player has beaten him there
+
+	if ( DadMove == 0 )
+		if ( GetStage MQ05 == 10 )
+			if ( GetDistance ScienceLabMarker < 700 )
+				if ( Player.GetInCell RCHangarDeckAft == 1 )
+					if ( MQDadRef.GetInCell RCHangarDeckAft == 0 )
+						MQDadRef.Moveto MQ05DadWarpMarker
+						set DadMove to 1
+					endif	
+				endif
+			endif
+		endif
+	endif
+
+
+
+
+;Have Li say a one-off to the player when he's in range during stage 75 of MQ05
+
+	if ( Stage75Hello == 0 )
+		if ( GetDistance Player < 300 )
+			DoctorLiRef.SayTo Player MQ05LiGreetStage75
+			set Stage75Hello to 1
+		endif
+	endif
+
+
+;Once dad is dead, have Doctor Li forcegreet the player, which results in update to Stage 80
+
+	if ( MQ05.LiGreet == 0 )
+		if ( GetStage MQ05 == 75 )
+			if ( MQ05.AutumnTrigger >= 6 )
+				if ( MQDadRef.GetDead == 1 )
+					set MQ05.LiGreet to 1
+				endif
+			endif
+		endif
+	endif
+
+
+;After exiting Taft Tunnel, Doctor Li steps up and talks first to the player, then the Citadel Guard, then to the BoS intercom
+
+	if ( GetStage MQ05 >= 85 )
+		if ( MQ05.LiEnd == 0 )
+			if ( DoctorLiRef.GetDistance MQ05LiEndMarker < 700 )
+				if ( Player.GetDistance MQ05LiEndMarker < 800 )
+					Set MQ05.LiEnd to 2
+					DoctorLiRef.SayTo Player MQ05LiEndSpeech
+					DoctorLiRef.EVP
+				endif
+			endif
+		elseif ( MQ05.LiEnd == 2 )
+			if ( DoctorLiRef.GetDistance MQ05LiCitadelIntercomMarker < 200 )
+				Set MQ05.LiEnd to 3
+				DoctorLiRef.Sayto CitadelBOSGuardRef1 MQ05LiEndSpeech 
+			endif
+
+;var is updated to 4 in Doctor Li's script when this line ends, and then to 5 in guard's response results (called from Doctor Li's script)
+
+		elseif ( MQ05.LiEnd == 5 )
+			set MQ05.LiEnd to 6
+			DoctorLiRef.EVP
+		endif
+	endif
+
+
+
+
+;Once Li is done talking to Lyons in MQ06, have her forcegreet the player
+
+;	if ( GetStage MQ06 < 10 )
+;		if ( CitadelForceGreet == 0 )
+;			if ( MQ06.LiConv == -1 )
+;				if ( ElderLyonsRef.GetCurrentAIProcedure != 4 )
+;					if ( ElderLyonsRef.GetCurrentAIProcedure != 43 )
+;						Set CitadelForceGreet to 1
+;						EVP
+;					endif
+;				endif
+;			endif
+;		endif
+;	endif
+
+
+
+End
+
+
+;Updates for Rivet City dialogue
+
+Begin SayToDone RCMotion
+	If HarknessRef.GetDead == 0 || MS08.HarknessLeaveDay > 0
+		HarknessRef.Say RCVote1
+	Else
+		DanversRef.Say RCVote1
+	EndIf
+End
+
+Begin SayToDone RCVote1
+	If HarknessRef.GetDead == 0 || MS08.HarknessLeaveDay > 0
+		HarknessRef.Say RCVote2
+	Else
+		DanversRef.Say RCVote2
+	EndIf
+End
+
+
+;Updates for MQ05 End dialogue
+
+Begin SaytoDone MQ05LiEndSpeech 
+
+	if ( MQ05.LiEnd == 3 )
+		Set MQ05.LiEnd to 4
+		CitadelBOSGuardRef1.SayTo DoctorLiRef MQ05LiEndSpeech
+	endif
+
+End
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && DoctorLiRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>0</Flags>
+  <FormID ID="00020108">VendorChestBuriedBrassLantern</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VendorChestBuriedBrassLantern</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-30</X>
+        <Y>-20</Y>
+        <Z>9</Z>
+      </Point1>
+      <Point2>
+        <X>31</X>
+        <Y>18</Y>
+        <Z>138</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Inventory Storage</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Fridge\FridgeClosed01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAIZrC+DhQxMAhmtb4OFGVnF3Sa3Zni7t8KZjEFrXduXwpmNgWtd2VnF3Sa3Zni898KZjEFrXdzXwpmNgWtd2VnF3Sa3Zni</TextureFileHash>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="06020111">VendorMegatonBrassLanternSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005D7FF">VendorChestCapsSmall</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060B41A1">VendorChestFoodandDrinkDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>Respawns</Flags>
+      <Weight>0</Weight>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,59 @@
+scn TTWRivetCityReputationHandlerScript
+ 
+ref reputation
+ref faction
+ 
+short repNeutral
+short repPositive
+short repNegative
+ 
+short isNeutral
+short isFriend
+short isEnemy
+Short isAlly
+ 
+;This script controls aggression and other states arising from the reputation system for Fallout 3's content. - Retlaw83
+ 
+Begin Gamemode
+ 
+        set reputation to RepTTWRivetCity
+        set faction to RCResidentFaction
+ 
+        set repNeutral to GetReputationThreshold reputation 0
+                ;1 = Neutral, 2 = Soft-Hearted Devil or Dark Hero, 3 = Mixed, 4 = Unpredictable, 5 = Wild Child
+        set repPositive to GetReputationThreshold reputation 1
+                ;1 = Neutral, 2 = Smiling Troublemaker, 3 = Good Hearted Rascal, 4 = Accepted, 5 = Liked, 6 = Idolized
+        set repNegative to GetReputationThreshold reputation 2
+                ;1 = Neutral, 2 = Sneering Punk, 3 = Merciful Thug, 4 = Shunned, 5 = Hated, 6 = Villified
+ 
+  if repNeutral >= 1 && isNeutral == 0
+    setenemy faction PlayerFaction 1 1  ;not a typo, setenemy 1 1 is setneutral
+    set isNeutral to 1
+    set isFriend to 0
+    set isEnemy to 0
+    set isAlly to 0
+        return
+ elseif repPositive >= 5 && isAlly == 0
+    setally faction PlayerFaction 0 0
+    set isNeutral to 0
+    set isFriend to 0
+    set isEnemy to 0
+    set isAlly to 1
+        return
+  elseif repPositive >= 2 && isFriend == 0
+    setally faction PlayerFaction 1 1
+    set isNeutral to 0
+    set isFriend to 1
+    set isEnemy to 0
+    set isAlly to 0
+        return
+  elseif repNegative >= 5 && isEnemy == 0
+    setenemy faction PlayerFaction 0 0
+    set isNeutral to 0
+    set isFriend to 0
+    set isEnemy to 1
+    set isAlly to 0
+        return
+  endif
+ 
+End

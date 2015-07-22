@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="00133955">VRemOrionMoreno</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VRemOrionMoreno</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Orion Moreno</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>30</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0013F89B">vMojaveCivilianDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0013F8A2">vMojaveCivilianHermitDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0015A92B">OrionMorenoFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001680A8">RemnantsFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00019FD2">MaleOld01</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000987DC">HispanicOldAged</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="00133F2E">VRemOrionMorenoScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>4</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001C296">GlassesReading</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.670000017</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00096C91">WithAmmoNVCaravanShotgunLoot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000CB549">ArmorUniqueExplorer</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.920000017</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000CCEF2">NVSuperStimpak</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Annoyed</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0017AFB9">VRemOrionMorenoSandbox</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0017626A">VRemOrionMorenoBackToBunkerPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015BA6D">VRemOrionMorenoStayPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015A923">VRemOrionMorenoLeavePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0017B732">VRemOrionMorenoAtBunker</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013C6FF">vHDRemFollowPlayer</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001945F">SoldierEnergy</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>7</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>100</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00044527">HairWavyOld</Reference>
+      </Type>
+      <Length Tag="LNAM">0.330000013</Length>
+      <Color Tag="HCLR">
+        <Red>192</Red>
+        <Green>192</Green>
+        <Blue>192</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000B2945">DefaultCombatRangedstyle</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">XgOhvvennD4Wpac/rPSqP8DGy7t8kpW/2E3rv01UKD9lg68/QBHLv8bcsb6+jZc/hLChQD8VDsC2MgM/3oEoP4hiuL5JLOq+3jQmwDCTBcHgZWu+JoPev/NwAEAyAA/AfB3zv0ckJ0BUTlM/0oZqQJAmT749nLU/hsVav2xsBkCzHhhBl5ViwKAaH8Dvmj7Ab+7vQEraFkFqgS0/KkQMQFqLisCKdwHA4XAIwbFvF8Ff1wNAlM60Py7sjkDIIc8/Emi2QDSnpsA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">YPJ/v7TXBcDtebw/wE+KvlpHZD9SPLQ/42atP//2Vb94E+8+lM6KPkxr2T5bS9O/tYlAwAvMjb1msKo+NaAawCAit7+4yQM+Vg8GP8yliD9RZ/I/YKp5P4hFcz2qIia+/uL/vqzYtD/WlANAbgxlPqillLyYaVbABqwKv2/x1D90fplAkPeHQGwKLL8BKtY+jEkGwAJOqz/eRNdAbTCdP5ajlkC2QVY/viCMQKynyr5OjWbAwNS0veUjA0CTHRbA3uyiP7X6zkA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

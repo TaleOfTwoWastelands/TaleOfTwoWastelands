@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="001543B8">FortLuciusScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FortLuciusScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>28</ReferenceCount>
+        <CompiledSize>1147</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAZADMAAAABAHICABYAGQABABUAIFg7EAoAAgByFQBubgAAACAwID09ORAKAAIAchUAbm4AAAAZAAAAEQAAABAACAAKAGIAAAAAABYAGQABABUAIFg7EAoAAgByFgBuZAAAACAwID09ORAKAAIAchYAbm4AAAAZAAAAFgAZAAEAFQAgWDsQCgACAHIVAG5uAAAAIDAgPT05EAoAAgByFQBubgAAABkAAAARAAAAEAAGAAAAvQMAABYADQAOAAkAIHMEACAxID09FgAMAAEACAAgZgUAIDAgPhUAEQBmBQAMACBmBQAgWAwQAAAgLRcAAgAKABYADQADAAkAIHMGACAwID09exIAABUACQBmBQAEACAxLjAVAAcAcwYAAgAgMRgADQAEAAkAIHMGACAxID09YBACAAAAWRALAAEAchcAAAAAAAAAFQAHAHMGAAIAIDAVAAcAcwQAAgAgMhkAAAAZAAAAGQAAABYADQBCAAkAIHMDACAxID09FgANAEAACQAgcwIAIDAgPT0VAAsAcwEABgAgWB8QAAAWAA0AAAAJACBzAQAgMCA9PRgADQA8AAkAIHMBACAxID09FQAHAHMCAAIAIDEVAAoAchgAcwEAAgAgMhwAAQAhEAIAAAAcAAIAnhAFAAEAchkAFgALAAEABwAgchoAcwYAHAADAJ4QBQABAHIbABkAAAAWAAsAAQAHACByGgBzFQAcAAQAnhAFAAEAchsAGQAAABYACwABAAcAIHIaAHMbABwABQCeEAUAAQByGwAZAAAAFgALAAEABwAgchoAcyEAHAAGAJ4QBQABAHIbABkAAAAWAAsAAQAHACByGgBzCQAcAAcAnhAFAAEAchsAGQAAABYACwABAAcAIHIaAHMMABwACACeEAUAAQByGwAZAAAAFgALAAcABwAgchoAcx4AFgASAAEADgAgcgkAWCMQAAAgMCA9PRwACQCeEAUAAQByGwAYABIAAQAOACByCgBYIxAAACAwID09HAAKAJ4QBQABAHIbABgAEgABAA4AIHILAFgjEAAAIDAgPT0cAAsAnhAFAAEAchsAGQAAABkAAAAWAAsAAQAHACByGgBzDwAcAAwAnhAFAAEAchsAGQAAABYACwABAAcAIHIcAHMCABwADQCeEAUAAQByGwAZAAAAFgALAAEABwAgchwAcxQAHAAOAJ4QBQABAHIbABkAAAAWAAsAAQAHACByHABzDgAcAA8AnhAFAAEAchsAGQAAABYACwABAAcAIHIcAHMSABwAEACeEAUAAQByGwAZAAAAFgALAAEABwAgchwAcwYAHAARAJ4QBQABAHIbABkAAAAWAAsAAQAHACByHABzCAAcABIAnhAFAAEAchsAGQAAABYACwABAAcAIHIcAHMWABwAEwCeEAUAAQByGwAZAAAAFgALAAEABwAgchwAcwoAHAAUAJ4QBQABAHIbABkAAAAREREAAwBuAAAAAG4AAAAAbgEAAABeEQAAGQAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="FortLuciusScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bStartedEndGame</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bEndGameButton</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bSaveGame</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fSaveTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nSaveEvent</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="001480B9">VHDLegionLegateCampPreBattleEnableMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129D14">VMQ02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001268BD">VMS32</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00171DC2">VEndGameWarningMsgLegion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00133075">vHDBattleController</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00144EE0">VHDLegateStartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00168CF1">VHDLegateCampTPCompanionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

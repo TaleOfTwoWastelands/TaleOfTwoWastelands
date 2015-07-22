@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed, CantWait_PlatformSpecificTexture_Dead</Flags>
+  <FormID ID="0603E644">ShalebridgeFFNoteGuy</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ShalebridgeFFNoteGuy</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Ant Researcher</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1A">MaleAdult13</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C1">AsianOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078438">LootArmorMercenary</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000A01DE">LootLockpick25</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000EC4B1">MagazineNVScience</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001FD89">DefaultWanderEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001567B">Scientist</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>0</BaseHealth>
+      <Strength>3</Strength>
+      <Perception>4</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>7</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>30</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>27</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>21</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>23</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0009F920">BeardMustacheFull</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BCBF1">BeardGoateeFull</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000A9D6F">HairMessy01</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>129</Red>
+        <Green>129</Green>
+        <Blue>129</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">Oj2iPQZQrz50kUs/5OiEv0gIDj1zRTK/orJLPy5wt7/Anm6/8jlav6gfQD7ySY4+SKxnPQD+ST/I4Wc+yrOYv6joTD74OyS/4twxQPZyoj81fp4/rEQSQNhcq79q2PE/M9Ssv9xChD9Lu4e/OGUfQPACcT/88gk/4JuBQKQIQb7q+fI/Gde+v7wzLr97VdC/UZgewI4+MUB8bsA+VkswQGKrH0DGqvI/QJvFvhgfcD/Br6+/ujsMQBKuKUD5gRRAQEl4v2DAvr8=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">NKnAvwCYozr+Pnk/0BF0PkOiVT8GWa8/ZCcIv7qKsT7zagjAsfaRPlzkL750Ll4/TKB9v9RwMj9ebow/AJyXOy1+Gb80Fh0+qCBqP/CkmL6WjeU/Btd+P1JaCT+0Hp0/pASqvdZUej8wHJA+/s7VP0zGzz8KJPg+YImMPvug0b7MoYM/xz39vj88YkDgJMG/TB41v7TTab4MOTq/aPccPxAvib893Xo/ymzJv5Malj6AF+y93ujRvuSm1b8gFiy+eP/Mvlz5Qj8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

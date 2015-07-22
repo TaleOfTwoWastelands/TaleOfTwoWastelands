@@ -1,0 +1,11 @@
+scn TTWPLSSCPT
+
+Begin Gamemode
+
+	if Player.hasperk TTWPierceDTPERK != 1
+		Player.addperk TTWPierceDTPERK
+	Endif
+	
+	stopquest TTWPLSolutionQuest
+
+End

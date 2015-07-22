@@ -1,0 +1,13 @@
+SCN TTWRCMarketDoorFixScript
+
+Begin onTriggerEnter player
+	If GetActionRef == PlayerRef
+		If GetCurrentTime > 6 && GetCurrentTime < 21
+			RCDoorToUpperDeckRef.Unlock
+			RCDoorToMidDeckRef.Unlock
+		Else
+			RCDoorToUpperDeckRef.Lock
+			RCDoorToMidDeckRef.Lock
+		EndIf 
+	EndIf
+End

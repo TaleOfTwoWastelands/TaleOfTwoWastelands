@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="06063BF7">DocHoff</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DocHoff</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Doc Hoff</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1500</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>20</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00065374">TraderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D7E">DeathItemDocHoff</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1A">MaleAdult13</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000A5F1E">TrainingMedicine</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0602D584">CaravanDocHoffSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001C296">GlassesReading</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029362">WithAmmo10mmSubmachineGunNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000B1056">OutfitPrewarBusinesswearDirtyDARK</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000BAFFD">SchematicsNukaCocktailItem</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cautious</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Annoyed</Mood>
+      <Services>Alcohol, Books, Food, Chems, Stimpacks, Miscellaneous, Repair</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0007E115">CaravanHoffWaitAtPFalls</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0007E1EC">CaravanHoffWaitAtMegaton</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00068EB8">CaravanTravelPatrol</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001567A">VendorDrinks</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>100</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>50</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>50</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0002F21F">BeardThin</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDB">HairBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>83</Red>
+        <Green>65</Green>
+        <Blue>45</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004252">EyeGreen</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">IaVNv31hG79uZIw/+CMawEvHTr91tRS/y0VxP7Kagr+dxdK/XbpMv6PT7b4ath0/uZJaP7jMP77pATU/HZX9v2WIpj/MIju+lZ8XQM6yoEDX4JW/4paCwGQGyD4aBYi/KC24P6HPXEAaIem/1EtMwD8QTkB+ex1ABdqUQD8q9L8ja4M/yXlWwEmt7D9nCWZAAMkVwW0jJMDgGwK/MXQRwMaQVcDwLly+5zToPrWTmcBjgbg/4l4+wKcWLr9fjOFAelcswS66LcA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">kLIAwLYreL+M2p6+u1apPqB/KD5SYC1Ab4uJPxAChr3mTb4/M8akPtT7Lb/OOrY/tpZIv5U8AL/A8RS8GBKsv1QuTL/g2DhAsOd6viBKT71aex0/Bea1P1wdMMA5VuE+EbUVwMOptb9CzhDAoST+Px4Rkz8rnB8/eDNtvqB/3T87okRAgA3KPiTjrkBDOXTAIKnKPzKryz/kzmxANqKtPoXC0D8N511A8f/tPqp6dkA99su/3AD7voQ7az6LGyVA9cxGwOa/y78=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

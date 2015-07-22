@@ -1,0 +1,226 @@
+ScriptName MQ05Script
+
+;Quest script for MQ05
+;contains information about associated scripts for MQ05, and general, non-object-specific scripting for quest MQ05
+
+
+;MQ05 Object Scripts:
+;- MQ05FuseBoxScript
+;- MQ05FloodControlPumpScript
+;- MQ05MainframeControlScript
+;- MQ05PipeControlScript
+;- MQ05IntercomScript
+
+
+;Related Scripts:
+;- ColonelAutumnScript
+;- DoctorLiScript
+;- RivetCityGarzaScript
+;-MQ05GarzaTriggerWallScript
+
+
+short doonce
+short DadEscort					;flag set to 1 if player agrees to go with Dad to Rivet City
+short AutumnTrigger
+short ConvVar
+short LiGreet
+short LiFollow
+short LiWait
+short NoWay20
+short DanGun
+short LiEnd
+short LiGarzaConv
+short DadLiConv
+short Broadcast
+short MutantsKilled				;incremented as mutants inside PPurity are killed; scientists won't enter until they're all dead 
+short DeathScene					;flag set on Colonel Autumn's script; used for running death packages on related NPCs
+short AutumnMove				;flag set when moving Autumn to Raven Rock
+Short DadMove					;flag set if moving dad directly to PPurity
+Short LiMove						;flag set if moving Dr. Li directly to PPurity
+Short AnnaMove					;flag set if moving Anna directly to PPurity
+Short GarzaMove					;flag set if moving Garza directly to PPurity
+short NoFighting					;flag set when player's ability to fight is removed in stage 75
+short GarzaKillPostSit			;flag set if Garza is killed by the player after his situation has been resolved
+short SciMove						;flag set when moving Scientists to Project Purity (if player fast travels)
+short AllClear						;flag set if Scientists are on the way to PPurity but mutants are not all dead
+short GateOpen					;flag set to 1 when Citadel Gate is opened, used for Li's packages
+short CueMusic					;flag set to 1 when Enclave invades and we start action music.  set to 0 to cut music off when player exits Taft
+
+short TTWBridgeOpend			; sesom: Bethesda assumed the bridge variables are loaded while the cell isn't. This is wrong sometimes in FO3 and everytime in NV
+										; 			I added a indicator here (quest script everytime loaded) to check if the bridge was already opened. It replaces the doonce in 
+										; 			RCExBridge1SCRIPT
+
+float AutumnTimer
+float greettimer					;timer used to control when Dr. Li greets the player after dad is dead (uses quest delay to pad the time)
+
+
+;the following vars are for taft tunnel, and the situation that arises with Garza
+
+short GarzaSit
+
+
+
+;	values:
+;	10 - Garza Healed
+;	20 - Garza Drugged
+; 	30 - Garza Left Behind
+;	40 - Garza Stays Behind
+;	99 - Killed by other
+;	100 - Killed by player
+
+
+
+
+
+
+
+Begin GameMode
+
+;If player gets to Project Purity before the scientists, move them to a marker nearby to shorten the wait
+
+	if ( GetStage MQ05 == 20 )
+		if ( SciMove == 0 )
+			;If mutants aren't all dead, check for player near exterior marker and move NPCs to a marker down the path
+			if ( MQ03.bodycount < 14 )
+				Set AllClear to 1
+				if ( Player.GetDistance MQ05ScientistExteriorWaitMarker < 1000 )
+					if ( MQDadRef.GetDistance MQ05ScientistExteriorWaitMarker >= 10000 )
+						MQDadRef.Moveto MQ05ScientistCatchUpMarker
+					endif
+					if ( DoctorLiRef.GetDistance MQ05ScientistExteriorWaitMarker >= 10000 )
+						DoctorLiRef.Moveto MQ05ScientistCatchUpMarker
+					endif
+					if ( JaniceKaplinskiRef.GetDistance MQ05ScientistExteriorWaitMarker >= 10000 )
+						JaniceKaplinskiRef.Moveto MQ05ScientistCatchUpMarker
+					endif
+					if ( AnnaHoltRef.GetDistance MQ05ScientistExteriorWaitMarker >= 10000 )
+						if ( AnnaHoltRef.GetDead == 0 )
+							AnnaholtRef.Moveto MQ05ScientistCatchUpMarker
+						endif
+					endif
+					if ( GarzaRef.GetDistance MQ05ScientistExteriorWaitMarker >= 10000 )
+						if ( GarzaRef.GetDead == 0 )
+							GarzaRef.Moveto MQ05ScientistCatchUpMarker
+						endif
+					endif
+				endif
+
+
+		;If mutants are all dead, move everyone to the outside marker close to the building
+			else
+				if ( Player.GetInCell PPurity == 1 )
+					if ( MQDadRef.GetInCell PPurity == 0 )
+						if ( DadMove == 0 )
+							MQDadRef.MoveTo MQ05ScientistExteriorWaitMarker
+							set DadMove to 1
+						endif
+					endif
+					if ( DoctorLiRef.GetInCell PPurity == 0 )
+						if ( LiMove == 0 )
+							DoctorLiRef.Moveto MQ05ScientistExteriorWaitMarker
+							set LiMove to 1
+						endif
+					endif
+					if ( AnnaHoltRef.GetInCell PPurity == 0 )
+						if ( AnnaMove == 0 )
+							if ( AnnaHoltRef.GetDead == 0 )
+								AnnaHoltRef.Moveto MQ05ScientistExteriorWaitMarker
+								set AnnaMove to 1
+							endif
+						endif
+					endif
+					if ( GarzaRef.GetInCell PPurity == 0 )
+						if ( GarzaMove == 0 )
+							if ( GarzaRef.GetDead == 0 )
+								GarzaRef.Moveto MQ05ScientistExteriorWaitMarker
+								set GarzaMove to 1
+							endif
+						endif
+					endif
+				endif		;/ player in cell PPurity	
+
+			endif 			;/ bodycount check	
+
+		endif 			;/SciMove == 0
+	endif				;/ getStage MQ05 == 20
+
+;If player has to kill mutants, check for MQ03.Bodycount and update stage when they're all dead.
+
+	if ( GetStage MQ05 == 25 )
+		if ( MQ03.BodyCount >= 14 )
+			SetStage MQ05 26
+			Set MQ05.AllClear to 2
+		endif
+	endif
+
+;also check for player having killed mutants before talking to Dad and getting Stage 25 update
+
+	if ( GetStage MQ05 == 20 )
+		if ( AllClear == 1 )
+			if ( MQ03.BodyCount >= 14 )
+				SetStage MQ05 26
+				Set MQ05.AllClear to 2
+			endif
+		endif
+	endif
+
+
+		
+
+
+;If player has left the cell for any reason during stage 75, re-disable fighting when he comes back in
+
+;	if ( GetStage MQ05 == 75 )
+;		if ( NoFighting == 2 )
+;			if ( Player.GetInCell PPurity01 == 1 )
+;				DisablePlayerControls 0 0 1
+;				set NoFighting to 1
+;			endif
+;		endif
+;	endif
+
+
+;When vars are initially set, count down AutumnTimer. When it runs out, move Autumn's ref to Dad
+;Note: Rest of this sequence is handled by ColonelAutumnScript, on NPC ColonelAutumn
+
+
+	if ( MQ05.AutumnTrigger == 1 )
+		PPBulkhead01Ref.SetOpenState 0
+		set MQ05.AutumnTrigger to 2
+		JaniceKaplinskiRef.SetRestrained 1
+	endif
+	
+;Have DoctorLi force-greet the player once dad is dead
+
+	if ( LiGreet == 1 )
+		DoctorLiRef.EVP
+		set LiGreet to 2
+	endif
+
+
+;if player is a smart-ass and moves away from Li while at the Citadel, set vars as if he'd been there
+
+	if ( LiEnd > 0 )
+		if ( Player.GetDistance DoctorLiRef > 5000 )
+			if ( GateOpen == 0 )
+				set GateOpen to 1
+				Set MQ05.LiEnd to 6
+			endif
+		endif
+	endif
+
+;Loop to perpetuate action/battle music during Enclave Invasion and Pursuit.
+
+		; MQ05.cueMusic set to 1 by MQ05EnclaveSceneSCRIPT - to allow appropriate delay after stage 75 is set.
+
+		if cueMusic == 1 && getStage MQ05 < 100						; Music has been cued
+			playMusic defaultBattle											; calling every frame to ensure it remains queued.
+		elseif cueMusic == 1 && getStage MQ05 >= 100				; stage 100 hit - cut the music
+			playMusic defaultExplore
+			set cueMusic to 2
+		endif
+
+
+
+End
+

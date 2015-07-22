@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0602A274">MS10</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS10</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0602A2DE">MS10QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Oasis</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Resume normal Oasis schedules
+MS10CypressRef.Evp
+MS10LindenRef.Evp
+MS10YewRef.Evp
+MS10PoplarRef.Evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2BD">MS10CypressRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2BE">MS10LindenRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AF00">MS10YewRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2B8">MS10PoplarRef</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>79</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgUAbgoAAABuAQAAABUACgByBgBzAgACACAxHAABAHMQAgAAABwAAgCeEAUAAQByBwAcAAMAnhAFAAEAcggAHAAEACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS10 10 1
+set HaroldRef.Named to 1
+OasisDoorFromHaroldToOasis.Unlock
+MS10BirchRef.Moveto MS10BirchArgueMarker
+MS10LaurelRef.Moveto MS10LaurelArgueMarker
+OasisRootEnableRef.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605634C">OasisDoorFromHaroldToOasis</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2C5">MS10BirchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2C3">MS10LaurelRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060651D9">OasisRootEnableRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031497">HaroldRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603E19F">MS10BirchArgueMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603E1A0">MS10LaurelArgueMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>74</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbhQAAABuAQAAAKMRDwADAHICAG4eAAAAbgEAAAAcAAEAAhAKAAIAcgMAbgEAAADcEQ4AAgByAgB6AAAAAAAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS10 20 1
+SetObjectiveDisplayed MS10 30 1
+Player.AddItem MS10TestTubeFull 1
+SetQuestDelay MS10 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000504DA">MS10TestTubeFull</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>132</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4KAAAAbgAAAACjEQ8AAwByAQBuHgAAAG4AAAAAoxEPAAMAcgEAbigAAABuAQAAABUACgByAQBzHQACACAxFQAKAHIBAHMaAAIAIDEVAAoAcgEAcxkAAgAgMRUACgByAQBzLAACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">;Sap was used
+SetObjectiveCompleted MS10 20 1
+SetObjectiveDisplayed MS10 10 0
+SetObjectiveDisplayed MS10 30 0
+SetObjectiveDisplayed MS10 40 1
+Set MS10.BirchLike to 1
+Set MS10.CypressLike to 1
+Set MS10.MapleLike to 1
+Set MS10.AssetMove to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>132</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAKMRDwADAHIBAG4KAAAAbgAAAACjEQ8AAwByAQBuFAAAAG4AAAAAoxEPAAMAcgEAbjIAAABuAQAAABUACgByAQBzHgACACAxFQAKAHIBAHMXAAIAIDEVAAoAcgEAcxYAAgAgMRUACgByAQBzLAACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">;Liniment was used
+SetObjectiveCompleted MS10 30 1
+SetObjectiveDisplayed MS10 10 0
+SetObjectiveDisplayed MS10 20 0
+SetObjectiveDisplayed MS10 50 1
+Set MS10.LaurelLike to 1
+Set MS10.LindenLike to 1
+Set MS10.PoplarLike to 1
+Set MS10.AssetMove to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>134</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbgoAAABuAQAAAKMRDwADAHIEAG4UAAAAbgAAAACjEQ8AAwByBABuHgAAAG4AAAAAoxEPAAMAcgQAbigAAABuAQAAABwAAQAiEAIAAAAcAAIAIhACAAAAHAADACEQAgAAABUACgByBABzKAACACAxFQAKAHIEAHMsAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Harold Heart killed
+SetObjectiveCompleted MS10 10 1
+SetObjectiveDisplayed MS10 20 0
+SetObjectiveDisplayed MS10 30 0
+SetObjectiveDisplayed MS10 40 1
+HaroldRef.Disable
+HaroldFireRef.Disable
+MS10HaroldDeadRef.Enable
+set MS10.HesDead to 1
+set MS10.AssetMove to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031497">HaroldRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06076DA2">HaroldFireRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060603A7">MS10HaroldDeadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>163</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEADREKAAIAcgIAbgAAAAANEQoAAgByAwBuAAAAABUACgByAQBzKgACACAxNxAFAAEAcgEANhAFAAEAcgQAFgAQAAIADAAgcgEAcwsAIDAgPT13EQcAAQBuLAEAADkSDwADAHIFAG4BAAAAbgUAAAAXAAIAAgAVABAAcgYAZioACAAgRwcAIDEgKxUACgByBgBzNQACACAxGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">CompleteAllObjectives MS10
+SetQuestObject MS10Liniment 0
+SetQuestObject MS10TestTubeFull 0
+Set MS10.MS10Done to 1
+StopQuest MS10
+StartQuest MS10Fin
+if ( MS10.InFlames == 0 )
+RewardXP 300
+AddReputation RepTTWOasis 1 5
+else
+Set RadioGalaxyNewsQuest.MS10Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+endif
+;addachievement 22
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003E56A">MS10Liniment</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000504DA">MS10TestTubeFull</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605A6C9">MS10Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017FA">RepTTWOasis</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>344</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgkAAAAAAAAAFQAKAHIKAHMqAAIAIDGjEQ8AAwByCgBuCgAAAG4AAAAAoxEPAAMAcgoAbhQAAABuAAAAAKMRDwADAHIKAG4eAAAAbgAAAACjEQ8AAwByCgBuKAAAAG4AAAAAoxEPAAMAcgoAbjIAAABuAAAAABUACgByCgBzHQACACAwFQAKAHIKAHMaAAIAIDAVAAoAcgoAcxkAAgAgMBUACgByCgBzHgACACAwFQAKAHIKAHMXAAIAIDAVAAoAcgoAcxYAAgAgMBUACgByCgBzGAACACAwHAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAAcAAUAXhAAABwABgBeEAAAHAAHAF4QAAAcAAgAIRACAAAADREKAAIAcgsAbgAAAAANEQoAAgByDABuAAAAADkSDwADAHINAG4AAAAAbgUAAAA3EAUAAQByCgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player Started Combat
+Showmessage MS10QuestFailMessage
+Set MS10.MS10Done to 1
+SetObjectiveDisplayed MS10 10 0
+SetObjectiveDisplayed MS10 20 0
+SetObjectiveDisplayed MS10 30 0
+SetObjectiveDisplayed MS10 40 0
+SetObjectiveDisplayed MS10 50 0
+Set MS10.BirchLike to 0
+Set MS10.CypressLike to 0
+Set MS10.MapleLike to 0
+Set MS10.LaurelLike to 0
+Set MS10.LindenLike to 0
+Set MS10.PoplarLike to 0
+Set MS10.YewLike to 0
+MS10BirchRef.Evp
+MS10LaurelRef.Evp
+MS10YewRef.Evp
+MS10MapleRef.Evp
+MS10CypressRef.Evp
+MS10LindenRef.Evp
+MS10PoplarRef.Evp
+OasisRootEnableRef.Enable
+SetQuestObject MS10Liniment 0
+SetQuestObject MS10TestTubeFull 0
+AddReputation RepTTWOasis 0 5
+StopQuest MS10</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2C5">MS10BirchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2C3">MS10LaurelRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AF00">MS10YewRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2C1">MS10MapleRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2BD">MS10CypressRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2BE">MS10LindenRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A2B8">MS10PoplarRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060651D9">OasisRootEnableRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C24F8">MS10QuestFailMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A274">MS10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003E56A">MS10Liniment</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000504DA">MS10TestTubeFull</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017FA">RepTTWOasis</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Enter the caves below and destroy Harold's Heart.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06076EE5">MS10HaroldsHeartRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">(Optional) Apply Birch's Sap to Harold's Heart and stop his growth.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06076EE5">MS10HaroldsHeartRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">(Optional) Apply Laurel's Liniment to Harold's Heart and accelerate his growth.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06076EE5">MS10HaroldsHeartRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Speak with Tree Father Birch.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602A2C5">MS10BirchRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Speak with Leaf Mother Laurel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602A2C3">MS10LaurelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Undertake the Treeminder's Ceremony.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060AC033">MS10BowlRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">8</Index>
+        <Description Tag="NNAM">(Optional) Obtain the key to the caves from Branchtender Cypress.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">35</Index>
+        <Description Tag="NNAM">(Optional) Kill Harold by burning him.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

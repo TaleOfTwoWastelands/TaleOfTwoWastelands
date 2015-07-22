@@ -1,0 +1,151 @@
+SCN DLC01DowntownAmbushControlSCRIPT
+
+short	AmbushCheck
+short	AmbushSetup
+short	AmbushGo
+short	AmbushBeating
+short	AmbushBlackout
+short	AmbushCleanUp
+short	Tick
+
+Float	Timer
+Float	HitTimer
+
+BEGIN GameMode
+
+	;Check to see if Ambush should be enabled. If so, enable it.
+
+	if ( AmbushCheck == 1 )
+			PittWorldtoMarketSquareREF.Lock 255
+			set AmbushCheck to -1
+	endif
+
+	;Enable start the scene
+
+	if ( AmbushGo == 1 ) && ( GetInSameCell Player == 1 )
+		DisablePlayerControls
+		SetStage DLC01Quest01 199
+
+		DLC01ReddupREF.AddScriptPackage DLC01DowntownAmbushReddupGreetPlayer
+		set DLC01Quest02.PlayerHasBeenAmbushed to 1
+		Set AmbushGo to -1
+	endif
+
+	if ( AmbushBlackout == 1 )
+		Set Timer to ( Timer - GetSecondsPassed )
+
+		if ( AmbushBeating == 1 )
+			Set HitTimer to ( HitTimer - GetSecondsPassed )
+
+			if ( HitTimer <= 0 )
+				if ( GetRandomPercent <= 33 )
+					;ApplyIMageSpaceModifier BloodGlowISFX
+					TriggerHitShader
+					SetRumble .5 .5 .5
+				endif
+
+				set HitTimer to .50
+
+			endif
+		endif
+
+		if ( Tick == 0 )
+			DLC01RaiderDowntownAmbush01REF.evp
+			DLC01RaiderDowntownAmbush02REF.evp
+			DLC01RaiderDowntownAmbush03REF.evp
+			DLC01RaiderDowntownAmbush04REF.evp
+			DLC01ReddupREF.AddScriptPackage DefaultStayAtCurrentLocation
+
+			Set Timer to 30
+			Set HitTimer to .25
+			Set AmbushBeating to 1
+
+
+			IMod DLC01AmbushFadeToBlackISFX
+			Set Tick to 1
+		endif
+
+		if ( Tick == 1 ) && ( Timer <= 28 ) 
+			player.AddScriptPackage MQ08PlayerFallsDownPackage
+			Set Tick to 2
+		endif
+
+		if ( Tick == 2 ) && ( Timer <= 24 ) 
+			DLC01ReddupREF.AddScriptPackage DLC01DowntownAmbushReddupTalkRaider
+
+
+			Set AmbushBeating to -1
+			Set Tick to 3
+		endif
+
+		if ( Tick == 3 ) && ( Timer <= 14 )
+			ApplyImageSpaceModifier ImageSpaceConcussion
+			Player.MoveTo DLC01DowntownAmbushPlayerMoveMarker
+
+			DLC01MideaREF.MoveTo DLC01DowntownAmbushMideaMarker
+			DLC01MideaREF.AddScriptPackage DLC01MideaDowntownAmbushHelpPlayer
+
+			Set AmbushCleanUp to 1
+			Set Tick to 4
+		endif
+
+		if ( Tick == 4 ) && ( Timer <= 13 )
+			DLC01MideaREF.Sayto Player DLC01DowntownAmbushMideaHelpPlayer 1 1
+			Set Tick to 5
+		endif
+
+		if ( Tick == 5 ) && ( Timer <= 8 )
+			DLC01MideaREF.Sayto Player DLC01DowntownAmbushMideaHelpPlayer 1 1
+			Set Tick to 6
+		endif
+
+		if ( Tick == 6 ) && ( Timer <= 3 )
+			DLC01MideaREF.Sayto Player DLC01DowntownAmbushMideaHelpPlayer 1 1
+			Set Tick to 7
+		endif
+
+
+		if ( Tick == 7 ) && ( Timer <= 0 )
+			player.RemoveScriptPackage MQ08PlayerFallsDownPackage
+			Set Tick to 8
+		endif
+
+		if ( Tick == 8 ) && ( Timer <= 0 )
+			EnablePlayerControls
+			DLC01MideaREF.RemoveScriptPackage DLC01MideaDowntownAmbushHelpPlayer
+			DLC01MideaREF.AddScriptPackage DLC01MideaDowntownAmbushGreetPlayer
+			Set Tick to -1 
+			Set AmbushBlackout to -1
+		endif
+	endif
+		
+
+	if ( AmbushCleanUp == 1 )
+		SetQuestObject DLC01ConcealedPistol  0
+		SetQuestObject DLC01ConcealedSwitchBlade 0
+		Player.RemoveItem DLC01ConcealedPistol 1 1
+		Player.RemoveItem DLC01ConcealedSwitchblade 1 1
+		Player.RemoveItem DLC01SlaveOutfit 1 1
+		Player.RemoveAllItems DLC01PlayerItemContainerREF
+		Player.AddItem DLC01CondSlaveOutfit01 1 1
+		Player.EquipItem DLC01SlaveOutfit 0 1
+
+		DLC01PlayerItemContainerREF.RemoveAllTypedItems player 1 1 40
+		DLC01PlayerItemContainerREF.RemoveAllTypedItems player 1 1 41
+
+		;Remove all weapons except holdouts.
+		if Player.GetActorValue Sneak >= 50
+			player.RemoveAllTypedItems DLC01PlayerItemContainerREF 1 0 40 NVImprovedHoldoutWeapons
+		else
+			player.RemoveAllTypedItems DLC01PlayerItemContainerREF 1 0 40 NVHoldoutWeapons
+		endif
+
+		DLC01ReddupREF.RemoveScriptPackage DLC01DowntownAmbushReddupTalkRaider
+		DLC01ReddupREF.MoveTo DLC01HavenMapMarkerREF		
+		DLC01DowntownAmbushEnableMARKER.Disable
+
+		Set AmbushCleanUp to -1
+	endif
+
+END
+	

@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0800108B">DLC01Quest02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01Quest02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="080032D7">DLC01Quest02SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Unsafe Working Conditions</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CC">DLC01RaiderFemaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CD">DLC01RaiderFemaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CA">DLC01RaiderMaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CB">DLC01RaiderMaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2B">DLC01SlaveFemale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2C">DLC01SlaveFemale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD5">DLC01SlaveMale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD6">DLC01SlaveMale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD3">DLC01SlaverMaleVoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CE">DLC01UniqueArenaAnnouncer</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035C9">DLC01UniqueAshur</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CF">DLC01UniqueMidea</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080045F9">DLC01UniqueSandra</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080009A6">DLC01UniqueWernher</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>169</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgoAAAA5EAoAAgByAgBuMgAAADkQCgACAHICAG5kAAAAORAKAAIAcgIAbpYAAAA5EAoAAgByAgBurwAAADkQCgACAHICAG7IAAAAHAABAFIQDwADAHIDAG4AAAAAbgEAAAAcAAEArRAFAAEAcgQAHAABAAIQCgACAHIDAG4BAAAAHAABAO4QCgACAHIDAG4BAAAAHAABAJ4QBQABAHIFAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Test start scripting
+
+SetStage DLC01Quest01 10
+SetStage DLC01Quest01 50
+SetStage DLC01Quest01 100
+SetStage DLC01Quest01 150
+SetStage DLC01Quest01 175
+SetStage DLC01Quest01 200
+
+Player.RemoveItem DLC01SlaveOutfit 0 1
+Player.RemoveAllItems DLC01PlayerItemContainerREF
+Player.AddItem DLC01SlaveOutfit 1
+Player.EquipItem DLC01SlaveOutfit 1
+
+Player.MoveTo DLC01Quest02TestStartMARKER</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800087A">DLC01SlaveOutfit</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08002E49">DLC01PlayerItemContainerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AD">DLC01Quest02TestStartMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgoAAABuAQAAABwAAQAiEAIAAAA3EAUAAQByAwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must find Midea
+
+SetObjectiveDisplayed DLC01Quest02 10 1
+DLC01JacksonREF.disable
+StopQuest DLC01Quest01</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E63">DLC01JacksonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4PAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must meet with Midea in private
+
+SetObjectiveCompleted DLC01Quest02 10 1
+SetObjectiveDisplayed DLC01Quest02 15 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>118</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbg8AAABuAQAAAKMRDwADAHIEAG4xAAAAbgEAAACjEQ8AAwByBABuMgAAAG4BAAAAHAABAHMQAgAAADkQCgACAHIFAG4KAAAAHAACAJcQBQABAHIGADkQCgACAHIHAG4KAAAAHAADACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player is sent to the Steel Mill
+
+SetObjectiveCompleted DLC01Quest02 15 1
+SetObjectiveDisplayed DLC01Quest02 49 1
+SetObjectiveDisplayed DLC01Quest02 50 1
+DLC01DoorToSteelyardREF.Unlock
+SetStage DLC01FFCollection 10
+DLC01EverettREF.AddScriptPackage DLC01EverettTakeIngots
+SetStage DLC01FFLD 10 ;enables Milly in Downtown
+
+;Enable guard beating slave outside Midea's hut
+DLC01FF002EnableMarker.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001F8C">DLC01DoorToSteelyardREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A784">DLC01EverettREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008E18">DLC01FF002EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A686">DLC01FFCollection</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800AB88">DLC01EverettTakeIngots</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A358">DLC01FFLD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>86</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbjIAAABuAQAAAKMRDwADAHIEAG5LAAAAbgEAAAAcAAEAdhEFAAEAcgUAWRALAAEAcgYAAAAAAAAAHAACACIQAgAAABwAAwAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Return to Midea
+
+SetObjectiveCompleted DLC01Quest02 50 1
+SetObjectiveDisplayed DLC01Quest02 75 1
+
+Player.AddPerk DLC01AutoAxpert
+ShowMessage DLC01PerkAutoAxpertMessageBox
+
+;Disable guard beating slave outside Midea's hut - replace with "thief" freeform
+DLC01FF002EnableMarker.disable
+DLC01FF001EnableMarker.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008E18">DLC01FF002EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008E19">DLC01FF001EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080073E8">DLC01AutoAxpert</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B780">DLC01PerkAutoAxpertMessageBox</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>81</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIFABwAAgAiEAIAAAAcAAMAIhACAAAAohEPAAMAcgYAbksAAABuAQAAAKMRDwADAHIGAG5kAAAAbgEAAAAcAAQAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Listen to Ashur's speech
+
+DLC01AshurREF.MoveTo DLC01AshurGiveSpeechMarker
+DLC01AshurSpeechEnableMarker.Disable
+DLC01SlaveStockadeREF.disable
+
+SetObjectiveCompleted DLC01Quest02 75 1
+SetObjectiveDisplayed DLC01Quest02 100 1
+DLC01FF003EnableMarker.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A96C">DLC01AshurSpeechEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A3D9">DLC01SlaveStockadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008C9F">DLC01FF003EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032F1">DLC01AshurGiveSpeechMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">120</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>62</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbmQAAABuAQAAAKMRDwADAHICAG54AAAAbgEAAAAcAAEAcxACAAAAAxAKAAIAcgMAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must sign up for the Arena
+
+SetObjectiveCompleted DLC01Quest02 100 1
+SetObjectiveDisplayed DLC01Quest02 120 1
+DLC01HoleGateREF.Unlock
+SetEssential DLC01Midea 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003F5D">DLC01HoleGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">125</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbngAAABuAQAAAKMRDwADAHIBAG58AAAAbgEAAACjEQ8AAwByAQBufQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Enter the Arena
+
+SetObjectiveCompleted DLC01Quest02 120 1
+SetObjectiveDisplayed DLC01Quest02 124 1
+SetObjectiveDisplayed DLC01Quest02 125 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">130</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbn0AAABuAQAAAKMRDwADAHIBAG58AAAAbgAAAACjEQ8AAwByAQBuggAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Enter the Arena, defeat the first opponent
+
+SetObjectiveCompleted DLC01Quest02 125 1
+SetObjectiveDisplayed DLC01Quest02 124 0
+SetObjectiveDisplayed DLC01Quest02 130 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">135</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>59</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAEAnhAFAAEAcgIAohEPAAMAcgMAboIAAABuAQAAAKMRDwADAHIDAG6HAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Opponent defeated, leave the arena
+
+DLC01PhaedraREF.evp
+DLC01PhaedraREF.MoveTo DLC01FaydraGreetPlayerAfterFightMARKER
+SetObjectiveCompleted DLC01Quest02 130 1
+SetObjectiveDisplayed DLC01Quest02 135 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032ED">DLC01PhaedraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007154">DLC01FaydraGreetPlayerAfterFightMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">140</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbocAAABuAQAAAKMRDwADAHIBAG6LAAAAbgEAAACjEQ8AAwByAQBujAAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player left Arena after the first win, get ready for next fight
+
+SetObjectiveCompleted DLC01Quest02 135 1
+SetObjectiveDisplayed DLC01Quest02 139 1
+SetObjectiveDisplayed DLC01Quest02 140 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">145</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbowAAABuAQAAAKMRDwADAHIBAG6LAAAAbgAAAACjEQ8AAwByAQBukQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Enter the arena again, fight opponent
+
+SetObjectiveCompleted DLC01Quest02 140 1
+SetObjectiveDisplayed DLC01Quest02 139 0
+SetObjectiveDisplayed DLC01Quest02 145 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>59</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAEAnhAFAAEAcgIAohEPAAMAcgMAbpEAAABuAQAAAKMRDwADAHIDAG6WAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Second opponent defeated, player must leave arena
+
+DLC01PhaedraREF.evp
+DLC01PhaedraREF.MoveTo DLC01FaydraGreetPlayerAfterFightMARKER
+SetObjectiveCompleted DLC01Quest02 145 1
+SetObjectiveDisplayed DLC01Quest02 150 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032ED">DLC01PhaedraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007154">DLC01FaydraGreetPlayerAfterFightMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">155</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbpYAAABuAQAAAKMRDwADAHIBAG6WAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Second fight won, player has left the arena
+
+SetObjectiveCompleted DLC01Quest02 150 1
+SetObjectiveDisplayed DLC01Quest02 150 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">160</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbpYAAABuAQAAAKMRDwADAHIBAG6fAAAAbgEAAACjEQ8AAwByAQBuoAAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player left Arena after the second win, get ready for next fight
+
+SetObjectiveCompleted DLC01Quest02 150 1
+SetObjectiveDisplayed DLC01Quest02 159 1
+SetObjectiveDisplayed DLC01Quest02 160 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">165</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbqAAAABuAQAAAKMRDwADAHIBAG6fAAAAbgAAAACjEQ8AAwByAQBupQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Enter the arena again, fight third opponent
+
+SetObjectiveCompleted DLC01Quest02 160 1
+SetObjectiveDisplayed DLC01Quest02 159 0
+SetObjectiveDisplayed DLC01Quest02 165 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">170</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>134</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbqUAAABuAQAAAKMRDwADAHIFAG6qAAAAbgEAAAADEAoAAgByBgBuAAAAABwAAQCeEAUAAQByBwAcAAEAXhAAABwAAgAhEAIAAAAcAAMArRAFAAEAcgIAHAADACIQAgAAAFkQCwABAHIIAAAAAAAAABwABAB2EQUAAQByCQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Second opponent defeated, player leaves arena
+
+SetObjectiveCompleted DLC01Quest02 165 1
+SetObjectiveDisplayed DLC01Quest02 170 1
+SetEssential DLC01Faydra 0
+
+DLC01KrenshawREF.MoveTo DLC01KrenshawWairForPlayerMarker
+DLC01KrenshawREF.evp
+DLC01PlayerItemContainerReturnREF.enable
+DLC01PlayerItemContainerREF.RemoveAllItems DLC01PlayerItemContainerReturnREF
+DLC01PlayerItemContainerREF.Disable
+ShowMessage DLC01PerkPittFighterMessageBox
+Player.AddPerk DLC01PittFighter</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003301">DLC01KrenshawREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080071C1">DLC01PlayerItemContainerReturnREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08002E49">DLC01PlayerItemContainerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032E4">DLC01Faydra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032FB">DLC01KrenshawWairForPlayerMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B782">DLC01PerkPittFighterMessageBox</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080073EA">DLC01PittFighter</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>12</ReferenceCount>
+                <CompiledSize>143</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgsAHAABAHMQAgAAABwAAgBzEAIAAAAcAAMAIRACAAAAHAAEAHMQAgAAABwABQBzEAIAAAAcAAYAIRACAAAAHAAHACIQAgAAABwACAAhEAIAAAAcAAkAIhACAAAAORAKAAIAcgwAbgAAAAAcAAoAIhACAAAAdxEHAAEAbpYAAAA3EAUAAQByCwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Quest complete
+
+CompleteAllObjectives DLC01Quest02
+
+SteelMill03to01REF.Unlock
+DLC01MillToHavenGateREF.Unlock
+MarketSquaretoHavenRef.Enable
+PittWorldtoMarketSquareREF.Unlock
+DLC01DowntownGateToScaffoldsREF.Unlock
+DLC01PittBridgeMapMarker.Enable
+DLC01HarrisNolaToggle.Disable
+DLC01TrainYardMapMARKER.Enable
+DLC01SpookREF.Disable
+
+SetStage DLC01Quest03 0
+DLC01HoleSoundREF.disable
+RewardXP 150
+;DLC01SteelYardtoPowerPlantREF.unlock
+;AddAchievement 56
+StopQuest DLC01Quest02</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001511">SteelMill03to01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08002010">DLC01MillToHavenGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800150E">MarketSquaretoHavenRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800150C">PittWorldtoMarketSquareREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080062A7">DLC01DowntownGateToScaffoldsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080054DC">DLC01PittBridgeMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B7B6">DLC01HarrisNolaToggle</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080054DB">DLC01TrainYardMapMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080068BC">DLC01SpookREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B777">DLC01HoleSoundREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Make contact with Midea.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">139</Index>
+        <Description Tag="NNAM">(Optional) Prepare for the second fight.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Collect 10 Ingots from the Steelyard.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0800150A">MarketSquaretoSteelMill01REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="08000D91">DLC01MarketSquare</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080032F2">DLC01SteelyardExitMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="08000D91">DLC01MarketSquare</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Return to Midea.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="08000D91">DLC01MarketSquare</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3C">DLC01MideaHut</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080011B7">SteelMill01toMarketSquareREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3C">DLC01MideaHut</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="08000D91">DLC01MarketSquare</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Listen to Ashur's speech in the courtyard.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">125</Index>
+        <Description Tag="NNAM">Enter the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001510">SteelMill03to04REF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">124</Index>
+        <Description Tag="NNAM">(Optional) Prepare for the Arena fight.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">130</Index>
+        <Description Tag="NNAM">Defeat your opponent.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">135</Index>
+        <Description Tag="NNAM">Leave the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080032ED">DLC01PhaedraREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">140</Index>
+        <Description Tag="NNAM">Enter the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001510">SteelMill03to04REF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">145</Index>
+        <Description Tag="NNAM">Defeat your opponents.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">150</Index>
+        <Description Tag="NNAM">Leave the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001510">SteelMill03to04REF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Meet with Midea in private.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">120</Index>
+        <Description Tag="NNAM">Sign up for the Arena.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080032ED">DLC01PhaedraREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">160</Index>
+        <Description Tag="NNAM">Enter the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001510">SteelMill03to04REF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">159</Index>
+        <Description Tag="NNAM">(Optional) Prepare for the final fight.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">165</Index>
+        <Description Tag="NNAM">Defeat your opponent..</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">170</Index>
+        <Description Tag="NNAM">Leave the Hole.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003301">DLC01KrenshawREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">49</Index>
+        <Description Tag="NNAM">(Optional) Get a weapon from Marco.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003E5C">DLC01MarcoREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

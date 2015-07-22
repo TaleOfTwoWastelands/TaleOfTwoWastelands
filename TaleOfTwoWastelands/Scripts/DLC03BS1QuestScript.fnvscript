@@ -1,0 +1,310 @@
+ScriptName DLC03BS1QuestScript
+
+
+short Init							;flag set when we run this for the first time
+
+Short SarahDead				;flag set if Sarah died in MQ11
+Short RunTimer				;flag set when we need to run a timer
+short DLC03TristanGreet	;flag set when player first talks to Tristan -- used to make sure player can't bypass him
+short DLC03TristanStep		;incremented as Tristan does his walk & talk
+Short DLC03PrimeDown		;flag set when Prime explodes; used for dialogue and stage updates
+Short DLC03TerminalUpdate	;flag set for updating terminal entries
+short DLC03PrimeLineInc	;flag incremented after each of Liberty Prime's lines during his scene
+short DLC03LyonsGreet		;flag set when player is done waking up, so Elder forcegreets
+short DLC03TristanFollow	;flag set when player passes through Prime trigger, used to keep Tristan following him
+short DLC03RothStep			;flag incremented as player deals with Rothchild
+short DLC03TristanPrimeFlag ;flag set to 1 when we start the timer at Prime's Death
+short DLC03PlayBink			;flag set when it's time to play the transition bink
+
+Float Timer				;timer var
+Float DLC03PrimeDeathTimer
+float DLC03BinkTimer		;timer used to delay playing bink after sound call
+
+
+
+Begin GameMode
+
+;remove MQ11 script packages from followers and fire them all
+
+	if ( Init == 0 )
+		MQ08FawkesRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		DogmeatRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		CloverRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		Rl3Ref.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		ButchRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		CharonRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		JerichoRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		StarPaladinCrossRef.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		CraigBooneREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		RoseofSharonCassidyREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		VeronicaREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		LilyREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		RaulREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		ArcadeREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		EDE1Ref.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		EDE2Ref.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		EDE3Ref.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+		RexREF.RemoveScriptPackage MQ11FollowerWaitENDNoIdle
+
+;UPDATE: Move followers to citadel along with the player
+
+		if ( Followers.ButchHired == 1 )
+			if ( ButchRef.Waiting == 0 )
+				Set ButchRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				ButchREF.Moveto DLC03FollowerStartWaitMarkerREF
+				ButchREF.EVP
+			endif
+
+
+		endif
+		if ( Followers.CharonHired == 1 )
+			if ( CharonRef.Waiting == 0 )
+				Set CharonRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				CharonREF.Moveto DLC03FollowerStartWaitMarkerREF
+				CharonREF.EVP
+			endif
+
+
+		endif
+		if ( Followers.CloverHired == 1 )
+
+			if ( CloverRef.Waiting == 0 )
+				Set CloverRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				CloverREF.Moveto DLC03FollowerStartWaitMarkerREF
+				CloverRef.EVP
+			endif
+
+		endif
+		if ( Followers.DogmeatHired == 1 )
+
+			if ( DogmeatRef.Waiting == 0 )
+				Set DogmeatRef.Waiting to 1
+				set Followers.DogmeatWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				DogmeatRef.Moveto DLC03FollowerStartWaitMarkerREF
+				DogmeatRef.EVP
+			endif
+
+		endif
+		if ( Followers.JerichoHired == 1 )
+
+			if ( JerichoRef.Waiting == 0 )
+				Set JerichoRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				JerichoREF.Moveto DLC03FollowerStartWaitMarkerREF
+				JerichoRef.EVP
+			endif
+
+		endif
+		if ( Followers.FawkesHired == 1 )
+			if ( MQ08FawkesRef.Waiting == 0 )
+				Set MQ08FawkesRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				MQ08FawkesREF.Moveto DLC03FollowerStartWaitMarkerREF
+				MQ08FawkesRef.EVP
+			endif
+
+
+		endif
+		if ( Followers.RL3Hired == 1 )
+			if ( RL3REF.Waiting == 0 )
+				Set RL3REF.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				RL3REF.Moveto DLC03FollowerStartWaitMarkerREF
+				RL3REF.EVP
+			endif
+
+		endif
+		if ( Followers.StarPaladinCrossHired == 1 )
+
+			if ( StarPaladinCrossRef.Waiting == 0 )
+				Set StarPaladinCrossRef.Waiting to 1
+				StarPaladinCrossREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				StarPaladinCrossRef.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.bBooneHired == 1 )
+
+			if ( CraigBooneREF.Waiting == 0 )
+				Set CraigBooneREF.Waiting to 1
+				CraigBooneREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				CraigBooneREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.bCassHired == 1 )
+
+			if ( RoseofSharonCassidyREF.Waiting == 0 )
+				Set RoseofSharonCassidyREF.Waiting to 1
+				RoseofSharonCassidyREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				RoseofSharonCassidyREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.bVeronicaHired == 1 )
+
+			if ( VeronicaREF.Waiting == 0 )
+				Set VeronicaREF.Waiting to 1
+				VeronicaREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				VeronicaREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.bLilyHired == 1 )
+
+			if ( LilyREF.Waiting == 0 )
+				Set LilyREF.Waiting to 1
+				LilyREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				LilyREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.RaulHired == 1 )
+
+			if ( RaulREF.Waiting == 0 )
+				Set RaulREF.Waiting to 1
+				RaulREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				RaulREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.ArcadeHired == 1 )
+
+			if ( ArcadeREF.Waiting == 0 )
+				Set ArcadeREF.Waiting to 1
+				ArcadeREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				ArcadeREF.EVP
+			endif
+
+		endif
+		if ( vNPCFollowers.bEDEHired == 1 )
+			if EDE1Ref.GetDisabled == 0
+				if ( EDE1Ref.Waiting == 0 )
+					Set EDE1Ref.Waiting to 1
+					EDE1Ref.Moveto DLC03FollowerStartWaitMarkerREF
+					EDE1Ref.EVP
+				endif
+			elseif EDE2Ref.GetDisabled == 0
+				if ( EDE2Ref.Waiting == 0 )
+					Set EDE2Ref.Waiting to 1
+					EDE2Ref.Moveto DLC03FollowerStartWaitMarkerREF
+					EDE2Ref.EVP
+				endif
+			elseif EDE3Ref.GetDisabled == 0
+				if ( EDE3Ref.Waiting == 0 )
+					Set EDE3Ref.Waiting to 1
+					EDE3Ref.Moveto DLC03FollowerStartWaitMarkerREF
+					EDE3Ref.EVP
+				endif
+			endif
+			set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+
+		endif
+		if ( vNPCFollowers.RexHired == 1 )
+
+			if ( RexREF.Waiting == 0 )
+				Set RexREF.Waiting to 1
+				RexREF.Moveto DLC03FollowerStartWaitMarkerREF
+				set VNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )	
+				RexREF.EVP
+			endif
+
+		endif
+
+;remove all adverse medical effects, chems, etc from the player
+		Player.Dispel Jet
+		Player.Dispel Psycho
+		Player.Dispel MS09UltraJet
+		Player.Dispel Buffout
+		Player.Dispel Mentats
+		Player.Dispel Stealthboy
+		Player.Dispel Morphine
+		Player.Dispel MS15Mentat01
+		Player.Dispel MS15Mentat02
+		Player.Dispel MS15Mentat03
+		Player.Dispel MS04FireAntNectar
+		Player.Dispel MS15Mentat02
+		Player.Dispel Beer
+		Player.Dispel Vodka
+		Player.Dispel Scotch
+		Player.Dispel Whiskey
+		Player.Dispel Wine
+		Player.Dispel AntQueenPheromones
+		Player.Dispel MS05NukaColaQtm
+		Player.Dispel MS05NukalurkMeat
+		Player.Dispel RadX
+		Player.Dispel AntNectar
+		Player.Dispel MS05FinNukaPie
+		Player.Dispel YaoGuaiMeat
+		Set Generic.Addicted to 0
+		Player.RestoreAV RadiationRads 1000
+		Player.ResetHealth
+
+
+		set Init to 1
+	endif
+
+;Wait until player has loaded into Citadel before playing Bink audio
+
+	if ( DLC03PlayBink == 0 )
+		if ( Player.GetInCell CitadelBRing == 1 )
+			playSound QSTFadeToWhiteE
+			set DLC03BS1.DLC03BinkTimer to 3
+			set DLC03BS1.DLC03PlayBink to 1
+		endif
+	endif
+
+;run a short delay between transition sound and bink playing
+
+	if ( DLC03PlayBink == 1 )
+		if ( DLC03BinkTimer >= 0 )
+			set DLC03BinkTimer to ( DLC03BinkTimer - GetSecondsPassed )
+		else
+			PlayBink "2 weeks later.bik" 0 0 1 0
+			set DLC03PlayBink to -1
+		endif
+	endif
+
+
+;run timers where needed
+
+	if ( RunTimer == 1 )
+		if ( Timer <= 0 )
+			if ( GetStage DLC03BS1 == 0 )
+				SetStage DLC03BS1 1
+			elseif ( GetStage DLC03BS1 == 1 )
+				setStage DLC03BS1 2
+			endif
+		else
+			set Timer to ( Timer - GetSecondsPassed )
+		endif
+	endif
+
+	if ( DLC03PrimeDown == 1 )
+		if ( DLC03TristanPrimeFlag == 0 )
+			Set DLC03TristanPrimeFlag to 1
+			Set DLC03PrimeDeathTimer to 32
+		elseif ( DLC03TristanPrimeFlag == 1 )
+			if ( DLC03PrimeDeathTimer <= 0 )
+				Set DLC03TristanPrimeFlag to -1
+				Set DLC03TristanFollow to -1
+				DLC03TristanRef.EVP
+			else
+				set DLC03PrimeDeathTimer to ( DLC03PrimeDeathTimer - GetSecondsPassed )
+			endif
+		endif
+	endif
+
+
+
+End

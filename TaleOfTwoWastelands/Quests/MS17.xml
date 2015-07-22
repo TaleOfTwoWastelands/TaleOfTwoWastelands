@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA4">MS17</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS17</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601B294">MS17QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Agatha's Song</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Recover the Soil Stradivarius from Vault 92</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>85</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAQAAABUACgByAQBzGQACACAxFgAQAAIADAAgcgEAcx8AIDAgPT1VEAUAAQByAgCjEQ8AAwByAQBuFAAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS17 10 1
+set MS17.QuestInProgress to 1
+if ( MS17.FoundVT == 0 )
+ShowMap VaultTecHQMapMarker
+SetObjectiveDisplayed MS17 20 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06082E1E">VaultTecHQMapMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS17 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbh4AAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS17 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Return to Agatha</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>76</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbjIAAABuAQAAAKIRDwADAHIBAG4KAAAAbgEAAACiEQ8AAwByAQBuFAAAAG4BAAAAohEPAAMAcgEAbh4AAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS17 50 1
+SetObjectiveCompleted MS17 10 1
+SetObjectiveCompleted MS17 20 1
+SetObjectiveCompleted MS17 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>125</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAAAcAAEABBIHAAEAbmQAAAAVAAoAcgMAcx0AAgAgMRUAEAByBABmMQAIACBHBQAgMSArFQAKAHIEAHM1AAIAIDGtEQUAAQByAwAVAAoAcgMAcwcAAgAgMRwAAgAhEAIAAAA3EAUAAQByAwA2EAUAAQByBgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+Player.RewardKarma 100
+set MS17.GaveViolin to 1
+Set RadioGalaxyNewsQuest.MS17Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+CompleteAllObjectives MS17
+set MS17.MS17Good to 1
+MS17RadioRef.Enable
+StopQuest MS17
+StartQuest MS17Fin
+;addachievement 29
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608A6DB">MS17RadioRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601EF3A">MS17Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>115</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAAAVABAAcgIAZjEACAAgRwMAIDEgKxUACgByAgBzNQACACAxrREFAAEAcgQAFQAKAHIEAHMIAAIAIDE3EAUAAQByBAA2EAUAAQByBQANEQoAAgByBgBuAAAAABwAAQBVEQcAAQBuZAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+Set RadioGalaxyNewsQuest.MS17Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+CompleteAllObjectives MS17
+set MS17.MS17Bad to 1
+StopQuest MS17
+StartQuest MS17Fin
+SetQuestObject MS17SoilStrad 0
+MS17SSCaseRef.SetItemValue 100
+;addachievement 29</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A5F5F">MS17SSCaseRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA4">MS17</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601EF3A">MS17Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000033FF">MS17SoilStrad</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Recover the Soil Stradivarius from Vault 92.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601EF3B">MS17VaultArrivalMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetMapMarkerVisible</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0603DA50">Vault92MapMarkerREF</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601852B">Vault92a</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060A3977">Vault92aOverseer</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018532">Vault92b</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018538">Vault92c</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0603ABF8">Vault92d</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">(Optional) Locate Vault-Tec Headquarters.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060BAE81">MS17QuestTarget20</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Return to Agatha.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0603D34B">AgathaRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">(Optional) Discover the location of Vault 92.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Find a buyer for the Soil Stradivarius.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

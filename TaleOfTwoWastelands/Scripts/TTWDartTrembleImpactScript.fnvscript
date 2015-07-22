@@ -1,0 +1,19 @@
+ScriptName TTWDartTrembleImpactScript
+
+; Randomly generates an intact dart on target when they are hit
+
+Short DartSpawnChance
+
+Begin ScriptEffectStart
+
+	Set DartSpawnChance to GetRandomPercent
+
+	If DartSpawnChance > 75
+		additem AmmoDart 1
+	EndIf
+
+	CIOS Tremble
+
+End
+
+

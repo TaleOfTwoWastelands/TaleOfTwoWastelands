@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0A0107BC">DLC04crSwampFolk4Melee</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04crSwampFolk4Melee</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tracker</Name>
+    <Model>
+      <FileName Tag="MODL">DLC04\Creatures\Hillfolk1\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>hillfolk_skin.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing, AllowPickpocket</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>15</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0A0112EA">DLC04SwampFolkFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0A0112EE">DLC04SwampFolkTrackerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0A012469">DLC04DeathItemSwampfolk</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0A00A882">DLC04MaleYokelLarge</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="0A012651">DLC04ActorInventoryScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A0107C6">DLC04SwampFolkMeleeAxe</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>3000</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000C72CB">DefaultSandboxWeaponDrawnEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Abomination</CreatureType>
+      <Skill>
+        <Combat>85</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>600</Health>
+      <Damage>15</Damage>
+      <Strength>8</Strength>
+      <Perception>3</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>5</Agility>
+      <Luck>7</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">192</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0A012DB7">CSBrawlerMelee</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0A010C37">DLC04Hillfolk1BodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0001FF5F">AudioTemplateSuperMutant</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00075A49">SuperMutantHandImpactDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0A0119B2">DLC04SwampFolkWeaponsSpecialMelee</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

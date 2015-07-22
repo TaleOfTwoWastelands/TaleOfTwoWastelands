@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0B003305">DLC05PaulsonsHat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05PaulsonsHat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Sheriff's Hat</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B88">EnchClothingHeadSunGuard</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Hair, Headband, Hat</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">DLC05\Armor\cowboyoutfit\cowboyhatm.nif</FileName>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">DLC05\Armor\cowboyoutfit\cowboyhatf.nif</FileName>
+          <FaceGenModelFlags Tag="MOSD">Head</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\LucasSimmsHat\M\LucasSimmsHatGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">DLC05\Interface\Icons\Apparel_cowboyhat.dds</Male>
+      </Inventory>
+    </Icon>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>35</Value>
+      <MaxCondition>40</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

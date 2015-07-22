@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="060553EE">TranquilityLaneExitDoorScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TranquilityLaneExitDoorScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>17</ReferenceCount>
+        <CompiledSize>657</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAJ8BAAAAABYAFAAcABAAIFhpEAUAAQByCAAgMSA9PRYAEAAHAAwAIHIJAHMWACAxID09HAABAIsQAgAAABwAAgCLEAIAAAAcAAMAixACAAAAHAAEAIsQAgAAABwABQCLEAIAAAAcAAYAixACAAAAHAAHAIsQAgAAABkAAAAWABcAAQATACByCABYLxAFAAEAcgoAIDEgPT0cAAgAUhAKAAIAcgoAbgEAAAAZAAAAFgAXAAEAEwAgcggAWC8QBQABAHILACAxID09HAAIAFIQCgACAHILAG4BAAAAGQAAABYAFwABABMAIHIIAFgvEAUAAQByDAAgMSA9PRwACABSEAoAAgByDABuAQAAABkAAAAWABcAAQATACByCABYLxAFAAEAcg0AIDEgPT0cAAgAUhAKAAIAcg0AbgEAAAAZAAAAFgAXAAEAEwAgcggAWC8QBQABAHIOACAxID09HAAIAFIQCgACAHIOAG4BAAAAGQAAAAASBwABAG4AAAAAJRIHAAEAbgAAAAAcAAgAnhAFAAEAcg8AMBIFAAEAchAAGQAAABEAAAAQAAYAFQAqAAAAExAJAAIAAwBuAAAAABUACgBmAwAFACAxLjI1FQAHAHMBAAIAIDERAAAAEAAGAAAApAAAABYADQAEAAkAIHMBACAxID09FgATAAIADwAgWCgRBAABAAMAIDAgPT0TEAkAAgAFAG4AAAAAFQAHAHMBAAIAIDAZAAAAGQAAABYADQAGAAkAIHMCACAwID09FgAMAAIACAAgZgMAIDAgPJERBQABAHIRABUABwBzAgACACAxFwACAAEAFQARAGYDAAwAIGYDACBYDBAAACAtGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TranquilityLaneExitDoorScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsAnimating</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasFlicked</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Timer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F7">MQ04SoldierRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F6">MQ04SoldierRef2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8EE">MQ04SoldierRef3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F0">MQ04SoldierRef4</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F1">MQ04SoldierRef5</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8EF">MQ04SoldierRef6</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F2">MQ04SoldierRef7</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8A">MQ04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06029769">MQ04RollingPin</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000270F0">MQ04Undies</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000296C0">MQ04Brochure</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602869C">MQ04SlasherKnife</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060340FC">MQ04SlasherMask</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060B3636">MQ04PlayerPod</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0605364D">SmithCaseyGarageExtDoor</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000553E3">TranquilityLaneFlicker01ISFX</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

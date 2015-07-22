@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0011E666">GraveContScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">GraveContScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>152</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAIgAAAAAABYADwAIAAsAIFhpEAUAAQByAQAWAAgAAQAEACBzAQANEAIAAAAYAC0AAgApACByAQBYLxAFAAEAcgIAIDEgPj0gcgEAWC8QBQABAHIDACAxID49IHx8DRACAAAAFQAHAHMBAAIAIDEXAAIAAQBZEAsAAQByBAAAAAAAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="GraveContScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Opened</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E46F">WeapShovel</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00D5A8">DLC04WeapUniqueFertilizerShovel</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E46E">NoShovelMsg</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

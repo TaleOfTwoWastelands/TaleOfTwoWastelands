@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="05000A51">NVDLC05ChallengeNeNeNeNe</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC05ChallengeNeNeNeNe</EditorID>
+    <Name Tag="FULL">(GRA) Ne Ne Ne Ne... *</Name>
+    <Script Tag="SCRI">
+      <Reference ID="05000A79">NVDLC05ChallengeNeNeNeNeScript</Reference>
+    </Script>
+    <Description Tag="DESC">Cripple Right Arms with Shotguns.</Description>
+    <Data Tag="DATA">
+      <Type>HitAnEnemy</Type>
+      <Threshold>5</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>RightArm</BodyPart>
+      <TypeOfHit>Cripple</TypeOfHit>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0015EAD4">WeaponShotgunLIST</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

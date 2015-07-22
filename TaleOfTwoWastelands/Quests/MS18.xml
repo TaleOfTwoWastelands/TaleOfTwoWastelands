@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA5">MS18</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS18</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06028108">MS18QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Reilly's Rangers</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgUAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player got quest from Radio Message
+
+SetObjectiveDisplayed MS18 5 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find the Statesman Hotel</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>135</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHwRBQABAHIDABwAAQB8EQUAAQByBABVEAUAAQByBQAcAAIAIRACAAAAFgAZAAEAFQAgWKURCgACAHIGAG4FAAAAIDEgPT2iEQ8AAwByBgBuBQAAAG4BAAAAGQAAAKMRDwADAHIGAG4KAAAAbgEAAACjEQ8AAwByBgBuDwAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">Player.AddNote MS18AmmoBoxNote
+Player.AddNote MS18RangerLocation
+ShowMap StatesmanHotelMapMarker
+MS18OurLadyHopeDestroyedRoomEnablerREF.enable         ;enables the bridge from OurLady02 to StatesmanHotel02
+if ( GetObjectiveDisplayed MS18 5 == 1 )
+SetObjectiveCompleted MS18 5 1
+endif
+SetObjectiveDisplayed MS18 10 1
+SetObjectiveDisplayed MS18 15 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602BFBF">MS18OurLadyHopeDestroyedRoomEnablerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06036C51">MS18AmmoBoxNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060ADEF0">MS18RangerLocation</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06082E1D">StatesmanHotelMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Locate Reilly's Rangers</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhQAAABuAQAAABYAGQABABUAIFilEQoAAgByAQBuCgAAACAxID09ohEPAAMAcgEAbgoAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS18 20 1
+if ( GetObjectiveDisplayed MS18 10 == 1 )
+SetObjectiveCompleted MS18 10 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Lead Reilly's Rangers to safety</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbh4AAABuAQAAAKIRDwADAHIBAG4UAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS18 30 1
+SetObjectiveCompleted MS18 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Get to the Metro Entrance</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>84</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMWAAIAIDEcAAEA8RAHAAEAbgAAAAAVAAoAcgEAcwEAAgAgMRUACgByAQBzAwACACAyHAABAFARAACiEQ8AAwByAgBuHgAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">Set MS18.Sidearm to 1
+ReillyRef.SetUnconscious 0
+Set ReillyRef.WakeComa to 1
+Set ReillyRef.Coma to 2
+ReillyRef.ResetHealth
+SetObjectiveCompleted MS18 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A9FC">ReillyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Return to Reilly at Ranger Compound</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>218</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgYAbjIAAABuAQAAABYAEAABAAwAIHIGAHMOACAwID09ohEPAAMAcgYAbigAAABuAQAAABkAAAAVAAoAcgYAcwoAAgAgMRwAAQBeEAAAHAACAF4QAAAcAAMAXhAAABwABABzEAIAAAAcAAUAnhAFAAEAcgcAHAAFALwREwADAHIIAG4BAAAAejMzMzMzM+M/HAAFAAIQCgACAHIJAG4BAAAAHAAFAF4QAAAcAAUAghENAAIAHQB6AAAAAAAAWUAcAAUAghENAAIAHgB6AAAAAAAAWUA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS18 50 1
+if ( MS18.EndEarly == 0 )
+SetObjectiveCompleted MS18 40 1
+endif
+Set MS18.ButcherTalk to 1
+ButcherRef.Evp
+BrickRef.Evp
+DonovanRef.Evp
+MS18RCTerminalRef.Unlock
+ReillyRef.Moveto MS18FinReillyRef
+ReillyRef.AddItemHealthPercent MS18RangerBattlearmor 1 .6
+ReillyRef.AddItem WithAmmo10mmSubmachineGunNPC 1
+ReillyRef.Evp
+ReillyRef.RestoreAV LeftMobilityCondition 100
+ReillyRef.RestoreAV RightMobilityCondition 100</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B832">ButcherRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B831">BrickRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B833">DonovanRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06051FE4">MS18RCTerminalRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A9FC">ReillyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06051F3F">MS18FinReillyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00023030">MS18RangerBattlearmor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00029362">WithAmmo10mmSubmachineGunNPC</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>107</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAAAWABAAAQAMACByAQBzGAAgMCA9PQQSBwABAG7IAAAAGQAAAK0RBQABAHIBADcQBQABAHIBADYQBQABAHICABUAEAByAwBmNgAIACBHBAAgMSArFQAKAHIDAHM1AAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+if ( MS18.MS18Bad == 0 )
+RewardKarma 200
+endif
+CompleteAllObjectives MS18
+StopQuest MS18
+StartQuest MS18Fin
+;addachievement 30
+Set RadioGalaxyNewsQuest.MS18Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602E8F7">MS18Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAArREFAAEAcgIANxAFAAEAcgIA</CompiledScript>
+              <ScriptSource Tag="SCTX">ShowMessage MS18QuestFailedMessage
+CompleteAllObjectives MS18
+StopQuest MS18</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="000A35FE">MS18QuestFailedMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA5">MS18</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find Our Lady of Hope Hospital.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D95C">MS18HotelStart</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Locate Reilly's Rangers.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602BCAE">OurLadyHopeDoor01toDCWorld06REFDUPLICATE000</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA5">MS18</Quest>
+                  <VariableIndex>28</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602A144">DCWorld06toStatesmanHotel02REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA5">MS18</Quest>
+                  <VariableIndex>28</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B832">ButcherRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>2</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014EA5">MS18</Quest>
+                  <VariableIndex>28</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Lead Reilly's Rangers to safety.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Get to the Statesman Hotel exit.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Return to Reilly at Ranger Compound.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602A9FC">ReillyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">12</Index>
+        <Description Tag="NNAM">(Optional) Gear up at Ranger Compound.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602E8F2">MS18RangerCompoundMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">(Optional) Locate the Ranger's ammo crate.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Locate a Fission Battery.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D508">MS18WreckedProtectron01REF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Find Reilly in Underworld inside the Museum of History.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602A9FC">ReillyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">28</Index>
+        <Description Tag="NNAM">Give a Fission Battery to Donovan</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602B833">DonovanRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

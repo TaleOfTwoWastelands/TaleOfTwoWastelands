@@ -1,0 +1,22 @@
+ScriptName VCG01VigorTesterTriggerSCRIPT
+
+; triggered when player reaches the vigor tester
+
+short bPlayedMessagesOnce;
+
+begin onTriggerEnter	player
+	if getStageDone VCG01 60 == 0
+		if IsActionRef player == 1
+			setstage VCG01 60
+		endif	
+	endif
+End
+
+BEGIN OnTriggerLeave Player
+	if (IsActionRef Player && bPlayedMessagesOnce == 0)
+		;ShowMessage VCGTutorialJump
+		;ShowMessage VCGTutorialGrab2
+		set bPlayedMessagesOnce to 1;
+	endif
+END
+

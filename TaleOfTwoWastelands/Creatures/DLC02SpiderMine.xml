@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0700A4E0">DLC02SpiderMine</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02SpiderMine</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-7</X>
+        <Y>-7</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>7</X>
+        <Y>7</Y>
+        <Z>10</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Spider Drone</Name>
+    <Model>
+      <FileName Tag="MODL">DLCAnch\Creatures\SpiderMine\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>spidermine.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>121635392</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0700A4E3">DLC02SpiderMineFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00040D41">RobotEyebot</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0C0C8608">CrProtectronDC</Reference>
+    </Template>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>20</Health>
+        <Count>1</Count>
+        <Flags>VATSTargetable</Flags>
+        <Unknown>AAA=</Unknown>
+      </Header>
+      <DestructionStages>
+        <DestructionStage>
+          <StageData Tag="DSTD">
+            <HealthPercentage>0</HealthPercentage>
+            <Index>0</Index>
+            <Stage>0</Stage>
+            <Flags>Disable</Flags>
+            <SelfDamagePerSecond>0</SelfDamagePerSecond>
+            <Explosion ID="0007078A">EyebotExplosion</Explosion>
+            <Debris ID="000B8FF4">RobotGoreBits01</Debris>
+            <DebrisCount>5</DebrisCount>
+          </StageData>
+          <EndMarker Tag="DSTF" />
+        </DestructionStage>
+      </DestructionStages>
+    </Destructable>
+    <Script Tag="SCRI">
+      <Reference ID="0700A4E2">DLC02SpiderMineSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>0</Responsibility>
+      <Mood>Cocky</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="000200D5">DefaultStayAtEditorLocation</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>80</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>20</Health>
+      <Damage>22</Damage>
+      <Strength>1</Strength>
+      <Perception>1</Perception>
+      <Endurance>1</Endurance>
+      <Charisma>1</Charisma>
+      <Intelligence>1</Intelligence>
+      <Agility>1</Agility>
+      <Luck>1</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000B2944">DefaultCombatMeleestyle</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0700A68F">DLC02SpiderMineBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">1.5</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0700CC68">AudioTemplateMineSpider</Reference>
+    </SoundTemplate>
+  </Subrecords>
+</Record>

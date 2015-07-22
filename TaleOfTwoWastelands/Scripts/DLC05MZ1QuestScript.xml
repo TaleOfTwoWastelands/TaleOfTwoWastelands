@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00096D">DLC05MZ1QuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05MZ1QuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>82</ReferenceCount>
+        <CompiledSize>4479</CompiledSize>
+        <VariableCount>30</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAHERAAAWAA0ABgAJACBzGgAgMCA9PTMSCAACAHIWAHIXADMSCAACAHIWAHIYADMSCAACAHIWAHIZADMSCAACAHIaAHIbADMSCAACAHIcAHIdABUABwBzGgACACAxGQAAABYAEgAGAA4AIHIBAFgjEAAAIDAgPT0WAAwAAQAIACBmHgAgMCA+FQARAGYeAAwAIGYeACBYDBAAACAtFwACAAIAHAABANYRAgAAABUABwBmHgACACA3GQAAABkAAAAWAA0ABwAJACBzBAAgMCA9PRYAEgACAA4AIHIJAFgjEAAAIDAgPT0VAAcAcwQAAgAgMRUACABmBgADACA2MBgAFQACABEAIFg6EAUAAQByHgAgNjAgPj0VAAcAcwQAAgAgMRUACABmBgADACA2MBkAAAAYAA0ACAAJACBzBAAgMSA9PRYADQAEAAkAIGYGACAwIDw9HAACACIQAgAAAFkQCwABAHIfAAAAAAAAADkQCgACAHIgAG4KAAAAFQAHAHMEAAIAIDIXAAIAAQAVABEAZgYADAAgZgYAIFgMEAAAIC0ZAAAAGQAAABYADQBmAAkAIHMFACAwID09FgAZAGQAFQAgcgMAWAEQBQABAHICACAxMDAwIDwWAA0AVQAJACBzGAAgMCA9PZERBQABAHIhAGEQJQAHAG4BAAAAbgEAAABuAQAAAG4BAAAAbgEAAABuAQAAAG4BAAAAFgASAAEADgAgcggAWCMQAAAgMCA9PRUABwBzHQACACAxGQAAABYAEAACAAwAIHIiAHMCACAxID09FQAKAHIiAHMJAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHImAHMHACAxID09FQAKAHImAHMPAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHInAHMBACAxID09FQAKAHInAHMIAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHIoAHMEACAxID09FQAKAHIoAHMLAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHIpAHMBACAxID09FQAKAHIpAHMIAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHIqAHMBACAxID09FQAKAHIqAHMIAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHIrAHMBACAxID09FQAKAHIrAHMIAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHIsAHMBACAxID09FQAKAHIsAHMIAAIAIDEVABIAciMAZhkACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMGACAxID09FQAKAHIuAHMIAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMVACAxID09FQAKAHIvAHMBAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMbACAxID09FQAKAHIwAHMJAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMhACAxID09FQAKAHIxAHMBAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMJACAxID09FQAKAHIyAHMDAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAACAAwAIHItAHMMACAxID09FQAKAHIzAHMBAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABYAEAAKAAwAIHItAHMeACAxID09FgASAAIADgAgcjQAWCMQAAAgMCA9PRUACgByNABzAQACACAxFQASAHItAGYUAAoAIEckACBHJQAgKxgAEgACAA4AIHI1AFgjEAAAIDAgPT0VAAoAcjUAcwEAAgAgMRUAEgByLQBmFAAKACBHJAAgRyUAICsYABIAAgAOACByNgBYIxAAACAwID09FQAKAHI2AHMBAAIAIDEVABIAci0AZhQACgAgRyQAIEclACArGQAAABkAAAAWABAAAgAMACByLQBzDwAgMSA9PRUACgByNwBzCAACACAxFQASAHItAGYUAAoAIEckACBHJQAgKxkAAAAcAAMASRIUAAQAcjgAbgEAAABuAQAAAG4oAAAAFQAiAGYXAB0AIHIDAFglEBQABAByOQBuAQAAAG4AAAAAbgAAAAAcAAQACRAMAAIAWnoAAAAAAAAAABwABAAJEAwAAgBZegAAAAAAAAAAHAAEAAkQDAACAFh6AAAAAAAAAAAcAAUAIhACAAAAFQAHAHMYAAIAIDGREQUAAQByOgAYAA0AAQAJACBzGAAgMTAgPBUADQBzGAAIACBzGAAgMSArGAAOAAUACgAgcxgAIDEwID09HAAEAJ4QBQABAHIDABwAAwAjEQUAAQByOwAcAAQAIxEFAAEAcjsAHAAEABMQCQACAAMAbgEAAAAVAAgAcxgAAwAgMTEYABkAAgAVACBzGAAgMTAgPiBzGAAgNDAgPCAmJhUADQBzGAAIACBzGAAgMSArHAAEAJ4QBQABAHIDABgADgABAAoAIHMYACA0MCA9PRUABwBzBQACACAxGQAAABkAAAAYAA0ACAAJACBzBQAgMSA9PRYAFAAEABAAIHIEAFgoEQIAAAAgMCA9PRwAAwCXEAUAAQByPAAVAAgAZgcAAwAgMjcVAAcAcwUAAgAgMhwABAATEAkAAgAEAG4BAAAAFwACAAEAFQARAGYHAAwAIGYHACBYDBAAACAtGQAAABgADQAlAAkAIHMFACAyID09FgANAAMACQAgZgcAIDUgPD0WAA0AAQAJACBzFAAgMCA9PRUABwBzFAACACAxGQAAABkAAAAWAA0AHAAJACBmBwAgMCA8PRwAAwAlEQUAAQByOwAcAAMAmBAAABYAEgABAA4AIHIGAFgjEAAAIDAgPT0cAAYAIhACAAAAGQAAABYAEgABAA4AIHIHAFgjEAAAIDAgPT0cAAcAIhACAAAAGQAAABYAEgABAA4AIHIIAFgjEAAAIDAgPT0cAAgAIhACAAAAGQAAABwACQAiEAIAAAAWABIAAQAOACByCgBYIxAAACAwID09HAAKACIQAgAAABkAAAAkEgAA/BEFAAEAcj0AHAADAJ4QBQABAHI+ABwABAAiEAcAAQBuAQAAAJIRBQABAHI6AJERBQABAHI/AJERBQABAHJAABwACwBeEAAAHAAMAF4QAAAcAA0AXhAAABwAAwCtEAoAAgByOABuAQAAABUABwBzBQACACAzFQAHAGYHAAIAIDEXAAIAAQAVABEAZgcADAAgZgcAIFgMEAAAIC0ZAAAAGAANAAoACQAgcwUAIDMgPT0WABcACAATACByAwBYARAFAAEAcj4AIDUwIDwWABIABgAOACByAwBYLhIAACAxID09FgANAAIACQAgZgcAIDAgPD0VAAcAcwUAAgAgNBUACABmBwADACA1NhcAAgABABUAEQBmBwAMACBmBwAgWAwQAAAgLRkAAAAZAAAAGQAAABgADQAEAAkAIHMFACA0ID09HAALAJ4QBQABAHJBABwADACeEAUAAQByQgAcAA0AnhAFAAEAckMAFQAHAHMFAAIAIDUYAA0ABgAJACBzBQAgNSA9PRwACwBeEAAAHAAMAF4QAAAcAA0AXhAAABwADgATEAkAAgADAG4BAAAAHAADAJcQBQABAHJEABUABwBzBQACACA2GAANABcACQAgcwUAIDYgPT0WAA4ABQAKACBmBwAgMjQgPD0WAA0AAwAJACBzFAAgMSA9PRwABAC7EQAAkREFAAEAckUAFQAHAHMUAAIAIDIZAAAAGQAAABYADgADAAoAIGYHACAxMiA8PRYADQABAAkAIHMcACAwID09FQAHAHMcAAIAIDEZAAAAGQAAABYADQAHAAkAIGYHACAwIDw9HAADAJgQAAD9EQAAHAADAJ4QBQABAHJGAJIRBQABAHJAAJERBQABAHJHABwADwA0EAgAAgByAwBySAAVAAkAcwUABAAgMSB+FwACAAEAFQARAGYHAAwAIGYHACBYDBAAACAtGQAAABkAAAAWAA0AAgAJACBzEAAgMSA9PRUACABmEQADACAyMBUABwBzEAACACAyGAANAAUACQAgcxAAIDIgPT0WAA0AAQAJACBmEQAgMCA8PRUACQBzEAAEACAxIH4XAAIAAQAVABEAZhEADAAgZhEAIFgMEAAAIC0ZAAAAGQAAABYADQAQAAkAIHMKACAxID09FgANAAUACQAgcxMAIDAgPT0WAA0AAwAJACBzFQAgMCA9PaIRDwADAHIgAG4KAAAAbgEAAACjEQ8AAwByIABuGQAAAG4BAAAAFQAHAHMVAAIAIDEZAAAAGQAAABYAFwAHABMAIHIRAFgBEAUAAQBySQAgNTAgPBYAEgADAA4AIHIPAFguEAAAIDAgPT0cABAAIhACAAAAHAARADQQCAACAHIDAHJKABUABwBzCgACACAyFwACAAEAFQAHAHMKAAIAIDMZAAAAGQAAABgADQAGAAkAIHMKACAzID09HAASAA0QBQABAHIDABUACgByEgBzAgACACAxHAASABMQCQACAAMAbgEAAAAcABEADxAJAAIAAABuAgAAABwAEwAPEAkAAgAAAG4CAAAAFQAHAHMKAAIAIDQYAA0ADQAJACBzCgAgNCA9PRYAEgADAA4AIHIPAFguEAAAIDAgPT0cAA8AFxAAABwADwCJEAoAAgBySwBuAAAAABwADwA0EAgAAgByAwByTAAZAAAAFgAMAAUACAAgcxUAIDIgPKIRDwADAHIgAG4KAAAAbgEAAACiEQ8AAwByIABuFAAAAG4BAAAAohEPAAMAciAAbhkAAABuAQAAAKMRDwADAHIgAG4bAAAAbgEAAAAVAAcAcxUAAgAgMhkAAAAVAAcAcwoAAgAgNRgADQALAAkAIHMKACA2ID09FgASAAkADgAgchEAWC4QAAAgMSA9PRYAEgAHAA4AIHITAFguEAAAIDEgPT0VAAkAcwoABAAgMSB+ohEPAAMAciAAbhsAAABuAQAAABYAEgABAA4AIHIPAFguEAAAIDAgPT0cAA8ANBAIAAIAcgMAck0AFwACAAEAORAKAAIAciAAbh4AAAAZAAAAGQAAABkAAAAZAAAAFgAVAAUAEQAgWDoQBQABAHIgACAzMCA9PRYAEgADAA4AIHJOAFguEAAAIDEgPT0WABIAAQAOACByTwBYLhAAACAxID09ORAKAAIAciAAbiMAAAAZAAAAGQAAABkAAAAWAA0ABgAJACBzCwAgMSA9PRYAEgABAA4AIHIPAFguEAAAIDAgPT0cAA8ANBAIAAIAcgMAclAAGQAAABUABwBzCwACACAyHAAUAF4QAAAVAAoAZgwABQAgMTAuNRgADQANAAkAIHMLACAyID09FgASAAsADgAgchQAWJ8QAAAgMiA9PRYADQAHAAkAIGYMACAwIDw9FgAqAAEAJgAgcg8AWC4QAAAgMCA9PSByDwBYARAFAAEAclEAIDgwMCA8PSAmJhwADwA0EAgAAgByAwByUAAZAAAAHAAUAJ4QBQABAHJSABUACABmDAADACAxMBUABwBzCwACACAzHAAUAF4QAAAXAAIAAQAVABEAZgwADAAgZgwAIFgMEAAAIC0ZAAAAGQAAABgADQAHAAkAIHMLACAzID09FgANAAEACQAgZgwAIDAgPj0VABEAZgwADAAgZgwAIFgMEAAAIC0XAAIAAwAVAAcAcwsAAgAgNBwAFQBzEAIAAAAcABUADRAFAAEAchQAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05MZ1QuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MessageRan</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05Abducted</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MessageTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05AbductionTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1SomahName</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1SomahFree</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1Fight</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1SallyDoor</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1SallyDoorTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1ClawFlag</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1ClawTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1SallyCoreUpdate</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1Attack</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1AbductionImod</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1FightOb</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fxRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">frameWait</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">init</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1GeneratorConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>28</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MZ1AbductionHappy</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC05MS16Check</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">RadioTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003F1F">DLC05AlienRadioBeaconREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0607C709">AlienRadioBeaconREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRV">23</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00B31B">DLC05RadDisableMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602248E">RadioEnclaveREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0608A6DB">MS17RadioRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0066FB">DLC05MZ1AnimationAlien1REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0066FC">DLC05MZ1AnimationAlien2REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0066FD">DLC05MZ1AnimationAlien3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B005EFC">DLC05MZ1TortureDeviceREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000988">DLC05SomahREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B006BDB">DLC05ClawNPCRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0040A3">DLC05MZ1AlienGuardRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003310">DLC05PlayerHoldingCellActivatorREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0040A4">DLC05MZ1AlienGuardRef2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000987">DLC05SallyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0032EE">DLC05MZ1HoldingCellIntDoorREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006B20D">RockItLauncherAmmo</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A9E6">DLC05AlienCrystalLarge</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A9E9">DLC05AlienCrystalSmall</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00BDFC">DLC05ButtercupToy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00075206">RepairCombatArmor</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A9A1">DLC05ArmorCombatMedic</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007520F">RepairCombatArmorHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A9A2">DLC05ArmorCombatHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8F">MQ09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00096E">DLC05StartMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000802">DLC05MZ1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00DB1C">DLC05BeamUpISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53F5">FollowerWaitTime</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00293F">DLC05PlayerContainerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A8DA">DLC05FXBeamMeUp</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D13C">DLC05AbductionISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A8DB">DLC05BeamUpFXShader</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00824B">DLC05PlayerAbductionPackage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D829">QSTDLC05ProbeStruggle</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003E3A">DLC05PlayerStartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D133">DLC05FadeInButtProbeISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D14D">DLC05AlienBlurISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B005F11">DLC05MZ1Alien1StartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B005F10">DLC05MZ1Alien2StartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B005F0F">DLC05MZ1Alien3StartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B006702">DLC05PlayerAnimationScenePackage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D13D">DLC05FadeOutButtProbeISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000989">DLC05PlayerHoldingCellMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00039563">FadeInFromWhiteISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B009944">DLC05MZ1SomahInitGreet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0040A7">DLC05MZ1AlienGuard1Marker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0047B9">DLC05MZ1AlienGuardLine</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0068DF">DLC05NPCFollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0047B8">DLC05MZ1SomahAttackGuard</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00AB48">DLC05MZ1SomahPostFight</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0068E3">DLC05MZ1AlienHCMelee2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0068E2">DLC05MZ1AlienHCMelee1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0047B7">DLC05MZ1SomahWaitForSally</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003701">DLC05MZ1SallyDoorMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B006FBA">DLC05MZ1SallyDoorMoveMarker</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

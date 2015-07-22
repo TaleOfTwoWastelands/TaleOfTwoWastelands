@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="0C011FB0">TTWWastelandPuree</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWWastelandPuree</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Mushroom Smoothie</Name>
+    <Model>
+      <FileName Tag="MODL">clutter\questitems\ms10jar02.nif</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">NVDLC03\interface\icons\NVDLC03items_mutant_cave_fungus.dds</Large>
+      <Small Tag="MICO">clutter\interface\icons\pipboyimages_small\items_small\glow_items_laurel_liniment.dds</Small>
+    </Icon>
+    <EquipmentType Tag="ETYP">Food</EquipmentType>
+    <Weight Tag="DATA">0</Weight>
+    <Data Tag="ENIT">
+      <Value>25</Value>
+      <Flags>NoAutoCalc, Medicine</Flags>
+      <WithdrawalEffect ID="0006698C">WithdrawalAlcohol</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="0002D48D">NPCHumanEatingFoodChewy</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="000FFCA0">NVRestoreLimbs</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>10</Magnitude>
+          <Area>0</Area>
+          <Duration>30</Duration>
+          <Type>Self</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00020516">DamageRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>5</Magnitude>
+          <Area>0</Area>
+          <Duration>30</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

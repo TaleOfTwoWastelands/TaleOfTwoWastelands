@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06087274">OutfitElderLyons</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitElderLyons</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-19</X>
+        <Y>-15</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>20</X>
+        <Y>15</Y>
+        <Z>12</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Elder Lyons' Robe</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ElderLyons\outfitm.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CnNuGXTliKkV7t8JbwDNHjVuXwlvBc0eNXNuGXTliKkV898JbwDNHjVzXwlvBc0eNXNuGXTliKkV</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\VaultSuit\F\Outfit.NIF</FileName>
+          <TextureHashes Tag="MO3T">5rEKb7ZGYNpmMQpvu0Zg2nRpGHTnx3X67t8Mb6vqryBuXwxvsOqvIHRpGHTnx3X6898Mb6vqryBzXwxvsOqvIHRpGHTnx3X6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\VaultSuit\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7bEKb7ZGYNptMQpvu0Zg2nRpGHTnx3X67t8Mb7LqryBuXwxvt+qvIHRpGHTnx3X6898Mb7LqryBzXwxvt+qvIHRpGHTnx3X6</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\VaultSuit\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO4T">7bEKb7ZGYNptMQpvu0Zg2nRpGHTnx3X67t8Mb7LqryBuXwxvt+qvIHRpGHTnx3X6898Mb7LqryBzXwxvt+qvIHRpGHTnx3X6</TextureHashes>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\vault_suit.dds</Male>
+      </Inventory>
+    </Icon>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="00087277">ElderLyonsOutfit</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>8</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>1</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

@@ -1,0 +1,257 @@
+scn DLC05SteamQuestStepsSCRIPT
+
+BEGIN ONTRIGGERENTER PLAYER
+
+	;///////////////////////
+	;// STAGE BEGIN
+	;// have the first set of aliens spawn and walk past
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStepBegin )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 01
+
+		;// move Sally
+		DLC05SallyREF.moveTo DLC05SteamSallyStartXMRK
+		DLC05SallyREF.EVP
+
+		;// update DLC05MZ1 quest stage if necessary
+		if ( GetStage DLC05MZ1 < 50 )
+			SetStage DLC05MZ1 50
+		endif
+
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 05
+	;// have the first set of aliens spawn and walk past
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep05 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 05
+
+		;// have Sally say the first line
+		DLC05SallyREF.sayTo Player DLC05SteamSallyGuide
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 10
+	;// have Sally blow the thing and kill all those aliens
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep10 && getStage DLC05SteamworksLD == 9 && DLC05SteamworksLD.sallyIgnored != 1)
+
+		;// the explosion
+		DLC05SteamSallyTACTQS10.sayTo player DLC05SteamSallyGuide
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 10
+
+		IF ( dlc05SteamworksLD.sallyGrenade == 1 )
+			DLC05SteamQS10ExplosionXMRK.placeAtMe GrenadeFragExplosion 1
+
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05A 10
+			DLC05SteamQS05A.kill player
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05B 10
+			DLC05SteamQS05B.kill player
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05C 10
+			DLC05SteamQS05C.kill player
+
+		ELSEIF ( dlc05SteamworksLD.sallyGrenade == 2 )
+			DLC05SteamQS10ExplosionXMRK.placeAtMe MinePlasmaExplosion 1
+
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05A 10
+			DLC05SteamQS05A.kill player
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05B 10
+			DLC05SteamQS05B.kill player
+			DLC05SteamQS10ExplosionXMRK.pushActorAway DLC05SteamQS05C 10
+			DLC05SteamQS05C.kill player
+
+		ENDIF
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 15
+	;// have Sally open the door so the player can avoid the pat
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep15 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 15
+
+		;// start the door stuff
+		set DLC05SteamworksLD.doorOpenInit to 1
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 16
+	;// player made it, close the door behind them
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep16 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 16
+
+		DLC05SteamSallyTACTQS15.sayTo player DLC05SteamSallyDoor
+
+		;// start the door stuff
+		DLC05SteamLockedDoor.setOpenState 0
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 20
+	;// warn the player to sneak to the left
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep20 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 20
+
+		DLC05SteamSallyTACTQS20.sayTo player DLC05SteamSallyDoor
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 25
+	;// apologize and tell the player to go right
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep25 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 25
+
+		DLC05SteamSallyTACTQS25.sayTo player DLC05SteamSallyWorks
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 30
+	;// tell the player to wait for the distraction
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep30 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 30
+
+		DLC05SteamSallyTACTQS30.sayTo player DLC05SteamSallyWorks
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 35
+	;// tell the player to wait for the distraction
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep35 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 35
+
+		DLC05SteamSallyTACTQS30.sayTo player DLC05SteamSallyWorks
+		DLC05SteamWorksDoor.setOpenState 1
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 40
+	;// tell the player down the stairs and to the left
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep40 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 40
+
+		;// if they skipped the sequence, dont play the line	
+		IF ( DLC05SteamWorksLD.sallyIgnored <= 10 )
+			DLC05SteamSallyTACTQS40.sayTo player DLC05SteamSallyWorks		
+
+		ENDIF
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 43
+	;// tell the player down the stairs and to the left
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep43 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 43
+
+		DLC05SteamSallyTACTQS43.sayTo player DLC05SteamSallyWorks
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 45
+	;// Sally has to leave for a bit
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep45 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 45
+
+		DLC05SteamSallyTACTQS45.sayTo player DLC05SteamSallyWorks
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 50
+	;// Sally comes back with a bang
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep50 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 50
+
+		DLC05SteamSallyTACTQS50.sayTo player DLC05SteamSallyFinal
+		DLC05SteamFinalExplosionXMRK.placeAtMe weapGrenadeFrag 1
+		DLC05SteamFinalFodder.kill player
+		DLC05SteamFinalExplosionXMRK.pushActorAway DLC05SteamFinalFodder 5
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 55
+	;// Sally crawls out and rejoins the party
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep55 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 55
+
+		DLC05SteamDoorExit.sayTo player DLC05SteamSallyFinal
+		set DLC05SteamworksLD.sallyFinal to 1
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 60
+	;// shut it all down
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep60 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 60
+
+	ENDIF
+
+	;///////////////////////
+	;// STAGE 65
+	;// shut it all down
+	;///////////////////////
+	IF ( getSelf == DLC05SteamQuestStep65 )
+
+		;// set the appropriate quest stage		
+		setStage DLC05SteamworksLD 65
+
+		DLC05SallyRef.EVP
+
+	ENDIF
+
+	;// disable the trigger after it fires
+	disable
+
+END

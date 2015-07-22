@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="LVLC">
+  <Flags>0</Flags>
+  <FormID ID="06092C50">EncSuperMutantMissileDC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">EncSuperMutantMissileDC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <ChanceNone Tag="LVLD">0</ChanceNone>
+    <LeveledObjectFlags Tag="LVLF">CalcAllLessThanPlayer</LeveledObjectFlags>
+    <LeveledList>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>1</Level>
+          <Reference ID="06094ED1">VarSupermutant2GunDC</Reference>
+          <Count>1</Count>
+        </Data>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>7</Level>
+          <Reference ID="0609FAFF">VarSupermutant2MissileLauncherDC</Reference>
+          <Count>1</Count>
+        </Data>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>16</Level>
+          <Reference ID="0609FAFD">VarSupermutant3MissileLauncherDC</Reference>
+          <Count>1</Count>
+        </Data>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>31</Level>
+          <Reference ID="000E2C1C">DLC03CrSuperMutant4MissileLauncherA</Reference>
+          <Count>1</Count>
+        </Data>
+      </Entry>
+    </LeveledList>
+  </Subrecords>
+</Record>

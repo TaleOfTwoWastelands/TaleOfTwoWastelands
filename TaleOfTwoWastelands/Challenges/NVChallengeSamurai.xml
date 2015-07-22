@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="001690E2">NVChallengeSamurai</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVChallengeSamurai</EditorID>
+    <Name Tag="FULL">Wasteland Samurai</Name>
+    <Script Tag="SCRI">
+      <Reference ID="001690DB">ChallengeSamuraiSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Do damage with Melee weapons.</Description>
+    <Data Tag="DATA">
+      <Type>DoDamage</Type>
+      <Threshold>25000</Threshold>
+      <Flags>0</Flags>
+      <Interval>2500</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>MeleeWeapons</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+  </Subrecords>
+</Record>

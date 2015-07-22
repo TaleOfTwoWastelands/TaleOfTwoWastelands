@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0601CF90">CrCentaurDC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrCentaurDC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-29</X>
+        <Y>-79</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>29</X>
+        <Y>79</Y>
+        <Z>94</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Centaur</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Centaur\Skeleton.nif</FileName>
+    </Model>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>centaur.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAby9Qdje8uqH3J1B2OAy6ofcnUadAEX7UPu3wljuG0+wm5fCWO9bT7CcnUadAEX7UPz3wljuG0+wnNfCWO9bT7CcnUadAEX7UOxsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing, TiltFrontBack</Flags>
+      <Fatigue>120</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>9</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>150</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00000013">CreatureFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00021473">CentaurFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0017688A">DeathItemCentaur100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00058717">CentaurSpitMissile</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005F706">AmmoCentaurSpit</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0609C96D">LootCentaur25DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Abomination</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>100</Health>
+      <Damage>40</Damage>
+      <Strength>7</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>4</Agility>
+      <Luck>7</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">32</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A37D">CSCentaur</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0003BE7D">CentaurBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0006EE18">AudioTemplateCentaur</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="001489F9">CentuarImpactDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0005F708">CentaurWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

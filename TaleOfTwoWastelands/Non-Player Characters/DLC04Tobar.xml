@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0A006634">DLC04Tobar</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04Tobar</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tobar the Ferryman</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential, AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <DeathItem Tag="INAM">
+      <Reference ID="0A0072F9">DLC04TobarDeathItem</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0A00A883">DLC04UniqueTobar</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0000000F">Caps001</Item>
+          <Count>96</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000250A3">SurgicalBonesaw01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000250A6">SurgicalTweasers01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000250A7">SurgicalForceps01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078648">OutfitWastelandMerchantHat</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0013E476">WithAmmoNV44MagnumNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A003FC6">DLC04PungaWild</Item>
+          <Count>8</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A003FE9">DLC04PungaRefined</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A00B431">DLC04OutfitTobar</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.600000024</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0A00B5E8">DLC04BoatTicket</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>1</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Alcohol, Food, Chems, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0A011E2D">DLC04TobarWorkOnPortholetPKG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A008103">DLC04TobarWelcomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A011138">DLC04TobarLockedPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00731A">DLC04TobarSandboxDefaultWL</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0A00F3DB">DLC04TobarSandboxDefaultPL</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="000173E8">Entrepreneur</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>4</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>4</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>28</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BCBEF">BeardMustacheCurlyFull</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000AAE63">HairMessy02</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>74</Red>
+        <Green>40</Green>
+        <Blue>26</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">nnCcP+jRrz88Uzu/MC1Jvtypgr8B344/znCVP5wE5z6guXY9QGcPPxCALD+CCWjAL9TJvrBJt76KAYw+cyqQP442AsBfjI8/ur3JP3UGhL+rrqjA6ThaQLrXyj+s2LO+8xI3P0zcgz7NKxHBwNtaPXqgQkHAy8o/cJYuviSNksDEPw/Aau83v7Txpz+ixYNAtPiOv6BzPL+SRBRBkmaHv8C67z6iHMjArtg2wIDhVsDmLX5ABF09P2MufUByKoNA2P1LvqsFpEA=</Symmetric>
+        <Asymmetric Tag="FGGA">7ZpGvDIwWL5SZKI9xeAgPVsArr43ULQ7DVczPiA2fr4DtYi+y/gRPTflLb5GkYu95mVDPmpEDj0Pa/o+ppnqPnINHby6QxO+uxCbPgwLB77i9oc+uur2PRolcLua7Nq+HsDVvknoMD2WAdy+wcUPPzYflD7K5pe9</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">aMABwH6AD79Wsts+sOWZPe6//r646AVABnXBPoCICjtqCJa/Zhh7PlybkT8a1uO+yEscvTpvGj72OIi/KJptPhQAFb6gmok/vLknPnyL3z+YrAZAaDenv1nAmL9vwuM+mKsFPlQMkr4e+2i/gB9kPKhTiT8qYgO/nVZrPxcGtj8IZ4u+mvmawBCo4T6/KDq/PPKuPwgroz7oS5M+0wVtv/+OE79YoOA/IlQKvp15pz/EuFU/5H6KvyCZLz6iyTs/3m9dvyCIxb4=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

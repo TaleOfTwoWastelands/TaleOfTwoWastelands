@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0001F388">CG00</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG00</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0003A17C">CG00SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Vault 101</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>0</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>137</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ABIHAAEAbgEAAADnEAcAAQBuAQAAABwAAQCeEAUAAQByBQAcAAIAnhAFAAEAcgYAHAADAJ4QBQABAHIHADkQCgACAHIIAG4FAAAAHAAEAJ4QBQABAHIJABQRLQAFABUARmFsbG91dCBJTlRSTyBWc2suYmlrbgEAAABuAQAAAG4AAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetLocationSpecificLoadScreensOnly 1
+SetInCharGen 1 ; no leveling during chargen
+CG00DadREF.moveto CG00DadStartMarker
+CG00DoctorLiREF.moveto CG00DoctorLiStartMarker
+CG00MomREF.moveto CG00MomStartMarker
+setstage CG00 5
+player.moveto CG00PlayerStartMarker
+;added lines
+PlayBink "Fallout INTRO Vsk.bik" 1 1 0 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A5">CG00DoctorLiREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605EDE0">CG00MomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603A17B">CG00DadStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A4">CG00DoctorLiStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A810">CG00MomStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06039562">CG00PlayerStartMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>83</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHICAGYBAAQAIC4wMRUACgByAgBzAgACACAxYRAbAAUAbgEAAABuAQAAAG4BAAAAbgEAAABuAQAAAJERBQABAHIDABwAAQCXEAUAAQByBAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00.timer to .01
+set CG00.runTimer to 1
+disableplayercontrols 1 1 1 1 1
+imod CG00BlackScreenISFX
+player.addscriptpackage CG00PlayerSection0
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000230E7">CG00BlackScreenISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008F77B">CG00PlayerSection0</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">JhAFAAEAcgEAFQALAHICAGYBAAMAIDEwFQAKAHICAHMCAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; we've loaded in -- play sound and run timer
+playSound QSTBirthStart
+set CG00.timer to 10
+set CG00.runTimer to 1
+
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023045">QSTBirthStart</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>103</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAAkREFAAEAcgUAkREFAAEAcgYAHAAEAJcQBQABAHIHABUACgByCABmAQACACAyFQAKAHIIAHMCAAIAIDEFEgcAAQBuCgAAACYQBQABAHIJAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; begin animations
+CG00DadREF.evp
+CG00MomREF.evp
+CG00DoctorLiREF.evp
+;imod FadeInFromWhiteISFX
+imod CG00BirthISFX
+imod CG00BirthBaseISFX
+player.addscriptpackage CG00PlayerSection0
+set CG00.timer to 2
+set CG00.runTimer to 1
+TriggerScreenBlood 10
+; add baby crying sound
+playSound QSTBabyCry </ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605EDE0">CG00MomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A5">CG00DoctorLiREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0009B5C1">CG00BirthISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035A20">CG00BirthBaseISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008F77B">CG00PlayerSection0</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007DB67">QSTBabyCry</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">9</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYBAAQAIDcuNfwRBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00.timer to 7.5 ; + 2 from stage 8 = 9.5 seconds total
+SetNoActivationSound QSTBabyCry ; cry on activation failure
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007DB67">QSTBabyCry</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>41</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMBAAIAIDEVAAoAcgIAZgMAAgAgMBwAAQCXEAUAAQByAwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Dad starts talking
+set CG00DadREF.doTalk to 1
+set CG00DadREF.timer to 0  ; for now to synch with animation
+player.addScriptPackage CG00PlayerSection1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00038EA3">CG00PlayerSection1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">18</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDAVAAoAcgIAcwIAAgAgMRUACgByAgBmAQACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00DadREF.doTalk to 0
+; run timer to choose sex
+set CG00.runTimer to 1
+set CG00.timer to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>41</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHICABUACgByAwBzAgACACAxFQAKAHIDAGYBAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player chooses gender
+player.addScriptPackage CG00PlayerSection2
+; run timer before starting dialogue again
+set CG00.runTimer to 1
+set CG00.timer to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A811">CG00PlayerSection2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">22</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMCAAIAIDAVAAoAcgIAcwEAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00.runTimer to 0
+; dad starts speaking again
+set CG00DadREF.doTalk to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">38</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDAVAAoAcgIAcwIAAgAgMRUACgByAgBmAQACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00DadREF.doTalk to 0
+; run timer to choose name
+set CG00.runTimer to 1
+set CG00.timer to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>45</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">4REAABwAAQCXEAUAAQByAgAVAAoAcgMAcwIAAgAgMRUACgByAwBmAQACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">; player chooses name
+GetPlayerName
+player.addScriptPackage CG00PlayerSection3
+; run timer before starting dialogue again
+set CG00.runTimer to 1
+set CG00.timer to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A812">CG00PlayerSection3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">42</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMCAAIAIDAVAAoAcgIAcwEAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00.runTimer to 0
+; dad starts speaking again
+set CG00DadREF.doTalk to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>18</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">2hAAABUACgByAQBzAgACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">; player chooses face/body
+ShowRaceMenu
+set CG00.runTimer to 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">61</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; set when player enters menu mode</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">62</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>13</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; set when player exits menu mode
+player.addScriptPackage CG00PlayerSection4</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A818">CG00PlayerSection4</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>116</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAOURBQABAHIFABwAAgDlEQUAAQByBQAcAAMA5REFAAEAcgUAHAAEAOURBQABAHIFABwAAQDfEQgAAgByBQBHBgAcAAIA3xEIAAIAcgUARwYAHAADAN8RCAACAHIFAEcGABwABADfEQgAAgByBQBHBgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; dad matches player's race and face
+CG01DadREF.MatchRace player
+CG02DadREF.MatchRace player
+CG03DadREF.MatchRace player
+MQDadREF.MatchRace player
+; match face
+CG01DadREF.MatchFaceGeometry player CGMatchFace
+CG02DadREF.MatchFaceGeometry player CGMatchFace
+CG03DadREF.MatchFaceGeometry player CGMatchFace
+MQDadREF.MatchFaceGeometry player CGMatchFace
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602EA4D">CG01DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE3A">CG03DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019D09">MQDadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00071F09">CGMatchFace</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>75</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHIGABUACgByAgBzAQACACAxFQAKAHIDAHMBAAIAIDEcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAAcAAUAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">player.addScriptPackage CG00PlayerSection5
+; Both start talking in this section
+set CG00DadREF.doTalk to 1
+set CG00MomREF.doTalk to 1
+; try evp-ing everybody to synch animations better
+CG00DadREF.evp
+CG00MomREF.evp
+CG00DoctorLiREF.evp
+; enable next Dad
+CG01DadRef.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605EDE0">CG00MomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A5">CG00DoctorLiREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602EA4D">CG01DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A819">CG00PlayerSection5</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">85</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; beginning of emergency
+
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYBAAQAIDIuMhUACgByAQBzAgACACAxkREFAAEAcgIAJhAFAAEAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG00.timer to 2.2
+set CG00.runTimer to 1
+imod FadeToWhiteAndBackISFX
+playSound QSTFadeToWhiteA
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D14C">FadeToWhiteAndBackISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BC424">QSTFadeToWhiteA</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>89</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJgQAAAVAAoAcgMAcwEAAgAgMBUACgByAgBzAQACACAwkhEFAAEAcgQAHAACACIQAgAAADcQBQABAHIFAOYRBwABAG4BAAAAORAKAAIAcgYAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">player.removescriptpackage
+set CG00MomREF.doTalk to 0
+set CG00DadREF.doTalk to 0
+rimod CG00BirthBaseISFX
+CG00DadREF.disable
+stopQuest CG00
+; set this now to avoid double 3D reset in CG02
+SetPCYoung  1       ; default hair
+; do this last as it contains player.moveto:
+setstage CG01 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060290A7">CG00DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605EDE0">CG00MomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035A20">CG00BirthBaseISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E83">CG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

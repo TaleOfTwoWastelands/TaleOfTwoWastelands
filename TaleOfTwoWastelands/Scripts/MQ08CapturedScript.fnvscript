@@ -1,0 +1,363 @@
+scn MQ08CapturedScript
+
+short StartUp														;1= Player has tripped the trigger zone, starting grenade animation and some housekeeping
+short WhiteOut														;1= The white-out blinding effect has begun
+short EndStartUp													;1= The player has been moved to the capture marker, cue the other actor, etc.
+short FollowerCheck												;1= Begin to handle Followers (see bottom of script)
+short Locked														;1= The Door preventing the Fawkes exploit is locked
+short CharonCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short JerichoCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short PaladinCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short ButchCheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short RL3Check													;1= Check the Teammate for Hire... also acts as a DoOnce
+short CloverCheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short DogmeatCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short CraigBooneCheck											;1= Check the Teammate for Hire... also acts as a DoOnce
+short RoseofSharonCassidyCheck							;1= Check the Teammate for Hire... also acts as a DoOnce
+short VeronicaCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short LilyCheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short RaulCheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short ArcadeCheck												;1= Check the Teammate for Hire... also acts as a DoOnce
+short EDECheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short RexCheck													;1= Check the Teammate for Hire... also acts as a DoOnce
+short CharonFTG													;x= Store the Teammate's Fatigue
+short JerichoFTG													;x= Store the Teammate's Fatigue
+short PaladinFTG													;x= Store the Teammate's Fatigue
+short ButchFTG													;x= Store the Teammate's Fatigue
+short RL3FTG														;x= Store the Teammate's Fatigue
+short CloverFTG													;x= Store the Teammate's Fatigue
+short DogmeatFTG												;x= Store the Teammate's Fatigue
+short CraigBooneFTG												;x= Store the Teammate's Fatigue
+short RoseofSharonCassidyFTG								;x= Store the Teammate's Fatigue
+short VeronicaFTG													;x= Store the Teammate's Fatigue
+short LilyFTG														;x= Store the Teammate's Fatigue
+short RaulFTG														;x= Store the Teammate's Fatigue
+short ArcadeFTG													;x= Store the Teammate's Fatigue
+short EDEFTG														;x= Store the Teammate's Fatigue
+short RexFTG														;x= Store the Teammate's Fatigue
+
+
+float TimerA															;This is the first timer. The grenade animation itself. Timer should match animation length
+float TimerB															;This is the second timer. The duration of the White-Out ISEFX until moving the player
+float TimerC															;This is the final timer. The time from moving player until fade-in is finished
+
+;This is the main handler script for the Player being captured at the end of MQ08
+
+begin onTriggerEnter	Player
+
+	if ( StartUp == 0 )
+		if ( GetStage MQ08 >= 30 )
+			DisablePlayerControls 0 0 1 0 0 0 0
+			MQ08FawkesRef.StopCombat Player
+			MQ08FawkesRef.Evp
+			Set TimerA to 3
+			MQ08GrenadeSpawn.PlaceAtMe FXFlashGrenade01		
+			MQ08CaptureDoor.Unlock
+			Set StartUp to 1
+		endif
+	endif
+
+end
+
+begin gamemode
+
+;This block handles the timeframe from the beginning of the grenade animation to the White-Out Effect
+
+	if ( StartUp == 1 )
+		if ( TimerA > 0 )
+			Set TimerA to ( TimerA - GetSecondsPassed )												
+		else
+			Set WhiteOut to 1
+			Set StartUp to 2
+		endif
+	endif
+
+;This block sets up the White-Out image space effect
+
+	if ( StartUp == 2 )
+		PlaySound FXDisintegration
+		DisablePlayerControls 1 1 1 1 0 1 1
+		PipboyRadioOff
+		imod MQ08FadeInFromWhiteISFX
+		MQ08SMRef01.Kill												;This is a series of kills issued on the Creature refs that were already parented to spawn triggers (can't disable them)
+		MQ08SMRef02.Kill
+		MQ08SMRef03.Kill
+		MQ08SMRef04.Kill
+		MQ08SMRef05.Kill
+		MQ08SMRef06.Kill
+		MQ08SMRef07.Kill
+		MQ08SMRef08.Kill
+		MQ08SMRef09.Kill
+		MQ08SMRef10.Kill
+		MQ08SMRef11.Kill
+		MQ08SMRef12.Kill
+		MQ08SMRef13.Kill
+		SidRef.Kill
+		set FollowerCheck to 1
+		Set TimerB to 1
+		Set StartUp to 3
+	endif
+
+;This block is the delay from the beginning of the White-Out effect until we move to player to make sure it happens when they are "fully blinded"
+
+	if ( StartUp == 3 )
+		if ( TimerB > 0 )
+			Set TimerB to ( TimerB - GetSecondsPassed )												
+		else
+			Player.Moveto MQ08PlayerCaptureMarker
+			Set MQ08.Falldown to 1
+			player.addscriptpackage MQ08PlayerFallsDownPackage
+			Set TimerC to 5
+			Set StartUp to 4
+		endif
+	endif
+
+;This block is the timer that sets off the rest. The player has been moved to the capture marker, now wait til fade-in then do woozy effect and cue the end
+
+	if ( StartUp == 4 )
+		if ( TimerC > 0 )
+			Set TimerC to ( TimerC - GetSecondsPassed )												
+		else
+			;Woozy iMod needed
+			Set StartUp to 5
+
+			;After TimerC is complete, start the player falling down
+			Set Locked to 2
+
+			;After the player is captured, the Guards will enable outside the room
+			MQ08Guard01.Enable
+			MQ08Guard02.Enable
+			MQ08Guard01.SetGhost 1
+			MQ08Guard02.SetGhost 1
+			MQ08Guard01.Evp
+			MQ08Guard02.Evp
+		endif
+	endif
+
+;Once the guards are in their final positions, one of them will confirm a dialog line, and Col Autumn will spawn in level
+
+	if ( Locked == 2 )
+		if ( MQ08.GuardsinPos == 2 )
+			MQ08Guard01.Say MQ08GuardSay01
+			ColonelAutumnRef.Moveto MQ08AutumnStart
+			ColonelAutumnRef.SetGhost 1
+		
+			;Once Autumn appears, he will walk up to the player
+			;Autumn has a bit of dialog with a guard
+			Set Locked to 4
+			ColonelAutumnRef.Evp
+		endif
+	endif
+
+	if ( MQ08.ConvoGo == 2 )
+		ColonelAutumnRef.Say MQ08AutumnSay01
+		Set ColonelAutumnRef.Talking to 1
+		Set MQ08.ConvoGo to 3
+	endif
+
+;This is the Followers Subsystem Handling.
+;We check which Teammates the Player has, knock 'em out, fire 'em and send 'em home
+
+	if ( FollowerCheck == 1 )
+		set CharonCheck to 1
+		set JerichoCheck to 1
+		set PaladinCheck to 1
+		set ButchCheck to 1
+		set RL3Check to 1
+		set CloverCheck to 1
+		set DogmeatCheck to 1
+		set CraigBooneCheck	 to 1
+		set RoseofSharonCassidyCheck to 1
+		set VeronicaCheck	 to 1
+		set LilyCheck to 1
+		set RaulCheck to 1
+		set ArcadeCheck to 1
+		if EDE1Ref.GetDisabled == 0
+			set EDECheck to 1
+		elseif EDE2Ref.GetDisabled == 0
+			set EDECheck to 1
+		elseif EDE3Ref.GetDisabled == 0
+			set EDECheck to 1
+		endif
+		set RexCheck to 1
+		set FollowerCheck to 2
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.CharonHired == 1 )
+			if ( CharonCheck == 1 )
+				CharonRef.Moveto MQ08FollowerSpot
+				Set CharonFTG to CharonRef.GetAV Fatigue
+				CharonRef.DamageAV Fatigue -10000
+				set CharonCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.JerichoHired == 1 )
+			if ( JerichoCheck == 1 )
+				JerichoRef.Moveto MQ08FollowerSpot
+				Set JerichoFTG to JerichoRef.GetAV Fatigue
+				JerichoRef.DamageAV Fatigue -10000
+				set JerichoCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.StarPaladinCrossHired == 1 )
+			if ( PaladinCheck == 1 )
+				StarPaladinCrossRef.Moveto MQ08FollowerSpot
+				Set PaladinFTG to StarPaladinCrossRef.GetAV Fatigue
+				StarPaladinCrossRef.DamageAV Fatigue -10000
+				set PaladinCheck to 2
+			endif
+		endif
+	endif			
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.ButchHired == 1 )
+			if ( ButchCheck == 1 )
+				ButchRef.Moveto MQ08FollowerSpot
+				Set ButchFTG to ButchRef.GetAV Fatigue
+				ButchRef.DamageAV Fatigue -10000
+				set ButchCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.RL3Hired == 1 )
+			if ( RL3Check == 1 )
+				RL3Ref.Moveto MQ08FollowerSpot
+				Set RL3FTG to RL3Ref.GetAV Fatigue
+				RL3Ref.DamageAV Fatigue -10000
+				set RL3Check to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.CloverHired == 1 )
+			if ( CloverCheck == 1 )
+				CloverRef.Moveto MQ08FollowerSpot
+				Set CloverFTG to CloverRef.GetAV Fatigue
+				CloverRef.DamageAV Fatigue -10000
+				set CloverCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( Followers.DogmeatHired == 1 )
+			if ( DogmeatCheck == 1 )
+				DogmeatRef.Moveto MQ08FollowerSpot
+				Set DogmeatFTG to DogmeatRef.GetAV Fatigue
+				DogmeatRef.DamageAV Fatigue -10000
+				set DogmeatCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.bBooneHired == 1 )
+			if ( CraigBooneCheck == 1 )
+				CraigBooneREF.Moveto MQ08FollowerSpot
+				Set CraigBooneFTG to CraigBooneREF.GetAV Fatigue
+				CraigBooneREF.DamageAV Fatigue -10000
+				set CraigBooneCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.bCassHired == 1 )
+			if ( RoseofSharonCassidyCheck == 1 )
+				RoseofSharonCassidyREF.Moveto MQ08FollowerSpot
+				Set RoseofSharonCassidyFTG to RoseofSharonCassidyREF.GetAV Fatigue
+				RoseofSharonCassidyREF.DamageAV Fatigue -10000
+				set RoseofSharonCassidyCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.bVeronicaHired == 1 )
+			if ( VeronicaCheck == 1 )
+				VeronicaREF.Moveto MQ08FollowerSpot
+				Set VeronicaFTG to VeronicaREF.GetAV Fatigue
+				VeronicaREF.DamageAV Fatigue -10000
+				set VeronicaCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.bLilyHired == 1 )
+			if ( LilyCheck == 1 )
+				LilyREF.Moveto MQ08FollowerSpot
+				Set LilyFTG to LilyREF.GetAV Fatigue
+				LilyREF.DamageAV Fatigue -10000
+				set LilyCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.RaulHired == 1 )
+			if ( RaulCheck == 1 )
+				RaulREF.Moveto MQ08FollowerSpot
+				Set RaulFTG to RaulREF.GetAV Fatigue
+				RaulREF.DamageAV Fatigue -10000
+				set RaulCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.ArcadeHired == 1 )
+			if ( ArcadeCheck == 1 )
+				ArcadeREF.Moveto MQ08FollowerSpot
+				Set ArcadeFTG to ArcadeREF.GetAV Fatigue
+				ArcadeREF.DamageAV Fatigue -10000
+				set ArcadeCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.RexHired == 1 )
+			if ( RexCheck == 1 )
+				RexREF.Moveto MQ08FollowerSpot
+				Set RexFTG to RexREF.GetAV Fatigue
+				RexREF.DamageAV Fatigue -10000
+				set RexCheck to 2
+			endif
+		endif
+	endif
+
+	if ( FollowerCheck == 2 )
+		if ( vNPCFollowers.bEDEHired == 1 )
+			if ( EDECheck == 1 )
+				if EDE1Ref.GetDisabled == 0
+					EDE1Ref.Moveto MQ08FollowerSpot
+					Set EDEFTG to EDE1Ref.GetAV Fatigue
+					EDE1Ref.DamageAV Fatigue -10000
+					set EDECheck to 2
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2Ref.Moveto MQ08FollowerSpot
+					Set EDEFTG to EDE2Ref.GetAV Fatigue
+					EDE2Ref.DamageAV Fatigue -10000
+					set EDECheck to 2
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3Ref.Moveto MQ08FollowerSpot
+					Set EDEFTG to EDE3Ref.GetAV Fatigue
+					EDE3Ref.DamageAV Fatigue -10000
+					set EDECheck to 2
+				endif
+			endif
+		endif
+	endif
+
+end

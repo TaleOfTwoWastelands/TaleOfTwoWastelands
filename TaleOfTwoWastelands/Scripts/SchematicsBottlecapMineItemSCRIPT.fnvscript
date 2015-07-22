@@ -1,0 +1,54 @@
+scn SchematicsBottlecapMineItemSCRIPT
+
+short AddOnce ;Do Once variable
+
+BEGIN OnAdd player
+	
+	if (AddOnce == 0)
+
+		;If the player already has a copy of the schematic, getting another improves the quality of the created item and updates the note.
+		;Second Improvement
+		if (player.gethasnote SchematicsBottlecapMineNote10 == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countBottlecapBonus to 1.25
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsBottlecapMineNote10
+			player.addNote SchematicsBottlecapMineNote20
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;First Improvement
+		elseif (player.gethasnote SchematicsBottlecapMineNote == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countBottlecapBonus to 1
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsBottlecapMineNote
+			player.addNote SchematicsBottlecapMineNote10
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;Otherwise, just add the note
+		elseif (player.gethasnote SchematicsBottlecapMineNote20 == 0)
+
+			IncrementScriptedChallenge TTWChallengeSchematics		; Added by Gribbleshnibit8 8/26/2014
+
+			;Add the Schematic Note
+			player.addNote SchematicsBottlecapMineNote
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+
+		endif
+	
+	endif
+
+END

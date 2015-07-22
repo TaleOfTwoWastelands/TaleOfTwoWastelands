@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0608A6DD">MS15ButtonsWig</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS15ButtonsWig</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-7</X>
+        <Y>-10</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>10</X>
+        <Y>13</Y>
+        <Z>8</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Button's Wig</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="000C8E0A">MS15EnchClothingButtonsWig</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Hair, Headband</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Characters\Hair\PowderedWig.NIF</FileName>
+          <TextureHashes Tag="MODT">5+kLcJQ9PTBnaQtwmT09MHJpGHSb8nzg7t8NcFJg+9huXw1wV2D72HJpGHSb8nzg898NcFJg+9hzXw1wV2D72HJpGHSb8nzg</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Characters\Hair\PowderedWigGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">5+kLcJQ9PTBnaQtwmT09MHJpGHSb8nzg7t8NcFJg+9huXw1wV2D72HJpGHSb8nzg898NcFJg+9hzXw1wV2D72HJpGHSb8nzg</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Items\items_powdered_wig.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Items_small\glow_items_powdered_wig.dds</Male>
+      </Message>
+    </Icon>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>20</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

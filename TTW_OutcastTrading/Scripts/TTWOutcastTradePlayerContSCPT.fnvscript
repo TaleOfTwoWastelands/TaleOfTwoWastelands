@@ -1,0 +1,80 @@
+scn TTWOutcastTradePlayerContSCPT
+
+short bHasItems
+short count
+short i
+short soldCount
+
+ref item
+ref baseItem
+
+float value
+float diminishingValue
+
+float fRep
+short iRep
+
+array_var equippedItems
+array_var hotkeys
+
+float fTimer
+
+begin GameMode
+	if ( TTWVendorChestBuriedOutcastsRef.GetItemCount TTWOutcastItems > 0 )
+		
+		foreach item <- TTWVendorChestBuriedOutcastsRef
+			if ( IsRefInList TTWOutcastItems item >= 0 )
+				let baseItem := item.GetBaseObject
+				let count := item.GetRefCount
+				let i := 0
+				let value := item.GetValue
+				let value := ( value / 10 ) ^ 0.5
+				let soldCount := ( TTWOutcastTurnInRef.GetItemCount baseItem ) + 1
+printc "%.0f %n already sold" soldCount item
+				while i < count
+					let diminishingValue := ( value / soldCount )
+printc "Turned in %n number %.0f for %.2f points" item soldCount diminishingValue
+					let fRep += diminishingValue
+					let i += 1
+					let soldCount += 1
+				loop
+
+				item.RemoveMeIR TTWOutcastTurnInRef
+
+				break
+
+			endif
+		loop
+	
+		set iRep to fRep
+		set fRep to fRep - iRep
+
+		if ( iRep >= 1 )
+			printc "Rep Added: %.0f" iRep
+			AddReputationExact TTWRepOutcasts 1 iRep		
+			set iRep to GetReputation TTWRepOutcasts 1		
+			printc "Total Outcast Rep: %.0f" iRep
+		endif
+	endif
+	if bHasItems == 1
+
+		RemoveAllItems player 0 1 
+		DisablePlayerControls 0 1 0 0
+		set bHasItems to 2
+
+	elseif bHasItems == 2
+		player.Call RestoreEquippedItems equippedItems
+		player.Call RestoreHotkeys hotkeys
+			
+		set bHasItems to 3
+		set fTimer to 1		
+	elseif bHasItems == 3
+		if ( fTimer > 0 )
+			let fTimer -= GetSecondsPassed
+		else
+			set fTimer to -1
+			EnablePlayerControls
+			set bHasItems to 0
+		endif
+	endif
+end

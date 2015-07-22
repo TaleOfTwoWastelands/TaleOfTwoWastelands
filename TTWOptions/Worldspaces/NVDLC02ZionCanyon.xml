@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0200683B">NVDLC02ZionCanyon</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC02ZionCanyon</EditorID>
+    <Name Tag="FULL">Zion Canyon</Name>
+    <Climate Tag="CNAM">
+      <Reference ID="0200EEB1">NVDLC02ZionValleyClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="0200C976">NVDLC02Water</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="0200C976">NVDLC02Water</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>0</DefaultLandHeight>
+      <DefaultWaterHeight>5000</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">interface\worldmap\wasteland_zion_1024_no_map.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>1024</X>
+        <Y>1024</Y>
+      </UsableSize>
+      <MinX>-11</MinX>
+      <MinY>11</MinY>
+      <MaxX>10</MaxX>
+      <MaxY>-12</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1.10000002</WorldMapScale>
+      <Offset>
+        <CellX>500</CellX>
+        <CellY>2500</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="0008809D">NVDefaultExterior</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-131072</X>
+        <Y>-131072</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>131072</X>
+        <Y>131072</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\wastelandwaterpotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

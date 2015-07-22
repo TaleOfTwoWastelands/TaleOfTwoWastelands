@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0900B960">DLC03LagBoltsGlasses</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03LagBoltsGlasses</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Lag-Bolt's Shades</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="000E29CB">DLC03LagBoltsShadesEffect</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Eyeglasses, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Characters\Hair\Shades.NIF</FileName>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Characters\Hair\ShadesGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_shades.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075214">RepairGlasses</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>8</Value>
+      <MaxCondition>150</MaxCondition>
+      <Weight>0</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

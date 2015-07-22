@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0607FC1B">INFO - 0607FC1B</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="060371D2">FollowersHireCharon</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0602FEE0">INFO - 0602FEE0</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">As you wish.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156F6">Charon</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>315</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIDAHMvAAIAIDEcAAEAdhEFAAEAcgQAFQAKAHIBAHMLAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgMAcxIAAgAgMRUAEwByAwBzEwALACByAwBzEwAgMSArFQAKAHIFAHMCAAIAIDEVAAoAcgUAcwMAAgAgMBUACgByAgBzBwACACAxFQAKAHICAHMLAAIAIDEVAAoAcgIAcw0AAgAgMBUACgByAgBzDAACACAwHAACALEQBQABAHIGABUACgByAgBzCQACACAxFQAKAHICAHMKAAIAIDAcAAIAxREHAAEAbgEAAAAcAAIAfxEKAAIAcgcAbgEAAAAcAAEAiRAKAAIAcgcAbgEAAAAcAAEAfxEKAAIAcggAbgEAAAA3EAUAAQByCQD6EQAA</CompiledScript>
+      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
+ButchREF.AddPerk CompanionSuite
+Set ButchREF.Waiting to 0
+ButchREF.IgnoreCrime 1
+ButchREF.SetIgnoreFriendlyHits 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+set Followers.CharonHired to 1
+set Followers.CharonFired to 0
+set CharonREF.HasBeenHired to 1
+set CharonREF.IsFollowingDefault to 1
+set CharonREF.IsFollowingLong to 0
+set CharonREF.IsFollowingShort to 0
+CharonREF.SetCombatStyle FollowersCombatStyleRanged
+set CharonREF.CombatStyleRanged to 1
+set CharonREF.CombatStyleMelee to 0
+CharonREF.SetPlayerTeammate 1
+CharonREF.AddToFaction TeammateFaction 1
+ButchREF.SetFactionRank TeammateFaction 1
+ButchREF.AddToFaction FollowerFaction 1
+StopQuest FollowersHireCharon
+
+ResetAI</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060371D2">FollowersHireCharon</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

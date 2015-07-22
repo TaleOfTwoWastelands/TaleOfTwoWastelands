@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>0</Flags>
+  <FormID ID="0008C551">SugarBombs01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">SugarBombs01</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-6</X>
+        <Y>-1</Y>
+        <Z>-9</Z>
+      </Point1>
+      <Point2>
+        <X>6</X>
+        <Y>1</Y>
+        <Z>9</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Sugar Bombs</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Junk\SugarBombs.NIF</FileName>
+      <TextureFileHash Tag="MODT">4u0Jc1Vt2N1ibQlzWm3Y3WtuFXTeQ2aF7t8Lc4rA/OxuXwtzj8D87GtuFXTeQ2aF898Lc4rA/OxzXwtzj8D87GtuFXTeQ2aF</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_sugar_bombs.dds</Large>
+    </Icon>
+    <EquipmentType Tag="ETYP">Food</EquipmentType>
+    <Weight Tag="DATA">1</Weight>
+    <Data Tag="ENIT">
+      <Value>5</Value>
+      <Flags>NoAutoCalc, FoodItem</Flags>
+      <WithdrawalEffect ID="00000000">NullReference</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="0002D48D">NPCHumanEatingFoodChewy</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0000014E">RestoreHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>7</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0100F96F">NVDLC01OldWorldGourmet</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00020516">DamageRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>3</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D77">IncreaseActionPoints</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>5</Magnitude>
+          <Area>0</Area>
+          <Duration>30</Duration>
+          <Type>Self</Type>
+          <ActorValue>ActionPoints</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00162BCC">RestoreStarvationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>30</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Hunger</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0000014E">RestoreHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>11</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0100F96F">NVDLC01OldWorldGourmet</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetIsReference</Type>
+              <ObjectReference ID="00000014">UnfoundReference</ObjectReference>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0000014E">RestoreHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>9</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>NotEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0100F96F">NVDLC01OldWorldGourmet</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0000014E">RestoreHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>13</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0100F96F">NVDLC01OldWorldGourmet</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00162BCC">RestoreStarvationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>33</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Hunger</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0002D3A5">MS03Sanitizer</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

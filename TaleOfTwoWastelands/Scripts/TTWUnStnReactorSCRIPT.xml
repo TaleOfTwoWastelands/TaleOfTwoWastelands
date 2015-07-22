@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C011FE9">TTWUnStnReactorSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWUnStnReactorSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>7</ReferenceCount>
+        <CompiledSize>555</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAKYAAAAAABYAFAAJABAAIFhpEAUAAQByAQAgMSA9PRYAGQAFABUAIFikEQoAAgByAgBuEQAAACAwID09FgAXAAEAEwAgcgEAWC8QBQABAHIDACAwID09oxEPAAMAcgIAbhEAAABuAQAAABcAAgABAKIRDwADAHICAG4RAAAAbgEAAAAZAAAAGQAAAFkQCwABAHIEAAAAAAAAABUABwBzAgACACAxGQAAABEAAAAQAAYAAABrAQAAFgANABkACQAgcwIAIDEgPT0VAAsAcwEABgAgWB8QAAAWAA0ABwAJACBzAQAgMCA9PRYAFgADABIAIHIBAFgvEAUAAQByAwAgMCA+WRALAAEAcgUAAAAAAAAAHAABAFIQCgACAHIDAG4BAAAAFQAHAHMDAAIAIDEXAAIAAQBZEAsAAQByBgAAAAAAAAAZAAAAGAANAAYACQAgcwEAIDEgPT0WABcAAgATACByAQBYDhAEAAEAJwAgNTAgPj1ZEAsAAQByBQAAAAAAAAAVAAcAcwMAAgAgMRcAAgABAFkQCwABAHIHAAAAAAAAABkAAAAYAA0AAAAJACBzAQAgMiA9PRkAAAAWAA0ABAAJACBzAwAgMSA9PaIRDwADAHICAG4QAAAAbgEAAACjEQ8AAwByAgBuDwAAAG4BAAAAFQAKAHICAHMHAAIAIDHMEAcAAQBuAQAAABkAAAAVAAcAcwIAAgAgMBkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWUnStnReactorSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">checkButtons</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bFixed</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FE2">TTWUnStnPowerQuest</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FD0">TTWUnStnReactorPrimer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FCB">TTWUnStnReactorBrokeMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FCC">TTWUnStnReactorFixedMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FCD">TTWUnStnReactorFailedNoItemMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FCE">TTWUnStnReactorFailedNoSkillMsg</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

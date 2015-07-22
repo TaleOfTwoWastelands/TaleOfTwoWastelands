@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B004214">DLC05SpaceWalk02MasTrigSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05SpaceWalk02MasTrigSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>17</ReferenceCount>
+        <CompiledSize>1001</CompiledSize>
+        <VariableCount>10</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAANsDAAAWAA0ACwAJACBzAQAgMCA9PWEQJQAHAG4AAAAAbgEAAABuAQAAAG4AAAAAbgAAAABuAAAAAG4AAAAAHAABAA8QCQACABUAbksAAAAcAAIAchAHAAEAbv8AAAAcAAMAXhAAABwABABeEAAAHAAFAF4QAAAVAAoAZgoABQAgLjAwNRUABwBzAgACACAxFQAHAHMEAAIAIDEVAAwAZgMABwAgLjAwMDI1FQAHAHMBAAIAIDEZAAAAFgANAAsACQAgcwkAIDEgPT0WAAwABwAIACBmCgAgMCA8FQAWAGYHABEAIHIGAFgYEAAAIC4wMDAxICsVAA8AZggACgAgZggAIGYHACArHAAGADwRBQABAGYIABUACgBmCgAFACAuMDA1FgATAAEADwAgcgYAWBgQAAAgLjggPj0VAAcAcwkAAgAgMBkAAAAXAAIAAQAVABEAZgoADAAgZgoAIFgMEAAAIC0ZAAAAGQAAABYAUgADAE4AIHILAHMBACAxID09IHIBAFi2EAUAAQByDAAgMCA9PSByAQBYthAFAAEAcg0AIDAgPT0gcgEAWLYQBQABAHIOACAwID09IHx8ICYmICYmWRALAAEAcg8AAAAAAAAAHAABAIsQCgACAHIBAG4BAAAAFQAKAHILAHMBAAIAIDIZAAAAFgANAAMACQAgcwYAIDAgPT0WAA0AAQAJACBzBQAgMyA9PRUABwBzBgACACAxGQAAABkAAAAWAA0ABQAJACBzBgAgMSA9PRUABwBzCQACACAxHAAGACEQBwABAG4AAAAAHAAHABMQCQACAAMAbgEAAAAcAAgAIRACAAAAFQAHAHMGAAIAIDIZAAAAFgANABwACQAgcwIAIDEgPT0WAA0ABwAJACBzBAAgMSA9PRYADAADAAgAIGYDACAwIDwcAAEAnhAFAAEAchAAFQAMAGYDAAcAIC4wMDAyNRUABwBzBAACACAyFwACAAEAFQARAGYDAAwAIGYDACBYDBAAACAtGQAAABkAAAAWAA0ABwAJACBzBAAgMiA9PRYADAADAAgAIGYDACAwIDwcAAEAnhAFAAEAchEAFQAHAGYDAAIAIDIVAAcAcwQAAgAgMxcAAgABABUAEQBmAwAMACBmAwAgWAwQAAAgLRkAAAAZAAAAFgANAAgACQAgcwQAIDMgPT0WAAwABAAIACBmAwAgMCA8HAAJABMQCQACAAMAbgEAAAAcAAoAIRACAAAAFQAHAGYDAAIAIDIVAAcAcwQAAgAgNBcAAgABABUAEQBmAwAMACBmAwAgWAwQAAAgLRkAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05SpaceWalk02MasTrigSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">onLoad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">runTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">timerStage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">numRepaired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">allNodesRepaired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">currentScale</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">newScale</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">runScaleTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">scaleTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0043D1">DLC05SpaceBridge02Door01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D6FD">DLC05SpaceWalkAlienInner01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00B029">DLC05SpaceWalkAlienInner02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00B023">DLC05SpaceWalkAlienInner03REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0079BA">DLC05SpaceGravLightBeamREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007390">DLC05SpaceIrisDoor01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007440">DLC05SpaceWalkLevitateTrigREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007396">DLC05SpaceDoor01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007B80">DLC05SpaceWalkEnableDeathTriggerTrigREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00422E">DLC05SpaceWalkQ</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058EB">DLC05AstronautSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CE552">ArmorNVSpaceSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CEE21">HelmetNVSpaceSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059BC">DLC05DeathInSpaceMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059C1">DLC05SpaceBridgeToWaterREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0059C2">DLC05SpaceBridgeFromWaterREF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

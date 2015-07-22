@@ -1,0 +1,15 @@
+scn TTWStartSCPT
+
+short iDoOnce
+
+begin MenuMode
+	if iDoOnce == 1
+		RETURN
+	else
+		; Move Player to startupCell
+		if getStage TTWCG00 < 5 && getStage CG00 < 5 && getStage VCG00 < 5
+				setstage TTWCG00 0
+				set iDoOnce to 1
+		endif
+	endif
+end

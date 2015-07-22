@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="000E2BFC">WeapHeavyIncinerator</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WeapHeavyIncinerator</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-144</X>
+        <Y>-85</Y>
+        <Z>-122</Z>
+      </Point1>
+      <Point2>
+        <X>259</X>
+        <Y>41</Y>
+        <Z>99</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Heavy Incinerator</Name>
+    <Model>
+      <FileName Tag="MODL">DLC03\Weapons\2HandHandle\DLC03HeavyIncinerator.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">DLC03\Interface\Icons\weapons_incinerator.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="00166F63">AmmoListFlamerFuel</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="000E2C47">RepairIncinerator</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BigGuns</EquipmentType>
+    <ScopeEffectModel>
+      <FileName Tag="MOD4">DLC03\Weapons\2HandHandle\DLC03HeavyIncineratorGO.NIF</FileName>
+    </ScopeEffectModel>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="0006C303">FlamerScorchImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000E2BA3">1stPersonDLC03HeavyIncinerator</Reference>
+    </FirstPersonModel>
+    <Sound>
+      <Gun>
+        <Shoot3DLooping Tag="NAM7">
+          <Reference ID="000E29A0">WPNIncineratorFire3DLPM</Reference>
+        </Shoot3DLooping>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Idle Tag="UNAM">
+        <Reference ID="000E29A1">WPNIncineratorIdleLPM</Reference>
+      </Idle>
+      <Equip Tag="NAM9">
+        <Reference ID="00059C83">WPNMinigunEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00059C84">WPNMinigunUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <Data Tag="DATA">
+      <Value>7200</Value>
+      <Health>200</Health>
+      <Weight>15</Weight>
+      <BaseDamage>15</BaseDamage>
+      <ClipSize>24</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandHandle</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>IsAutomatic, DontUse1stPersonIronSightAnimations</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadD</ReloadAnimation>
+      <MinSpread>0.5</MinSpread>
+      <Spread>6</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>65</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="000E2C26">DLC03IncineratorProjectile</Projectile>
+      <BaseVATSToHitChance>45</BaseVATSToHitChance>
+      <AttackAnimation>AttackLoop</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>300</Min>
+        <Max>1500</Max>
+      </Range>
+      <LimbKillBehavior>NoDismemberOrExplode</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost, OverrideDamageToWeaponMult, DontUse3rdPersonIronSightAnimations, LongBurst</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>4</FireRate>
+      <ActionPointCost>50</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.200000003</LeftMotorStrength>
+        <RightMotorStrength>0.200000003</RightMotorStrength>
+        <Duration>0.150000006</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0.150000006</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0.00499999989</DamageToWeaponMult>
+      <AttackShotsPerSecond>4</AttackShotsPerSecond>
+      <ReloadTime>2.5</ReloadTime>
+      <JamTime>1.16670001</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>EnergyWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>FireResistance</ResistanceType>
+      <SightUsage>10</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0.75</Min>
+        <Max>0.75</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0.75</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>0</PowerAttackAnimation>
+      <StrengthRequirement>8</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>100</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>5</Damage>
+      <ChanceMult>4</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="000A73D7">FlamerCritEffect02</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

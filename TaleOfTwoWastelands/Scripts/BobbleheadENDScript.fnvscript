@@ -1,0 +1,31 @@
+scn BobbleheadENDScript
+
+;This is a Bobblehead script for the Collector Bobbleheads located in game
+;On pickup, you recieve the motivational phrase and the appropriate buff
+
+short DoOnce
+
+begin OnActivate
+if IsActionRef player == 1
+
+	if ( DoOnce == 0 )
+		if ( Player.GetPermanentActorValue Endurance < 10 )
+			Player.ModAv Endurance 1																		;Mod the perm. pool so it sticks
+		endif
+		ShowMessage BobbleheadENDBuffMessage												;This is the corner buff message
+		Activate																								;Allow item pickup
+		Set BH01.Bobbles to ( BH01.Bobbles + 1 )													;Add 1 to master count
+		Set BH01.Carrying to 1																			;Tell the script the Player has one or more Bobbleheads (for display case)
+		;ModPCMiscStat "Bobbleheads Found", 1
+		Set BH01.HaveEND to 1																			;Set the variable for Display Case
+			if ( BH01.Bobbles == 10 )
+				;Addachievement 49
+			elseif ( BH01.Bobbles == 20 )
+				;Addachievement 50
+			endif																	
+		Set DoOnce to 1
+		IncrementScriptedChallenge TTWDCChallengeBaubleHead
+	endif
+
+endif
+end

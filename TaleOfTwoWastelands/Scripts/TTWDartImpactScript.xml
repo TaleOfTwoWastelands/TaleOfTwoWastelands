@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C004C14">TTWDartImpactScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDartImpactScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>68</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Effect</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgARADYAAAAVAAsAcwEABgAgWE0QAAAWAA0AAQAJACBzAQAgNzUgPgIQCgACAHIBAG4BAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWDartImpactScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DartSpawnChance</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602936E">AmmoDart</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

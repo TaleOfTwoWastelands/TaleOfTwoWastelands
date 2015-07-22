@@ -1,0 +1,82 @@
+scn ShortyScript
+
+short kitchenStage			;(-1 = done with conversation) holds variable that controls conversation MS01KitchenConversation
+short startingAggression		;stores his starting aggression so I can change it back
+short rescued					;1 = player rescued, set in dialog, condition on package
+
+short followingPlayer			;1 = following, -1 == waiting
+short arrivedAtBigTown
+
+short init							;do once
+
+Begin GameMode
+	if init == 0
+		set startingAggression to getAv Aggression		
+
+		set init to 1
+	endif
+
+; simulate Big Town being wiped out by mutants
+	if getStageDone MS01 251 == 1 || getStageDone MS01 180 == 1
+		if GetDead == 0
+			kill
+		endif
+	endif
+
+	if MS01.sneak == 1
+		if player.IsSneaking == 1
+			if GetForceSneak == 0
+				SetForceSneak 1	
+			endif
+		else
+			if GetForceSneak == 1
+				SetForceSneak 0
+			endif
+		endif
+	elseif GetForceSneak == 1
+		SetForceSneak 0			
+	
+	endif
+
+End
+
+Begin OnPackageStart MS01ShortyToBigTown
+	set followingPlayer to 0
+End
+
+Begin OnPackageDone MS01ShortyToBigTown
+	setstage MS01 90
+End
+
+
+Begin OnPackageChange MS01KitchenWaitForDialog
+	ShortyRef.setav Aggression ShortyRef.startingAggression
+End
+
+Begin OnDeath
+	setstage MS01 160
+End
+
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && ShortyRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

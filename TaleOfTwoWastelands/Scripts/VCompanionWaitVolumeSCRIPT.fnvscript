@@ -1,0 +1,128 @@
+SCN VCompanionWaitVolumeSCRIPT
+
+
+BEGIN onTriggerEnter
+
+IF (IsActionRef PLAYER == 1)
+	IF (VNPCFollowers.bBooneHired == 1)
+		SET CraigBooneREF.Waiting TO 1;
+		CraigBooneREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bCassHired == 1)
+		SET RoseofSharonCassidyREF.Waiting TO 1;
+		RoseofSharonCassidyREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bVeronicaHired == 1)
+		SET VeronicaREF.Waiting TO 1;
+		VeronicaREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bLilyHired == 1)
+		SET LilyREF.Waiting TO 1;
+		LilyREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.RaulHired == 1)
+		SET RaulREF.Waiting TO 1;
+		RaulREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.ArcadeHired == 1)
+		SET ArcadeREF.Waiting TO 1;
+		ArcadeREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bEDEHired == 1)
+		if EDE1Ref.GetDisabled == 0
+			SET EDE1Ref.Waiting TO 1;
+			EDE1Ref.evp;
+		elseif EDE2Ref.GetDisabled == 0
+			SET EDE2Ref.Waiting TO 1;
+			EDE2Ref.evp;
+		elseif EDE3Ref.GetDisabled == 0
+			SET EDE3Ref.Waiting TO 1;
+			EDE3Ref.evp;
+		endif
+	ENDIF	
+	IF (VNPCFollowers.RexHired == 1)
+		SET RexREF.Waiting TO 1;
+		RexREF.evp;
+	ENDIF
+ENDIF
+
+END
+
+BEGIN onTriggerLeave
+
+IF (IsActionRef PLAYER == 1)
+	IF (VNPCFollowers.bBooneHired == 1)
+		SET CraigBooneREF.Waiting TO 0;
+		CraigBooneREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bCassHired == 1)
+		SET RoseofSharonCassidyREF.Waiting TO 0;
+		RoseofSharonCassidyREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bVeronicaHired == 1)
+		SET VeronicaREF.Waiting TO 0;
+		VeronicaREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.bLilyHired == 1)
+		SET LilyREF.Waiting TO 0;
+		LilyREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.RaulHired == 1)
+		SET RaulREF.Waiting TO 0;
+		RaulREF.evp;
+	ENDIF	
+	IF (VNPCFollowers.ArcadeHired == 1)
+		SET ArcadeREF.Waiting TO 0;
+		ArcadeREF.evp;
+	ENDIF	
+	IF (Followers.CharonHired == 1)
+		SET CharonRef.Waiting TO 0;
+		CharonRef.evp;
+	ENDIF	
+	IF (Followers.ButchHired == 1)
+		SET ButchRef.Waiting TO 0;
+		ButchRef.evp;
+	ENDIF	
+	IF (Followers.CloverHired == 1)
+		SET CloverRef.Waiting TO 0;
+		CloverRef.evp;
+	ENDIF	
+	IF (Followers.JerichoHired == 1)
+		SET JerichoRef.Waiting TO 0;
+		JerichoRef.evp;
+	ENDIF	
+	IF (Followers.FawkesHired == 1)
+		SET MQ08FawkesRef.Waiting TO 0;
+		MQ08FawkesRef.evp;
+	ENDIF	
+	IF (Followers.StarPaladinCrossHired == 1)
+		SET StarPaladinCrossRef.Waiting TO 0;
+		StarPaladinCrossRef.evp;
+	ENDIF	
+	IF (VNPCFollowers.bEDEHired == 1)
+		if EDE1Ref.GetDisabled == 0
+			SET EDE1Ref.Waiting TO 0;
+			EDE1Ref.evp;
+		elseif EDE2Ref.GetDisabled == 0
+			SET EDE2Ref.Waiting TO 0;
+			EDE2Ref.evp;
+		elseif EDE3Ref.GetDisabled == 0
+			SET EDE3Ref.Waiting TO 0;
+			EDE3Ref.evp;
+		endif
+	ENDIF	
+	IF (VNPCFollowers.RexHired == 1)
+		SET RexREF.Waiting TO 0;
+		RexREF.evp;
+	ENDIF
+	IF (Followers.DogmeatHired == 1)
+		SET DogmeatRef.Waiting TO 0;
+		DogmeatRef.evp;
+	ENDIF
+	IF (Followers.RL3Hired == 1)
+		SET RL3REF.Waiting TO 0;
+		RL3REF.evp;
+	ENDIF
+ENDIF
+
+END

@@ -1,0 +1,330 @@
+scn DLC02AmmoBoxSCRIPT
+
+;This script handles the giving of ammo the player when he activates the ammo box, and the random flickering that occures on the box.
+
+short dummyAmmo
+short hasAmmo	;Number of specific ammo the player has in his inventory
+short giveAmmo
+ref ammoType
+float disableTimer
+short switched
+
+short ammoAdded
+
+;-----Flickering Stuff----
+short flickering
+short flickerOnSecond 		;(must be less than 100)
+float myTimer		;COUNTS UP to DLC02RezFlickerTime
+
+
+float timerToStopShader ;COUNTS DOWN
+
+Begin OnLoad
+
+	set disableTimer to .5
+
+;-----Flickering Stuff----
+	set flickerOnSecond to GetRandomPercent * DLC02RezFlickerTime/100 + 1		;example, if 25, this rolls a die between 1 and 25
+	set myTimer to 0
+	set flickering to 1
+
+End
+
+
+
+Begin OnActivate
+
+	if ( IsActionRef Player == 1 )
+
+		set ammoAdded to 0
+		
+		set ammoType to Ammo10mm
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo10mmHollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo20ga
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo20gaSlug
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo308
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo308ArmorPiercing
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo308HollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo40mmGrenade
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo50MG
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo50MGArmorPiercing
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo556mm
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo556mmArmorPiercing
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo556mmHollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo5mm
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo5mmArmorPiercing
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo5mmHollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo9mm
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to Ammo9mmHollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoElectronChargePack
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoFatMans
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoFlamerFuel
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoMicrofusionCell
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoMissile
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to AmmoSmallEnergyCell
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to NVDLC02Ammo45Auto
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		set ammoType to NVDLC02Ammo45AutoHollowPoint
+		set dummyAmmo to TTWRequisitionDummyRef.GetItemCount ammoType
+		set hasAmmo to player.GetItemCount ammoType
+		set giveAmmo to dummyAmmo - hasAmmo
+		if giveAmmo > 0
+			player.additem ammoType giveAmmo 1
+			set ammoAdded to 1
+		endif
+		
+		if (ammoAdded == 1)
+			PlaySound3d FXObjectUse
+			ShowMessage DLC02AmmoRefill
+			activate
+		elseif (ammoAdded == 0)
+			PlaySound3d QSTToneSequenceFail
+			ShowMessage DLC02AmmoFull
+			activate
+		endif
+
+		pms DLC02DeRezItemShader
+		set timerToStopShader to 2
+		set flickering to 1
+		
+		set switched to 1
+	endif
+End
+
+
+
+Begin GameMode
+
+;-----Flickering Stuff----
+	if flickering == 1
+		if timerToStopShader > 0
+			set timerToStopShader to timerToStopShader  - getSecondsPassed
+		else
+			sms DLC02DeRezItemShader
+			set flickering to -1
+		endif
+
+	endif
+
+	if myTimer < DLC02RezFlickerTime
+		set myTimer to myTimer + getSecondsPassed
+
+		if flickering == 0
+			if myTimer >= flickerOnSecond
+				playSound3D FXObjectHighlight
+				pms DLC02DeRezItemShader
+				set timerToStopShader to 2
+				set flickering to 1
+			endif
+
+		endif
+
+	elseif flickering != 1
+		set myTimer to 0
+		set flickering to 0
+		;pick a random second to start flickering next pass
+		set flickerOnSecond to GetRandomPercent * DLC02RezFlickerTime/100 + 1		;example, if DLC02RezFlickerTime == 25, this rolls a die between 1 and 25
+
+	endif
+
+
+End

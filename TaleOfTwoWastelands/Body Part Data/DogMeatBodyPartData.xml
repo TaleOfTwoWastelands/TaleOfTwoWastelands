@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="BPTD">
+  <Flags>0</Flags>
+  <FormID ID="0005239C">DogMeatBodyPartData</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DogMeatBodyPartData</EditorID>
+    <Model>
+      <FileName Tag="MODL">Creatures\Dog\Skeleton.nif</FileName>
+    </Model>
+    <NamedBodyParts>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Head</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 Neck1</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 Head</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI">Bip01 Head</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>Severable, IKData, IKData_IsHead, IKData_Headtracking</Flags>
+            <Type>Head1</Type>
+            <HealthPercent>40</HealthPercent>
+            <ActorValue>PerceptionCondition</ActorValue>
+            <ToHitChance>30</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>60</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">Bip01 Head</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Torso</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 Spine0</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 Spine2</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI"> Bip01 Head11 TungeControler</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>0</Flags>
+            <Type>Torso</Type>
+            <HealthPercent>60</HealthPercent>
+            <ActorValue>EnduranceCondition</ActorValue>
+            <ToHitChance>75</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>0</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">BASE Meshes\Creatures\Dog\Skeleton.nif</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Left Legs</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 L Forearm</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 L Forearm</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI"> Bip01 Head11 TungeControler</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>Severable</Flags>
+            <Type>LeftLeg1</Type>
+            <HealthPercent>30</HealthPercent>
+            <ActorValue>LeftMobilityCondition</ActorValue>
+            <ToHitChance>40</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>0</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">BASE Meshes\Creatures\Dog\Skeleton.nif</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Left Legs</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 L Calf</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 L Calf</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI"> Bip01 Head11 TungeControler</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>Severable</Flags>
+            <Type>LeftLeg2</Type>
+            <HealthPercent>30</HealthPercent>
+            <ActorValue>LeftMobilityCondition</ActorValue>
+            <ToHitChance>40</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>0</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">BASE Meshes\Creatures\Dog\Skeleton.nif</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Right Legs</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 R UpperArm</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 R Forearm</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI"> Bip01 Head11 TungeControler</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>Severable</Flags>
+            <Type>RightLeg1</Type>
+            <HealthPercent>30</HealthPercent>
+            <ActorValue>RightMobilityCondition</ActorValue>
+            <ToHitChance>40</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>0</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">BASE Meshes\Creatures\Dog\Skeleton.nif</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+      <NamedBodyPart>
+        <PartName Tag="BPTN">Right Legs</PartName>
+        <BodyPart>
+          <PartNode Tag="BPNN">Bip01 R Calf</PartNode>
+          <VATSTarget Tag="BPNT">Bip01 R Calf</VATSTarget>
+          <IKData>
+            <StartNode Tag="BPNI"> Bip01 Head11 TungeControler</StartNode>
+          </IKData>
+          <Data Tag="BPND">
+            <DamageMultiplier>1</DamageMultiplier>
+            <Flags>Severable</Flags>
+            <Type>RightLeg2</Type>
+            <HealthPercent>30</HealthPercent>
+            <ActorValue>RightMobilityCondition</ActorValue>
+            <ToHitChance>40</ToHitChance>
+            <Explodable>
+              <ExplosionChance>0</ExplosionChance>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Explodable>
+            <TrackingMaxAngle>0</TrackingMaxAngle>
+            <Severable>
+              <DebrisCount>0</DebrisCount>
+              <Debris ID="00000000">NullReference</Debris>
+              <Explosion ID="00000000">NullReference</Explosion>
+              <DebrisScale>1</DebrisScale>
+              <ImpactDataSet ID="00000000">NullReference</ImpactDataSet>
+              <DecalCount>0</DecalCount>
+            </Severable>
+            <GoreEffects>
+              <Translate>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Translate>
+              <Rotation>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+              </Rotation>
+            </GoreEffects>
+            <LimbReplacementScale>1</LimbReplacementScale>
+          </Data>
+          <LimbReplacementModel Tag="NAM1"></LimbReplacementModel>
+          <GoreEffectsTargetBone Tag="NAM4">BASE Meshes\Creatures\Dog\Skeleton.nif</GoreEffectsTargetBone>
+          <TextureFileHashes Tag="NAM5"></TextureFileHashes>
+        </BodyPart>
+      </NamedBodyPart>
+    </NamedBodyParts>
+    <BodyParts />
+    <Ragdoll Tag="RAGA">
+      <Reference ID="000658D0">DogRagdoll</Reference>
+    </Ragdoll>
+  </Subrecords>
+</Record>

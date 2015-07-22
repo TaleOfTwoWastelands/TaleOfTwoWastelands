@@ -1,0 +1,11 @@
+ScriptName VCG01VigorTesterSCRIPT
+
+BEGIN OnActivate
+	if(GetStage VCG01 == 60 && GetObjectiveDisplayed VCG01 30 == 1)
+		If GetQuestCompleted CG04 == 0
+			ShowLoveTesterMenuParams 40
+		endif
+		SetStage VCG01 65
+	endif
+END
+

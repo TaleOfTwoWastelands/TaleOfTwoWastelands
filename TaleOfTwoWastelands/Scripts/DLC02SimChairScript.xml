@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="070018A9">DLC02SimChairScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02SimChairScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>23</ReferenceCount>
+        <CompiledSize>950</CompiledSize>
+        <VariableCount>2</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAPYAAAAAABYAFAASABAAIFhpEAUAAQByAgAgMSA9PRYAFQAJABEAIFg6EAUAAQByBAAgNTAgPT0WABcABQATACByAgBYthAFAAEAcgUAIDEgPT0WABYAAQASACByAwBYKBEEAAEABAAgMSA9PR4AAAAXAAIAAQANEAIAAAAZAAAAFwACAAEAHAABADQQCAACAHICAHIGABkAAAAYABYABAASACBYOhAFAAEAcgQAIDIwMCA+PRYAEgAAAA4AIHICAFifEAAAIDAgPT0XAAIAAQANEAIAAAAZAAAAFwACAAEAHAABADQQCAACAHICAHIGABkAAAAZAAAAEQAAABAABgAAAKYCAAAWABQAIAAQACBYOhAFAAEAcgcAIDQwIDwWABAAHgAMACByBABzBAAgMCA9PRYAEgAcAA4AIHICAFifEAAAIDMgPT0WABgAGgAUACByAgBYARAFAAEAcggAIDEwMCA8HAACAFARAAAcAAIAHRAFAAEAcgkAHAACAB0QBQABAHIKABwAAgAdEAUAAQByCwAcAAIAHRAFAAEAcgwAHAACAB0QBQABAHINABwAAgAdEAUAAQByDgAcAAIAHRAFAAEAcg8AHAACAB0QBQABAHIQABwAAgAdEAUAAQByEQAVAAoAchIAcwUAAgAgMBwAAgAcEAUAAQByEwAcAAIAghENAAIASQB6AAAAAABAj0AcAAIAghENAAIASwB6AAAAAABAj0AcAAIAghENAAIASgB6AAAAAABAj0AcAAIAghENAAIANgB6AAAAAABAj0BhEAIAAAAmEAUAAQByFAAcAAMAExAJAAIABABuAQAAABUACABmAQADACAxNBwAAwAmEAUAAQByFQA2EAUAAQByFgAVAAoAchYAcxcAAgAgMdwRDgACAHIEAHqamZmZmZmpPxUACgByBABzCgACACAxFQAKAHIEAHMEAAIAIDEZAAAAGQAAABkAAAAZAAAAFgAQAA4ADAAgcgQAcwQAIDEgPT0WAA0ABgAJACBzAgAgMCA9PRYADQACAAkAIGYBACAzIDw9kREFAAEAchcAFQAHAHMCAAIAIDEXAAIAAQAVABEAZgEADAAgZgEAIFgMEAAAIC0ZAAAAGAANAAUACQAgcwIAIDEgPT0WAAwAAQAIACBmAQAgMCA+FQARAGYBAAwAIGYBACBYDBAAACAtGAANAAEACQAgZgEAIDAgPD0VAAoAcgQAcwQAAgAgMhkAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC02SimChairScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">ChairTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IModTrigger</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="07001402">DLC02SpecialistOlinREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07001EBE">DLC02SimActivatorREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009BE">DLC02OA1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700A6C0">DLC02ArmorSimSuit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07002EEB">DLC02OlinPodWarning</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070014F6">DLC02OA4</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07001EBF">DLC02SimChairREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006698C">WithdrawalAlcohol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006DC6E">WithdrawalAntNectar</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033066">WithdrawalBuffout</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033067">WithdrawalJet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033063">WithdrawalMentats</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002AE29">WithdrawalMorphine</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033064">WithdrawalPsycho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009ADE7">WithdrawalQuantumNukacola</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C9CF5">MS09WithdrawalUltrajet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000038B2">Generic</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010F99">TTWOANoNeeds</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003B99">OBJPodSimClose2D</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002EEFD">OBJTranquilityLanePodClose2D</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009BF">DLC02OA2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00025D8D">MQ04PodFadetoWhiteISFX</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

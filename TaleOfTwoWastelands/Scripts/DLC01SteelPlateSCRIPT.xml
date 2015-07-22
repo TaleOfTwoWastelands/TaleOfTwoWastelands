@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="080032D8">DLC01SteelPlateSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01SteelPlateSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>2</ReferenceCount>
+        <CompiledSize>113</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAADAGEAAAAAABYAFQABABEAIFg6EAUAAQByAQAgNTAgPT0VABMAcgEAcwIACwAgcgEAcwIAIDEgKxkAAAAWAA0AAgAJACBzAQAgMCA9PRUABwBzAQACACAxdRIFAAEAcgIAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC01SteelPlateSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0800108B">DLC01Quest02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C018579">TTWDLC01ChallengeMillWorker</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

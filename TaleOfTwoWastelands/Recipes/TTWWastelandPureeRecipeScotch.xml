@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0C011FB1">TTWWastelandPureeRecipeScotch</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWWastelandPureeRecipeScotch</EditorID>
+    <Name Tag="FULL">Mushroom Smoothie</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000151A1">Scotch</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>Survival</Skill>
+      <Level>50</Level>
+      <Category ID="0013B2C0">CampfireRecipes</Category>
+      <SubCategory ID="0013E119">AidSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0C00DF9A">TTWGlowingMushroom</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="000151A1">Scotch</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0003406F">BoxDetergent</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="00015169">Stimpak</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="0C011FB0">TTWWastelandPuree</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

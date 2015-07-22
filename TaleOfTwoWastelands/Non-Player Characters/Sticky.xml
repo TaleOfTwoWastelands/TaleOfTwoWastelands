@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060295EB">Sticky</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Sticky</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Sticky</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>4</CalcMin>
+      <CalcMax>8</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>50</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCA">MaleAdult16</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="060295EC">StickyScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001CBDB">OutfitWasteland03</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.680000007</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00050E44">HatParty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cautious</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Pleasant</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0602ABA1">MS01StickyRunToBigTown</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060295ED">MS01StickyFollow</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C0329">MS01StickyWaiting</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C032A">MS01StickyOnHisOwn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609363F">MS01StickyGoodbyeScene</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602BF6D">MS01StickyGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06093648">MS01StickyGreetPlayer2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602ECDB">MS01MobCheer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D950">MS01Mine5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060929BE">MS01GuardCenterOfTown</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C2530">MS01HideMineLearnFollowRed</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D93C">MS01MineLearn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D937">MS01Robot2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D936">MS01Robot1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C2531">MS01RobotLearnFollowRed</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D938">MS01RobotLearn1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06064EFB">MS01ShootMutants5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060305DE">MS01RunToHide5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602C115">MS01HideAt5</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602C110">MS01HideLearn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602BF68">MS01ShootAt4From4</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B501">MS01ShootAt3From3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B4FE">MS01ShootAt2From2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B4FD">MS01ShootAt1From1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602BF6C">MS01ShootFrom2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602E73C">MS01MobGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602E73B">MS01MobWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC7">StickyEat21x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC8">StickySandbox9x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC9">StickyEat7x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBCA">StickySleep23x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBCB">StickyDefaultWanderHome</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015672">Settler</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>43</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000AB5B8">HairMessy03</Reference>
+      </Type>
+      <Length Tag="LNAM">0.209999993</Length>
+      <Color Tag="HCLR">
+        <Red>91</Red>
+        <Green>84</Green>
+        <Blue>74</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004252">EyeGreen</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">0CA2vzjPF7/Fhy++4XLNv42TlL4EWkY/W8pEvjlap7+N1iu/a9abv3mutr/ySDu/UeeMvpwrFr9SkLc+6xE9wBsuCsDzpcg/WWuQv8W1LkC/5Ja/rcM6wL1VC0D2wqTA7TB7QPPsiL/DQx0+X2RewPRHg0DuVSRAtCbIvovg57+77KFA4ShxwPI/qcCzi8I/YSKAwD+Ho8AMKPY8OF/+v86zGD+T4DY/X3rxPxZFU8AeGv0/PqG1QLh/W0A4PSXA1ivvwCf8T8A=</Symmetric>
+        <Asymmetric Tag="FGGA">IIFGv9THd70MO7M+FVT8PIRkXj5yDjc+jw2wPq6oyL5kSBu/Ri0Hvyykbz/cV3u/ZoPBPoV0oT6kAwjAUmtJP9k+Eb8pMaE+HyfjPWRe3T4z84E9vdSdvs9mpruAJCQ/3u6lPizGBz9+0ry/TuVSPwQER79ktCM/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">wZyAv4AcuL0cUNy+VoK8PzRzTD/OyHu/IE8AwBoToj1ES8O+356Ov5qB178Aklm9xValPkHbJkDieQJAzHPWP3ppE0DPU0k/GEAZwCALEcAkzLg+8JU8vW77H0CihQq/WEe9PhrsRD9m1hE/2OvWvi75uz86Z+g/7Uqlv/TrE8DE5yw/4NbVPeJCzL9Gnem+GjrEvlU/5T+o8jy/WlT+vty54T52S3y/fXJQwMtmo7+j5hI/QZMrv034wr+4Wl4/KKmDP335OMA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0.899999976</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A3">TTWDCChallengeChineseZodiac</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDCChallengeChineseZodiac</EditorID>
+    <Name Tag="FULL">Chinese Zodiac *</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E4">TTWChallengeOneStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Chinese Remnant Soldiers with Chinese weapons.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>12</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185C7">TTWChallengeChineseZodiacEnemies</Reference>
+    </FormList>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185C8">TTWChallengeChineseZodiacWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

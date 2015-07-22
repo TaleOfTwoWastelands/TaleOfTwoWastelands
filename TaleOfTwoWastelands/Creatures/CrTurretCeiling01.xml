@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="000A84B8">CrTurretCeiling01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrTurretCeiling01</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-19</X>
+        <Y>-23</Y>
+        <Z>-31</Z>
+      </Point1>
+      <Point2>
+        <X>21</X>
+        <Y>22</Y>
+        <Z>32</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Mark I Turret</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\MiniSentryTurret\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>minisentryturret.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAP05RBtLFcRYXRlEG0xVxFhdGUmdCBymRLu3xJt+ywoem5fEm0ALSh6dGUmdCBymRLz3xJt+ywoenNfEm0ALSh6dGUmdCBymRI=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>NoLowLevelProcessing, NoHead, NoRightArm, NoLeftArm, NoVATSMelee, CannotOpenDoors, Immobile, NotPushable</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>2</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00000013">CreatureFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00018E52">TurretFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0001FFB6">RobotFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00040D41">RobotEyebot</Reference>
+    </VoiceType>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>40</Health>
+        <Count>1</Count>
+        <Flags>VATSTargetable</Flags>
+        <Unknown>TgA=</Unknown>
+      </Header>
+      <DestructionStages>
+        <DestructionStage>
+          <StageData Tag="DSTD">
+            <HealthPercentage>0</HealthPercentage>
+            <Index>0</Index>
+            <Stage>0</Stage>
+            <Flags>Disable</Flags>
+            <SelfDamagePerSecond>0</SelfDamagePerSecond>
+            <Explosion ID="0007078A">EyebotExplosion</Explosion>
+            <Debris ID="000B8FF4">RobotGoreBits01</Debris>
+            <DebrisCount>3</DebrisCount>
+          </StageData>
+          <EndMarker Tag="DSTF" />
+        </DestructionStage>
+      </DestructionStages>
+    </Destructable>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078CC4">Ammo556mmRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000A84BD">TurretGunCeiling01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>1536</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="000251AB">TurretDefault</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>50</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>40</Health>
+      <Damage>1</Damage>
+      <Strength>1</Strength>
+      <Perception>10</Perception>
+      <Endurance>10</Endurance>
+      <Charisma>1</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>10</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0007B238">CSTurret</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="000A6452">TurretCeilingBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">100</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">3</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0001E821">AudioTemplateTurretCeiling</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

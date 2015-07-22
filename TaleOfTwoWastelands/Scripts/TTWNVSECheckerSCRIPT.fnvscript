@@ -1,0 +1,8 @@
+scn TTWNVSECheckerSCRIPT
+
+BEGIN GameMode
+	if (TTWGameRestarted)
+		SetStage TTWFunctions 255
+		set TTWGameRestarted to 0
+	endif
+END

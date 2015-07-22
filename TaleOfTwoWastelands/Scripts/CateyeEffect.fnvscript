@@ -1,0 +1,18 @@
+scn CateyeEffect
+
+begin ScriptEffectStart
+	if (GetIsReference player)
+		ApplyImageSpaceModifier CatEyeISFX
+	endif
+
+	setav Nighteye 1
+end
+
+begin ScriptEffectFinish
+	if (GetIsReference player)
+		RemoveImageSpaceModifier CatEyeISFX
+		ApplyImageSpaceModifier CatEyeFadeOutISFX
+	endif
+
+	setav Nighteye 0
+end

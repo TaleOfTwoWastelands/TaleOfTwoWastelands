@@ -1,0 +1,13 @@
+scn TTWTrainPowerDownDisableScript
+
+; This trigger is triggered by the player only and enables its Linked ref.  
+
+
+ref targetREF
+
+Begin onTriggerEnter Player
+	if player.GetItemCount TTWTrainTicket01 <= 0
+		set targetREF to getLinkedRef
+		targetREF.Disable
+	endif
+End

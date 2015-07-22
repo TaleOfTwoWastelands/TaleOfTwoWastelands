@@ -1,0 +1,124 @@
+scn TopsFriskingTriggerScript
+
+ref Companion1REF
+ref Companion2REF
+
+Begin OnActivate
+	; if activator is Chairman greeter, remove all weapons
+	if IsActionRef VTopsGreeter1REF
+		; Removes all Player weapons
+		player.RemoveAllTypedItems TopsWeaponLockerREF 1 0 40
+
+		; Checks for followers
+			if VNPCFollowers.bBooneHired == 1
+				set Companion1REF to CraigBooneREF
+			elseif VNPCFollowers.bCassHired == 1
+				set Companion1REF to RoseofSharonCassidyREF
+			elseif VNPCFollowers.bVeronicaHired == 1
+				set Companion1REF to VeronicaREF
+			elseif VNPCFollowers.bLilyHired == 1
+				set Companion1REF to LilyREF
+			elseif VNPCFollowers.RaulHired == 1
+				set Companion1REF to RaulREF
+			elseif VNPCFollowers.ArcadeHired == 1
+				set Companion1REF to ArcadeREF
+			elseif Followers.CharonHired == 1
+				set Companion1REF to CharonRef
+			elseif Followers.ButchHired == 1
+				set Companion1REF to ButchRef
+			elseif Followers.CloverHired == 1
+				set Companion1REF to CloverRef
+			elseif Followers.JerichoHired == 1
+				set Companion1REF to JerichoRef
+			elseif Followers.FawkesHired == 1
+				set Companion1REF to MQ08FawkesRef
+			elseif Followers.StarPaladinCrossHired == 1
+				set Companion1REF to StarPaladinCrossRef
+			endif
+			if VNPCFollowers.bEDEHired == 1
+				if EDE1Ref.GetDisabled == 0
+					set Companion2REF to EDE1REF
+				elseif EDE2Ref.GetDisabled == 0
+					set Companion2REF to EDE2REF
+				elseif EDE3Ref.GetDisabled == 0
+					set Companion2REF to EDE3REF
+				endif
+			elseif VNPCFollowers.RexHired == 1
+				set Companion2REF to RexREF
+			elseif Followers.DogmeatHired == 1
+					set Companion2REF to DogmeatRef
+			elseif Followers.RL3Hired == 1
+					set Companion2REF to RL3REF
+			endif
+		if Companion1REF != 1
+			Companion1REF.RemoveAllTypedItems TopsCompanionLocker1REF 1 0 40
+		endif
+		if Companion2REF != 1
+			Companion2REF.RemoveAllTypedItems TopsCompanionLocker2REF 1 0 40
+		endif
+	endif
+
+; Give weapons back on exit.
+if IsActionRef Player == 1
+
+	; Gives the player back their weapons after they leave.
+	TopsWeaponLockerREF.RemoveAllItems Player 1 1
+
+	;Check Companion 1, if no companion, give stuff back to player
+	if Companion1REF == ArcadeRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems ArcadeRef 1 0
+	elseif Companion1REF == CraigBooneRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems CraigBooneRef 1 0
+	elseif Companion1REF == RoseOfSharonCassidyRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems RoseOfSharonCassidyRef 1 0
+	elseif Companion1REF == LilyRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems LilyRef 1 0
+	elseif Companion1REF == RaulRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems RaulRef 1 0
+	elseif Companion1REF == VeronicaRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems VeronicaRef 1 0
+	elseif Companion1REF == CharonRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems CharonRef 1 0
+	elseif Companion1REF == ButchRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems ButchRef 1 0
+	elseif Companion1REF == CloverRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems CloverRef 1 0
+	elseif Companion1REF == JerichoRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems JerichoRef 1 0
+	elseif Companion1REF == MQ08FawkesRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems MQ08FawkesRef 1 0
+	elseif Companion1REF == StarPaladinCrossRef
+		TopsCompanionLocker1REF.RemoveAllTypedItems StarPaladinCrossRef 1 0
+	else
+		TopsCompanionLocker1REF.RemoveAllTypedItems player 1 1
+	endif
+	;Check Companion 2, if no companion, give stuff back to player
+	if Companion2REF == RexRef
+		TopsCompanionLocker2REF.RemoveAllTypedItems RexRef 1 0
+	elseif Companion2REF == EDE1Ref
+		TopsCompanionLocker2REF.RemoveAllTypedItems EDE1Ref 1 0
+	elseif Companion2REF == EDE2Ref
+		TopsCompanionLocker2REF.RemoveAllTypedItems EDE2Ref 1 0
+	elseif Companion2REF == EDE3Ref
+		TopsCompanionLocker2REF.RemoveAllTypedItems EDE3Ref 1 0
+	elseif Companion2REF == DogmeatRef
+		TopsCompanionLocker2REF.RemoveAllTypedItems DogmeatRef 1 0
+	elseif Companion2REF == RL3REF
+		TopsCompanionLocker2REF.RemoveAllTypedItems RL3REF 1 0
+	else
+		TopsCompanionLocker2REF.RemoveAllTypedItems player 1 1
+	endif
+
+	; Clears Companion REFs for safety
+	set Companion1REF to 0
+	set Companion2REF to 0
+	set VDialogueTops.Holdout to 0
+endif
+
+end
+
+BEGIN OnTriggerEnter Player
+
+	VTopsGreeter1REF.EVP
+
+END

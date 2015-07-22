@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01858B">TTWDLC05ChallengeGourmet</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC05ChallengeGourmet</EditorID>
+    <Name Tag="FULL">Space Gourmet</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EAAA">ChallengeLowXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Consume alien food.</Description>
+    <Data Tag="DATA">
+      <Type>UseAnItemFromAList</Type>
+      <Threshold>100</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>10</Interval>
+      <Unused1>AAA=</Unused1>
+      <Unused2>AAA=</Unused2>
+      <Unused3>AAAAAA==</Unused3>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185B8">TTWDLC05ChallengeSpaceGourmetList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

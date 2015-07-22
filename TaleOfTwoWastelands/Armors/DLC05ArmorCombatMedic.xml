@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0B00A9A1">DLC05ArmorCombatMedic</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05ArmorCombatMedic</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-14</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>15</Y>
+        <Z>17</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Winterized Medic Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0B00AB6F">DLC05MedicArmorEffect</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150648</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">DLC05\Armor\SnowCombatArmor\M\OutfitM.nif</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOff</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>11</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOn</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>10</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00A9A4">DLC05combatmedicM</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00A9A4">DLC05combatmedicM</TextureSet>
+                <Index>3</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">DLC05\Armor\SnowCombatArmor\F\OutfitF.nif</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOff</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>11</Index>
+              </Texture>
+              <Texture>
+                <Name>PipboyOn</Name>
+                <TextureSet ID="0B00BB60">DLC05combatmedicsleeves</TextureSet>
+                <Index>10</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00A9A3">DLC05combatmedicF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00A9A3">DLC05combatmedicF</TextureSet>
+                <Index>3</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\CombatArmor\M\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>CombatArmorGO</Name>
+                <TextureSet ID="0B00A9A4">DLC05combatmedicM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_combat_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_combat_armor.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075206">RepairCombatArmor</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>6500</Value>
+      <MaxCondition>400</MaxCondition>
+      <Weight>25</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>15</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B6">ArmorHeavyAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

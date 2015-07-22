@@ -1,0 +1,184 @@
+scn StickyScript
+
+;NOTE THIS NPC WILL NOT REMAIN IN FORCE SNEAK IF followingPlayer != 1 (see below)
+
+short init					;1 = initialized variables
+
+short goodbyeStage		;used to control goodbye scene in little lamplight
+short goodbyeTalking	;used to control goodbye scene
+short goodbyeSceneDone	;1 = goodbye scene is done (condition on packages)
+
+short followingPlayer		;condition on follow package, set in dialog
+short playerEscorting		;1 = player agreed to take him to Big Town
+short onHisOwn			;1 = player has told him he's not going to take him
+
+short talking							;condition on sayTo function
+short annoyTime						;set in init if statement in gamemode block
+float annoyTimer						;used to trigger annoying the player with saying things from MS01StickyHandsEscortSayTo topic while he is being escorted to Big Town
+short countDownToStoryAmount			;set in init "block"
+short countDownToStoryCount		;how many other MS01StickyHandsEscortSayTo infos get said before launching story mode (decremented in those infos)
+short storyMode						;used to trigger a random story, set in a MS01StickyHandsEscortSayTo info
+short storyStage						;used as conditions in MS10StickyHandsEscortStory topic to build his story
+
+short askedForCaps		;player asked Sticky for caps to escort him (used as condition on MS01AboutRed topic)
+
+short sayHurray		;flag set when package starts to run to Big Town (i'm not doing a SayTo in the OnPackageStart because he might be saying one of his annoying lines, so i need to do it in game mode block after testing)
+
+short ArrivedAtBigTown		;flag set when package ends, used in conditions on packages and dialog
+
+short HasBigTownTopics	;flag set when sticky can start talking like he's lived at big town (set in quest stage)
+
+short ShutUp		;0 = unset, 1 = player speech challenged him to shut up
+
+; in case Big Town is wiped out by mutants before you bring Sticky
+begin OnLoad
+	if getstageDone MS01 251 == 1 || getStageDone MS01 180 == 1
+		; no more goodbye scene
+		set goodbyeSceneDone to 1
+		disable
+	endif
+
+	; if player has told him he won't escort, next load just kill him. Poor Sticky...
+	if onHisOwn == 1 && arrivedAtBigTown == 0
+		kill stickyref 5
+		kill stickyref 7
+	endif
+end
+
+begin OnDeath
+	set DialogueBigTown.DeadCount to DialogueBigTown.DeadCount + 1
+	if DialogueBigTown.DeadCount >= BigTownMaxDead
+		; quest failed, everybody in Big Town is dead
+		setstage MS01 180
+	endif
+end
+
+Begin GameMode
+	if getDisabled == 1 || GetDead == 1
+		return
+	endif
+
+	if init == 0
+		set annoyTime to 10
+		set countDownToStoryAmount to 3
+		set countDownToStoryCount to countDownToStoryAmount 
+		set init to 1
+
+		equipItem HatParty 		
+
+	endif
+
+
+	;Goodbye Little Lamplight scene
+	if goodbyeSceneDone == 0
+		if GetCombatTarget == player
+			set goodbyeSceneDone to 1
+
+		elseif goodbyeTalking == 0 && goodbyeStage > 0
+			set goodbyeTalking to 1
+
+			;this works because all the infos are conditioned so only one person is talking at once
+			StickyRef.say MS01StickyGoodbyeConv
+			PrincessRef.say MS01StickyGoodbyeConv
+			KnickKnackRef.say MS01StickyGoodbyeConv
+			KnockKnockRef.say MS01StickyGoodbyeConv
+			ZipRef.say MS01StickyGoodbyeConv
+
+		endif
+
+	endif
+
+
+	;make him go into sneak mode with the player and give verbal feedback
+	if followingPlayer == 1 || MS01.Sneak == 1
+		if player.IsSneaking == 1
+			if GetForceSneak == 0
+				SetForceSneak 1
+				if talking == 0 && ShutUp == 0 && GetDead == 0
+					set talking to 1
+					sayTo player MS01StickyHandsSneak
+				endif				
+			endif
+		else
+			if GetForceSneak == 1
+				SetForceSneak 0
+			endif
+		endif
+	elseif GetForceSneak == 1
+		SetForceSneak 0					
+	endif
+
+
+
+	;Make him randomly spout off annoying things while the player is escorting him
+	if followingPlayer == 1
+		if talking == 0 && ShutUp == 0 && IsInCombat == 0
+			if storyMode == 0
+				if annoyTimer < 0			
+					set talking to 1
+					sayTo player MS01StickyHandsEscortSayTo
+
+				else 		;annoyTimer > 0
+					set annoyTimer to annoyTimer - getSecondsPassed
+				endif
+	
+			elseif	storyMode == 1
+				if talking == 0
+					StickyRef.say MS01StickyHandsEscortStory 		;start a conversation with himself to create a random story
+					set talking to 1
+				endif
+			endif
+
+		endif
+	
+	endif
+
+	if sayHurray == 1
+		if talking == 0 && IsInCombat == 0
+			sayTo player MS01StickyHandsHurrayBigTown
+			set sayHurray to 2
+		endif
+	endif
+
+End
+
+Begin SayToDone
+	set annoyTimer to annoyTime
+	set talking to 0
+End
+
+Begin OnPackageStart MS01StickyRunToBigTown
+	if sayHurray == 0				;just incase he some how manages to start this package again
+		set sayHurray to 1
+	endif
+	set followingPlayer to 2
+	set playerEscorting to 0
+End
+
+Begin OnPackageDone MS01StickyRunToBigTown
+	set ArrivedAtBigTown to 1
+	addToFaction BigTownFaction 0	;add him to the Big Town Faction
+End
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && StickyRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06061D98">FollwerOutfitButch</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FollwerOutfitButch</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-10</X>
+        <Y>-24</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>17</X>
+        <Y>19</Y>
+        <Z>14</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tunnel Snake Outfit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00072E2E">EnchClothingRaider</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150592</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\TunnelSnake01\M\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CjEwHHSrkCZ67t8JbwDNHjVuXwlvBc0eNTEwHHSrkCZ6898JbwDNHjVzXwlvBc0eNTEwHHSrkCZ6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\TunnelSnake01\F\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">7fQHbwcx/gptdAdvDDH+CjEwHHSrkCZ67t8JbwDNHjVuXwlvBc0eNTEwHHSrkCZ6898JbwDNHjVzXwlvBc0eNTEwHHSrkCZ65vkRb5LKzmZmeRFvl8rOZnl0H3S1OGTg7t8Tbz9SqkRuXxNvRFKqRHl0H3S1OGTg898Tbz9SqkRzXxNvRFKqRHl0H3S1OGTg5rEKb7ZGYNpmMQpvu0Zg2nRpGHTnx3X67t8Mb6vqryBuXwxvsOqvIHRpGHTnx3X6898Mb6vqryBzXwxvsOqvIHRpGHTnx3X6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\TunnelSnake01\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CjEwHHSrkCZ67t8JbwDNHjVuXwlvBc0eNTEwHHSrkCZ6898JbwDNHjVzXwlvBc0eNTEwHHSrkCZ6</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_tunnel_snake_outfit.dds</Male>
+        <Female Tag="ICO2">Interface\Icons\PipboyImages\vault_suit.dds</Female>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages\Apparel\appearal_tunnel_snake_outfit.dds</Male>
+      </Message>
+    </Icon>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>40</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>2</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

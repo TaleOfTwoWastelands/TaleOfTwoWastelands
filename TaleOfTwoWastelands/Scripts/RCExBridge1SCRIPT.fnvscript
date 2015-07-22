@@ -1,0 +1,42 @@
+scn RCExBridge1SCRIPT
+;After the RC Bridge is finished extending, enable the navmesh there
+
+short doOnce
+short bForceOpen
+
+Begin gameMode
+
+;	if (doOnce == 1)
+;		if (isAnimPlaying Forward == 0)
+;			; Jean: Had to change the name of the navmesh to its formID because in
+;			; release final, editor IDs are not saved and I can't find the navmesh by its editor ID
+;			; However, I'm leaving the old calls just so that things don't completely break in the interim
+;			enableNavmesh BE880
+;			enableNavmesh BE87F
+;			enableNavmesh RCBridgeOpen01
+;			enableNavmesh RCBridgeOpen02
+;			set doOnce to 0
+;		endif
+;	endif
+
+	if ( bForceOpen == 1 && HasLoaded3D == 1 )
+		;start anim and set flag so next frame we start waiting for anim to finish
+		PlayGroup Forward 1
+		set MQ05.TTWBridgeOpend to 1		; TTW sesom see questscript for changelog.
+		set doOnce to 1
+		set bForceOpen to 2
+	elseif (doOnce == 1)
+		if (isAnimPlaying Forward == 0)
+			; Jean: Had to change the name of the navmesh to its formID because in
+			; release final, editor IDs are not saved and I can't find the navmesh by its editor ID
+			; However, I'm leaving the old calls just so that things don't completely break in the interim
+			enableNavmesh BE880
+			enableNavmesh BE87F
+			enableNavmesh RCBridgeOpen01
+			enableNavmesh RCBridgeOpen02
+			set doOnce to 0
+		endif
+	endif
+
+
+End

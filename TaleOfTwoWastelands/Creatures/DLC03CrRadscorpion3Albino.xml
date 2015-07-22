@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0900AD89">DLC03CrRadscorpion3Albino</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03CrRadscorpion3Albino</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Albino Radscorpion</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Radscorpion\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackEffect Tag="EITM">
+        <Reference ID="000E29CD">DLC03RadScorpion3Poison</Reference>
+      </AttackEffect>
+      <AttackAnimation Tag="EAMT">93</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>albino.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing, CannotOpenDoors, NoKnockdowns</Flags>
+      <Fatigue>150</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>13</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>150</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00000013">CreatureFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E276">CreatureHitScorpion</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000929A3">FFER01ScorpionFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000770C9">DeathItemRadScorpionGiant100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00028D96">DefaultSandboxCurrentLocation1024</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedInsect</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>1500</Health>
+      <Damage>100</Damage>
+      <Strength>9</Strength>
+      <Perception>8</Perception>
+      <Endurance>8</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>8</Agility>
+      <Luck>7</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">64</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A384">CSRadscorpion</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="000E2C4C">DLC03RadScorpionBodyPart</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicBug</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000AF619">AudioTemplateRadScorpion</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007E684">ClawDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

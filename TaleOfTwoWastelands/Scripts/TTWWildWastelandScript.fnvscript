@@ -1,0 +1,57 @@
+scn TTWWildWastelandScript
+
+float fLastPlayedDrums
+float fTimer
+short bInDC
+short iRand
+short fChance
+short bDoOnce
+
+begin GameMode
+
+	if player.HasPerk WildWasteland == 0
+		return
+	else
+	
+		if bDoOnce != 1
+			set fLastPlayedDrums to GameDaysPassed - 1
+			set bDoOnce to 1
+		endif
+		
+		if TTWHasNVSE
+			if (LogicalAnd TTWWorldLocation 2)	
+				set bInDC to 1
+			else
+				set bInDC to 0
+			endif
+		else
+			if player.IsInInterior == 0
+				if (player.GetInWorldspace DCWorld01 || player.GetInWorldspace DCWorld03 || player.GetInWorldspace DCWorld05 || player.GetInWorldspace DCWorld06 || player.GetInWorldspace DCWorld08 || player.GetInWorldspace DCWorld09 || player.GetInWorldspace DCWorld10 || player.GetInWorldspace DCWorld11 || player.GetInWorldspace DCWorld12 || player.GetInWorldspace DCWorld15 || player.GetInWorldspace DCWorld17 || player.GetInWorldspace DCWorld18)
+					set bInDC to 1
+				else
+					set bInDC to 0
+				endif
+			endif
+		endif
+		
+		if fTimer > 0
+			set fTimer to fTimer - GetSecondsPassed
+		else
+			set fTimer to 250 + GetRandomPercent
+			set iRand to GetRandomPercent
+			set fChance to (GameDaysPassed - fLastPlayedDrums) * 5
+			if fChance > 50
+				set fChance to 50
+			endif
+			set fChance to (99 - fChance)
+			if iRand >= fChance
+				if bInDC
+					ShowMessage WildWastelandMessage
+					PlayMusic TTWWildWDrums
+				endif
+				set fLastPlayedDrums to GameDaysPassed
+			endif
+		endif
+		
+	endif
+End

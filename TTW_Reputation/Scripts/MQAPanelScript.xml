@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0603D20A">MQAPanelScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQAPanelScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>11</ReferenceCount>
+        <CompiledSize>561</CompiledSize>
+        <VariableCount>3</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAKYAAAAAABYAFAALABAAIFhpEAUAAQByAQAgMSA9PRYADQAJAAkAIHMDACAwID09FgAVAAcAEQAgWDoQBQABAHICACAxMDAgPBYAFwABABMAIHIBAFgvEAUAAQByAwAgMCA9PVkQCwABAHIEAAAAAAAAABcAAgADAFkQCwABAHIFAAAAAAAAABUABwBzAQACACAxDRACAAAAGQAAABkAAAAZAAAAGQAAABEAAAAQAAYAAABxAQAAFgAVAAMAEQAgWDoQBQABAHIGACA0MCA9PRYAFwABABMAIHIBAFh+EQUAAQByBwAgMSA9PTkQCgACAHIGAG4yAAAAGQAAABkAAAAWAA0ACwAJACBzAQAgMSA9PRUACwBzAgAGACBYHxAAABYADgAIAAoAIHMCACAxIH4gPhUABwBzAQACACAwFgANAAEACQAgcwIAIDAgPT1ZEAsAAQByCAAAAAAAAAAYAA0AAwAJACBzAgAgMSA9PVkQCwABAHIJAAAAAAAAABMQCQACAAMAbgAAAAAVAAcAcwMAAgAgMRkAAAAZAAAAGQAAABYADQAIAAkAIHMDACAxID09FgATAAYADwAgWCgRBAABAAMAIDAgPT0TEAkAAgAEAG4AAAAAFQAHAHMDAAIAIDI5EAoAAgByAgBuZAAAAAQSBwABAG4Y/P//ORIPAAMAcgoAbgEAAABuBQAAABUACgByCwBzBAACACAzGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MQAPanelScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PanelInteract</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">VialIn</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E93">MQA</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003BD33">MQ09FEVVial</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D20B">MQAPanelNoVialMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D20C">MQAPanelVialChoiceMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E89">MQ03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06044CB4">MQ03Holo21</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D20D">MQAPanelDoNothingMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D20E">MQAPanelInsertVialMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0017E8">RepTTWEnclave</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06068A9F">EndingBinks</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

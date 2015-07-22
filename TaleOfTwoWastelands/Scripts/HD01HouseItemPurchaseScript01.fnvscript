@@ -1,0 +1,9 @@
+scn HD01HouseItemPurchaseScript01
+
+begin OnAdd Player
+
+	HD01CraftingHotPlateMarkerREF.Enable
+	HD02HotplateMarkerREF.Enable
+	SetItemValue 0
+
+end

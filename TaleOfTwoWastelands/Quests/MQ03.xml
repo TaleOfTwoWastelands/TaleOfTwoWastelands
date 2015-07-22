@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E89">MQ03</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ03</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06044934">MQ03Script</Reference>
+    </Script>
+    <Name Tag="FULL">Scientific Pursuits</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStage</Type>
+          <Quest ID="06014E8B">MQ05</Quest>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStage</Type>
+          <Quest ID="06014E8C">MQ06</Quest>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStage</Type>
+          <Quest ID="06014E8E">MQ08</Quest>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStage</Type>
+          <Quest ID="06014E8F">MQ09</Quest>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetStage</Type>
+          <Quest ID="06014E91">MQ11</Quest>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbgoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetStage MQ03 10</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>74</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgoAAABuAQAAABwAAQCeEAUAAQByAwAWABQAAQAQACBYOBAFAAEAcgQAIDEgPT05EAoAAgByBABuZAAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ03 10 1
+DoctorLiRef.Moveto ScienceLabMarker
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019FC5">DoctorLiRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F00E">ScienceLabMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>80</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4UAAAAbgEAAAAWABQAAQAQACBYOBAFAAEAcgIAIDEgPT05EAoAAgByAgBuZAAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveDisplayed MQ03 20 1
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>164</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKIRDwADAHIBAG4UAAAAbgEAAACjEQ8AAwByAQBuHgAAAG4BAAAAVRAFAAEAcgIAFgAUAAEAEAAgWDgQBQABAHIDACAxID09ORAKAAIAcgMAbmQAAAAZAAAAFgAUAAIAEAAgWDgQBQABAHIEACAxID09ORAKAAIAcgQAbtIAAAA5EAoAAgByBQBulgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveCompleted MQ03 20 1
+SetObjectiveDisplayed MQ03 30 1
+ShowMap PPMapMarker
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif
+if ( GetQuestRunning MQ01 == 1 )
+SetStage MQ01 210
+SetStage MQ01LD 150
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0600326B">PPMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>113</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKIRDwADAHIBAG4eAAAAbgEAAACjEQ8AAwByAQBuKAAAAG4BAAAAFgAUAAIAEAAgWDgQBQABAHICACAxID09ORAKAAIAcgIAbtIAAAA5EAoAAgByAwBulgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveCompleted MQ03 30 1
+SetObjectiveDisplayed MQ03 40 1
+
+if ( GetQuestRunning MQ01 == 1 )
+SetStage MQ01 210
+SetStage MQ01LD 150
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>155</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKIRDwADAHIBAG4oAAAAbgEAAACjEQ8AAwByAQBuMgAAAG4BAAAAFgAUAAEAEAAgWDgQBQABAHICACAxID09ORAKAAIAcgIAbmQAAAAZAAAAFgAUAAIAEAAgWDgQBQABAHIDACAxID09ORAKAAIAcgMAbtIAAAA5EAoAAgByBABulgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveCompleted MQ03 40 1
+SetObjectiveDisplayed MQ03 50 1
+
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif
+if ( GetQuestRunning MQ01 == 1 )
+SetStage MQ01 210
+SetStage MQ01LD 150
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>193</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKIRDwADAHIBAG4UAAAAbgEAAACiEQ8AAwByAQBuHgAAAG4BAAAAohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG48AAAAbgEAAAAWABQAAQAQACBYOBAFAAEAcgIAIDEgPT05EAoAAgByAgBuZAAAABkAAAAWABQAAgAQACBYOBAFAAEAcgMAIDEgPT05EAoAAgByAwBu0gAAADkQCgACAHIEAG6WAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveCompleted MQ03 20 1
+SetObjectiveCompleted MQ03 30 1
+SetObjectiveCompleted MQ03 50 1
+SetObjectiveDisplayed MQ03 60 1
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif
+if ( GetQuestRunning MQ01 == 1 )
+SetStage MQ01 210
+SetStage MQ01LD 150
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>155</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKIRDwADAHIBAG48AAAAbgEAAACjEQ8AAwByAQBuQQAAAG4BAAAAFgAUAAEAEAAgWDgQBQABAHICACAxID09ORAKAAIAcgIAbmQAAAAZAAAAFgAUAAIAEAAgWDgQBQABAHIDACAxID09ORAKAAIAcgMAbtIAAAA5EAoAAgByBABulgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 10 1
+SetObjectiveCompleted MQ03 60 1
+SetObjectiveDisplayed MQ03 65 1
+if ( GetQuestRunning MQSearch == 1 )
+SetStage MQSearch 100
+endif
+if ( GetQuestRunning MQ01 == 1 )
+SetStage MQ01 210
+SetStage MQ01LD 150
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060872E6">MQSearch</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbkEAAABuAQAAAKMRDwADAHIBAG5GAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ03 65 1
+SetObjectiveDisplayed MQ03 70 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>96</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgEArREFAAEAcgEAFgAZAAMAFQAgWDsQCgACAHIBAG4eAAAAIDEgPT0VABAAcgIAZhoACAAgRwMAIDEgKxUACgByAgBzNQACACAxdxEHAAEAbvQBAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">StopQuest MQ03
+CompleteAllObjectives MQ03
+if ( GetStageDone MQ03 30 == 1 )
+  Set RadioGalaxyNewsQuest.MQ03Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+RewardXP 500
+;addachievement 06
+endif
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Gain entrance to Rivet City.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601DB54">HarknessRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Talk to Doctor Li about Dad and Project Purity.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06019FC5">DoctorLiRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Look for Dad in Project Purity's Control Room.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06044CD4">MQ03Holo21Ref</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Search Dads holotapes for clues to his location.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06044CD4">MQ03Holo21Ref</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Listen to Dad's personal journal entry 10.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06044CD4">MQ03Holo21Ref</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Gain access to Vault 112.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0604EC6F">REFR - 0604EC6F</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601852C">Vault112a</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Sit in the unoccupied "Tranquility Lounger."</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060B3636">MQ04PlayerPod</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">65</Index>
+        <Description Tag="NNAM">Put on a Vault 112 suit.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

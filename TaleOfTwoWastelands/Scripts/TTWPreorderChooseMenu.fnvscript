@@ -1,0 +1,74 @@
+scn TTWPreorderChooseMenu
+
+short bCaravanEnabled
+short bClassicEnabled
+short bMercenaryEnabled
+short bTribalEnabled
+short button
+short doOnce
+short inMenu
+
+begin GameMode
+
+	if (Player.GetInCell GSDocMitchellHouse == 0 && (getquestcompleted VCG01 || getquestcompleted CG04))
+
+		if  (doOnce == 0)
+			
+			if inMenu == 0
+				ShowMessage TTWPreorderMenu
+				set inMenu to 1
+			endif
+
+			set button to GetButtonPressed
+
+			if button == -1
+				return
+			elseif button == 0
+				set bCaravanEnabled to 1
+				set inMenu to 0
+			elseif button == 2
+				set bClassicEnabled to 1
+				set inMenu to 0
+			elseif button == 4
+				set bMercenaryEnabled to 1
+				set inMenu to 0
+			elseif button == 6
+				set bTribalEnabled to 1
+				set inMenu to 0
+			elseif button == 1
+				set bCaravanEnabled to 0
+				set inMenu to 0
+			elseif button == 3
+				set bClassicEnabled to 0
+				set inMenu to 0
+			elseif button == 5
+				set bMercenaryEnabled to 0
+				set inMenu to 0
+			elseif button == 7
+				set bTribalEnabled to 0
+				set inMenu to 0
+			elseif button == 8
+				set doOnce to 1
+			endif
+
+		elseif doOnce == 1
+			if (bCaravanEnabled == 1)
+				startquest VPreorderCaravan
+			endif
+			if (bClassicEnabled == 1)
+				startquest VPreorderClassic
+			endif
+			if (bMercenaryEnabled == 1)
+				startquest VPreorderMercenary
+			endif
+			if (bTribalEnabled == 1)
+				startquest VPreorderTribal
+			endif
+
+			set doOnce to 2
+
+		endif
+
+	endif
+
+end

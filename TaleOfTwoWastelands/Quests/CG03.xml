@@ -1,0 +1,1101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E85">CG03</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG03</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601CE2E">CG03Script</Reference>
+    </Script>
+    <Name Tag="FULL">Future Imperfect</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgUAAAAcAAEAnhAFAAEAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage CG03 5
+player.moveto CG03StartMarkerREF</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D73B">CG03StartMarkerREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>287</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ABIHAAEAbgEAAADnEAcAAQBuAQAAABUACgBHBgAFACAyMjc0FQAHAEcHAAIAIDcVAAcARwgAAgAgMxUACABHCQADACAxMBwAAQAhEAIAAAAcAAIAIRACAAAAHAADACEQAgAAABwABAAiEAIAAABhEAIAAAAcAAUAUBEAAOYRBwABAG4BAAAAHAAFAK0QAgAAABwABQACEA8AAwByCgBuAQAAAG4BAAAAHAAFAO4QDwADAHIKAG4AAAAAbgEAAAAcAAUA7hAPAAMAcgsAbgAAAABuAQAAABUACgByAQBzAQACACAxFQAKAHIBAGYDAAIAIDUUESkABQARADYgeWVhcnMgbGF0ZXIuYmlrbgAAAABuAAAAAG4BAAAAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetLocationSpecificLoadScreensOnly 1
+SetInCharGen 1 ; no leveling during chargen
+; set start time
+set gameyear to 2274
+set gamemonth to 7
+set gameday to 3
+set gamehour to 10
+; enable NPCs
+CG03DadRef.enable
+; enable radio
+RadioVault101REF.enable
+; set local map blockers
+CG02HiddenPlaneREF.enable
+CG03HiddenPlaneREF.disable
+; start scene
+DisablePlayerControls
+player.ResetHealth
+; make player 16 years old
+SetPCYoung  1       ; default hair
+; give player right equipment
+player.removeallitems
+player.additem vaultsuit101 1 1
+player.equipitem vaultsuit101 0 1
+player.equipitem pipboy 0 1
+; start scene
+set CG03DadREF.doTalk to 1
+set CG03DadREF.timer to 5
+playBink "6 years later.bik" 0 0 1 0 ; don't interrupt, don't mute audio</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE3A">CG03DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607161F">RadioVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB63A">CG02HiddenPlaneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB63B">CG03HiddenPlaneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000035">GameYear</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000036">GameMonth</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000037">GameDay</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000431E">VaultSuit101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>234</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAH8RCgACAHINAG4AAAAAHAABAKsQBwABAG4BAAAAHAACAH8RCgACAHINAG4AAAAAHAACAKsQBwABAG4BAAAAHAADAH8RCgACAHINAG4AAAAAHAADAKsQBwABAG4BAAAAHAAEAKsQBwABAG4BAAAAHAAFAKsQBwABAG4BAAAAHAAGAKsQBwABAG4BAAAAHAAHAKsQBwABAG4BAAAAHAAIAKsQBwABAG4BAAAAHAAJAKsQBwABAG4BAAAAHAAKAKsQBwABAG4BAAAAHAALAKsQBwABAG4BAAAAHAAMAKsQBwABAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">CG03ButchREF.addToFaction playerFaction 0
+CG03ButchREF.IgnoreCrime 1
+CG03WallyMackREF.addToFaction playerFaction 0
+CG03WallyMackREF.IgnoreCrime 1
+CG03PaulHannonREF.addToFaction playerFaction 0
+CG03PaulHannonREF.IgnoreCrime 1
+; make almost everyone ignore crime
+CG03DadREF.IgnoreCrime 1
+CG03JonasREF.IgnoreCrime 1
+CG03AmataREF.IgnoreCrime 1
+CG03MrBrotchREF.IgnoreCrime 1
+CG03SusieMackREF.IgnoreCrime 1
+CG03ChristineKendallREF.IgnoreCrime 1
+CG03FreddieGomezREF.IgnoreCrime 1
+CG03StanleyREF.IgnoreCrime 1
+CG03AndyREF.IgnoreCrime 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE27">CG03ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE2B">CG03WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE29">CG03PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE3A">CG03DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFBE">CG03JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE25">CG03AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06034203">CG03SusieMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B795">CG03ChristineKendallREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D029">CG03FreddieGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606FFDA">CG03StanleyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609B174">CG03AndyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>26</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDBoEgAAHAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; stop talking
+set CG03DadREF.doTalk to 0
+ShowTraitMenu;
+; trigger dad to force-greet
+CG03DadRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE3A">CG03DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>37</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBACAAAAXhEAAKMRDwADAHICAG4KAAAAbgEAAAAcAAEAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">EnablePlayerControls
+autosave
+SetObjectiveDisplayed CG03 10 1
+CG03JonasREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFBE">CG03JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; trigger Amata to start walking towards Tunnel Snakes
+CG03AmataREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE25">CG03AmataREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Tunnel Snakes notice Amata and start teasing her
+;CG03ButchREF.evp
+CG03PaulHannonREF.evp
+CG03WallyMackREF.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE29">CG03PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE2B">CG03WallyMackREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>LessThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>25</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgEAcxUAIDAgPT0VAAoAcgEAc1MAAgAgMRkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Amata/Butch conv done
+; start looping taunting scene (if player hasn't attacked them)
+if CG03.HitSnake == 0
+  set CG03.bullyStage to 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">28</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHNTAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; somehow ended the scene
+set CG03.bullyStage to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>121</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIFAHNTAAIAIDAcAAEAfxEKAAIAcgYAbgAAAAAcAAEAqxAHAAEAbgEAAAAcAAIAfxEKAAIAcgYAbgAAAAAcAAIAqxAHAAEAbgEAAAAcAAMAfxEKAAIAcgYAbgAAAAAcAAMAqxAHAAEAbgEAAAAcAAQAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; end Amata scene
+set CG03.bullyStage to 0
+CG03ButchREF.addToFaction playerFaction 0
+CG03ButchREF.IgnoreCrime 1
+CG03WallyMackREF.addToFaction playerFaction 0
+CG03WallyMackREF.IgnoreCrime 1
+CG03PaulHannonREF.addToFaction playerFaction 0
+CG03PaulHannonREF.IgnoreCrime 1
+CG03MrBrotchREF.evp ; make sure in the right package</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE27">CG03ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE2B">CG03WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE29">CG03PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <VariableIndex>45</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>2</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <VariableIndex>45</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">BBIHAAEAbgQBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; help Amata
+RewardKarma 260
+
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>130</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbgoAAABuAQAAABUACgByBQBzUwACACAwFQAKAHIFAHMDAAIAIDEVAAoAcgUAcwQAAgAgMRUACgByBQBzBQACACAxHAABAF4QAAAcAAIAXhAAABwAAwABEQAAYRARAAMAbgAAAABuAAAAAG4BAAAAHAAEACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has spoken to Mr. Brotch about the GOAT
+; turn on next objective
+SetObjectiveCompleted CG03 10 1
+; stop bullying scene
+set CG03.bullyStage to 0
+; make sure Tunnel Snakes come to class
+Set CG03.ButchHome to 1
+Set CG03.WallyHome to 1
+Set CG03.PaulHome to 1
+; Mr. Brotch
+CG03MrBrotchREF.evp
+; Freddy
+CG03FreddieGomezREF.evp
+; stop combat
+player.scaonactor
+; no more fighting
+DisablePlayerControls 0 0 1
+; enable CG04 NPCs so they have time to load
+CG04ActorMarker.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D029">CG03FreddieGomezREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D44C">CG04ActorMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>30</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>60</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIFAHMtAAIAIDQcAAEAXhAAABwAAgBeEAAAHAADAF4QAAAcAAQAXhAAADkQCgACAHIFAG4eAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; if player ignores Amata, end scene when enters classroom
+set CG03.AmataOutcome to 4
+CG03ButchREF.evp
+CG03PaulHannonREF.evp
+CG03WallyMackREF.evp
+CG03AmataREF.evp
+setstage CG03 30
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE27">CG03ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE29">CG03PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE2B">CG03WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE25">CG03AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">42</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player chose to take the GOAT
+SetObjectiveDisplayed CG03 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAblAAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player is skipping GOAT
+SetObjectiveDisplayed CG03 80 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>37</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAAREAAGEQEQADAG4AAAAAbgAAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player is sitting down
+CG03MrBrotchREF.evp
+; stop combat
+player.scaonactor
+; no more fighting
+DisablePlayerControls 0 0 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAERAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Mr. Brotch in classroom, ready to go
+; stop combat
+player.scaonactor
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>39</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQALAHICAGYEAAMAIC41FQAKAHICAHMCAAIAIDEcAAEAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX"> ; Mr. Brotch reaches position. Start his GOAT speech.
+set CG03MrBrotchREF.timer to .5
+set CG03MrBrotchREF.doTalk to 1
+CG03GoatSlidesREF.enable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060692C8">CG03GoatSlidesREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YRACAAAAohEPAAMAcgEAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; only do this if player is taking GOAT
+DisablePlayerControls
+SetObjectiveCompleted CG03 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMCAAIAIDAcAAEAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; GOAT is finished
+set CG03MrBrotchREF.doTalk to 0
+CG03GoatSlidesREF.disable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060692C8">CG03GoatSlidesREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>40</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBARAAMAbgEAAABuAQAAAG4AAAAAoxEPAAMAcgEAbkYAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; only do this when the player was taking the GOAT
+EnablePlayerControls 1 1 0
+SetObjectiveDisplayed CG03 70 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAblAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; if player skipped GOAT, skip "player turns in test" part
+setstage CG03 80</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbkYAAABuAQAAAKMRDwADAHIBAG5QAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has turned in GOAT to Mr. Brotch
+SetObjectiveCompleted CG03 70 1
+SetObjectiveDisplayed CG03 80 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E85">CG03</Quest>
+                  <QuestStage>42</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>37</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHNOAAsAIHIBAHNOACAxICsVAAoAcgEAc08AAgAgMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; only give achievement if player actually took GOAT
+;addachievement 2
+; make sure turning in test stuff advances
+set CG03.turnInCount to CG03.turnInCount + 1
+set CG03.turnInTestConv to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>94</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMCAAIAIDEVAAoAcgQAc0wAAgAgMRUADAByBABmTQAEACAyLjKtEQUAAQByBAAcAAEAIRACAAAAHAACAJ4QBQABAHIFAJERBQABAHIGACYQBQABAHIHAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03MrBrotchREF.doTalk to 1
+set CG03.runTimer to 1
+set CG03.timer to 2.2   ; reduce this timer to increase the whiteout time at start of CG04
+completeAllObjectives CG03
+CG04ActorMarker.enable
+CG04AmataREF.moveto CG04AmataStartMarker
+imod FadeToWhiteAndBackISFX
+playSound QSTFadeToWhiteD
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D44C">CG04ActorMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E7">CG04AmataStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D14C">FadeToWhiteAndBackISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BC427">QSTFadeToWhiteD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>111</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgMAHAABACIQAgAAABwAAgCtEAIAAAAcAAIAAhAPAAMAcgQAbgEAAABuAQAAAGEQJQAHAG4BAAAAbgEAAABuAQAAAG4BAAAAbgAAAABuAAAAAG4BAAAAJBIAADkQCgACAHIFAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">stopquest CG03
+CG03DadRef.disable
+player.removeallitems
+player.additem vaultsuit101 1 1
+DisablePlayerControls 1 1 1 1 0 0 1
+PipBoyRadioOff
+; do this last as it contains player.moveto:
+setstage CG04 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601CE3A">CG03DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000431E">VaultSuit101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="06014E86">CG04</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Sit down and take the G.O.A.T.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Get to class and talk to Mr. Brotch about the G.O.A.T.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601CFB8">CG03MrBrotchREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Exit the classroom.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Turn in the G.O.A.T. to Mr. Brotch.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601CFB8">CG03MrBrotchREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">0</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

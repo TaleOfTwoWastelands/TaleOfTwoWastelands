@@ -1,0 +1,22 @@
+scn TTWParadiseLostRepGain
+
+short doOnce
+
+Begin OnEquip
+
+  if doOnce ==0
+
+    AddReputation RepTTWUnderworld 1 1
+  
+    if player.HasPerk Comprehension == 0
+      player.modAV Speech 3
+      showmessage TTWParadiseLostComp0
+    elseif player.HasPerk Comprehension == 1
+      player.modAV Speech 4
+      showmessage TTWParadiseLostComp1
+    endif
+ 
+    set doOnce to 1
+  endif
+
+end

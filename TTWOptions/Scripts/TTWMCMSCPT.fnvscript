@@ -1,0 +1,123 @@
+ScriptName TTWMCMSCPT
+
+short iMaster
+short iMouseover
+short iOption
+short activeSubmenu
+short iSubMenu
+short iTemp
+short iLastSMRebalance
+short iLastMoreCooking
+float fTemp
+float fValue
+float centerX
+float centerY
+float fX
+float fY
+
+reference rList
+
+begin GameMode
+	if GetGameRestarted
+		if IsModLoaded "The Mod Configuration Menu.esp"
+			set iMaster to GetModIndex "The Mod Configuration Menu.esp"
+			set rList to BuildRef iMaster 2790
+			ListAddForm rList TTWMCMItem
+		endif
+	endif
+	
+	;I'm putting Gamemode stuff from all the seperate quests here to avoid 1000 enabled quests. --TJ
+	SetStage TTWMCMQUST 0
+	
+end
+begin MenuMode 1013
+	if IsModLoaded "The Mod Configuration Menu.esp"
+	else
+		Return
+	endif
+
+	if GetMCMFloat 0 0 "_ActiveMod" == GetModIndex "TTWOptions.esp"
+		set iOption to GetMCMFloat 0 0 "_ActiveOption"
+		set fValue to GetMCMFloat 0 0 "_Value"
+
+		if GetUIFloat "StartMenu/MCM/*:5/SubMenu1/_enable" == 0
+			set activeSubmenu to 0
+			SetMCMFloat 0 0 "_ActiveSubMenu" 0
+			SetUIFloat "StartMenu/MCM/*:5/SubMenu1/_enable" 1
+			SetUIString "StartMenu/MCM/*:5/SubMenu1/text/string" "TTW Options"
+			SetUIString "StartMenu/MCM/*:8/SubTitle1/string" "Tale of Two Wastelands"
+
+		endif
+
+		set iSubMenu to GetMCMFloat 0 0 "_ActiveSubMenu"
+	
+
+;Begin Logo Code
+		if activeSubmenu == 0
+		; Logo
+			SetStage TTWMCMQUST 1
+		endif
+;End Logo Code
+
+		if GetMCMFloat 0 0 "_Reset"			;1 - RESET
+			SetMCMFloat 0 0 "_Reset" 0
+			
+;More Logo Code
+			if activeSubmenu == 0
+				SetStage TTWMCMQUST 2
+			else
+				SetMCMFloat 1 1 "_enable" 0
+				SetMCMFloat 1 1 "image/visible" 0
+			endif
+;End More Logo Code		
+			if iSubMenu == 1
+				setstage TTWMCMQUST 10
+			endif
+			;End Stage 1
+		elseif GetMCMFloat 0 0 "_Default"		;2 - DEFAULT
+			SetMCMFloat 0 0 "_Default" 0
+			SetMCMFloat 0 0 "_Reset" 1
+			;setstage TTWMCMQUST 2
+			if iSubMenu == 1
+				SetStage TTWMCMQUST 20
+			endif
+			;End stage 2
+		elseif GetMCMFloat 0 0 "_NewValue"		;3 - NEW VALUE
+			SetMCMFloat 0 0 "_NewValue" 0
+			SetMCMFloat 0 0 "_Reset" 1
+			;setstage TTWMCMQUST 3
+			if iSubMenu == 1
+				setstage TTWMCMQUST 30
+			endif
+			;End stage 3
+			
+		elseif GetMCMFloat 0 0 "_ShowList" == 1		;4 - SHOW LIST
+			SetMCMFloat 0 0 "_ShowList" 2
+			;setstage TTWMCMQUST 4
+			if iSubMenu == 1
+			
+			endif
+			;End stage 4
+		elseif GetMCMFloat 0 0 "_ShowScale" == 1		;5 - SHOW SCALE
+			SetMCMFloat 0 0 "_ShowScale" 2
+			;setstage TTWMCMQUST 5
+			if iSubMenu == 1
+
+			endif
+			;End stage 5
+		elseif GetMCMFloat 0 0 "_DefaultScale"		;6 - DEFAULT SCALE
+			SetMCMFloat 0 0 "_DefaultScale" 0
+			SetMCMFloat 0 0 "_ShowScale" 2
+			;setstage TTWMCMQUST 6
+			if iSubMenu == 1
+
+			endif
+			;End stage 6
+		endif
+
+		if iMouseover != GetMCMFloat 0 1 "_optionID"		;7 - MOUSE-OVER
+			SetStage TTWMCMQUST 70
+		;End stage 7
+		endif
+	endif
+end

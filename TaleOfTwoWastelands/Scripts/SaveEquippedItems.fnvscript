@@ -1,0 +1,43 @@
+scn SaveEquippedItems
+
+ref item
+
+ref self
+
+ref baseItem
+
+short mods
+
+short i
+
+array_var equipArray
+array_var entry
+
+short itemType
+
+short bOnlyPlayable
+
+begin Function { bOnlyPlayable }
+
+	let equipArray := ar_Construct Array
+
+	let self := GetSelf
+
+	let i := 0
+
+	foreach item <- self
+		if ( item.IsEquipped == 1 && ( item.IsPlayable == 1 || bOnlyPlayable == 0 ) )
+			let baseItem := item.GetBaseObject
+			let entry := ar_Construct Array
+
+			let entry[0] := item.GetBaseObject
+			let entry[1] := item.GetCurrentHealth
+
+			let equipArray[i] := entry
+			let i += 1
+		endif
+	loop
+
+	SetFunctionValue equipArray
+
+end

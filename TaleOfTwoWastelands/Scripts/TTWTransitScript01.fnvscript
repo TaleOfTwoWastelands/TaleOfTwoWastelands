@@ -1,0 +1,99 @@
+scn TTWTransitScript01
+; basic script that enables linked reference on activate
+
+short DoOnce
+short playerTravel
+ref myLink
+float timer
+		
+BEGIN OnActivate 
+	
+	if ( IsActionRef Player == 1)
+		if bInDCWasteland == 0
+			if player.GetItemCount TTWTrainTicket01 >= 1
+				showmessage TTWTrainTravelNVtoDC
+			else
+				showmessage TTWTrainTravelNVtoDCNoTicket
+			endif
+		else
+			if player.GetItemCount TTWTrainTicket02 >= 1
+				showmessage TTWTrainTravelDCtoNV
+			else
+				showmessage TTWTrainTravelDCtoNVNoTicket
+			endif
+		endif
+	endif
+
+END
+
+BEGIN GameMode
+
+	if ( playerTravel < 1 && GetButtonPressed == 1 )
+		set PlayerTravel to 1
+		set Timer to 7
+		DisablePlayerControls 1 0 0 0 0 0
+		activate player 0
+		set myLink to getLinkedRef
+		if Player.GetInCell TTWTrainEngine01a
+			myLink.disable
+		elseif player.getincell TTWTrainEngine01b
+		endif
+		set doOnce to 0
+	endif
+
+	if ( PlayerTravel == 1 )
+		set Timer to Timer - GetSecondsPassed
+		if (Timer <= 5) && doOnce == 0
+			set doOnce to 1
+			if GetStageDone VCG00 0 || bInDCWasteland == 0
+				IMod FadeToBlack2sISFX
+			else
+				IMod FadeToWhiteISFX
+			endif
+			Player.Playsound QSTEndPowerUpTurbine
+		endif
+		if ( Timer <= 0 ) 
+			myLink.disable			
+			if GetStageDone VCG00 0 || bInDCWasteland == 0
+				playbink "2 weeks later.bik"
+				IMod FadeInFromBlack4sISFX
+			else
+				playbink "9 years later.bik"
+				IMod FadeInFromWhiteISFX
+			endif
+			EnablePlayerControls
+			if bInDCWasteland == 0
+				player.MoveTo TTWDCTrainEngineXMarker
+				SetStage TTWFunctions 1 ;Turn on DC... stuff
+				SetStage TTWFunctions 2 ;Turn off Mojave... stuff
+				set TTWWorldLocation to 1
+				set TTWFunctions.iDaysToPass to 14
+				SetStage TTWFunctions 20
+				player.removeitem TTWTrainTicket01 1
+			else
+				SetStage TTWFunctions 0 ;Turn off DC... stuff
+				SetStage TTWFunctions 3 ;Turn on Mojave... stuff
+				set TTWWorldLocation to 512
+				if GetStageDone VCG00 0
+					player.MoveTo TTWNVTrainEngineXMarker
+					set TTWFunctions.iDaysToPass to 14
+					SetStage TTWFunctions 20
+				else
+					player.resethealth
+					player.removeitem TTWTrainTicket02 1
+					player.removeallitems TTWStolenWeaponsRef 1
+					Set GameDay to 18
+					Set GameMonth to 9
+					Set GameYear to 2281
+					StartQuest VCG00
+					setstage VCG00 0
+				endif
+				player.removeitem TTWTrainTicket02 1
+			endif
+			set PlayerTravel to 0
+		endif
+	endif
+
+END
+
+

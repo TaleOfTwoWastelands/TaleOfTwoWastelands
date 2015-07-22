@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0602A2B0">DrinkToiletSettlement</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DrinkToiletSettlement</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-22</X>
+        <Y>-52</Y>
+        <Z>-75</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>8</Y>
+        <Z>19</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Toilet</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Bathroom\Toilet01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAIdEYdOEwxMAh0Sx04TG1vGXRDLyJs7t8KdMd45L5uXwp0zHjkvm1vGXRDLyJs898KdMd45L5zXwp0zHjkvm1vGXRDLyJs5d8Lc2IeJa1lXwtzZx4lrXN0EHSz4clt7d8KdMd45L5tXwp0zHjkvm1vGXRDLyJs</TextureFileHash>
+    </Model>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="0014EFBD">EMTToiletGurgle</Reference>
+      </Looping>
+      <Activation Tag="VNAM">
+        <Reference ID="00004460">NPCHumanDrinkingWaterToilet</Reference>
+      </Activation>
+    </Sound>
+    <WaterType Tag="WNAM">
+      <Reference ID="00020D79">d5TerribleWater20r4h</Reference>
+    </WaterType>
+  </Subrecords>
+</Record>

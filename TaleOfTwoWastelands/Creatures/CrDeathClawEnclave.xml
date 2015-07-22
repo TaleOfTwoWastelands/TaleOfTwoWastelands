@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0001CF72">CrDeathClawEnclave</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrDeathClawEnclave</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-50</X>
+        <Y>-95</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>50</X>
+        <Y>95</Y>
+        <Z>152</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Deathclaw</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\DeathClaw\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B892">DeathclawDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>deathclaw.nif</Entry>
+      <Entry>enclaveaddon.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AgAAAAX34QlkvgKeUndhCWTDAp5Sd2EcdEVHT9ju3wtklC7w4W5fC2SZLvDhd2EcdEVHT9ixsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHED7u8MZQ2h/O1ubwxlEqH87XdhHHRFR0/Y7t8OZcyY1KJuXw5l0ZjUondhHHRFR0/Y898OZcyY1KJzXw5l0ZjUondhHHRFR0/Y</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing</Flags>
+      <Fatigue>650</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>20</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseActorEffectList, UseAIData, UseAIPackages, UseBaseData, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001D3FD">EnclaveFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E274">CreatureHitDeathClaw</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0005329F">DeathItemDeathClaw100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0001CF9A">CrDeathClaw</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="09003896">DLC03CrDeathclawEnclaveCageSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Abomination</CreatureType>
+      <Skill>
+        <Combat>85</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>500</Health>
+      <Damage>125</Damage>
+      <Strength>7</Strength>
+      <Perception>8</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>7</Agility>
+      <Luck>10</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">192</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003BC67">CSDeathclaw</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0008445E">EnclaveDeathclawBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000A5D40">AudioTemplateDeathclaw</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="000553E0">DeathClawGauntletImpactData</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

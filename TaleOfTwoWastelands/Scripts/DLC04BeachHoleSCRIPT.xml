@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0011E46D">DLC04BeachHoleSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04BeachHoleSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>705</CompiledSize>
+        <VariableCount>11</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAB4AAAAVAAcAZgMAAgAgMBUACwBmAQAGACBYaxEAABEAAAAQAAgAAgAAAQAAAAAWABQADgAQACBYaRAFAAEAcgEAIDEgPT0WAC0ACgApACByAQBYLxAFAAEAcgUAIDEgPj0gcgEAWC8QBQABAHIGACAxID49IHx8FgAXAAIAEwAgcgEAWLYQBQABAHIFACAxID09HAABAO8QDwADAHIFAG4AAAAAbgEAAAAVAAcAcwYAAgAgMRkAAAAWABcAAgATACByAQBYthAFAAEAcgYAIDEgPT0VAAcAcwgAAgAgMRwAAQDvEA8AAwByBgBuAAAAAG4BAAAAGQAAAA0QBQABAHIBABUABwBzBAACACAxFwACAAEAWRALAAEAcgcAAAAAAAAAGQAAABkAAAARAAAAEAAGAAAAfwEAABYADQAbAAkAIHMEACAxID09FgAeAAQAGgAgcwoAIDAgPT0gcgEAWJ8QAAAgMiA9PSAmJiUQCgACAHIIAG4BAAAAFQAHAGYDAAIAIDcVAAcAcwoAAgAgMRUABwBzCwACACAxGQAAABYADQATAAkAIHMLACAxID09FgAMAAgACAAgZgMAIDAgPhUAEQBmAwAMACBmAwAgWAwQAAAgLRYAGAAFABQAIHMFACAwID09IGYDACA1IDwgJiYVAAcAcwUAAgAgMTwRCwABAHp7FK5H4XqEPxYAEQABAA0AIFjOEAAAIFoJACA9PRwAAgAhEAcAAQBuAAAAABkAAAAZAAAAFwACAAgAYBACAAAAFgANAAEACQAgcwYAIDEgPT0cAAEA7hAPAAMAcgUAbgAAAABuAQAAABgADQABAAkAIHMIACAxID09HAABAO4QDwADAHIGAG4AAAAAbgEAAAAZAAAAFQAHAHMEAAIAIDIiEAIAAAAZAAAAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC04BeachHoleSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">myLinkedRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">myLinkedRefsRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">digTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">digTimerStart</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">scaleTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">shovelCheck</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">throwDirt</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">dismembererCheck</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">unequipOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">dirtExplosion</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">digTimerRun</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00F74F">DLC04BeachTreasure</Reference>
+        </Reference>
+        <Reference Tag="SCRV">1</Reference>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E46F">WeapShovel</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00D5A8">DLC04WeapUniqueFertilizerShovel</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00ED24">DLC04BeachPOIShovelMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E470">DLC04ShovelDirtExplosion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00F74E">DLC04BeachTreasureHoleSand</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

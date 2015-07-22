@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060193A7">INFO - 060193A7</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06018F93">DialogueTenpenny</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060193A6">INFO - 060193A6</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>100</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">What are you in the mood for?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060179EC">MargaretPrimrose</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetOffersServicesNow</Type>
+          <UnusedArg1>AAAAAA==</UnusedArg1>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>107</CompiledSize>
+          <VariableCount>2</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAVAHMBABAAIFg/EgoAAgByAQBuAQAAABUAEQBzAgAMACBzAQAgMSAtIDUgKhUAFQBzAQAQACBYPxIKAAIAcgEAbgIAAAAVABcAcwIAEgAgcwIAIHMBACAxIC0gNSAqIC1zEQUAAQBzAgA=</CompiledScript>
+        <ScriptSource Tag="SCTX">short rep
+short discount
+ 
+;Get positive rep and increase discount
+set rep to GetReputationThreshold RepTTWTenpennyTowerHuman 1
+set discount to (rep - 1) * 5
+ 
+;Get negative rep and decrease discount
+set rep to GetReputationThreshold RepTTWTenpennyTowerHuman 2
+set discount to discount - ((rep - 1) * 5)
+ 
+ShowBarterMenu discount
+</ScriptSource>
+        <LocalVariables>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>1</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">rep</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>2</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">discount</Name>
+          </Variable>
+        </LocalVariables>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0017EA">RepTTWTenpennyTowerHuman</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Can I get something to eat?</Prompt>
+  </Subrecords>
+</Record>

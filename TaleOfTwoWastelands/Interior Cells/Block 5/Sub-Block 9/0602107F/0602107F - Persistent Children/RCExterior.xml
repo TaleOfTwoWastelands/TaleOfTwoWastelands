@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="060594C1">RCExterior</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RCExterior</EditorID>
+    <Base Tag="NAME">
+      <Reference ID="060A9CD3">RCSmDoorLoadL</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="060594C2">REFR - 060594C2</Door>
+      <Position>
+        <X>79698.2813</X>
+        <Y>-72532.7188</Y>
+        <Z>11784</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>5.75959015</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <Owner Tag="XOWN">
+      <Reference ID="000179D9">RCResidentFaction</Reference>
+    </Owner>
+    <Lock Tag="XLOC">
+      <Level>50</Level>
+      <Key ID="000ABEBA">RCHangarKey</Key>
+      <Flags>0</Flags>
+    </Lock>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="0605B6DE">NAVM - 0605B6DE</NavigationMesh>
+      <Unknown>947323197</Unknown>
+    </NavigationDoorLink>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>874.929871</X>
+        <Y>1582.07068</Y>
+        <Z>544.569519</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>4.71238899</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

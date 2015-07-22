@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="00096CB7">OutfitTenpenny</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitTenpenny</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-29</Y>
+        <Z>-17</Z>
+      </Point1>
+      <Point2>
+        <X>18</X>
+        <Y>21</Y>
+        <Z>5</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Tenpenny's Suit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0007E6D8">EnchTenpennySuit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\Tenpenny\tenpennym.NIF</FileName>
+          <TextureHashes Tag="MODT">+e4IdPW4lo95bgh0+riWj3luF3Spevm67t8KdIA8EN1uXwp0hTwQ3XluF3Spevm6898KdIA8EN1zXwp0hTwQ3XluF3Spevm6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\Tenpenny\tenpennyf.NIF</FileName>
+          <TextureHashes Tag="MO3T">+e4IdPW4lo95bgh0+riWj3luF3Spevm67t8KdIA8EN1uXwp0hTwQ3XluF3Spevm6898KdIA8EN1zXwp0hTwQ3XluF3Spevm6sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\Tenpenny\tenpennyGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">+e4IdPW4lo95bgh0+riWj3luF3Spevm67t8KdIA8EN1uXwp0hTwQ3XluF3Spevm6898KdIA8EN1zXwp0hTwQ3XluF3Spevm6</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\Tenpenny\tenpennyGO.NIF</FileName>
+          <TextureHashes Tag="MO4T">+e4IdPW4lo95bgh0+riWj3luF3Spevm67t8KdIA8EN1uXwp0hTwQ3XluF3Spevm6898KdIA8EN1zXwp0hTwQ3XluF3Spevm6</TextureHashes>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_tenpennys_outfit.dds</Male>
+      </Inventory>
+    </Icon>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>8</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

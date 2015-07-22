@@ -1,0 +1,603 @@
+ScriptName EndingBinksScript
+
+; This script is triggered at the end of the game, and controls which series of ending binks gets played
+
+short EndKarma
+;EndKarma: 1=High Karma 1, 2=High Karma 2, 3=High Karma 3, 4=Low Karma 1, 5=Low Karma 2, 6=Low Karma 3, 7=Neutra lKarma
+
+short EndDeath
+;EndDeath: 1=Player Dies Good, 2=Player Lives, 3=Player Dies Evil
+
+;DLC03
+-------------------------
+
+
+short EndEden
+;EndEden: 1=Player Didn't Side With Eden 1, 2=Player Didn't Side With Eden 2, 3=Player Sided With Eden
+
+short KarmaCheck
+;checks player's Karma and sets the appropriate variable
+
+short PlayIntroBink
+;checks whether the Intro Bink has been played
+
+short PlayKarmaBink
+;checks whether the Karma Bink has been played
+
+short PlayDeathBink
+;checks whether the Player Death Bink has been played
+
+short PlayEdenBink
+;checks whether the Eden Assist Bink has been played
+
+short PlayClosingBink
+;checks whether the Closing Bink has been played
+
+short PlayMainKarma
+;Checks whether the main karma bink as been played
+
+
+
+
+Begin GameMode
+
+
+;This block plays the Introduction Bink
+
+ 
+if PlayIntroBink == 0
+;	If GetStage MQ11 == 200
+		;Play Introduction Bink Here
+		PipBoyRadioOff
+;		ShowMessage EndingBink1
+		;PlayMusic "Endgame01"
+		PlayBink "B01.bik" 0 1 0
+		Set PlayIntroBink to 1
+;	endif
+endif
+
+
+;This following section plays the appropriate Karma bink
+;---------------------------------------------------------------------------
+
+If PlayIntroBink == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma >= -249
+			If Player.GetAv Karma <= 249
+				;Play Neutral Karma Bink Here
+				;ShowMessage EndingBink8
+				;PlayMusic "Endgame08"
+				PlayBink "B08.bik" 0 1 0
+				set PlayKarmaBink to 1
+				set PlayMainKarma to 1
+			endif
+		endif
+	endif
+endif	
+
+If PlayIntroBink == 1
+	If PlayMainKarma == 0
+		If Player.GetAv Karma > 249
+			;Play High Karma Bink 1 Here
+			;ShowMessage EndingBink2
+			;PlayMusic "Endgame17"
+			PlayBink "B17.bik" 0 1 0
+			set PlayMainKarma to 1
+		endif
+	endif
+endif	
+
+
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma > 249
+		 	If GetStageDone Ms06 100 == 1
+				;Play High Karma Bink 1 Here
+				;ShowMessage EndingBink2
+				;PlayMusic "Endgame02"
+				PlayBink "B02.bik" 0 1 0
+				set PlayKarmaBink to 1
+		 	endif
+		endif
+	endif
+endif	
+
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma > 249
+			If Getstage MS17 >= 100
+				;Play High Karma Bink 2 Here
+				;ShowMessage EndingBink3
+				;PlayMusic "Endgame03"
+				PlayBink "B03.bik" 0 1 0
+				set PlayKarmaBink to 1
+			endif
+		endif
+	endif
+endif	
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma > 249
+			;Play High Karma Bink 3 Here
+			;ShowMessage EndingBink4
+			;PlayMusic "Endgame04"
+			PlayBink "B04.bik" 0 1 0
+			set PlayKarmaBink to 1
+		endif
+	endif
+endif	
+
+
+If PlayIntroBink == 1
+	If PlayMainKarma == 0
+		If Player.GetAv Karma < -249
+			;Play High Karma Bink 1 Here
+			;ShowMessage EndingBink2
+			;PlayMusic "Endgame18"
+			PlayBink "B18.bik" 0 1 0
+			set PlayMainKarma to 1
+		endif
+	endif
+endif	
+
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma < -249
+			If MegatonDestroyed == 1
+				;Play Low Karma Bink 1 Here
+				;ShowMessage EndingBink5
+				;PlayMusic "Endgame05"
+				PlayBink "B05.bik" 0 1 0
+				set PlayKarmaBink to 1
+			endif
+		endif
+	endif
+endif	
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma < -249
+			If MS10.InFlames >= 1
+				;Play Low Karma Bink 2 Here
+				;ShowMessage EndingBink6
+				;PlayMusic "Endgame06"
+				PlayBink "B06.bik" 0 1 0
+				set PlayKarmaBink to 1
+			endif
+		endif
+	endif
+endif	
+
+If PlayMainKarma == 1
+	If PlayKarmaBink == 0
+		If Player.GetAv Karma < -249
+			;Play Low Karma Bink 3 Here
+			;ShowMessage EndingBink7
+			;PlayMusic "Endgame07"
+			PlayBink "B07.bik" 0 1 0
+			set PlayKarmaBink to 1
+		endif
+	endif
+endif	
+
+
+
+;-------------------------------------------------------------
+
+
+
+;This section plays the Player Died Binks
+;--------------------------------------------------------------
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 1
+			;Play Player Died (Good) Bink
+			;ShowMessage EndingBink9
+			;PlayMusic "Endgame09"
+			PlayBink "B09.bik" 0 1 0
+			set PlayDeathBink to 1
+		endif
+	endif
+endif
+	
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 2
+			if MQ11.DLC03FollowerCode == 0 
+				;Play Player Lives Bink
+				;ShowMessage EndingBink10
+				;PlayMusic "Endgame10"
+				PlayBink "B10.bik" 0 1 0
+				set PlayDeathBink to 1
+			endif
+		endif
+	endif
+endif
+
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 2
+			if MQ11.DLC03FollowerCode == 1 
+				;Play Player Lives Bink
+				;ShowMessage EndingBink29
+				;PlayMusic "Endgame10"
+				PlayBink "B29.bik" 0 1 0
+				set PlayDeathBink to 1
+			endif
+		endif
+	endif
+endif
+
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 2
+			if MQ11.DLC03FollowerCode == 2 
+				;Play Player Lives Bink
+				;ShowMessage EndingBink28
+				;PlayMusic "Endgame10"
+				PlayBink "B28.bik" 0 1 0
+				set PlayDeathBink to 1
+			endif
+		endif
+	endif
+endif
+
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 2
+			if MQ11.DLC03FollowerCode == 3
+				;Play Player Lives Bink
+				;ShowMessage EndingBink27
+				;PlayMusic "Endgame10"
+				PlayBink "B27.bik" 0 1 0
+				set PlayDeathBink to 1
+			endif
+		endif
+	endif
+endif
+
+
+If PlayKarmaBink == 1
+	If PlayDeathBink == 0
+		If EndDeath == 3
+			;Play Player Died (Evil) Bink
+			;ShowMessage EndingBink11
+			;PlayMusic "Endgame11"
+			PlayBink "B11.bik" 0 1 0
+			set PlayDeathBink to 2
+		endif
+	endif
+endif
+
+;------------------------------------------------
+
+;This section plays the Sided With Eden Binks
+;--------------------------------------------------------------
+
+ 
+If PlayDeathBink == 1
+	If PlayEdenBink == 0
+		If EndEden == 3
+			;Play Player Sided With Eden Bink
+			;ShowMessage EndingBink14
+			;PlayMusic "Endgame14"
+			PlayBink "B14.bik" 0 1 0
+			set PlayEdenBink to 1
+		endif
+	endif
+endif
+
+
+If PlayDeathBink == 1
+	If PlayEdenBink == 0
+		If EndEden < 3
+			if MQ09.RRDestroy == 0
+				;Play Player Didn't Side With Eden 1 Bink
+				;ShowMessage EndingBink12
+				;PlayMusic "Endgame12"
+				PlayBink "B12.bik" 0 1 0
+				set PlayEdenBink to 1
+			endif
+		endif
+	endif
+endif
+
+If PlayDeathBink == 1
+	If PlayEdenBink == 0
+		If EndEden < 3
+			if MQ09.RRDestroy == 1
+				;Play Player Didn't Side With Eden 2 Bink
+				;ShowMessage EndingBink13
+				;PlayMusic "Endgame13"
+				PlayBink "B13.bik" 0 1 0
+				set PlayEdenBink to 1
+			endif
+		endif
+	endif
+endif
+
+
+;------------------------------------------------------------
+
+;This block plays the closing bink
+
+
+If PlayDeathBink >= 1
+	If PlayClosingBink == 0
+		If GetPCIsSex Male == 1
+			;Play Closing Bink
+			;ShowMessage EndingBink15
+			;PlayMusic "Endgame15"
+			PlayBink "B15.bik" 0 1 0
+			set PlayClosingBink to 1
+		endif
+	endif
+endif
+
+If PlayDeathBink >= 1
+	If PlayClosingBink == 0
+		If GetPCIsSex Male == 0
+			;Play Closing Bink
+			;ShowMessage EndingBink15
+			;PlayMusic "Endgame16"
+			PlayBink "B16.bik" 0 1 0
+			set PlayClosingBink to 1
+		endif
+	endif
+endif
+
+;------------------------------------------------------------
+
+;This block plays the epilogue bink
+
+If PlayClosingBink == 1
+	If GetPCIsSex Male == 1
+		If GetPCIsRace AfricanAmerican == 1
+			PlayBink "B19.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Female == 1
+		If GetPCIsRace AfricanAmerican == 1
+			PlayBink "B20.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Male == 1
+		If GetPCIsRace Caucasian == 1
+			PlayBink "B21.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Female == 1
+		If GetPCIsRace Caucasian == 1
+			PlayBink "B22.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Male == 1
+		If GetPCIsRace Asian == 1	
+			PlayBink "B23.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Female == 1
+		If GetPCIsRace Asian == 1
+			PlayBink "B24.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Male == 1
+		If GetPCIsRace Hispanic == 1
+			PlayBink "B25.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+If PlayClosingBink == 1
+	If GetPCIsSex Female == 1
+		If GetPCIsRace Hispanic == 1
+			PlayBink "B26.bik" 0 1 0
+			;addachievement 13
+			if ( EndDeath == 3 )
+				ExitGame
+				Set PlayClosingBink to 2
+			else
+;DLC03 Scripting
+
+
+;Move player to starting location for the quest
+				Player.MoveTo DLC03PlayerStartMarker
+
+;Enable DLC Sarah ref if she didn't die in MQ11
+				if ( MQ11.Code != 2 )
+					DLC03SarahRef.Enable
+				elseif ( MQ11.DLC03FollowerCode != 0 )
+					DLC03SarahRef.Enable
+				endif
+
+;Set Stage so everything updates properly
+				SetStage DLC03BS1 0
+				set PlayClosingBink to 2
+			endif
+		endif
+	endif
+endif
+
+
+End
+
+
+
+
+ 

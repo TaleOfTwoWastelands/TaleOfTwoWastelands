@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060B0278">ArmorCombatHelmetTalon</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorCombatHelmetTalon</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-7</X>
+        <Y>-8</Y>
+        <Z>-6</Z>
+      </Point1>
+      <Point2>
+        <X>7</X>
+        <Y>8</Y>
+        <Z>6</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Talon Combat Helmet</Name>
+    <BipedData Tag="BMDT">
+      <Slots>Hair, Headband, Hat</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\CombatArmorHelmet\M\CombatArmorHelmetM.NIF</FileName>
+          <TextureHashes Tag="MODT">9OURY6uMekl0ZRFjsIx6SXJhF3RrmCVO7t8TY/qS0BVuXxNj/5LQFXJhF3RrmCVO898TY/qS0BVzXxNj/5LQFXJhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>CombatArmorHelmet:0</Name>
+                <TextureSet ID="060B0277">TalonCompanyHelmet</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\CombatArmorHelmet\M\CombatArmorHelmetM_GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">9OURY6uMekl0ZRFjsIx6SXJhF3RrmCVO7t8TY/qS0BVuXxNj/5LQFXJhF3RrmCVO898TY/qS0BVzXxNj/5LQFXJhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>CombatArmorHelmetGO:0</Name>
+                <TextureSet ID="060B0277">TalonCompanyHelmet</TextureSet>
+                <Index>-1</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_combat_armor_helmet.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_combat_armor_helmet.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="0007520F">RepairCombatArmorHelmet</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>960</Value>
+      <MaxCondition>40</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>2</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

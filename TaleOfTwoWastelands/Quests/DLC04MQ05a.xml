@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0A00584A">DLC04MQ05a</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04MQ05a</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0A0088FB">DLC04MQ05bSCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">A Meeting Of The Minds</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A885">DLC04FemaleNormal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A886">DLC04FemaleTribal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87D">DLC04MaleChild</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87E">DLC04MaleNormal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87F">DLC04MaleTribalFriendly</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A880">DLC04MaleTribalGruff</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A884">DLC04RobotVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A005A3B">DLC04UniqueDesmond</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A005A3A">DLC04UniqueTheBrain</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A883">DLC04UniqueTobar</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>51</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgMAbgoAAAAVAAoAcgQAcwEAAgAgMRwAAQAiEAIAAAAcAAIAnhAFAAEAcgEA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetStage DLC04MQ05a 10
+Set DLC04MQ04.PlayerInstalledJammer to 1
+DLC04MansionParentMarker.Disable
+Player.Moveto DLC04MansionParentMarker</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005A2B">DLC04MansionParentMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005849">DLC04MQ04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>64</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbgoAAABuAQAAABwAAQCeEAUAAQByBAAcAAEAXhAAABwAAgAhEAIAAAAVAAoAcgUAcwMAAgAgMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed DLC04MQ05a 10 1
+DLC04DesmondREF.MoveTo DLC04MS05aDesmendWaitForPlayerLighthouseDUPLICATE000
+DLC04DesmondREF.evp 
+DLC04MQ05AlarmMarker.Enable
+Set DLC04Generic.MQ05PlayerTarget to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A0035B3">DLC04DesmondREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00C1C5">DLC04MQ05AlarmMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A011DF9">DLC04MS05aDesmendWaitForPlayerLighthouseDUPLICATE000</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A006650">DLC04Generic</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4PAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Desmond waiting for player's goahead
+
+SetObjectiveCompleted DLC04MQ05a 10 1
+SetObjectiveDisplayed DLC04MQ05a 15 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>67</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAAKIRDwADAHICAG4KAAAAbgEAAACiEQ8AAwByAgBuDwAAAG4BAAAAoxEPAAMAcgIAbjIAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Desmond running to Brain chamber.
+
+DLC04LighthouseMirelurkParentREF.Disable
+SetObjectiveCompleted DLC04MQ05a 10 1
+SetObjectiveCompleted DLC04MQ05a 15 1
+SetObjectiveDisplayed DLC04MQ05a 50 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A012DA5">DLC04LighthouseMirelurkParentREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG5LAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has entered the room with Desmond and The Brain
+
+SetObjectiveCompleted DLC04MQ05a 50 1
+SetObjectiveDisplayed DLC04MQ05a 75 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">99</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbksAAABuAAAAAKMRDwADAHIBAG5kAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has not spoken to the brain, can now make choice.
+
+SetObjectiveDisplayed DLC04MQ05a 75 0
+SetObjectiveDisplayed DLC04MQ05a 100 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>76</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbksAAABuAAAAAKMRDwADAHIBAG5MAAAAbgEAAACiEQ8AAwByAQBuTAAAAG4BAAAAoxEPAAMAcgEAbmQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has spoken to the Brain, must make choice
+
+   SetObjectiveDisplayed DLC04MQ05a 75 0
+   SetObjectiveDisplayed DLC04MQ05a 76 1
+   SetObjectiveCompleted DLC04MQ05a 76 1
+   SetObjectiveDisplayed DLC04MQ05a 100 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">101</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbksAAABuAAAAAKMRDwADAHIBAG5kAAAAbgAAAACjEQ8AAwByAQBuZQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has chosen to kill Desmond
+
+SetObjectiveDisplayed DLC04MQ05a 75 0
+SetObjectiveDisplayed DLC04MQ05a 100 0
+SetObjectiveDisplayed DLC04MQ05a 101 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">102</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">AxAKAAIAcgEAbgEAAACjEQ8AAwByAgBuSwAAAG4AAAAAoxEPAAMAcgIAbmQAAABuAAAAAKMRDwADAHICAG5mAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player chose to kill Brain
+
+SetEssential DLC04Desmond 1
+
+SetObjectiveDisplayed DLC04MQ05a 75 0
+SetObjectiveDisplayed DLC04MQ05a 100 0
+SetObjectiveDisplayed DLC04MQ05a 102 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A0035B4">DLC04Desmond</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>91</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAMwQBwABAG4AAAAAoxEPAAMAcgIAbmQAAABuAAAAAKMRDwADAHICAG5lAAAAbgEAAACiEQ8AAwByAgBuZQAAAG4BAAAAoxEPAAMAcgIAbpYAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has killed Desmond, must talk to Brain
+
+DLC04TheBrainRef.SetDestroyed 0
+SetObjectiveDisplayed DLC04MQ05a 100 0
+SetObjectiveDisplayed DLC04MQ05a 101 1
+SetObjectiveCompleted DLC04MQ05a 101 1
+SetObjectiveDisplayed DLC04MQ05a 150 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A006BE9">DLC04TheBrainREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">175</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbpYAAABuAQAAAKMRDwADAHIBAG6vAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must kill betraying Brain
+
+SetObjectiveCompleted DLC04MQ05a 150 1
+SetObjectiveDisplayed DLC04MQ05a 175 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">180</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbmQAAABuAAAAAKMRDwADAHIBAG6vAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player attacked brain without killing Desmond
+
+SetObjectiveDisplayed DLC04MQ05a 100 0
+SetObjectiveDisplayed DLC04MQ05a 175 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>195</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgQAFQAMAHIDAHMBAAQAIDEgfhwAAQBzEAIAAAAcAAIAcxACAAAAAxAKAAIAcgUAbgAAAACjEQ8AAwByBgBuZAAAAG4AAAAAoxEPAAMAcgYAbpYAAABuAQAAAKIRDwADAHIGAG6WAAAAbgEAAACtEQUAAQByBgAVAAoAcgMAcwIAAgAgMTkQCgACAHIHAG4FAAAAHAADAF4QAAA5EAoAAgByCABuCgAAAHcRBwABAG4sAQAANxAFAAEAcgYA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Brain is dead, Desmond is alive
+StopQuest DLC04MQ05b
+
+Set DLC04DesmondREF.TalkToBrain to -1
+DLC04MQ05BrainDoor.Unlock
+DLC04LabEscapeHatchREF.Unlock
+SetEssential DLC04Desmond 0
+
+SetObjectiveDisplayed DLC04MQ05a 100 0
+SetObjectiveDisplayed DLC04MQ05a 150 1
+SetObjectiveCompleted DLC04MQ05a 150 1
+CompleteAllObjectives DLC04MQ05a
+
+Set DLC04DesmondREF.DesmondPostQuestAction to 1
+SetStage DLC04MQPQ 5
+DLC04DesmondRef.evp
+setstage DLC04MQCompletedFunctionQuest 10 ;used for post mq events
+
+RewardXP 300
+StopQuest DLC04MQ05a
+;addachievement 67</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00B854">DLC04MQ05BrainDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A01099E">DLC04LabEscapeHatchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A0035B3">DLC04DesmondREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584B">DLC04MQ05b</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A0035B4">DLC04Desmond</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A008335">DLC04MQPQ</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00EE15">DLC04MQCompletedFunctionQuest</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">201</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>93</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgQAHAABAHMQAgAAABwAAgBzEAIAAAAcAAMAcxACAAAAHAACAN0QBwABAG4BAAAAohEPAAMAcgUAbpYAAABuAQAAAHcRBwABAG4sAQAANxAFAAEAcgUA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Both Brain and Desmond are dead
+StopQuest DLC04MQ05b
+
+DLC04MQ05BrainDoor.Unlock
+DLC04MQ05RewardDoor.Unlock
+DLC04LabEscapeHatchREF.Unlock
+DLC04MQ05RewardDoor.SetOpenState 1
+
+SetObjectiveCompleted DLC04MQ05a 150 1
+RewardXP 300
+StopQuest DLC04MQ05a
+;addachievement 67</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00B854">DLC04MQ05BrainDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00C1C7">DLC04MQ05RewardDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A01099E">DLC04LabEscapeHatchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584B">DLC04MQ05b</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00584A">DLC04MQ05a</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find Desmond.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A0035B3">DLC04DesmondREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Return to Desmond when you're ready.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A0035B3">DLC04DesmondREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Travel with Desmond to the Professor.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A0035B3">DLC04DesmondREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Kill Desmond OR kill the Professor.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">101</Index>
+        <Description Tag="NNAM">Kill Desmond.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">102</Index>
+        <Description Tag="NNAM">Kill the Professor.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Talk to the Professor OR kill the Professor.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">76</Index>
+        <Description Tag="NNAM">Talk to the Professor.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">150</Index>
+        <Description Tag="NNAM">Talk to the Professor.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">175</Index>
+        <Description Tag="NNAM">Kill the Professor.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0900B964">DLC03VeryNaughtyNightwear</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03VeryNaughtyNightwear</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">All-Nighter Nightwear</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="000E29C0">DLC03NNEffect</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\Lingerie\outfitm.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="000CBCF0">LeopardprintLingeriemale</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="000CBCF0">LeopardprintLingeriemale</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="000CBCF0">LeopardprintLingeriemale</TextureSet>
+                <Index>3</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000CBCF0">LeopardprintLingeriemale</TextureSet>
+                <Index>9</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\Lingerie\outfitf.NIF</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000CBCED">LeopardprintLingerie</TextureSet>
+                <Index>2</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\Lingerie\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>Object01</Name>
+                <TextureSet ID="000CBCED">LeopardprintLingerie</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_pajamas.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075215">RepairClothing</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>200</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

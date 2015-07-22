@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="06014BE2">tLandscape</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">tLandscape</EditorID>
+    <Name Tag="FULL">TestLandscape</Name>
+    <Climate Tag="CNAM">
+      <Reference ID="070022E5">DLC02AnchClimate01</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00000018">DefaultWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">-4096</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>-4096</DefaultWaterHeight>
+    </LandData>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>0</X>
+        <Y>0</Y>
+      </UsableSize>
+      <MinX>0</MinX>
+      <MinY>0</MinY>
+      <MaxX>0</MaxX>
+      <MaxY>0</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="070022E7">DLC02AnchBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, NoLODWater</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-45056</X>
+        <Y>-45056</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>45056</X>
+        <Y>32768</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

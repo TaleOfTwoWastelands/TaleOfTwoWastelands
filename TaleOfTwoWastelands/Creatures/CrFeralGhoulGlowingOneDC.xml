@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0601CF7B">CrFeralGhoulGlowingOneDC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrFeralGhoulGlowingOneDC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-30</X>
+        <Y>-30</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>30</X>
+        <Y>30</Y>
+        <Z>130</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Glowing One</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Ghoul\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000617BE">GhoulRadHeal</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0006E770">RadResistGlowingOne</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0008AF5C">GlowingOneGlowSpell</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackEffect Tag="EITM">
+        <Reference ID="0006191A">GlowingOneAttack</Reference>
+      </AttackEffect>
+      <AttackAnimation Tag="EAMT">94</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>glowingone.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAfl7gpnhv3zY2VuCmeL/fNjZW4ddLINSH3u3wxnfUhyFm5fDGeCSHIWZW4ddLINSH3z3wxnfUhyFnNfDGeCSHIWZW4ddLINSH3n3wxm0gnfZ2dfDGbXCd9nZW4ddLINSH2y+RJt6QZUnjJ5Em3uBlSeZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing, AllowPCDialogue</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>9</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001C6D3">FeralGhoulFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="06095984">LootGhoulDC</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607AE96">CreatureFeralGhoulDC</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="0013303B">vGlowingOneSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>FeralGhoul</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>240</Health>
+      <Damage>32</Damage>
+      <Strength>7</Strength>
+      <Perception>5</Perception>
+      <Endurance>10</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">108</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A370">CSFeralGhoulGlowingOne</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="000A18F6">FeralGlowingOneBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">5</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicGlow</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="001523FE">AudioTemplateFeralGlowingOne</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007532A">FeralGhoulImpactDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

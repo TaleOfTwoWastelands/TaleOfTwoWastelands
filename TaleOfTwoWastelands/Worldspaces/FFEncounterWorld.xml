@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="00031E12">FFEncounterWorld</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FFEncounterWorld</EditorID>
+    <Name Tag="FULL">Holding pen for freeform encounters</Name>
+    <Climate Tag="CNAM">
+      <Reference ID="00017907">WastelandClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00000018">DefaultWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00000018">DefaultWater</Reference>
+      </Type>
+      <Height Tag="NAM4">-5000</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>-5000</DefaultWaterHeight>
+    </LandData>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>0</X>
+        <Y>0</Y>
+      </UsableSize>
+      <MinX>0</MinX>
+      <MinY>0</MinY>
+      <MaxX>0</MaxX>
+      <MaxY>0</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064608">WastelandBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, NoLODWater</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-28672</X>
+        <Y>-40960</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>24576</X>
+        <Y>106496</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+  </Subrecords>
+</Record>

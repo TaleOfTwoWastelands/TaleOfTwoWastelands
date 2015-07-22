@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0601E71A">KnightSergeantDurga</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">KnightSergeantDurga</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Knight Captain Durga</Name>
+    <Model>
+      <FileName Tag="MODL">marker_creature.nif</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D4">CitadelResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B99A2">CitadelKnightConvSystem</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Rank>3</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D89">DeathItemKnightSergeantDurga</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCD">FemaleAdult15</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="000B0E7B">CitadelBrotherhoodKnightAATEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000038E5">Hispanic</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001D20D">CondReconArmor</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029379">WithAmmoLaserRifleNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Weapons, Armor, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0001E8A7">CitDurgaOfferServices0x24</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="000173E8">Entrepreneur</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00032D37">HairBun</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>32</Red>
+        <Green>32</Green>
+        <Blue>30</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">8FO0PDgFDr6QUbA98Hv+vUCd0D3omys/GvLMvuzKjr5If6A/Pk6fPw0O3784EoU/gOUnvUBHYr5JcxA/chwXQODUiD+ATy+/ZCofPx0YUj9S3hHAU4uAP0CKtr3iZLg/EIfgvhS2wr40alA/WGASwBgijT6l7o4/4pV+QOzhxL+06Xa/2OkVP4OuKL8RGOg/8WHFv7xyfT6qnUC/QICLvrEaMD68D4Q/4e0QwGRGPMBc17a/bz3wv5Tmi8BX5/C/MKNgP4DzTL0=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">Pi12v/KBbT62l6A+MFMHvvjP+j2JVSs/wmHhPUaomL8tK5M/GhHbPuxaAb7AmEs8nUT9vsTEdD8/5/A+HgiNv3S7i76E1Ii/HN2QP+bAmL/pfQc/+BmevgpTLr9cHQc+ZL+vP6iffL6Lc6++eJG7PkDxnj8A/Dg/8l6sP0+HS79ga6W/PWiVQMfH3z9AFkI/1DNUvsb7k7+WFCA/GEPLP0BXu76CUB3Aak9tv7LRr78Wy7I/yqOYv4BUKbvxZO2/YnfSvzFisD8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

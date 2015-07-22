@@ -1,0 +1,53 @@
+scn SchematicsDeathclawGauntletItemSCRIPT
+
+short AddOnce
+
+BEGIN OnAdd player
+	
+	if (AddOnce == 0)
+
+		;If the player already has a copy of the schematic, getting another improves the quality of the created item.
+		;Second Improvement
+		if (player.gethasnote SchematicsDeathclawGauntletNote10 == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countDeathclawBonus to 1.25
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsDeathclawGauntletNote10
+			player.addNote SchematicsDeathclawGauntletNote20
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;First Improvement
+		elseif (player.gethasnote SchematicsDeathclawGauntletNote == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countDeathclawBonus to 1
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsDeathclawGauntletNote
+			player.addNote SchematicsDeathclawGauntletNote10
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;Otherwise, just add the note
+		elseif (player.gethasnote SchematicsDeathclawGauntletNote20 == 0)
+
+			IncrementScriptedChallenge TTWChallengeSchematics		; Added by Gribbleshnibit8 8/26/2014
+
+			;Add the Schematic Note
+			player.addNote SchematicsDeathclawGauntletNote
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		endif
+
+	endif
+
+END

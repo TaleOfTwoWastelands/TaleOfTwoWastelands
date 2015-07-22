@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06033370">INFO - 06033370</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06014E96">MS03</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Oh, but nothing beats a real-world example. And I have a new rad treatment I was just itching to try out on a live subject!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">But I guess you're right, and at least it keeps you safe and sound for later testing. Here's some spare chems for your help.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+        <SpeakerAnimation Tag="SNAM">
+          <Reference ID="000B5EB3">LooseNPCGiving</Reference>
+        </SpeakerAnimation>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>35</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Science</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0602D3C0">MoiraBrown</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="0002D288">MS03TaskBegin</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0002D86A">MS03TaskSetDone</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00033191">MS03TaskBreak</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>197</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQATAHIBAHMtAAsAIHIBAHMtACAxICs5EAoAAgByAQBuFQAAAKIRDwADAHIBAG4UAAAAbgEAAACiEQ8AAwByAQBuGAAAAG4BAAAAohEPAAMAcgEAbhoAAABuAQAAABUAEwByAQBzAQALACByAQBzAQAgMSArFQATAHIBAHMDAAsAIHIBAHMDACAxICujEQ8AAwByAQBuBQAAAG4AAAAAoxEPAAMAcgEAbiYAAABuAAAAAKMRDwADAHIBAG5EAAAAbgAAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">;Increment the type of response
+Set MS03.smart to MS03.smart + 1
+
+;Use code in Quest Stage
+SetStage MS03 21
+
+;Complete Objectives
+SetObjectiveCompleted ms03 20 1
+SetObjectiveCompleted ms03 24 1
+SetObjectiveCompleted ms03 26 1
+
+;Count this is a bonus objective
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03aBonus to MS03.MS03aBonus + 1
+
+;Remove "guidance" Objectives
+SetObjectiveDisplayed MS03 5 0
+SetObjectiveDisplayed MS03 38 0
+SetObjectiveDisplayed MS03 68 0</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E96">MS03</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>11</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">dxEHAAEAbiMAAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">rewardxp 35</ScriptSource>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">There's no reason to turn me into a night light for this one. I can explain it to you.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004B8">AVScience</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="06019FBB">RCUpperDeckMid</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RCUpperDeckMid</EditorID>
+    <Name Tag="FULL">Upper Deck</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>22</Red>
+          <Green>24</Green>
+          <Blue>31</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>71</Red>
+          <Green>51</Green>
+          <Blue>3</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>131</Red>
+          <Green>158</Green>
+          <Blue>148</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>64</Near>
+        <Far>6100</Far>
+        <ClipDistance>6100</ClipDistance>
+        <Power>1.10000002</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>65</XY>
+        <Z>220</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0006A0A2">RCDefaultImageSpace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="00035AAB">RivetCityZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="060B25B2">IntRivetCityDefault01</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090906">DefaultPublic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

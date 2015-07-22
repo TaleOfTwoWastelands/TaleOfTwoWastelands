@@ -1,0 +1,1638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014EA0">MS13</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS13</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601DCB0">MS13QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Strictly Business</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>61</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>93</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHwRBQABAHICABwAAQB8EQUAAQByAwAcAAEAfBEFAAEAcgQAHAABAAIQCgACAHIFAG4BAAAAHAABAAIQCgACAHIGAG4yAAAAHAABAAIQCgACAHIHAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">player.addNote MS13SlaveList
+player.addNote MS13MesmatronManual
+player.addNote MS13CollarManual
+player.additem WeapMesmetron 1
+player.additem ammoMesmetronPowerCell 50
+player.additem MS13CollarMiscObj 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D78A">MS13SlaveList</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604F483">MS13MesmatronManual</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604F484">MS13CollarManual</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004339">WeapMesmetron</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A80D">AmmoMesmetronPowerCell</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00022FF0">MS13CollarMiscObj</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>15</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgEAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Arkansas still at large
+SetObjectiveDisplayed MS13 1 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>25</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgIAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Susan Lancaster still at large
+SetObjectiveDisplayed MS13 2 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>35</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgMAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Red still at large
+SetObjectiveDisplayed MS13 3 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Flak still at large
+SetObjectiveDisplayed MS13 4 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>94</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgEAAABuAQAAADkQCgACAHICAG4PAAAAdxEHAAEAbksAAAAcAAEAgBEFAAEAcgMAHAABAH8RCgACAHIEAG4AAAAAORIPAAMAcgUAbgEAAABuAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Arkansas enslaved
+SetObjectiveCompleted MS13 1 1
+setstage MS13 15
+rewardXP 75
+ArkansasRef.RemoveFromFaction MS13AlwaysMez
+ArkansasRef.AddToFaction MS13CantMez 0
+AddReputation RepTTWParadiseFalls 1 2
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602BD14">ArkansasRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D1FC">MS13AlwaysMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000448D2">MS13CantMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">11</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgEAAABuAAAAADkQCgACAHIBAG4PAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Arkansas killed
+SetObjectiveDisplayed MS13 1 0
+setstage MS13 15
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>31</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>41</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbvoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;if all four targets are dead, fail quest
+setStage MS13 250</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>20</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>30</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>40</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Arkansas dead or enslaved
+</ScriptSource>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>25</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>35</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbsgAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets dead or enslaved
+setstage MS13 200</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>132</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgIAcxgAIDAgPT0VAAoAcgIAcxgAAgAgMxkAAACiEQ8AAwByAwBuAgAAAG4BAAAAORAKAAIAcgMAbhkAAAB3EQcAAQBuSwAAABwAAQCAEQUAAQByBAAcAAEAfxEKAAIAcgUAbgAAAAA5Eg8AAwByBgBuAQAAAG4CAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Susan Lancaster enslaved
+;NOTE: only set to 3 (enslaved) IF SL == 0, otherwise if you convinced her (SL == 1) in MS12, and then enslave her and then release her, the quest won't think she has been convinced.
+if MS12.SL == 0
+   set MS12.SL to 3
+endif
+
+SetObjectiveCompleted MS13 2 1
+setstage MS13 25
+rewardXP 75
+SusanLancasterRef.RemoveFromFaction MS13AlwaysMez
+SusanLancasterRef.AddToFaction MS13CantMez 0
+AddReputation RepTTWParadiseFalls 1 2
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06017A10">SusanLancasterRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9F">MS12</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D1FC">MS13AlwaysMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000448D2">MS13CantMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">21</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgIAAABuAAAAADkQCgACAHIBAG4ZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Susan Lancaster killed
+SetObjectiveDisplayed MS13 2 0
+setstage MS13 25</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>11</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>31</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>41</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbvoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;if all four targets are dead, fail quest
+setStage MS13 250</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Susan Lancaster dead or enslaved</ScriptSource>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>15</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>35</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbsgAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets dead or enslaved
+setstage MS13 200</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>94</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgMAAABuAQAAADkQCgACAHICAG4jAAAAdxEHAAEAbksAAAAcAAEAgBEFAAEAcgMAHAABAH8RCgACAHIEAG4AAAAAORIPAAMAcgUAbgEAAABuAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Red enslaved
+SetObjectiveCompleted MS13 3 1
+setstage MS13 35
+rewardXP 75
+RedRef.RemoveFromFaction MS13AlwaysMez
+RedRef.AddToFaction MS13CantMez 0
+AddReputation RepTTWParadiseFalls 1 2</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D1FC">MS13AlwaysMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000448D2">MS13CantMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">31</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgMAAABuAAAAADkQCgACAHIBAG4jAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Red killed
+SetObjectiveDisplayed MS13 3 0
+setstage MS13 35</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>11</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>41</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbvoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;if all four targets are dead, fail quest
+setStage MS13 250</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Red dead or enslaved</ScriptSource>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>25</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>15</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>45</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbsgAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets dead or enslaved
+setstage MS13 200</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>94</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgQAAABuAQAAADkQCgACAHICAG4tAAAAdxEHAAEAbksAAAAcAAEAgBEFAAEAcgMAHAABAH8RCgACAHIEAG4AAAAAORIPAAMAcgUAbgEAAABuAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Flak enslaved
+SetObjectiveCompleted MS13 4 1
+setstage MS13 45
+rewardXP 75
+FlakRef.RemoveFromFaction MS13AlwaysMez
+FlakRef.AddToFaction MS13CantMez 0
+AddReputation RepTTWParadiseFalls 1 2</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E749">FlakRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D1FC">MS13AlwaysMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000448D2">MS13CantMez</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">41</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgQAAABuAAAAADkQCgACAHIBAG4tAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Flak killed
+SetObjectiveDisplayed MS13 4 0
+setstage MS13 45</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>11</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>31</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbvoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;if all four targets are dead, fail quest
+setStage MS13 250</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Flak dead or enslaved</ScriptSource>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>25</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>35</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>15</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbsgAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets dead or enslaved
+setstage MS13 200</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDE5Eg8AAwByAgBuAQAAAG4DAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player allowed into Paradise Falls
+set DialogueParadiseFalls.PlayerPassedCheckpoint to 1
+AddReputation RepTTWParadiseFalls 1 3
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06018578">DialogueParadiseFalls</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F0">RepTTWParadiseFalls</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>9</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEA</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets dead or enslaved
+CompleteAllObjectives MS13</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06025251">Red</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0602BD23">Arkansas</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156DE">SusanLancaster</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156B3">Flak</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; at least one target enslaved
+;addachievement 25</ScriptSource>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06025251">Red</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0602BD23">Arkansas</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156DE">SusanLancaster</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156B3">Flak</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; all targets dead</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">240</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>1</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>200</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAArREFAAEAcgIA</CompiledScript>
+              <ScriptSource Tag="SCTX">; only show message if quest is actually in progress
+showMessage MS13QuestFailedGrouseMessage
+CompleteAllObjectives MS13</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002A42E">MS13QuestFailedGrouseMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>1</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>54</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4yAAAAHAABAAIQCgACAHIEAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">grouseRef.additem WeapMesmetron 1
+grouseref.additem AmmoMesmetronPowerCell 50
+GrouseRef.additem MS13MesmatronManual 1	
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06033174">GrouseRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004339">WeapMesmetron</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006A80D">AmmoMesmetronPowerCell</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604F483">MS13MesmatronManual</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">250</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>1</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014EA0">MS13</Quest>
+                  <QuestStage>200</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEAWRALAAEAcgIAAAAAAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;quest failed all four targets are dead
+CompleteAllObjectives MS13
+showMessage MS13QuestFailedMessage</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA0">MS13</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008C77A">MS13QuestFailedMessage</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">1</Index>
+        <Description Tag="NNAM">Enslave the sniper Arkansas from Minefield.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602BD14">ArkansasRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">2</Index>
+        <Description Tag="NNAM">Enslave Susan Lancaster from Tenpenny Tower.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06017A10">SusanLancasterRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">3</Index>
+        <Description Tag="NNAM">Enslave Red from Big Town.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025252">RedRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060032F3">BigTownMapMarkerRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">4</Index>
+        <Description Tag="NNAM">Enslave Flak from Rivet City.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E749">FlakRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

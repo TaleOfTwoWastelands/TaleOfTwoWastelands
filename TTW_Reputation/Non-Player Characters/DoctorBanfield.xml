@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156D9">DoctorBanfield</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DoctorBanfield</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Doctor Banfield</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000251D8">DoctorsDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00047CC5">MS08NoteOwnerFactionDoctorBanfield</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D7F">DeathItemDoctorBanfield</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FD2">MaleOld03</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="000A060F">DocAATEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000987DE">AfricanAmericanOldAged</Reference>
+    </Race>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000A5F1E">TrainingMedicine</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0600311C">DoctorBanfieldScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D7">OutfitProjectPurityDoctor</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.600000024</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF72">TenpennyResidentKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>99</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Chems, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078FE7">DoctorGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078F40">DoctorHoldPosition</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001923F">DoctorBanfieldEat1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019241">DoctorBanfieldEat2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001923E">DoctorBanfieldServices</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019244">DoctorBanfieldSleepWithSusanLancaster</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001923D">DoctorBanfieldSleep</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019243">DoctorBanfieldWalkOutside</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015679">Doctor</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>5</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>33</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Color Tag="HCLR">
+        <Red>109</Red>
+        <Green>103</Green>
+        <Blue>105</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">4LQvv8wxP79sAFU/gOisv+gF+L4YlZM/SHTkvEiGj76SCYg/hD6JvsvhF0C+hfK/uScSQG/Oxb+sW6q+1xBpv9zNEr/OOcK/S6IbP1uQ0b/WByDAtmyzPhIZXMCCA+vABdkGQM3j0b+I3c6/OqybwC2HwT8QJN2/OMydP4wxo8CYOno/MP+EPwgHV8AhZwDAHpmIwM1oEcBIihVBJ4eXQB7B3MAdb7BAw6vfQF3niEDOezZAyV4VPwQTucBAbBA+ixVSQDaESsA=</Symmetric>
+        <Asymmetric Tag="FGGA">zD91Pw8ogD9SbVk+ORvVO77qg74d1Ey+rBtrPdRKpr572T2/FltNvjVlGL2SVtY9SdCXPBseMb7tx2I8t5O1vQwFEb98+e2+aiY8P9uD2L6Wl3K9z0E1vjXvD78nxM++xBCcPZtkwj1bbwu+6qq1Pl8UnL6i1x6+</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">PjqXv+j5Pj93NBy/kJTbPQRvMD58jdq9pR8QP0QDKL+sCBA/Imgev7o4RL6dxLq/XKayvpi/Sz/Js2w/3lKDv0hLpD0Alaa+DOV/PyAmLr+ESho/sF23P7CQEz6AaiK9D1GOvnB8Kj5A9QS/0+1oP9K1xj0qry2/KPhRP8ARQb/yhg1AMIWJvV/pLcA8iFjASXMfv28rhj879XxAVHKgP4xAjb72BVo/oMRsvT4mEz9SRii/WBHev7OrVD9ZZoFAuCGRvjm6s0A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

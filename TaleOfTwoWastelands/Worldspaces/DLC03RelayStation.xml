@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="09000B0D">DLC03RelayStation</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03RelayStation</EditorID>
+    <Name Tag="FULL">Satellite Relay Station</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0900D3F9">DLC03RelayStationEncZone</Reference>
+    </EncounterZone>
+    <Climate Tag="CNAM">
+      <Reference ID="00017907">WastelandClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00000018">DefaultWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00000018">DefaultWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>12288</DefaultLandHeight>
+      <DefaultWaterHeight>0</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">DLC03\Interface\DLC03Relay_1024_no_Map.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>1024</X>
+        <Y>1024</Y>
+      </UsableSize>
+      <MinX>-1</MinX>
+      <MinY>1</MinY>
+      <MaxX>3</MaxX>
+      <MaxY>-3</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1.45000005</WorldMapScale>
+      <Offset>
+        <CellX>800</CellX>
+        <CellY>600</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064608">WastelandBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-16384</X>
+        <Y>-16384</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>16384</X>
+        <Y>16384</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+  </Subrecords>
+</Record>

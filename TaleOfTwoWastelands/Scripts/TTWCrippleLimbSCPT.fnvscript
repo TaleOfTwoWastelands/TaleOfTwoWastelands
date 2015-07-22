@@ -1,0 +1,24 @@
+scn TTWCrippleLimbSCPT
+
+short hitLocation
+
+begin ScriptEffectUpdate
+
+	set hitLocation to GetHitLocation
+	if hitLocation == 0
+		damageav endurancecondition 100
+	elseif hitLocation == 1 || hitLocation == 2
+		damageav perceptioncondition 100
+	elseif hitLocation == 3 || hitlocation == 4
+		damageav leftattackcondition 100
+	elseif hitLocation == 5 || hitLocation == 6
+		damageav rightattackcondition 100
+	elseif hitlocation == 7 || hitLocation == 8 || hitLocation == 9
+		damageav leftmobilitycondition 100
+	elseif hitlocation == 10 || hitLocation == 11 || hitLocation == 12
+		damageav rightmobilitycondition 100
+	elseif hitlocation == 13
+		damageav braincondition 100
+	endif
+
+end

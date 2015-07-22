@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060B9AFA">ArlingtonLibraryBoS04</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArlingtonLibraryBoS04</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-41</X>
+        <Y>-25</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>41</X>
+        <Y>72</Y>
+        <Z>86</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brotherhood of Steel Paladin</Name>
+    <Model>
+      <FileName Tag="MODL">marker_creature.nif</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>0</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Rank>4</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0001EDC7">BrotherhoodOfSteelDeathItems</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="060717E3">MaleAdult18</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0602FAB0">LvlOutcastGun</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000038E5">Hispanic</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00000AA5">BrotherhoodOfSteelWeaponEnergy</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001D0C9">CondPowerArmor</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001D175">CondPowerArmorHelmet</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>70</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="060B9B5E">ArlingtonLibraryBoSSandbox</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B62">ArlingtonLibraryBoS02Patrol</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B4A">ArlingtonLibraryBoS01Pos15Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B45">ArlingtonLibraryBoS01Pos14Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B46">ArlingtonLibraryBoS02Pos13Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B4F">ArlingtonLibraryBoS02Pos12Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B15">ArlingtonLibraryBoS02Pos11Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B2E">ArlingtonLibraryBoS02Pos10Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B11">ArlingtonLibraryBoS02Pos09Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B10">ArlingtonLibraryBoS02Pos08Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B0A">ArlingtonLibraryBoS02Pos07Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B09">ArlingtonLibraryBoS02Pos06Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9B08">ArlingtonLibraryBoS02Pos05Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9AED">ArlingtonLibraryBoS02Pos04Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B9AFB">ArlingtonLibraryBoS04Pos03Travel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00021E97">DefaultStayAtEditorLocationWeaponsDrawn</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="06015673">BrotherhoodSoldierDC</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002242B">HairBuzzCut</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>55</Red>
+        <Green>48</Green>
+        <Blue>45</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">oDaiP4lG5D+8kXK+Hl8EP7MACD9tnIM/PC7tPlJ3DkAOUfA+5ce/Py5WqD8KuoU/vS26v/x/Rr+fDwc/DL4awKf+0r8gWwS/pdAkwKmlAL8vxUhA0TT7P6rrtb+aok9AmEskQEqG0z+0O4pA86szP2DbO8AYKkk/UjtJQDSiLkCYbQRAiCNjwPiabr5ycOY/iClbPsSd8MCPIKFAAiJuP7hnhT6ADLQ81mpPwCUlB8GLXgvAbPaJQFMJNcHG2vlA3gcTwMtCzL8=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">gwtdv1Dl4bwY5iM+OCv6P5Ikfj+wsFy9ZELsPuY7DL/7/3G/DgMHP95ZET9lZcO/P/CGvnMqVj/wQr08mIT8vWS98D8EQmFAtjdLP2LKkr+yTIg/msrbP6TDmr+OURBA3GTRvy7x47/U+cK/M6fvP3q5vD/n6WA/7NGvvU9VBb+gs2VAuhCxvx0/vkBFJ2vAQCGFP1DPUEDMbys/TCnUP8M7dL+a7VdADLVMvY2ttkBqIJ8/+4ioPkPTBcCn8ihAkgOAwNB2gsA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">1</Height>
+    <Weight Tag="NAM7">1</Weight>
+  </Subrecords>
+</Record>

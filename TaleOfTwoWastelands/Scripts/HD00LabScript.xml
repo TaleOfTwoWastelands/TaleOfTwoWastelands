@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0007DD5D">HD00LabScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">HD00LabScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>20</ReferenceCount>
+        <CompiledSize>593</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAKwAAAAAABYAFAAKABAAIFhpEAUAAQByAQAgMSA9PRYADQACAAkAIHMDACAwID09FQAHAHMGAAIAIDFZEAsAAQByAgAAAAAAAAAYAA0AAQAJACBzAwAgMSA9PVkQCwABAHIDAAAAAAAAABgADQADAAkAIHMDACAyID09FQAHAHMDAAIAIDBZEAsAAQByBAAAAAAAAAAcAAEAAhAKAAIAcgUAbgEAAAAZAAAAGQAAABEAAAAQAAYAAACLAQAAFQALAHMCAAYAIFgfEAAAFgAOABcACgAgcwIAIDEgfiA+FgANABQACQAgcwYAIDEgPT0WAA0AAgAJACBzAgAgMCA9PRUABwBzAwACACAxFQAJAGYEAAQAIEcGABgADQAOAAkAIHMCACAxID09HAABAB0QBQABAHIHABwAAQAdEAUAAQByCAAcAAEAHRAFAAEAcgkAHAABAB0QBQABAHIKABwAAQAdEAUAAQByCwAcAAEAHRAFAAEAcgwAHAABAB0QBQABAHINABwAAQAdEAUAAQByDgAcAAEAHRAFAAEAcg8AHAABAB0QBQABAHIQABwAAQAdEAUAAQByEQAcAAEAHRAFAAEAchIAHAABAB0QBQABAHITAFkQCwABAHIUAAAAAAAAABgADQAAAAkAIHMCACAyID09GQAAABkAAAAVAAcAcwYAAgAgMBkAAAAWAA0AAwAJACBzAwAgMSA9PRYAEwABAA8AIEcGACBmBAAgLSAxID49FQAHAHMDAAIAIDIZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="HD00LabScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Done</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HDLab0</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">HDLabTime0</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ProcessButton</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007DD5C">HD00LabMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007E1AF">HD00LabMessage01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007E1B0">HD00LabMessage02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038800">LootChemsAll100</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009ADE7">WithdrawalQuantumNukacola</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006698C">WithdrawalAlcohol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033066">WithdrawalBuffout</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033067">WithdrawalJet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033063">WithdrawalMentats</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002AE29">WithdrawalMorphine</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033064">WithdrawalPsycho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00175D6D">WithdrawalTurbo</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FAB12">WithdrawalTobacco</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00175D70">WithdrawalSteady</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00175D6E">WithdrawalRebound</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00175D6F">WithdrawalHydra</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006DC6E">WithdrawalAntNectar</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007E1B1">HDLabDetoxify</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="00132817">VDialogueCraigBooneSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VDialogueCraigBooneSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>992</CompiledSize>
+        <VariableCount>32</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAANIDAAAWAAsAHQAHACByAgBzBgAVABEAcx8ADAAgcgEAWAYQAwABAFgVABEAcyAADAAgcgEAWAYQAwABAFkWAEgABQBEACBzHwAgNDEyNDQgPiBzHwAgNjM0MjAgPCAmJiBzIAAgNDExNDYgfiA+ICYmIHMgACAyMTAwMCB+IDwgJiYgRwMAICYmFgANAAIACQAgcwgAIDAgPT0VAAcAcwgAAgAgMRwAAQBeEAAAGQAAABUABwBzFAACACAxGABJAAQARQAgcx8AIDU0MTk1ID4gcx8AIDY4Nzc2IDwgJiYgcyAAIDEwMjExNCB+ID4gJiYgcyAAIDgyOTA0IH4gPCAmJiBHAwAgJiYWAA0AAgAJACBzCQAgMCA9PRUABwBzCQACACAxHAABAF4QAAAZAAAAGAASAAEADgAgcgEAWDYRBQABAHIEABUABwBzFAACACAxFwACAAcAFQAHAHMUAAIAIDAWAA0AAQAJACBzCAAgMSA9PRUABwBzCAACACAwGQAAABYADQABAAkAIHMJACAxID09FQAHAHMJAAIAIDAZAAAAGQAAABYARAABAEAAIHMfACA1MDYzNCA+IHMfACA3NTgwMCA8ICYmIHMgACA3MjIwMCA+ICYmIHMgACA5ODY3NSA8ICYmIEcDACAmJhUABwBzDwACACAxFwACAAEAFQAHAHMPAAIAIDAZAAAAGQAAABYAOgAQADYAIHICAHMGACByAQBzCAAgMCA9PSAmJiByAgBzLAAgMCA9PSAmJiByAQBYIREAACAwID09ICYmFgAxAAIALQAgRwUAIDAgPiBYPxIKAAIAcgYAbgIAAAAgRwUAID4gJiYgcxwAIDAgPT0gJiYVAAcAcxIAAgAgMRwAAQD6EQAAGAAwAAIALAAgRwUAIDAgPT0gWD8SCgACAHIGAG4CAAAAIDEgPiAmJiBzGwAgMCA9PSAmJhUABwBzEgACACAxHAABAPoRAAAYAD0AAgA5ACBHBwAgMCA9PSBHCAAgMCA+ICYmIEcIACBYPxIKAAIAcgkAbgEAAAAgPCAmJiBzHQAgMCA9PSAmJhUABwBzEgACACAxHAABAPoRAAAYADEAAgAtACBHBwAgMCA+IFg/EgoAAgByCQBuAQAAACBHBwAgPiAmJiBzHgAgMCA9PSAmJhUABwBzEgACACAxHAABAPoRAAAXAAIAAgAVAAcAcxIAAgAgMBwAAQBeEAAAGQAAABgAHgACABoAIHMSACAxID09IHIBAFghEQAAIDAgPT0gJiYVAAcAcxIAAgAgMBwAAQBeEAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="VDialogueCraigBooneSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nOpenness</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bAdmittedBitterSprings</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bInitiateQuest</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nInitiateDay</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoArrivalDialogue</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bWarnNelson</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bWarnCottonwoodCove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bWarnFort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bGreetCaesarDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bGreetCCComplete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bPlayerHeardOfBitterSprings</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bGreetNelsonComplete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bBooneInBitterSprings</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bGreetNiptonComplete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bPlayerMetManny</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bWarnRep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bBooneRogue</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bBooneBSAlone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bHeardWifeStory</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nFinalState</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoneNCRWarn1</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>28</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoneNCRWarn2</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoneCLWarn1</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDoneCLWarn2</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>31</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">xCoord</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">yCoord</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013C0B6">TheFortWorld</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013EF8A">VBooneRepNCRWarn1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000F43DE">RepNVNCR</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013EF89">VBooneCLRepWarn1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013EF88">VBooneCLRepInitial</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000F43DD">RepNVCaesarsLegion</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0602F222">ParadiseFalls</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ParadiseFalls</EditorID>
+    <Name Tag="FULL">Paradise Falls</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="00035AA9">ParadiseFallsZone</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">UseLandData, UseMapData, UseWaterData, UseClimateData, UseImageSpaceData</ParentWorldspaceFlags>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <WorldspaceFlags Tag="DATA">SmallWorld, CannotFastTravel, NoLODWater</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-36864</X>
+        <Y>57344</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>-20480</X>
+        <Y>98304</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

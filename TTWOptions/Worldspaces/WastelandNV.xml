@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="000DA726">WastelandNV</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WastelandNV</EditorID>
+    <Name Tag="FULL">Mojave Wasteland</Name>
+    <Climate Tag="CNAM">
+      <Reference ID="0008809B">NVDefaultClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00030009">Potomac</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">-2300</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2500</DefaultLandHeight>
+      <DefaultWaterHeight>-2300</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">interface\worldmap\wasteland_nv_1024_no_map.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>2048</X>
+        <Y>2048</Y>
+      </UsableSize>
+      <MinX>-35</MinX>
+      <MinY>35</MinY>
+      <MaxX>25</MaxX>
+      <MaxY>-25</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="0008809D">NVDefaultExterior</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">NeedsWaterAdjustment</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-266240</X>
+        <Y>-266240</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>266240</X>
+        <Y>1114112</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\wastelandwaterpotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

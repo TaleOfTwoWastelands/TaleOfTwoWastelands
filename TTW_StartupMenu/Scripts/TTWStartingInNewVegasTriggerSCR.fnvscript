@@ -1,0 +1,26 @@
+scn TTWStartingInNewVegasTriggerSCR
+
+short DoOnce
+
+begin onTriggerEnter player
+
+if DoOnce != 1
+
+	;===check to make sure the FO3 main quest hasn't already been started
+	if GetStageDone CG04 200 != 1
+
+		;===start the quest so that we can count down the timer
+		startquest TTWStartingInNewVegasQuest
+
+		;===make sure we only do this once
+		set DoOnce to 1
+
+	elseif GetStageDone CG04 200 == 1
+		;===make sure we only do this once
+		set DoOnce to 1
+
+	endif
+
+endif
+
+end

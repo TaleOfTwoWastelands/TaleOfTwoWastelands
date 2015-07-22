@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="06003A3F">REFR - 06003A3F</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">BillyCreelHouseDoorRef</EditorID>
+    <Base Tag="NAME">
+      <Reference ID="0001CCD2">MetalScrapDoor01</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="06003A16">REFR - 06003A16</Door>
+      <Position>
+        <X>-1592.81592</X>
+        <Y>-28231.1152</Y>
+        <Z>13138.6006</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0.016814502</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <Owner Tag="XOWN">
+      <Reference ID="000428CB">MegatonBillyCreelFaction</Reference>
+    </Owner>
+    <Lock Tag="XLOC">
+      <Level>20</Level>
+      <Key ID="000430D2">MegatonBillyCreelHouseKey</Key>
+      <Flags>IsLeveledLock</Flags>
+    </Lock>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="06044F81">NAVM - 06044F81</NavigationMesh>
+      <Unknown>276234315</Unknown>
+    </NavigationDoorLink>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>716.266235</X>
+        <Y>191.519135</Y>
+        <Z>-32</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>1.7453292E-06</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="000CE959">VDoctors</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VDoctors</EditorID>
+    <Data Tag="DATA">
+      <Flags>29</Flags>
+      <Priority>76</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="060173D9">FreeformCitadel</Quest>
+                  <VariableIndex>2</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060207A1">CitadelBRing</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>21</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABANkRBQABAHICABwAAQBQEQAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set to heal the player of physical damage
+Player.CastImmediateOnSelf FFSawbonesHealEffect
+Player.ResetHealth
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000BD074">FFSawbonesHealEffect</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFARAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set to heal the player of physical damage
+Player.ResetHealth
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>15</ReferenceCount>
+                <CompiledSize>146</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HRAFAAEAcgEAHRAFAAEAcgIAHRAFAAEAcgMAHRAFAAEAcgQAHRAFAAEAcgUAHRAFAAEAcgYAHRAFAAEAcgcAHRAFAAEAcggAHRAFAAEAcgkAHRAFAAEAcgoAHRAFAAEAcgsAHRAFAAEAcgwAHRAFAAEAcg0AWRALAAEAcg4AAAAAAAAAFQAKAHIPAHMFAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set to heal the player of addictions
+
+RemoveSpell WithdrawalAlcohol
+RemoveSpell WithdrawalAntNectar
+RemoveSpell WithdrawalBuffout
+RemoveSpell WithdrawalHydra
+RemoveSpell WithdrawalJet
+RemoveSpell WithdrawalMentats
+RemoveSpell WithdrawalMorphine
+RemoveSpell WithdrawalPsycho
+RemoveSpell WithdrawalQuantumNukacola
+RemoveSpell WithdrawalRebound
+RemoveSpell WithdrawalSteady
+RemoveSpell WithdrawalTobacco
+RemoveSpell WithdrawalTurbo
+ShowMessage AddictionRemovalMsg
+Set Generic.Addicted to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006698C">WithdrawalAlcohol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006DC6E">WithdrawalAntNectar</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033066">WithdrawalBuffout</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00175D6F">WithdrawalHydra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033067">WithdrawalJet</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033063">WithdrawalMentats</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AE29">WithdrawalMorphine</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033064">WithdrawalPsycho</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0009ADE7">WithdrawalQuantumNukacola</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00175D6E">WithdrawalRebound</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00175D70">WithdrawalSteady</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000FAB12">WithdrawalTobacco</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00175D6D">WithdrawalTurbo</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000CB5AA">AddictionRemovalMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000038B2">Generic</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>21</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAIIRDQACADYAegAAAAAAQI9A</CompiledScript>
+              <ScriptSource Tag="SCTX">player.RestoreAV RadiationRads 1000</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06073FEC">MQ02ThreeDogsHeadwrap</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ02ThreeDogsHeadwrap</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Three Dog's Head Wrap</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00073FEE">MQ02ThreeDogHeadWrapEnch</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Headband, Hat</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\HeadWrap\HeadWrap01.NIF</FileName>
+          <TextureHashes Tag="MODT">sbAKaHfAINUxMApofMAg1XJhF3RrmCVO7t8MaHiTzK9uXwxofZPMr3JhF3RrmCVO898MaHiTzK9zXwxofZPMr3JhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>HeadWrap01:0</Name>
+                <TextureSet ID="00074298">HeadWrap04T</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\HeadWrap\HeadWrap01GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">sbAKaHfAINUxMApofMAg1XJhF3RrmCVO7t8MaHiTzK9uXwxofZPMr3JhF3RrmCVO898MaHiTzK9zXwxofZPMr3JhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>HeadWrap01GO:0</Name>
+                <TextureSet ID="00074298">HeadWrap04T</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_red_bandana.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9D7">RepairHatHeadwrap</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>200</Value>
+      <MaxCondition>15</MaxCondition>
+      <Weight>0</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

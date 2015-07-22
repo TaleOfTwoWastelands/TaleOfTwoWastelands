@@ -1,0 +1,487 @@
+scn Lucky38VictorElevatorScript
+
+
+int Button
+int DelayCounter
+int Delay30FramesCounter
+
+short bSayOnce
+
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+
+begin OnActivate
+
+	if getdead == 0
+		if ( GetCombatTarget != playerREF )										;
+			if ( DelayCounter == 0 )													; <<< (Added 7_15_10) So Victor will talk to Player before elevator msg.													
+				;StartConversation player GREETING								; <<< (Msg was popping up before dialogue (bad) so added delay counter to fix)
+				AddScriptPackage Lucky38VictorElevatorTalkToPlayer		; <<< (Added package, rather than StartConversation, to avoid kiting Victor around - Jorge)
+				Set DelayCounter to 1												; <<< (NOTE: Elevator msg is called in "GameMode" block)
+			endif																			; <<< - ETB
+		endif
+	endif
+
+end; onactivate block
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+
+begin GameMode
+
+; -------------------------	Elevator Menu Pop-up Msg ---------------------------------------	\/
+
+	if ( DelayCounter == 2 )															; <<< (Added 7_15_10) So elevator msg will pop up after dialogue is done.
+			if ( MenuMode 1009 != 1 )												; <<< -ETB
+				showmessage Lucky38ElevatorMessageVictor				; <<<
+				Set DelayCounter to 0												; <<<
+			endif																			; <<<
+	endif																					; <<<
+
+; ---------------------------	Elevator Menu Functionality --------------------------------------	|
+
+	set Button to GetButtonPressed
+
+; ---------------------------	Basement Floor (button 1) ------------------------------------------	|
+
+	if Button == 1
+
+		Set VMQHouse1.bOnLoungeFloor to 0									; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+		Set VMQHouse1.bOnPenthouseFloor to 0								; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB																		 
+
+		;Set VDialogueLucky38Entrance.L38Basement to 1					; (Commented 7_29_10) NOTE: Victor removed from Basement. -ETB
+		player.MoveTo Lucky38BasementMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+; ---------------------------	Casino Floor (button 2) -----------------------------------------------	|
+
+	elseif Button == 2
+
+		Set VMQHouse1.bOnLoungeFloor to 0									; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+		Set VMQHouse1.bOnPenthouseFloor to 0								; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB																
+
+		Set VDialogueLucky38Entrance.L38Casino to 1						; (Set back to 0 in Victor's dialogue result script (VDialogueLucky38Entrance GREETING))
+		player.MoveTo Lucky38CasinoFloorMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+; ---------------------------	High-Roller Floor (button 3) ----------------------------------------	|
+
+	elseif Button == 3																	; aka "Presidential Suite"
+
+		Set VMQHouse1.bOnLoungeFloor to 0									; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+		Set VMQHouse1.bOnPenthouseFloor to 0								; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+		Set VDialogueLucky38Entrance.L38PresidentialSuite to 1			; (Set back to 0 in Victor's dialogue result script (VDialogueLucky38Entrance GREETING))
+		player.MoveTo Lucky38SuiteMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+; ---------------------------	Cocktail Lounge Floor (button 4) --------------------------------	|
+
+	elseif Button == 4																	; Cocktail Lounge [NOTE: Lounge and Penthouse are in same worldspace - "Lucky38World".]
+
+		Set VMQHouse1.bOnLoungeFloor to 1									; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+		Set VMQHouse1.bOnPenthouseFloor to 0								; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+; -----------------	Make Followers Wait! ----------------- \/								; (Added 8_3_10) To keep the Followers from traveling to the Penthouse/Lounge. -ETB
+																							
+	if (VNPCFollowers.bBooneHired && CraigBooneREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	elseif (VNPCFollowers.bCassHired && RoseofSharonCassidyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	elseif (VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	elseif (VNPCFollowers.bLilyHired && LilyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	elseif (VNPCFollowers.RaulHired && RaulREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	elseif (VNPCFollowers.ArcadeHired && ArcadeREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+       	set ArcadeREF.Waiting to 1
+       	ArcadeREF.evp
+	elseif (Followers.CharonHired && CharonRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	elseif (Followers.ButchHired && ButchRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	elseif (Followers.CloverHired && CloverRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	elseif (Followers.JerichoHired && JerichoRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	elseif (Followers.FawkesHired && MQ08FawkesRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	elseif (Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired && (EDE1REF.Waiting != 1 || EDE2REF.Waiting != 1 || EDE3REF.Waiting != 1))
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	elseif (VNPCFollowers.RexHired && RexREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	elseif (Followers.DogmeatHired && DogmeatRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	elseif (Followers.RL3Hired && RL3REF.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif
+
+; ----------------------------------------------------------------------- /\
+
+		;Set VDialogueLucky38Entrance.L38CocktailLounge to 1			<<< [NOTE: There is no Victor on this floor to talk to the Player, so this doesn't do anything - if a Victor is added here then uncomment this line.]
+		player.MoveTo Lucky38CocktailMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+; ---------------------------	Penthouse Floor (button 5) -----------------------------------------	|
+
+	elseif Button == 5																	; Penthouse [NOTE: Lounge and Penthouse are in same worldspace - "Lucky38World".]
+
+	Set VMQHouse1.bOnLoungeFloor to 0										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 1									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+; -----------------	Make Followers Wait! ----------------- \/								; (Added 8_3_10) To keep the Followers from traveling to the Penthouse/Lounge. -ETB
+																							
+	if (VNPCFollowers.bBooneHired && CraigBooneREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	elseif (VNPCFollowers.bCassHired && RoseofSharonCassidyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	elseif (VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	elseif (VNPCFollowers.bLilyHired && LilyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	elseif (VNPCFollowers.RaulHired && RaulREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	elseif (VNPCFollowers.ArcadeHired && ArcadeREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+    		set ArcadeREF.Waiting to 1
+       	ArcadeREF.evp
+	elseif (Followers.CharonHired && CharonRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	elseif (Followers.ButchHired && ButchRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	elseif (Followers.CloverHired && CloverRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	elseif (Followers.JerichoHired && JerichoRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	elseif (Followers.FawkesHired && MQ08FawkesRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	elseif (Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired && (EDE1REF.Waiting != 1 || EDE2REF.Waiting != 1 || EDE3REF.Waiting != 1))
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	elseif (VNPCFollowers.RexHired && RexREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	elseif (Followers.DogmeatHired && DogmeatRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	elseif (Followers.RL3Hired && RL3REF.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif
+
+; ----------------------------------------------------------------------- /\
+
+		Set VDialogueLucky38Entrance.L38Penthouse to 1					; (Set back to 0 in Victor's dialogue result script (VDialogueLucky38Entrance GREETING))
+		player.MoveTo Lucky38PenthouseMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+	endif
+
+; ---------------------------	Victor Announces Elevator Floors ------------------------------	|
+
+; (Commented-Out 7_29_10) Basement Victor no longer appears. -ETB
+
+	;if ( VDialogueLucky38Entrance.L38Basement == 1 )																		; <<< (Added 7_15_10) So Victor would use his "announce floor" lines - ETB
+		;if ( Delay30FramesCounter >= 30 )																						; (Added 7_29_10) So Victor would delay before announcing floor.
+			;Set Delay30FramesCounter to 0
+			;if ( bSayOnce == 0 )
+				;Set bSayOnce to 1																									; "bSayOnce" set to 0 in dialogue result script VDialogueLucky38Entrance, GREETING
+				;Lucky38VictorElevatorBasementREF.SayTo Lucky38VictorElevatorBasementREF GREETING		; (Commented 7_29_10) NOTE: Victor removed from Basement. -ETB
+			;endif																															
+		;else
+			;Set Delay30FramesCounter to ( Delay30FramesCounter + 1 )
+			;Return
+		;endif
+
+	If ( VDialogueLucky38Entrance.L38Penthouse == 1 && MenuMode != 1 )											; <<<
+		if ( Delay30FramesCounter >= 30 )
+			Set Delay30FramesCounter to 0
+			if ( bSayOnce == 0 )
+				Set bSayOnce to 1
+				Lucky38VictorElevatorPenthouseREF.SayTo player GREETING											; <<<
+			endif
+		else
+			Set Delay30FramesCounter to ( Delay30FramesCounter + 1 )
+			Return
+		endif
+	elseif ( VDialogueLucky38Entrance.L38Casino == 1 && MenuMode != 1 )											; <<< (Added 7_27_10) Conditional check for "player in cell"
+		if ( Delay30FramesCounter >= 30 )
+			Set Delay30FramesCounter to 0
+			if ( bSayOnce == 0 )
+				Set bSayOnce to 1
+				Lucky38VictorElevatorREF.SayTo player GREETING	
+			endif																															; <<<
+		else
+			Set Delay30FramesCounter to ( Delay30FramesCounter + 1 )
+			Return
+		endif
+	elseif ( VDialogueLucky38Entrance.L38PresidentialSuite == 1 && MenuMode != 1 )								; <<<
+		if ( Delay30FramesCounter >= 30 )
+			Set Delay30FramesCounter to 0
+			if ( bSayOnce == 0 )
+				Set bSayOnce to 1
+				Lucky38VictorElevatorSuiteREF.SayTo player GREETING													; <<<
+			endif
+		else
+			Set Delay30FramesCounter to ( Delay30FramesCounter + 1 )
+			Return
+		endif
+	endif																																	; <<<
+
+; ----------------------------------------------------------------------------------------------------------------	/\
+
+	If vStoryEventMrHouseNeutralized == 0 && GetPCEnemyOfFaction Lucky38Faction != 1 && Lucky38VictorEntranceREF.GetDisabled == 1
+
+		Lucky38VictorEntranceREF.Enable
+		Set Lucky38VictorEntranceREF.bVictorOff to 0
+
+	Endif
+
+
+; Failsafe from "ondeath" block for "Lucky38VictorElevatorPenthouseREF" (he was not reporting is ondeath correctly). 
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	\/ Added to fix issue# 52153. (11_15_10) -ETB
+
+If ( Lucky38VictorElevatorPenthouseREF.GetDead == 1 )
+
+	setstage vdialoguelucky38entrance 10										; Unlock the Elevator Door if Victor dies.
+
+; -------------------------------------	Fail House Questline ----------------------------------	\/
+
+		Set VMQHouse1.RefusedChip to 1 ; (8_10_10) To be used as a universal "house questline fail" variable -ETB
+		If ( GetQuestRunning VMQHouse1 )								
+		SetStage VMQHouse1 66
+		Endif										
+		If ( GetQuestRunning VMQHouse2 )
+		SetStage VMQHouse2 110	
+		endif										
+		If ( GetQuestRunning VMQHouse3 )
+		SetStage VMQHouse3 200
+		endif
+		If ( GetQuestRunning VMQHouse4 )
+		SetStage VMQHouse4 110
+		endif
+		If ( GetQuestRunning VMQHouse5 )
+		SetStage VMQHouse5 200
+		endif
+		If ( GetQuestRunning VMQHouse6 )
+		SetStage VMQHouse6 200
+		endif
+		If ( GetQuestRunning VMQHouse7 )
+		SetStage VMQHouse7 200
+		endif
+		If ( GetQuestRunning VMQHouse8 )
+		SetStage VMQHouse8 200
+		endif
+		If VStoryEventMrHouseNeutralized == 0
+			SetEnemy Lucky38Faction playerFaction							
+			Lucky38MrHouseREF.PlayIdle LooseNVPHMCconnectionLost
+			Lucky38MrHouseREF.SetDestroyed 1														
+		Endif																																																			
+
+; NOTE: Any changes must be duplicated in: 
+; "Lucky38VictorEntranceSCRIPT", "Lucky38VictorElevatorScript", "Lucky38SecuritronSCRIPT".
+; (A slightly different version exists in VMQHouseFail (quest) result script (it would also need altering)) -ETB
+
+; ----------------------------------------------------------------------------------------------------------- /\
+
+Endif
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	/\ End of issue#52153 fix. (11_15_10) -ETB
+
+end; GameMode block
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+
+begin MenuMode 1009																; <<< (Added 7_15_10) To increment a counter during a menumode event (dialogue). - ETB
+																							; <<< 
+	if ( DelayCounter == 1 )															; <<< 
+		Set DelayCounter to 2														; <<<
+	endif																					; <<<
+																							; <<<
+end; MenuMode 1009 block															; <<< 
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+
+begin onhit player																		
+
+; [NOTE: The "fail the House questline" stuff that used to be here has moved to the "ondeath" block.] -ETB
+; [NOTE: (8_12_10) ...and now it's back.] -ETB
+
+; -------------------------------------	Fail House Questline ----------------------------------	\/
+
+; (7_29_10) Moved from "OnHit" (to "OnDeath") block to comply with intended functionality. -ETB		
+; (8_5_10) Changed conditions from "GetObjectiveDisplayed == 1 && GetQuestCompleted == 0"...
+; ...to "GetQuestRunning" to fix error where some quest did not fail. -ETB
+; (8_12_10) Copied to "OnHit" (again) to cover errors in talking to House (mainframe) after shooting (but not killing) a Securitron. -ETB
+
+	;If IsKiller Player == 1 <---- Commented out to fix "if killed by companion" error. -ETB
+		Set VMQHouse1.RefusedChip to 1 ; (8_10_10) To be used as a universal "house questline fail" variable -ETB
+		If ( GetQuestRunning VMQHouse1 )								
+		SetStage VMQHouse1 66
+		Endif										
+		If ( GetQuestRunning VMQHouse2 )
+		SetStage VMQHouse2 110	
+		endif										
+		If ( GetQuestRunning VMQHouse3 )
+		SetStage VMQHouse3 200
+		endif
+		If ( GetQuestRunning VMQHouse4 )
+		SetStage VMQHouse4 110
+		endif
+		If ( GetQuestRunning VMQHouse5 )
+		SetStage VMQHouse5 200
+		endif
+		If ( GetQuestRunning VMQHouse6 )
+		SetStage VMQHouse6 200
+		endif
+		If ( GetQuestRunning VMQHouse7 )
+		SetStage VMQHouse7 200
+		endif
+		If ( GetQuestRunning VMQHouse8 )
+		SetStage VMQHouse8 200
+		endif
+		If VStoryEventMrHouseNeutralized == 0
+			SetEnemy Lucky38Faction playerFaction							
+			Lucky38MrHouseREF.PlayIdle LooseNVPHMCconnectionLost
+			Lucky38MrHouseREF.SetDestroyed 1														
+		Endif																										
+	;Endif																											
+
+; NOTE: Any changes must be duplicated in: 
+; "Lucky38VictorEntranceSCRIPT", "Lucky38VictorElevatorScript", "Lucky38SecuritronSCRIPT".
+; (A slightly different version exists in VMQHouseFail (quest) result script (it would also need altering)) -ETB
+
+; ----------------------------------------------------------------------------------------------------------- /\
+
+end; onhit player block
+
+; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+
+begin ondeath
+	setstage vdialoguelucky38entrance 10										; Unlock the Elevator Door if Victor dies.
+
+; -------------------------------------	Fail House Questline ----------------------------------	\/
+
+; (7_29_10) Moved from "OnHit" (to "OnDeath") block to comply with intended functionality. -ETB		
+; (8_5_10) Changed conditions from "GetObjectiveDisplayed == 1 && GetQuestCompleted == 0"...
+; ...to "GetQuestRunning" to fix error where some quest did not fail. -ETB
+
+	;If IsKiller Player == 1 <---- Commented out to fix "if killed by companion" error. -ETB
+		Set VMQHouse1.RefusedChip to 1 ; (8_10_10) To be used as a universal "house questline fail" variable -ETB
+		If ( GetQuestRunning VMQHouse1 )								
+		SetStage VMQHouse1 66
+		Endif										
+		If ( GetQuestRunning VMQHouse2 )
+		SetStage VMQHouse2 110	
+		endif										
+		If ( GetQuestRunning VMQHouse3 )
+		SetStage VMQHouse3 200
+		endif
+		If ( GetQuestRunning VMQHouse4 )
+		SetStage VMQHouse4 110
+		endif
+		If ( GetQuestRunning VMQHouse5 )
+		SetStage VMQHouse5 200
+		endif
+		If ( GetQuestRunning VMQHouse6 )
+		SetStage VMQHouse6 200
+		endif
+		If ( GetQuestRunning VMQHouse7 )
+		SetStage VMQHouse7 200
+		endif
+		If ( GetQuestRunning VMQHouse8 )
+		SetStage VMQHouse8 200
+		endif
+		If VStoryEventMrHouseNeutralized == 0
+			SetEnemy Lucky38Faction playerFaction							
+			Lucky38MrHouseREF.PlayIdle LooseNVPHMCconnectionLost
+			Lucky38MrHouseREF.SetDestroyed 1														
+		Endif																										
+	;Endif																											
+
+; NOTE: Any changes must be duplicated in: 
+; "Lucky38VictorEntranceSCRIPT", "Lucky38VictorElevatorScript", "Lucky38SecuritronSCRIPT".
+; (A slightly different version exists in VMQHouseFail (quest) result script (it would also need altering)) -ETB
+
+; ----------------------------------------------------------------------------------------------------------- /\
+
+end; ondeath block
+

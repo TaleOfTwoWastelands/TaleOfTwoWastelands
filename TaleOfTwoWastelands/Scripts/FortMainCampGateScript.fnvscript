@@ -1,0 +1,76 @@
+scn FortMainCampGateScript
+
+begin OnActivate
+
+	if IsActionRef player
+		AutoSave
+		PlaySound DRSGateOasis01Close
+		set VFreeformTheFort.bPlayerInside to 0
+		EnableLoadingMenu 1 
+		player.MoveTo MainCampExteriorMarker
+		FortInteriorNPCParent.Disable
+		FortExteriorNPCParent.Enable
+
+	elseif IsActionRef CraigBooneRef
+		CraigBooneRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef ArcadeRef
+		ArcadeRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef RoseofSharonCassidyRef
+		RoseofSharonCassidyRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef RaulRef
+		RaulRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef LilyRef
+		LilyRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef VeronicaRef
+		VeronicaRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef RexRef
+		RexRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef EDE1Ref
+
+		EDE1Ref.MoveTo FortExteriorMarker
+
+	elseif IsActionRef EDE2Ref
+
+		EDE2Ref.MoveTo FortExteriorMarker
+
+	elseif IsActionRef EDE3Ref
+
+		EDE3Ref.MoveTo FortExteriorMarker
+
+	elseif IsActionRef CharonRef
+		CharonRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef DogmeatRef
+		DogmeatRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef ButchRef
+		ButchRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef CloverRef
+		CloverRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef JerichoRef
+		JerichoRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef MQ08FawkesRef
+		MQ08FawkesRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef RL3REF
+		RL3REF.MoveTo FortExteriorMarker
+
+	elseif IsActionRef StarPaladinCrossRef
+		StarPaladinCrossRef.MoveTo FortExteriorMarker
+
+	elseif IsActionRef VFortBennyRef
+		Activate
+	endif
+
+end
+

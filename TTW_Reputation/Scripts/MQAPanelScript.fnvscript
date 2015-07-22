@@ -1,0 +1,74 @@
+ScriptName MQAPanelScript
+
+short PanelInteract
+short button
+short VialIn
+
+;Placed on Object MQAFiltrationInput
+;used for adding FEV to Project Purity in quest MQA
+
+
+Begin OnActivate
+
+	if IsActionRef player == 1
+		if ( VialIn == 0 )
+			if ( GetStage MQA < 100 )
+				if ( Player.GetItemCount MQ09FEVVial == 0 )
+					ShowMessage MQAPanelNoVialMessage
+				else
+					ShowMessage MQAPanelVialChoiceMessage
+					set PanelInteract to 1
+					Activate
+				endif
+			endif
+		endif
+	endif
+
+End
+
+
+Begin GameMode
+
+
+;MQ03 scripting
+;placed here so it can run locally instead of in quest script
+
+
+	if ( GetStage MQ03 == 40 )
+		if ( Player.GetHasNote MQ03Holo21 == 1 )
+			SetStage MQ03 50
+		endif
+	endif
+
+
+
+
+
+	if ( PanelInteract == 1 )
+		Set Button to GetButtonPressed
+		if Button > -1
+			; reset messagebox variable
+			set PanelInteract to 0
+			; which button did player press?
+			if ( Button == 0 )
+				ShowMessage MQAPanelDoNothingMessage
+			elseif ( Button == 1 )
+				ShowMessage MQAPanelInsertVialMessage
+				Playgroup forward 0
+				set VialIn to 1
+
+			endif
+		endif
+	endif
+
+	if ( VialIn == 1 )
+		if ( IsAnimPlaying Forward == 0 )
+			PlayGroup Backward 0
+			set VialIn to 2
+			SetStage MQA 100
+			RewardKarma -1000
+               AddReputation RepTTWEnclave 1 5
+			Set EndingBinks.EndEden to 3
+		endif
+	endif
+End

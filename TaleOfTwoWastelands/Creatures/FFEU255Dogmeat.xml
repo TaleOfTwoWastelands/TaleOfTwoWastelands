@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0606A772">FFEU255Dogmeat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FFEU255Dogmeat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-16</X>
+        <Y>-62</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>16</X>
+        <Y>62</Y>
+        <Z>69</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Dogmeat</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Dog\Skeleton.nif</FileName>
+    </Model>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>dogskin.nif</Entry>
+      <Entry>eyessetoneblue.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential, Swims, Walks, PCLevelMult, AllowPCDialogue, TiltFrontBack, AllowPickpocket</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>50</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseActorEffectList, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021475">DogFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00037136">FollowerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005A7D4">MS06DoorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005FF9F">AnimalFriendFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E26A">CreatureHitDog</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0003A58B">DeathItemDog100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="060A6012">CreatureUniqueDogmeat</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0001CF9C">CrDog</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="000931F6">DogmeatSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0009E8AC">FollowersDogmeatFindRETURN</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009E8AB">FollowersDogmeatFindAMMO</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009E8B9">FollowersDogmeatFindFOOD</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009E8EF">FollowersDogmeatFindCHEMS</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009E8F0">FollowersDogmeatFindWEAPON</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009427A">FollowersDogmeatFiredWaitV101</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609427E">FollowersDogmeatFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009427B">FollowersDogmeatFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000CC83A">FFEU255DogmeatGuardPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0006A778">FFEU255DogmeatMourn</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Animal</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>500</Health>
+      <Damage>5</Damage>
+      <Strength>7</Strength>
+      <Perception>8</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>2</Intelligence>
+      <Agility>8</Agility>
+      <Luck>3</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">48</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A374">CSDog</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0005239C">DogMeatBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">1</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0003E632">AudioTemplateDog</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007E640">BiteDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="00103DF9">GSDocMitchellHouse</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">GSDocMitchellHouse</EditorID>
+    <Name Tag="FULL">Doc Mitchell's House</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>47</Red>
+          <Green>70</Green>
+          <Blue>69</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>77</Red>
+          <Green>62</Green>
+          <Blue>32</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>100</Near>
+        <Far>1500</Far>
+        <ClipDistance>1500</ClipDistance>
+        <Power>0.600000024</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>35</XY>
+        <Z>270</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0008F58B">EnclaveLightingTemplate01</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0001507A">ShackInterior01</Reference>
+    </ImageSpace>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="001046FE">INTRuralHouse</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

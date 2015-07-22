@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060210D9">CitadelBrotherhoodKnightExterior3</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CitadelBrotherhoodKnightExterior3</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-41</X>
+        <Y>-25</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>41</X>
+        <Y>72</Y>
+        <Z>86</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Brotherhood of Steel Knight</Name>
+    <Model>
+      <FileName Tag="MODL">marker_creature.nif</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>0</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseAIData</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D4">CitadelResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0001E55B">BrotherhoodSteelKnightFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00030512">BrotherhoodSteelGenericFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B737E">BrotherhoodSteelKnightOneOffFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B99A2">CitadelKnightConvSystem</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Rank>1</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0001EDC7">BrotherhoodOfSteelDeathItems</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="060717E1">MaleAdult17</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="000B0E7B">CitadelBrotherhoodKnightAATEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00000AA5">BrotherhoodOfSteelWeaponEnergy</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001D175">CondPowerArmorHelmet</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060B4179">CondPowerArmorBrotherhoodDC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Average</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00003B35">MegStockHolmGuardExteriorInit0x24</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0008DE14">CitadelBrotherhoodKnightExteriorGuardPackage</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="06015673">BrotherhoodSoldierDC</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002242B">HairBuzzCut</Reference>
+      </Type>
+      <Length Tag="LNAM">0.230000004</Length>
+      <Color Tag="HCLR">
+        <Red>155</Red>
+        <Green>80</Green>
+        <Blue>66</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">8nU2v6/guj7gCo+/wEFyv7U5xT/oZZ2+Jhokvy1kNL/0RAK95DsIv7qLVL9vvqc972u9v8E08b83M3s/GMyHvxz+K79HsMC/75DzP/QcUL+3E+W/AsNPwFN0xT+Sbcq/30luvlY0wD8wlAlApb1wv8Cg87+tSYLACB9yPfJ6s78wIyY/yMJcP16Jgr4ANn89SijJwKH1OcDMx4VA2wD/v3sWhD9mnkW/ttBkP7j9qb16UwC+Va+/QNHLgEDQcTrAB/XIv/6iT78=</Symmetric>
+        <Asymmetric Tag="FGGA">2CusvkBZU77w0jO++2XpvgpVg7+Qv8a+2r7oPRSBBL+2yMY+z1UoP7MGAr/97Ao+trUBP15p2D1m3Xo/idDSPXiEtj10eLq/MuCyPvjOZr4Ow06+1EL6PUMS775uzEs+112kPvzLij44xNW+gnSMP/Lwbz8mILS/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">B2AIwDhXOL6waAK/hs0QQFHK0D8Ag/k8dptdvgThBb80opM+W0JTv/XOyb/R/L+/+LJ/vyawA0CmCTs/fkFGwApDAUArs6s/7iWnPpCyqL5V1p8/m67iP5neMz8pAZA/gOH8PJRqSL934OK/BtYEQIiHAb52h4U/dLyyP0bgAMBkzZ092Xy6vzvmr790+9m/noYzPzylEkBm05s+ZjgHQGK8R8BHkwpAF2ndv9y1hEBocRhA3g5qP4Q/lMB+/Rq/BNlBwHJFDUA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

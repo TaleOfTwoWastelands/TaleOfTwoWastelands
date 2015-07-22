@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0700BB28">DLC02ArmorSimSuit2</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02ArmorSimSuit2</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Neural Interface Suit</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\BoSUnderArmor\M\OutfitM.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms01</Name>
+                <TextureSet ID="0700BA29">DLCAnchSimSuitM</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="0700BA29">DLCAnchSimSuitM</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="0700BA29">DLCAnchSimSuitM</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0700BA29">DLCAnchSimSuitM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\BoSUnderArmor\F\OutfitF.NIF</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0700BA2A">DLCAnchSimSuitF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="0700BA2A">DLCAnchSimSuitF</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="0700BA2A">DLCAnchSimSuitF</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0700BA2A">DLCAnchSimSuitF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\BoSUnderArmor\M\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>GO</Name>
+                <TextureSet ID="0700BA29">DLCAnchSimSuitM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_initiate_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_initiate_armor.dds</Male>
+      </Message>
+    </Icon>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>3600</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>10</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

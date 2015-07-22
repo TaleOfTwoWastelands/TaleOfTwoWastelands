@@ -1,0 +1,279 @@
+scn DLC02AmmoBoxSCRIPT
+
+;This script handles the giving of ammo the player when he activates the ammo box, and the random flickering that occures on the box.
+
+short hasAmmo	;Number of specific ammo the player has in his inventory
+short giveAmmo
+float disableTimer
+short switched
+
+short ammoAdded
+
+short MaxMicroFusionCell
+short MaxGrenadeFrag
+short MaxMineFrag
+short MaxMissile
+
+;GLOBALS
+;DLC02Max10mm
+;DLC02Max556mm
+;DLC02MaxFuel
+;DLC02Max5mm
+;DLC02Max308Caliber
+;DLC02MaxShells
+
+;-----Flickering Stuff----
+short flickering
+short flickerOnSecond 		;(must be less than 100)
+float myTimer		;COUNTS UP to DLC02RezFlickerTime
+
+
+float timerToStopShader ;COUNTS DOWN
+
+Begin OnLoad
+
+	set disableTimer to .5
+
+
+
+
+	set MaxMicroFusionCell to 10
+	set MaxGrenadeFrag to 4
+	set MaxMineFrag to 4
+	set MaxMissile to 4
+
+
+
+;-----Flickering Stuff----
+	set flickerOnSecond to GetRandomPercent * DLC02RezFlickerTime/100 + 1		;example, if 25, this rolls a die between 1 and 25
+	set myTimer to 0
+	set flickering to 1
+
+End
+
+
+
+Begin OnActivate
+
+	if ( IsActionRef Player == 1 )
+
+		set ammoAdded to 0
+
+					;--------10MM Weapons--------
+		if (player.GetItemCount DLC02Weap10mmPistol >0) || (player.GetItemCount DLC02Weap10mmPistolSilenced >0) || (player.GetItemCount DLC02Weap10mmSubmachineGun >0) || (player.GetItemCount DLC02WeapChinesePistol >0)
+
+			if (player.GetItemCount Ammo10mm >= DLC02Max10mm)
+
+				;Do Nothing
+
+			elseif (player.GetItemCount Ammo10mm < DLC02Max10mm)
+				set hasAmmo to player.GetItemCount Ammo10mm
+				set giveAmmo to DLC02Max10mm - hasAmmo
+				player.AddItem Ammo10mm giveAmmo 1
+				set ammoAdded to 1
+			endif
+
+		endif
+
+
+					;--------556MM Weapons--------
+		if (player.GetItemCount DLC02WeapChineseAssaultRifle >0) || (player.GetItemCount DLC02WeapAssaultRifle >0)
+
+			if (player.GetItemCount Ammo556mm >= DLC02Max556mm)
+
+				;Do Nothing
+			elseif (player.GetItemCount Ammo556mm < DLC02Max556mm)
+
+				set hasAmmo to player.GetItemCount Ammo556mm
+				set giveAmmo to DLC02Max556mm - hasAmmo
+				player.AddItem Ammo556mm giveAmmo 1
+				set ammoAdded to 1
+			endif
+		
+		endif
+
+
+					;--------Flamer--------
+		if (player.GetItemCount DLC02WeapFlamer > 0)
+
+			if (player.GetItemCount AmmoFlamerFuel >= DLC02MaxFuel)
+
+				;Do Nothing
+			elseif (player.GetItemCount AmmoFlamerFuel < DLC02MaxFuel)
+
+				set hasAmmo to player.GetItemCount AmmoFlamerFuel 
+				set giveAmmo to DLC02MaxFuel - hasAmmo
+				player.AddItem AmmoFlamerFuel giveAmmo 1
+				set ammoAdded to 1
+			endif
+		
+		endif
+
+
+					;--------Gauss Rifle--------
+;		if (player.GetItemCount DLC02WeapGaussRifle > 0)
+;
+;			if (player.GetItemCount AmmoMicroFusionCell >= MaxMicroFusionCell)
+;
+;				;Do Nothing
+;			elseif (player.GetItemCount AmmoMicroFusionCell < MaxMicroFusionCell)
+;
+;				set hasAmmo to player.GetItemCount AmmoMicroFusionCell 
+;				set giveAmmo to MaxMicroFusionCell - hasAmmo
+;				player.AddItem AmmoMicroFusionCell giveAmmo 1
+;				set ammoAdded to 1
+;			endif
+;		
+;		endif
+
+
+					;--------Frag Grenade--------
+;		if (player.GetItemCount DLC02WeapGrenadeFrag >= MaxGrenadeFrag )
+;
+;			;Do Nothing
+;
+;		elseif (player.GetItemCount DLC02WeapGrenadeFrag < MaxGrenadeFrag )
+;
+;			set hasAmmo to player.GetItemCount DLC02WeapGrenadeFrag 
+;			set giveAmmo to MaxGrenadeFrag - hasAmmo
+;			player.AddItem DLC02WeapGrenadeFrag giveAmmo 1
+;			set ammoAdded to 1
+;		endif
+
+
+					;--------Frag Mine-------
+;		if (player.GetItemCount DLC02WeapMineFrag >= MaxMineFrag )
+;
+;			;Do Nothing
+;
+;		elseif (player.GetItemCount DLC02WeapMineFrag < MaxMineFrag )
+;
+;			set hasAmmo to player.GetItemCount DLC02WeapMineFrag
+;			set giveAmmo to MaxMineFrag - hasAmmo
+;			player.AddItem DLC02WeapMineFrag giveAmmo 1
+;			set ammoAdded to 1
+;		endif
+
+
+					;--------Minigun--------
+		if (player.GetItemCount DLC02WeapMinigun > 0)
+
+			if (player.GetItemCount Ammo5mm >= DLC02Max5mm )
+
+				;Do Nothing
+			elseif (player.GetItemCount Ammo5mm < DLC02Max5mm )
+
+				set hasAmmo to player.GetItemCount Ammo5mm 
+				set giveAmmo to DLC02Max5mm - hasAmmo
+				player.AddItem Ammo5mm giveAmmo 1
+				set ammoAdded to 1
+			endif
+		
+		endif
+
+
+					;--------Missile Launcher--------
+;		if (player.GetItemCount DLC02WeapMissileLauncher > 0)
+;
+;			if (player.GetItemCount AmmoMissile >= MaxMissile )
+;
+;				;Do Nothing
+;			elseif (player.GetItemCount AmmoMissile < MaxMissile )
+;
+;				set hasAmmo to player.GetItemCount AmmoMissile 
+;				set giveAmmo to MaxMissile - hasAmmo
+;				player.AddItem AmmoMissile giveAmmo 1
+;				set ammoAdded to 1
+;			endif
+;		
+;		endif
+
+
+					;--------Sniper Rifle--------
+		if (player.GetItemCount DLC02WeapSniperRifle > 0)
+
+			if (player.GetItemCount Ammo308 >= DLC02Max308Caliber )
+
+				;Do Nothing
+			elseif (player.GetItemCount Ammo308 < DLC02Max308Caliber )
+
+				set hasAmmo to player.GetItemCount Ammo308 
+				set giveAmmo to DLC02Max308Caliber - hasAmmo
+				player.AddItem Ammo308 giveAmmo 1
+				set ammoAdded to 1
+			endif
+		
+		endif
+
+					;--------Shotgun--------
+		if (player.GetItemCount DLC02WeapShotgunCombat > 0)
+
+			if (player.GetItemCount Ammo20ga >= DLC02MaxShells )
+
+				;Do Nothing
+			elseif (player.GetItemCount Ammo20ga < DLC02MaxShells )
+
+				set hasAmmo to player.GetItemCount Ammo20ga 
+				set giveAmmo to DLC02MaxShells - hasAmmo
+				player.AddItem Ammo20ga giveAmmo 1
+				set ammoAdded to 1
+			endif
+		
+		endif
+		
+		if (ammoAdded == 1)
+			PlaySound3d FXObjectUse
+			ShowMessage DLC02AmmoRefill
+			activate
+		elseif (ammoAdded == 0)
+			PlaySound3d QSTToneSequenceFail
+			ShowMessage DLC02AmmoFull
+			activate
+		endif
+
+		pms DLC02DeRezItemShader
+		set timerToStopShader to 2
+		set flickering to 1
+		
+		set switched to 1
+	endif
+End
+
+
+
+Begin GameMode
+
+;-----Flickering Stuff----
+	if flickering == 1
+		if timerToStopShader > 0
+			set timerToStopShader to timerToStopShader  - getSecondsPassed
+		else
+			sms DLC02DeRezItemShader
+			set flickering to -1
+		endif
+
+	endif
+
+	if myTimer < DLC02RezFlickerTime
+		set myTimer to myTimer + getSecondsPassed
+
+		if flickering == 0
+			if myTimer >= flickerOnSecond
+				playSound3D FXObjectHighlight
+				pms DLC02DeRezItemShader
+				set timerToStopShader to 2
+				set flickering to 1
+			endif
+
+		endif
+
+	elseif flickering != 1
+		set myTimer to 0
+		set flickering to 0
+		;pick a random second to start flickering next pass
+		set flickerOnSecond to GetRandomPercent * DLC02RezFlickerTime/100 + 1		;example, if DLC02RezFlickerTime == 25, this rolls a die between 1 and 25
+
+	endif
+
+
+End

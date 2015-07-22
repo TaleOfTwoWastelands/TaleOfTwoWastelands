@@ -1,0 +1,16 @@
+SCN DLC01SteelPlateSCRIPT
+
+int doOnce
+
+BEGIN OnAdd
+
+	if ( GetStage DLC01Quest02 == 50 )
+		Set DLC01Quest02.PlayerSteelPlateCount to ( DLC01Quest02.PlayerSteelPlateCount + 1 )
+	endif
+
+	if ( doOnce == 0 )
+		set doOnce to 1
+		IncrementScriptedChallenge DLC01ChallengeMillWorker
+	endif
+
+END

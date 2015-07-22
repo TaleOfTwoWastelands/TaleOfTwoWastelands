@@ -1,0 +1,8 @@
+scn TTWStartQuestSCPT
+
+begin MenuMode
+	; if starting at VCG00
+	if getStage VCG00 < 5
+		setstage VCG00 0
+	endif
+end

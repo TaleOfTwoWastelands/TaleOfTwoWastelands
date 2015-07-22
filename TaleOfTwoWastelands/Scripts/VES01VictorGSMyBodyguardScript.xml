@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="00154150">VES01VictorGSMyBodyguardScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VES01VictorGSMyBodyguardScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>41</ReferenceCount>
+        <CompiledSize>1521</CompiledSize>
+        <VariableCount>5</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">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</CompiledScript>
+      <ScriptSource Tag="SCTX" External="VES01VictorGSMyBodyguardScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nVictorAttack</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nVictorTalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nCombatDone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nVictorTryTalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">nVictorArrived</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="001073E8">GSVictorRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00154152">VES01VictorGSGoHomePackage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00155545">VES01VictorsRescueRangeCenter</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000DA726">WastelandNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A214">VCG02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C80">EasyPeteRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104F03">GoodspringsSettler01Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104F06">GoodspringsSettler02Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104F0A">GoodspringsSettler03Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104F08">GoodspringsSettler04Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010B3DE">VCG02GSSettlerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C68">GSJoeCobbRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C70">GSPG01Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C77">GSPG02Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C75">GSPG03Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104DF2">GSPG04Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C72">GSPG05Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C73">GSPG06Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A1FE">VCG02Gecko1REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A1FD">VCG02Gecko2REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A20F">VFreeformGoodspringsWell2Gecko1REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00107077">GSBighorner01Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010706E">GSBighorner02Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015EF63">GSBighorner03Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010ABB0">VFreeformGoodspringsWell2Gecko2REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A210">VFreeformGoodspringsWell2Gecko3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A212">VFreeformGoodspringsWell3Gecko1REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A213">VFreeformGoodspringsWell3Gecko2REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010A211">VFreeformGoodspringsWell3Gecko3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00106B16">vGSBrahmin01Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00109A39">vGSBrahmin02Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010769D">vGSBrahmin03Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104E85">SunnyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C6D">TrudyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C0F">DocMitchellREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010588E">CheyenneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00155547">VES01VictorGSPathToPCPackage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0017B76B">VESVictorMyBodyguardFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00154153">VES01VictorGSTalkToPCPackage</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

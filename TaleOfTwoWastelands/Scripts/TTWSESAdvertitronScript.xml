@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01862B">TTWSESAdvertitronScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWSESAdvertitronScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>408</CompiledSize>
+        <VariableCount>7</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAEsAAAAWABsAAwAXACBzBgAgMCA9PSBYLhAAACAwID09ICYmFQAHAHMGAAIAIDEVAAsAZgMABgAgWM4QAAAcAAEAIRACAAAAGQAAABEAAAAQAAYAAAA1AQAAFgAPAAgACwAgWCMQAAAgMCA9PRYAFgAGABIAIFgBEAUAAQByAwAgNTAwMCA+FQATAGYHAA4AIHIDAFhjEAUAAQByAgAWADcAAwAzACA5MCBmBwAgPCBmBwAgMjcwIDwgJiYgMjcwIH4gZgcAIDwgZgcAIDkwIH4gPCAmJiB8fBwAAQAiEAIAAAAiEAIAAAClEAIAAAAZAAAAGQAAABkAAAAWABAAAgAMACByBABzAgAgMSA9PRUACABmBQADACAyMhUACgByBABzAgACACAyGQAAABYAEAAGAAwAIHIEAHMCACAyID09FgAMAAEACAAgZgUAIDAgPhUAEQBmBQAMACBmBQAgWAwQAAAgLRcAAgACABUACgByBABzAgACACAwJRAFAAEAcgUAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWSESAdvertitronScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">NPC</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fBombtimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">sRunLoad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fHeading</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00181B">TTWSESAdvertRadioSignalRef</Reference>
+        </Reference>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01862A">TTWSESAdvertRadio</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B2959">SmallNukeExplosionNoKD</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

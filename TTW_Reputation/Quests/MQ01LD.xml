@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0601D493">MQ01LD</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ01LD</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601D494">MQ01LDscript</Reference>
+    </Script>
+    <Name Tag="FULL">MQ01 Level Design Quest</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart to checkpoint scene</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>62</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAABwAAgAiEAIAAAA5EAoAAgByAwBuMgAAADkQCgACAHIDAG43AAAAORAKAAIAcgQAbjwAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">MQ01CitySuperMutant01REF.disable
+MQ01CitySuperMutant02REF.disable
+setstage MQ01LD 50
+setstage MQ01LD 55
+setstage MQ01 60</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023836">MQ01CitySuperMutant01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023835">MQ01CitySuperMutant02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart to schoolhouse battle</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgEAAAA5EAoAAgByAwBuRgAAADkQCgACAHIDAG5LAAAAHAABACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 1
+setstage MQ01 70
+setstage MQ01 75
+MQ01AmbushMutantRef.disable
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020777">MQ01AmbushMutantREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">3</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart schoolhouse dialogue scene</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>154</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgsAbgIAAAAcAAEAIhACAAAAHAACACIQAgAAABwAAwAiEAIAAAAcAAQAIhACAAAAHAAFACIQAgAAABwABgAiEAIAAAAcAAcAnhAFAAEAcgwAHAAIAJ4QBQABAHIMABwACQCeEAUAAQByDAAcAAoAnhAFAAEAcgwAORAKAAIAcg0AblAAAAA5EAoAAgByDQBuUQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 2
+MQ01SchoolMutant01.disable
+MQ01SchoolMutant02.disable
+MQ01SchoolMutant03.disable
+MQ01SchoolMutant04.disable
+MQ01SchoolMutant05.disable
+MQ01SchoolMutant06.disable
+MQ01SarahRef.moveto MQ01SchoolSplitMarker
+MQ01VargasRef.moveto MQ01SchoolSplitMarker
+MQ01ColvinRef.moveto MQ01SchoolSplitMarker
+MQ01ReddinRef.moveto MQ01SchoolSplitMarker
+setstage MQ01 80
+setstage MQ01 81
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F56A">MQ01SchoolMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F568">MQ01SchoolMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F569">MQ01SchoolMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020412">MQ01SchoolMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020410">MQ01SchoolMutant05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020413">MQ01SchoolMutant06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060192F1">MQ01SchoolSplitMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">4</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart at start of GNR battle</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>10</ReferenceCount>
+                <CompiledSize>80</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgUAbgMAAAA5EAoAAgByBgBuWgAAABwAAQCeEAUAAQByBwAcAAIAnhAFAAEAcggAHAADAJ4QBQABAHIJABwABACeEAUAAQByCgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 3
+setstage MQ01 90
+MQ01SarahRef.moveto MQ01SchoolhouseSarah3
+MQ01VargasRef.moveto MQ01SchoolhouseVargas3
+MQ01ColvinRef.moveto MQ01SchoolhouseColvin2
+MQ01ReddinRef.moveto MQ01SchoolhouseReddin3
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F150">MQ01SchoolhouseSarah3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601EEB7">MQ01SchoolhouseVargas3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D490">MQ01SchoolhouseColvin2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F99D">MQ01SchoolhouseReddin3</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart end of GNR battle</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>10</ReferenceCount>
+                <CompiledSize>107</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcggAbgQAAAA5EAoAAgByCABuZAAAABwAAQAiEAIAAAAcAAIAIhACAAAAHAADACIQAgAAABwABAAiEAIAAAAcAAUAnhAFAAEAcgkAHAAGAJ4QBQABAHIJABwABwCeEAUAAQByCgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 4
+setstage MQ01LD 100
+MQ01GNRMutant01.disable
+MQ01GNRMutant02.disable
+MQ01GNRMutant03.disable
+MQ01GNRMutant04.disable
+; move everybody into position:
+MQ01SarahRef.moveto MQ01GNNCourtyardMarker
+MQ01VargasRef.moveto MQ01GNNCourtyardMarker
+MQ01ReddinRef.moveto MQ01GNRConversationMarker
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004434">MQ01GNRMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004432">MQ01GNRMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004433">MQ01GNRMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004431">MQ01GNRMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F14E">MQ01GNNCourtyardMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060200D3">MQ01GNRConversationMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart at Behemoth entry</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>41</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgUAAAAcAAEAnhAFAAEAcgMAORAKAAIAcgQAbmkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 5
+MQ01ReddinRef.moveto MQ01ReddinDeathMarker
+setstage MQ01 105</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060200CF">MQ01ReddinDeathMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgMAbgYAAAAcAAEAIhACAAAAHAACACIQAgAAADkQCgACAHIDAG5uAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 6
+MQ01ReddinRef.disable
+MQ01BehemothRef.disable
+setstage MQ01LD 110
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F1F9">MQ01BehemothREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quickstart to post MQ01 battle</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAblAAAAA5EAoAAgByAgBulgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ05 80 ; MQ01 triggers are disabled if MQ05 &gt;= 80
+setstage MQ01LD 150</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8B">MQ05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>50</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAA8QCQACAAAAbgIAAAAcAAIADxAJAAIAAABuAgAAABwAAQBeEAAAHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; trigger mutants in basement ambush
+; make ambush mutants aggressive
+MQ01CitySuperMutant01REF.setav aggression 2
+MQ01CitySuperMutant02REF.setav aggression 2
+; make them move towards player
+MQ01CitySuperMutant01REF.evp
+MQ01CitySuperMutant02REF.evp
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023836">MQ01CitySuperMutant01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023835">MQ01CitySuperMutant02REF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>194</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAAcAAUAXhAAABwAAQAPEAkAAgAAAG4BAAAAHAACAA8QCQACAAAAbgEAAAAcAAMADxAJAAIAAABuAQAAABwABgAPEAkAAgAAAG4BAAAAHAABAH8RCgACAHIHAG4AAAAAHAACAH8RCgACAHIHAG4AAAAAHAADAH8RCgACAHIHAG4AAAAAHAAGAH8RCgACAHIHAG4AAAAAORAKAAIAcggAbjIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; NPC packages pass for basement ambush
+MQ01SarahREF.evp
+MQ01VargasREF.evp
+MQ01ReddinREF.evp
+MQ01CitySuperMutant01REF.evp
+MQ01CitySuperMutant02REF.evp
+; make them aggressive
+MQ01SarahRef.setav aggression 1
+MQ01VargasREF.setav aggression 1
+MQ01ReddinREF.setav aggression 1
+MQ01ColvinREF.setav aggression 1
+; put them in MQ01 faction
+MQ01SarahRef.addtofaction MQ01BrotherhoodDCFaction 0
+MQ01VargasREF.addtofaction MQ01BrotherhoodDCFaction 0
+MQ01ReddinREF.addtofaction MQ01BrotherhoodDCFaction 0
+MQ01ColvinREF.addtofaction MQ01BrotherhoodDCFaction 0
+; update quest objective
+setstage MQ01 50</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023836">MQ01CitySuperMutant01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023835">MQ01CitySuperMutant02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000213FB">MQ01BrotherhoodDCFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>22</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbjcAAAAcAAEAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; stage set by OnDeath block in MQ01CityMutant01
+setstage MQ01 55
+MQ01ColvinREF.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; NPCs run off to the sniper's area
+MQ01SarahRef.evp
+MQ01VargasRef.evp
+MQ01ReddinRef.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbkYAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; This stage is triggered when the player and NPCs
+; are all at the checkpoint - hand control to Mark
+setstage MQ01 70</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; dialogue at checkpoint is through, and NPCs now run over
+; to the school for their next blurb.
+MQ01SarahRef.evp
+MQ01VargasRef.evp
+MQ01ColvinRef.evp
+MQ01ReddinRef.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">71</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>68</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgQAbksAAAAcAAEAIRACAAAAHAACACEQAgAAABwAAwAhEAIAAAAcAAEAXhAAABwAAgBeEAAAHAADAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; This stage exists to time mutants in the school 
+; to get into place and attack BoS crossing the street
+; just in case, finish checkpoint conv (in case player runs ahead):
+setstage MQ01 75
+MQ01SchoolMutant01.enable
+MQ01SchoolMutant02.enable
+MQ01SchoolMutant03.enable
+MQ01SchoolMutant01.evp
+MQ01SchoolMutant02.evp
+MQ01SchoolMutant03.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F56A">MQ01SchoolMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F568">MQ01SchoolMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F569">MQ01SchoolMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAABwAAgAhEAIAAAAcAAMAIRACAAAAHAAEAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; discreetly move additional school mutant combatants into ... school
+MQ01SchoolMutant04.enable
+MQ01SchoolMutant05.enable
+MQ01SchoolMutant06.enable
+; evp Colvin to get him to next package
+MQ01ColvinRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020412">MQ01SchoolMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020410">MQ01SchoolMutant05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020413">MQ01SchoolMutant06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAblAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; School combat is over - hand control to Kurt to do the
+; pre-GNR battle dialogue between Lyon's Pride NPCs
+setstage MQ01 80</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">92</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>80</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAABwAAgAhEAIAAAAcAAMAIRACAAAAHAAEACEQAgAAABwABQAhEAIAAAAcAAYAIRACAAAAHAAHACEQAgAAABwACAAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; enable combatants
+MQ01GNRMutant01.enable
+MQ01GNRMutant02.enable
+MQ01GNRMutant03.enable
+MQ01GNRMutant04.enable
+MQ01GNRBoS01.enable
+MQ01GNRBoS02.enable
+MQ01GNRBoS03.enable
+MQ01GNRBoS04.enable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004434">MQ01GNRMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004432">MQ01GNRMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004433">MQ01GNRMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004431">MQ01GNRMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C1">MQ01GNRBoS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C2">MQ01GNRBoS02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C3">MQ01GNRBoS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C0">MQ01GNRBoS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>12</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">eBAIAAIAcgEAcgIA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Start "real" battle at GNR
+; handle factions to begin "real" combat at GNR arena
+SetEnemy MQ01BrotherhoodDCFaction MQ01SupermutantsGNR
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="000213FB">MQ01BrotherhoodDCFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000213FD">MQ01SupermutantsGNR</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbmQAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; The supermutants have been defeated
+setstage MQ01 100</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>68</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYHAAIAIDEcAAEAIRACAAAAHAABAJ4QBQABAHICABwAAQBeEAAAHAACACUQBQABAHIEABwAAwAiEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; begin behemoth battle
+; special handling in MQ01BehemothSCRIPT
+set MQ01BehemothREF.timer to 1
+MQ01BehemothREF.enable
+; move to bus explosion point
+MQ01BehemothREF.moveTo MQ01BehemothArriveMarker
+MQ01BehemothREF.evp
+MQ01BehemothArriveMarker.placeatme FakeMediumExplosion
+BehemothBusClipMarker.disable ;disable actorzone collision near buses
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F1F9">MQ01BehemothREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060199A1">MQ01BehemothArriveMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C3FE6">BehemothBusClipMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00019F52">FakeMediumExplosion</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">106</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; finish with behemoth entry sequence
+MQ01BehemothREF.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F1F9">MQ01BehemothREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">110</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbowAAAA5Eg8AAwByAgBuAQAAAG4EAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Behemoth is dead. Hand control back to MQ01
+setstage MQ01 140
+AddReputation RepTTWBrotherhood 1 4</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E7">RepTTWBrotherhood</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>29</ReferenceCount>
+                <CompiledSize>367</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAABwAAgAiEAIAAAAcAAMAIhACAAAAHAAEACIQAgAAABwABQAiEAIAAAAcAAYAIhACAAAAHAAHACIQAgAAABwACAAiEAIAAAAcAAkAIhACAAAAHAAKACIQAgAAABwACwAiEAIAAAAcAAwAIhACAAAAHAANACIQAgAAABwADgAiEAIAAAAcAA8AIhACAAAAHAAQACIQAgAAABwAEQAiEAIAAAAcABIAIhACAAAAHAATACIQAgAAABwAFAAiEAIAAAAcABUAIhACAAAAFgASAAEADgAgchYAWC4QAAAgMCA9PRwAFgCeEAUAAQByHQAZAAAAFgASAAEADgAgchcAWC4QAAAgMCA9PRwAFwCeEAUAAQByHQAZAAAAFgASAAEADgAgchgAWC4QAAAgMCA9PRwAGACeEAUAAQByHQAZAAAAHAAZACIQAgAAABwAGgAiEAIAAAAcABsAIRACAAAAHAAcACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Post MQ01 battle
+MQ01CitySuperMutant01REF.disable
+MQ01CitySuperMutant02REF.disable
+MQ01AmbushMutantREF.disable
+MQ01SchoolMutant01.disable
+MQ01SchoolMutant02.disable
+MQ01SchoolMutant03.disable
+MQ01SchoolMutant04.disable
+MQ01SchoolMutant05.disable
+MQ01SchoolMutant06.disable
+MQ01GNRMutant01.disable
+MQ01GNRMutant02.disable
+MQ01GNRMutant03.disable
+MQ01GNRMutant04.disable
+MQ01GNRBoS01.disable
+MQ01GNRBoS02.disable
+MQ01GNRBoS03.disable
+MQ01GNRBoS04.disable
+MQ01GNRBoS05.disable
+MQ01BehemothREF.disable
+MQ01JenningsHelmet.disable
+MQ01CorpseWithFatmanRef.disable
+
+; Move Lyon's Pride
+if ( MQ01SarahRef.GetDead == 0 )
+MQ01SarahRef.Moveto CitLyonsPrideQuartersMARKER
+endif
+if ( MQ01VargasRef.GetDead == 0 )
+MQ01VargasRef.Moveto CitLyonsPrideQuartersMARKER
+endif
+if ( MQ01ColvinRef.GetDead == 0 )
+MQ01ColvinRef.Moveto CitLyonsPrideQuartersMARKER
+endif
+MQ01ReddinRef.Disable
+MQ01JenningsDeadRef.Disable
+
+; Enable post MQ01 mutants
+xMarkPostMQ01MutantEnabler.enable
+colPostMQ01GNRCollision.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023836">MQ01CitySuperMutant01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06023835">MQ01CitySuperMutant02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020777">MQ01AmbushMutantREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F56A">MQ01SchoolMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F568">MQ01SchoolMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F569">MQ01SchoolMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020412">MQ01SchoolMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020410">MQ01SchoolMutant05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020413">MQ01SchoolMutant06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004434">MQ01GNRMutant01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004432">MQ01GNRMutant02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004433">MQ01GNRMutant03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06004431">MQ01GNRMutant04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C1">MQ01GNRBoS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C2">MQ01GNRBoS02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C3">MQ01GNRBoS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C0">MQ01GNRBoS04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602029C">MQ01GNRBoS05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F1F9">MQ01BehemothREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06021408">MQ01JenningsHelmet</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020AF2">MQ01CorpseWithFatmanRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020AEF">MQ01JenningsDeadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609BE5F">xMarkPostMQ01MutantEnabler</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609BE83">colPostMQ01GNRCollision</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602107E">CitLyonsPrideQuartersMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

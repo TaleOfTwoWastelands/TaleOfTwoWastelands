@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01857E">TTWChallengeDeathclawHunter</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeDeathclawHunter</EditorID>
+    <Name Tag="FULL">Death to the Deathclaw!</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185DB">TTWChallengeVeryHighXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill deathclaws.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>25</Threshold>
+      <Flags>Recurring, ShowZeroProgress</Flags>
+      <Interval>5</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="00054396">CrDeathClawList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,453 @@
+scn TTWDoorsScript
+
+Begin GameMode
+
+	; No commies allowed
+
+	; Megaton
+
+	if CratersideSupplyDoorRef.GetLocked
+		CratersideSupplyDoorRef.SetOwnership MoiraBrown
+	else
+		CratersideSupplyDoorRef.ClearOwnership
+	endif
+
+	if MegLucasMainDoorIntRef.GetLocked
+		MegLucasMainDoorIntRef.SetOwnership MegatonLucasSimmsFaction
+	else
+		MegLucasMainDoorIntRef.ClearOwnership
+	endif
+
+	if JerichoHouseDoorRef.GetLocked
+		JerichoHouseDoorRef.SetOwnership Jericho
+	else
+		JerichoHouseDoorRef.ClearOwnership
+	endif
+
+	if LucyWestDoorRef.GetLocked
+		LucyWestDoorRef.SetOwnership LucyWest
+	else
+		LucyWestDoorRef.ClearOwnership
+	endif
+
+	if MisterBurkeMegatonDoorRef.GetLocked
+		MisterBurkeMegatonDoorRef.SetOwnership MisterBurke
+	else
+		MisterBurkeMegatonDoorRef.ClearOwnership
+	endif
+
+	if BrassLanternDoorRef.GetLocked
+		BrassLanternDoorRef.SetOwnership AndyStahl
+	else
+		BrassLanternDoorRef.ClearOwnership
+	endif
+
+	if MegatonClinicDoorRef.GetLocked
+		MegatonClinicDoorRef.SetOwnership DocChurch
+	else
+		MegatonClinicDoorRef.ClearOwnership
+	endif
+
+	if ChurchOfTheAtomDoorRef.GetLocked
+		ChurchOfTheAtomDoorRef.SetOwnership ConfessorCromwell
+	else
+		ChurchOfTheAtomDoorRef.ClearOwnership
+	endif
+
+	if NathanManyaHouseDoorRef.GetLocked
+		NathanManyaHouseDoorRef.SetOwnership MegatonNathanManyaFaction
+	else
+		NathanManyaHouseDoorRef.ClearOwnership
+	endif
+
+	if BillyCreelHouseDoorRef.GetLocked
+		BillyCreelHouseDoorRef.SetOwnership MegatonBillyCreelFaction
+	else
+		BillyCreelHouseDoorRef.ClearOwnership
+	endif
+
+	if MegatonArmoryDoorRef.GetLocked
+		MegatonArmoryDoorRef.SetOwnership MegatonArmoryFaction
+	else
+		MegatonArmoryDoorRef.ClearOwnership
+	endif
+
+	; Rivet City
+
+	if RCDoorToUpperDeckRef.GetLocked
+		RCDoorToUpperDeckRef.SetOwnership RCResidentFaction
+	else
+		RCDoorToUpperDeckRef.ClearOwnership
+	endif
+
+	if RCDoorToMidDeckRef.GetLocked
+		RCDoorToMidDeckRef.SetOwnership RCResidentFaction
+	else
+		RCDoorToMidDeckRef.ClearOwnership
+	endif
+
+	if RCExterior.GetLocked
+		RCExterior.SetOwnership RCResidentFaction
+	else
+		RCExterior.ClearOwnership
+	endif
+
+	if SeagraveHolmesLockingDoorRef.GetLocked
+		SeagraveHolmesLockingDoorRef.SetOwnership SeagraveHolmes
+	else
+		SeagraveHolmesLockingDoorRef.ClearOwnership
+	endif
+
+	if SeagraveHolmesRoomDoorRef.GetLocked
+		SeagraveHolmesRoomDoorRef.SetOwnership SeagraveHolmes
+	else
+		SeagraveHolmesRoomDoorRef.ClearOwnership
+	endif
+
+	if RectoryDoorRef.GetLocked
+		RectoryDoorRef.SetOwnership SaintMonicaFriends
+	else
+		RectoryDoorRef.ClearOwnership
+	endif
+
+	if CantelliRoomDoorRef.GetLocked
+		CantelliRoomDoorRef.SetOwnership CantelliFamily
+	else
+		CantelliRoomDoorRef.ClearOwnership
+	endif
+
+	if StaleyRoomDoorRef.GetLocked
+		StaleyRoomDoorRef.SetOwnership StaleyFamily
+	else
+		StaleyRoomDoorRef.ClearOwnership
+	endif
+
+	if AbrahamWashingtonRoomDoorRef.GetLocked
+		AbrahamWashingtonRoomDoorRef.SetOwnership AbrahamWashington
+	else
+		AbrahamWashingtonRoomDoorRef.ClearOwnership
+	endif
+
+	if ZimmerRoomDoorRef.GetLocked
+		ZimmerRoomDoorRef.SetOwnership ZimmerFriends
+	else
+		ZimmerRoomDoorRef.ClearOwnership
+	endif
+
+	if SisterRoomDoorRef.GetLocked
+		SisterRoomDoorRef.SetOwnership Sister
+	else
+		SisterRoomDoorRef.ClearOwnership
+	endif
+
+	if WeatherlyHotelDoorRef.GetLocked
+		WeatherlyHotelDoorRef.SetOwnership WeatherlyHotelFaction
+	else
+		WeatherlyHotelDoorRef.ClearOwnership
+	endif
+
+	if FlakAndShrapnelRoomDoorRef.GetLocked
+		FlakAndShrapnelRoomDoorRef.SetOwnership FlakAndShrapnel
+	else
+		FlakAndShrapnelRoomDoorRef.ClearOwnership
+	endif
+
+	if BannonRoomDoorRef.GetLocked
+		BannonRoomDoorRef.SetOwnership Bannon
+	else
+		BannonRoomDoorRef.ClearOwnership
+	endif
+
+	if YoungRoomDoorRef.GetLocked
+		YoungRoomDoorRef.SetOwnership YoungFamily
+	else
+		YoungRoomDoorRef.ClearOwnership
+	endif
+
+	if DoctorLiRoomDoorRef.GetLocked
+		DoctorLiRoomDoorRef.SetOwnership DoctorLi
+	else
+		DoctorLiRoomDoorRef.ClearOwnership
+	endif
+
+	if DoctorPrestonRoomDoorRef.GetLocked
+		DoctorPrestonRoomDoorRef.SetOwnership DoctorPreston
+	else
+		DoctorPrestonRoomDoorRef.ClearOwnership
+	endif
+
+	if BelleBonnyRoomDoorRef.GetLocked
+		BelleBonnyRoomDoorRef.SetOwnership MuddyRudderFriends
+	else
+		BelleBonnyRoomDoorRef.ClearOwnership
+	endif
+
+	; Tenpenny
+
+	if TenpennyHotelDoorOneRef.GetLocked
+		TenpennyHotelDoorOneRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyHotelDoorOneRef.ClearOwnership
+	endif
+
+	if TenpennyHotelDoorTwoRef.GetLocked
+		TenpennyHotelDoorTwoRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyHotelDoorTwoRef.ClearOwnership
+	endif
+
+	if TenpennyHotelDoorThreeRef.GetLocked
+		TenpennyHotelDoorThreeRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyHotelDoorThreeRef.ClearOwnership
+	endif
+
+	if TenpennyLobbyDoorOneRef.GetLocked
+		TenpennyLobbyDoorOneRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyLobbyDoorOneRef.ClearOwnership
+	endif
+
+	if TenpennyLobbyDoorTwoRef.GetLocked
+		TenpennyLobbyDoorTwoRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyLobbyDoorTwoRef.ClearOwnership
+	endif
+
+	if TenpennyLobbyDoorThreeRef.GetLocked
+		TenpennyLobbyDoorThreeRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyLobbyDoorThreeRef.ClearOwnership
+	endif
+
+	if TenpennyLobbyDoorFourRef.GetLocked
+		TenpennyLobbyDoorFourRef.SetOwnership TenpennyTowerAllResidents
+	else
+		TenpennyLobbyDoorFourRef.ClearOwnership
+	endif
+
+	if NewUrbanDoorRef.GetLocked
+		NewUrbanDoorRef.SetOwnership TenpennyTowerAllResidents
+	else
+		NewUrbanDoorRef.ClearOwnership
+	endif
+
+	if TenpennyCafeteriaDoorOneRef.GetLocked
+		TenpennyCafeteriaDoorOneRef.SetOwnership MargaretPrimrose
+	else
+		TenpennyCafeteriaDoorOneRef.ClearOwnership
+	endif
+
+	if TenpennyCafeteriaDoorOneRef.GetLocked
+		TenpennyCafeteriaDoorOneRef.SetOwnership MargaretPrimrose
+	else
+		TenpennyCafeteriaDoorOneRef.ClearOwnership
+	endif
+
+	if AllistairTenpennyDoorRef.GetLocked
+		AllistairTenpennyDoorRef.SetOwnership TenpennyGuardFaction
+	else
+		AllistairTenpennyDoorRef.ClearOwnership
+	endif
+
+	; Andale
+
+	if SmithsBasementDoorRef.GetLocked
+		SmithsBasementDoorRef.SetOwnership AndaleResidentFaction
+	else
+		SmithsBasementDoorRef.ClearOwnership
+	endif
+
+	if AndaleGardenShedInsideDoor.GetLocked
+		AndaleGardenShedInsideDoor.SetOwnership AndaleResidentFaction
+	else
+		AndaleGardenShedInsideDoor.ClearOwnership
+	endif
+
+	; Underworld
+
+	if UnderworldCarolsPlaceRentDoorREF.GetLocked
+		UnderworldCarolsPlaceRentDoorREF.SetOwnership Carol
+	else
+		UnderworldCarolsPlaceRentDoorREF.ClearOwnership
+	endif
+
+	if UnderworldTulipDoorRef.GetLocked
+		UnderworldTulipDoorRef.SetOwnership Tulip
+	else
+		UnderworldTulipDoorRef.ClearOwnership
+	endif
+
+	; GNR Building
+
+	if GNR01toGNRBattleground01REF.GetLocked
+		GNR01toGNRBattleground01REF.SetOwnership BrotherhoodSteelFactionDC
+	else
+		GNR01toGNRBattleground01REF.ClearOwnership
+	endif
+
+	if GNR01toGNRBattleground02REF.GetLocked
+		GNR01toGNRBattleground02REF.SetOwnership BrotherhoodSteelFactionDC
+	else
+		GNR01toGNRBattleground02REF.ClearOwnership
+	endif
+
+	if GNR01toGNRBattlegroundMain01REF.GetLocked
+		GNR01toGNRBattlegroundMain01REF.SetOwnership BrotherhoodSteelFactionDC
+	else
+		GNR01toGNRBattlegroundMain01REF.ClearOwnership
+	endif
+	
+	if ChevyChasetoGNR01Ref.GetLocked
+		ChevyChasetoGNR01Ref.SetOwnership BrotherhoodSteelFactionDC
+	else
+		ChevyChasetoGNR01Ref.ClearOwnership
+	endif
+	
+	if GNRBalconyDoor1.GetLocked
+		GNRBalconyDoor1.SetOwnership BrotherhoodSteelFactionDC
+	else
+		GNRBalconyDoor1.ClearOwnership
+	endif
+
+	if GNRBalconyDoor2.GetLocked
+		GNRBalconyDoor2.SetOwnership BrotherhoodSteelFactionDC
+	else
+		GNRBalconyDoor2.ClearOwnership
+	endif
+
+	; Republic of Dave
+
+	if DaveFrontGateRef.GetLocked
+		DaveFrontGateRef.SetOwnership RepublicOfDaveFaction
+	else
+		DaveFrontGateRef.ClearOwnership
+	endif
+
+	; Oasis
+
+	if OasisDoorToWasteland.GetLocked
+		OasisDoorToWasteland.SetOwnership MS10OasisFaction
+	else
+		OasisDoorToWasteland.ClearOwnership
+	endif
+
+	; Dukov's Place
+
+	if DukovStorageDoorRef.GetLocked
+		DukovStorageDoorRef.SetOwnership DukovFaction
+	else
+		DukovStorageDoorRef.ClearOwnership
+	endif
+
+	if DukovsPlaceBackDoorRef.GetLocked
+		DukovsPlaceBackDoorRef.SetOwnership DukovFaction
+	else
+		DukovsPlaceBackDoorRef.ClearOwnership
+	endif
+
+	if DukovsPlaceFrontDoorRef.GetLocked
+		DukovsPlaceFrontDoorRef.SetOwnership DukovFaction
+	else
+		DukovsPlaceFrontDoorRef.ClearOwnership
+	endif
+
+	; Little Lamplight
+	
+	if LLSouvDoorRef.GetLocked
+		LLSouvDoorRef.SetOwnership LamplightResidentFaction
+	else
+		LLSouvDoorRef.ClearOwnership
+	endif
+
+	; Raven Rock
+
+	if RavenRockDoor04to01REF.GetLocked
+		RavenRockDoor04to01REF.SetOwnership EnclaveFaction
+	else
+		RavenRockDoor04to01REF.ClearOwnership
+	endif
+
+	; Rivet City Bow
+
+	if PinkertonDoorRef.GetLocked
+		PinkertonDoorRef.SetOwnership Pinkerton
+	else
+		PinkertonDoorRef.ClearOwnership
+	endif
+
+	; Temple of the Union
+
+	if TUStoreroomDoorRef.GetLocked
+		TUStoreroomDoorRef.SetOwnership TempleUnionFaction
+	else
+		TUStoreroomDoorRef.ClearOwnership
+	endif
+
+	if TempleUnionFrontGateRef.GetLocked
+		TempleUnionFrontGateRef.SetOwnership MS06DoorFaction
+	else
+		TempleUnionFrontGateRef.ClearOwnership
+	endif
+
+	; Vault 101
+
+	if CG04Vault101AtriumToEntrance.GetLocked
+		CG04Vault101AtriumToEntrance.SetOwnership Vault101SecurityFaction
+	else
+		CG04Vault101AtriumToEntrance.ClearOwnership
+	endif
+
+	if MS16Vault101AtriumToEntrance.GetLocked
+		MS16Vault101AtriumToEntrance.SetOwnership Vault101SecurityFaction
+	else
+		MS16Vault101AtriumToEntrance.ClearOwnership
+	endif
+
+	if CG01PlayroomDoor.GetLocked
+		CG01PlayroomDoor.SetOwnership CG01Dad
+	else
+		CG01PlayroomDoor.ClearOwnership
+	endif
+
+	if CG01MainDoor.GetLocked
+		CG01MainDoor.SetOwnership CG01Dad
+	else
+		CG01MainDoor.ClearOwnership
+	endif
+
+	if MS16OverseerDoorRef.GetLocked
+		MS16OverseerDoorRef.SetOwnership CG02Overseer
+	else
+		MS16OverseerDoorRef.ClearOwnership
+	endif
+
+	; Fort Independance
+
+	if FortIndependence01toExteriorREF.GetLocked
+		FortIndependence01toExteriorREF.SetOwnership BrotherhoodOutcastFaction
+	else
+		FortIndependence01toExteriorREF.ClearOwnership
+	endif
+
+	if FortIndependence02toExteriorREF.GetLocked
+		FortIndependence02toExteriorREF.SetOwnership BrotherhoodOutcastFaction
+	else
+		FortIndependence02toExteriorREF.ClearOwnership
+	endif
+
+	; The Pitt
+
+	if DLC01MillToHavenGateREF.GetLocked
+		DLC01MillToHavenGateREF.SetOwnership DLC01PittRaiderFaction ; CantelliFamily wtf ? :D
+	else
+		DLC01MillToHavenGateREF.ClearOwnership
+	endif
+
+	if PittFenceGateRef.GetLocked
+		PittFenceGateRef.SetOwnership DLC01Wernher
+	else
+		PittFenceGateRef.ClearOwnership
+	endif
+	
+End

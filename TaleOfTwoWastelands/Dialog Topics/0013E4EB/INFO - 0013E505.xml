@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0013E505">INFO - 0013E505</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0011F9CF">VFreeformTheFort</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">All right. {to Lupa}You've been a good dog, Lupa. Die well, girl.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00120172">FortAntony</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>23</ReferenceCount>
+        <CompiledSize>522</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQASAHITAGYUAAoAIEcUACBHFQAgKxUAEgByFgBmGQAKACBHFAAgRxUAICsWAAsAAQAHACByEwBzDAAcAAEAIhACAAAAGAALAAEABwAgchMAcyEAHAACACIQAgAAABgACwABAAcAIHITAHMJABwAAwAiEAIAAAAYAAsAAQAHACByEwBzBgAcAAQAIhACAAAAGAALAAEABwAgchMAcxsAHAAFACIQAgAAABgACwABAAcAIHITAHMVABwABgAiEAIAAAAYAAsAAQAHACByFgBzAgAcAAcAIhACAAAAGAALAAEABwAgchYAcw4AHAAIACIQAgAAABgACwABAAcAIHIWAHMSABwACQAiEAIAAAAYAAsAAQAHACByFgBzBgAcAAoAIhACAAAAGAALAAEABwAgchYAcwgAHAALACIQAgAAABgACwABAAcAIHIWAHMKABwADAAiEAIAAAAZAAAAFgALAAcABwAgchMAcx4AFgAQAAEADAAgchcAcwgAIDAgIT0cAA0AIhACAAAAGAAQAAEADAAgchcAcwkAIDAgIT0cAA4AIhACAAAAFwACAAEAHAAPACIQAgAAABkAAAAYAAsAAQAHACByEwBzDwAcABAAIhACAAAAGAALAAEABwAgchYAcxQAHAARACIQAgAAABgACwABAAcAIHIWAHMWABwAEgAiEAIAAAAZAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime )
+set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime )
+if (VNPCFollowers.ArcadeHired)
+    ArcadeRef.Disable
+elseif (VNPCFollowers.bLilyHired)
+    LilyRef.Disable
+elseif (VNPCFollowers.RaulHired)
+    RaulRef.Disable
+elseif (VNPCFollowers.bBooneHired) 
+   CraigBooneRef.Disable
+elseif (VNPCFollowers.bVeronicaHired)
+   VeronicaRef.Disable
+elseif (VNPCFollowers.bCassHired)
+  RoseOfSharonCassidyRef.Disable
+elseif (Followers.CharonHired)
+  CharonRef.Disable
+elseif (Followers.ButchHired)
+  ButchRef.Disable
+elseif (Followers.CloverHired)
+  CloverRef.Disable
+elseif (Followers.JerichoHired)
+  JerichoRef.Disable
+elseif (Followers.FawkesHired)
+  MQ08FawkesRef.Disable
+elseif (Followers.StarPaladinCrossHired)
+  StarPaladinCrossRef.Disable
+endif
+
+if (VNPCFollowers.bEDEHired)
+   if VDialogueEDE.iHVUpgrade != 0
+     EDE3REF.Disable
+  elseif VDialogueEDE.iFolUpgrade != 0
+    EDE2REF.Disable
+  else
+    EDE1REF.Disable
+  endif
+elseif (VNPCFollowers.RexHired)
+   RexRef.Disable
+elseif (Followers.DogmeatHired)
+   DogmeatRef.Disable
+elseif (Followers.RL3Hired)
+   RL3REF.Disable
+endif	</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53F5">FollowerWaitTime</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001572E8">vDialogueEDE</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>11</ReferenceCount>
+          <CompiledSize>167</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAOwQBwABAG4BAAAAHAACAJ4QBQABAHIGABUACgByBwBzDgACACAxHAADACIQAgAAABwABAAhEAIAAAAVAAoAcgcAcwcAAgAgMXgQCAACAHIIAHIJABwAAgBJEgUAAQByCgAcAAIAAhAPAAMAcgsAbgEAAABuWgAAABwAAgDuEAUAAQByCwAcAAUA3RAHAAEAbgAAAAAcAAUAchAHAAEAbv8AAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">FortOthoRef.SetGhost 1
+player.MoveTo FightingPitMarker
+set VMS34.FightingLupa to 1
+FortLupaRef.Disable
+FortLupaGladiatorRef.Enable
+
+set VMS34.ArenaDuelEnabled to 1
+SetEnemy PlayerFaction TheFortGladiatorFaction
+player.RemoveAllTypedItems FortPlayerEquipmentContainerRef
+player.AddItem WeapNVMacheteGladiator 1 90
+player.EquipItem WeapNVMacheteGladiator
+FortArenaGateRef.SetOpenState 0
+FortArenaGateRef.Lock 255</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00137125">FortOthoRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0012B4A8">FortLupaRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0013E513">FortLupaGladiatorRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00136A28">FortArenaGateRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00136A1E">FightingPitMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00129D1E">VMS34</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0001B2A4">PlayerFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00136A25">TheFortGladiatorFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00136A26">FortPlayerEquipmentContainerRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00167685">WeapNVMacheteGladiator</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="00120172">FortAntony</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

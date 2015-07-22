@@ -1,0 +1,1949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E86">CG04</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG04</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06029341">CG04Script</Reference>
+    </Script>
+    <Name Tag="FULL">Escape!</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>15</ReferenceCount>
+                <CompiledSize>321</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ABIHAAEAbgEAAADnEAcAAQBuAQAAADYQBQABAHIMABwAAQAhEAIAAAAcAAIAIRACAAAAHAADACEQAgAAABwABAAhEAIAAAAcAAUAIRACAAAAHAAGACIQAgAAABwABwAhEAIAAAAcAAcA1REHAAEAbgAAAAAVAAwAcgwAZhsABAAgRw0AHAAIAHIQBwABAG7/AAAAHAAJAHIQBwABAG7/AAAAYRAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAAAAAG4AAAAAbgEAAAAcAAoAUBEAAOYRBwABAG4AAAAAFQAKAHIMAGYHAAIAIDEVAAoAcgwAcwgAAgAgMRQRKQAFABEAMyB5ZWFycyBsYXRlci5iaWtuAAAAAG4AAAAAbgEAAABuAAAAABwACwCeEAUAAQByDgAcAAoAnhAFAAEAcg8A</CompiledScript>
+              <ScriptSource Tag="SCTX">SetLocationSpecificLoadScreensOnly 1
+SetInCharGen 1 ; no leveling during chargen
+startQuest CG04
+; enable NPCs
+CG04ActorMarker.enable
+; enable separately so can be disabled separately
+CG04TomHoldenREF.enable
+CG04MaryHoldenREF.enable
+; set local map blockers
+CG02HiddenPlaneREF.enable
+CG03HiddenPlaneREF.enable
+CG04HiddenPlaneREF.disable
+; change radio to scripted broadcast
+RadioVault101REF.enable
+RadioVault101REF.SetBroadcastState 0
+set CG04.RadioTimer to CG04BroadcastTimer
+; lock door to vault exit
+Vault101ExitDoor.Lock 255
+; lock dad's terminal
+CG04DadsTerminalREF.lock 255
+; set up player
+DisablePlayerControls 1 1 1 1 0 0 1
+player.ResetHealth
+SetPCYoung  0   ; player should now be back to normal
+set CG04.timer to 1
+set CG04.runTimer to 1
+playBink "3 years later.bik" 0 0 1 0; don't interrupt, don't mute audio
+CG04AmataREF.moveto CG04AmataStartMarker
+player.moveto cg04playerstartmarker
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D44C">CG04ActorMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605750C">CG04TomHoldenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605750B">CG04MaryHoldenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB63A">CG02HiddenPlaneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB63B">CG03HiddenPlaneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB63C">CG04HiddenPlaneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607161F">RadioVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024657">Vault101ExitDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06053D5A">CG04DadsTerminalREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007173E">CG04BroadcastTimer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E7">CG04AmataStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E6">CG04PlayerStartMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>62</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAHAEcBAAIAIDYVAAoARwIABQAgMjI3NxUABwBHAwACACA3FQAIAEcEAAMAIDE3FQAKAEcFAAUAIDUuMjU=</CompiledScript>
+              <ScriptSource Tag="SCTX">; set start time so you come out during the day
+set gamehour to 6
+set gameyear to 2277
+set gamemonth to 7
+set gameday to 17
+set gamedayspassed to 5.25 ; Friday, 6 am</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000035">GameYear</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000036">GameMonth</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000037">GameDay</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="0000431E">VaultSuit101</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>23</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQDwADAHICAG4BAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; only necessary if quickstarting CG04
+player.additem vaultsuit101 1 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000431E">VaultSuit101</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>97</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAlxAFAAEAcgMAFQAKAHIEAHMIAAIAIDEVAAwAcgQAZgcABAAgNi4zHAACAO4QDwADAHIFAG4AAAAAbgEAAAAcAAIA7hAPAAMAcgYAbgAAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; play animation
+CG04AmataREF.evp
+player.addscriptpackage CG04PlayerSection0
+; run timer for "wake up" animation
+set CG04.runTimer to 1
+set CG04.timer to 6.3
+; make sure vault suit is equipped
+player.equipitem vaultsuit101 0 1
+player.equipitem pipboy 0 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0009DF07">CG04PlayerSection0</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000431E">VaultSuit101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">3</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMIAAIAIDAcAAEAmBAAABwAAgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; wake up animation done
+set CG04.runTimer to 0
+player.RemoveScriptPackage
+; get Amata to force-greet
+CG04AmataREF.evp
+;autosave</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">4</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>6</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has talked to Amata
+EnablePlayerControls
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgUAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setobjectivedisplayed CG04 5 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>154</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG4BAAAAHAABAFIQCgACAHIEAG4KAAAAFgAgAAIAHAAgcgIAWA4QBAABACIAIHICAFgOEAQAAQApACA+HAACAAIQCgACAHIFAG4BAAAAHAACAAIQCgACAHIGAG4eAAAAFwACAAIAHAACAAIQCgACAHIHAG4BAAAAHAACAAIQCgACAHIIAG4kAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Amata gives the player the pistol
+CG04AmataREF.removeitem weapnv9mmpistol 1
+CG04AmataREF.removeitem ammo9mm 10 ; remove it all
+if player.getav energyweapons &gt; player.getav guns
+player.additem weaplaserpistol 1
+player.additem ammosmallenergycell 30
+else
+player.additem weap10mmPistol 1
+player.additem ammo10mm 36
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E3778">WeapNV9mmPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008ED03">Ammo9mm</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00004335">WeapLaserPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00020772">AmmoSmallEnergyCell</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E3778">WeapNV9mmPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008ED03">Ammo9mm</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Enter the Overseer's office.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>70</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgUAAABuAQAAAKMRDwADAHICAG4KAAAAbgEAAAAcAAEAAhAKAAIAcgMAbgoAAAA5EAoAAgByBABuUAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 5 1
+setObjectiveDisplayed CG04 10 1
+player.additem lockpick 10
+; tutorial picking things up
+setstage CGTutorial 80
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000A">Lockpick</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">12</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAADkQCgACAHICAG5aAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has exited his apartment
+CG04RadroachAmbushAREF.enable
+; display sneak tutorial
+setstage CGTutorial 90</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4C9">CG04RadroachAmbushAREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>26</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAH8RCgACAHIDAG4AAAAAHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; security guard has killed all the radroaches
+player.addToFaction Vault101SecurityEnemyFaction 0
+CG04Vault101Security02REF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064912">CG04Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AE26">Vault101SecurityEnemyFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">18</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>77</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAABwAAgDzEAcAAQBuAQAAABwAAwB/EQoAAgByBABuAAAAAHkQCAACAHIFAHIGAHkQEgAEAHIHAHIGAG4BAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has hit Butch trigger zone
+CG04ButchRadroachREF.enable
+; restrain Ellen
+CG04EllenDeloriaREF.setrestrained 1
+; make player an enemy of guards
+player.addToFaction Vault101SecurityEnemyFaction 0
+; make player an ally of Ellen faction (so she doesn't mind you hitting her)
+SetAlly CG04EllenFaction PlayerFaction
+; make Butch friend of player (for combat purposes)
+SetAlly CG04ButchFamilyFaction PlayerFaction 1 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A172">CG04ButchRadroachREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E2">CG04EllenDeLoriaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AE26">Vault101SecurityEnemyFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C9556">CG04EllenFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C336F">CG04ButchFamilyFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Butch has spoken to player
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">21</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDAVAAoAcgIAcw0AAgAgMRUACgByAgBzDgACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has agreed to save Butch's mom
+set CG04ButchREF.doTalk to 0 ; make Butch stop yelling for guard
+set CG04.ButchFriend to 1
+set CG04.ButchEnemy to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">22</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>59</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAA8QCQACAAAAbgEAAAAVAAoAcgEAcwEAAgAgMBUACgByAgBzDQACACAxFQAKAHICAHMOAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player convinces Butch to save mom himself
+CG04ButchRef.setav aggression 1
+set CG04ButchREF.doTalk to 0 ; make Butch stop yelling for guard
+set CG04.ButchFriend to 1
+set CG04.ButchEnemy to 0
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">23</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>56</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDEVAAoAcgEAZgMAAgAgMxUACgByAgBzDQACACAwFQAKAHICAHMOAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player says he won't help
+set CG04ButchREF.doTalk to 1
+set CG04ButchREF.timer to 3
+set CG04.ButchFriend to 0
+set CG04.ButchEnemy to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">24</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDAVAAoAcgIAcw0AAgAgMBUACgByAgBzDgACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">; player makes Butch run away
+set CG04ButchREF.doTalk to 0 ; make Butch stop yelling for guard
+set CG04.ButchFriend to 0
+set CG04.ButchEnemy to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>129</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">BBIHAAEAbmQAAAAcAAEAXhAAABUACgByAQBzAQACACAwHAACAPMQBwABAG4AAAAAHAACAF4QAAAcAAIADxAJAAIAAQBuAAAAAHgQEgAEAHIDAHIEAG4BAAAAbgEAAAAcAAEADxAJAAIAOQBuAgAAABwAAQAPEAkAAgAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Butch's mom is saved from the roaches
+RewardKarma 100
+CG04ButchREF.evp
+; make sure Butch stops yelling for the guard
+set CG04ButchREF.doTalk to 0
+; unrestrain mom
+CG04EllenDeloriaREF.setRestrained 0
+CG04EllenDeloriaREF.evp
+CG04EllenDeloriaREF.setav confidence 0
+; make her neutral to player
+SetEnemy CG04EllenFaction PlayerFaction 1 1
+; make Butch help mom from now on
+CG04ButchREF.setav assistance 2
+CG04ButchREF.setav aggression 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E3">CG04ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E2">CG04EllenDeLoriaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C9556">CG04EllenFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">31</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Butch's mom is dead
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">33</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>35</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIDADkQCgACAHIEAG5kAAAAHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; move Amata to Overseer's office when player enters Vault101b
+CG04AmataRef.moveto CG04InterrogationAmataMarker
+; Pip-Boy light tutorial
+setstage CGTutorial 100
+; trigger Atrium conversation
+CG04MaryHoldenREF.evp
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605750B">CG04MaryHoldenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D4BE">CG04InterrogationAmataMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>23</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIA3RAHAAEAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; trigger interrogation scene
+CG04AmataREF.evp
+; make sure door is closed
+CG04SecurityCenterDoor.setOpenState 0
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06053B75">CG04SecurityCenterDoor</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgUAAABuAQAAAKMRDwADAHIBAG4KAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 5 1 ; in case I never talked to Amata
+setObjectiveDisplayed CG04 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">36</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E86">CG04</Quest>
+                  <QuestStage>38</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="000E3778">WeapNV9mmPistol</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060230E4">CG04AmataREF</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMDAAIAIDQ=</CompiledScript>
+              <ScriptSource Tag="SCTX">; start interrogation looping scene
+set CG04.InterrogationStage to 4 ; overseer tells Mack to hit her</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="000E3778">WeapNV9mmPistol</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060230E4">CG04AmataREF</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E86">CG04</Quest>
+                  <QuestStage>38</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>81</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAO4QCgACAHIDAG4BAAAAHAABAFoQBwABAG4BAAAAHAABAFwQCgACAHICAG4BAAAAFQAKAHIEAHMDAAIAIDAcAAIANBAIAAIAcgUAcgYA</CompiledScript>
+              <ScriptSource Tag="SCTX">; If she has the pistol, she equips it now and pulls it out
+CG04AmataREF.equipItem weap10mmPistol 1
+CG04AmataREF.setalert 1
+CG04AmataREF.look CG04Vault101Security03REF 1 ; rotate to Mack
+; start interrogation scene
+set CG04.InterrogationStage to 0 ; special version of scene where she has pistol
+; Officer Mack shouts a warning
+CG04Vault101Security03REF.sayTo CG04OverseerREF CG04SecurityBarks
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064913">CG04Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E3778">WeapNV9mmPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D4AF">CG04SecurityBarks</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">38</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>134</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIEAHMDAAIAIDAcAAEAWhAHAAEAbgAAAAAcAAEAXRAAABwAAQBeEAAAHAACAF4QAAAWABYAAQASACByAwBYLRAFAAEAcgUAIDAgPhwAAwAzEAUAAQByBgAZAAAAFgAQAAEADAAgcgQAcxcAIDAgPT0VAAoAcgQAcxcAAgAgMRkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; interrogation scene done
+set CG04.InterrogationStage to 0
+CG04AmataRef.setalert 0
+CG04AmataRef.stoplook
+CG04AmataREF.evp
+CG04OverseerREF.evp
+if CG04Vault101Security03REF.getDetected player &gt; 0
+     CG04Vault101Security03REF.say CG04SecurityBarks
+endif
+; player somehow interrupted interrogation
+if CG04.AmataAction == 0
+  set CG04.AmataAction to 1
+endif
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064913">CG04Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D4AF">CG04SecurityBarks</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has spoken to Overseer or killed him
+CG04AmataREF.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="0000421C">WeapBaseballBat</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>64</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAEcDAA4AIHIBAFgvEAUAAQByBAAcAAEAUhAIAAIAcgQARwMAHAACALwREQADAHIEAEcDAHoAAAAAAADgPw==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG04WeaponCount to player.GetItemCount weapBaseballBat
+player.removeitem weapBaseballBat CG04WeaponCount 
+CG04OverseerREF.additemHealthPercent weapBaseballBat CG04WeaponCount .5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035C51">CG04WeaponCount</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000421C">WeapBaseballBat</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="00004345">WeapPoliceBaton</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>64</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAEcDAA4AIHIBAFgvEAUAAQByBAAcAAEAUhAIAAIAcgQARwMAHAACALwREQADAHIEAEcDAHoAAAAAAADQPw==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG04WeaponCount to player.GetItemCount weapPoliceBaton 
+player.removeitem weapPoliceBaton CG04WeaponCount
+CG04OverseerREF.additemHealthPercent weapPoliceBaton CG04WeaponCount .25</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035C51">CG04WeaponCount</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00004345">WeapPoliceBaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="00004323">WeapBBGun</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>119</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAEcDAA4AIHIBAFgvEAUAAQByBAAcAAEAUhAIAAIAcgQARwMAHAACALwREQADAHIEAEcDAHqamZmZmZnZPxUAEwBHAwAOACByAQBYLxAFAAEAcgUAHAABAFIQCAACAHIFAEcDABwAAgACEAgAAgByBQBHAwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG04WeaponCount to player.GetItemCount weapBBGun
+player.removeitem weapBBGun CG04WeaponCount 
+CG04OverseerREF.additemHealthPercent weapBBGun CG04WeaponCount .4
+; ammo too
+set CG04WeaponCount to player.GetItemCount ammoBB
+player.removeitem ammoBB CG04WeaponCount 
+CG04OverseerREF.additem ammoBB CG04WeaponCount 
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035C51">CG04WeaponCount</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00004323">WeapBBGun</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002935B">AmmoBB</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="000E3778">WeapNV9mmPistol</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>119</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAEcDAA4AIHIBAFgvEAUAAQByBAAcAAEAUhAIAAIAcgQARwMAHAACALwREQADAHIEAEcDAHoAAAAAAADQPxUAEwBHAwAOACByAQBYLxAFAAEAcgUAHAABAFIQCAACAHIFAEcDABwAAgACEAgAAgByBQBHAwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; give pistol(s) to Overseer
+set CG04WeaponCount to player.GetItemCount weap10mmPistol
+player.removeitem weap10mmPistol CG04WeaponCount 
+CG04OverseerREF.additemHealthPercent weap10mmPistol CG04WeaponCount .25
+; give ammo
+set CG04WeaponCount to player.GetItemCount ammo10mm
+player.removeitem ammo10mm CG04WeaponCount 
+CG04OverseerREF.additem ammo10mm CG04WeaponCount
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E1">CG04OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00035C51">CG04WeaponCount</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E3778">WeapNV9mmPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008ED03">Ammo9mm</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbiYAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has spoken to Amata during/after interrogation scene
+setstage CG04 38   ; make sure interrogation scene ends now
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="000E3778">WeapNV9mmPistol</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060230E4">CG04AmataREF</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>81</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG4BAAAAHAABAFIQCgACAHIEAG4KAAAAHAACALwREwADAHIDAG4BAAAAes3MzMzMzOw/HAACAAIQCgACAHIEAG4eAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; if Amata still has the gun, she gives it to you now
+CG04AmataREF.removeitem weap10mmPistol 1
+CG04AmataREF.removeitem ammo10mm 10 ; remove it all
+player.additemHealthPercent weap10mmPistol 1 .9
+player.additem ammo10mm 30</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E3778">WeapNV9mmPistol</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008ED03">Ammo9mm</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Use the Overseer's computer to access the secret tunnel.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4oAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 10 1
+setObjectiveDisplayed CG04 40 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Enter the reactor room.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgUAAABuAQAAAKIRDwADAHIBAG4oAAAAbgEAAACjEQ8AAwByAQBuMgAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 5 1 ; in case I never talked to Amata
+setObjectiveCompleted CG04 40 1
+setObjectiveDisplayed CG04 50 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Turn the power back on.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG48AAAAbgEAAAAVAAoAcgEAcwYAAgAgMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 50 1
+setObjectiveDisplayed CG04 60 1
+; clean up if this is still going:
+set CG04.OverseerCallForHelp to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">110</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player flips first reactor switch -- guards react</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>196</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgASAAIADgAgcgEAWC4QAAAgMCA9PRwAAQCeEAUAAQByBQAcAAEAlxAFAAEAcgYAGAASAAIADgAgcgIAWC4QAAAgMCA9PRwAAgCeEAUAAQByBQAcAAIAlxAFAAEAcgYAGAASAAIADgAgcgMAWC4QAAAgMCA9PRwAAwCeEAUAAQByBQAcAAMAlxAFAAEAcgYAGAASAAIADgAgcgQAWC4QAAAgMCA9PRwABACeEAUAAQByBQAcAAQAlxAFAAEAcgYAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; unlock main door to reactor level
+;Vault101dDoorToE.unlock
+; guard runs in to see what's going on
+if CG04Vault101Security05REF.getDead == 0
+   CG04Vault101Security05REF.moveto CG04ReactorGuardStartMarker
+   CG04Vault101Security05REF.addscriptpackage CG04GuardRunIntoReactorRoom
+elseif CG04Vault101Security01REF.getDead == 0
+   CG04Vault101Security01REF.moveto CG04ReactorGuardStartMarker
+   CG04Vault101Security01REF.addscriptpackage CG04GuardRunIntoReactorRoom
+elseif CG04Vault101Security02REF.getDead == 0
+   CG04Vault101Security02REF.moveto CG04ReactorGuardStartMarker
+   CG04Vault101Security02REF.addscriptpackage CG04GuardRunIntoReactorRoom
+elseif CG04Vault101Security03REF.getDead == 0
+   CG04Vault101Security03REF.moveto CG04ReactorGuardStartMarker
+   CG04Vault101Security03REF.addscriptpackage CG04GuardRunIntoReactorRoom
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064916">CG04Vault101Security05REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606490E">CG04Vault101Security01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064912">CG04Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06064913">CG04Vault101Security03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060660CD">CG04ReactorGuardStartMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000660CF">CG04GuardRunIntoReactorRoom</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">120</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Open the vault door.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>72</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbigAAABuAQAAAKIRDwADAHICAG48AAAAbgEAAACjEQ8AAwByAgBuRgAAAG4BAAAAHAABAFoQBwABAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 40 1
+setObjectiveCompleted CG04 60 1
+setObjectiveDisplayed CG04 70 1
+; in case Amata scene never finished
+CG04AmataRef.setalert 0
+; turn the lights back on
+;Vault101RedLightsREF.disable
+;Vault101RegularLightsREF.enable
+;Vault101BackupGeneratorLightsREF.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">140</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Escape from Vault 101.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>86</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbkYAAABuAQAAAKMRDwADAHIDAG5QAAAAbgEAAAAVAAoAcgMAcwgAAgAgMRUACgByAwBmBwACACAyHAABACEQAgAAABwAAgAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG04 70 1
+setObjectiveDisplayed CG04 80 1
+; run timer for guard yells
+set CG04.runTimer to 1
+set CG04.timer to 2
+CG04Vault101Security07Ref.enable
+CG04Vault101Security08Ref.enable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06035DAA">CG04Vault101Security07Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06035DAB">CG04Vault101Security08Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">141</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>47</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMIAAIAIDEVAAsAcgIAZgcAAwAgLjUcAAEAMxAKAAIAcgMAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; run timer for Amata scene
+set CG04.runTimer to 1
+set CG04.timer to .5
+CG04Vault101Security07Ref.say CG04SecurityBarks 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06035DAA">CG04Vault101Security07Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D4AF">CG04SecurityBarks</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">142</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>50</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIDABwAAQBeEAAAHAACAN0QBwABAG4BAAAAFQAKAHIEAHMIAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; trigger Amata scene
+CG04AmataREF.moveto CG04AmataAtVaultDoorMarker
+CG04AmataREF.evp
+; make sure secret door is open
+CG04SecretDoorREF.setopenstate 1
+; turn off timer
+set CG04.runTimer to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060521A3">CG04SecretDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606777A">CG04AmataAtVaultDoorMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">144</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Vault door has finished opening, trigger Amata force-greet
+CG04AmataREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060230E4">CG04AmataREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">145</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>54</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHMQAgAAABwAAgBzEAIAAAAcAAMADxAJAAIAAABuAQAAABwABAAPEAkAAgAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has spoken to Amata
+; unlock door to vault exit (so guards can come in)
+Vault101ExitDoor.Unlock
+CG04Vault101AtriumToEntrance.Unlock
+; make guards aggressive so they attack
+CG04Vault101Security07Ref.setav aggression 1
+CG04Vault101Security08Ref.setav aggression 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06024657">Vault101ExitDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605398D">CG04Vault101AtriumToEntrance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06035DAA">CG04Vault101Security07Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06035DAB">CG04Vault101Security08Ref</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>40</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ABIHAAEAbgAAAAAVAAoAcgEAcwgAAgAgMRUACwByAQBmBwADACAxNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has finished changing his character and exited the final vault door
+; turn back on normal range of load screens
+SetLocationSpecificLoadScreensOnly 0
+set CG04.runTimer to 1
+set CG04.timer to 15</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>127</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEAFgAZAAEAFQAgWDsQCgACAHICAG5kAAAAIDAgPT13EQcAAQBuyAAAABkAAAA2EAUAAQByAwAVABAAcgQAZjcACAAgRwUAIDEgKwASBwABAG4AAAAA5xAHAAEAbgAAAAA3EAUAAQByAQA5EAoAAgByBgBuCgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">completeAllObjectives CG04
+if GetStageDone VCG01 100 == 0
+  rewardXP 200
+endif
+;enable MS16 now that the player has left the vault.
+startQuest MS16
+set RadioGalaxyNewsQuest.CG04Done to ( GameDaysPassed + 1 )
+; turn back on normal range of load screens
+SetLocationSpecificLoadScreensOnly 0
+SetInCharGen 0 ; now you can level up
+;addachievement 3
+stopQuest CG04
+; start MQ01
+setstage MQ01 10
+
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014EA3">MS16</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="06014E87">MQ01</Reference>
+            </NextQuest>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>50</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACIQAgAAABwAAgAiEAIAAAAcAAMAIhACAAAAHAAEACIQAgAAABwABQAiEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; turn off CG04 actors
+CG04ActorMarker.disable
+CG04AllenMackREF.disable
+CG04TomHoldenREF.disable
+CG04MaryHoldenREF.disable
+CG04StanleyREF.disable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D44C">CG04ActorMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060569B4">CG04AllenMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605750C">CG04TomHoldenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0605750B">CG04MaryHoldenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606B23B">CG04StanleyREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Talk to Amata about her plan to escape the Vault.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060230E4">CG04AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Enter the Overseer's office.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602905F">OverseerOfficeMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Enter the reactor control room.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602987C">CG04ReactorSwitchREF1</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Turn the power back on.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602987C">CG04ReactorSwitchREF1</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060660C0">CG04ReactorSwitchREF2</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060660C1">CG04ReactorSwitchREF3</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Open the Vault door.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06024710">CG04VaultGearDoorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Use the Overseer's computer to access the secret tunnel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060506D8">CG04OverseersTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Escape the Vault.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06024720">Vault101CaveDoorInterior</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

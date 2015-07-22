@@ -1,0 +1,200 @@
+scn YesManDeadSCRIPT
+
+short 	Button
+short bStartedEndGame
+short bTalkingDisabled;
+float fTimer
+short iRandomSay
+
+Short bSaveGame;
+Float fSaveTimer;
+Short nSaveEvent;
+
+
+Begin OnHit
+	set iRandomSay to GetRandomPercent
+	set fTimer to fTimer + GetSecondsPassed
+	if fTimer >= 1
+	set fTimer to 0
+		if iRandomSay < 30
+		     Say Assault
+		elseif iRandomsay <60
+			Say Hit
+		elseif iRandomSay < 80
+			Say StartCombatResponse
+		elseif iRandomSay < 90
+			Say MurderNoCrime
+		elseif iRandomSay < 100
+			Say AvoidThreat
+		endif
+	endif
+	stopcombat
+End
+
+Begin OnDeath
+
+	If GetQR VMQYesMan01 == 1
+		If IsKiller Player == 1
+			Set VMQTops.YesManJustKilled to 1
+		Endif
+		Set VMQYesManSupport.bYesManDead to 1
+	Endif
+
+End
+
+
+BEGIN OnActivate
+	if(bTalkingDisabled == 0)
+		Activate;
+	endif
+END
+
+BEGIN GameMode
+
+	;This code runs the savegame.
+	If (bSaveGame == 1)
+		If (fSaveTimer > 0)
+			Set fSaveTimer to fSaveTimer - GetSecondsPassed
+		Else
+			If (nSaveEvent == 0)
+	
+				SystemSave;
+				Set fSaveTimer to 1.0;
+				Set nSaveEvent to 1;
+	
+			ElseIf (nSaveEvent == 1)
+	
+				EnablePlayerControls;
+	
+				;Show Message Script
+				ShowMessage VEndGameWarningMsgIndy;
+	
+				Set nSaveEvent to 0;
+				Set bSaveGame to 2;
+			EndIf
+		EndIf
+	EndIf
+
+	;This stuff looks for final button presses
+	if ( bStartedEndGame == 0 )
+		set Button to GetButtonPressed
+		if ( Button == 0 )
+			;Reset Dialog Options So YesMan Redoes the "Are you ready" stuff.
+		elseif ( Button == 1 )
+			set bStartedEndGame to 1
+
+			;Start Independent Stuff
+			; Start the Emergency Radio Quest - AH
+			vNCREmergencyRadioTARef.enable
+			StartQuest vNCREmergencyRadio
+			player.moveto VHDHouseIndyBattleStartMarker
+
+			;Move Companions with the Player
+			if (VNPCFollowers.bBooneHired)
+				CraigBooneREF.MoveTo VHDHouseIndyCompanionMarker
+				SET CraigBooneREF.Waiting TO 0;
+				CraigBooneREF.evp;
+			endif
+			if (VNPCFollowers.bCassHired)
+				RoseofSharonCassidyREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RoseofSharonCassidyREF.Waiting TO 0;
+				RoseofSharonCassidyREF.evp;
+			endif	
+			if (VNPCFollowers.bVeronicaHired)
+				VeronicaREF.MoveTo VHDHouseIndyCompanionMarker
+				SET VeronicaREF.Waiting TO 0;
+				VeronicaREF.evp;
+			endif
+			if (VNPCFollowers.bLilyHired)
+				LilyREF.MoveTo VHDHouseIndyCompanionMarker
+				SET LilyREF.Waiting TO 0;
+				LilyREF.evp;
+			endif
+			if (VNPCFollowers.RaulHired)
+				RaulREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RaulREF.Waiting TO 0;
+				RaulREF.evp;
+			endif
+			if (VNPCFollowers.ArcadeHired)
+				ArcadeREF.MoveTo VHDHouseIndyCompanionMarker
+				SET ArcadeREF.Waiting TO 0;
+				ArcadeREF.evp;
+			endif
+			if (VNPCFollowers.bEDEHired)
+				if EDE1Ref.GetDisabled == 0
+					EDE1Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE1Ref.Waiting TO 0;
+					EDE1Ref.evp;
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE2Ref.Waiting TO 0;
+					EDE2Ref.evp;
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3Ref.MoveTo VHDHouseIndyCompanionMarker;
+					SET EDE3Ref.Waiting TO 0;
+					EDE3Ref.evp;
+				endif
+			endif
+			if (VNPCFollowers.RexHired)
+				RexREF.MoveTo VHDHouseIndyCompanionMarker
+				SET RexREF.Waiting TO 0;
+				RexREF.evp;
+			endif
+			if (Followers.CharonHired)
+				CharonRef.MoveTo VHDHouseIndyCompanionMarker
+				SET CharonRef.Waiting TO 0;
+				CharonRef.evp;
+			endif	
+			if (Followers.ButchHired)
+				ButchRef.MoveTo VHDHouseIndyCompanionMarker
+				SET ButchRef.Waiting TO 0;
+				ButchRef.evp;
+			endif	
+			if (Followers.CloverHired)
+				CloverRef.MoveTo VHDHouseIndyCompanionMarker
+				SET CloverRef.Waiting TO 0;
+				CloverRef.evp;
+			endif	
+			if (Followers.JerichoHired)
+				JerichoRef.MoveTo VHDHouseIndyCompanionMarker
+				SET JerichoRef.Waiting TO 0;
+				JerichoRef.evp;
+			endif	
+			if (Followers.FawkesHired)
+				MQ08FawkesRef.MoveTo VHDHouseIndyCompanionMarker
+				SET MQ08FawkesRef.Waiting TO 0;
+				MQ08FawkesRef.evp;
+			endif	
+			if (Followers.StarPaladinCrossHired)
+				StarPaladinCrossRef.MoveTo VHDHouseIndyCompanionMarker
+				SET StarPaladinCrossRef.Waiting TO 0;
+				StarPaladinCrossRef.evp;
+			endif	
+			if (Followers.DogmeatHired)
+				DogmeatRef.MoveTo VHDHouseIndyCompanionMarker
+				SET DogmeatRef.Waiting TO 0;
+				DogmeatRef.evp;
+			endif	
+			if (Followers.RL3Hired)
+				RL3REF.MoveTo VHDHouseIndyCompanionMarker
+				SET RL3REF.Waiting TO 0;
+				RL3REF.evp;
+			endif	
+			
+ 			;Autosave Game Here
+              autosave
+
+			setstage VHDIndependentBattle 10
+			VHDIndependentStartTriggerREF.enable
+			set gamehour to 14
+
+		endif
+	endif
+
+END
+
+BEGIN OnStartCombat
+
+	StopCombat
+
+END

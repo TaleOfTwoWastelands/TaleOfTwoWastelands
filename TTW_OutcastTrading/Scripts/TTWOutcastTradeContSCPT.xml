@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D00377E">TTWOutcastTradeContSCPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWOutcastTradeContSCPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>386</CompiledSize>
+        <VariableCount>7</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAHQBAAAWABMAEgAPACBYLxAFAAEAcgMAIDAgPhUACwBmBgAGACBYzhAAABUABwBzBwACACAwPRUUAJsAAAABDwBWBAAABQBWBAAABgAaFgAXAAIAEwAgWBEVCAACAHIDAHIBACAwID49ORUTAAESAFYBAAAHAFgBAAYUBAAAABwcAAEA/xQCAAAAGQAAADwVAACgFCMAAgAcAFNvbGQgJS4wZiBjYXBzIHdvcnRoIG9mIHRlY2hzBwA5FRkAARgAVgAAAAQAVgEAAAcAQgoRQgETQgIRHBUACQBzAgAEACBmBAAVAA8AZgQACgAgZgQAIHMCACAtFgANAAQACQAgcwIAIDEgPj2gFBYAAgAPAFJlcCBBZGRlZDogJS4wZnMCADsSDQADAHIEAG4BAAAAcwIAFQAVAHMCABAAIFg9EgoAAgByBABuAQAAAKAUHgACABcAVG90YWwgT3V0Y2FzdCBSZXA6ICUuMGZzAgAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWOutcastTradeContSCPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iRep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fRep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">self</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">totalValue</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">5</Reference>
+        <Reference Tag="SCRV">6</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0017C7">TTWOutcastItems</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0027A4">TTWRepOutcasts</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

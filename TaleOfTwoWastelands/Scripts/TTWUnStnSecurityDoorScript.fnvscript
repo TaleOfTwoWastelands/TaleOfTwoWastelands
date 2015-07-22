@@ -1,0 +1,23 @@
+scn TTWUnStnSecurityDoorScript
+
+BEGIN OnActivate
+	if (GetQuestRunning TTWUnStnPowerQuest == 0)
+		SetObjectiveCompleted TTWUnStnPowerQuest 5 1
+		SetObjectiveDisplayed TTWUnStnPowerQuest 10 1
+		SetObjectiveDisplayed TTWUnStnPowerQuest 15 1
+		ForceActiveQuest TTWUnStnPowerQuest
+	else
+		SetStage TTWUnStnPowerQuest 10
+		ForceActiveQuest TTWUnStnPowerQuest
+		showmessage TTWUnStnPowerOffDoorsMsg
+	endif
+END
+
+BEGIN GameMode
+	if (GetQuestRunning TTWUnStnPowerQuest)
+		if (TTWUnStnPowerQuest.iButtonCount == 4)
+			SetOpenState 1
+			SetDestroyed 1
+		endif
+	endif
+END

@@ -1,0 +1,1238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="00102037">VCG00</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VCG00</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="00102035">VCG00ScriptNV</Reference>
+    </Script>
+    <Name Tag="FULL">Welcome To Fabulous New Vegas</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>0</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>313</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAIAEAAgWCISBQABAHIEACAwID09HAABAFIQDwADAHIFAG4BAAAAbgEAAAAcAAEAUhAPAAMAcgYAbgEAAABuAQAAABkAAACREQUAAQByBwBhEAwAAgBuAQAAAG4BAAAAHAABAJ4QBQABAHIIAP8RBQABAHIJABUACgByCgBzBgACACAxFQAIAEcLAAMAIDIzLREFAAEAcgwAkREFAAEAcg0AHAABADwRCwABAHoAAAAAAADwP2EQJQAHAG4AAAAAbgAAAABuAAAAAG4AAAAAbgEAAABuAAAAAG4AAAAAFBEkAAUADABGTlZJbnRyby5iaWtuAQAAAG4BAAAAbgAAAABuAQAAABwAAgAiEAIAAAAcAAMAIhACAAAAFQAKAHIKAHMGAAIAIDE5EAoAAgByCgBuWgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; DEMO ONLY - move to VCG01 start
+; and remove pip-boy
+if GetQuestCompleted CG04 == 0
+Player.RemoveItem Pipboy 1 1
+Player.RemoveItem PipboyGlove 1 1
+endif
+imod WhiteISFX
+DisablePlayerControls 1 1
+;player.moveto VPlayerGameStartMarkerREF
+player.moveto VCG01PlayerStartMarkerREF
+playmusic 1NoMusic
+; END DEMO CHANGE
+;bennyref.moveto VCG00BennyStartLocationMarker
+;set VCG00.fTimer to 1.0;
+set VCG00.bRunTimer to 1;
+Set GameHour to 23
+ForceWeather NVCemeteryIntro
+ApplyImageSpaceModifier MQ08AllBlackedOutISFX
+player.setscale 1
+;player.setscale 0.5
+DisablePlayerControls 0 0 0 0 1 0 0  ;immediately disable looking.
+
+; Give McMurphy a shovel
+; EDIT: DLC04Shovel works like a turd, leaving out for now
+;McMurphyREF.equipitem dlc04shovel 1
+
+
+; TEMP: DEMO CODE
+PlayBink "FNVIntro.bik" 1 1 0 1
+McMurphyREF.Disable;
+JessupREF.Disable;
+set VCG00.bRunTimer to 1;
+SetStage VCG00 90
+; END DEMO CODE</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00025B83">PipBoyGlove</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000AC03C">WhiteISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103E6B">VCG01PlayerStartMarkerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008A6D4">1NoMusic</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010B599">NVCemeteryIntro</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>85</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YRAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAQAAAG4BAAAAbgEAAAAVAAoAcgIAZgcAAgAgNxwAAQDkEQcAAQBu/////xwAAQDkEQcAAQBuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">disableplayercontrols 1 1 1 1 1 1 1
+;player.addscriptpackage CG00PlayerSection1
+Set VCG00.fTimer to 7
+Player.AgeRace -1
+Player.AgeRace 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>56</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDABQRJAAFAAwARk5WTG9nbzEuYmlrbgAAAABuAAAAAG4AAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; McMurphy speaks
+McMurphyREF.SayTo BennyREF VCG00OpeningSequence
+PlayBink "FNVLogo1.bik" 0 0 0 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101CA0">BennyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102504">VCG00OpeningSequence</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">9</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Jessup walks up
+JessupREF.evp;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>81</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAEAkBEXAAEAEwBudm9wZW5pbmd0aHVnMDFob29kFQAMAHIDAGYHAAQAIDAuNRwAAQBcEAUAAQByBAAcAAIAXBAFAAEAcgQA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Jessup removes the hood
+JessupREF.evp;
+JessupREF.playidle nvopeningthug01hood
+set VCG00.fTimer to 0.5
+JessupREF.Look Player
+McMurphyREF.Look Player
+;BennyREF.Playidle nvopenbennysmoking</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">11</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Hood removed, Jessup waits to pistol whip</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">khEFAAEAcgEAkREFAAEAcgIAFQAKAHIDAGYHAAIAIDU=</CompiledScript>
+              <ScriptSource Tag="SCTX">; remove hood fx, allow looking
+RemoveImageSpaceModifier MQ08AllBlackedOutISFX
+ApplyImageSpaceModifier FadeInFromBlack2sISFX
+;enableplayercontrols 0 0 0 0 1 0 0 ;enable looking
+
+
+Set VCG00.fTimer to 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E815E">FadeInFromBlack2sISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">12</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Jessup pistol whips the player</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>61</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAEAkBEdAAEAGQBOVm9wZW5pbmdUaHVnMDFQaXN0b2xXaGlwFQAMAHICAGYHAAQAIDEuMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Pistol whipping action!
+JessupREF.evp;
+JessupREF.playIdle NVopeningThug01PistolWhip
+
+; Make Benny begin walking toward the player
+;BennyREF.evp
+
+Set VCG00.fTimer to 1.0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">13</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHIDAJERBQABAHIEABwAAgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player recoils from pistol whip
+player.addScriptPackage VCG00PlayerSection0
+ApplyImageSpaceModifier Addiction01ISFX
+
+
+;mcmurphy walks over
+McMurphyREF.evp;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102519">VCG00PlayerSection0</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00058677">Addiction01ISFX</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">14</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYHAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay before smoking
+set VCG00.fTimer to 0;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYHAAIAIDg=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Benny brandishes the chip
+;bennyref.playidle nvopenbennychip
+set VCG00.fTimer to 8</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYHAAQAIDUuNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Benny says "shame about all this"
+;BennyREF.SayTo Player VCG00OpeningSequence
+set VCG00.fTimer to 5.5
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">23</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYHAAIAIDM=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Benny loads the gun
+;bennyref.playidle NVopenBennySmokeTurnShoot
+set VCG00.fTimer to 3</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">24</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYHAAIAIDU=</CompiledScript>
+              <ScriptSource Tag="SCTX">; sound of benny loading the gun
+
+set VCG00.fTimer to 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYHAAQAIDAuNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">;benny shoots
+;BennyREF.EVP
+set VCG00.fTimer to 0.5;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">27</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>45</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAFQAMAHICAGYHAAQAIDAuNYYREAACAHoAAAAAAADgP24BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;first bullet
+;BennyREF.FireWeapon WeapNV9mmPistolUnique
+ApplyImageSpaceModifier Addiction01ISFX
+Set VCG00.fTimer to 0.5
+SetGlobalTimeMultiplier 0.5 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00058677">Addiction01ISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAFQAMAHICAGYHAAQAIDIuMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Second bullet
+;BennyREF.FireWeapon WeapNV9mmPistolUnique
+ApplyImageSpaceModifier Addiction01ISFX
+Set VCG00.fTimer to 2.1;
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00058677">Addiction01ISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">33</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHICABUACgByAwBmBwACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">; transition to a looping idle facing the sky
+player.addscriptpackage VCG00PlayerSection1
+set VCG00.fTimer to 1;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00108025">VCG00PlayerSection1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">hhELAAEAegAAAAAAAPA/FQAKAHIBAGYHAAIAIDM=</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay before burial
+SetGlobalTimeMultiplier 1
+Set VCG00.fTimer to 3;
+;BennyREF.evp; benny stops playing his shoot the player idle</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">36</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>72</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">QxIQAAIAegAAAAAAAOA/bgEAAABAEiIABABuMgAAAHoAAAAAAAA5QHoAAAAAAAAAQHoAAAAAAAAAQBUACgByAQBmBwACACA0</CompiledScript>
+              <ScriptSource Tag="SCTX">; burial 1
+SetScreenSplatterFade 0.5 1
+TriggerScreenSplatter 50 25 2.0 2.0
+set VCG00.fTimer to 4;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">37</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">QBIiAAQAbjIAAAB6AAAAAAAANUB6AAAAAAAAAEB6AAAAAAAAAEAVAAoAcgEAZgcAAgAgNA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; burial 2
+TriggerScreenSplatter 50 21 2.0 2.0
+set VCG00.fTimer to 4;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">38</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">QBIiAAQAbmQAAAB6AAAAAAAAMUB6AAAAAAAAAEB6AAAAAAAAAEAVAAoAcgEAZgcAAgAgNA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;burial 3
+TriggerScreenSplatter 100 17 2.0 2.0
+set VCG00.fTimer to 4;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">39</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">QBIiAAQAbmQAAAB6AAAAAAAAKEB6AAAAAAAACEB6AAAAAAAAAEAVAAoAcgEAZgcAAgAgNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; burial 4
+TriggerScreenSplatter 100 12 3.0 2.0
+set VCG00.fTimer to 5;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>43</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgMAHAABACIQAgAAABwAAgAiEAIAAAAVAAoAcgQAZgcAAgAgMw==</CompiledScript>
+              <ScriptSource Tag="SCTX">; blackout, swap characters
+ApplyImageSpaceModifier MQ08AllBlackedOutISFX
+;BennyREF.MoveTo BennyTopsSandboxMarkerREF;
+JessupREF.Disable;
+McMurphyREF.Disable;
+Set VCG00.fTimer to 3;
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">43</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>54</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FBEkAAUADABGTlZMb2dvMi5iaWtuAAAAAG4AAAAAbgAAAABuAQAAABUACgByAQBmBwACACAz</CompiledScript>
+              <ScriptSource Tag="SCTX">; play the movie
+PlayBink "FNVLogo2.bik" 0 0 0 1
+set VCG00.fTimer to 3</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;Vic rolls up
+
+;Set VCG00.fTimer to 3;</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>230</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">QxIQAAIAegAAAAAAAOA/bgEAAABAEiIABABuZAAAAHoAAAAAAAA0QHoAAAAAAAAAQHoAAAAAAAAAQEASIgAEAG4yAAAAegAAAAAAADBAegAAAAAAAABAegAAAAAAAABAQBIiAAQAbmQAAAB6AAAAAAAAKkB6AAAAAAAABEB6AAAAAAAAAEBAEiIABABuMgAAAHoAAAAAAAAiQHoAAAAAAAAAQHoAAAAAAAAAQJIRBQABAHICABUACgByAwBmBwACACA3HAABAJARGwABABcATlZPcGVuaW5nU2VjdXJpdHJvbklkbGU=</CompiledScript>
+              <ScriptSource Tag="SCTX">;vic shovels, fade in
+SetScreenSplatterFade 0.5 1
+TriggerScreenSplatter 100 20 2.0 2.0
+TriggerScreenSplatter 50 16 2.0 2.0
+TriggerScreenSplatter 100 13 2.5 2.0
+TriggerScreenSplatter 50 9 2.0 2.0
+RemoveImageSpaceModifier MQ08AllBlackedOutISFX
+Set VCG00.fTimer to 7;
+VictorREF.PlayIdle NVOpeningSecuritronIdle</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">53</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAGYHAAIAIDEcAAEAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; we enable Vic after some of the digging, so his idle sound
+; isn't audible until after he "rolls up"
+Set VCG00.fTimer to 1;
+VictorREF.Enable;
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">54</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>50</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJARGwABABcATlZvcGVuaW5nU2VjdXJpdHJvbklkbGUVAAsAcgIAZgcAAwAgMTI=</CompiledScript>
+              <ScriptSource Tag="SCTX">; vic starts his idle anim
+VictorREF.PlayIdle NVopeningSecuritronIdle
+Set VCG00.fTimer to 12;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDABUADAByBABmBwAEACA1LjE=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Vic says howdy
+VictorREF.SayTo Player VCG00Rescue
+set VCG00.fTimer to 5.1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DF8">VCG00Rescue</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAGYHAAIAIDMcAAEAkBEXAAEAEwBOVk9wZW5pbmdTZWN1cml0cm9uHAACAJcQBQABAHIEAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;player stands
+Set VCG00.fTimer to 3;
+VictorREF.PlayIdle NVOpeningSecuritron
+player.addscriptpackage vcg00playersection2;
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00108F88">VCG00PlayerSection2</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;vic says give me your hand and reaches out
+;VictorREF.SayTo Player VCG00Rescue</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAFQAMAHICAGYHAAQAIDMuMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;player's vision blurs and he falters a little
+ApplyImageSpaceModifier Addiction01ISFX
+Set VCG00.fTimer to 3.0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00058677">Addiction01ISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;vic says the player could use a sarsaparilla
+VictorREF.SayTo Player VCG00Rescue</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DF8">VCG00Rescue</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYHAAQAIDEuNZERBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;player falls
+set vcg00.fTimer to 1.5;
+ApplyImageSpaceModifier Addiction01ISFX</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00058677">Addiction01ISFX</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">85</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>25</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAFQAMAHICAGYHAAQAIDAuNg==</CompiledScript>
+              <ScriptSource Tag="SCTX">;player begins to black out
+ApplyImageSpaceModifier FadeToBlack2sISFX
+Set VCG00.fTimer to 0.6;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E815D">FadeToBlack2sISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>23</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAFQAKAHICAGYHAAIAIDM=</CompiledScript>
+              <ScriptSource Tag="SCTX">; blackout
+ApplyImageSpaceModifier MQ08AllBlackedOutISFX
+set VCG00.fTimer to 3</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; move to doc mitchell's house for vcg01
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>146</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAAAAAG4BAAAAbgEAAACSEQUAAQByBgBYEQAAQRIAABwAAQCYEAAAHAACACIQAgAAABwAAQA8EQsAAQB6AAAAAAAA8D85EAoAAgByBwBuAAAAABwAAwDvEAUAAQByCAAcAAQAXRAAABwAAwBdEAAAHAAFAF0QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;cleanup
+enableplayercontrols 1 1 1 1 0 1 1
+RemoveImageSpaceModifier MQ08AllBlackedOutISFX
+ReleaseWeatherOverride
+ClearScreenSplatter
+player.RemoveScriptPackage
+VCG00PropEnabler.Disable
+player.setscale 1;
+SetStage VCG01 0
+
+; Make McMurphy unequip the shovel
+McMurphyREF.unequipitem dlc04shovel
+JessupREF.StopLook Player
+McMurphyREF.StopLook Player
+BennyREF.StopLook Player</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010B3A8">VCG00PropEnabler</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9E">McMurphyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101C9F">JessupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00101CA0">BennyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00026370">MQ08AllBlackedOutISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000F204A">dlc04shovel</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

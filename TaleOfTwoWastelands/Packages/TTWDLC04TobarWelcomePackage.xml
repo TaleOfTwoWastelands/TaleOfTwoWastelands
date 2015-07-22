@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PACK">
+  <Flags>0</Flags>
+  <FormID ID="0C004B92">TTWDLC04TobarWelcomePackage</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC04TobarWelcomePackage</EditorID>
+    <Data Tag="PKDT">
+      <Flags>0</Flags>
+      <Type>Dialog</Type>
+      <FalloutBehaviorFlags>0</FalloutBehaviorFlags>
+      <TypeFlags>AAA=</TypeFlags>
+    </Data>
+    <Location1 Tag="PLDT">
+      <Type>NearReference</Type>
+      <Location ID="0C004B8F">TTWDLC04TobarMarker</Location>
+      <Radius>100</Radius>
+    </Location1>
+    <Schedule Tag="PSDT">
+      <Month>-1</Month>
+      <DayOfWeek>Any</DayOfWeek>
+      <Date>0</Date>
+      <Time>-1</Time>
+      <Duration>0</Duration>
+    </Schedule>
+    <Target1 Tag="PTDT">
+      <Type>SpecificReference</Type>
+      <Target ID="00000014">UnfoundReference</Target>
+      <Value>150</Value>
+      <Unknown>0</Unknown>
+    </Target1>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetTalkedToPC</Type>
+          <UnusedArg1>AAAAAA==</UnusedArg1>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <DialogData Tag="PKDD">
+      <FOV>100</FOV>
+      <Topic ID="00000000">NullReference</Topic>
+      <Flags>0</Flags>
+      <Type>Conversation</Type>
+    </DialogData>
+    <OnBegin>
+      <Marker Tag="POBA" />
+      <Idle Tag="INAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Idle>
+      <Script>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </Script>
+      <Topic Tag="TNAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Topic>
+    </OnBegin>
+    <OnEnd>
+      <Marker Tag="POEA" />
+      <Idle Tag="INAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Idle>
+      <Script>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </Script>
+      <Topic Tag="TNAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Topic>
+    </OnEnd>
+    <OnChange>
+      <Marker Tag="POCA" />
+      <Idle Tag="INAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Idle>
+      <Script>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </Script>
+      <Topic Tag="TNAM">
+        <Reference ID="00000000">NullReference</Reference>
+      </Topic>
+    </OnChange>
+  </Subrecords>
+</Record>

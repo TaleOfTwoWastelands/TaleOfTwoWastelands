@@ -1,0 +1,325 @@
+ScriptName MQ04Script
+
+;covers all scripting and variables for quest MQ04
+
+short DeadNPCs		;incremented when anyone in TL is killed. Talking to Betty after incrementing this causes her to reset things so everyone is alive
+
+short PlayerinChair	;flag set when player is seated in lounger; 1 triggers animations, 2 allows for move to TL
+short PlayerInTL		;flag set to 1 when player actually enters Tranquility Lane; set back to 0 when he exits
+short DadInfo			;flag set to 1 when player asks about Dad's whereabouts, used to update dialogue choices
+short SafetyLock		;flag for safety protocols preventing NPCs from permanent death. 0 for no permanent death, 1 to allow permanent death
+short NPCReset		;flag used for tracking reset updates every morning
+short BettyRefuse		;flag set when player refuses task from Betty; reset every time player completes a task.
+short Task1				;flag set to 1 if player agrees to complete task 1
+short Task2				;flag set to 1 if player agrees to complete task 2
+short Task3				;flag set to 1 if player agrees to complete task 3
+short MarthaInfo		;flag set to 1 if player learns about Roger/Martha connection
+short undiesplaced	;flag set to 1 if player places underwear in Rockwells' basement
+short BasementBody	;flag set to 1 if player kills Old Lady Dithers in the Rockwells' basement
+short JanetFollow		;flag set when player asks Janet to follow him to the basement
+short RockwellConv	;flag used for tracking conversation between Janet and Roger
+short BasementBody	;flag set if NPC is killed in the Rockwells basement
+short SlasherKills		;flag incremented when killing NPCs as the Slasher
+short DithersInfo		;flag set in dialogue results when player learns of existence of failsafe from Dithers
+short FailSeq			;var incremented as player activates objects for Failsafe; reset if he gets one wrong
+short FailLast			;var set to the last failsafe object activated, used for tracking sequence
+short HouseEnter		;flag set to 1 when player has entered the abandoned house
+short BettyHit			;flag set to 1 if player hits Betty in any fashion -- used in BettyScript
+short ResetInfo		;flag set if Betty has ever reset anyone and talked to the player about it
+short MiseryInfo		;flag set if Dithers has told player about failsafe and ending misery
+short DadGreet			;flag set when back in Vault 112; used to handle packages for Dad
+
+short DadDogInfo		;flag set when player learns dad is a dog
+short BraunInfo		;flag set when player is told Betty is Braun
+short TLInfo				;flag set when/if player asks for more information about TL
+
+Short Invasion			;flag set when player uses failsafe terminal; triggers endstate behavior for Chinese Invasion
+Short InvasionStep	;var incremented when scripting associated with Invasion stuff has run
+
+
+short Task1Complete
+;set to 1 if player uses speech on Timmy
+;set to 2 if player tricks Timmy with brochure
+;set to 3 if player beats Timmy up
+;set to 4 if player kills one of Timmy's parents
+;set to 5 if player rigs robot to "haunt" Timmy's room
+
+short Task2Complete
+;set to 1 if player convinces Janet Roger is cheating
+;set to 2 if player successfully plants underwear in the basement
+
+;set to 4 if player kills Martha with Janet's rolling pin
+;set to 5 if player convinces Janet Roger wears underwear
+
+
+short Task3Complete
+;set to 1 if player rigs the oven to explode
+;set to 2 if player puts rollerskate on the stairs
+;set to 3 if Chandelier falls on Mabel
+;set to 4 if robot is reprogrammed
+
+
+float StageUpdateTimer		;timer used to update to stage 5 after arriving in Tranquility Lane
+
+
+
+
+Begin GameMode
+
+
+
+;scripting for moving player from Vault112 to Tranquility Lane worldspace
+;also handles changing player into kid and giving him the appropriate clothes
+
+;PlayerInChair var is set on MQ04PlayerPodScript
+	if ( PlayerInChair == 2 )
+
+		if ( Player.GetInCell Vault112a == 1 )
+
+;While we're running this block, set any followers to Waiting so they don't wander into Tranquility Lane
+
+			if ( JerichoRef.HasBeenHired == 1 )
+				set JerichoRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( CharonRef.HasBeenHired == 1 )
+				set CharonRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( DogmeatRef.HasBeenHired == 1 )
+				set DogmeatRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( ButchRef.HasBeenHired == 1 )
+				set ButchRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( CloverRef.HasBeenHired == 1 )
+				set CloverRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( RL3Ref.HasBeenHired == 1 )
+				set RL3Ref.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( MQ08FawkesRef.HasBeenHired == 1 )
+				set MQ08FawkesRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( StarPaladinCrossRef.HasBeenHired == 1 )
+				set StarPaladinCrossRef.Waiting to 1
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bBooneHired == 1 )
+				set CraigBooneREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bCassHired == 1 )
+				set RoseofSharonCassidyREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bVeronicaHired == 1 )
+				set VeronicaREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bLilyHired == 1 )
+				set LilyREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.RaulHired == 1 )
+				set RaulREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.ArcadeHired == 1 )
+				set ArcadeREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.bEDEHired == 1 )
+				if EDE1Ref.GetDisabled == 0
+					set EDE1Ref.Waiting to 1
+				elseif EDE2Ref.GetDisabled == 0
+					set EDE2Ref.Waiting to 1
+				elseif EDE3Ref.GetDisabled == 0
+					set EDE3Ref.Waiting to 1
+				endif
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+			if ( vNPCFollowers.RexHired == 1 )
+				set RexREF.Waiting to 1
+				set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+			endif
+
+			SetLocationSpecificLoadScreensOnly 1
+			Player.Dispel Stealthboy
+			Player.moveto MQ04StartBench
+			Player.RemoveAllItems MQ04PlayerContainerRef
+			Player.RemoveItem Pipboy 1 1
+			Player.RemoveItem PipboyGlove 1 1
+			SetPCYoung 1
+			player.AgeRace -1
+			player.additem MQ04PlayerOutfit 1 1
+			player.equipitem MQ04PlayerOutfit 1 1
+			Set StageUpdateTimer to 3
+			Set PlayerInTL to 1
+			Set PlayerInChair to -1
+;			RImod MQ04PodFadetoWhiteISFX
+
+;finally, disable both Enclave Radio and GNR broadcast refs while the player is in TL
+
+			if ( RadioGalaxyNewsRef01.GetDisabled == 0 )
+				RadioGalaxyNewsRef01.Disable
+			endif
+			if ( RadioGalaxyNewsRef02.GetDisabled == 0 )
+				RadioGalaxyNewsRef02.Disable
+			endif
+			RadioEnclaveRef.Disable
+			PipBoyRadioOff
+
+			EnablePlayerControls
+			AutoDisplayObjectives 1			
+
+		endif
+	endif
+
+;run a timer after arriving to give the initial stage update
+
+	if ( GetStage MQ04 == 0 )
+		if ( Player.GetInWorldSpace TranquilityLane == 1 )
+			if ( StageUpdateTimer > 0 )
+				set StageUpdateTimer to ( StageUpdateTimer - GetSecondsPassed )
+			else
+				if ( GetStage MQ03 >= 10 )
+					SetStage MQ03 200
+				endif
+				SetStage MQ04 5
+				SetQuestDelay MQ04 0
+			endif
+		endif
+	endif
+
+
+;update variable on Old Lady Dithers if the player enters the abandoned house
+	if ( OldLadyDithersRef.talk == 0 )
+		if ( Player.GetinCell TLAbandonedHouse == 1 )
+			set OldLadyDithersRef.Talk to 1
+		endif
+	endif
+
+;---------------------FAILSAFE SCRIPTING-----------------------
+
+
+	if ( InvasionStep == 0 )
+		if ( MQ04.Invasion == 1 )
+			GeorgeNeusbaumRef.Resurrect 0
+			GeorgeNeusbaumRef.Moveto MQ04GeorgeInvasionMarker
+			PatNeusbaumRef.Resurrect 0
+			PatNeusbaumRef.Moveto MQ04PatInvasionMarker
+			MabelHendersonRef.Resurrect 0
+			MabelHendersonRef.Moveto MQ04MabelInvasionMarker
+			OldLadyDithersRef.Resurrect 0
+			OldLadyDithersRef.Moveto MQ04DithersInvasionMarker
+			MarthaSimpsonRef.Resurrect 0
+			MarthaSimpsonRef.Moveto MQ04MarthaInvasionMarker
+			RogerRockwellRef.Resurrect 0
+			RogerRockwellRef.Moveto MQ04RogerInvasionMarker
+			JanetRockwellRef.Resurrect 0
+			JanetRockwellRef.Moveto MQ04JanetInvasionMarker
+			if ( TimmyNeusbaumRef.GetDisabled == 0 )
+				TimmyNeusbaumRef.Disable
+			endif
+			MQ04SoldierRef1.Enable
+			MQ04SoldierRef2.Enable
+			MQ04SoldierRef3.Enable
+			MQ04SoldierRef4.Enable
+			MQ04SoldierRef5.Enable
+			MQ04SoldierRef6.Enable
+			MQ04SoldierRef7.Enable
+			MQ04ExitDoorActRef.Enable
+			SetStage MQ04 70
+			RewardKarma 300
+			set InvasionStep to 1
+		endif
+	elseif ( InvasionStep == 1 )
+		SetQuestDelay MQ04 0
+		set InvasionStep to 2
+	endif
+
+
+
+
+;---------------------TASK 1 SCRIPTING----------------------------
+
+;if either of Timmy's parents are dead, and he's not yet on the correct package, have him re-evaluate
+;(added because Timmy doesn't seem to be getting the message... he's kind of a slow kid.)
+
+	if ( GetStage MQ04 == 15 )
+		if ( TimmyNeusbaumRef.DadDead == 1 ) 
+			if ( TimmyNeusbaumRef.GetCurrentAIPackage != MQ04TimmyMournGeorge )
+				TimmyNeusbaumRef.EVP
+			endif
+		elseif ( TimmyNeusbaumRef.MomDead == 1 )
+			if ( TimmyNeusbaumRef.GetCurrentAIPackage != MQ04TimmyMournPat )
+				TimmyNeusbaumRef.EVP
+			endif
+		endif
+	endif
+
+;--------------------TASK 2 SCRIPTING---------------------------
+
+
+
+;-------------------TASK 3 SCRIPTING------------------------
+
+;Update quest stage when player has killed Mabel with rollerskate
+;Note that Task3Complete is set in Mabel's script, not here
+
+	if ( MabelHendersonRef.push == 1 )
+		if ( MabelHendersonRef.SkatePlaced == -1 )
+			if ( GetStage MQ04 == 35 )
+				SetStage MQ04 40
+				set MabelHendersonRef.push to -1		
+			endif
+		endif
+	endif
+
+;If Mabel is killed by the robot, flag the var and update the quest
+
+	if ( GetStage MQ04 == 35 )
+		if ( TLHendersonRobotRef.IsKiller MabelHendersonRef == 1 )
+			Set MQ04.Task3Complete to 4
+			SetStage MQ04 40
+		endif
+	endif
+
+
+;--------TASK 4 SCRIPTING---------------------------------------
+
+;Update Objective when player has slasher outfit and knife in inventory
+;Force equip both mask and knife, since player can't access inventory
+	if ( GetStage MQ04 == 45 )
+		if ( Player.GetItemCount MQ04SlasherMask > 0 )
+			if ( Player.GetItemCount MQ04SlasherKnife > 0 )
+				SetStage MQ04 50
+			endif
+		endif
+	endif
+
+;Update Objective again when all target NPCs are dead (note that var is incremented through scripts on the individual NPCs)
+
+	if ( GetStage MQ04 == 50 )
+		if ( SlasherKills >= 8 )
+			SetStage MQ04 60
+		endif
+	endif
+
+
+;Update Quest Stage and Objective when player has exited Tranquility Lane
+
+	if ( GetStage MQ04 == 70 )
+		if ( Player.GetInCell Vault112a == 1 )
+			SetStage MQ04 75
+		endif
+	endif
+
+
+End

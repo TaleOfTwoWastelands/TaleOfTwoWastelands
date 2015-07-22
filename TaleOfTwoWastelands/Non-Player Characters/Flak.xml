@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156B3">Flak</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Flak</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Flak</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>8</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179D9">RCResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0001EAA0">FlakAndShrapnel</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0003D1FC">MS13AlwaysMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0006DDF5">FlakShrapnelSell</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A4">SmokerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000ABFEE">RCGenericVoiceFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D82">DeathItemFlak</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="060717E1">MaleAdult17</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C3">CaucasianOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="060258A0">FlakScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00034069">CigarettePack</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340B5">ShotGlass01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006698D">FoodLiquorHard100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF5D">FlakShrapnelRoomKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000C5D34">OutfitMerc06</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0602936C">WithAmmoChinesePistolNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06038805">FoodGeneric100DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Weapons, Armor, Stimpacks, Miscellaneous, Repair</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0601B17D">MS13Enslaved</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060258A2">FlakEat21x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB04">FlakEatSat21x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB01">FlakEat17x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EAF9">FlakEat7x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060258A1">FlakServices7x16</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB03">FlakServicesSat7x16</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060258A3">FlakDrink21x3MWF</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB05">FlakDrink19x3MWF</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB02">FlakFlightDeck19x2TTh</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB07">FlakServices7x10NotSun</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EAFA">FlakSleep23x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EB06">FlakHomeDefault</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00019462">VendorWeapons</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>62</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>58</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>60</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="00066FD6">BeardChopper</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BCBED">BeardSoulPatchCircle</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDB">HairBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>50</Green>
+        <Blue>25</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">aBb4PmxXjT98J4u/OFs+v/iFR79QzOm+YJA0voOoEz/ebcs/oN2xve5VND/KkJ2/+xzDP7+Urb801qg/Qt5Iv5aUc7+AGrs7vHV2v/rIcj/wVYrAWlFxv2CrljwYPmI+RZg8v1WY3r57FcM/cHKKvuVsmj9Snz3AqMSYv9lL8r+g/rC9LnBqP750kr8kBh2+5CPQP6xPBz98dYlAdZ7QwOCTqD15Q4A/AM+NPOwWx8BM7Ms/APrIvI9ZlMAMZFE/gOFSwFujg8A=</Symmetric>
+        <Asymmetric Tag="FGGA">zrfVv0xGJ76tBBDAtkxTPiiaLj+YsgK/PLHdPmvxDT5NoJs/2P98v2bEFL/KBCM92C0Gv9z+pL8VBeW/sIKVP27zMb46OFy/Gn+6vuzQ2r6e2o2/8sllvvL0ij4S0QE/CgXuvpbgDb2i45Q+4BjwvhHAFj+t+8W/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">SEoMwF6CRT9mLT2+g2fIP/g9Fz+dd/Q/aaYWQDJZBL/gym6/WVTcPjBNVj/Bx4K/+YoTPwepzT+kQ7w8F5tvv5tLpr4ataQ/tdtKPxbbzT8QaKW/+PK1PPxm976RoFe/ovDOvwWZLD9jkNe+kHiDvyM+Gb+sATA+nPkXP4isPz9QA189FE8oP5EHMT9cjEC/fFwWv3KlLz+D4um9iD7GP22xGL/8w5M/B0fsvq/K078rj7C/+P+FvSg2rz0y3Km9OqYfwGQKb74=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

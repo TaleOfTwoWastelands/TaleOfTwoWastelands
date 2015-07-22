@@ -1,0 +1,69 @@
+scn HD00LabScript
+ 
+short Done
+short Button
+short HDLab0                                                                                                                    ;1= The laboratory is now "brewing" a drug
+float HDLabTime0                                                                                                               ; x.x= Float for how much time has passed
+short ProcessButton
+ 
+ 
+;Globals used here
+ 
+ 
+begin OnActivate
+        if IsActionRef player == 1
+       
+                if ( HDLab0 == 0 )     
+                        set ProcessButton to 1
+                        ShowMessage HD00LabMessage
+                elseif ( HDLab0 == 1 )
+                        ShowMessage HD00LabMessage01
+                elseif ( HDLab0 == 2 )
+                        Set HDLab0 to 0
+                        ShowMessage HD00LabMessage02
+                        Player.AddItem LootChemsAll100 1
+                endif
+ 
+        endif
+end
+ 
+begin gamemode
+ 
+;This section of the gamemode block handles all of the button presses on the Laboratory kit
+ 
+        set Button to GetButtonPressed
+        if Button > -1
+                if ProcessButton == 1
+                        if ( Button == 0 )
+                                Set HDLab0 to 1
+                                Set HDLabTime0 to GameDaysPassed
+                        elseif ( Button == 1 )
+                                Player.RemoveSpell WithdrawalQuantumNukacola
+                                Player.RemoveSpell WithdrawalAlcohol
+                                Player.RemoveSpell WithdrawalBuffout
+                                Player.RemoveSpell WithdrawalJet
+                                Player.RemoveSpell WithdrawalMentats
+                                Player.RemoveSpell WithdrawalMorphine
+                                Player.RemoveSpell WithdrawalPsycho
+                                Player.RemoveSpell WithdrawalTurbo
+                                Player.RemoveSpell WithdrawalTobacco
+                                Player.RemoveSpell WithdrawalSteady
+                                Player.RemoveSpell WithdrawalRebound
+                                Player.RemoveSpell WithdrawalHydra
+                                Player.RemoveSpell WithdrawalAntNectar
+                                ShowMessage HDLabDetoxify
+                        elseif ( Button == 2 )
+                        endif
+                endif
+                ; clear button variable
+                set ProcessButton to 0
+        endif
+ 
+       
+        if ( HDLab0 == 1 )
+                if ( GameDaysPassed - HDLabTime0 >= 1 )
+                        Set HDLab0 to 2
+                endif
+        endif
+ 
+end

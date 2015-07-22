@@ -1,0 +1,23 @@
+scn DLC05SpaceWalk03MasTrigSCRIPT
+
+short onLoad
+
+Begin GameMode
+
+	if (onLoad == 0)
+		ShowWarning "Player rides the central elevator to the upper part of the ship."
+		set onLoad to 1
+	endif
+
+
+;--------------------------------------------------------------------------------
+;----If at Zero Atmosphere, and no Astro Suit, kill player
+;--------------------------------------------------------------------------------
+	if (DLC05SpaceWalkQ.zeroAtmo == 1) && ((Player.GetEquipped DLC05AstronautSuit == 0) && (Player.GetEquipped ArmorNVSpaceSuit == 0) || (Player.GetEquipped HelmetNVSpaceSuit == 0))
+		ShowMessage DLC05DeathInSpaceMessage
+		Player.Kill
+		set DLC05SpaceWalkQ.zeroAtmo to 2
+	endif
+
+End
+

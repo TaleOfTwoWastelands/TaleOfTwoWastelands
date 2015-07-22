@@ -1,0 +1,70 @@
+scn		VFreeformTheStreet01SuitCountScript
+; - Jorge
+
+Short		Vault3Count
+Short		Vault11Count
+Short		Vault19Count
+Short		Vault22Count
+Short		Vault34Count
+Short		Vault21Count
+Short		Vault101Count
+Short		Vault106Count
+Short		Vault108Count
+Short		Vault112Count
+Short		Vault77Count
+Short		Vault87Count
+Short		Vault92Count
+Short		BoomSuitCount1
+Short		BoomSuitCount2
+
+Short		SuitCount
+Short		BoomCount
+Short		CashMoney
+
+
+Begin OnTriggerEnter Player
+
+Set Vault3Count to Player.GetItemCount VaultSuit3
+Set Vault11Count to Player.GetItemCount VaultSuit11
+Set Vault19Count to Player.GetItemCount VaultSuit19
+Set Vault22Count to Player.GetItemCount VaultSuit22
+Set Vault34Count to Player.GetItemCount VaultSuit34
+Set Vault21Count to Player.GetItemCount VaultSuit21
+Set Vault101Count to Player.GetItemCount VaultSuit101
+Set Vault106Count to Player.GetItemCount VaultSuit106
+Set Vault108Count to Player.GetItemCount VaultSuit108
+Set Vault112Count to Player.GetItemCount VaultSuit112
+Set Vault77Count to Player.GetItemCount VaultSuit77
+Set Vault87Count to Player.GetItemCount VaultSuit87
+Set Vault92Count to Player.GetItemCount VaultSuit92
+
+Set SuitCount to ( Player.GetItemCount VaultSuit3 + Player.GetItemCount VaultSuit22 + Player.GetItemCount VaultSuit11 + Player.GetItemCount VaultSuit19 + Player.GetItemCount VaultSuit34 + Player.GetItemCount VaultSuit21 + Player.GetItemCount VaultSuit101 + Player.GetItemCount VaultSuit106 + Player.GetItemCount VaultSuit108 + Player.GetItemCount VaultSuit112 + Player.GetItemCount VaultSuit77 + Player.GetItemCount VaultSuit87 + Player.GetItemCount VaultSuit92)
+
+Set CashMoney to (SuitCount * 30)
+Set VFreeformTheStreet01.CashMoney to CashMoney
+Set VFreeformTheStreet01.VaultSuits3 to Vault3Count
+Set VFreeformTheStreet01.VaultSuits22 to Vault22Count
+Set VFreeformTheStreet01.VaultSuits11 to Vault11Count
+Set VFreeformTheStreet01.VaultSuits19 to Vault19Count
+Set VFreeformTheStreet01.VaultSuits34 to Vault34Count
+Set VFreeformTheStreet01.VaultSuits21 to Vault21Count
+Set VFreeformTheStreet01.VaultSuits101 to Vault101Count
+Set VFreeformTheStreet01.VaultSuits106 to Vault106Count
+Set VFreeformTheStreet01.VaultSuits108 to Vault108Count
+Set VFreeformTheStreet01.VaultSuits112 to Vault112Count
+Set VFreeformTheStreet01.VaultSuits77 to Vault77Count
+Set VFreeformTheStreet01.VaultSuits87 to Vault87Count
+Set VFreeformTheStreet01.VaultSuits92 to Vault92Count
+
+
+If VFreeformTheStreet01.BoomerSuits == 1
+	Set BoomSuitCount1 to Player.GetItemCount OutfitBoomer1
+	Set BoomSuitCount2 to Player.GetItemCount OutfitBoomer2
+	Set BoomCount to ( BoomSuitCount1 + BoomSuitCount2 )
+	Set CashMoney to ( ( SuitCount * 30) + ( BoomCount * 15 ) )
+	Set VFreeformTheStreet01.CashMoney to CashMoney
+	Set VFreeformTheStreet01.Boomster1 to BoomSuitCount1
+	Set VFreeformTheStreet01.Boomster2 to BoomSuitCount2
+Endif
+
+End

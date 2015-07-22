@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="05000932">NVDLC05RecipeNukaGrenade</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC05RecipeNukaGrenade</EditorID>
+    <Name Tag="FULL">Nuka-Grenade (GRA)</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="00033BC9">SchematicsNukaCocktailNote</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="000C33B4">SchematicsNukaCocktailNote10</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="000C33B5">SchematicsNukaCocktailNote20</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>HasPerk</Type>
+          <Perk ID="0500092E">NVDLC05MadBomber</Perk>
+          <Rank>0</Rank>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>Explosives</Skill>
+      <Level>60</Level>
+      <Category ID="0013B2C1">WorkbenchRecipes</Category>
+      <SubCategory ID="0013E11A">WeaponSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="000E2F6D">NVNukaColaQuartz</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="00022104">TinCan01</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="00022106">AbraxoCleaner</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="00022105">Turpentine</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="05000818">NVDLC05WeapGrenadeNuka</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

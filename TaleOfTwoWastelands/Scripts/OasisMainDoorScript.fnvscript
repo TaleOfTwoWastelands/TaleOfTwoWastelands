@@ -1,0 +1,52 @@
+ScriptName OasisMainDoorScript
+
+
+Begin OnActivate
+
+	if ( IsActionRef Player == 1 )
+		Activate
+	elseif ( IsActionRef CharonRef == 1 )
+		Activate
+	elseif ( IsActionRef DogmeatRef == 1 )
+		Activate
+	elseif ( IsActionRef ButchRef == 1 )
+		Activate
+	elseif ( IsActionRef CloverRef == 1 )
+		Activate
+	elseif ( IsActionRef JerichoRef == 1 )
+		Activate
+	elseif ( IsActionRef MQ08FawkesRef == 1 )
+		Activate
+	elseif ( IsActionRef RL3REF == 1 )
+		Activate
+	elseif ( IsActionRef StarPaladinCrossRef == 1 )
+		Activate
+	elseif ( IsActionRef MS10BirchRef == 1 )
+		Activate
+	elseif ( IsActionRef CraigBooneREF == 1 )
+		Activate
+	elseif ( IsActionRef RoseofSharonCassidyREF == 1 )
+		Activate
+	elseif ( IsActionRef VeronicaREF == 1 )
+		Activate
+	elseif ( IsActionRef LilyREF == 1 )
+		Activate
+	elseif ( IsActionRef RaulREF == 1 )
+		Activate
+	elseif ( IsActionRef ArcadeREF == 1 )
+		Activate
+	elseif ( IsActionRef EDE1Ref == 1 )
+		Activate
+	elseif ( IsActionRef EDE2Ref == 1 )
+		Activate
+	elseif ( IsActionRef EDE3Ref == 1 )
+		Activate
+	elseif ( IsActionRef RexREF == 1 )
+		Activate
+	elseif ( IsActionRef MS10MapleRef == 1 )
+		Activate
+	else
+		; do nothing
+	endif
+
+End

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A1">TTWChallengeJohnny</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeJohnny</EditorID>
+    <Name Tag="FULL">Johnny Be Good **</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E1">TTWChallengeTwoStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Mad Johnny Wes at Hubris Comics Building with Ants Sting or Protectrons Gaze.</Description>
+    <Data Tag="DATA">
+      <Type>KillASpecificFormID</Type>
+      <Threshold>1</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <Actor Tag="SNAM">
+      <Reference ID="06030104">HubrisComicsJohnnyWes</Reference>
+    </Actor>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185C5">TTWChallengeJohnnyWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

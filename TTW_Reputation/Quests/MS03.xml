@@ -1,0 +1,3385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E96">MS03</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS03</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0602D271">MS03script</Reference>
+    </Script>
+    <Name Tag="FULL">Wasteland Survival Guide</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>59</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Ask Moira about her book.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgIAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS03 2 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Help Moira with Chapter 1.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">;SetObjectiveCompleted MS03 2 1
+;SetObjectiveDisplayed MS03 5 1
+Set MS03.MS03a to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a1 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>670</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAoxEPAAMAcgMAbgwAAABuAAAAAKIRDwADAHIDAG4QAAAAbgEAAAAVAAoAcgMAcwsAAgAgNBYALgADACoAIHIDAHMLACA0ID09IHIDAHMMACA0ID09ICYmIHIDAHMNACA0ID09ICYmFQAKAHIDAHMIAAIAIDM5EAoAAgByAwBuJgAAAKIRDwADAHIDAG4FAAAAbgEAAAAZAAAAFgBNAAEASQAgcgMAcywAIHIDAHMtACA+IHIDAHMsACByAwBzLgAgPiAmJiByAwBzLAAgcgMAcy8AID4gJiYgcgMAcywAIHIDAHMwACA+ICYmFQAKAHIDAHMxAAIAIDAYAE0AAQBJACByAwBzLQAgcgMAcywAID4gcgMAcy0AIHIDAHMuACA+ICYmIHIDAHMtACByAwBzLwAgPiAmJiByAwBzLQAgcgMAczAAID4gJiYVAAoAcgMAczEAAgAgMRgATQABAEkAIHIDAHMuACByAwBzLQAgPiByAwBzLgAgcgMAcywAID4gJiYgcgMAcy4AIHIDAHMvACA+ICYmIHIDAHMuACByAwBzMAAgPiAmJhUACgByAwBzMQACACAyGABNAAEASQAgcgMAcy8AIHIDAHMtACA+IHIDAHMvACByAwBzLgAgPiAmJiByAwBzLwAgcgMAcywAID4gJiYgcgMAcy8AIHIDAHMwACA+ICYmFQAKAHIDAHMxAAIAIDMYAE0AAQBJACByAwBzMAAgcgMAcy0AID4gcgMAczAAIHIDAHMuACA+ICYmIHIDAHMwACByAwBzLwAgPiAmJiByAwBzMAAgcgMAcywAID4gJiYVAAoAcgMAczEAAgAgNBcAAgABABUACgByAwBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set Moira to enter this new data
+;set MS03.MoiraDataEntry to 1
+;MoiraBrownREF.evp
+
+;Add player reward
+player.addItem MS03a1FoodReward 1
+
+;Finish "return" objective and clear others
+SetObjectiveDisplayed MS03 12 0
+SetObjectiveCompleted MS03 16 1
+
+
+;Set new tracking variables
+Set MS03.MS03a1 to 4
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED64">MS03a1FoodReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">14</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a1 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>728</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4BAAAAHAABAHwRBQABAHIEABUAEwByBQBzAQALACByBQBzAQAgMSArFQATAHIFAHMDAAsAIHIFAHMDACAxICuiEQ8AAwByBQBuEAAAAG4BAAAAFQAKAHIFAHMLAAIAIDQWAC4AAwAqACByBQBzCwAgNCA9PSByBQBzDAAgNCA9PSAmJiByBQBzDQAgNCA9PSAmJhUACgByBQBzCAACACAzORAKAAIAcgUAbiYAAACiEQ8AAwByBQBuBQAAAG4BAAAAGQAAABYATQABAEkAIHIFAHMsACByBQBzLQAgPiByBQBzLAAgcgUAcy4AID4gJiYgcgUAcywAIHIFAHMvACA+ICYmIHIFAHMsACByBQBzMAAgPiAmJhUACgByBQBzMQACACAwGABNAAEASQAgcgUAcy0AIHIFAHMsACA+IHIFAHMtACByBQBzLgAgPiAmJiByBQBzLQAgcgUAcy8AID4gJiYgcgUAcy0AIHIFAHMwACA+ICYmFQAKAHIFAHMxAAIAIDEYAE0AAQBJACByBQBzLgAgcgUAcy0AID4gcgUAcy4AIHIFAHMsACA+ICYmIHIFAHMuACByBQBzLwAgPiAmJiByBQBzLgAgcgUAczAAID4gJiYVAAoAcgUAczEAAgAgMhgATQABAEkAIHIFAHMvACByBQBzLQAgPiByBQBzLwAgcgUAcy4AID4gJiYgcgUAcy8AIHIFAHMsACA+ICYmIHIFAHMvACByBQBzMAAgPiAmJhUACgByBQBzMQACACAzGABNAAEASQAgcgUAczAAIHIFAHMtACA+IHIFAHMwACByBQBzLgAgPiAmJiByBQBzMAAgcgUAcy8AID4gJiYgcgUAczAAIHIFAHMsACA+ICYmFQAKAHIFAHMxAAIAIDQXAAIAAQAVAAoAcgUAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Add player reward
+player.addItem MS03a1FoodReward 1
+player.addItem MS03Sanitizer 1
+player.addnote MS03SanitizerNote
+
+;Set Moira to enter this new data
+;set MS03.MoiraDataEntry to 1
+;MoiraBrownREF.evp
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03aBonus to MS03.MS03aBonus + 1
+
+;Finish "return" objective
+SetObjectiveCompleted MS03 16 1
+
+;Set new tracking variables
+Set MS03.MS03a1 to 4
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED64">MS03a1FoodReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A5">MS03Sanitizer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A792">MS03SanitizerNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a2 set up for fade and basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">set MoiraBrownREF.BeginMedicalServices to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">21</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a2 basic completion after fade up</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>688</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4BAAAAohEPAAMAcgQAbhoAAABuAQAAAKMRDwADAHIEAG4YAAAAbgAAAAAVAAoAcgQAcwwAAgAgNBYALgADACoAIHIEAHMLACA0ID09IHIEAHMMACA0ID09ICYmIHIEAHMNACA0ID09ICYmFQAKAHIEAHMIAAIAIDM5EAoAAgByBABuJgAAAKIRDwADAHIEAG4FAAAAbgEAAAAZAAAAFgBNAAEASQAgcgQAcywAIHIEAHMtACA+IHIEAHMsACByBABzLgAgPiAmJiByBABzLAAgcgQAcy8AID4gJiYgcgQAcywAIHIEAHMwACA+ICYmFQAKAHIEAHMxAAIAIDAYAE0AAQBJACByBABzLQAgcgQAcywAID4gcgQAcy0AIHIEAHMuACA+ICYmIHIEAHMtACByBABzLwAgPiAmJiByBABzLQAgcgQAczAAID4gJiYVAAoAcgQAczEAAgAgMRgATQABAEkAIHIEAHMuACByBABzLQAgPiByBABzLgAgcgQAcywAID4gJiYgcgQAcy4AIHIEAHMvACA+ICYmIHIEAHMuACByBABzMAAgPiAmJhUACgByBABzMQACACAyGABNAAEASQAgcgQAcy8AIHIEAHMtACA+IHIEAHMvACByBABzLgAgPiAmJiByBABzLwAgcgQAcywAID4gJiYgcgQAcy8AIHIEAHMwACA+ICYmFQAKAHIEAHMxAAIAIDMYAE0AAQBJACByBABzMAAgcgQAcy0AID4gcgQAczAAIHIEAHMuACA+ICYmIHIEAHMwACByBABzLwAgPiAmJiByBABzMAAgcgQAcywAID4gJiYVAAoAcgQAczEAAgAgNBcAAgABABUACgByBABzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Add player reward
+player.addItem MS03a2RadAwayReward 1
+player.addItem MS03a2RadXReward 1
+
+;Set Moira to enter this new data
+;set MS03.MoiraDataEntry to 1
+;MoiraBrownREF.evp
+
+;Finish "return" objective
+SetObjectiveCompleted MS03 26 1
+SetObjectiveDisplayed MS03 24 0
+
+;Set new tracking variables
+Set MS03.MS03a2 to 4
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED73">MS03a2RadAwayReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED83">MS03a2RadXReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">24</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a2 fade out for bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">set MoiraBrownREF.BeginMedicalServices to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a2 bonus completion after fade-out</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>787</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4BAAAAHAABAIIRDQACADYAegAAAAAAiMNAHAABAHYRBQABAHIEABwAAQBZEAsAAQByBQAAAAAAAAAVABMAcgYAcwEACwAgcgYAcwEAIDEgKxUAEwByBgBzAwALACByBgBzAwAgMSArohEPAAMAcgYAbhoAAABuAQAAAKIRDwADAHIGAG4YAAAAbgEAAAAVAAoAcgYAcwwAAgAgNBYALgADACoAIHIGAHMLACA0ID09IHIGAHMMACA0ID09ICYmIHIGAHMNACA0ID09ICYmFQAKAHIGAHMIAAIAIDM5EAoAAgByBgBuJgAAAKIRDwADAHIGAG4FAAAAbgEAAAAZAAAAFgBNAAEASQAgcgYAcywAIHIGAHMtACA+IHIGAHMsACByBgBzLgAgPiAmJiByBgBzLAAgcgYAcy8AID4gJiYgcgYAcywAIHIGAHMwACA+ICYmFQAKAHIGAHMxAAIAIDAYAE0AAQBJACByBgBzLQAgcgYAcywAID4gcgYAcy0AIHIGAHMuACA+ICYmIHIGAHMtACByBgBzLwAgPiAmJiByBgBzLQAgcgYAczAAID4gJiYVAAoAcgYAczEAAgAgMRgATQABAEkAIHIGAHMuACByBgBzLQAgPiByBgBzLgAgcgYAcywAID4gJiYgcgYAcy4AIHIGAHMvACA+ICYmIHIGAHMuACByBgBzMAAgPiAmJhUACgByBgBzMQACACAyGABNAAEASQAgcgYAcy8AIHIGAHMtACA+IHIGAHMvACByBgBzLgAgPiAmJiByBgBzLwAgcgYAcywAID4gJiYgcgYAcy8AIHIGAHMwACA+ICYmFQAKAHIGAHMxAAIAIDMYAE0AAQBJACByBgBzMAAgcgYAcy0AID4gcgYAczAAIHIGAHMuACA+ICYmIHIGAHMwACByBgBzLwAgPiAmJiByBgBzMAAgcgYAcywAID4gJiYVAAoAcgYAczEAAgAgNBcAAgABABUACgByBgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Add player reward
+player.addItem MS03a2RadAwayReward 1
+player.addItem MS03a2RadXReward 1
+
+;Perform radiation removal effect and add mutation perk
+player.restoreav radiationrads 10000
+;ADD CODE FOR SCREEN FADE AND PERK ADD
+player.AddPerk MS03MutationPerk
+player.showMessage MS03MutationPerkMsg
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03aBonus to MS03.MS03aBonus + 1
+
+;Finish "return" objective
+SetObjectiveCompleted MS03 26 1
+SetObjectiveCompleted MS03 24 1
+
+;Set new tracking variables
+Set MS03.MS03a2 to 4
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED73">MS03a2RadAwayReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED83">MS03a2RadXReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003066B">MS03MutationPerk</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0004C596">MS03MutationPerkMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a3 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>670</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbiQAAABuAQAAAKMRDwADAHICAG4iAAAAbgAAAAAVAAoAcgIAcw0AAgAgNBwAAQACEAoAAgByAwBuAQAAABYALgADACoAIHICAHMLACA0ID09IHICAHMMACA0ID09ICYmIHICAHMNACA0ID09ICYmFQAKAHICAHMIAAIAIDM5EAoAAgByAgBuJgAAAKIRDwADAHICAG4FAAAAbgEAAAAZAAAAFgBNAAEASQAgcgIAcywAIHICAHMtACA+IHICAHMsACByAgBzLgAgPiAmJiByAgBzLAAgcgIAcy8AID4gJiYgcgIAcywAIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDAYAE0AAQBJACByAgBzLQAgcgIAcywAID4gcgIAcy0AIHICAHMuACA+ICYmIHICAHMtACByAgBzLwAgPiAmJiByAgBzLQAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMRgATQABAEkAIHICAHMuACByAgBzLQAgPiByAgBzLgAgcgIAcywAID4gJiYgcgIAcy4AIHICAHMvACA+ICYmIHICAHMuACByAgBzMAAgPiAmJhUACgByAgBzMQACACAyGABNAAEASQAgcgIAcy8AIHICAHMtACA+IHICAHMvACByAgBzLgAgPiAmJiByAgBzLwAgcgIAcywAID4gJiYgcgIAcy8AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDMYAE0AAQBJACByAgBzMAAgcgIAcy0AID4gcgIAczAAIHICAHMuACA+ICYmIHICAHMwACByAgBzLwAgPiAmJiByAgBzMAAgcgIAcywAID4gJiYVAAoAcgIAczEAAgAgNBcAAgABABUACgByAgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 36 1
+
+;Remove bonus objective
+SetObjectiveDisplayed MS03 34 0
+
+;Set new tracking variables
+Set MS03.MS03a3 to 4
+
+;Add player reward
+player.addItem MS03a3GrenadeReward 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED8A">MS03a3GrenadeReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">34</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03a3 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>758</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbiIAAABuAQAAAKIRDwADAHICAG4kAAAAbgEAAAAWABAAAgAMACByAgBzNAAgMSAhPRUAEwByAgBzAQALACByAgBzAQAgMSArFQATAHICAHMDAAsAIHICAHMDACAxICsZAAAAFQAKAHICAHMNAAIAIDQcAAEAAhAKAAIAcgMAbgEAAAAcAAEAAhAKAAIAcgQAbgEAAAAWAC4AAwAqACByAgBzCwAgNCA9PSByAgBzDAAgNCA9PSAmJiByAgBzDQAgNCA9PSAmJhUACgByAgBzCAACACAzORAKAAIAcgIAbiYAAACiEQ8AAwByAgBuBQAAAG4BAAAAGQAAABYATQABAEkAIHICAHMsACByAgBzLQAgPiByAgBzLAAgcgIAcy4AID4gJiYgcgIAcywAIHICAHMvACA+ICYmIHICAHMsACByAgBzMAAgPiAmJhUACgByAgBzMQACACAwGABNAAEASQAgcgIAcy0AIHICAHMsACA+IHICAHMtACByAgBzLgAgPiAmJiByAgBzLQAgcgIAcy8AID4gJiYgcgIAcy0AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDEYAE0AAQBJACByAgBzLgAgcgIAcy0AID4gcgIAcy4AIHICAHMsACA+ICYmIHICAHMuACByAgBzLwAgPiAmJiByAgBzLgAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMhgATQABAEkAIHICAHMvACByAgBzLQAgPiByAgBzLwAgcgIAcy4AID4gJiYgcgIAcy8AIHICAHMsACA+ICYmIHICAHMvACByAgBzMAAgPiAmJhUACgByAgBzMQACACAzGABNAAEASQAgcgIAczAAIHICAHMtACA+IHICAHMwACByAgBzLgAgPiAmJiByAgBzMAAgcgIAcy8AID4gJiYgcgIAczAAIHICAHMsACA+ICYmFQAKAHICAHMxAAIAIDQXAAIAAQAVAAoAcgIAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 34 1
+SetObjectiveCompleted MS03 36 1
+
+;Set bonus objective comple, if the player didn't lie.
+if (MS03.MS03a3Lie != 1)
+   set MS03.bonusObjectives to MS03.bonusObjectives + 1
+   set MS03.MS03aBonus to MS03.MS03aBonus + 1
+endif
+
+;Set new tracking variables
+Set MS03.MS03a3 to 4
+
+;Add player reward
+player.addItem MS03a3GrenadeReward 1
+player.addItem SchematicsBottlecapMineItem 1 
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 38 and complete stage 5.
+if(MS03.MS03a1 == 4 &amp;&amp; MS03.MS03a2 == 4 &amp;&amp; MS03.MS03a3 == 4)
+Set MS03.MS03a to 3
+SetStage MS03 38
+SetObjectiveCompleted MS03 5 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED8A">MS03a3GrenadeReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000BAFFB">SchematicsBottlecapMineItem</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">38</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Help Moira with Chapter 2.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;SetObjectiveCompleted MS03 5 1
+;SetObjectiveDisplayed MS03 38 1</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b1 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>724</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbiwAAABuAAAAAKIRDwADAHIDAG4uAAAAbgEAAAAVAAoAcgMAcw4AAgAgNBwAAQACEAoAAgByBABuAQAAABwAAQACEAoAAgByBQBuAQAAABwAAQBSEAoAAgByBgBuAQAAABwAAgACEAoAAgByBgBuAQAAABYALgADACoAIHIDAHMOACA0ID09IHIDAHMPACA0ID09ICYmIHIDAHMQACA0ID09ICYmFQAKAHIDAHMJAAIAIDM5EAoAAgByAwBuRAAAAKIRDwADAHIDAG4mAAAAbgEAAAAZAAAAFgBNAAEASQAgcgMAcywAIHIDAHMtACA+IHIDAHMsACByAwBzLgAgPiAmJiByAwBzLAAgcgMAcy8AID4gJiYgcgMAcywAIHIDAHMwACA+ICYmFQAKAHIDAHMxAAIAIDAYAE0AAQBJACByAwBzLQAgcgMAcywAID4gcgMAcy0AIHIDAHMuACA+ICYmIHIDAHMtACByAwBzLwAgPiAmJiByAwBzLQAgcgMAczAAID4gJiYVAAoAcgMAczEAAgAgMRgATQABAEkAIHIDAHMuACByAwBzLQAgPiByAwBzLgAgcgMAcywAID4gJiYgcgMAcy4AIHIDAHMvACA+ICYmIHIDAHMuACByAwBzMAAgPiAmJhUACgByAwBzMQACACAyGABNAAEASQAgcgMAcy8AIHIDAHMtACA+IHIDAHMvACByAwBzLgAgPiAmJiByAwBzLwAgcgMAcywAID4gJiYgcgMAcy8AIHIDAHMwACA+ICYmFQAKAHIDAHMxAAIAIDMYAE0AAQBJACByAwBzMAAgcgMAcy0AID4gcgMAczAAIHIDAHMuACA+ICYmIHIDAHMwACByAwBzLwAgPiAmJiByAwBzMAAgcgMAcywAID4gJiYVAAoAcgMAczEAAgAgNBcAAgABABUACgByAwBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective and clear others
+SetObjectiveDisplayed MS03 44 0
+SetObjectiveCompleted MS03 46 1
+
+;Set new tracking variables
+Set MS03.MS03b1 to 4
+
+;Add player reward
+player.addItem MS03b1JetReward 1
+player.addItem MS03b1PsychoReward 1
+player.removeItem MS03Repellent 1
+MoiraDeskREF.addItem MS03Repellent 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06045089">MoiraDeskREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED9A">MS03b1JetReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED9C">MS03b1PsychoReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3B7">MS03Repellent</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">44</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b1 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>729</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbi4AAABuAQAAABUACgByAgBzDgACACA0FQATAHICAHMBAAsAIHICAHMBACAxICsVABMAcgIAcwQACwAgcgIAcwQAIDEgKxwAAQACEAoAAgByAwBuAQAAABwAAQACEAoAAgByBABuAQAAAA0RCgACAHIFAG4AAAAAFgAuAAMAKgAgcgIAcw4AIDQgPT0gcgIAcw8AIDQgPT0gJiYgcgIAcxAAIDQgPT0gJiYVAAoAcgIAcwkAAgAgMzkQCgACAHICAG5EAAAAohEPAAMAcgIAbiYAAABuAQAAABkAAAAWAE0AAQBJACByAgBzLAAgcgIAcy0AID4gcgIAcywAIHICAHMuACA+ICYmIHICAHMsACByAgBzLwAgPiAmJiByAgBzLAAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMBgATQABAEkAIHICAHMtACByAgBzLAAgPiByAgBzLQAgcgIAcy4AID4gJiYgcgIAcy0AIHICAHMvACA+ICYmIHICAHMtACByAgBzMAAgPiAmJhUACgByAgBzMQACACAxGABNAAEASQAgcgIAcy4AIHICAHMtACA+IHICAHMuACByAgBzLAAgPiAmJiByAgBzLgAgcgIAcy8AID4gJiYgcgIAcy4AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDIYAE0AAQBJACByAgBzLwAgcgIAcy0AID4gcgIAcy8AIHICAHMuACA+ICYmIHICAHMvACByAgBzLAAgPiAmJiByAgBzLwAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMxgATQABAEkAIHICAHMwACByAgBzLQAgPiByAgBzMAAgcgIAcy4AID4gJiYgcgIAczAAIHICAHMvACA+ICYmIHICAHMwACByAgBzLAAgPiAmJhUACgByAgBzMQACACA0FwACAAEAFQAKAHICAHMxAAIAIDAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 46 1
+
+;Set new tracking variables
+Set MS03.MS03b1 to 4
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03bBonus to MS03.MS03bBonus + 1
+
+;Add player reward
+player.addItem MS03b1JetReward 1
+player.addItem MS03b1PsychoReward 1
+setQuestObject MS03Repellent 0
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED9A">MS03b1JetReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006ED9C">MS03b1PsychoReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3B7">MS03Repellent</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b2 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>670</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbjYAAABuAAAAAKIRDwADAHICAG44AAAAbgEAAAAVAAoAcgIAcw8AAgAgNBwAAQACEAoAAgByAwBuAQAAABYALgADACoAIHICAHMOACA0ID09IHICAHMPACA0ID09ICYmIHICAHMQACA0ID09ICYmFQAKAHICAHMJAAIAIDM5EAoAAgByAgBuRAAAAKIRDwADAHICAG4mAAAAbgEAAAAZAAAAFgBNAAEASQAgcgIAcywAIHICAHMtACA+IHICAHMsACByAgBzLgAgPiAmJiByAgBzLAAgcgIAcy8AID4gJiYgcgIAcywAIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDAYAE0AAQBJACByAgBzLQAgcgIAcywAID4gcgIAcy0AIHICAHMuACA+ICYmIHICAHMtACByAgBzLwAgPiAmJiByAgBzLQAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMRgATQABAEkAIHICAHMuACByAgBzLQAgPiByAgBzLgAgcgIAcywAID4gJiYgcgIAcy4AIHICAHMvACA+ICYmIHICAHMuACByAgBzMAAgPiAmJhUACgByAgBzMQACACAyGABNAAEASQAgcgIAcy8AIHICAHMtACA+IHICAHMvACByAgBzLgAgPiAmJiByAgBzLwAgcgIAcywAID4gJiYgcgIAcy8AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDMYAE0AAQBJACByAgBzMAAgcgIAcy0AID4gcgIAczAAIHICAHMuACA+ICYmIHICAHMwACByAgBzLwAgPiAmJiByAgBzMAAgcgIAcywAID4gJiYVAAoAcgIAczEAAgAgNBcAAgABABUACgByAgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective and remove bonus objective
+SetObjectiveDisplayed MS03 54 0
+SetObjectiveCompleted MS03 56 1
+
+;Set new tracking variables
+Set MS03.MS03b2 to 4
+
+;Add player reward
+player.addItem MS03b2StealthboyReward 1
+
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA0">MS03b2StealthboyReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">54</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b2 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>762</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbjgAAABuAQAAAKIRDwADAHICAG42AAAAbgEAAAAVAAoAcgIAcw8AAgAgNBUACgByAgBzKwACACAxFQATAHICAHMBAAsAIHICAHMBACAxICsVABMAcgIAcwQACwAgcgIAcwQAIDEgKxwAAQACEAoAAgByAwBuAQAAABwAAQACEAoAAgByBABuAQAAABUACgByAgBzKwACACAxFgAuAAMAKgAgcgIAcw4AIDQgPT0gcgIAcw8AIDQgPT0gJiYgcgIAcxAAIDQgPT0gJiYVAAoAcgIAcwkAAgAgMzkQCgACAHICAG5EAAAAohEPAAMAcgIAbiYAAABuAQAAABkAAAAWAE0AAQBJACByAgBzLAAgcgIAcy0AID4gcgIAcywAIHICAHMuACA+ICYmIHICAHMsACByAgBzLwAgPiAmJiByAgBzLAAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMBgATQABAEkAIHICAHMtACByAgBzLAAgPiByAgBzLQAgcgIAcy4AID4gJiYgcgIAcy0AIHICAHMvACA+ICYmIHICAHMtACByAgBzMAAgPiAmJhUACgByAgBzMQACACAxGABNAAEASQAgcgIAcy4AIHICAHMtACA+IHICAHMuACByAgBzLAAgPiAmJiByAgBzLgAgcgIAcy8AID4gJiYgcgIAcy4AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDIYAE0AAQBJACByAgBzLwAgcgIAcy0AID4gcgIAcy8AIHICAHMuACA+ICYmIHICAHMvACByAgBzLAAgPiAmJiByAgBzLwAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMxgATQABAEkAIHICAHMwACByAgBzLQAgPiByAgBzMAAgcgIAcy4AID4gJiYgcgIAczAAIHICAHMvACA+ICYmIHICAHMwACByAgBzLAAgPiAmJhUACgByAgBzMQACACA0FwACAAEAFQAKAHICAHMxAAIAIDAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 56 1
+SetObjectiveCompleted MS03 54 1
+
+;Set new tracking variables
+Set MS03.MS03b2 to 4
+Set MS03.MS03b2bonus to 1
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03bBonus to MS03.MS03bBonus + 1
+
+;Add player reward
+player.addItem MS03b2StealthboyReward 1
+player.addItem MS03StealthHat 1
+
+;Record that the bonus was given, so player can collect bait grenades in the future
+Set MS03.MS03b2bonus to 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA0">MS03b2StealthboyReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007C17D">MS03StealthHat</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b3 basic fade-out</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">set MoiraBrownREF.BeginMedicalServices to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">61</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b3 basic completion after fade-out</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>670</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbkIAAABuAQAAAKMRDwADAHICAG5AAAAAbgAAAAAVAAoAcgIAcxAAAgAgNBwAAQACEAoAAgByAwBuAQAAABYALgADACoAIHICAHMOACA0ID09IHICAHMPACA0ID09ICYmIHICAHMQACA0ID09ICYmFQAKAHICAHMJAAIAIDM5EAoAAgByAgBuRAAAAKIRDwADAHICAG4mAAAAbgEAAAAZAAAAFgBNAAEASQAgcgIAcywAIHICAHMtACA+IHICAHMsACByAgBzLgAgPiAmJiByAgBzLAAgcgIAcy8AID4gJiYgcgIAcywAIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDAYAE0AAQBJACByAgBzLQAgcgIAcywAID4gcgIAcy0AIHICAHMuACA+ICYmIHICAHMtACByAgBzLwAgPiAmJiByAgBzLQAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMRgATQABAEkAIHICAHMuACByAgBzLQAgPiByAgBzLgAgcgIAcywAID4gJiYgcgIAcy4AIHICAHMvACA+ICYmIHICAHMuACByAgBzMAAgPiAmJhUACgByAgBzMQACACAyGABNAAEASQAgcgIAcy8AIHICAHMtACA+IHICAHMvACByAgBzLgAgPiAmJiByAgBzLwAgcgIAcywAID4gJiYgcgIAcy8AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDMYAE0AAQBJACByAgBzMAAgcgIAcy0AID4gcgIAczAAIHICAHMuACA+ICYmIHICAHMwACByAgBzLwAgPiAmJiByAgBzMAAgcgIAcywAID4gJiYVAAoAcgIAczEAAgAgNBcAAgABABUACgByAgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 66 1
+SetObjectiveDisplayed MS03 64 0
+
+;Set new tracking variables
+Set MS03.MS03b3 to 4
+
+;;Add player reward
+player.addItem MS03b3MorpheneReward 1
+
+
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA2">MS03b3MorpheneReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">64</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b3 bonus fade-out</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">set MoiraBrownREF.BeginMedicalServices to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03b3 bonus completion after fade-out</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>734</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbkIAAABuAQAAAKIRDwADAHICAG5AAAAAbgEAAAAVAAoAcgIAcxAAAgAgNBUAEwByAgBzAQALACByAgBzAQAgMSArFQATAHICAHMEAAsAIHICAHMEACAxICscAAEAAhAKAAIAcgMAbgEAAAAcAAEAAhAKAAIAcgQAbgEAAAAWAC4AAwAqACByAgBzDgAgNCA9PSByAgBzDwAgNCA9PSAmJiByAgBzEAAgNCA9PSAmJhUACgByAgBzCQACACAzORAKAAIAcgIAbkQAAACiEQ8AAwByAgBuJgAAAG4BAAAAGQAAABYATQABAEkAIHICAHMsACByAgBzLQAgPiByAgBzLAAgcgIAcy4AID4gJiYgcgIAcywAIHICAHMvACA+ICYmIHICAHMsACByAgBzMAAgPiAmJhUACgByAgBzMQACACAwGABNAAEASQAgcgIAcy0AIHICAHMsACA+IHICAHMtACByAgBzLgAgPiAmJiByAgBzLQAgcgIAcy8AID4gJiYgcgIAcy0AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDEYAE0AAQBJACByAgBzLgAgcgIAcy0AID4gcgIAcy4AIHICAHMsACA+ICYmIHICAHMuACByAgBzLwAgPiAmJiByAgBzLgAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMhgATQABAEkAIHICAHMvACByAgBzLQAgPiByAgBzLwAgcgIAcy4AID4gJiYgcgIAcy8AIHICAHMsACA+ICYmIHICAHMvACByAgBzMAAgPiAmJhUACgByAgBzMQACACAzGABNAAEASQAgcgIAczAAIHICAHMtACA+IHICAHMwACByAgBzLgAgPiAmJiByAgBzMAAgcgIAcy8AID4gJiYgcgIAczAAIHICAHMsACA+ICYmFQAKAHICAHMxAAIAIDQXAAIAAQAVAAoAcgIAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 66 1
+SetObjectiveCompleted MS03 64 1
+
+;Set new tracking variables
+Set MS03.MS03b3 to 4
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03bBonus to MS03.MS03bBonus + 1
+
+;;Add player reward
+player.addItem MS03b3MorpheneReward 1
+player.addItem  MS03EnvironmentSuit 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 68 and complete stage 5.
+if(MS03.MS03b1 == 4 &amp;&amp; MS03.MS03b2 == 4 &amp;&amp; MS03.MS03b3 == 4)
+Set MS03.MS03b to 3
+SetStage MS03 68
+SetObjectiveCompleted MS03 38 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA2">MS03b3MorpheneReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C09D4">MS03EnvironmentSuit</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">68</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Help Moira with the last chapter.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;SetObjectiveCompleted MS03 38 1
+;SetObjectiveDisplayed MS03 68 1</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c1 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>708</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbkoAAABuAAAAAKMRDwADAHICAG5MAAAAbgAAAACiEQ8AAwByAgBuTgAAAG4BAAAAFQAKAHICAHMXAAIAIDQcAAEAAhAKAAIAcgMAbgEAAAA5Eg8AAwByBABuAQAAAG4CAAAAFgAuAAMAKgAgcgIAcxcAIDQgPT0gcgIAcxgAIDQgPT0gJiYgcgIAcxkAIDQgPT0gJiYVAAoAcgIAcxEAAgAgMzkQCgACAHICAG5kAAAAohEPAAMAcgIAbkQAAABuAQAAABkAAAAWAE0AAQBJACByAgBzLAAgcgIAcy0AID4gcgIAcywAIHICAHMuACA+ICYmIHICAHMsACByAgBzLwAgPiAmJiByAgBzLAAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMBgATQABAEkAIHICAHMtACByAgBzLAAgPiByAgBzLQAgcgIAcy4AID4gJiYgcgIAcy0AIHICAHMvACA+ICYmIHICAHMtACByAgBzMAAgPiAmJhUACgByAgBzMQACACAxGABNAAEASQAgcgIAcy4AIHICAHMtACA+IHICAHMuACByAgBzLAAgPiAmJiByAgBzLgAgcgIAcy8AID4gJiYgcgIAcy4AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDIYAE0AAQBJACByAgBzLwAgcgIAcy0AID4gcgIAcy8AIHICAHMuACA+ICYmIHICAHMvACByAgBzLAAgPiAmJiByAgBzLwAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMxgATQABAEkAIHICAHMwACByAgBzLQAgPiByAgBzMAAgcgIAcy4AID4gJiYgcgIAczAAIHICAHMvACA+ICYmIHICAHMwACByAgBzLAAgPiAmJhUACgByAgBzMQACACA0FwACAAEAFQAKAHICAHMxAAIAIDAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective and remove bonus objective
+SetObjectiveDisplayed MS03 74 0
+SetObjectiveDisplayed MS03 76 0
+SetObjectiveCompleted MS03 78 1
+
+;Set new tracking variables
+Set MS03.MS03c1 to 4
+
+;Add player reward
+player.addItem MS03c1MentatsReward 1
+AddReputation RepTTWRivetCity 1 2
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA8">MS03c1MentatsReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F1">RepTTWRivetCity</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">74</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c1 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>749</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbkoAAABuAQAAAKIRDwADAHICAG5MAAAAbgEAAACiEQ8AAwByAgBuTgAAAG4BAAAAFQAKAHICAHMXAAIAIDQVABMAcgIAcwEACwAgcgIAcwEAIDEgKxUAEwByAgBzBQALACByAgBzBQAgMSArHAABAAIQCgACAHIDAG4BAAAAFQAKAHICAHNCAAIAIDEWAC4AAwAqACByAgBzFwAgNCA9PSByAgBzGAAgNCA9PSAmJiByAgBzGQAgNCA9PSAmJhUACgByAgBzEQACACAzORAKAAIAcgIAbmQAAACiEQ8AAwByAgBuRAAAAG4BAAAAGQAAABYATQABAEkAIHICAHMsACByAgBzLQAgPiByAgBzLAAgcgIAcy4AID4gJiYgcgIAcywAIHICAHMvACA+ICYmIHICAHMsACByAgBzMAAgPiAmJhUACgByAgBzMQACACAwGABNAAEASQAgcgIAcy0AIHICAHMsACA+IHICAHMtACByAgBzLgAgPiAmJiByAgBzLQAgcgIAcy8AID4gJiYgcgIAcy0AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDEYAE0AAQBJACByAgBzLgAgcgIAcy0AID4gcgIAcy4AIHICAHMsACA+ICYmIHICAHMuACByAgBzLwAgPiAmJiByAgBzLgAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMhgATQABAEkAIHICAHMvACByAgBzLQAgPiByAgBzLwAgcgIAcy4AID4gJiYgcgIAcy8AIHICAHMsACA+ICYmIHICAHMvACByAgBzMAAgPiAmJhUACgByAgBzMQACACAzGABNAAEASQAgcgIAczAAIHICAHMtACA+IHICAHMwACByAgBzLgAgPiAmJiByAgBzMAAgcgIAcy8AID4gJiYgcgIAczAAIHICAHMsACA+ICYmFQAKAHICAHMxAAIAIDQXAAIAAQAVAAoAcgIAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 74 1
+SetObjectiveCompleted MS03 76 1
+SetObjectiveCompleted MS03 78 1
+
+;Set new tracking variables
+Set MS03.MS03c1 to 4
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03cBonus to MS03.MS03cBonus + 1
+
+;Add player reward
+player.addItem MS03c1MentatsReward 1
+set MS03.MS03c1RCBonus to 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDA8">MS03c1MentatsReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c2 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>670</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAblQAAABuAAAAAKIRDwADAHICAG5YAAAAbgEAAAAVAAoAcgIAcxgAAgAgNBwAAQACEAoAAgByAwBuAQAAABYALgADACoAIHICAHMXACA0ID09IHICAHMYACA0ID09ICYmIHICAHMZACA0ID09ICYmFQAKAHICAHMRAAIAIDM5EAoAAgByAgBuZAAAAKIRDwADAHICAG5EAAAAbgEAAAAZAAAAFgBNAAEASQAgcgIAcywAIHICAHMtACA+IHICAHMsACByAgBzLgAgPiAmJiByAgBzLAAgcgIAcy8AID4gJiYgcgIAcywAIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDAYAE0AAQBJACByAgBzLQAgcgIAcywAID4gcgIAcy0AIHICAHMuACA+ICYmIHICAHMtACByAgBzLwAgPiAmJiByAgBzLQAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMRgATQABAEkAIHICAHMuACByAgBzLQAgPiByAgBzLgAgcgIAcywAID4gJiYgcgIAcy4AIHICAHMvACA+ICYmIHICAHMuACByAgBzMAAgPiAmJhUACgByAgBzMQACACAyGABNAAEASQAgcgIAcy8AIHICAHMtACA+IHICAHMvACByAgBzLgAgPiAmJiByAgBzLwAgcgIAcywAID4gJiYgcgIAcy8AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDMYAE0AAQBJACByAgBzMAAgcgIAcy0AID4gcgIAczAAIHICAHMuACA+ICYmIHICAHMwACByAgBzLwAgPiAmJiByAgBzMAAgcgIAcywAID4gJiYVAAoAcgIAczEAAgAgNBcAAgABABUACgByAgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective and remove bonus
+SetObjectiveDisplayed MS03 84 0
+SetObjectiveCompleted MS03 88 1
+
+;Set new tracking variables
+Set MS03.MS03c2 to 4
+
+;Add player reward
+player.addItem MS03c2PulseReward 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDB9">MS03c2PulseReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">84</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c2 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>715</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAblgAAABuAQAAABUACgByAgBzGAACACA0HAABAAIQCgACAHIDAG4BAAAAHAABAAIQCgACAHIEAG4BAAAAFQATAHICAHMBAAsAIHICAHMBACAxICsVABMAcgIAcwUACwAgcgIAcwUAIDEgKxYALgADACoAIHICAHMXACA0ID09IHICAHMYACA0ID09ICYmIHICAHMZACA0ID09ICYmFQAKAHICAHMRAAIAIDM5EAoAAgByAgBuZAAAAKIRDwADAHICAG5EAAAAbgEAAAAZAAAAFgBNAAEASQAgcgIAcywAIHICAHMtACA+IHICAHMsACByAgBzLgAgPiAmJiByAgBzLAAgcgIAcy8AID4gJiYgcgIAcywAIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDAYAE0AAQBJACByAgBzLQAgcgIAcywAID4gcgIAcy0AIHICAHMuACA+ICYmIHICAHMtACByAgBzLwAgPiAmJiByAgBzLQAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMRgATQABAEkAIHICAHMuACByAgBzLQAgPiByAgBzLgAgcgIAcywAID4gJiYgcgIAcy4AIHICAHMvACA+ICYmIHICAHMuACByAgBzMAAgPiAmJhUACgByAgBzMQACACAyGABNAAEASQAgcgIAcy8AIHICAHMtACA+IHICAHMvACByAgBzLgAgPiAmJiByAgBzLwAgcgIAcywAID4gJiYgcgIAcy8AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDMYAE0AAQBJACByAgBzMAAgcgIAcy0AID4gcgIAczAAIHICAHMuACA+ICYmIHICAHMwACByAgBzLwAgPiAmJiByAgBzMAAgcgIAcywAID4gJiYVAAoAcgIAczEAAgAgNBcAAgABABUACgByAgBzMQACACAwGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 88 1
+
+;Set new tracking variables
+Set MS03.MS03c2 to 4
+
+;Add player reward
+player.addItem MS03c2PulseReward 1
+player.addItem BookSkillScience 1
+
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03cBonus to MS03.MS03cBonus + 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDB9">MS03c2PulseReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003403C">BookSkillScience</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c3 basic completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>698</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbl4AAABuAAAAAKIRDwADAHICAG5iAAAAbgEAAAANEQoAAgByAwBuAAAAAA0RCgACAHIEAG4AAAAAFQAKAHICAHMZAAIAIDQcAAEAAhAKAAIAcgUAbgEAAAAWAC4AAwAqACByAgBzFwAgNCA9PSByAgBzGAAgNCA9PSAmJiByAgBzGQAgNCA9PSAmJhUACgByAgBzEQACACAzORAKAAIAcgIAbmQAAACiEQ8AAwByAgBuRAAAAG4BAAAAGQAAABYATQABAEkAIHICAHMsACByAgBzLQAgPiByAgBzLAAgcgIAcy4AID4gJiYgcgIAcywAIHICAHMvACA+ICYmIHICAHMsACByAgBzMAAgPiAmJhUACgByAgBzMQACACAwGABNAAEASQAgcgIAcy0AIHICAHMsACA+IHICAHMtACByAgBzLgAgPiAmJiByAgBzLQAgcgIAcy8AID4gJiYgcgIAcy0AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDEYAE0AAQBJACByAgBzLgAgcgIAcy0AID4gcgIAcy4AIHICAHMsACA+ICYmIHICAHMuACByAgBzLwAgPiAmJiByAgBzLgAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMhgATQABAEkAIHICAHMvACByAgBzLQAgPiByAgBzLwAgcgIAcy4AID4gJiYgcgIAcy8AIHICAHMsACA+ICYmIHICAHMvACByAgBzMAAgPiAmJhUACgByAgBzMQACACAzGABNAAEASQAgcgIAczAAIHICAHMtACA+IHICAHMwACByAgBzLgAgPiAmJiByAgBzMAAgcgIAcy8AID4gJiYgcgIAczAAIHICAHMsACA+ICYmFQAKAHICAHMxAAIAIDQXAAIAAQAVAAoAcgIAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveDisplayed MS03 94 0
+SetObjectiveCompleted MS03 98 1
+
+;End QuestObject essentialness
+SetQuestObject MS03LibraryArchivesHolotape 0
+SetQuestObject MS03LibraryCatalogueHolotape 0
+
+;Set new tracking variables
+Set MS03.MS03c3 to 4
+
+;;Add player reward
+player.addItem MS03c3CapsReward 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDC2">MS03c3CapsReward</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">94</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">MS03c3 bonus completion</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>743</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbmIAAABuAQAAAA0RCgACAHIDAG4AAAAADREKAAIAcgQAbgAAAAAVAAoAcgIAcxkAAgAgNBwAAQACEAoAAgByBQBuAQAAABwAAQACEAoAAgByBgBuAQAAABUAEwByAgBzAQALACByAgBzAQAgMSArFQATAHICAHMFAAsAIHICAHMFACAxICsWAC4AAwAqACByAgBzFwAgNCA9PSByAgBzGAAgNCA9PSAmJiByAgBzGQAgNCA9PSAmJhUACgByAgBzEQACACAzORAKAAIAcgIAbmQAAACiEQ8AAwByAgBuRAAAAG4BAAAAGQAAABYATQABAEkAIHICAHMsACByAgBzLQAgPiByAgBzLAAgcgIAcy4AID4gJiYgcgIAcywAIHICAHMvACA+ICYmIHICAHMsACByAgBzMAAgPiAmJhUACgByAgBzMQACACAwGABNAAEASQAgcgIAcy0AIHICAHMsACA+IHICAHMtACByAgBzLgAgPiAmJiByAgBzLQAgcgIAcy8AID4gJiYgcgIAcy0AIHICAHMwACA+ICYmFQAKAHICAHMxAAIAIDEYAE0AAQBJACByAgBzLgAgcgIAcy0AID4gcgIAcy4AIHICAHMsACA+ICYmIHICAHMuACByAgBzLwAgPiAmJiByAgBzLgAgcgIAczAAID4gJiYVAAoAcgIAczEAAgAgMhgATQABAEkAIHICAHMvACByAgBzLQAgPiByAgBzLwAgcgIAcy4AID4gJiYgcgIAcy8AIHICAHMsACA+ICYmIHICAHMvACByAgBzMAAgPiAmJhUACgByAgBzMQACACAzGABNAAEASQAgcgIAczAAIHICAHMtACA+IHICAHMwACByAgBzLgAgPiAmJiByAgBzMAAgcgIAcy8AID4gJiYgcgIAczAAIHICAHMsACA+ICYmFQAKAHICAHMxAAIAIDQXAAIAAQAVAAoAcgIAczEAAgAgMBkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Finish "return" objective
+SetObjectiveCompleted MS03 98 1
+
+;End QuestObject essentialness
+SetQuestObject MS03LibraryArchivesHolotape 0
+SetQuestObject MS03LibraryCatalogueHolotape 0
+
+;Set new tracking variables
+Set MS03.MS03c3 to 4
+
+;;Add player reward
+player.addItem MS03c3CapsReward 1
+player.addItem BookSkillSpeech 1
+
+
+;Set bonus objective complete
+set MS03.bonusObjectives to MS03.bonusObjectives + 1
+set MS03.MS03cBonus to MS03.MS03cBonus + 1
+
+;Check other tasks in this set. 
+;If they are all done, set to stage 100 and complete stage 68.
+if(MS03.MS03c1 == 4 &amp;&amp; MS03.MS03c2 == 4 &amp;&amp; MS03.MS03c3 == 4)
+Set MS03.MS03c to 3
+SetStage MS03 100
+SetObjectiveCompleted MS03 68 1
+endif
+
+;Track current book style:
+if (MS03.standard &gt; MS03.smart &amp;&amp; MS03.standard &gt; MS03.tough &amp;&amp; MS03.standard &gt; MS03.sly &amp;&amp; MS03.standard &gt; MS03.snide)
+   Set MS03.currentStyle to 0
+elseif (MS03.smart &gt; MS03.standard &amp;&amp; MS03.smart &gt; MS03.tough &amp;&amp; MS03.smart &gt; MS03.sly &amp;&amp; MS03.smart &gt; MS03.snide)
+   Set MS03.currentStyle to 1
+elseif (MS03.tough &gt; MS03.smart &amp;&amp; MS03.tough &gt; MS03.standard &amp;&amp; MS03.tough &gt; MS03.sly &amp;&amp; MS03.tough &gt; MS03.snide)
+   Set MS03.currentStyle to 2
+elseif (MS03.sly &gt; MS03.smart &amp;&amp; MS03.sly &gt; MS03.tough &amp;&amp; MS03.sly &gt; MS03.standard &amp;&amp; MS03.sly &gt; MS03.snide)
+   Set MS03.currentStyle to 3
+elseif (MS03.snide &gt; MS03.smart &amp;&amp; MS03.snide &gt; MS03.tough &amp;&amp; MS03.snide &gt; MS03.sly &amp;&amp; MS03.snide &gt; MS03.standard)
+   Set MS03.currentStyle to 4
+else 
+   Set MS03.currentStyle to 0
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006EDC2">MS03c3CapsReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00034044">BookSkillSpeech</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Print the manuscript at Hubris Comics Publishing.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbkQAAABuAQAAAKMRDwADAHIBAG5kAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS03 68 1
+SetObjectiveDisplayed MS03 100 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Bring the printed books back to Lea.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbmQAAABuAQAAAKMRDwADAHIBAG5pAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS03 100 1
+SetObjectiveDisplayed MS03 105 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>128</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ShEHAAEAbg4AAAA5Eg8AAwByAgBuAQAAAG4EAAAAFgAXAAEAEwAgcgEAWC8QBQABAHIDACAxID09HAABAFIQCgACAHIDAG4BAAAAGQAAABYAFwABABMAIHIBAFgvEAUAAQByBAAgMSA9PRwAAQBSEAoAAgByBABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">addachievement 14
+AddReputation RepTTWMegaton 1 4
+if (player.getitemcount MS03LibraryCatalogueHolotape == 1)
+   player.removeitem MS03LibraryCatalogueHolotape 1
+endif
+if (player.getitemcount MS03LibraryArchivesHolotape == 1)
+   player.removeitem MS03LibraryArchivesHolotape 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">210</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <LogEntry Tag="CNAM">Moira Brown is dead. Her book will never be written. NO ACHIEVEMENT - QUEST FAILED!</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>2964</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFIQCgACAHICAG7nAwAADREKAAIAcgMAbgAAAAANEQoAAgByBABuAAAAAA0RCgACAHIFAG4AAAAAHAABAFIQCgACAHIGAG7nAwAAHAABAFIQCgACAHIHAG7nAwAAFgAXAAEAEwAgcgEAWC8QBQABAHIEACAxID09HAABAFIQCgACAHIEAG4BAAAAGQAAABYAFwABABMAIHIBAFgvEAUAAQByAwAgMSA9PRwAAQBSEAoAAgByAwBuAQAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbgIAAAAgMSA9PSBYpBEKAAIAcggAbgIAAAAgMCA9PSAmJqMRDwADAHIIAG4CAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG4FAAAAIDEgPT0gWKQRCgACAHIIAG4FAAAAIDAgPT0gJiajEQ8AAwByCABuBQAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuCgAAACAxID09IFikEQoAAgByCABuCgAAACAwID09ICYmoxEPAAMAcggAbgoAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbgwAAAAgMSA9PSBYpBEKAAIAcggAbgwAAAAgMCA9PSAmJqMRDwADAHIIAG4MAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG4QAAAAIDEgPT0gWKQRCgACAHIIAG4QAAAAIDAgPT0gJiajEQ8AAwByCABuEAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuFAAAACAxID09IFikEQoAAgByCABuFAAAACAwID09ICYmoxEPAAMAcggAbhQAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbhgAAAAgMSA9PSBYpBEKAAIAcggAbhgAAAAgMCA9PSAmJqMRDwADAHIIAG4YAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG4aAAAAIDEgPT0gWKQRCgACAHIIAG4aAAAAIDAgPT0gJiajEQ8AAwByCABuGgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuHgAAACAxID09IFikEQoAAgByCABuHgAAACAwID09ICYmoxEPAAMAcggAbh4AAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbiIAAAAgMSA9PSBYpBEKAAIAcggAbiIAAAAgMCA9PSAmJqMRDwADAHIIAG4iAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG4kAAAAIDEgPT0gWKQRCgACAHIIAG4kAAAAIDAgPT0gJiajEQ8AAwByCABuJAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuJgAAACAxID09IFikEQoAAgByCABuJgAAACAwID09ICYmoxEPAAMAcggAbiYAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbigAAAAgMSA9PSBYpBEKAAIAcggAbigAAAAgMCA9PSAmJqMRDwADAHIIAG4oAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG4sAAAAIDEgPT0gWKQRCgACAHIIAG4sAAAAIDAgPT0gJiajEQ8AAwByCABuLAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuLgAAACAxID09IFikEQoAAgByCABuLgAAACAwID09ICYmoxEPAAMAcggAbi4AAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbjIAAAAgMSA9PSBYpBEKAAIAcggAbjIAAAAgMCA9PSAmJqMRDwADAHIIAG4yAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG42AAAAIDEgPT0gWKQRCgACAHIIAG42AAAAIDAgPT0gJiajEQ8AAwByCABuNgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuOAAAACAxID09IFikEQoAAgByCABuOAAAACAwID09ICYmoxEPAAMAcggAbjgAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbjwAAAAgMSA9PSBYpBEKAAIAcggAbjwAAAAgMCA9PSAmJqMRDwADAHIIAG48AAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG5AAAAAIDEgPT0gWKQRCgACAHIIAG5AAAAAIDAgPT0gJiajEQ8AAwByCABuQAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuQgAAACAxID09IFikEQoAAgByCABuQgAAACAwID09ICYmoxEPAAMAcggAbkIAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbkQAAAAgMSA9PSBYpBEKAAIAcggAbkQAAAAgMCA9PSAmJqMRDwADAHIIAG5EAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG5GAAAAIDEgPT0gWKQRCgACAHIIAG5GAAAAIDAgPT0gJiajEQ8AAwByCABuRgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuSgAAACAxID09IFikEQoAAgByCABuSgAAACAwID09ICYmoxEPAAMAcggAbkoAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbkwAAAAgMSA9PSBYpBEKAAIAcggAbkwAAAAgMCA9PSAmJqMRDwADAHIIAG5MAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG5OAAAAIDEgPT0gWKQRCgACAHIIAG5OAAAAIDAgPT0gJiajEQ8AAwByCABuTgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuUAAAACAxID09IFikEQoAAgByCABuUAAAACAwID09ICYmoxEPAAMAcggAblAAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAblQAAAAgMSA9PSBYpBEKAAIAcggAblQAAAAgMCA9PSAmJqMRDwADAHIIAG5UAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG5YAAAAIDEgPT0gWKQRCgACAHIIAG5YAAAAIDAgPT0gJiajEQ8AAwByCABuWAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuWgAAACAxID09IFikEQoAAgByCABuWgAAACAwID09ICYmoxEPAAMAcggAbloAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbl4AAAAgMSA9PSBYpBEKAAIAcggAbl4AAAAgMCA9PSAmJqMRDwADAHIIAG5eAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIIAG5iAAAAIDEgPT0gWKQRCgACAHIIAG5iAAAAIDAgPT0gJiajEQ8AAwByCABuYgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByCABuZAAAACAxID09IFikEQoAAgByCABuZAAAACAwID09ICYmoxEPAAMAcggAbmQAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcggAbmkAAAAgMSA9PSBYpBEKAAIAcggAbmkAAAAgMCA9PSAmJqMRDwADAHIIAG5pAAAAbgAAAAAZAAAAFQAKAHIIAHMLAAIAIDQVAAoAcggAcwwAAgAgNBUACgByCABzDQACACA0FQAKAHIIAHMIAAIAIDQVAAoAcggAcw4AAgAgNBUACgByCABzDwACACA0FQAKAHIIAHMQAAIAIDQVAAoAcggAcwkAAgAgNBUACgByCABzFwACACA0FQAKAHIIAHMYAAIAIDQVAAoAcggAcxkAAgAgNBUACgByCABzEQACACA0NxAFAAEAcggANhAFAAEAcgkA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Give Negative Karma
+;KARMA HIT HANDLED ON MURDER OF GOOD PERSON
+
+;Set Quest Items As Non-Essential
+player.removeitem MS03HistoryHolotape 999
+SetQuestObject MS03LibraryArchivesHolotape 0
+SetQuestObject MS03LibraryCatalogueHolotape 0
+SetQuestObject MS03Repellent 0
+player.removeitem MS03Observer 999
+player.removeitem MS03TelemetryUnit 999
+
+;Remove extraneous quest-item holotapes
+if (player.getitemcount MS03LibraryCatalogueHolotape == 1)
+   player.removeitem MS03LibraryCatalogueHolotape 1
+endif
+if (player.getitemcount MS03LibraryArchivesHolotape == 1)
+   player.removeitem MS03LibraryArchivesHolotape 1
+endif
+
+;Hide any uncompleted objective
+if (GetObjectiveDisplayed MS03 2 == 1 &amp;&amp; GetObjectiveCompleted MS03 2 == 0)
+   SetObjectiveDisplayed MS03 2 0
+endif
+if (GetObjectiveDisplayed MS03 5 == 1 &amp;&amp; GetObjectiveCompleted MS03 5 == 0)
+   SetObjectiveDisplayed MS03 5 0
+endif
+if (GetObjectiveDisplayed MS03 10 == 1 &amp;&amp; GetObjectiveCompleted MS03 10 == 0)
+   SetObjectiveDisplayed MS03 10 0
+endif
+if (GetObjectiveDisplayed MS03 12 == 1 &amp;&amp; GetObjectiveCompleted MS03 12 == 0)
+   SetObjectiveDisplayed MS03 12 0
+endif
+if (GetObjectiveDisplayed MS03 16 == 1 &amp;&amp; GetObjectiveCompleted MS03 16 == 0)
+   SetObjectiveDisplayed MS03 16 0
+endif
+if (GetObjectiveDisplayed MS03 20 == 1 &amp;&amp; GetObjectiveCompleted MS03 20 == 0)
+   SetObjectiveDisplayed MS03 20 0
+endif
+if (GetObjectiveDisplayed MS03 24 == 1 &amp;&amp; GetObjectiveCompleted MS03 24 == 0)
+   SetObjectiveDisplayed MS03 24 0
+endif
+if (GetObjectiveDisplayed MS03 26 == 1 &amp;&amp; GetObjectiveCompleted MS03 26 == 0)
+   SetObjectiveDisplayed MS03 26 0
+endif
+if (GetObjectiveDisplayed MS03 30 == 1 &amp;&amp; GetObjectiveCompleted MS03 30 == 0)
+   SetObjectiveDisplayed MS03 30 0
+endif
+if (GetObjectiveDisplayed MS03 34 == 1 &amp;&amp; GetObjectiveCompleted MS03 34 == 0)
+   SetObjectiveDisplayed MS03 34 0
+endif
+if (GetObjectiveDisplayed MS03 36 == 1 &amp;&amp; GetObjectiveCompleted MS03 36 == 0)
+   SetObjectiveDisplayed MS03 36 0
+endif
+if (GetObjectiveDisplayed MS03 38 == 1 &amp;&amp; GetObjectiveCompleted MS03 38 == 0)
+   SetObjectiveDisplayed MS03 38 0
+endif
+if (GetObjectiveDisplayed MS03 40 == 1 &amp;&amp; GetObjectiveCompleted MS03 40 == 0)
+   SetObjectiveDisplayed MS03 40 0
+endif
+if (GetObjectiveDisplayed MS03 44 == 1 &amp;&amp; GetObjectiveCompleted MS03 44 == 0)
+   SetObjectiveDisplayed MS03 44 0
+endif
+if (GetObjectiveDisplayed MS03 46 == 1 &amp;&amp; GetObjectiveCompleted MS03 46 == 0)
+   SetObjectiveDisplayed MS03 46 0
+endif
+if (GetObjectiveDisplayed MS03 50 == 1 &amp;&amp; GetObjectiveCompleted MS03 50 == 0)
+   SetObjectiveDisplayed MS03 50 0
+endif
+if (GetObjectiveDisplayed MS03 54 == 1 &amp;&amp; GetObjectiveCompleted MS03 54 == 0)
+   SetObjectiveDisplayed MS03 54 0
+endif
+if (GetObjectiveDisplayed MS03 56 == 1 &amp;&amp; GetObjectiveCompleted MS03 56 == 0)
+   SetObjectiveDisplayed MS03 56 0
+endif
+if (GetObjectiveDisplayed MS03 60 == 1 &amp;&amp; GetObjectiveCompleted MS03 60 == 0)
+   SetObjectiveDisplayed MS03 60 0
+endif
+if (GetObjectiveDisplayed MS03 64 == 1 &amp;&amp; GetObjectiveCompleted MS03 64 == 0)
+   SetObjectiveDisplayed MS03 64 0
+endif
+if (GetObjectiveDisplayed MS03 66 == 1 &amp;&amp; GetObjectiveCompleted MS03 66 == 0)
+   SetObjectiveDisplayed MS03 66 0
+endif
+if (GetObjectiveDisplayed MS03 68 == 1 &amp;&amp; GetObjectiveCompleted MS03 68 == 0)
+   SetObjectiveDisplayed MS03 68 0
+endif
+if (GetObjectiveDisplayed MS03 70 == 1 &amp;&amp; GetObjectiveCompleted MS03 70 == 0)
+   SetObjectiveDisplayed MS03 70 0
+endif
+if (GetObjectiveDisplayed MS03 74 == 1 &amp;&amp; GetObjectiveCompleted MS03 74 == 0)
+   SetObjectiveDisplayed MS03 74 0
+endif
+if (GetObjectiveDisplayed MS03 76 == 1 &amp;&amp; GetObjectiveCompleted MS03 76 == 0)
+   SetObjectiveDisplayed MS03 76 0
+endif
+if (GetObjectiveDisplayed MS03 78 == 1 &amp;&amp; GetObjectiveCompleted MS03 78 == 0)
+   SetObjectiveDisplayed MS03 78 0
+endif
+if (GetObjectiveDisplayed MS03 80 == 1 &amp;&amp; GetObjectiveCompleted MS03 80 == 0)
+   SetObjectiveDisplayed MS03 80 0
+endif
+if (GetObjectiveDisplayed MS03 84 == 1 &amp;&amp; GetObjectiveCompleted MS03 84 == 0)
+   SetObjectiveDisplayed MS03 84 0
+endif
+if (GetObjectiveDisplayed MS03 88 == 1 &amp;&amp; GetObjectiveCompleted MS03 88 == 0)
+   SetObjectiveDisplayed MS03 88 0
+endif
+if (GetObjectiveDisplayed MS03 90 == 1 &amp;&amp; GetObjectiveCompleted MS03 90 == 0)
+   SetObjectiveDisplayed MS03 90 0
+endif
+if (GetObjectiveDisplayed MS03 94 == 1 &amp;&amp; GetObjectiveCompleted MS03 94 == 0)
+   SetObjectiveDisplayed MS03 94 0
+endif
+if (GetObjectiveDisplayed MS03 98 == 1 &amp;&amp; GetObjectiveCompleted MS03 98 == 0)
+   SetObjectiveDisplayed MS03 98 0
+endif
+if (GetObjectiveDisplayed MS03 100 == 1 &amp;&amp; GetObjectiveCompleted MS03 100 == 0)
+   SetObjectiveDisplayed MS03 100 0
+endif
+if (GetObjectiveDisplayed MS03 105 == 1 &amp;&amp; GetObjectiveCompleted MS03 105 == 0)
+   SetObjectiveDisplayed MS03 105 0
+endif
+
+;Set all sub-tasks as completed, to avoid quest-breaking
+set MS03.MS03a1 to 4
+set MS03.MS03a2 to 4
+set MS03.MS03a3 to 4
+set MS03.MS03a to 4
+set MS03.MS03b1 to 4
+set MS03.MS03b2 to 4
+set MS03.MS03b3 to 4
+set MS03.MS03b to 4
+set MS03.MS03c1 to 4
+set MS03.MS03c2 to 4
+set MS03.MS03c3 to 4
+set MS03.MS03c to 4
+
+;End the quest
+;SetObjectiveDisplayed MS03 215 1
+;SetObjectiveCompleted MS03 215 1
+StopQuest MS03
+
+;Start MS03Fin
+StartQuest MS03Fin
+
+;NO ACHIEVEMENT! QUEST FAILED!</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3B3">MS03HistoryHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3B7">MS03Repellent</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00030663">MS03Observer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3B4">MS03TelemetryUnit</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031ECC">MS03Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">215</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">Moira Brown has been convinced to give up on her book.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>3060</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">BBIHAAEAbs7///8WAB8AAQAbACByAwBzCAAgNCA9PSByAwBzCQAgNCA9PSAmJncRBwABAG5kAAAAGAAfAAEAGwAgcgMAcwgAIDQgPT0gcgMAcwkAIDQgIT0gJiZ3EQcAAQBuyAAAABcAAgABAHcRBwABAG4sAQAAGQAAABYAFwABABMAIHIBAFgvEAUAAQByBAAgMSA9PRwAAQBSEAoAAgByBABuAQAAABkAAAAWABcAAQATACByAQBYLxAFAAEAcgUAIDEgPT0cAAEAUhAKAAIAcgUAbgEAAAAZAAAAHAABAHYRBQABAHIGABwAAQBZEAsAAQByBwAAAAAAAAAcAAIAEBAJAAIAJwBuHgAAABYAMQABAC0AIFilEQoAAgByAwBuAgAAACAxID09IFikEQoAAgByAwBuAgAAACAwID09ICYmoxEPAAMAcgMAbgIAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbgUAAAAgMSA9PSBYpBEKAAIAcgMAbgUAAAAgMCA9PSAmJqMRDwADAHIDAG4FAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG4KAAAAIDEgPT0gWKQRCgACAHIDAG4KAAAAIDAgPT0gJiajEQ8AAwByAwBuCgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuDAAAACAxID09IFikEQoAAgByAwBuDAAAACAwID09ICYmoxEPAAMAcgMAbgwAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbhAAAAAgMSA9PSBYpBEKAAIAcgMAbhAAAAAgMCA9PSAmJqMRDwADAHIDAG4QAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG4UAAAAIDEgPT0gWKQRCgACAHIDAG4UAAAAIDAgPT0gJiajEQ8AAwByAwBuFAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuGAAAACAxID09IFikEQoAAgByAwBuGAAAACAwID09ICYmoxEPAAMAcgMAbhgAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbhoAAAAgMSA9PSBYpBEKAAIAcgMAbhoAAAAgMCA9PSAmJqMRDwADAHIDAG4aAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG4eAAAAIDEgPT0gWKQRCgACAHIDAG4eAAAAIDAgPT0gJiajEQ8AAwByAwBuHgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuIgAAACAxID09IFikEQoAAgByAwBuIgAAACAwID09ICYmoxEPAAMAcgMAbiIAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbiQAAAAgMSA9PSBYpBEKAAIAcgMAbiQAAAAgMCA9PSAmJqMRDwADAHIDAG4kAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG4mAAAAIDEgPT0gWKQRCgACAHIDAG4mAAAAIDAgPT0gJiajEQ8AAwByAwBuJgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuKAAAACAxID09IFikEQoAAgByAwBuKAAAACAwID09ICYmoxEPAAMAcgMAbigAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbiwAAAAgMSA9PSBYpBEKAAIAcgMAbiwAAAAgMCA9PSAmJqMRDwADAHIDAG4sAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG4uAAAAIDEgPT0gWKQRCgACAHIDAG4uAAAAIDAgPT0gJiajEQ8AAwByAwBuLgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuMgAAACAxID09IFikEQoAAgByAwBuMgAAACAwID09ICYmoxEPAAMAcgMAbjIAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbjYAAAAgMSA9PSBYpBEKAAIAcgMAbjYAAAAgMCA9PSAmJqMRDwADAHIDAG42AAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG44AAAAIDEgPT0gWKQRCgACAHIDAG44AAAAIDAgPT0gJiajEQ8AAwByAwBuOAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuPAAAACAxID09IFikEQoAAgByAwBuPAAAACAwID09ICYmoxEPAAMAcgMAbjwAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbkAAAAAgMSA9PSBYpBEKAAIAcgMAbkAAAAAgMCA9PSAmJqMRDwADAHIDAG5AAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG5CAAAAIDEgPT0gWKQRCgACAHIDAG5CAAAAIDAgPT0gJiajEQ8AAwByAwBuQgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuRAAAACAxID09IFikEQoAAgByAwBuRAAAACAwID09ICYmoxEPAAMAcgMAbkQAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbkYAAAAgMSA9PSBYpBEKAAIAcgMAbkYAAAAgMCA9PSAmJqMRDwADAHIDAG5GAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG5KAAAAIDEgPT0gWKQRCgACAHIDAG5KAAAAIDAgPT0gJiajEQ8AAwByAwBuSgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuTAAAACAxID09IFikEQoAAgByAwBuTAAAACAwID09ICYmoxEPAAMAcgMAbkwAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbk4AAAAgMSA9PSBYpBEKAAIAcgMAbk4AAAAgMCA9PSAmJqMRDwADAHIDAG5OAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG5QAAAAIDEgPT0gWKQRCgACAHIDAG5QAAAAIDAgPT0gJiajEQ8AAwByAwBuUAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuVAAAACAxID09IFikEQoAAgByAwBuVAAAACAwID09ICYmoxEPAAMAcgMAblQAAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAblgAAAAgMSA9PSBYpBEKAAIAcgMAblgAAAAgMCA9PSAmJqMRDwADAHIDAG5YAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG5aAAAAIDEgPT0gWKQRCgACAHIDAG5aAAAAIDAgPT0gJiajEQ8AAwByAwBuWgAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuXgAAACAxID09IFikEQoAAgByAwBuXgAAACAwID09ICYmoxEPAAMAcgMAbl4AAABuAAAAABkAAAAWADEAAQAtACBYpREKAAIAcgMAbmIAAAAgMSA9PSBYpBEKAAIAcgMAbmIAAAAgMCA9PSAmJqMRDwADAHIDAG5iAAAAbgAAAAAZAAAAFgAxAAEALQAgWKURCgACAHIDAG5kAAAAIDEgPT0gWKQRCgACAHIDAG5kAAAAIDAgPT0gJiajEQ8AAwByAwBuZAAAAG4AAAAAGQAAABYAMQABAC0AIFilEQoAAgByAwBuaQAAACAxID09IFikEQoAAgByAwBuaQAAACAwID09ICYmoxEPAAMAcgMAbmkAAABuAAAAABkAAAAVAAoAcgMAcwsAAgAgNBUACgByAwBzDAACACA0FQAKAHIDAHMNAAIAIDQVAAoAcgMAcwgAAgAgNBUACgByAwBzDgACACA0FQAKAHIDAHMPAAIAIDQVAAoAcgMAcxAAAgAgNBUACgByAwBzCQACACA0FQAKAHIDAHMXAAIAIDQVAAoAcgMAcxgAAgAgNBUACgByAwBzGQACACA0FQAKAHIDAHMRAAIAIDQ3EAUAAQByAwA2EAUAAQByCAA5Eg8AAwByCQBuAAAAAG4CAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Give Negative Karma
+rewardkarma -50
+
+;Give Final XP Reward:
+if (MS03.ms03a == 4 &amp;&amp; MS03.ms03b == 4)
+   RewardXP 100
+elseif (MS03.ms03a == 4 &amp;&amp; MS03.ms03b != 4)
+   RewardXP 200
+else
+   RewardXP 300
+endif
+
+;Remove extraneous quest-item holotapes
+if (player.getitemcount MS03LibraryCatalogueHolotape == 1)
+   player.removeitem MS03LibraryCatalogueHolotape 1
+endif
+if (player.getitemcount MS03LibraryArchivesHolotape == 1)
+   player.removeitem MS03LibraryArchivesHolotape 1
+endif
+
+;Reward the player for being a dream-crushing bastard
+player.AddPerk MS03DreamCrusherPerk
+player.showMessage MS03DeamcrusherPerkMsg
+MoiraBrownREF.modav repair 30
+
+;Hide any uncompleted objective
+if (GetObjectiveDisplayed MS03 2 == 1 &amp;&amp; GetObjectiveCompleted MS03 2 == 0)
+   SetObjectiveDisplayed MS03 2 0
+endif
+if (GetObjectiveDisplayed MS03 5 == 1 &amp;&amp; GetObjectiveCompleted MS03 5 == 0)
+   SetObjectiveDisplayed MS03 5 0
+endif
+if (GetObjectiveDisplayed MS03 10 == 1 &amp;&amp; GetObjectiveCompleted MS03 10 == 0)
+   SetObjectiveDisplayed MS03 10 0
+endif
+if (GetObjectiveDisplayed MS03 12 == 1 &amp;&amp; GetObjectiveCompleted MS03 12 == 0)
+   SetObjectiveDisplayed MS03 12 0
+endif
+if (GetObjectiveDisplayed MS03 16 == 1 &amp;&amp; GetObjectiveCompleted MS03 16 == 0)
+   SetObjectiveDisplayed MS03 16 0
+endif
+if (GetObjectiveDisplayed MS03 20 == 1 &amp;&amp; GetObjectiveCompleted MS03 20 == 0)
+   SetObjectiveDisplayed MS03 20 0
+endif
+if (GetObjectiveDisplayed MS03 24 == 1 &amp;&amp; GetObjectiveCompleted MS03 24 == 0)
+   SetObjectiveDisplayed MS03 24 0
+endif
+if (GetObjectiveDisplayed MS03 26 == 1 &amp;&amp; GetObjectiveCompleted MS03 26 == 0)
+   SetObjectiveDisplayed MS03 26 0
+endif
+if (GetObjectiveDisplayed MS03 30 == 1 &amp;&amp; GetObjectiveCompleted MS03 30 == 0)
+   SetObjectiveDisplayed MS03 30 0
+endif
+if (GetObjectiveDisplayed MS03 34 == 1 &amp;&amp; GetObjectiveCompleted MS03 34 == 0)
+   SetObjectiveDisplayed MS03 34 0
+endif
+if (GetObjectiveDisplayed MS03 36 == 1 &amp;&amp; GetObjectiveCompleted MS03 36 == 0)
+   SetObjectiveDisplayed MS03 36 0
+endif
+if (GetObjectiveDisplayed MS03 38 == 1 &amp;&amp; GetObjectiveCompleted MS03 38 == 0)
+   SetObjectiveDisplayed MS03 38 0
+endif
+if (GetObjectiveDisplayed MS03 40 == 1 &amp;&amp; GetObjectiveCompleted MS03 40 == 0)
+   SetObjectiveDisplayed MS03 40 0
+endif
+if (GetObjectiveDisplayed MS03 44 == 1 &amp;&amp; GetObjectiveCompleted MS03 44 == 0)
+   SetObjectiveDisplayed MS03 44 0
+endif
+if (GetObjectiveDisplayed MS03 46 == 1 &amp;&amp; GetObjectiveCompleted MS03 46 == 0)
+   SetObjectiveDisplayed MS03 46 0
+endif
+if (GetObjectiveDisplayed MS03 50 == 1 &amp;&amp; GetObjectiveCompleted MS03 50 == 0)
+   SetObjectiveDisplayed MS03 50 0
+endif
+if (GetObjectiveDisplayed MS03 54 == 1 &amp;&amp; GetObjectiveCompleted MS03 54 == 0)
+   SetObjectiveDisplayed MS03 54 0
+endif
+if (GetObjectiveDisplayed MS03 56 == 1 &amp;&amp; GetObjectiveCompleted MS03 56 == 0)
+   SetObjectiveDisplayed MS03 56 0
+endif
+if (GetObjectiveDisplayed MS03 60 == 1 &amp;&amp; GetObjectiveCompleted MS03 60 == 0)
+   SetObjectiveDisplayed MS03 60 0
+endif
+if (GetObjectiveDisplayed MS03 64 == 1 &amp;&amp; GetObjectiveCompleted MS03 64 == 0)
+   SetObjectiveDisplayed MS03 64 0
+endif
+if (GetObjectiveDisplayed MS03 66 == 1 &amp;&amp; GetObjectiveCompleted MS03 66 == 0)
+   SetObjectiveDisplayed MS03 66 0
+endif
+if (GetObjectiveDisplayed MS03 68 == 1 &amp;&amp; GetObjectiveCompleted MS03 68 == 0)
+   SetObjectiveDisplayed MS03 68 0
+endif
+if (GetObjectiveDisplayed MS03 70 == 1 &amp;&amp; GetObjectiveCompleted MS03 70 == 0)
+   SetObjectiveDisplayed MS03 70 0
+endif
+if (GetObjectiveDisplayed MS03 74 == 1 &amp;&amp; GetObjectiveCompleted MS03 74 == 0)
+   SetObjectiveDisplayed MS03 74 0
+endif
+if (GetObjectiveDisplayed MS03 76 == 1 &amp;&amp; GetObjectiveCompleted MS03 76 == 0)
+   SetObjectiveDisplayed MS03 76 0
+endif
+if (GetObjectiveDisplayed MS03 78 == 1 &amp;&amp; GetObjectiveCompleted MS03 78 == 0)
+   SetObjectiveDisplayed MS03 78 0
+endif
+if (GetObjectiveDisplayed MS03 80 == 1 &amp;&amp; GetObjectiveCompleted MS03 80 == 0)
+   SetObjectiveDisplayed MS03 80 0
+endif
+if (GetObjectiveDisplayed MS03 84 == 1 &amp;&amp; GetObjectiveCompleted MS03 84 == 0)
+   SetObjectiveDisplayed MS03 84 0
+endif
+if (GetObjectiveDisplayed MS03 88 == 1 &amp;&amp; GetObjectiveCompleted MS03 88 == 0)
+   SetObjectiveDisplayed MS03 88 0
+endif
+if (GetObjectiveDisplayed MS03 90 == 1 &amp;&amp; GetObjectiveCompleted MS03 90 == 0)
+   SetObjectiveDisplayed MS03 90 0
+endif
+if (GetObjectiveDisplayed MS03 94 == 1 &amp;&amp; GetObjectiveCompleted MS03 94 == 0)
+   SetObjectiveDisplayed MS03 94 0
+endif
+if (GetObjectiveDisplayed MS03 98 == 1 &amp;&amp; GetObjectiveCompleted MS03 98 == 0)
+   SetObjectiveDisplayed MS03 98 0
+endif
+if (GetObjectiveDisplayed MS03 100 == 1 &amp;&amp; GetObjectiveCompleted MS03 100 == 0)
+   SetObjectiveDisplayed MS03 100 0
+endif
+if (GetObjectiveDisplayed MS03 105 == 1 &amp;&amp; GetObjectiveCompleted MS03 105 == 0)
+   SetObjectiveDisplayed MS03 105 0
+endif
+
+;Set all sub-tasks as completed, to avoid quest-breaking
+set MS03.MS03a1 to 4
+set MS03.MS03a2 to 4
+set MS03.MS03a3 to 4
+set MS03.MS03a to 4
+set MS03.MS03b1 to 4
+set MS03.MS03b2 to 4
+set MS03.MS03b3 to 4
+set MS03.MS03b to 4
+set MS03.MS03c1 to 4
+set MS03.MS03c2 to 4
+set MS03.MS03c3 to 4
+set MS03.MS03c to 4
+
+;End the quest
+;SetObjectiveDisplayed MS03 215 1
+;SetObjectiveCompleted MS03 215 1
+StopQuest MS03
+
+;Start MS03Fin
+StartQuest MS03Fin
+
+;addachievement 16
+
+AddReputation RepTTWMegaton 0 2
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D2BC">MoiraBrownREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00030FEB">MS03DreamCrusherPerk</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0004C597">MS03DeamcrusherPerkMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031ECC">MS03Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">225</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">The Wasteland Survival Guide has been distributed throughout the Capitol Wastes, where it may help survivors.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>65</ReferenceCount>
+                <CompiledSize>3500</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbkQAAABuAQAAADcQBQABAHICABUAEAByAwBmJAAIACBHBAAgMSArFQAKAHIDAHM1AAIAIDF3EQcAAQBuZAAAABYAFwABABMAIHIBAFgvEAUAAQByBQAgMSA9PRwAAQBSEAoAAgByBQBuAQAAABkAAAAWABcAAQATACByAQBYLxAFAAEAcgYAIDEgPT0cAAEAUhAKAAIAcgYAbgEAAAAZAAAAFgAQAAcADAAgcgIAczEAIDAgPT0WAA8AAQALACByAgBzAQAgNSA8HAABAHYRBQABAHIHABgAHgABABoAIHICAHMBACA1ID49IHICAHMBACA5IDwgJiYcAAEAdhEFAAEAcggAGAAQAAEADAAgcgIAcwEAIDkgPT0cAAEAdhEFAAEAcgkAGQAAABgAEAAHAAwAIHICAHMxACAxID09FgAPAAEACwAgcgIAcwEAIDUgPBwAAQB2EQUAAQByCgAYAB4AAQAaACByAgBzAQAgNSA+PSByAgBzAQAgOSA8ICYmHAABAHYRBQABAHILABgAEAABAAwAIHICAHMBACA5ID09HAABAHYRBQABAHIMABkAAAAYABAABwAMACByAgBzMQAgMiA9PRYADwABAAsAIHICAHMBACA1IDwcAAEAdhEFAAEAcg0AGAAeAAEAGgAgcgIAcwEAIDUgPj0gcgIAcwEAIDkgPCAmJhwAAQB2EQUAAQByDgAYABAAAQAMACByAgBzAQAgOSA9PRwAAQB2EQUAAQByDwAZAAAAGAAQAAcADAAgcgIAczEAIDMgPT0WAA8AAQALACByAgBzAQAgNSA8HAABAHYRBQABAHIQABgAHgABABoAIHICAHMBACA1ID49IHICAHMBACA5IDwgJiYcAAEAdhEFAAEAchEAGAAQAAEADAAgcgIAcwEAIDkgPT0cAAEAdhEFAAEAchIAGQAAABgAEAAHAAwAIHICAHMxACA0ID09FgAPAAEACwAgcgIAcwEAIDUgPBwAAQB2EQUAAQByEwAYAB4AAQAaACByAgBzAQAgNSA+PSByAgBzAQAgOSA8ICYmHAABAHYRBQABAHIUABgAEAABAAwAIHICAHMBACA5ID09HAABAHYRBQABAHIVABkAAAAZAAAAWRALAAEAchYAAAAAAAAAFgAQABEADAAgcgIAczEAIDAgPT0WAC4AAQAqACBy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</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS03 68 1
+;SetObjectiveDisplayed MS03 225 1
+;SetObjectiveCompleted MS03 225 1
+StopQuest MS03
+Set RadioGalaxyNewsQuest.MS03Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+
+;Give Final XP Reward:
+RewardXP 100
+
+;Remove extraneous quest-item holotapes
+if (player.getitemcount MS03LibraryCatalogueHolotape == 1)
+   player.removeitem MS03LibraryCatalogueHolotape 1
+endif
+if (player.getitemcount MS03LibraryArchivesHolotape == 1)
+   player.removeitem MS03LibraryArchivesHolotape 1
+endif
+
+;Give proper perk depending on how well the player reseearched the book 
+;and what sort of input he gave
+if (MS03.currentStyle == 0)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1A
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2A
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3A
+   endif
+elseif (MS03.currentStyle == 1)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1B
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2B
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3B
+   endif
+elseif (MS03.currentStyle == 2)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1C
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2C
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3C
+   endif
+elseif (MS03.currentStyle == 3)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1D
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2D
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3D
+   endif
+elseif (MS03.currentStyle == 4)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1E
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2E
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3E
+   endif
+endif
+showMessage MS03SurvivorPerkMsg
+
+;Give appropriate book note for quality of work and style of reply:
+;player.addItem MS03SurvivalGuideBook 1
+if (MS03.currentStyle == 0)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8A
+   endif
+elseif (MS03.currentStyle == 1)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8B
+   endif
+elseif (MS03.currentStyle == 2)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8C
+   endif
+elseif (MS03.currentStyle == 3)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8D
+   endif
+elseif (MS03.currentStyle == 4)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8E
+   endif
+endif
+player.additem xMS03SurvivalGuideBookItem 1
+
+;Start MS03Fin
+StartQuest MS03Fin
+
+;addachievement 16
+AddReputation RepTTWMegaton 1 4</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A2">MS03Perk1A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A1">MS03Perk2A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A0">MS03Perk3A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D4">MS03Perk1B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D8">MS03Perk2B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DC">MS03Perk3B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D5">MS03Perk1C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D9">MS03Perk2C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DD">MS03Perk3C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D6">MS03Perk1D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DA">MS03Perk2D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DE">MS03Perk3D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D7">MS03Perk1E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DB">MS03Perk2E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DF">MS03Perk3E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006BBBE">MS03SurvivorPerkMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3B0">MS03SurvivalGuideText1A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AF">MS03SurvivalGuideText2A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AE">MS03SurvivalGuideText3A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AD">MS03SurvivalGuideText4A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AC">MS03SurvivalGuideText5A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AB">MS03SurvivalGuideText6A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AA">MS03SurvivalGuideText7A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3A9">MS03SurvivalGuideText8A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B4">MS03SurvivalGuideText1B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B8">MS03SurvivalGuideText2B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BC">MS03SurvivalGuideText3B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C0">MS03SurvivalGuideText4B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C4">MS03SurvivalGuideText5B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C8">MS03SurvivalGuideText6B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CC">MS03SurvivalGuideText7B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D0">MS03SurvivalGuideText8B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B5">MS03SurvivalGuideText1C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B9">MS03SurvivalGuideText2C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BD">MS03SurvivalGuideText3C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C1">MS03SurvivalGuideText4C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C5">MS03SurvivalGuideText5C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C9">MS03SurvivalGuideText6C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CD">MS03SurvivalGuideText7C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D1">MS03SurvivalGuideText8C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B6">MS03SurvivalGuideText1D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BA">MS03SurvivalGuideText2D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BE">MS03SurvivalGuideText3D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C2">MS03SurvivalGuideText4D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C6">MS03SurvivalGuideText5D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CA">MS03SurvivalGuideText6D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CE">MS03SurvivalGuideText7D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D2">MS03SurvivalGuideText8D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B7">MS03SurvivalGuideText1E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BB">MS03SurvivalGuideText2E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BF">MS03SurvivalGuideText3E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C3">MS03SurvivalGuideText4E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C7">MS03SurvivalGuideText5E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CB">MS03SurvivalGuideText6E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CF">MS03SurvivalGuideText7E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D3">MS03SurvivalGuideText8E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0005A795">xMS03survivalGuideBookItem</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031ECC">MS03Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">250</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">The Wasteland Survival Guide has been researched and spread throughout the Capitol Wasteland, where it will help countless survivors.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>65</ReferenceCount>
+                <CompiledSize>3511</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">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</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS03 68 1
+;SetObjectiveDisplayed MS03 250 1
+;SetObjectiveCompleted MS03 250 1
+StopQuest MS03
+
+;Remove extraneous quest-item holotapes
+if (player.getitemcount MS03LibraryCatalogueHolotape == 1)
+   player.removeitem MS03LibraryCatalogueHolotape 1
+endif
+if (player.getitemcount MS03LibraryArchivesHolotape == 1)
+   player.removeitem MS03LibraryArchivesHolotape 1
+endif
+
+;Give quest rewards, depending on objectiveBonuses
+rewardkarma 50
+RewardXP 100
+Set RadioGalaxyNewsQuest.MS03Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+;Give proper perk depending on how well the player reseearched the book 
+;and what sort of input he gave
+if (MS03.currentStyle == 0)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1A
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2A
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3A
+   endif
+elseif (MS03.currentStyle == 1)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1B
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2B
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3B
+   endif
+elseif (MS03.currentStyle == 2)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1C
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2C
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3C
+   endif
+elseif (MS03.currentStyle == 3)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1D
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2D
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3D
+   endif
+elseif (MS03.currentStyle == 4)
+   if (MS03.bonusObjectives &lt; 5)
+      player.AddPerk MS03Perk1E
+   elseif (MS03.bonusObjectives &gt;= 5 &amp;&amp; MS03.bonusObjectives &lt; 9)
+      player.AddPerk MS03Perk2E
+   elseif (MS03.bonusObjectives == 9)
+      player.AddPerk MS03Perk3E
+   endif
+endif
+showMessage MS03SurvivorPerkMsg
+
+
+;Give appropriate book note for quality of work and style of reply:
+;player.addItem MS03SurvivalGuideBook 1
+if (MS03.currentStyle == 0)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6A
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7A
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8A
+   endif
+elseif (MS03.currentStyle == 1)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6B
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7B
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8B
+   endif
+elseif (MS03.currentStyle == 2)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6C
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7C
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8C
+   endif
+elseif (MS03.currentStyle == 3)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6D
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7D
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8D
+   endif
+elseif (MS03.currentStyle == 4)
+   if (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText1E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText2E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText3E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText4E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &lt;= 2)
+      player.AddNote MS03SurvivalGuideText5E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &lt;= 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText6E
+   elseif (MS03.MS03aBonus &lt;= 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText7E
+   elseif (MS03.MS03aBonus &gt; 2 &amp;&amp; MS03.MS03bBonus &gt; 2 &amp;&amp; MS03.MS03cBonus &gt; 2)
+      player.AddNote MS03SurvivalGuideText8E
+   endif
+endif
+player.additem xMS03SurvivalGuideBookItem 1
+
+;Start MS03Fin
+StartQuest MS03Fin
+
+;addachievement 16
+AddReputation RepTTWMegaton 1 4</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E96">MS03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA2F">MS03LibraryCatalogueHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006CA30">MS03LibraryArchivesHolotape</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A2">MS03Perk1A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A1">MS03Perk2A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002D3A0">MS03Perk3A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D4">MS03Perk1B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D8">MS03Perk2B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DC">MS03Perk3B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D5">MS03Perk1C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D9">MS03Perk2C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DD">MS03Perk3C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D6">MS03Perk1D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DA">MS03Perk2D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DE">MS03Perk3D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331D7">MS03Perk1E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DB">MS03Perk2E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000331DF">MS03Perk3E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006BBBE">MS03SurvivorPerkMsg</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3B0">MS03SurvivalGuideText1A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AF">MS03SurvivalGuideText2A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AE">MS03SurvivalGuideText3A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AD">MS03SurvivalGuideText4A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AC">MS03SurvivalGuideText5A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AB">MS03SurvivalGuideText6A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3AA">MS03SurvivalGuideText7A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D3A9">MS03SurvivalGuideText8A</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B4">MS03SurvivalGuideText1B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B8">MS03SurvivalGuideText2B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BC">MS03SurvivalGuideText3B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C0">MS03SurvivalGuideText4B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C4">MS03SurvivalGuideText5B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C8">MS03SurvivalGuideText6B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CC">MS03SurvivalGuideText7B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D0">MS03SurvivalGuideText8B</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B5">MS03SurvivalGuideText1C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B9">MS03SurvivalGuideText2C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BD">MS03SurvivalGuideText3C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C1">MS03SurvivalGuideText4C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C5">MS03SurvivalGuideText5C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C9">MS03SurvivalGuideText6C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CD">MS03SurvivalGuideText7C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D1">MS03SurvivalGuideText8C</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B6">MS03SurvivalGuideText1D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BA">MS03SurvivalGuideText2D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BE">MS03SurvivalGuideText3D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C2">MS03SurvivalGuideText4D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C6">MS03SurvivalGuideText5D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CA">MS03SurvivalGuideText6D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CE">MS03SurvivalGuideText7D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D2">MS03SurvivalGuideText8D</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331B7">MS03SurvivalGuideText1E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BB">MS03SurvivalGuideText2E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331BF">MS03SurvivalGuideText3E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C3">MS03SurvivalGuideText4E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331C7">MS03SurvivalGuideText5E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CB">MS03SurvivalGuideText6E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331CF">MS03SurvivalGuideText7E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060331D3">MS03SurvivalGuideText8E</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0005A795">xMS03survivalGuideBookItem</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031ECC">MS03Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">0</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">2</Index>
+        <Description Tag="NNAM">Ask Moira Brown about her book.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Help Moira with Chapter 1.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find food in the Super-Duper Mart.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2B9">MS03a1TargetParent</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>NotEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F37">SuperDuperMart</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">12</Index>
+        <Description Tag="NNAM">(Optional) Find medicine in the Super-Duper Mart.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2B9">MS03a1TargetParent</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>NotEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F37">SuperDuperMart</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">16</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Contract radiation sickness (200 rads).</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">200</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">24</Index>
+        <Description Tag="NNAM">(Optional) Contract more severe radiation sickness (600 rads).</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">26</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Travel to the playground in Minefield.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602EF4F">MS03MerryGoRoundREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">34</Index>
+        <Description Tag="NNAM">(Optional) Bring a landmine to Moira.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">36</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">38</Index>
+        <Description Tag="NNAM">Help Moira with Chapter 2.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Test the repellent on three Mole Rats.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0604F23C">TepidSewersToWasteland</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601BC9A">TepidSewer01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">44</Index>
+        <Description Tag="NNAM">(Optional) Test the repellent on seven more Mole Rats.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0604F23C">TepidSewersToWasteland</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601BC9A">TepidSewer01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">46</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Place the observer in a spawning pod in the Anchorage War Memorial.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0606C230">REFR - 0606C230</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F49">AnchorageWM01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="060508E6">AnchorageWM02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F47">AnchorageWM03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06017F48">AnchorageWMMid</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">54</Index>
+        <Description Tag="NNAM">(Optional) Do not kill any Mirelurks in the Anchorage War Memorial.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">56</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Become seriously injured (50% health or less).</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">64</Index>
+        <Description Tag="NNAM">(Optional) Receive a crippling injury.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">66</Index>
+        <Description Tag="NNAM">Return to Moira with your injuries.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">68</Index>
+        <Description Tag="NNAM">Help Moira with the last chapter.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Learn the history of Rivet City.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06002E8F">RivetCityMapMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCellParam</Type>
+                  <Cell ID="0602CD2C">RC</Cell>
+                  <UnusedArg2>FAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E74B">BannonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E96">MS03</Quest>
+                  <VariableIndex>60</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E751">VeraWeatherlyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E96">MS03</Quest>
+                  <VariableIndex>61</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">74</Index>
+        <Description Tag="NNAM">(Optional) Check other sources to confirm Rivet City's history.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E750">SeagraveHolmesRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E96">MS03</Quest>
+                  <VariableIndex>62</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E75B">BelleBonnyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E96">MS03</Quest>
+                  <VariableIndex>63</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">76</Index>
+        <Description Tag="NNAM">(Optional) Uncover Rivet City's true history.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0606A178">PinkertonRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156CA">Pinkerton</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E96">MS03</Quest>
+                  <VariableIndex>64</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0606A179">PinkertonTerminalRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="060156CA">Pinkerton</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">78</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Install the processor widget in the RobCo production facility mainframe.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D756">MS03RobCoMasterTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">84</Index>
+        <Description Tag="NNAM">(Optional) Reprogram the RobCo facility mainframe.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D756">MS03RobCoMasterTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">88</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">Access the card catalogue in Arlington Public Library.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0606C114">MS03LibraryTerminalFrontREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">94</Index>
+        <Description Tag="NNAM">(Optional) Retrieve complete library archives.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06018E55">MS03LibraryTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">98</Index>
+        <Description Tag="NNAM">Return to Moira.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602D2BC">MoiraBrownREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

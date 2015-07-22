@@ -1,0 +1,40 @@
+scn TTWOutcastTradeContSCPT
+
+short iRep
+float fRep
+
+ref item
+ref self
+
+long totalValue
+
+begin GameMode
+
+	if ( GetItemCount TTWOutcastItems > 0 )
+
+		set self to GetSelf
+		set totalValue to 0
+		
+		foreach item <- self
+			if ( IsRefInList TTWOutcastItems item >= 0 )
+				let totalValue += item.GetValue
+				item.RemoveMeIR
+			endif
+		loop
+
+		printc "Sold %.0f caps worth of tech" totalValue
+
+		let fRep += ( totalValue / 10 ) ^ 1/2
+		
+		set iRep to fRep
+		set fRep to fRep - iRep
+
+		if ( iRep >= 1 )
+			printc "Rep Added: %.0f" iRep
+			AddReputationExact TTWRepOutcasts 1 iRep		
+			set iRep to GetReputation TTWRepOutcasts 1		
+			printc "Total Outcast Rep: %.0f" iRep
+		endif
+
+	endif
+end

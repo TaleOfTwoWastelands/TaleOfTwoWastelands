@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0011D242">VFreeformTheStreet01SuitCountScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VFreeformTheStreet01SuitCountScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>17</ReferenceCount>
+        <CompiledSize>945</CompiledSize>
+        <VariableCount>22</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAaAJ4DAAABAHIBABUAEwBzAQAOACByAQBYLxAFAAEAcgIAFQATAHMCAA4AIHIBAFgvEAUAAQByAwAVABMAcwMADgAgcgEAWC8QBQABAHIEABUAEwBzBAAOACByAQBYLxAFAAEAcgUAFQATAHMOAA4AIHIBAFgvEAUAAQByBgAVABMAcw8ADgAgcgEAWC8QBQABAHIHABUAEwBzEAAOACByAQBYLxAFAAEAcggAFQATAHMRAA4AIHIBAFgvEAUAAQByCQAVABMAcxIADgAgcgEAWC8QBQABAHIKABUAEwBzEwAOACByAQBYLxAFAAEAcgsAFQATAHMUAA4AIHIBAFgvEAUAAQByDAAVABMAcxUADgAgcgEAWC8QBQABAHINABUAEwBzFgAOACByAQBYLxAFAAEAcg4AFQDTAHMKAM4AIHIBAFgvEAUAAQByAgAgcgEAWC8QBQABAHIFACArIHIBAFgvEAUAAQByAwAgKyByAQBYLxAFAAEAcgQAICsgcgEAWC8QBQABAHIGACArIHIBAFgvEAUAAQByBwAgKyByAQBYLxAFAAEAcggAICsgcgEAWC8QBQABAHIJACArIHIBAFgvEAUAAQByCgAgKyByAQBYLxAFAAEAcgsAICsgcgEAWC8QBQABAHIMACArIHIBAFgvEAUAAQByDQAgKyByAQBYLxAFAAEAcg4AICsVAA4AcwcACQAgcwoAIDMwICoVAAwAcg8Acw8ABAAgcwcAFQAMAHIPAHMbAAQAIHMBABUADAByDwBzHAAEACBzBAAVAAwAcg8AcykABAAgcwIAFQAMAHIPAHMqAAQAIHMDABUADAByDwBzKwAEACBzDgAVAAwAcg8AcywABAAgcw8AFQAMAHIPAHMtAAQAIHMQABUADAByDwBzLgAEACBzEQAVAAwAcg8Acy8ABAAgcxIAFQAMAHIPAHMwAAQAIHMTABUADAByDwBzMQAEACBzFAAVAAwAcg8AczIABAAgcxUAFQAMAHIPAHMzAAQAIHMWABYAEAAHAAwAIHIPAHMXACAxID09FQATAHMIAA4AIHIBAFgvEAUAAQByEAAVABMAcwkADgAgcgEAWC8QBQABAHIRABUADwBzCwAKACBzCAAgcwkAICsVABkAcwcAFAAgcwoAIDMwICogcwsAIDE1ICogKxUADAByDwBzDwAEACBzBwAVAAwAcg8AcxkABAAgcwgAFQAMAHIPAHMaAAQAIHMJABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="VFreeformTheStreet01SuitCountScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault3Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault11Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault19Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault22Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CashMoney</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BoomSuitCount1</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BoomSuitCount2</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SuitCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BoomCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault34Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault21Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault101Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault106Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault108Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault112Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault77Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault87Count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Vault92Count</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000EFB23">VaultSuit3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0012B966">VaultSuit11</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001300AF">VaultSuit19</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FD175">VaultSuit22</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0012B965">VaultSuit34</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104184">VaultSuit21</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000431E">VaultSuit101</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B73F2">VaultSuit106</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B73F1">VaultSuit108</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000340EF">VaultSuit112</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000CAFBE">VaultSuit77</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000340ED">VaultSuit87</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B73F3">VaultSuit92</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00117AC4">VFreeformTheStreet01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00109A92">OutfitBoomer1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00109A93">OutfitBoomer2</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

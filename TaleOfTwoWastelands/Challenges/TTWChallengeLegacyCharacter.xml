@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185AD">TTWChallengeLegacyCharacter</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeLegacyCharacter</EditorID>
+    <Name Tag="FULL">Legacy Character *</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E4">TTWChallengeOneStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill either the AntAgonizer or the Mechanist while wearing their rival's costume.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>0</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>0</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185CE">TTWChallengeLegacyCharacterActorsList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

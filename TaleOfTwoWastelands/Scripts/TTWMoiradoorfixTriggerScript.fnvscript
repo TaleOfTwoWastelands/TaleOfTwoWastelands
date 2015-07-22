@@ -1,0 +1,15 @@
+SCN TTWMoiradoorfixTriggerScript
+
+begin OnTriggerEnter
+	if IsActionRef player == 1
+		If GetCurrentTime > 8 && GetCurrentTime < 21
+			If TTWMoiraDoorOutsideRef.GetLocked
+				TTWMoiraDoorOutsideRef.unlock
+			EndIf
+		Else
+			If TTWMoiraDoorOutsideRef.GetLocked == 0
+				TTWMoiraDoorOutsideRef.Lock 80
+			EndIf
+		EndIf
+	EndIf
+End

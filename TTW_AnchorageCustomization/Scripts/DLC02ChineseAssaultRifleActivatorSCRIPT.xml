@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0700C361">DLC02ChineseAssaultRifleActivatorSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02ChineseAssaultRifleActivatorSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>143</CompiledSize>
+        <VariableCount>2</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAH8AAAAAABYAFAAGABAAIFhpEAUAAQByAQAgMSA9PRYAFgABABIAIHIBAFgvEAUAAQByAwAgMSA8HAABAAIQCgACAHIDAG4BAAAAGQAAABwAAQACEA8AAwByBABuMAAAAG4BAAAAHAACAAIQCgACAHIEAG4wAAAAIhACAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC02ChineseAssaultRifleActivatorSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">hasAmmo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">giveAmmo</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D004795">TTWRequisitionDummyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0600080B">WeapChineseAssaultRifle</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00004240">Ammo556mm</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

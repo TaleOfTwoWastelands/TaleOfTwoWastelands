@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="000C0327">CG02WeapBBGun</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG02WeapBBGun</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-20</X>
+        <Y>-7</Y>
+        <Z>-4</Z>
+      </Point1>
+      <Point2>
+        <X>44</X>
+        <Y>6</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">BB Gun</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\2HandRifle\BBGun01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAHYgPtpJAxMAdiCO2kkGVsG3SjDAM07t8JYgQ669huXwliCTrr2GVsG3SjDAM0898JYgQ669hzXwliCTrr2GVsG3SjDAM08uUIYu3pQWZyZQhi8ulBZmVsG3SjDAM07t8KYjpvOStuXwpiP285K2VsG3SjDAM0898KYjpvOStzXwpiP285K2VsG3SjDAM0</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_bb_gun.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Weapons_small\glow_weapons_bb_gun.dds</Small>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="0002935B">AmmoBB</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="00034235">RepairBBGun</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">SmallGuns</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000864D5">ITMPistolUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000864D6">ITMPistolDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="000372AF">WPNBBGunFire3D</Reference>
+          </_3D>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="000372AE">WPNBBGunFire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="0001CCC7">WPNRifle0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0001D4BE">WPNRifle0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="0006A76E">BBImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000AA131">1stPersonBBGun</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>36</Value>
+      <Health>1000</Health>
+      <Weight>2</Weight>
+      <BaseDamage>4</BaseDamage>
+      <ClipSize>100</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandRifle</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>DontUse1stPersonIronSightAnimations</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadE</ReloadAnimation>
+      <MinSpread>0.5</MinSpread>
+      <Spread>1.5</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>55</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0003BF09">BBProjectile</Projectile>
+      <BaseVATSToHitChance>30</BaseVATSToHitChance>
+      <AttackAnimation>AttackRight</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>128</Min>
+        <Max>512</Max>
+      </Range>
+      <LimbKillBehavior>NoDismemberOrExplode</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost, OverrideDamageToWeaponMult</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>3</FireRate>
+      <ActionPointCost>28</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.200000003</LeftMotorStrength>
+        <RightMotorStrength>0.200000003</RightMotorStrength>
+        <Duration>0.200000003</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>0.75</AttackShotsPerSecond>
+      <ReloadTime>3.33330011</ReloadTime>
+      <JamTime>1.33329999</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Guns</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0.100000001</Min>
+        <Max>0.5</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>0</PowerAttackAnimation>
+      <StrengthRequirement>0</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>4</Damage>
+      <ChanceMult>0</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Silent</SoundLevel>
+  </Subrecords>
+</Record>

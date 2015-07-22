@@ -1,0 +1,10 @@
+scn ChallengeGrindControlSCRIPT
+
+BEGIN ScriptEffectStart
+	if Player.HasPerk DLC01AutoAxpert
+		SetStage AchievementQuest 3	; 75
+	else
+		Player.AddPerk DLC01AutoAxpert
+		ShowMessage ChallengeMessageGrindControl
+	endif
+END

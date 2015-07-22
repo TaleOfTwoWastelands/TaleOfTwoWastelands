@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="06036558">MQ09Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ09Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>55</ReferenceCount>
+        <CompiledSize>4166</CompiledSize>
+        <VariableCount>30</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAADgQAAAWABQAEAAQACBYOhAFAAEAchgAIDEgPT0WAA0ADgAJACBzAQAgMCA9PRwAAQCYEAAAHAABAJ4QBQABAHIZABwAAQBSEAoAAgByGgBuAQAAABwAAQBCEQUAAQByGwAVAAcAcx0AAgAgMRwAAgCeEAUAAQByHAAcAAEArRAFAAEAch0AMBIFAAEAch4AFgASAAIADgAgcgMAWC4QAAAgMCA9PRwAAwCeEAUAAQByHwAcAAMADxAJAAIAAQBuAAAAABkAAABhECUABwBuAQAAAG4BAAAAbgEAAABuAQAAAG4AAAAAbgEAAABuAQAAABUABwBzAQACACAxGQAAABkAAAAWAA0AAgAJACBzAQAgMSA9PV4RAAAVAAcAcwEAAgAgMhkAAAAWAA0AAwAJACBzCwAgMSA9PRYAEgABAA4AIHIEAFgFEAAAIDEgPT0cAAQAcxACAAAAGQAAABkAAAAWAA0AAwAJACBzCAAgMiA9PRwABQA0EAgAAgByAQByIAAcAAYAcxACAAAAFQAJAHMIAAQAIDEgfhkAAAAWAA0ACgEJACBzHQAgMSA9PRYAEAAPAAwAIHIhAHMNACAyID09HAAHAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMOAAIAIDAVAAoAciIAcw8AAgAgMRUACgByBwBzCAACACAxFQAKAHIHAHMKAAIAIDAVAAoAcgcAcwkAAgAgMBwABwCxEAUAAQByIwAVAAoAcgcAcwYAAgAgMRUACgByBwBzBwACACAwHAAHAMURBwABAG4AAAAAHAAHAIARBQABAHIkABwABwAPEAoAAgAWAHIhAHMUABwABwCeEAUAAQByJQAcAAcAXhAAABUACgByIQBzDQACACAzGQAAABYAEAAPAAwAIHIhAHMKACAyID09HAAIAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMCAAIAIDAVAAoAciIAcwMAAgAgMRUACgByCABzCwACACAxFQAKAHIIAHMNAAIAIDAVAAoAcggAcwwAAgAgMBwACACxEAUAAQByIwAVAAoAcggAcwkAAgAgMRUACgByCABzCgACACAwHAAIAMURBwABAG4AAAAAHAAIAIARBQABAHIkABwACAAPEAoAAgAWAHIhAHMRABwACACeEAUAAQByJgAcAAgAXhAAABUACgByIQBzCgACACAzGQAAABYAEAAPAAwAIHIhAHMLACAyID09HAAJAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMGAAIAIDAVAAoAciIAcwcAAgAgMRUACgByCQBzBgACACAxFQAKAHIJAHMIAAIAIDAVAAoAcgkAcwcAAgAgMBwACQCxEAUAAQByIwAVAAoAcgkAcwQAAgAgMRUACgByCQBzBQACACAwHAAJAMURBwABAG4AAAAAHAAJAIARBQABAHIkABwACQAPEAoAAgAWAHIhAHMSABwACQCeEAUAAQByJwAcAAkAXhAAABUACgByIQBzCwACACAzGQAAABYAEAAPAAwAIHIhAHMMACAyID09HAAKAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMKAAIAIDAVAAoAciIAcwsAAgAgMRUACgByCgBzBQACACAxFQAKAHIKAHMHAAIAIDAVAAoAcgoAcwYAAgAgMBwACgCxEAUAAQByIwAVAAoAcgoAcwMAAgAgMRUACgByCgBzBAACACAwHAAKAMURBwABAG4AAAAAHAAKAIARBQABAHIkABwACgAPEAoAAgAWAHIhAHMTABwACgCeEAUAAQByKAAcAAoAXhAAABUACgByIQBzDAACACAzGQAAABYAEAAPAAwAIHIhAHMOACAyID09HAALAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMWAAIAIDAVAAoAciIAcxcAAgAgMRUACgByCwBzBQACACAxFQAKAHILAHMHAAIAIDAVAAoAcgsAcwYAAgAgMBwACwCxEAUAAQByIwAVAAoAcgsAcwMAAgAgMRUACgByCwBzBAACACAwHAALAMURBwABAG4AAAAAHAALAIARBQABAHIkABwACwAPEAoAAgAWAHIhAHMVABwACwCeEAUAAQByKAAcAAsAXhAAABUACgByIQBzDgACACAzGQAAABYAEAAPAAwAIHIhAHMPACAyID09HAAMAIIRDQACABYAegAAAAAAiMNAFQAKAHIiAHMSAAIAIDAVAAoAciIAcxMAAgAgMRUACgByDABzBQACACAxFQAKAHIMAHMHAAIAIDAVAAoAcgwAcwYAAgAgMBwADACxEAUAAQByIwAVAAoAcgwAcwMAAgAgMRUACgByDABzBAACACAwHAAMAMURBwABAG4AAAAAHAAMAIARBQAB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</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MQ09Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TestMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CodeGiven</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnSpeak</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PresConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GuardDead</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Tone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">OfficerFlee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ContAct</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnLeaveConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Test1var</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Test2var</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TESTPA</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PresPASpeech</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RRDestroy</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IntercomStart</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">OfficerLeave</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ZAXCode</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MoveFollower</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnNote</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601B52C">ColonelAutumnRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B57">NathanREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E1DB">MQ09HoldingCellDoorRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603A388">MQ09ControlRoomSentryBotRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06050C31">MQ09ControlRoomDoor1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8F">MQ09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06036559">MQ09PlayerStartMark</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003D34D">MQ08GECK</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00043E94">StealthBoy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603655A">MQ09AutumnMark</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060918B0">MQ09PlayerContainerRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E352">RavenRockDoorExteriorto01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E19C">MQ09NathanMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003A480">MQ09RobotProceed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06022FC1">MQ08Trigger</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E75B">BelleBonnyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06037198">MQ09CharonReturnMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602EC6E">MQ09JerichoReturnMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602377A">MQ09StarPaladinCrossReturnMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06038844">MQ09CloverReturnMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060309D6">EvacuationMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B160C">VBooneFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60C">Spotting</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60B">BetterHealing</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60D">WhiskeyRose</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00161F07">VCassTimer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60F">StealthGirl</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00160267">Lilysmedicinetimer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C613">ScribeAssistant</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C610">RegularMaintenance</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C611">SearchAndMark</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60E">EnhancedSensors</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

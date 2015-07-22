@@ -1,0 +1,334 @@
+scn V22ElevatorDoorScript
+
+
+; TLS 05/03/2011 - Conditionalizing teleports against companions waiting.
+
+int Button
+int ScreenNumber						; 0 = No skill page
+											; 1 = Fixing possible page
+											; 2 = Floor selection page
+
+int ShouldSave							; 0 = Shouldn't save
+											; 1 = Should autosave
+
+ref DoorOpener
+
+begin onActivate
+
+	set DoorOpener to GetActionREF
+
+	if DoorOpener.GetIsReference player
+
+		if VFreeformVault22.ElevatorRepaired == 0
+			if player.getav Repair >= 50
+				ShowMessage V22ElevatorBrokenMsg
+				set ScreenNumber to 1
+			elseif player.getav Repair < 50
+				ShowMessage V22ElevatorBrokenNoSkillMsg
+				set ScreenNumber to 0
+			endif
+		elseif VFreeformVault22.ElevatorRepaired == 1
+			ShowMessage V22ElevatorWorkingMsg
+			set ScreenNumber to 2
+		endif
+
+		; Safety script to handle the player using the elevator before Keely leaves
+		if VFreeformVault22.KeelyState == 2 || VFreeformVault22.KeelyState == 3
+			set VFreeformVault22.KeelyTeleporting to 1
+			set VFreeformVault22.ElevatorRepaired to 1
+			set VFreeformVault22.KeelyState to 4
+
+			; Slow Keely down again
+			KeelyREF.setav speedmult 100
+
+			; Close and lock door to entrance
+			V22aOpeningAreaDoor.setopenstate 0
+			V22aOpeningAreaDoor.lock 255
+
+			KeelyREF.disable
+		
+			; Open the doors leading to the lab on level 2 since Keely would have
+			; gone through them
+			V22bLabDoor01.setOpenState 1
+			V22bLabDoor02.setOpenState 1
+			V22bLabDoor03.setOpenState 1
+
+		endif
+
+	endif
+
+end
+
+;--------------------------------------------------------------------------------------------------------------------------
+
+begin GameMode
+
+	set Button to GetButtonPressed
+
+	if Button == 0						; Do nothing
+		
+	elseif Button == 1
+		if ScreenNumber == 1
+			set VFreeformVault22.ElevatorRepaired to 1
+			ShowMessage V22ElevatorWorkingMsg
+			set ScreenNumber to 2
+			player.rewardxp 100
+		elseif ScreenNumber == 2
+			player.MoveTo V22Elevator1FMarker
+
+			if VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0
+				CraigBooneRef.MoveTo V22Elevator1FFollowerMarker
+			elseif VNPCFollowers.ArcadeHired && ArcadeREF.Waiting == 0
+				ArcadeRef.MoveTo V22Elevator1FFollowerMarker
+			elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyREF.Waiting == 0
+				RoseofSharonCassidyRef.MoveTo V22Elevator1FFollowerMarker
+			elseif VNPCFollowers.RaulHired && RaulREF.Waiting == 0
+				RaulRef.MoveTo V22Elevator1FFollowerMarker
+			elseif VNPCFollowers.bLilyHired && LilyREF.Waiting == 0
+				LilyRef.MoveTo V22Elevator1FFollowerMarker
+			elseif VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting == 0
+				VeronicaRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.CharonHired && CharonRef.Waiting == 0
+				CharonRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.ButchHired && ButchRef.Waiting == 0
+				ButchRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.CloverHired && CloverRef.Waiting == 0
+				CloverRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.JerichoHired && JerichoRef.Waiting == 0
+				JerichoRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.FawkesHired && MQ08FawkesRef.Waiting == 0
+				MQ08FawkesRef.MoveTo V22Elevator1FFollowerMarker
+			elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting == 0
+				StarPaladinCrossRef.MoveTo V22Elevator1FFollowerMarker
+			endif
+
+			if VNPCFollowers.RexHired && RexREF.Waiting == 0
+				RexRef.MoveTo V22Elevator1FRobotMarker
+			elseif VNPCFollowers.bEDEHired
+				if EDE1Ref.GetDisabled == 0 && EDE1REF.Waiting == 0
+					EDE1Ref.MoveTo V22Elevator1FRobotMarker;
+				elseif EDE2Ref.GetDisabled == 0 && EDE2REF.Waiting == 0
+					EDE2Ref.MoveTo V22Elevator1FRobotMarker;
+				elseif EDE3Ref.GetDisabled == 0 && EDE3REF.waiting == 0
+					EDE3Ref.MoveTo V22Elevator1FRobotMarker;
+				endif
+			elseif Followers.DogmeatHired
+				DogmeatRef.MoveTo V22Elevator1FRobotMarker
+			elseif Followers.RL3Hired
+				RL3REF.MoveTo V22Elevator1FRobotMarker
+			endif
+		endif
+
+		set ShouldSave to 1
+
+	elseif Button == 2 
+		player.MoveTo V22Elevator2FMarker
+	
+		if VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0
+			CraigBooneRef.MoveTo V22Elevator2FFollowerMarker
+		elseif VNPCFollowers.ArcadeHired && ArcadeREF.Waiting == 0
+			ArcadeRef.MoveTo V22Elevator2FFollowerMarker
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyREF.Waiting == 0
+			RoseofSharonCassidyRef.MoveTo V22Elevator2FFollowerMarker
+		elseif VNPCFollowers.RaulHired && RaulREF.Waiting == 0
+			RaulRef.MoveTo V22Elevator2FFollowerMarker
+		elseif VNPCFollowers.bLilyHired && LilyREF.Waiting == 0
+			LilyRef.MoveTo V22Elevator2FFollowerMarker
+		elseif VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting == 0
+			VeronicaRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.CharonHired && CharonRef.Waiting == 0
+			CharonRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.ButchHired && ButchRef.Waiting == 0
+			ButchRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.CloverHired && CloverRef.Waiting == 0
+			CloverRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.JerichoHired && JerichoRef.Waiting == 0
+			JerichoRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.FawkesHired && MQ08FawkesRef.Waiting == 0
+			MQ08FawkesRef.MoveTo V22Elevator2FFollowerMarker
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting == 0
+			StarPaladinCrossRef.MoveTo V22Elevator2FFollowerMarker
+		endif
+	
+		if VNPCFollowers.RexHired && RexREF.Waiting == 0
+			RexRef.MoveTo V22Elevator2FRobotMarker
+		elseif VNPCFollowers.bEDEHired
+			if EDE1Ref.GetDisabled == 0 && EDE1REF.Waiting == 0
+				EDE1Ref.MoveTo V22Elevator2FRobotMarker;
+			elseif EDE2Ref.GetDisabled == 0 && EDE2REF.Waiting == 0
+				EDE2Ref.MoveTo V22Elevator2FRobotMarker;
+			elseif EDE3Ref.GetDisabled == 0 && EDE3REF.Waiting == 0
+				EDE3Ref.MoveTo V22Elevator2FRobotMarker;
+			endif
+		elseif Followers.DogmeatHired
+			DogmeatRef.MoveTo V22Elevator2FRobotMarker
+		elseif Followers.RL3Hired
+			RL3REF.MoveTo V22Elevator2FRobotMarker
+		endif
+
+
+		if VFreeformVault22.KeelyTeleporting == 1
+			KeelyREF.MoveTo V22KeelySecondLevelLabMarker
+			KeelyREF.enable
+			KeelyREF.evp
+			set VFreeformVault22.KeelyTeleporting to 2
+
+			; Add the computer password to Keely's inventory
+			KeelyREF.additem V22KeelyPassword 1
+
+			; Lock the computer upstairs
+			V22bKeelyTerminalREF.lock 255
+		endif
+
+		set ShouldSave to 1
+
+	elseif Button == 3
+		player.MoveTo V22Elevator3FMarker
+
+		if VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0
+			CraigBooneRef.MoveTo V22Elevator3FFollowerMarker
+		elseif VNPCFollowers.ArcadeHired && ArcadeREF.Waiting == 0
+			ArcadeRef.MoveTo V22Elevator3FFollowerMarker
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyREF.Waiting == 0
+			RoseofSharonCassidyRef.MoveTo V22Elevator3FFollowerMarker
+		elseif VNPCFollowers.RaulHired && RaulREF.Waiting == 0
+			RaulRef.MoveTo V22Elevator3FFollowerMarker
+		elseif VNPCFollowers.bLilyHired && LilyREF.Waiting == 0
+			LilyRef.MoveTo V22Elevator3FFollowerMarker
+		elseif VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting == 0
+			VeronicaRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.CharonHired && CharonRef.Waiting == 0
+			CharonRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.ButchHired && ButchRef.Waiting == 0
+			ButchRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.CloverHired && CloverRef.Waiting == 0
+			CloverRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.JerichoHired && JerichoRef.Waiting == 0
+			JerichoRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.FawkesHired && MQ08FawkesRef.Waiting == 0
+			MQ08FawkesRef.MoveTo V22Elevator3FFollowerMarker
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting == 0
+			StarPaladinCrossRef.MoveTo V22Elevator3FFollowerMarker
+		endif
+	
+		if VNPCFollowers.RexHired && RexREF.Waiting == 0
+			RexRef.MoveTo V22Elevator3FRobotMarker
+		elseif VNPCFollowers.bEDEHired
+			if EDE1Ref.GetDisabled == 0 && EDE1REF.Waiting == 0
+				EDE1Ref.MoveTo V22Elevator3FRobotMarker;
+			elseif EDE2Ref.GetDisabled == 0 && EDE2REF.Waiting == 0
+				EDE2Ref.MoveTo V22Elevator3FRobotMarker;
+			elseif EDE3Ref.GetDisabled == 0 && EDE3REF.Waiting == 0
+				EDE3Ref.MoveTo V22Elevator3FRobotMarker;
+			endif
+		elseif Followers.DogmeatHired
+			DogmeatRef.MoveTo V22Elevator3FRobotMarker
+		elseif Followers.RL3Hired
+			RL3REF.MoveTo V22Elevator3FRobotMarker
+		endif
+
+		set ShouldSave to 1
+
+	elseif Button == 4
+		player.MoveTo V22Elevator4FMarker
+
+		if VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0
+			CraigBooneRef.MoveTo V22Elevator4FFollowerMarker
+		elseif VNPCFollowers.ArcadeHired && ArcadeREF.Waiting == 0
+			ArcadeRef.MoveTo V22Elevator4FFollowerMarker
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyREF.Waiting == 0
+			RoseofSharonCassidyRef.MoveTo V22Elevator4FFollowerMarker
+		elseif VNPCFollowers.RaulHired && RaulREF.Waiting == 0
+			RaulRef.MoveTo V22Elevator4FFollowerMarker
+		elseif VNPCFollowers.bLilyHired && LilyREF.Waiting == 0
+			LilyRef.MoveTo V22Elevator4FFollowerMarker
+		elseif VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting == 0
+			VeronicaRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.CharonHired && CharonRef.Waiting == 0
+			CharonRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.ButchHired && ButchRef.Waiting == 0
+			ButchRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.CloverHired && CloverRef.Waiting == 0
+			CloverRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.JerichoHired && JerichoRef.Waiting == 0
+			JerichoRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.FawkesHired && MQ08FawkesRef.Waiting == 0
+			MQ08FawkesRef.MoveTo V22Elevator4FFollowerMarker
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting == 0
+			StarPaladinCrossRef.MoveTo V22Elevator4FFollowerMarker
+		endif
+	
+		if VNPCFollowers.RexHired && RexREF.Waiting == 0
+			RexRef.MoveTo V22Elevator4FRobotMarker
+		elseif VNPCFollowers.bEDEHired
+			if EDE1Ref.GetDisabled == 0 && EDE1REF.Waiting == 0
+				EDE1Ref.MoveTo V22Elevator4FRobotMarker;
+			elseif EDE2Ref.GetDisabled == 0 && EDE2REF.Waiting == 0
+				EDE2Ref.MoveTo V22Elevator4FRobotMarker;
+			elseif EDE3Ref.GetDisabled == 0 && EDE3REF.Waiting == 0
+				EDE3Ref.MoveTo V22Elevator4FRobotMarker;
+			endif
+		elseif Followers.DogmeatHired
+			DogmeatRef.MoveTo V22Elevator4FRobotMarker
+		elseif Followers.RL3Hired
+			RL3REF.MoveTo V22Elevator4FRobotMarker
+		endif
+
+		set ShouldSave to 1
+
+	elseif Button == 5
+		player.MoveTo V22Elevator5FMarker
+
+		if VNPCFollowers.bBooneHired && CraigBooneREF.Waiting == 0
+			CraigBooneRef.MoveTo V22Elevator5FFollowerMarker
+		elseif VNPCFollowers.ArcadeHired && ArcadeREF.Waiting == 0
+			ArcadeRef.MoveTo V22Elevator5FFollowerMarker
+		elseif VNPCFollowers.bCassHired && RoseOfSharonCassidyREF.Waiting == 0
+			RoseofSharonCassidyRef.MoveTo V22Elevator5FFollowerMarker
+		elseif VNPCFollowers.RaulHired && RaulREF.Waiting == 0
+			RaulRef.MoveTo V22Elevator5FFollowerMarker
+		elseif VNPCFollowers.bLilyHired && LilyREF.Waiting == 0
+			LilyRef.MoveTo V22Elevator5FFollowerMarker
+		elseif VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting == 0
+			VeronicaRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.CharonHired && CharonRef.Waiting == 0
+			CharonRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.ButchHired && ButchRef.Waiting == 0
+			ButchRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.CloverHired && CloverRef.Waiting == 0
+			CloverRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.JerichoHired && JerichoRef.Waiting == 0
+			JerichoRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.FawkesHired && MQ08FawkesRef.Waiting == 0
+			MQ08FawkesRef.MoveTo V22Elevator5FFollowerMarker
+		elseif Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting == 0
+			StarPaladinCrossRef.MoveTo V22Elevator5FFollowerMarker
+		endif
+	
+		if VNPCFollowers.RexHired && RexREF.Waiting == 0
+			RexRef.MoveTo V22Elevator5FRobotMarker
+		elseif VNPCFollowers.bEDEHired
+			if EDE1Ref.GetDisabled == 0 && EDE1REF.Waiting == 0
+				EDE1Ref.MoveTo V22Elevator5FRobotMarker;
+			elseif EDE2Ref.GetDisabled == 0 && EDE2REF.Waiting == 0
+				EDE2Ref.MoveTo V22Elevator5FRobotMarker;
+			elseif EDE3Ref.GetDisabled == 0 && EDE3REF.Waiting == 0
+				EDE3Ref.MoveTo V22Elevator5FRobotMarker;
+			endif
+		elseif Followers.DogmeatHired
+			DogmeatRef.MoveTo V22Elevator5FRobotMarker
+		elseif Followers.RL3Hired
+			RL3REF.MoveTo V22Elevator5FRobotMarker
+		endif
+
+		set ShouldSave to 1
+
+	endif
+
+	if ShouldSave == 1
+		AutoSave
+		set ShouldSave to 0
+	endif
+
+end
+

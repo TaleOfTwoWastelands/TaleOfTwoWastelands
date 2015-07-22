@@ -1,0 +1,11 @@
+scn DLC02MineFragActivatorSCRIPT
+
+Begin OnActivate
+	if (IsActionRef player == 1)
+		player.additem WeapMineFrag 1
+		disable
+	endif
+End
+
+
+

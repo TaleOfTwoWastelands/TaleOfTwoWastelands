@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0601A260">DCworld15</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DCworld15</EditorID>
+    <Name Tag="FULL">Mason District</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="06035ABE">DCLangleyOaks</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">65412</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00064602">UrbanClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="000AFB9A">d4BadWater10r20h</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>12288</DefaultLandHeight>
+      <DefaultWaterHeight>0</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>0.300000012</WorldMapScale>
+      <Offset>
+        <CellX>2132</CellX>
+        <CellY>-22000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064606">UburbanBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>16384</X>
+        <Y>-61440</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>45056</X>
+        <Y>-12288</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

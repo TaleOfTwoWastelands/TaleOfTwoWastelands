@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0A002F47">DLC04FF02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04FF02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0A002F49">DLC04FF02SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">The Dark Heart of Blackhall</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A885">DLC04FemaleNormal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A886">DLC04FemaleTribal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87D">DLC04MaleChild</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87E">DLC04MaleNormal</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A87F">DLC04MaleTribalFriendly</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A880">DLC04MaleTribalGruff</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A884">DLC04RobotVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A005A3B">DLC04UniqueDesmond</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A005A3A">DLC04UniqueTheBrain</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0A00A883">DLC04UniqueTobar</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>49</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgQAbgoAAABuAQAAABwAAQAhEAIAAAAcAAIAIRACAAAAHAADACIQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;; Obadiah has asked player to get the book - player has agreed.
+setObjectiveDisplayed DLC04FF02 10 1
+DLC04FF02RitualSiteMarker.enable
+DLC04FF02RitualSiteExtEncounter.enable
+RitualSitePreFF02EncounterTrigger.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00B0F5">DLC04FF02RitualSiteMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010C05">DLC04FF02RitualSiteExtEncounter</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00E128">RitualSitePreFF02EncounterTrigger</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAAAAAKMRDwADAHIBAG4PAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;; Marcella has made her plea to the player.
+setObjectiveDisplayed DLC04FF02 10 0
+setObjectiveDisplayed DLC04FF02 15 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>310</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgYAbgoAAABuAQAAAKIRDwADAHIGAG4PAAAAbgEAAAAcAAEAIRACAAAAHAACACEQAgAAABYAIwAEAB8AIHIFAFguEAAAIDAgPT0gcgcAWC4QAAAgMCA9PSAmJqMRDwADAHIGAG4eAAAAbgEAAAAcAAMAIRACAAAAHAAEACEQAgAAABwABQAiEAIAAAAYACMAAgAfACByBQBYLhAAACAxID09IHIHAFguEAAAIDAgPT0gJiajEQ8AAwByBgBuHQAAAG4BAAAAFQAKAHIGAHMKAAIAIDEYACMABAAfACByBQBYLhAAACAwID09IHIHAFguEAAAIDEgPT0gJiajEQ8AAwByBgBuHwAAAG4BAAAAHAADACEQAgAAABwABAAhEAIAAAAcAAUAIhACAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">    ;; Player has taken the book from ritual site
+setObjectiveCompleted DLC04FF02 10 1
+setObjectiveCompleted DLC04FF02 15 1
+DLC04FF02DunwichObeliskREF.enable
+DLC04FF02TentAmbushMarker.enable
+if DLC04MarcellaREF.getDead == 0 &amp;&amp; DLC04ObadiahREF.getDead == 0
+   setObjectiveDisplayed DLC04FF02 30 1
+      ; Marcella's Murdered.
+   DLC04FF02MarcellaGore.enable	
+   DLC04FF02MarcellaCorpseREF.enable
+    DLC04MarcellaREF.disable
+elseif DLC04MarcellaREF.getDead == 1 &amp;&amp; DLC04ObadiahREF.getDead == 0
+   setObjectiveDisplayed DLC04FF02 29 1
+   set DLC04FF02.marDiedEarly to 1
+elseif DLC04MarcellaREF.getDead == 0 &amp;&amp; DLC04ObadiahREF.getDead == 1
+   setObjectiveDisplayed DLC04FF02 31 1
+      ; Marcella's Murdered.
+   DLC04FF02MarcellaGore.enable	
+   DLC04FF02MarcellaCorpseREF.enable
+    DLC04MarcellaREF.disable
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010AAD">DLC04FF02DunwichObeliskREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010C08">DLC04FF02TentAmbushMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A0030E7">DLC04FF02MarcellaGore</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010BFB">DLC04FF02MarcellaCorpseREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F43">DLC04MarcellaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F3F">DLC04ObadiahREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; holder stage for investigating marcella's tent
+setObjectiveDisplayed DLC04FF02 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">140</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>90</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHIEAG7oAwAAHAABAFIQCgACAHIFAG4BAAAAHAACACIQAgAAAHcRBwABAG5kAAAAHAADACEQAgAAAK0RBQABAHIGAA0RCgACAHIFAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player opts to return book to Obadiah
+player.additem Caps001 1000
+player.removeItem DLC04FF02Book 1
+DLC04FF02SecretDoorStuff.disable
+rewardXP 100
+RitualSitePostFF02Encounter.enable
+CompleteAllObjectives DLC04FF02
+setQuestObject DLC04FF02Book 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00FC21">DLC04FF02SecretDoorStuff</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010C03">RitualSitePostFF02Encounter</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F46">DLC04FF02Book</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAADREKAAIAcgIAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Obadiah is Dead!
+showMessage DLC04FF02ObadiahDeathMSG
+setQuestObject DLC04FF02Book 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00E3B3">DLC04FF02ObadiahDeathMSG</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F46">DLC04FF02Book</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">151</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">DREKAAIAcgEAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Marcella killed, Obadiah already dead too
+setQuestObject DLC04FF02Book 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F46">DLC04FF02Book</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">240</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>124</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbh4AAABuAAAAAKMRDwADAHIBAG4fAAAAbgAAAAAWABIAAQAOACByAgBYLhAAACAwID09oxEPAAMAcgEAbvAAAABuAQAAABgAEgABAA4AIHICAFguEAAAIDEgPT2jEQ8AAwByAQBu8QAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Player returned to Marcella instead of Obadiah
+; But she is dead.  The player can take up her mission.
+setObjectiveDisplayed DLC04FF02 30 0
+setObjectiveDisplayed DLC04FF02 31 0
+if DLC04ObadiahREF.getDead == 0
+    setObjectiveDisplayed DLC04FF02 240 1
+elseif DLC04ObadiahREF.getDead == 1
+    setObjectiveDisplayed DLC04FF02 241 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F3F">DLC04ObadiahREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">255</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>74</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">BBIHAAEAbvQBAAB3EQcAAQBuZAAAABwAAQAhEAIAAAAcAAIAIhACAAAArREFAAEAcgMADREKAAIAcgQAbgAAAAB1EgUAAQByBQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; quest complete - book destroyed @ dunwich
+rewardKarma 500
+rewardxp 100
+RitualSitePostFF02Encounter.enable
+DLC04FF02SecretDoorStuff.disable
+CompleteAllObjectives DLC04FF02
+setQuestObject DLC04FF02Book 0
+IncrementScriptedChallenge TTWDLC04ChallengeTouchofEvil</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A010C03">RitualSitePostFF02Encounter</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00FC21">DLC04FF02SecretDoorStuff</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F47">DLC04FF02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A002F46">DLC04FF02Book</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C01859D">TTWDLC04ChallengeTouchofEvil</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Retrieve the Blackhall Family's Book from the ritual site.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A003147">REFR - 07003147</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Return the Krivbeknih to Obadiah OR Marcella.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A002F43">DLC04MarcellaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>NotEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="0A002F47">DLC04FF02</Quest>
+                  <QuestStage>40</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A002F3F">DLC04ObadiahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">240</Index>
+        <Description Tag="NNAM">Take the Krivbeknih to Obadiah OR Take it to the Dunwich Building in the Capital Wasteland.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A002F3F">DLC04ObadiahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00B5EE">DLC04LookoutDuchessTravelActivatorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A000802">DLC4Pointlookout</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00FBF5">DLC04FF02DunwichMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0607EA1F">Wasteland</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Retrieve the Krivbeknih from the ritual site.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A003147">REFR - 07003147</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Investigate Marcella's Death Scene</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00E3B7">DLC04FF02MarcellaHolotape</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">29</Index>
+        <Description Tag="NNAM">Return the Blackhall Family's Book to Obadiah.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A002F3F">DLC04ObadiahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">31</Index>
+        <Description Tag="NNAM">Return the Krivbeknih to Marcella</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A0030E7">DLC04FF02MarcellaGore</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">241</Index>
+        <Description Tag="NNAM">Take the Krivbeknih to the Dunwich Building in the Capital Wasteland.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00B5EE">DLC04LookoutDuchessTravelActivatorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A000802">DLC4Pointlookout</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00FBF5">DLC04FF02DunwichMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A000802">DLC4Pointlookout</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

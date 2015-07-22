@@ -1,0 +1,30 @@
+ScriptName VMS18CompanionFreezerTriggerSCRIPT
+
+short bBooneInFreezer;
+short bCassInFreezer;
+short bVeronicaInFreezer;
+short bArcadeInFreezer;
+short bButchInFreezer;
+short bJerichoInFreezer;
+short bCloverInFreezer;
+short bCrossInFreezer;
+
+BEGIN OnTriggerEnter
+	if (IsActionREF CraigBooneREF)
+		set bBooneInFreezer to 1;
+	elseif (IsActionREF RoseofSharonCassidyREF)
+		set bCassInFreezer to 1;
+	elseif (IsActionREF VeronicaREF)
+		set bVeronicaInFreezer to 1;
+	elseif (IsActionREF ArcadeREF)
+		set bArcadeInFreezer to 1;
+	elseif (IsActionREF ButchRef)
+		set bButchInFreezer to 1;
+	elseif (IsActionREF CloverRef)
+		set bCloverInFreezer to 1;
+	elseif (IsActionREF JerichoRef)
+		set bJerichoInFreezer to 1;
+	elseif (IsActionREF StarPaladinCrossRef)
+		set bCrossInFreezer to 1;
+	endif
+END

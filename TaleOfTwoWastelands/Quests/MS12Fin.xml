@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0601CE93">MS12Fin</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS12Fin</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0601EEF5">MS12FinScript</Reference>
+    </Script>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>40</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>27</ReferenceCount>
+                <CompiledSize>2024</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">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</CompiledScript>
+              <ScriptSource Tag="SCTX">;Move followers out
+if ButchRef.GetInCell Tenpenny01 == 1 || ButchRef.GetInCell Tenpenny02 == 1 || ButchRef.GetInCell Tenpenny03 == 1
+    ButchRef.moveto xMS12MoveFollowerToHere
+endif
+
+if RL3REF.GetInCell Tenpenny01 == 1 || RL3REF.GetInCell Tenpenny02 == 1 || RL3REF.GetInCell Tenpenny03 == 1
+    RL3REF.moveto xMS12MoveFollowerToHere
+endif
+
+if MQ08FawkesRef.GetInCell Tenpenny01 == 1 || MQ08FawkesRef.GetInCell Tenpenny02 == 1 || MQ08FawkesRef.GetInCell Tenpenny03 == 1
+    MQ08FawkesRef.moveto xMS12MoveFollowerToHere
+endif
+
+if StarPaladinCrossREF.GetInCell Tenpenny01 == 1 || StarPaladinCrossREF.GetInCell Tenpenny02 == 1 || StarPaladinCrossREF.GetInCell Tenpenny03 == 1
+    StarPaladinCrossREF.moveto xMS12MoveFollowerToHere
+endif
+
+
+if JerichoRef.GetInCell Tenpenny01 == 1 || JerichoRef.GetInCell Tenpenny02 == 1 || JerichoRef.GetInCell Tenpenny03 == 1
+    JerichoRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CloverRef.GetInCell Tenpenny01 == 1 || CloverRef.GetInCell Tenpenny02 == 1 || CloverRef.GetInCell Tenpenny03 == 1
+    CloverRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CharonRef.GetInCell Tenpenny01 == 1 || CharonRef.GetInCell Tenpenny02 == 1 || CharonRef.GetInCell Tenpenny03 == 1
+    CharonRef.moveto xMS12MoveFollowerToHere
+endif
+
+if DogMeatRef.GetInCell Tenpenny01 == 1 || DogMeatRef.GetInCell Tenpenny02 == 1 || DogMeatRef.GetInCell Tenpenny03 == 1
+    DogMeatRef.moveto xMS12MoveFollowerToHere
+endif
+
+if MS15SydneyRef.GetInCell Tenpenny01 == 1 || MS15SydneyRef.GetInCell Tenpenny02 == 1 || MS15SydneyRef.GetInCell Tenpenny03 == 1
+    MS15SydneyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if StickyRef.GetInCell Tenpenny01 == 1 || StickyRef.GetInCell Tenpenny02 == 1 || StickyRef.GetInCell Tenpenny03 == 1
+    StickyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if RedRef.GetInCell Tenpenny01 == 1 || RedRef.GetInCell Tenpenny02 == 1 || RedRef.GetInCell Tenpenny03 == 1
+    RedRef.moveto xMS12MoveFollowerToHere
+endif
+
+if ShortyRef.GetInCell Tenpenny01 == 1 || ShortyRef.GetInCell Tenpenny02 == 1 || ShortyRef.GetInCell Tenpenny03 == 1
+    ShortyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if VictoriaWattsRef.GetInCell Tenpenny01 == 1 || VictoriaWattsRef.GetInCell Tenpenny02 == 1 || VictoriaWattsRef.GetInCell Tenpenny03 == 1
+    VictoriaWattsRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CraigBooneREF.GetInCell Tenpenny01 == 1 || CraigBooneREF.GetInCell Tenpenny02 == 1 || CraigBooneREF.GetInCell Tenpenny03 == 1
+    CraigBooneREF.moveto xMS12MoveFollowerToHere
+endif
+
+if RoseofSharonCassidyREF.GetInCell Tenpenny01 == 1 || RoseofSharonCassidyREF.GetInCell Tenpenny02 == 1 || RoseofSharonCassidyREF.GetInCell Tenpenny03 == 1
+    RoseofSharonCassidyREF.moveto xMS12MoveFollowerToHere
+endif
+
+if VeronicaREF.GetInCell Tenpenny01 == 1 || VeronicaREF.GetInCell Tenpenny02 == 1 || VeronicaREF.GetInCell Tenpenny03 == 1
+    VeronicaREF.moveto xMS12MoveFollowerToHere
+endif
+
+if LilyREF.GetInCell Tenpenny01 == 1 || LilyREF.GetInCell Tenpenny02 == 1 || LilyREF.GetInCell Tenpenny03 == 1
+    LilyREF.moveto xMS12MoveFollowerToHere
+endif
+
+if RaulREF.GetInCell Tenpenny01 == 1 || RaulREF.GetInCell Tenpenny02 == 1 || RaulREF.GetInCell Tenpenny03 == 1
+    RaulREF.moveto xMS12MoveFollowerToHere
+endif
+
+if ArcadeREF.GetInCell Tenpenny01 == 1 || ArcadeREF.GetInCell Tenpenny02 == 1 || ArcadeREF.GetInCell Tenpenny03 == 1
+    ArcadeREF.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE1Ref.GetInCell Tenpenny01 == 1 || EDE1Ref.GetInCell Tenpenny02 == 1 || EDE1Ref.GetInCell Tenpenny03 == 1
+    EDE1Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE2Ref.GetInCell Tenpenny01 == 1 || EDE2Ref.GetInCell Tenpenny02 == 1 || EDE2Ref.GetInCell Tenpenny03 == 1
+    EDE2Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE3Ref.GetInCell Tenpenny01 == 1 || EDE3Ref.GetInCell Tenpenny02 == 1 || EDE3Ref.GetInCell Tenpenny03 == 1
+    EDE3Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if RexREF.GetInCell Tenpenny01 == 1 || RexREF.GetInCell Tenpenny02 == 1 || RexREF.GetInCell Tenpenny03 == 1
+    RexREF.moveto xMS12MoveFollowerToHere
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06094285">RL3REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062735">StarPaladinCrossREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5D">JerichoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060384D8">CloverREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B8E1">CharonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A775">DogmeatREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00096BCE">CraigBooneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E32A9">VeronicaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0013D830">LilyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E6105">RaulREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8EB">ArcadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D1">EDE1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D0">EDE2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732CF">EDE3Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8DF">RexREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06017F34">Tenpenny01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06017F33">Tenpenny02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060178B8">Tenpenny03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604C6C9">xMS12MoveFollowerToHere</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>27</ReferenceCount>
+                <CompiledSize>2024</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">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</CompiledScript>
+              <ScriptSource Tag="SCTX">;Move followers out
+if ButchRef.GetInCell Tenpenny01attack == 1 || ButchRef.GetInCell Tenpenny02attack == 1 || ButchRef.GetInCell Tenpenny03attack == 1
+    ButchRef.moveto xMS12MoveFollowerToHere
+endif
+
+if RL3REF.GetInCell Tenpenny01attack == 1 || RL3REF.GetInCell Tenpenny02attack == 1 || RL3REF.GetInCell Tenpenny03attack == 1
+    RL3REF.moveto xMS12MoveFollowerToHere
+endif
+
+if MQ08FawkesRef.GetInCell Tenpenny01attack == 1 || MQ08FawkesRef.GetInCell Tenpenny02attack == 1 || MQ08FawkesRef.GetInCell Tenpenny03attack == 1
+    MQ08FawkesRef.moveto xMS12MoveFollowerToHere
+endif
+
+if StarPaladinCrossREF.GetInCell Tenpenny01attack == 1 || StarPaladinCrossREF.GetInCell Tenpenny02attack == 1 || StarPaladinCrossREF.GetInCell Tenpenny03attack == 1
+    StarPaladinCrossREF.moveto xMS12MoveFollowerToHere
+endif
+
+
+if JerichoRef.GetInCell Tenpenny01attack == 1 || JerichoRef.GetInCell Tenpenny02attack == 1 || JerichoRef.GetInCell Tenpenny03attack == 1
+    JerichoRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CloverRef.GetInCell Tenpenny01attack == 1 || CloverRef.GetInCell Tenpenny02attack == 1 || CloverRef.GetInCell Tenpenny03attack == 1
+    CloverRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CharonRef.GetInCell Tenpenny01attack == 1 || CharonRef.GetInCell Tenpenny02attack == 1 || CharonRef.GetInCell Tenpenny03attack == 1
+    CharonRef.moveto xMS12MoveFollowerToHere
+endif
+
+if DogMeatRef.GetInCell Tenpenny01attack == 1 || DogMeatRef.GetInCell Tenpenny02attack == 1 || DogMeatRef.GetInCell Tenpenny03attack == 1
+    DogMeatRef.moveto xMS12MoveFollowerToHere
+endif
+
+if MS15SydneyRef.GetInCell Tenpenny01attack == 1 || MS15SydneyRef.GetInCell Tenpenny02attack == 1 || MS15SydneyRef.GetInCell Tenpenny03attack == 1
+    MS15SydneyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if StickyRef.GetInCell Tenpenny01attack == 1 || StickyRef.GetInCell Tenpenny02attack == 1 || StickyRef.GetInCell Tenpenny03attack == 1
+    StickyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if RedRef.GetInCell Tenpenny01attack == 1 || RedRef.GetInCell Tenpenny02attack == 1 || RedRef.GetInCell Tenpenny03attack == 1
+    RedRef.moveto xMS12MoveFollowerToHere
+endif
+
+if ShortyRef.GetInCell Tenpenny01attack == 1 || ShortyRef.GetInCell Tenpenny02attack == 1 || ShortyRef.GetInCell Tenpenny03attack == 1
+    ShortyRef.moveto xMS12MoveFollowerToHere
+endif
+
+if VictoriaWattsRef.GetInCell Tenpenny01attack == 1 || VictoriaWattsRef.GetInCell Tenpenny02attack == 1 || VictoriaWattsRef.GetInCell Tenpenny03attack == 1
+    VictoriaWattsRef.moveto xMS12MoveFollowerToHere
+endif
+
+if CraigBooneREF.GetInCell Tenpenny01attack == 1 || CraigBooneREF.GetInCell Tenpenny02attack == 1 || CraigBooneREF.GetInCell Tenpenny03attack == 1
+    CraigBooneREF.moveto xMS12MoveFollowerToHere
+endif
+
+if RoseofSharonCassidyREF.GetInCell Tenpenny01attack == 1 || RoseofSharonCassidyREF.GetInCell Tenpenny02attack == 1 || RoseofSharonCassidyREF.GetInCell Tenpenny03attack == 1
+    RoseofSharonCassidyREF.moveto xMS12MoveFollowerToHere
+endif
+
+if VeronicaREF.GetInCell Tenpenny01attack == 1 || VeronicaREF.GetInCell Tenpenny02attack == 1 || VeronicaREF.GetInCell Tenpenny03attack == 1
+    VeronicaREF.moveto xMS12MoveFollowerToHere
+endif
+
+if LilyREF.GetInCell Tenpenny01attack == 1 || LilyREF.GetInCell Tenpenny02attack == 1 || LilyREF.GetInCell Tenpenny03attack == 1
+    LilyREF.moveto xMS12MoveFollowerToHere
+endif
+
+if RaulREF.GetInCell Tenpenny01attack == 1 || RaulREF.GetInCell Tenpenny02attack == 1 || RaulREF.GetInCell Tenpenny03attack == 1
+    RaulREF.moveto xMS12MoveFollowerToHere
+endif
+
+if ArcadeREF.GetInCell Tenpenny01attack == 1 || ArcadeREF.GetInCell Tenpenny02attack == 1 || ArcadeREF.GetInCell Tenpenny03attack == 1
+    ArcadeREF.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE1Ref.GetInCell Tenpenny01attack == 1 || EDE1Ref.GetInCell Tenpenny02attack == 1 || EDE1Ref.GetInCell Tenpenny03attack == 1
+    EDE1Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE2Ref.GetInCell Tenpenny01attack == 1 || EDE2Ref.GetInCell Tenpenny02attack == 1 || EDE2Ref.GetInCell Tenpenny03attack == 1
+    EDE2Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if EDE3Ref.GetInCell Tenpenny01attack == 1 || EDE3Ref.GetInCell Tenpenny02attack == 1 || EDE3Ref.GetInCell Tenpenny03attack == 1
+    EDE3Ref.moveto xMS12MoveFollowerToHere
+endif
+
+if RexREF.GetInCell Tenpenny01attack == 1 || RexREF.GetInCell Tenpenny02attack == 1 || RexREF.GetInCell Tenpenny03attack == 1
+    RexREF.moveto xMS12MoveFollowerToHere
+endif
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602A4E8">ButchRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06094285">RL3REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06062735">StarPaladinCrossREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B5D">JerichoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060384D8">CloverREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602B8E1">CharonRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606A775">DogmeatREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003A77">MS15SydneyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C81F2">VictoriaWattsRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00096BCE">CraigBooneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E32A9">VeronicaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0013D830">LilyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000E6105">RaulREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8EB">ArcadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D1">EDE1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732D0">EDE2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001732CF">EDE3Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0010D8DF">RexREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602263C">Tenpenny01Attack</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602263D">Tenpenny02Attack</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602263E">Tenpenny03Attack</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604C6C9">xMS12MoveFollowerToHere</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

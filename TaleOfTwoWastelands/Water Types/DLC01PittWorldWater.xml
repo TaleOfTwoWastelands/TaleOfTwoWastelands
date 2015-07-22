@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WATR">
+  <Flags>0</Flags>
+  <FormID ID="000922E2">DLC01PittWorldWater</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01PittWorldWater</EditorID>
+    <NoiseMap Tag="NNAM">Data\Textures\Water\WastelandWaterPotomac.dds</NoiseMap>
+    <Opacity Tag="ANAM">0</Opacity>
+    <WaterFlags Tag="FNAM">Reflective</WaterFlags>
+    <MaterialID Tag="MNAM"></MaterialID>
+    <Sound Tag="SNAM">
+      <Reference ID="0002EE55">AMBWaterTest2DLP</Reference>
+    </Sound>
+    <ActorEffect Tag="XNAM">
+      <Reference ID="080029EA">DLC01WaterHeal0Death</Reference>
+    </ActorEffect>
+    <Damage Tag="DATA">0</Damage>
+    <Data Tag="DNAM">
+      <Unknown>AABAQAAAtELNzEw+AACAPg==</Unknown>
+      <WaterProperties>
+        <SunPower>1000</SunPower>
+        <ReflectivityAmount>0.800000012</ReflectivityAmount>
+        <FresnelAmount>0.340000004</FresnelAmount>
+        <DistortionAmount>600</DistortionAmount>
+        <Shininess>496</Shininess>
+        <ReflectionHDRMult>1</ReflectionHDRMult>
+        <LightRadius>10000</LightRadius>
+        <LightBrightness>100</LightBrightness>
+      </WaterProperties>
+      <FogProperties>
+        <AboveWater>
+          <FogNearPlaneDistance>-80</FogNearPlaneDistance>
+          <FogFarPlaneDistance>246</FogFarPlaneDistance>
+          <FogAmount>1</FogAmount>
+        </AboveWater>
+        <UnderWater>
+          <FogAmount>1</FogAmount>
+          <FogNearPlaneDistance>-1000</FogNearPlaneDistance>
+          <FogFarPlaneDistance>700</FogFarPlaneDistance>
+        </UnderWater>
+      </FogProperties>
+      <Color>
+        <Shallow>
+          <Red>56</Red>
+          <Green>60</Green>
+          <Blue>34</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Shallow>
+        <Deep>
+          <Red>17</Red>
+          <Green>17</Green>
+          <Blue>4</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Deep>
+        <Reflection>
+          <Red>53</Red>
+          <Green>49</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Reflection>
+      </Color>
+      <RainSimulator>
+        <Force>0.100000001</Force>
+        <Velocity>0.600000024</Velocity>
+        <Falloff>0.985000014</Falloff>
+        <Dampener>2</Dampener>
+        <StartingSize>0.0500000007</StartingSize>
+      </RainSimulator>
+      <DisplacementSimulator>
+        <StartingSize>0.00999999978</StartingSize>
+        <Force>0.400000006</Force>
+        <Velocity>0.600000024</Velocity>
+        <Falloff>0.985000014</Falloff>
+        <Dampener>10</Dampener>
+      </DisplacementSimulator>
+      <NoiseProperties>
+        <Normals>
+          <NoiseScale>14.4899998</NoiseScale>
+          <DepthFalloff>
+            <Start>0</Start>
+            <End>0.0109000001</End>
+          </DepthFalloff>
+          <UVScale>1500</UVScale>
+        </Normals>
+        <NoiseLayerOne>
+          <WindDirection>360</WindDirection>
+          <WindSpeed>0.0649999976</WindSpeed>
+          <UVScale>0</UVScale>
+          <AmplitudeScale>0.293500006</AmplitudeScale>
+        </NoiseLayerOne>
+        <NoiseLayerTwo>
+          <WindDirection>313</WindDirection>
+          <WindSpeed>0.0329999998</WindSpeed>
+          <UVScale>0</UVScale>
+          <AmplitudeScale>0.525399983</AmplitudeScale>
+        </NoiseLayerTwo>
+        <NoiseLayerThree>
+          <WindDirection>256</WindDirection>
+          <WindSpeed>0.0289999992</WindSpeed>
+          <UVScale>0</UVScale>
+          <AmplitudeScale>0.137700006</AmplitudeScale>
+        </NoiseLayerThree>
+      </NoiseProperties>
+    </Data>
+    <RelatedWaters Tag="GNAM">
+      <Daytime ID="00000000">NullReference</Daytime>
+      <Nighttime ID="00000000">NullReference</Nighttime>
+      <Underwater ID="00000000">NullReference</Underwater>
+    </RelatedWaters>
+  </Subrecords>
+</Record>

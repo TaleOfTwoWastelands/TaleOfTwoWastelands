@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="LVLI">
+  <Flags>0</Flags>
+  <FormID ID="0900108A">DLC03WithAmmoIncineratorEnclave</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03WithAmmoIncineratorEnclave</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <ChanceNone Tag="LVLD">0</ChanceNone>
+    <LeveledObjectFlags Tag="LVLF">UseAll</LeveledObjectFlags>
+    <LeveledList>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>1</Level>
+          <Reference ID="00029371">AmmoFlamerFuel</Reference>
+          <Count>25</Count>
+        </Data>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>1</Level>
+          <Reference ID="00029372">AmmoFlamerFuel75</Reference>
+          <Count>32</Count>
+        </Data>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>1</Level>
+          <Reference ID="000E2BFC">WeapHeavyIncinerator</Reference>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Entry>
+      <Entry>
+        <Data Tag="LVLO">
+          <Level>1</Level>
+          <Reference ID="0015C63D">DrainedFlamerFuelTank75</Reference>
+          <Count>8</Count>
+        </Data>
+      </Entry>
+    </LeveledList>
+  </Subrecords>
+</Record>

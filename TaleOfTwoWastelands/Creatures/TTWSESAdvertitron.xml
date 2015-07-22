@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0C0185F6">TTWSESAdvertitron</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWSESAdvertitron</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-67</X>
+        <Y>-47</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>67</X>
+        <Y>47</Y>
+        <Z>180</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Advertitron Mk I</Name>
+    <Model>
+      <FileName Tag="MODL">creatures\NVSecuritron\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B891">SecuritronDT</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0C01862F">TTWSESAdvRadioSpell</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>nvsecuritron.nif</Entry>
+      <Entry>nvsecuritronscreenstatic.nif</Entry>
+      <Entry>nvsecuritronsmoketrail.nif</Entry>
+      <Entry>nvsecuritronvoicebox.nif</Entry>
+      <Entry>ttwadvnvsecuritronscreen01.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>6291776</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>7</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95B">DeathItemProtectron75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0C018631">TTWSESAdvVoice</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="0C01862B">TTWSESAdvertitronScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00096BDF">Ammo9mm75</Item>
+          <Count>30</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0010A709">WeapNVSecuritronSubmachineGun</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E5C">Ammo9mmRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0017B380">Ammo9mm75Robot</Item>
+          <Count>20</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C001E15">TTWTrainTicket02</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0C018629">TTWSESAdvertWanderPackage</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>80</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>120</Health>
+      <Damage>20</Damage>
+      <Strength>8</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>8</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0010C765">CSSecuritron</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0010699E">NVSecuritronBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">50</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">20</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundData>
+      <Sound>
+        <SoundType Tag="CSDT">LeftFoot</SoundType>
+        <Sounds>
+          <Sound>
+            <Sound Tag="CSDI">
+              <Reference ID="00020E39">NPCRobotProtectronFootLeft</Reference>
+            </Sound>
+            <Chance Tag="CSDC">100</Chance>
+          </Sound>
+        </Sounds>
+      </Sound>
+      <Sound>
+        <SoundType Tag="CSDT">RightFoot</SoundType>
+        <Sounds>
+          <Sound>
+            <Sound Tag="CSDI">
+              <Reference ID="00020E3A">NPCRobotProtectronFootRight</Reference>
+            </Sound>
+            <Chance Tag="CSDC">100</Chance>
+          </Sound>
+        </Sounds>
+      </Sound>
+      <Sound>
+        <SoundType Tag="CSDT">MovementLoop</SoundType>
+        <Sounds>
+          <Sound>
+            <Sound Tag="CSDI">
+              <Reference ID="00161EB7">NPCSecuritronMovementLP</Reference>
+            </Sound>
+            <Chance Tag="CSDC">100</Chance>
+          </Sound>
+        </Sounds>
+      </Sound>
+      <Sound>
+        <SoundType Tag="CSDT">ConsciousLoop</SoundType>
+        <Sounds>
+          <Sound>
+            <Sound Tag="CSDI">
+              <Reference ID="0014D3F4">NPCSecuritronConsciousLP</Reference>
+            </Sound>
+            <Chance Tag="CSDC">100</Chance>
+          </Sound>
+        </Sounds>
+      </Sound>
+      <Sound>
+        <SoundType Tag="CSDT">Auxiliary1</SoundType>
+        <Sounds>
+          <Sound>
+            <Sound Tag="CSDI">
+              <Reference ID="0014D3F9">NPCSecuritronTelemetry</Reference>
+            </Sound>
+            <Chance Tag="CSDC">10</Chance>
+          </Sound>
+        </Sounds>
+      </Sound>
+    </SoundData>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

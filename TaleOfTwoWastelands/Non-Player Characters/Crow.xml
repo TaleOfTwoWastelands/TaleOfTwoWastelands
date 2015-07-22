@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="06063BF8">Crow</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Crow</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Crow</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1500</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>20</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00065374">TraderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D7B">DeathItemCrow</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0602AB62">MaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000038E5">Hispanic</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0602D58A">CaravanCrowSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020423">ArmorLeather</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.349999994</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029380">WithAmmoScoped44MagnumNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078648">OutfitWastelandMerchantHat</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Armor, Alcohol, Books, Stimpacks, Miscellaneous, Repair</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0007E116">CaravanCrowWaitAtRivetCity</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0007E1EA">CaravanCrowWaitAtAgatha</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00068EB8">CaravanTravelPatrol</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00018738">VendorClothes</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>100</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>50</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>50</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000AAE63">HairMessy02</Reference>
+      </Type>
+      <Length Tag="LNAM">1</Length>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>72</Green>
+        <Blue>63</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">AXaQP4HkSD/YYXo/9mniP+F5LD+aJeg/UKAIPjRfjj5K3xc/aUf+vyadyb+cFvk90HfbPhAf7L78x6U/5KNEv1ZrbL8Q/EHACeLUP1wiOcACYa4+Kainv5CQur6AvBo/7M2hwL5xlD+OBCDAgj6Ev7SFpb9eYXvAmD/rQC5LlT/N6T3AqU2mv00/msBiMKW//oyLv0YRR8Au3tdAtF2YvigiqcC8NprAtByPQKajdr9MNdO/qnDKQOMnscAQI5FAujTswCRAQ0A=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">Flmcv6LhuT6AjW+9ojW6vgU9gT8tn4c+aZOBP3D6nb9YfXS/6k+gvqgTXj6oufa+kDUJvy/Mr72UVZk/wCCOPqgVOz8HCJo/Djc+volyjL9Y5k8/ioxivtBlIr8wyyM9VOWzvkTzML4A97C7YObHP4C5vD+EVIE/0qQ9PqJDaj5oiJo+BfpsvyDcIUCPbw2/YV9evwqjrz402+c+nL0rP21w7j/jwAfAXafnP1nUr78oR3Y8zBuuv7+2ij5OeFi/+lJjv/u5lL8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

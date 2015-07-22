@@ -1,0 +1,204 @@
+scn VLCSafetyTrigger02SCRIPT
+
+Ref ActivatorREF;
+
+BEGIN OnTriggerEnter
+
+	Set ActivatorREF to GetActionRef;
+	If (VHDBattleController.iBattleState == 2)
+		ActivatorREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		ActivatorREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+BEGIN OnTrigger Player
+
+	If (VHDBattleController.iBattleState == 2)
+		Player.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		Player.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Boone
+BEGIN OnTrigger CraigBooneREF
+
+	If (VHDBattleController.iBattleState == 2)
+		CraigBooneREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		CraigBooneREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Cass
+BEGIN OnTrigger RoseofSharonCassidyREF
+
+	If (VHDBattleController.iBattleState == 2)
+		RoseofSharonCassidyREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		RoseofSharonCassidyREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Veronica
+BEGIN OnTrigger VeronicaREF
+
+	If (VHDBattleController.iBattleState == 2)
+		VeronicaREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		VeronicaREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Lily
+BEGIN OnTrigger LilyREF
+
+	If (VHDBattleController.iBattleState == 2)
+		LilyREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		LilyREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;EDE
+BEGIN OnTrigger EDE1REF
+
+	If (VHDBattleController.iBattleState == 2)
+		EDE1REF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		EDE1REF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+BEGIN OnTrigger EDE2REF
+
+	If (VHDBattleController.iBattleState == 2)
+		EDE2REF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		EDE2REF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+BEGIN OnTrigger EDE3REF
+
+	If (VHDBattleController.iBattleState == 2)
+		EDE3REF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		EDE3REF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Raul
+BEGIN OnTrigger RaulREF
+
+	If (VHDBattleController.iBattleState == 2)
+		RaulREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		RaulREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Arcade
+BEGIN OnTrigger ArcadeREF
+
+	If (VHDBattleController.iBattleState == 2)
+		ArcadeREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		ArcadeREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+
+;Rex
+BEGIN OnTrigger RexREF
+
+	If (VHDBattleController.iBattleState == 2)
+		RexREF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		RexREF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger CharonRef
+
+	If (VHDBattleController.iBattleState == 2)
+		CharonRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		CharonRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger ButchRef
+
+	If (VHDBattleController.iBattleState == 2)
+		ButchRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		ButchRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger CloverRef
+
+	If (VHDBattleController.iBattleState == 2)
+		CloverRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		CloverRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger JerichoRef
+
+	If (VHDBattleController.iBattleState == 2)
+		JerichoRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		JerichoRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger MQ08FawkesRef
+
+	If (VHDBattleController.iBattleState == 2)
+		MQ08FawkesRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		MQ08FawkesRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger StarPaladinCrossRef
+
+	If (VHDBattleController.iBattleState == 2)
+		StarPaladinCrossRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		StarPaladinCrossRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger DogmeatRef
+
+	If (VHDBattleController.iBattleState == 2)
+		DogmeatRef.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		DogmeatRef.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END
+BEGIN OnTrigger RL3REF
+
+	If (VHDBattleController.iBattleState == 2)
+		RL3REF.MoveTo VHDLegionDamBattleStartMarkerB;
+	Else
+		RL3REF.MoveTo VHDLegionDamBattleStartMarker;
+	EndIf
+
+END

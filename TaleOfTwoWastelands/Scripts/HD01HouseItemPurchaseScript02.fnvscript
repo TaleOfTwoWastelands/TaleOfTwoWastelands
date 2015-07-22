@@ -1,0 +1,9 @@
+scn HD01HouseItemPurchaseScript02
+
+begin OnAdd Player
+
+	HD01ReloadingbenchMarkerREF.Enable
+	HD02ReloadingbenchMarkerREF.Enable
+	SetItemValue 0
+
+end

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="07003F3A">DLC02ArmorChinese</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02ArmorChinese</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Chinese Jumpsuit</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>NonPlayable</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ChineseCommando\ChineseCommandoM.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="070084B5">DLCAnchChineseCommandoM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="070084B5">DLCAnchChineseCommandoM</TextureSet>
+                <Index>3</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="070084B5">DLCAnchChineseCommandoM</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="070084B5">DLCAnchChineseCommandoM</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\ChineseCommando\OutfitF.NIF</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="070084B6">DLCAnchChineseCommandoF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="070084B6">DLCAnchChineseCommandoF</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="070084B6">DLCAnchChineseCommandoF</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="070084B6">DLCAnchChineseCommandoF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\ChineseCommando\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>GO</Name>
+                <TextureSet ID="070084B5">DLCAnchChineseCommandoM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_chinese_officer_jumpsuit.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_chinese_officer_jumpsuit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9D8">RepairChineseCommandoJumpsuit</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="070084B9">DLCAnchChineseGloves</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>10</Value>
+      <MaxCondition>999100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

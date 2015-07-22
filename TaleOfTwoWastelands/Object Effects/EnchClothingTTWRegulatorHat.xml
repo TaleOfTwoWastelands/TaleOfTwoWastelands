@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ENCH">
+  <Flags>0</Flags>
+  <FormID ID="0C01801F">EnchClothingTTWRegulatorHat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">EnchClothingTTWRegulatorHat</EditorID>
+    <Name Tag="FULL">Regulator Hat</Name>
+    <Data Tag="ENIT">
+      <Type>Armor</Type>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0006AA5D">IncreaseCritChance</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>5</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>CriticalChance</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0001515D">IncreasePerception</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Perception</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

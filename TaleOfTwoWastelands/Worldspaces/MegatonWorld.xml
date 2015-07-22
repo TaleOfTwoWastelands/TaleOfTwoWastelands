@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="06000A74">MegatonWorld</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MegatonWorld</EditorID>
+    <Name Tag="FULL">Megaton</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="00035AAA">MegatonZone</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">65413</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00017907">WastelandClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00020D79">d5TerribleWater20r4h</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00000018">DefaultWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064608">WastelandBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, NoLODWater, DoNotAllowNPCFallDamage</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-12288</X>
+        <Y>-32768</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>12288</X>
+        <Y>4096</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="00090906">DefaultPublic</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WaterFlowRippleNoise01.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

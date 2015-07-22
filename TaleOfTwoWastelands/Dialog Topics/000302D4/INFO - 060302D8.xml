@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060302D8">INFO - 060302D8</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0602FA33">FollowersHireJericho</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Haha! This is gonna be great! Some good ol' fashioned violence!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1000</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="0000000F">Caps001</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>10</ReferenceCount>
+        <CompiledSize>319</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIDAHMvAAIAIDEcAAEAdhEFAAEAcgQAFQAKAHIBAHMJAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgMAcxIAAgAgMRUAEwByAwBzEwALACByAwBzEwAgMSArHAACAFIQCgACAHIFAG7oAwAAFQAKAHIGAHMGAAIAIDEVAAoAcgEAcwIAAgAgMRUACgByAQBzBgACACAxFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwcAAgAgMBwAAQCxEAUAAQByBwAVAAoAcgEAcwQAAgAgMRUACgByAQBzBQACACAwHAABAMURBwABAG4BAAAAHAABAH8RCgACAHIIAG4BAAAAHAABAIkQCgACAHIIAG4BAAAAHAABAH8RCgACAHIJAG4BAAAANxAFAAEAcgoA+hEAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
+JerichoREF.AddPerk CompanionSuite
+Set JerichoREF.Waiting to 0
+JerichoREF.IgnoreCrime 1
+JerichoREF.SetIgnoreFriendlyHits 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+player.removeitem Caps001 1000
+set Followers.JerichoHired to 1
+set JerichoREF.HasBeenHired to 1
+set JerichoREF.IsFollowingDefault to 1
+set JerichoREF.IsFollowingLong to 0
+set JerichoREF.IsFollowingShort to 0
+JerichoREF.SetCombatStyle FollowersCombatStyleRanged
+set JerichoREF.CombatStyleRanged to 1
+set JerichoREF.CombatStyleMelee to 0
+JerichoREF.SetPlayerTeammate 1
+JerichoREF.AddToFaction TeammateFaction 1
+JerichoREF.SetFactionRank TeammateFaction 1
+JerichoREF.AddToFaction FollowerFaction 1
+StopQuest FollowersHireJericho
+
+ResetAI</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000000F">Caps001</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602FA33">FollowersHireJericho</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C0185E3">TTWChallengeGhoulSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeGhoulSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>142</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Effect</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgARAIAAAAAVABMAcwEADgAgcgEAWMERBQABAHICABYADAACAAgAIHMBACAzIDwVABMAcwEADgAgcgEAWHYRBQABAHICAFkQDgABAHIDAAEAcwEAAAAAABkAAAAWAAwAAQAIACBzAQAgMiA+bBIFAAEAcgQAGQAAAHcRBwABAG4yAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWChallengeGhoulSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">rank</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185D6">TTWGhoulChallengePerk</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185D5">TTWChallengeMessageGhoul</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C018588">TTWChallengeGhoul</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,77 @@
+scn TranquilityLaneExitDoorScript
+
+Short IsAnimating
+Short HasFlicked
+Float Timer
+
+Begin OnActivate
+
+	if ( IsActionRef Player == 1 )
+		if ( MQ04.Invasion == 1 )
+			MQ04SoldierRef1.Kill
+			MQ04SoldierRef2.Kill
+			MQ04SoldierRef3.Kill
+			MQ04SoldierRef4.Kill
+			MQ04SoldierRef5.Kill
+			MQ04SoldierRef6.Kill
+			MQ04SoldierRef7.Kill
+		endif
+		
+		; Sesom: Added checks because these things can be removed by Betty in the MQ04 dialoge already (what are you thinking Bethesda)
+
+		If Player.GetItemCount MQ04RollingPin == 1
+			Player.RemoveItem MQ04RollingPin 1
+		EndIf
+		If Player.GetItemCount MQ04Undies == 1
+			Player.RemoveItem MQ04Undies 1
+		EndIf
+		If Player.GetItemCount MQ04Brochure == 1
+			Player.RemoveItem MQ04Brochure 1
+		EndIf
+		If Player.GetItemCount MQ04SlasherKnife  == 1
+			Player.RemoveItem MQ04SlasherKnife 1
+		EndIf
+		If Player.GetItemCount MQ04SlasherMask == 1
+			Player.RemoveItem MQ04SlasherMask 1
+		EndIf
+		SetLocationSpecificLoadScreensOnly 0
+		AutoDisplayObjectives 0
+		Player.Moveto MQ04PlayerPod
+
+		; #46467: When leaving Tranq. Lane, the code will try to set the player
+		; arrow at this door, which is bad since it doesn't have any world
+		; coords.  Manually set the player arrow outside Smith Casey's Garage.
+		SetLastExtDoorActivated SmithCaseyGarageExtDoor
+	endif
+
+End		
+
+
+
+Begin OnLoad
+
+	Playgroup Forward 0
+	Set timer to 1.25
+	Set IsAnimating to 1
+
+End
+
+Begin GameMode
+
+	If IsAnimating == 1
+		If IsAnimPlaying Forward == 0
+			Playgroup Left 0
+			Set IsAnimating to 0
+		endif
+	endif
+	
+	if HasFlicked == 0
+		if Timer < 0
+			IMOD TranquilityLaneFlicker01ISFX
+			set HasFlicked to 1
+		else
+			set Timer to Timer - GetSecondsPassed
+		endif
+	endIf
+
+End

@@ -1,0 +1,350 @@
+scn	VPitFightScript
+
+; This "codebox" script governs part of the sequence of events involved in The Pit's fights - specifically, it times the AI packages to coincide with the opening of the doors to The Pit. Also, it
+; moves contenders to their appropriate starting, middle, and end positions during the combat scenes. Finally, it resurrects the fallen contenders when necessary (at the end of a fight,
+; once players, or creatures, trigger the volumes containing the VPitFightersSeal3 script).
+; - Jorge
+
+Ref	Fighter01
+Ref	Fighter02
+Ref	Fighter03
+Ref	Fighter04
+Ref	Fighter05
+Ref	Fighter06
+
+Float	fFadeTimer
+Float	DoorTimer
+
+Begin GameMode
+
+	If VMS38.CreaturesFight != 1 && VMS38.PlayerFights != 1
+		If VMS38.CreaturesRespawned != 1
+			Return
+		Elseif VMS38.CreaturesRespawned == 1
+			If VMS38.PlayerWinsFight == 1
+				Set Fighter02 to VMS38.PitFighter02
+				Set Fighter04 to VMS38.PitFighter04
+				Set Fighter06 to VMS38.PitFighter06
+
+				Set Fighter01 to VMS38.PitFighter02
+				Set Fighter03 to VMS38.PitFighter04
+				Set Fighter05 to VMS38.PitFighter06
+			Else
+				Set Fighter01 to VMS38.PitFighter01
+				Set Fighter02 to VMS38.PitFighter02
+				Set Fighter03 to VMS38.PitFighter03
+				Set Fighter04 to VMS38.PitFighter04
+				Set Fighter05 to VMS38.PitFighter05
+				Set Fighter06 to VMS38.PitFighter06
+			Endif
+			If VMS38.bFightersMoved == 0
+				Set VMS38.Timer to ( VMS38.Timer + GetSecondsPassed )
+				If VMS38.iCount < 1 && VMS38.Timer > 2
+					Fighter01.MoveToMarkerWithFade VPitFighter1SpawnMarkerREF
+					Set VMS38.iCount to 1
+					Set VMS38.Timer to -2
+					Return
+				Elseif VMS38.iCount == 1 && VMS38.Timer >= 0.2
+					Fighter02.MoveToMarkerWithFade VPitFighter2SpawnMarkerREF
+					Set VMS38.iCount to 2
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 2 && VMS38.Timer >= 0.2
+					Fighter03.MoveToMarkerWithFade VPitFighter3SpawnMarkerREF
+					Set VMS38.iCount to 3
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 3 && VMS38.Timer >= 0.2
+					Fighter04.MoveToMarkerWithFade VPitFighter4SpawnMarkerREF
+					Set VMS38.iCount to 4
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 4 && VMS38.Timer >= 0.2
+					Fighter05.MoveToMarkerWithFade VPitFighter5SpawnMarkerREF
+					Set VMS38.iCount to 5
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 5 && VMS38.Timer >= 0.2
+					Fighter06.MoveToMarkerWithFade VPitFighter6SpawnMarkerREF
+					Set VMS38.iCount to 0
+					Set VMS38.Timer to 0
+					Set VMS38.bFightersMoved to 1
+					Return
+				Endif
+				Return
+			Else
+				Set VMS38.Timer to ( VMS38.Timer + GetSecondsPassed )
+				If VMS38.iCount < 1 && VMS38.Timer >= 2
+					If Fighter01.GetDead == 1
+						Fighter01.Resurrect 
+					Endif
+					Set VMS38.iCount to 1
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 1 && VMS38.Timer >= 0.2
+					If Fighter02.GetDead == 1
+						Fighter02.Resurrect
+					Endif
+					Set VMS38.iCount to 2
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 2 && VMS38.Timer >= 0.2
+					If Fighter03.GetDead == 1
+						Fighter03.Resurrect
+					Endif
+					Set VMS38.iCount to 3
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 3 && VMS38.Timer >= 0.2
+					If Fighter04.GetDead == 1
+						Fighter04.Resurrect
+					Endif
+					Set VMS38.iCount to 4
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 4 && VMS38.Timer >= 0.2
+					If Fighter05.GetDead == 1
+						Fighter05.Resurrect
+					Endif
+					Set VMS38.iCount to 5
+					Set VMS38.Timer to 0
+					Return
+				Elseif VMS38.iCount == 5 && VMS38.Timer >= 0.2
+					If Fighter06.GetDead == 1
+						Fighter06.Resurrect
+					Endif
+
+					Set VMS38.FightersAtAppear to 0
+					Set VMS38.FightersAtStart to 0
+					Set VMS38.FightersClash to 0
+					Set VMS38.FightersSealed1 to 0
+					Set VMS38.FightersSealed2 to 0
+
+					Set VMS38.PitFightOn to 0
+					Set VMS38.bFightersMoved to 0
+					Set VMS38.iCount to 0
+					Set VMS38.CreaturesRespawned to 0
+					Return
+				Endif
+				Return
+			Endif
+		Endif
+	Elseif VMS38.FightersFight == 1
+		Return
+	Elseif VMS38.CreaturesFight == 1 && VMS38.PlayerFights != 1 && VMS38.FightersAtAppear == 1 && VMS38.FightersAtStart != 1
+
+	; Set the Ref to the proper contender
+	Set Fighter01 to VMS38.PitFighter01
+	Set Fighter02 to VMS38.PitFighter02
+	Set Fighter03 to VMS38.PitFighter03
+	Set Fighter04 to VMS38.PitFighter04
+	Set Fighter05 to VMS38.PitFighter05
+	Set Fighter06 to VMS38.PitFighter06
+
+
+	VPitFighter01AccessDoor2REF.Unlock
+	VPitFighter02AccessDoor2REF.Unlock
+	VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+	VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+
+	Set VMS38.Timer to 6
+
+	Set VMS38.FightersAtStart to 1
+
+	Elseif VMS38.CreaturesFight == 1 && VMS38.PlayerFights != 1 && VMS38.FightersAtAppear == 1 && VMS38.FightersAtStart == 1 && VMS38.FightersFight != 1
+		Set VMS38.Timer to ( VMS38.Timer - GetSecondsPassed )
+		If VMS38.Timer > 0
+			Return
+		Else
+			Fighter01.AddScriptPackage VPitFighter01ToClash
+			Fighter02.AddScriptPackage VPitFighter02ToClash
+			Fighter03.AddScriptPackage VPitFighter01ToClash
+			Fighter04.AddScriptPackage VPitFighter02ToClash
+			Fighter05.AddScriptPackage VPitFighter01ToClash
+			Fighter06.AddScriptPackage VPitFighter02ToClash
+
+;			Fighter01.AddToFaction VPitFighter01Faction 1
+;			Fighter02.AddToFaction VPitFighter02Faction 1
+;			Fighter03.AddToFaction VPitFighter01Faction 1
+;			Fighter04.AddToFaction VPitFighter02Faction 1
+;			Fighter05.AddToFaction VPitFighter01Faction 1
+;			Fighter06.AddToFaction VPitFighter02Faction 1
+
+			PlaySound AmbPittCrowdCheer02
+			Set VMS38.FightersFight to 1
+		Endif
+
+	Elseif VMS38.CreaturesFight != 1 && VMS38.PlayerFights == 1 && VMS38.FightersAtAppear != 1 && VMS38.PlayerWarped != 1 && VMS38.PitFightFinishing != 1
+		Set fFadeTimer to fFadeTimer + GetSecondsPassed
+		If fFadeTimer >= 2
+			Player.MoveTo VPitPlayerAppearMarkerREF
+			Set VMS38.PlayerWarped to 1
+			Set fFadeTimer to 0
+			If (VNPCFollowers.nCurrentFollowers >= 1)
+				If (VNPCFollowers.ArcadeHired == 1)
+					If (ArcadeREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set ArcadeREF.Waiting to 1;
+						ArcadeREF.evp;
+						ArcadeREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.bBooneHired == 1)
+					If (CraigBooneREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set CraigBooneREF.Waiting to 1;
+						CraigBooneREF.evp;
+						CraigBooneREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.bVeronicaHired == 1)
+					If (VeronicaREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set VeronicaREF.Waiting to 1;
+						VeronicaREF.evp;
+						VeronicaREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.RaulHired == 1)
+					If (RaulREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set RaulREF.Waiting to 1;
+						RaulREF.evp;
+						RaulREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.bEDEHired == 1)
+					If (EDE1REF.GetInCell OVWestSewers03 == 1 || EDE2REF.GetInCell OVWestSewers03 == 1 || EDE3REF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set EDE1REF.Waiting to 1;
+						Set EDE2REF.Waiting to 1;
+						Set EDE3REF.Waiting to 1;
+						EDE1REF.evp;
+						EDE2REF.evp;
+						EDE3REF.evp;
+					Endif
+				Endif
+				If (VNPCFollowers.RexHired == 1)
+					If (RexREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set RexREF.Waiting to 1;
+						RexREF.evp;
+						RexREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.bCassHired == 1)
+					If (RoseofSharonCassidyREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set RoseofSharonCassidyREF.Waiting to 1;
+						RoseofSharonCassidyREF.evp;
+						RoseofSharonCassidyREF.SetRestrained 1;
+					Endif
+				Endif
+				If (VNPCFollowers.bLilyHired == 1)
+					If (LilyREF.GetInCell OVWestSewers03 == 1)
+						Set VNPCFollowers.fFollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set LilyREF.Waiting to 1;
+						LilyREF.evp;
+						LilyREF.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.CharonHired == 1)
+					If (CharonRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set CharonRef.Waiting to 1;
+						CharonRef.evp;
+						CharonRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.ButchHired == 1)
+					If (ButchRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set ButchRef.Waiting to 1;
+						ButchRef.evp;
+						ButchRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.CloverHired == 1)
+					If (CloverRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set CloverRef.Waiting to 1;
+						CloverRef.evp;
+						CloverRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.JerichoHired == 1)
+					If (JerichoRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set JerichoRef.Waiting to 1;
+						JerichoRef.evp;
+						JerichoRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.FawkesHired == 1)
+					If (MQ08FawkesRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set MQ08FawkesRef.Waiting to 1;
+						MQ08FawkesRef.evp;
+						MQ08FawkesRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.StarPaladinCrossHired == 1)
+					If (StarPaladinCrossRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set StarPaladinCrossRef.Waiting to 1;
+						StarPaladinCrossRef.evp;
+						StarPaladinCrossRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.DogmeatHired == 1)
+					If (DogmeatRef.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set DogmeatRef.Waiting to 1;
+						DogmeatRef.evp;
+						DogmeatRef.SetRestrained 1;
+					Endif
+				Endif
+				If (Followers.RL3Hired == 1)
+					If (RL3REF.GetInCell OVWestSewers03 == 1)
+						Set Followers.FollowerWaitingLeaveDay to  ( GameDaysPassed + FollowerWaitTime );
+						Set RL3REF.Waiting to 1;
+						RL3REF.evp;
+						RL3REF.SetRestrained 1;
+					Endif
+				Endif
+			Endif
+		Endif
+	Elseif VMS38.CreaturesFight != 1 && VMS38.PlayerFights == 1 && VMS38.FightersAtAppear == 1 && VMS38.FightersAtStart != 1
+
+		Set Fighter01 to VMS38.PitFighter01
+		Set Fighter02 to VMS38.PitFighter02
+		Set Fighter03 to VMS38.PitFighter03
+		Set Fighter04 to VMS38.PitFighter04
+		Set Fighter05 to VMS38.PitFighter05
+		Set Fighter06 to VMS38.PitFighter06
+
+	Set VMS38.Timer to 6
+
+	Elseif VMS38.CreaturesFight != 1 && VMS38.PlayerFights == 1 && VMS38.FightersAtAppear == 1 && VMS38.FightersAtStart == 1 && VMS38.FightersFight != 1
+		Set VMS38.Timer to ( VMS38.Timer - GetSecondsPassed )
+		If VMS38.Timer > 0
+			Return
+		Else
+			Fighter02.AddScriptPackage VPitFighter02ToClash
+			Fighter04.AddScriptPackage VPitFighter02ToClash
+			Fighter06.AddScriptPackage VPitFighter02ToClash
+			Player.AddToFaction VPitFighter01Faction 1
+			Fighter02.AddToFaction VPitFighter02Faction 1
+			Fighter04.AddToFaction VPitFighter02Faction 1
+			Fighter06.AddToFaction VPitFighter02Faction 1
+			Fighter02.StartCombat Player
+			Fighter04.StartCombat Player
+			Fighter06.StartCombat Player
+			VPitFighter02AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter02AccessDoorREF.Lock 255
+			PlaySound AmbPittCrowdCheer02
+			Set VMS38.FightersFight to 1
+		Endif
+	Endif
+
+End

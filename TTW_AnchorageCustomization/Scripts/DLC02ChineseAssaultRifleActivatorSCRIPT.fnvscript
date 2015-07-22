@@ -1,0 +1,25 @@
+scn DLC02ChineseAssaultRifleActivatorSCRIPT
+
+short hasAmmo
+short giveAmmo
+
+
+Begin OnActivate
+
+
+	if (IsActionRef player == 1)
+
+		if (player.GetItemCount WeapChineseAssaultRifle < 1)
+			player.additem WeapChineseAssaultRifle 1
+		endif
+
+		player.AddItem Ammo556mm 48 1
+		TTWRequisitionDummyRef.AddItem Ammo556mm 48
+		disable
+
+	endif
+
+
+End
+
+

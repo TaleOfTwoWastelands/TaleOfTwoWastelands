@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="00117B13">INFO - 00117B13</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="001132EF">VDialogueLucky38Entrance</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0015725B">INFO - 0015725B</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Come back soon, now!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>19</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00112073">Lucky38VictorEntrance</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>22</ReferenceCount>
+        <CompiledSize>666</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQASAHITAGYUAAoAIEcUACBHFQAgKxYACwACAAcAIHITAHMGABUACgByAQBzCAACACAxHAABAF4QAAAYAAsAAgAHACByEwBzFQAVAAoAcgIAcwEAAgAgMRwAAgBeEAAAGAALAAIABwAgchMAcxsAFQAKAHIDAHMJAAIAIDEcAAMAXhAAABgACwACAAcAIHITAHMhABUACgByBABzAQACACAxHAAEAF4QAAAYAAsAAgAHACByEwBzCQAVAAoAcgUAcwMAAgAgMRwABQBeEAAAGAALAAIABwAgchMAcwwAFQAKAHIGAHMBAAIAIDEcAAYAXhAAABkAAAAWAAsABgAHACByEwBzHgAVAAoAcgcAcwEAAgAgMRUACgByCABzAQACACAxFQAKAHIJAHMBAAIAIDEcAAcAXhAAABwACABeEAAAHAAJAF4QAAAYAAsAAgAHACByEwBzDwAVAAoAcgoAcwgAAgAgMRwACgBeEAAAGAALAAIABwAgchYAcwIAFQAKAHILAHMPAAIAIDEcAAsAXhAAABgACwACAAcAIHIWAHMOABUACgByDABzCwACACAxHAAMAF4QAAAYAAsAAgAHACByFgBzEgAVAAoAcg0AcwgAAgAgMRwADQBeEAAAGAALAAIABwAgchYAcwYAFQAKAHIOAHMJAAIAIDEcAA4AXhAAABgACwACAAcAIHIWAHMIABUACgByDwBzCAACACAxHAAPAF4QAAAYAAsAAgAHACByFgBzCgAVAAoAchAAcwgAAgAgMRwAEABeEAAAGAALAAIABwAgchYAcxQAFQAKAHIRAHMIAAIAIDEcABEAXhAAABgACwACAAcAIHIWAHMWABUACgByEgBzCAACACAxHAASAF4QAAAZAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+	if (VNPCFollowers.bBooneHired)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	elseif (VNPCFollowers.bCassHired)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	elseif (VNPCFollowers.bVeronicaHired)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	elseif (VNPCFollowers.bLilyHired)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	elseif (VNPCFollowers.RaulHired)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	elseif (VNPCFollowers.ArcadeHired)
+                                set ArcadeREF.Waiting to 1
+                                ArcadeREF.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	elseif (VNPCFollowers.RexHired)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	elseif (Followers.CharonHired)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	elseif (Followers.ButchHired)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	elseif (Followers.CloverHired)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	elseif (Followers.JerichoHired)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	elseif (Followers.FawkesHired)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	elseif (Followers.StarPaladinCrossHired)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	elseif (Followers.DogmeatHired)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	elseif (Followers.RL3Hired)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53F5">FollowerWaitTime</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>2</ReferenceCount>
+          <CompiledSize>53</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FgAQAAIADAAgcgIAcwEAIDEgIT0cAAEA3RAHAAEAbgEAAAAVAAoAcgIAcwEAAgAgMRkAAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">If VDialogueLucky38Entrance.L38EntranceOpen != 1
+  Lucky38EntranceDoorActor.SetOpenState 1
+  Set VDialogueLucky38Entrance.L38EntranceOpen to 1
+Endif</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00118E76">Lucky38EntranceDoorActor</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="001132EF">VDialogueLucky38Entrance</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="00112073">Lucky38VictorEntrance</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

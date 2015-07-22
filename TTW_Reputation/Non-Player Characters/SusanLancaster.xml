@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156DE">SusanLancaster</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">SusanLancaster</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Susan Lancaster</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>4</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0003D1FC">MS13AlwaysMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCB">FemaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="06003123">SusanLancasterScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D0">OutfitPrewarSpring</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF72">TenpennyResidentKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>99</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0601B17D">MS13Enslaved</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00056E91">SusanLancasterLiveInBurkesSuite</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273AB">SusanLancasterEat8x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273AC">SusanLancasterEat12x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273AD">SusanLancasterEat18x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273AF">SusanLancasterSleepWithEdgarWellington</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B1">SusanLancasterSleepWithDoctorBanfield</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B2">SusanLancasterSleepWithMichaelHawthorne</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B3">SusanLancasterSleepWithIrvingCheng</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B5">SusanLancasterSleepWithHerbertDashwood</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273AE">SusanLancasterSleepAlone</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B4">SusanLancasterSandboxFirstFloor</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001874D">Prostitute</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>62</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>8</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>7</Agility>
+      <Luck>3</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>44</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005C9A2">HairDefaultFemale</Reference>
+      </Type>
+      <Length Tag="LNAM">0.969201684</Length>
+      <Color Tag="HCLR">
+        <Red>120</Red>
+        <Green>114</Green>
+        <Blue>109</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">FEQCv6wD6L6iD5O+6QvRPpicFT/KkCC/GdQSwPge/r+AP/m/IPMGwJKyNb/OCHk/ZFEGv5AkFL+DgRzA6peXv+wAb0A1Xuo/L2tAQCwFPj/CdLa/CNQmv6RZWj+LCSJAKEANv3J5wb90EWLAnuWGv7oe4cDFusu/wMIzP3Aobz8YyoO/TUTivqLbcMDkCri/0wEdwKuvJUCJ4k/A6j3GPxCAqD5Ab1W+ONxNv/jbUkA8omvAlR+sP5flNcApv9S+T/x7wKCnFz8=</Symmetric>
+        <Asymmetric Tag="FGGA">LvQeP4Co+z6iz5K/CJjMv7+cq79AeWi+oGv0PABAM7vOsQfAkrOWvhUjuD8kjf4+RGoYvyyqQMDAV/0/5uXYP7yv1D4oc86+8iAUQMA5Qj96jqVAIPU3QIDTTb+A9ui8qtbdv9Gh6j+8eig+KEA5QEA2BcDncAY/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">PLalv7ggsj22m7E+gOQ4P3YRdz9OEok+SOQfP/TbLL+3BIE/rDUaQLLgh7/CfDI/FLFLv33iD8DrkHM/PNekvwiTnT/PhQU/aDFAv1uKHsD0V9w/2GBIQHz8sb8/pvC/UvHTv6jS3L6WVGq/Mz+FQEApMjyobsw9nO1YwCIDS77pL7c/9A9LvxLmtT/5OxDA66Cov4ZS80CPamhAWLKyPw8QbT9kiV0/SYmAQKzJaj00k2G/mNs/P4pgn77GEFZA9JxtwBAwbL0=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

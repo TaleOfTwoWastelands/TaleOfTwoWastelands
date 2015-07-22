@@ -1,0 +1,68 @@
+ScriptName VMS18CompanionSacrificeActivatorSCRIPT
+
+BEGIN OnActivate
+	SetObjectiveCompleted VMS18 110 1;
+	SetObjectiveCompleted VMS18 125 1;
+	if (VMS18FreezerTriggerREF.bBooneInFreezer)
+		CraigBooneREF.Disable
+		CraigBooneREF.SetPlayerTeammate 0
+		CraigBooneREF.REmoveFromFaction FollowerFaction
+		set VNPCFollowers.bBooneHired to 0;
+		set VNPCFollowers.bBooneAvailable to 0;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bArcadeInFreezer)
+		ArcadeREF.Disable
+		ArcadeREF.SetPlayerTeammate 0
+		ArcadeREF.RemoveFromFaction FollowerFaction
+		Set VNPCFollowers.ArcadeHired to 0;
+		Set VNPCFollowers.ArcadeAvailable to 0;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bCassInFreezer)
+		RoseofSharonCassidyREF.Disable;
+		RoseofSharonCassidyREF.SetPlayerTeammate 0
+		RoseofSharonCassidyREF.RemoveFromFaction FollowerFaction
+		set VNPCFollowers.bCassHired to 0;
+		set VNPCFollowers.bCassAvailable to 0;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bVeronicaInFreezer)
+		VeronicaREF.Disable;
+		VeronicaREF.SetPlayerTeammate 0
+		VeronicaREF.RemoveFromFaction FollowerFaction
+		set VNPCFollowers.bVeronicaHired to 0;
+		set VNPCFollowers.bVeronicaAvailable to 0;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bButchInFreezer)
+		ButchRef.Disable;
+		ButchRef.SetPlayerTeammate 0
+		ButchRef.RemoveFromFaction FollowerFaction
+		set Followers.ButchHired to 0;
+		set Followers.ButchFired to 1;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bCloverInFreezer)
+		CloverRef.Disable;
+		CloverRef.SetPlayerTeammate 0
+		CloverRef.RemoveFromFaction FollowerFaction
+		set Followers.CloverHired to 0;
+		set Followers.CloverFired to 1;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bJerichoInFreezer)
+		JerichoRef.Disable;
+		JerichoRef.SetPlayerTeammate 0
+		JerichoRef.RemoveFromFaction FollowerFaction
+		set Followers.JerichoHired to 0;
+		set Followers.JerichoFired to 1;
+		RewardKarma -100
+	elseif (VMS18FreezerTriggerREF.bCrossInFreezer)
+		StarPaladinCrossRef.Disable;
+		StarPaladinCrossRef.SetPlayerTeammate 0
+		StarPaladinCrossRef.RemoveFromFaction FollowerFaction
+		set Followers.StarPaladinCrossHired to 0;
+		set Followers.StarPaladinCrossFired to 1;
+		RewardKarma -100
+	endif
+	set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+	if (VNPCFollowers.nCurrentFollowers == 0)
+	     set VNPCFollowers.bPlayerHasFollower to 0;
+	endif
+	set VMS18.bSacrificedCompanion to 1;
+END

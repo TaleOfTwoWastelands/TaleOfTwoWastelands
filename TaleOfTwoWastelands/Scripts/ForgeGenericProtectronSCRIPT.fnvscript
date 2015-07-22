@@ -1,0 +1,62 @@
+scn ForgeGenericProtectronSCRIPT
+
+;***************************************
+
+Begin onLoad
+	if getav variable01 == 0 ; I'm currently "off"
+		; make me unconscious so I don't play sounds
+		setUnconscious 1
+	endif
+End
+
+;***************************************
+
+Begin OnActivate
+	if GetDead == 1 && IsActionRef player == 1 		;Added to make protectrons lootable if they're dead. 12/16/2014 -- TJ
+			Activate
+	endif											;End of my additions.
+	if isActionRef player == 0
+		if getav variable01 == 0 ; I'm currently "off"
+			setav variable01 1	; turn on
+			setUnconscious 0		; not unconscious any more
+			Activate			; tell pod to open
+		else
+			setav variable01 0	; turn off
+			evp
+		endif
+	endif	
+End
+
+;***************************************
+
+Begin OnPackageEnd Forge01Protectron02Travel
+	setav variable01 0
+End
+
+;***************************************
+
+Begin OnPackageEnd Forge01Protectron01Travel
+	setav variable01 0
+End
+
+;***************************************
+
+Begin OnPackageEnd ForgeDefaultPatrolCasual
+	setav variable01 3
+End
+
+;***************************************
+
+Begin OnPackageEnd ForgeProtectronTurnOn
+	setav variable01 2
+End
+
+;***************************************
+
+Begin OnPackageEnd ProtectronNotActive
+	if getav variable01 == 0
+		Activate									; to get pod to close behind me
+		; make me unconscious
+		setUnconscious 1
+	endif
+End

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>0</Flags>
+  <FormID ID="0004BDAA">SDMMetalBox01Commercial</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">SDMMetalBox01Commercial</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-22</X>
+        <Y>-21</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>22</X>
+        <Y>21</Y>
+        <Z>34</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Metal Box</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Office\MetalBox01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAKbVbuCKcxMAptW+4Ip2VjF3SNeWt/7t8MbdfBPaRuXwxt3ME9pGVjF3SNeWt/898MbdfBPaRzXwxt3ME9pGVjF3SNeWt/</TextureFileHash>
+    </Model>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00037876">ClutterKitchen15</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0004BDAC">PharmacyKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060B5C13">ClutterHouseholdSmall15DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <OpenSound Tag="SNAM">
+      <Reference ID="0009AC24">DRSMetalBoxOpen</Reference>
+    </OpenSound>
+    <CloseSound Tag="QNAM">
+      <Reference ID="0009AC25">DRSMetalBoxClose</Reference>
+    </CloseSound>
+  </Subrecords>
+</Record>

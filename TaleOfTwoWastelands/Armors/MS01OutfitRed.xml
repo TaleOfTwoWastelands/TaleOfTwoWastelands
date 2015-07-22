@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060340EA">MS01OutfitRed</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS01OutfitRed</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-13</X>
+        <Y>-19</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>22</Y>
+        <Z>17</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Red's Jumpsuit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B8B">EnchClothingChinComSuit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\RobcoJumpsuit\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84HgsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx5ewRclMNQWdlbBFyWA1BZ3RpHHRUQwYw7t8TckxBGAtuXxNyUUEYC3RpHHRUQwYw898TckxBGAtzXxNyUUEYC3RpHHRUQwYw</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0002BFBC">RedJumpsuit</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="0002BFBC">RedJumpsuit</TextureSet>
+                <Index>3</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="0002BFBC">RedJumpsuit</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0002BFBC">RedJumpsuit</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\RobcoJumpsuit\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5ewTclLKYcdlbBNyV8phx3RpHHRUQwYw7t8VcstuLGxuXxVy0G4sbHRpHHRUQwYw898VcstuLGxzXxVy0G4sbHRpHHRUQwYw5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="000615C4">RedJumpsuitF</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="000615C4">RedJumpsuitF</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="000615C4">RedJumpsuitF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000615C4">RedJumpsuitF</TextureSet>
+                <Index>6</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\RobcoJumpsuit\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">5ewRclMNQWdlbBFyWA1BZ3RpHHRUQwYw7t8TckxBGAtuXxNyUUEYC3RpHHRUQwYw898TckxBGAtzXxNyUUEYC3RpHHRUQwYw</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>Robco Jumpsuit Male</Name>
+                <TextureSet ID="0002BFBC">RedJumpsuit</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_red_jumpsuit.dds</Male>
+      </Inventory>
+    </Icon>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>40</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>1</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060340E8">OutfitOasisDruid</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitOasisDruid</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-15</X>
+        <Y>-19</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>19</X>
+        <Y>15</Y>
+        <Z>11</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Oasis Robe</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\OasisDruid\outfitm.NIF</FileName>
+          <TextureHashes Tag="MODT">5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84HgsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx7fQHbwcx/gptdAdvDDH+CmRpGXSJvFzH7t8JbwDNHjVuXwlvBc0eNWRpGXSJvFzH898JbwDNHjVzXwlvBc0eNWRpGXSJvFzH</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\OasisDruid\outfitf.NIF</FileName>
+          <TextureHashes Tag="MO3T">7fQHbwcx/gptdAdvDDH+CmRpGXSJvFzH7t8JbwDNHjVuXwlvBc0eNWRpGXSJvFzH898JbwDNHjVzXwlvBc0eNWRpGXSJvFzH5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\OasisDruid\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CmRpGXSJvFzH7t8JbwDNHjVuXwlvBc0eNWRpGXSJvFzH898JbwDNHjVzXwlvBc0eNWRpGXSJvFzH</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\OasisDruid\GO.NIF</FileName>
+          <TextureHashes Tag="MO4T">7fQHbwcx/gptdAdvDDH+CmRpGXSJvFzH7t8JbwDNHjVuXwlvBc0eNWRpGXSJvFzH898JbwDNHjVzXwlvBc0eNWRpGXSJvFzH</TextureHashes>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_oasis_robe.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9DF">RepairClothingOasis</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="000819DA">OutfitOasisVillagerList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>30</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>1</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

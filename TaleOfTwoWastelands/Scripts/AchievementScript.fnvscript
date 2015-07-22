@@ -1,0 +1,121 @@
+Scriptname AchievementScript
+
+; Quest Stages for quest rewards - AchievementQuest
+; 1 - Very Low		25
+; 2 - Low			50
+; 3 - Medium		75
+; 4 - High			100
+; 5 - Very High		125
+; 6 - Super High	200
+; 7 - Mega High		250
+; 8 - Ultra High	500
+; 9 - Max High		1000
+
+; FEV Water vars
+int FEVaquaPuraDays
+
+; Local Vars
+int iCurrLevel
+int iPrevLevel
+
+; General Vars
+int iTemp
+float fTemp
+
+Begin GameMode
+
+	; Anything that needs to be done only once per level goes in this block
+	set iCurrLevel to Player.GetLevel
+	if (iCurrLevel != iPrevLevel)
+		set iPrevLevel to iCurrLevel
+		
+		; Karma Challenges
+		if (iCurrLevel == 8)
+			if (Player.GetAv Karma < GetGameSetting fAlignEvilMaxKarma)
+				IncrementScriptedChallenge ChallengeKarmaGood8
+				ShowMessage ChallengeMessageKarmaGood iCurrLevel
+			elseif (Player.GetAv Karma >= GetGameSetting fAlignEvilMaxKarma) && (Player.GetAv Karma <= GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaNeutral8
+				set iTemp to ChallengeKarmaRewardBase * 10
+				RewardXP iTemp
+				ShowMessage ChallengeMessageKarmaNeutral iCurrLevel
+			elseif (Player.GetAv Karma > GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaEvil8
+				set iTemp to ChallengeKarmaRewardBase * 10
+				Player.AddItem Caps001 itemp
+				ShowMessage ChallengeMessageKarmaEvil iCurrLevel
+			endif
+		elseif (iCurrLevel == 14)
+			if (Player.GetAv Karma < GetGameSetting fAlignEvilMaxKarma)
+				IncrementScriptedChallenge ChallengeKarmaGood14
+				ShowMessage ChallengeMessageKarmaGood iCurrLevel
+			elseif (Player.GetAv Karma >= GetGameSetting fAlignEvilMaxKarma) && (Player.GetAv Karma <= GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaNeutral14
+				set iTemp to ChallengeKarmaRewardBase * 20
+				RewardXP iTemp
+				ShowMessage ChallengeMessageKarmaNeutral iCurrLevel
+			elseif (Player.GetAv Karma > GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaEvil14
+				set iTemp to ChallengeKarmaRewardBase * 20
+				Player.AddItem Caps001 itemp
+				ShowMessage ChallengeMessageKarmaEvil iCurrLevel
+			endif
+		elseif (iCurrLevel == 20)
+			if (Player.GetAv Karma < GetGameSetting fAlignEvilMaxKarma)
+				IncrementScriptedChallenge ChallengeKarmaGood20
+				ShowMessage ChallengeMessageKarmaGood iCurrLevel
+			elseif (Player.GetAv Karma >= GetGameSetting fAlignEvilMaxKarma) && (Player.GetAv Karma <= GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaNeutral20
+				set iTemp to ChallengeKarmaRewardBase * 30
+				RewardXP iTemp
+				ShowMessage ChallengeMessageKarmaNeutral iCurrLevel
+			elseif (Player.GetAv Karma > GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaEvil20
+				set iTemp to ChallengeKarmaRewardBase * 30
+				Player.AddItem Caps001 itemp
+				ShowMessage ChallengeMessageKarmaEvil iCurrLevel
+			endif
+		elseif (iCurrLevel == 30)
+			if (Player.GetAv Karma < GetGameSetting fAlignEvilMaxKarma)
+				IncrementScriptedChallenge ChallengeKarmaGood30
+				ShowMessage ChallengeMessageKarmaGood iCurrLevel
+			elseif (Player.GetAv Karma >= GetGameSetting fAlignEvilMaxKarma) && (Player.GetAv Karma <= GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaNeutral30
+				set iTemp to ChallengeKarmaRewardBase * 40
+				RewardXP iTemp
+				ShowMessage ChallengeMessageKarmaNeutral iCurrLevel
+			elseif (Player.GetAv Karma > GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaEvil30
+				set iTemp to ChallengeKarmaRewardBase * 40
+				Player.AddItem Caps001 itemp
+				ShowMessage ChallengeMessageKarmaEvil iCurrLevel
+			endif
+		elseif (iCurrLevel == 50)
+			if (Player.GetAv Karma < GetGameSetting fAlignEvilMaxKarma)
+				IncrementScriptedChallenge ChallengeKarmaGood50
+				ShowMessage ChallengeMessageKarmaGood iCurrLevel
+			elseif (Player.GetAv Karma >= GetGameSetting fAlignEvilMaxKarma) && (Player.GetAv Karma <= GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaNeutral50
+				set iTemp to ChallengeKarmaRewardBase * 50
+				RewardXP iTemp
+				ShowMessage ChallengeMessageKarmaNeutral iCurrLevel
+			elseif (Player.GetAv Karma > GetGameSetting fAlignGoodMinKarma)
+				IncrementScriptedChallenge ChallengeKarmaEvil50
+				set iTemp to ChallengeKarmaRewardBase * 50
+				Player.AddItem Caps001 itemp
+				ShowMessage ChallengeMessageKarmaEvil iCurrLevel
+			endif
+		endif
+	endif
+	
+	; Handles the Aqua Pura Challenge if player put FEV in the water
+	if DLC03CreatorQuest.FEVaquaPuraCount > 0
+		if GameDaysPassed > FEVaquaPuraDays
+			set DLC03CreatorQuest.FEVaquaPuraCount to DLC03CreatorQuest.FEVaquaPuraCount - 1
+			set FEVaquaPuraDays to GameDaysPassed + (DLC03CreatorQuest.FEVaquaPuraCount * 2)
+			ShowMessage DLC03FEVwaterMsg03
+			PlaySound UIHealthChemsWearOff
+		endif
+	endif
+	
+END

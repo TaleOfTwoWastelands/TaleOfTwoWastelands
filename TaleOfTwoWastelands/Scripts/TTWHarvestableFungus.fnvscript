@@ -1,0 +1,53 @@
+scn TTWHarvestableFungus
+
+Int iState 	; 	0 fresh loaded, 1 harvestable, 2 picked, 3 unripe
+
+BEGIN OnActivate
+
+	If (iState == 1 && GetActionRef == Player)
+		Player.AddItem TTWGlowingMushroom 1
+		Set iState to 2
+		PlayGroup Backward 1				;(picked)
+		SetDestroyed 1
+	EndIf
+
+END
+
+BEGIN OnLoad
+
+	If (iState == 0)								; fresh loaded
+		if GetRandomPercent >= 90
+			PlayGroup Forward 1				; harvestable
+			set iState to 1
+			SetDestroyed 0
+		else
+			PlayGroup Left 1					; unripe
+			set iState to 3
+			SetDestroyed 1
+		endif
+	Elseif (iState == 1)
+		PlayGroup Forward 1					; harvestable
+	Elseif (iState == 2)
+		PlayGroup Backward 1				; picked
+		SetDestroyed 1
+	ElseIf (iState == 3)
+		PlayGroup Left 1						; unripe
+		SetDestroyed 1
+	EndIf
+
+END
+
+
+BEGIN OnReset
+
+	if GetRandomPercent >= 90
+		PlayGroup Forward 1					; harvestable
+		set iState to 1
+		SetDestroyed 0
+	else
+		PlayGroup Left 1						; unripe
+		set iState to 3
+		SetDestroyed 1
+	endif
+
+END

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060645ED">ArmorReconHelmetOutcast</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorReconHelmetOutcast</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-11</X>
+        <Y>-6</Y>
+        <Z>-1</Z>
+      </Point1>
+      <Point2>
+        <X>9</X>
+        <Y>9</Y>
+        <Z>11</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Outcast Recon Helmet</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B88">EnchClothingHeadSunGuard</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Hair, Headband, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\BoSUnderArmorHelmet\BoSUnderArmorHelmet.NIF</FileName>
+          <TextureHashes Tag="MODT">9OUTYu4B8cp0ZRNi8wHxynJhF3RrmCVO7t8VYr2WWvpuXxViwpZa+nJhF3RrmCVO898VYr2WWvpzXxViwpZa+nJhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>BosUnderArmorHelmet</Name>
+                <TextureSet ID="060645E9">OutcastUnderArmorHat</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\BoSUnderArmorHelmet\BoSUnderArmorHelmet_GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">9OUTYu4B8cp0ZRNi8wHxynJhF3RrmCVO7t8VYr2WWvpuXxViwpZa+nJhF3RrmCVO898VYr2WWvpzXxViwpZa+nJhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>BoSUnder_GO0</Name>
+                <TextureSet ID="060645E9">OutcastUnderArmorHat</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_initiate_armor_coif.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075212">RepairReconArmorHelmet</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>40</Value>
+      <MaxCondition>40</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>2</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

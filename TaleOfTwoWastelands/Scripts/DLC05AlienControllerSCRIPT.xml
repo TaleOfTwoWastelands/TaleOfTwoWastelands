@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B001F53">DLC05AlienControllerSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05AlienControllerSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>745</CompiledSize>
+        <VariableCount>8</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAIUAAAAVAAsAZgMABgAgWGsRAAAVAAcAZgYAAgAgMBUABwBzBwACACAwFgAqAAEAJgAgcgEAWLYRBwABAG4GAAAAIDEgPT0gcgEAWC4QAAAgMCA9PSAmJhUABwBzBAACACAxFwACAAEAFQAHAHMEAAIAIDAZAAAAFQAKAGYIAAUAIDUwLjARAAAAEAALAAIAugAAAAEAcgIAFgAMAAsACAAgcwcAIDEgPBYAFwAHABMAIHICAFgOEAQAAQAoACA1MCA+PRYAHgACABoAIHMEACAwID09IHIBAFguEAAAIDEgPT0gfHxZEAsAAQByAwAAAAAAAAAVAAcAcwEAAgAgMRgADQACAAkAIHMEACAxID09WRALAAEAcgQAAAAAAAAAFQAHAHMBAAIAIDEZAAAAFwACAAEAWRAOAAEAcgUAAQBmCAAAAAAAGQAAABkAAAARAAAAEAAIABgAJwAAAAAAFgAMAAEACAAgcwcAIDEgPmwRCwABAHoAAAAAAEB/QBkAAAARAAAAEAAGAAAAKwEAABYADQAPAAkAIHMBACAxID09FQALAHMCAAYAIFgfEAAAFgAOAAwACgAgcwIAIDEgfiA+FQAHAHMBAAIAIDAWAA0AAgAJACBzAgAgMSA9PRUABwBzBwACACAxFQAHAGYGAAIAIDUYAA0ABgAJACBzAgAgMiA9PRYAEgAEAA4AIHIBAFguEAAAIDAgPT0VAAsAZgMABgAgWGsRAAAcAAEADxAJAAIAEABuAQAAABwAAQAlEAoAAgByBgBuAQAAABUABwBzBAACACAwGQAAABkAAAAZAAAAGQAAABYADQAFAAkAIHMHACAxID09FgAMAAEACAAgZgYAIDAgPhUAEQBmBgAMACBmBgAgWAwQAAAgLRcAAgABABUABwBzBwACACAyGQAAABkAAAARAAAAEAAIAAoAGQAAAAAAHAABAIERDQACAB8AegAAAAAAAFlAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05AlienControllerSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">menuSelect</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">linkedTurret</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">turretAttached</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">overloadTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">overloadSeq</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">skillLevel</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B001F54">DLC05trapAlienCommMSG</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B001F56">DLC05trapAlienCommTurretMSG</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B002C64">DLC05InteractLowSkillScienceMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007078C">MinePlasmaExplosion</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

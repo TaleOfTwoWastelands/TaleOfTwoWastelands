@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E9C">MS09</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS09</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06014BBF">MS09QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Blood Ties</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Deliver Lucy's message to Arefu.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAQAAAFUQBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 10 1
+ShowMap ArefuMapMarker</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060031A8">ArefuMapMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Search the West Residence in Arefu.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>109</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4VAAAAbgEAAACjEQ8AAwByAQBuFgAAAG4BAAAAFgAZAAEAFQAgWKURCgACAHIBAG4PAAAAIDEgPT2iEQ8AAwByAQBuDwAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 20 1
+SetObjectiveDisplayed MS09 21 1
+SetObjectiveDisplayed MS09 22 1
+if ( GetObjectiveDisplayed MS09 15 == 1 )
+SetObjectiveCompleted MS09 15 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Report the status of Arefu's residents to Evan King.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhkAAABuAQAAADkSDwADAHICAG4BAAAAbgIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 25 1
+AddReputation RepTTWArefu 1 2</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F3">RepTTWArefu</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find The Family.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbh4AAABuAQAAAKIRDwADAHICAG4ZAAAAbgEAAAAcAAEAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 30 1
+SetObjectiveCompleted MS09 25 1
+ArefuIanWestRef.Enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601941E">ArefuIanWestRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find Ian West.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAKIRDwADAHIBAG4eAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 40 1
+SetObjectiveCompleted MS09 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Speak to Vance</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbjIAAABuAQAAAKIRDwADAHIBAG4oAAAAbgEAAAAVAAoAcgEAcwsAAgAgMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS09 50 1
+SetObjectiveCompleted MS09 40 1
+Set MS09.IanHatesMe to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Return to Evan King</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>203</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAEAFQAgWKURCgACAHIEAG4oAAAAIDEgPT2iEQ8AAwByBABuKAAAAG4BAAAAGQAAABYAGQABABUAIFilEQoAAgByBABuMgAAACAxID09ohEPAAMAcgQAbjIAAABuAQAAABkAAACjEQ8AAwByBABuPAAAAG4BAAAAFgAUAAIAEAAgWFQQBQABAHIFACAwID09HAABAAIQCgACAHIGAG4BAAAAFQAKAHIEAHM/AAIAIDEZAAAAHAACACEQAgAAABwAAwAiEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetObjectiveDisplayed MS09 40 == 1 )
+SetObjectiveCompleted MS09 40 1
+endif
+if ( GetObjectiveDisplayed MS09 50 == 1 )
+SetObjectiveCompleted MS09 50 1
+endif
+SetObjectiveDisplayed MS09 60 1
+if ( GetDeadCount TheFamilyVance == 0 )
+Player.AddItem SchematicsShishkebabItem 1
+set MS09.GotShish to 1
+endif
+MS09PostQuestDisabler.Enable
+MS09BrahminTrigger.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B043D">MS09PostQuestDisabler</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B146E">MS09BrahminTrigger</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5F7">TheFamilyVance</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000BB000">SchematicsShishkebabItem</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>175</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAIAFQAgRwEAIDAgPT0gRwIAIDAgPT0gJiYEEgcAAQBuLAEAADkSDwADAHIDAG4BAAAAbgQAAAAZAAAAFgANAAIACQAgRwEAIDAgPT05Eg8AAwByAwBuAQAAAG4FAAAAdxEHAAEAbiwBAAAZAAAArREFAAEAcgQAFQAQAHIFAGYpAAgAIEcGACAxICsVAAoAcgUAczUAAgAgMTcQBQABAHIEADYQBQABAHIHAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( MS09FamilyHates == 0 ) &amp;&amp; ( MS09ArefuHates == 0 )
+RewardKarma 300
+AddReputation RepTTWArefu 1 4
+endif
+if ( MS09FamilyHates == 0 )
+AddReputation RepTTWArefu 1 5
+RewardXP 300
+endif
+CompleteAllObjectives MS09
+Set RadioGalaxyNewsQuest.MS09Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+StopQuest MS09
+StartQuest MS09Fin
+;addachievement 21
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000312E">MS09FamilyHates</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00095B60">MS09ArefuHates</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F3">RepTTWArefu</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0603F5C5">MS09Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>137</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgEAczAAIDEgPT1ZEAsAAQByAgAAAAAAAAAYABAAAQAMACByAQBzLwAgMSA9PVkQCwABAHIDAAAAAAAAABkAAACtEQUAAQByAQAWABcAAQATACByBABYLxAFAAEAcgUAIDEgPT0NEQoAAgByBQBuAAAAABkAAAA3EAUAAQByAQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Quest Failed State
+if ( MS09.ArefuDead == 1 )
+ShowMessage MS09QuestFailMessage
+elseif ( MS09.IanDead == 1 )
+ShowMessage MS09QuestFailMessageIan
+endif
+CompleteAllObjectives MS09
+if ( Player.GetItemCount MS09SealedEnvelope == 1 )
+SetQuestObject MS09SealedEnvelope 0
+endif
+StopQuest MS09</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E9C">MS09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00095B62">MS09QuestFailMessage</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00095B63">MS09QuestFailMessageIan</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001890A">MS09SealedEnvelope</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Deliver Lucy's message.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D70F">EvanKingRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E9C">MS09</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Check the West Residence.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D672">MS09WestArrivalMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Locate the Family.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06020F5C">FamRobertRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetGlobalValue</Type>
+                  <Global ID="00061923">MS09MurphyPoints</Global>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Locate Ian West.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601941E">ArefuIanWestRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetGlobalValue</Type>
+                  <Global ID="000723AE">MS09IFoundIan</Global>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Speak to Vance about Ian's decision.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601941D">FamVanceRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Return to Evan King.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D70F">EvanKingRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">21</Index>
+        <Description Tag="NNAM">Check the Schenzy Residence.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601CFAE">KarenSchenzyRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">22</Index>
+        <Description Tag="NNAM">Check the Ewers Residence.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D712">KenEwersRef</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Report to Evan King.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D70F">EvanKingRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Discover what the Family did in Arefu.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D70F">EvanKingRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

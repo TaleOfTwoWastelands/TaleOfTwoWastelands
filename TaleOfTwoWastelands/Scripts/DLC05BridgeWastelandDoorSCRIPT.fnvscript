@@ -1,0 +1,175 @@
+scn DLC05BridgeWastelandDoorSCRIPT
+
+
+short Active
+
+float teleportTimer
+short startTeleport
+
+short teleStage1
+short teleStage2
+short teleStage3
+
+short charging
+float chargeTimer
+
+ref user
+
+
+Begin OnLoad
+
+	if ( Active == 0 )
+		Playgroup Left 1
+	endif
+
+End
+
+
+BEGIN ONACTIVATE
+
+	if ( IsActionRef Player == 1 )
+		if ( GetStage DLC05Post < 10 )
+			ShowMessage DLC05MZ3CoreTeleporterMEssage
+			return
+		else
+				if ( JerichoRef.HasBeenHired == 1 )
+					if JerichoRef.Waiting == 1
+						set JerichoRef.Waiting to 0
+						JerichoRef.EVP
+					endif
+				endif
+				if ( CharonRef.HasBeenHired == 1 )
+					if CharonRef.Waiting == 1
+						set CharonRef.Waiting to 0
+						CharonRef.EVP
+					endif
+				endif
+				if ( DogmeatRef.HasBeenHired == 1 )
+					if DogmeatRef.Waiting == 1
+						set DogmeatRef.Waiting to 0
+						DogmeatRef.EVP
+					endif
+				endif
+				if ( ButchRef.HasBeenHired == 1 )
+					if ButchRef.Waiting == 1
+						set ButchRef.Waiting to 0
+						ButchRef.EVP
+					endif
+				endif
+				if ( CloverRef.HasBeenHired == 1 )
+					if CloverRef.Waiting == 1
+						set CloverRef.Waiting to 0
+						CloverRef.EVP
+					endif
+				endif
+				if ( RL3Ref.HasBeenHired == 1 )
+					if RL3Ref.Waiting == 1
+						set RL3Ref.Waiting to 0
+						RL3Ref.EVP
+					endif
+				endif
+				if ( MQ08FawkesRef.HasBeenHired == 1 )
+					if MQ08FawkesRef.Waiting == 1
+						set MQ08FawkesRef.Waiting to 0
+						MQ08FawkesRef.EVP
+					endif	
+				endif
+				if ( StarPaladinCrossRef.HasBeenHired == 1 )
+					if StarPaladinCrossRef.Waiting == 1 
+						set StarPaladinCrossRef.Waiting to 0
+						StarPaladinCrossRef.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bBooneHired == 1 )
+					if CraigBooneREF.Waiting == 1 
+						set CraigBooneREF.Waiting to 0
+						CraigBooneREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bCassHired == 1 )
+					if RoseofSharonCassidyREF.Waiting == 1 
+						set RoseofSharonCassidyREF.Waiting to 0
+						RoseofSharonCassidyREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bVeronicaHired == 1 )
+					if VeronicaREF.Waiting == 1 
+						set VeronicaREF.Waiting to 0
+						VeronicaREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bLilyHired == 1 )
+					if LilyREF.Waiting == 1 
+						set LilyREF.Waiting to 0
+						LilyREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.RaulHired == 1 )
+					if RaulREF.Waiting == 1 
+						set RaulREF.Waiting to 0
+						RaulREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.ArcadeHired == 1 )
+					if ArcadeREF.Waiting == 1 
+						set ArcadeREF.Waiting to 0
+						ArcadeREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bEDEHired == 1 )
+					if EDE1Ref.GetDisabled == 0
+						if EDE1Ref.Waiting == 1 
+							set EDE1Ref.Waiting to 0
+							EDE1Ref.EVP
+						endif
+					elseif EDE2Ref.GetDisabled == 0
+						if EDE2Ref.Waiting == 1 
+							set EDE2Ref.Waiting to 0
+							EDE2Ref.EVP
+						endif
+					elseif EDE3Ref.GetDisabled == 0
+						if EDE3Ref.Waiting == 1 
+							set EDE3Ref.Waiting to 0
+							EDE3Ref.EVP
+						endif
+					endif
+				endif
+				if ( vNPCFollowers.RexHired == 1 )
+					if RexREF.Waiting == 1 
+						set RexREF.Waiting to 0
+						RexREF.EVP
+					endif
+				endif
+
+
+			Activate
+		endif
+	else
+		;do nothing
+	endif
+	
+
+	
+
+END
+
+
+
+
+Begin GameMode
+
+	If ( GetStage DLC05Post >= 10 )
+		if ( Active == 0 )
+			set Active to 1
+			Playgroup Right 1
+		endif
+	endif
+
+	if ( Active == 1 )
+		if ( IsAnimPlaying Right == 0 )
+			set Active to 2
+			Playgroup SpecialIdle 1
+		endif
+	endif
+
+END

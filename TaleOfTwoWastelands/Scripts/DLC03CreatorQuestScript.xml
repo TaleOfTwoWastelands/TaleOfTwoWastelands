@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="09003212">DLC03CreatorQuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03CreatorQuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>17</ReferenceCount>
+        <CompiledSize>1211</CompiledSize>
+        <VariableCount>12</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAABAIYBAAAAABYAJQABACEAIHICAFjBEQUAAQByAwAgMSA9PSBYrxAAACAxID09ICYmFQAHAHMBAAIAIDIZAAAAFgAjABUAHwAgcgEAWC4QAAAgMSA9PSByAgBYwREFAAEAcgQAICYmFgAZABMAFQAgcgIAWAEQBQABAHIBACA4MDAwID4WAA0AAwAJACBzDAAgMCA9PRUABwBzDAACACAxHAABABwRBQABAHIFABwAAQAcEAUAAQByBgAZAAAAHAABACEQAgAAABwAAQCMEAIAAAAcAAEAfxEKAAIAcgcAbgAAAAAVAAoAcggAcxgAAgAgMRUACgByCABzFAACACAxFQAKAHIBAHMIAAIAIDEVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAVAAoAcgEAcwMAAgAgMBUACgByAQBzBAACACAxHAABALEQBQABAHIJABwAAQDFEQcAAQBuAQAAABwAAQB/EQoAAgByCgBuAQAAABkAAAAZAAAAEQAAABAABgAAABsDAAAWAA0ABwAJACBzBwAgMCA9PRYAEgACAA4AIHILAFgjEAAAIDAgPT0VAAcAcwcAAgAgMRUACABmCwADACA2MBgAFQACABEAIFg6EAUAAQByDAAgNjAgPj0VAAcAcwcAAgAgMRUACABmCwADACA2MBkAAAAYAA0ABgAJACBzBwAgMSA9PRYADQACAAkAIGYLACAwIDw9WRALAAEAcg0AAAAAAAAAFQAHAHMHAAIAIDIXAAIAAQAVABEAZgsADAAgZgsAIFgMEAAAIC0ZAAAAGQAAABYADQACAAkAIHMBACAyID09HAACANkRBQABAHIOABUABwBzAQACACAwGQAAABYAFwAHABMAIHICAFjBEQUAAQByDwAgMSA9PRYAFgAFABIAIHICAFgvEAUAAQByEAAgOSA+FQATAHMDAA4AIHICAFgvEAUAAQByEAAVAA4AcwQACQAgcwMAIDEwIC8VAA4AcwYACQAgcwQAIDEwICocAAIAUhAIAAIAchAAcwYAHAACAAIQCAACAHIRAHMEABkAAAAZAAAAFgANAAcACQAgcwkAIDAgPT0WABMABQAPACByAgBYUBAAACAzMCA+PRYAGQADABUAIHICAFgOEAQAAQAXACAyNTAgfiA8FQAJAHMIAAQAIDEgfhUACQBzCgAEACAxIH4VAAcAcwkAAgAgMRkAAAAZAAAAGQAAABYADQAJAAkAIHMKACAwID09FgATAAcADwAgcgIAWFAQAAAgMzAgPj0WABoABQAWACByAgBYDhAEAAEAFwAgMjUwIH4gPj0WABgAAwAUACByAgBYDhAEAAEAFwAgMjUwIDw9FQAJAHMIAAQAIDEgfhUABwBzCgACACAxFQAJAHMJAAQAIDEgfhkAAAAZAAAAGQAAABkAAAAWAA0ABwAJACBzCAAgMCA9PRYAEwAFAA8AIHICAFhQEAAAIDMwID49FgAXAAMAEwAgcgIAWA4QBAABABcAIDI1MCA+FQAHAHMIAAIAIDEVAAkAcwoABAAgMSB+FQAJAHMJAAQAIDEgfhkAAAAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC03CreatorQuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">playerSleep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC03DeathClawControl</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">NukaCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Quantums</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FEVaquaPuraCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">NukaConverted</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC03MessageRan</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ThirtyGood</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ThirtyBad</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ThirtyNeutral</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC03StartTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PuppiesActive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09003213">DLC03DeepSleep</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09003211">DLC03Puppies</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09003210">DLC03Freshmeat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E29CC">DLC03PuppiesEffect</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602248E">RadioEnclaveREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8F">MQ09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0900BBA1">DLC03StartMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062697">WellRestedSpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09004C71">DLC03QuantumChemist</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001519E">NukaCola</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000284F9">MS05NukaColaQtm</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

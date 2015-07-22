@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06000A71">Jericho</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Jericho</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Jericho</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>50</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000043F7">MegatonResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0004BB91">MegatonCrimeFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005A7D4">MS06DoorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0004C5F8">DeathItemJericho</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06061E9E">MaleUniqueJericho</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C5">HispanicOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0601FF02">JerichoSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078CC4">Ammo556mmRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06040840">FollowersJerichoChineseAssaultRifle</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06063FDC">FollowersJerichoNailBoard</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06066C72">FollowersOutfitJericho</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>75</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Annoyed</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06028044">DEMOMegJerichoDialogueJennyStahl</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00028D97">DEMOMegJerichoStandNearBrassLantern</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B7624">FollowersJerichoFiredWaitOusideMegaton</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0004083A">FollowersJerichoFiredWaitMoriartys</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06071EE0">FollowersJerichoFollowPlayerWAITsmoke</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00071EE1">FollowersJerichoFollowPlayerLONGsmoke</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00071EE2">FollowersJerichoFollowPlayerDEFAULTsmoke</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0604083E">FollowersJerichoFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0004083C">FollowersJerichoFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0004083B">FollowersJerichoFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F941">MegJerichoTalkNova9x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F946">MegJerichoTalkGob9x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0000400F">MegJerichoDrinkMoriartys9x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004010">MegJerichoWanderOutside11x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004011">MegJerichoEatBrassLantern13x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004012">MegJerichoSandboxOutsideMoriatrys15x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F942">MegJerichoTalkNova18x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F945">MegJerichoTalkGob18x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004013">MegJerichoDrinkMoriartys18x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004014">MegJerichoWanderOutsideDrunk21x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F943">MegJerichoTalkNova0x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601F944">MegJerichoTalkGob0x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004015">MegJerichoDrinkMoriartys0x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00004017">MegJerichoSleepHome2x7</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="06015675">RaiderBigGunsDC</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>45</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>44</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000306DA">BeardCircle</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDB">HairBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>51</Red>
+        <Green>46</Green>
+        <Blue>40</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004255">EyeDefault</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">2kopPucs5z9OHcG9O0LVvqax0j6sXWO/AWyhvu0zsz/kb5a/xP4Av0nGFz+p63c+mt/gPTWD576SnmK+pKw+Pm3wp74CG4C/Ry95P3a/Bz/KWIY/GKakvZEHv774tkg+W0YTvt9AeL7satU/Xg54vwVMiD94CbS/LGkYv6AHSr9RyLa/FKHSv6w+Xr90OCo+8uIsv4M1ET/CPyhAs1NCP+iEzj6vZSW/edUHQMjKA8CDcjC/LWkHQF60j756MfE+6b4+QMzDMr4=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">YIQJwNjCF0DBz++/yOwNPrgfhz0+fIo/U649QNZUbb88YkVASOLKv3zHwz/CwOQ/WfjCv+j5mT9uVQdAqz38v4eWWz8AHly/MoRnQElLZD9fjSVAEowiv4Cezj6ED3g/YgbAv05Tjr1/kRbAA04wv9pDij3rKX4+7Kszv6aksD9DYGzAjm+NPcEE2D8SSgq/7M2+vrMwUT8O4gc/8oXQvsSPjsBypm8/Dzx0wLwa4L4Mks2//gyZv/9epj9kqZo/3PA2v9DgoL8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

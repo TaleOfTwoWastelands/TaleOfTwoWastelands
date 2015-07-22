@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06096E63">INFO - 06096E63</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="060943EE">FollowersHireFawkes</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="06096E64">INFO - 06096E64</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">My friend, I would be honored to follow a hero such as yourself. Shall we go?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0003D34E">MQ08Fawkes</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>8</ReferenceCount>
+          <CompiledSize>317</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMIAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAMAHIEAHMBAAQAIDEgfhUACgByBQBzCAACACAxFQAKAHIBAHMBAAIAIDEVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgYAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQDFEQcAAQBuAQAAABwAAQB/EQoAAgByBwBuAQAAABwAAQCJEAoAAgByBwBuAQAAABwAAQB/EQoAAgByCABuAQAAADcQBQABAHIEAPoRAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
+MQ08FawkesREF.AddPerk CompanionSuite
+Set MQ08FawkesREF.Waiting to 0
+MQ08FawkesREF.IgnoreCrime 1
+MQ08FawkesREF.SetIgnoreFriendlyHits 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+set FollowersHireFawkes.FawkesWaitRREntrance to -1
+set Followers.FawkesHired to 1
+set MQ08FawkesREF.HasBeenHired to 1
+set MQ08FawkesREF.IsFollowingDefault to 1
+set MQ08FawkesREF.IsFollowingLong to 0
+set MQ08FawkesREF.IsFollowingShort to 0
+MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
+set MQ08FawkesREF.CombatStyleRanged to 1
+set MQ08FawkesREF.CombatStyleMelee to 0
+MQ08FawkesREF.SetPlayerTeammate 1
+MQ08FawkesREF.AddToFaction TeammateFaction 1
+MQ08FawkesREF.SetFactionRank TeammateFaction 1
+MQ08FawkesREF.AddToFaction FollowerFaction 1
+StopQuest FollowersHireFawkes
+
+ResetAI</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015C571">CompanionSuite</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060943EE">FollowersHireFawkes</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00046312">TeammateFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I could always use a hand. Would you like to follow me?</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="00000457">AVKarma</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

@@ -1,0 +1,1752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="00014E84">CG02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="060304D9">CG02SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Growing Up Fast</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbgUAAAAcAAEAnhAFAAEAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">; set up CG02
+setstage CG02 5
+player.moveto CG02PlayerStartMarker
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06030768">CG02PlayerStartMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>309</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ABIHAAEAbgEAAADnEAcAAQBuAQAAABUACgBHAwAFACAyMjY4FQAHAEcEAAIAIDYVAAgARwUAAwAgMTMVAAgARwYAAwAgMTZhECAABgBuAQAAAG4BAAAAbgEAAABuAQAAAG4AAAAAbgEAAADmEQcAAQBuAQAAABwAAQDkEQcAAQBu/////xwAAQCtEAIAAAAcAAEAAhAPAAMAcgcAbgEAAABuAQAAABwAAQDuEA8AAwByBwBuAAAAAG4BAAAAHAABAO4QDwADAHIIAG4AAAAAbgEAAAAcAAIAIRACAAAAFQAKAHIJAGYFAAIAIDEVAAoAcgkAcwYAAgAgMRUACgByCQBzCwACACAxFBEpAAUAEQA5IHllYXJzIGxhdGVyLmJpa24AAAAAbgAAAABuAQAAAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetLocationSpecificLoadScreensOnly 1
+SetInCharGen 1 ; no leveling during chargen
+; set start time
+set gameyear to 2268
+set gamemonth to 6
+set gameday to 13
+set gamehour to 16
+DisablePlayerControls 1 1 1 1 0 1;
+SetPCYoung  1       ; default hair
+player.AgeRace -1 ; change player to a child
+; give player right inventory
+player.removeallitems
+player.additem KIDVaultSuitChild101 1 1
+player.equipitem KIDVaultSuitChild101 0 1
+player.equipitem pipboy 0 1
+; enable NPCs
+CG02DadRef.enable
+; start scene
+set CG02.timer to 1
+set CG02.runTimer to 1
+set CG02.intro to 1
+playBink "9 years later.bik" 0 0 1 0 ; don't interrupt, don't mute audio</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000035">GameYear</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000036">GameMonth</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000037">GameDay</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000340F2">KIDVaultSuitChild101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>104</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFwQBQABAHIJABwAAgBcEAUAAQByCQAcAAMAXBAFAAEAcgkAHAAEAFwQBQABAHIJABwABQBcEAUAAQByCQAcAAYAXBAFAAEAcgkAHAAHAFwQBQABAHIJABwACABcEAUAAQByCQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; everybody look at player
+CG02AmataREF.look player
+CG02ButchREF.look player
+CG02DadREF.look player
+CG02OldLadyPalmerREF.look player
+CG02OverseerREF.look player
+CG02PaulHannonREF.look player
+CG02Vault101Security04REF.look player
+CG02WallyMackREF.look player
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F3">CG02ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309A8">CG02OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F4">CG02PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AF">CG02Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F5">CG02WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>12</ReferenceCount>
+                <CompiledSize>180</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAKsQBwABAG4BAAAAHAACAKsQBwABAG4BAAAAHAADAKsQBwABAG4BAAAAHAAEAKsQBwABAG4BAAAAHAAFAKsQBwABAG4BAAAAHAAGAKsQBwABAG4BAAAAHAAHAKsQBwABAG4BAAAAHAAIAKsQBwABAG4BAAAAHAAJAKsQBwABAG4BAAAAHAAKAKsQBwABAG4BAAAAHAALAKsQBwABAG4BAAAAHAAMAKsQBwABAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">CG02DadREF.IgnoreCrime 1
+CG02JonasREF.IgnoreCrime 1
+CG02AmataREF.IgnoreCrime 1
+CG02StanleyREF.IgnoreCrime 1
+CG02AndyREF.IgnoreCrime 1
+CG02OverseerREF.IgnoreCrime 1
+CG02OldLadyPalmerREF.IgnoreCrime 1
+CG02Vault101Security02REF.IgnoreCrime 1
+CG02Vault101Security04REF.IgnoreCrime 1
+CG02ButchREF.IgnoreCrime 1
+CG02PaulHannonREF.IgnoreCrime 1
+CG02WallyMackREF.IgnoreCrime 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300E8">CG02JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031649">CG02StanleyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D1BB">CG02AndyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309A8">CG02OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609B177">CG02Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AF">CG02Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F3">CG02ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F4">CG02PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F5">CG02WallyMackREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMBAAIAIDEcAAEA3RAHAAEAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; dad starts speech, everybody else stops clapping
+set CG02DadREF.doTalk to 1
+; close diner door
+CG02DinerExitREF.setOpenState 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060457BF">CG02DinerExitREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>9</ReferenceCount>
+                <CompiledSize>104</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFwQBQABAHIJABwAAgBcEAUAAQByCQAcAAMAXBAFAAEAcgkAHAAEAFwQBQABAHIJABwABQBcEAUAAQByCQAcAAYAXBAFAAEAcgkAHAAHAFwQBQABAHIJABwACABcEAUAAQByCQA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; everybody look at player
+CG02AmataREF.look player
+;CG02BeatriceREF.look player
+CG02ButchREF.look player
+CG02DadREF.look player
+CG02OldLadyPalmerREF.look player
+CG02OverseerREF.look player
+CG02PaulHannonREF.look player
+CG02Vault101Security04REF.look player
+;CG02StevieMackREF.look player
+CG02WallyMackREF.look player
+;CG02SusieMackREF.look player
+;CG02ChristineKendallREF.look player</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F3">CG02ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309A8">CG02OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F4">CG02PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AF">CG02Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F5">CG02WallyMackREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMBAAIAIDAcAAEAXhAAABUACgByAQBzAQACACAxFQAMAHIBAGYDAAQAIC4yNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Overseer interrupts Dad
+set CG02DadREF.doTalk to 0
+CG02OverseerREF.evp
+set CG02OverseerREF.doTalk to 1
+set CG02OverseerREF.timer to .25
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Overseer walks up and "gives" player Pip-Boy
+CG02OverseerREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Enjoy the party and speak with the guests.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHIDAG4BAAAAARIAABwAAgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; give player pipboy
+player.additem pipboy 1
+ResetPipboyManager
+; party scene
+CG02DadREF.evp
+
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>64</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF0QAAAcAAIAXRAAABwAAwBdEAAAHAAEAF0QAAAcAAUAXRAAABwABgBdEAAAHAAHAF0QAAAcAAgAXRAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; everybody stop looking at player
+CG02AmataREF.stoplook
+CG02ButchREF.stoplook
+CG02DadREF.stoplook
+CG02OldLadyPalmerREF.stoplook
+CG02OverseerREF.stoplook
+CG02PaulHannonREF.stoplook
+CG02Vault101Security04REF.stoplook
+CG02WallyMackREF.stoplook
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F3">CG02ButchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309A8">CG02OldLadyPalmerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F1">CG02OverseerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F4">CG02PaulHannonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AF">CG02Vault101Security04REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F5">CG02WallyMackREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;addachievement 1
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">12</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Dad finished talking to player</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>95</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBAgAAYAbgEAAABuAQAAAG4AAAAAbgEAAABuAQAAAG4BAAAAXhEAAKMRDwADAHIDAG4KAAAAbgEAAAAcAAEAIRACAAAAHAACAF4QAAA5EAoAAgByBABuMgAAACwSAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">EnablePlayerControls 1 1 0 1 1 1; enable everything but fighting
+autosave
+setObjectiveDisplayed CG02 10 1
+; enable radio
+RadioVault101REF.enable
+CG02AmataREF.evp
+; trigger pip-boy tutorial
+setstage CGTutorial 50
+; force radio update
+ForceRadioStationUpdate
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607161F">RadioVault101REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAEANBAIAAIAcgIAcgMA</CompiledScript>
+              <ScriptSource Tag="SCTX">; trigger Andy to start cutting cake
+CG02AndyREF.evp
+; for now, end the scene here:
+CG02AndyREF.SayTo CG02AmataREF CG02CakeSpeech</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609D1BB">CG02AndyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0009EE18">CG02CakeSpeech</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">16</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>43</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADMQBQABAHICABUADAByAwBmBQAEACBHBAAVAAoAcgMAcwYAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; cake scene is over
+CG02AmataREF.Say CG02CakeSpeech
+; run "failsafe" timer
+set CG02.timer to CG02FailsafeTimer
+set CG02.runTimer to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0009EE18">CG02CakeSpeech</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0008A3C9">CG02FailsafeTimer</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>18</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; got sweetroll
+player.additem CG02Sweetroll 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00030A23">CG02Sweetroll</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>20</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>23</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbiIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all presents given
+; trigger next stage
+setstage CG02 34
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">21</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>18</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Got Amata's present
+player.additem BookSkillMelee 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00034040">BookSkillMelee</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>20</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>23</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbiIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all presents given
+; trigger next stage
+setstage CG02 34
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">22</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>13</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHwRBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Got Beatrice's present
+player.addNote CG02Note</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000744B7">CG02Note</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">23</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>18</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Got Stanley's present
+player.additem KIDHatPrewarCapKid 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000340C1">KIDHatPrewarCapKid</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>20</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>23</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbiIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; all presents given
+; trigger next stage
+setstage CG02 34
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Butch scene done</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">32</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Amata spoke to player after Butch sweetroll "incident"</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">34</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>15</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQALAHIBAGYFAAMAIDEw</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has all presents, start timer for intercom
+set CG02.timer to 10
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>65</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABwAAwBeEAAAHAAEAHERBQABAHIFABUACgByBgBzEAACACAxFQAKAHIGAHMGAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Intercom starts beeping. Dad goes to answer it
+CG02DadREF.evp
+CG02Vault101Security02REF.evp
+CG02AmataREF.evp
+CG02DinerIntercomREF.setTalkingActivatorActor CG02JonasREF
+set CG02.intercomBeep to 1
+set CG02.runTimer to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0609B177">CG02Vault101Security02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300F2">CG02AmataREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031D48">CG02DinerIntercomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300E8">CG02JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">36</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMQAAIAIDAVAAoAcgEAcwYAAgAgMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Dad talks to Jonas through the intercom
+set CG02.intercomBeep to 0 ; turn off beeping
+set CG02.runTimer to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">38</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>18</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHERAgAAABwAAgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Dad done talking to Jonas, he comes over to talk to you
+CG02DinerIntercomREF.setTalkingActivatorActor
+CG02DadREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031D48">CG02DinerIntercomREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Follow Dad to my surprise present.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>108</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbgoAAABuAQAAAKMRDwADAHIEAG4UAAAAbgEAAAAcAAEAXhAAABwAAgBeEAAAHAADACEQAgAAABwAAQCrEAcAAQBuAQAAABwAAgCrEAcAAQBuAQAAADkQCgACAHIFAG42AAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG02 10 1
+setObjectiveDisplayed CG02 20 1
+CG02DadREF.evp
+CG02JonasREF.evp
+CG02BeatriceREF.enable
+CG02DadREF.IgnoreCrime 1
+CG02JonasREF.IgnoreCrime 1
+setstage CGTutorial 54  ; quest target tutorial</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300E8">CG02JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AD">CG02BeatriceREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">42</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>61</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG4BAAAAHAABAJ4QBQABAHIEABwAAgDdEAcAAQBuAAAAABwAAgByEAcAAQBuZAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player has spoken to Jonas
+CG02DadRef.removeitem HatParty 1
+CG02DadRef.moveto CG02DadMoveToMarker
+; close and lock stairwell door
+CG02ReactorStairDoor.SetOpenState 0
+CG02ReactorStairDoor.Lock 100
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060744B8">CG02ReactorStairDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00050E44">HatParty</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06063AA7">CG02DadMoveToMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">44</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>109</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAIQCgACAHIDAG4BAAAAHAABAAIQCgACAHIEAG4yAAAAHAABAO4QBQABAHIDABwAAgBzEAIAAABgEBsABQBuAQAAAG4BAAAAbgEAAABuAQAAAG4BAAAAohEPAAMAcgUAbhQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; dad talked to player
+player.additem CG02weapBBgun 1
+player.additem ammoBB 50
+player.equipitem CG02weapBBgun 
+CG02TargetRangeDoorNEW.unlock
+EnablePlayerControls 1 1 1 1 1 ; everything available
+setObjectiveCompleted CG02 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060297BB">CG02TargetRangeDoorNEW</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C0327">CG02WeapBBGun</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002935B">AmmoBB</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Shoot all 3 targets with the BB gun.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4eAAAAbgEAAAA5EAoAAgByAgBuPAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted CG02 20 1
+setObjectiveDisplayed CG02 30 1
+setstage CGTutorial 60</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>37</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbh4AAABuAQAAABwAAQAhEAIAAAAcAAIAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; all targets shot
+setObjectiveCompleted CG02 30 1
+; trigger dad to speak
+CG02RadroachREF.enable
+CG02DadREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060306CD">CG02RadroachREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Use the BB gun to kill the radroach.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAADkQCgACAHICAG5GAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed CG02 40 1
+setstage CGTutorial 70</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>41</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbigAAABuAQAAABwAAQBeEAAADREKAAIAcgMAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; radroaches dead
+setObjectiveCompleted CG02 40 1
+; trigger dad to speak
+CG02DadREF.evp
+; BB gun no longer quest item
+SetQuestObject CG02weapBBgun 0
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C0327">CG02WeapBBGun</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Stand next to Dad so Jonas can take the picture.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>40</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbjIAAABuAQAAABwAAQA0EA0AAwByAwByBABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed CG02 50 1
+CG02DadREF.SayTo CG02JonasREF CG02DadSpeech 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300E8">CG02JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F574">CG02DadSpeech</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>60</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbjIAAABuAQAAAGEQAgAAABUACgByAwBzAQACACAwHAABADQQDQADAHIEAHIFAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; player in position for picture
+setObjectiveCompleted CG02 50 1
+DisablePlayerControls
+; stop Dad speech
+set CG02DadREF.doTalk to 0
+; trigger Jonas to speak
+CG02JonasREF.SayTo player CG02JonasSpeech 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300E8">CG02JonasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000306C8">CG02JonasSpeech</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>60</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgIAFQAKAHICAGYFAAIAIDIVAAoAcgIAcwYAAgAgMRwAAQDvEA8AAwByAwBuAAAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">CompleteAllObjectives CG02
+; run timer
+set CG02.timer to 2
+set CG02.runTimer to 1
+; unequip BB gun before removeallitems
+player.unequipitem CG02WeapBBGun 0 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C0327">CG02WeapBBGun</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">98</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>46</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">kREFAAEAcgEAJhAFAAEAcgIAFQAKAHIDAGYFAAIAIDUVAAoAcgMAcwYAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">imod CGCameraFlashISFX
+;imod FadeToWhiteAndBackISFX
+playSound QSTFadeToWhiteC
+; run timer
+set CG02.timer to 5
+set CG02.runTimer to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB288">CGCameraFlashISFXDC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BC426">QSTFadeToWhiteC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>172</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgUAHAABACIQAgAAABwAAgAiEAIAAABgEAIAAAAkEgAAFgAWAAEAEgAgcgQAWC8QBQABAHIGACAwID4cAAMAAhAKAAIAcgYAbgEAAAAZAAAAHAAEAK0QAgAAABwABAACEA8AAwByBwBuAQAAAG4BAAAAHAAEAO4QDwADAHIHAG4AAAAAbgEAAAAcAAQA5BEHAAEAbgEAAAA5EAoAAgByCABuAAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">stopquest CG02
+CG02DadRef.disable
+CG02BeatriceREF.disable
+enablePlayerControls
+PipBoyRadioOff ; turn off radio if on
+; if player still has skill book move it to CG04
+if player.getItemCount BookSkillMelee &gt; 0
+  CG04PlayerDresserREF.additem BookSkillMelee 1
+endif
+player.removeallitems
+player.additem vaultsuit101 1 1
+player.equipitem vaultsuit101 0 1
+; change player back to an adult
+player.AgeRace 1
+; do this last as it contains player.moveto:
+setstage CG03 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060300EF">CG02DadREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060309AD">CG02BeatriceREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06077785">CG04PlayerDresserREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00014E84">CG02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00034040">BookSkillMelee</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000431E">VaultSuit101</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="06014E85">CG03</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Enjoy the party and speak with the guests.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060300F2">CG02AmataREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>21</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06031649">CG02StanleyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>23</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060309A8">CG02OldLadyPalmerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="00014E84">CG02</Quest>
+                  <QuestStage>20</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Meet Jonas on the Reactor Level.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060300E8">CG02JonasREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Use the BB Gun to kill the Radroach.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060306CD">CG02RadroachREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060306CD">CG02RadroachREF</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Stand next to Dad so Jonas can take the picture.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060300EF">CG02DadREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Shoot all three targets with the BB Gun.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060304EB">CG02Target1</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060304EB">CG02Target1</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06076746">REFR - 06076746</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0607674B">REFR - 0607674B</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>3</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetOpenState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

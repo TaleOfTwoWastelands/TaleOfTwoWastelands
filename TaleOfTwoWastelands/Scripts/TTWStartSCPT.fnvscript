@@ -1,0 +1,21 @@
+scn TTWStartSCPT
+
+begin MenuMode
+
+	TTWvCountryRadioRef.Disable
+	startquest cg00;
+
+	if getStage CG00 < 5
+		set bInDCWasteland to 1
+		setstage CG00 0
+	else 
+		if getStage CG01 > 0 				;bugfix code for old versions 
+			stopquest CG00
+			if bInNVWasteland == 1
+				TTWvCountryRadioRef.enable 	;enable Mojave Music Radio in ongoing game
+			endif
+		endif								;end of bugfix code
+		stopquest TTWStart
+	endif
+
+end

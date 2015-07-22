@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06066C74">FollowersOutfitCharon</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FollowersOutfitCharon</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-20</X>
+        <Y>-12</Y>
+        <Z>-1</Z>
+      </Point1>
+      <Point2>
+        <X>20</X>
+        <Y>17</Y>
+        <Z>13</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Leather Armor</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150464</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\LeatherArmor\M\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CnJvG3Qgkc7r7t8JbwDNHjVuXwlvBc0eNXJvG3Qgkc7r898JbwDNHjVzXwlvBc0eNXJvG3Qgkc7rsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84Hg6/MQdYhA96JrcxB1jUD3omVsGHTW84Hg</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\LeatherArmor\F\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5vQHbwcx/gpmdAdvDDH+CnJvG3Qgkc7r7t8Jb/nMHjVuXwlv/sweNXJvG3Qgkc7r898Jb/nMHjVzXwlv/sweNXJvG3Qgkc7r5ewPdWfDye5lbA91bMPJ7mVsH3TtrcZ67t8RdWAtf/duXxF1ZS1/92VsH3TtrcZ6898RdWAtf/dzXxF1ZS1/92VsH3TtrcZ66/MSdUkNtBBrcxJ1Tg20EGVsGnTVDM9+sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\LeatherArmor\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CnJvG3Qgkc7r7t8JbwDNHjVuXwlvBc0eNXJvG3Qgkc7r898JbwDNHjVzXwlvBc0eNXJvG3Qgkc7r</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_leather_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_leather_armor.dds</Male>
+      </Message>
+    </Icon>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="00020428">ArmorLeatherList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>160</Value>
+      <MaxCondition>150</MaxCondition>
+      <Weight>15</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>6</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

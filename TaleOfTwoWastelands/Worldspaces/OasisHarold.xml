@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0604D49B">OasisHarold</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OasisHarold</EditorID>
+    <Name Tag="FULL">The Grove</Name>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">UseMapData</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00017907">WastelandClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00046241">OasisWater01</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00046241">OasisWater01</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>0</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064608">WastelandBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, CannotFastTravel</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-16384</X>
+        <Y>102400</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>8192</X>
+        <Y>126976</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM">Data\Textures\Trees\CanopyShadow.dds</CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

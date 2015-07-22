@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0A0103A2">DLC04AchievementQuestSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04AchievementQuestSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>29</ReferenceCount>
+        <CompiledSize>1324</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAB4FAAAWAA0AWwAJACBzAQAgMjkgPBYAEgBVAA4AIHIBAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxYAEgAZAA4AIHICAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxYAEgABAA4AIHIDAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByBABY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgcgUAWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHIGAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByBwBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgcggAWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHIJAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByCgBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAGQAAABYAEgAZAA4AIHILAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxYAEgABAA4AIHIMAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByDQBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgcg4AWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHIPAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByEABY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgchEAWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHISAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByEwBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAGQAAABYAEgAcAA4AIHIUAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxYAEgABAA4AIHIVAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByFgBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgchcAWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHIYAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByGQBY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgchoAWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABYAEgABAA4AIHIbAFjsEQAAIDIgPT0VAA0AcwEACAAgcwEAIDEgKxkAAAAWABIAAQAOACByHABY7BEAACAyID09FQANAHMBAAgAIHMBACAxICsZAAAAFgASAAEADgAgch0AWOwRAAAgMiA9PRUADQBzAQAIACBzAQAgMSArGQAAABkAAAAZAAAAFgANAAEACQAgcwEAIDI5IDwVAAcAcwEAAgAgMBcAAgAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC04AchievementQuestSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MarkersFound</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437E">DLC04OzyMapMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D3">DLC04SeatubMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D9">DLC04CoastalGrottoMapMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D0">DLC04ArkDoveMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004378">DLC04CathedralMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004386">DLC04TruckWreckMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437A">DLC04TurtledoveMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004382">DLC04MargeMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00DE1F">DLC04TrashHeapMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004383">DLC04TrapperShackMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004379">DLC04JetCrashMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004384">DLC04FloodedSinkholeMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5CF">DLC04BogEntranceMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004380">DLC04GrowShackMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00DE1E">DLC04PlayhouseMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D8">DLC04HerzogMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004381">DLC04HaleyHardwareMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437F">RitualSiteMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00DE1D">DLC04VelmasMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00DE1C">DLC04DoveMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004377">DLC04CalvertMansionMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D4">DLC04MotelMapMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00EA81">DLC04BoardwalkVendorMapMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00DE1B">DLC04PilgrimLandingMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00C5D7">DLC04DuchessGambitMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437B">DLC04OfieMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437D">MedicalTentMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A004387">DLC04BlackhallMarkerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0A00437C">DLC04LighthouseMarkerREF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

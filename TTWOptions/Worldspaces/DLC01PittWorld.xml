@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="080008C0">DLC01PittWorld</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01PittWorld</EditorID>
+    <Name Tag="FULL">The Pitt</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0800B72E">DLC01PittZone</Reference>
+    </EncounterZone>
+    <Climate Tag="CNAM">
+      <Reference ID="000922A7">DLC01PittClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="000922E2">DLC01PittWorldWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="000922E2">DLC01PittWorldWater</Reference>
+      </Type>
+      <Height Tag="NAM4">-2100</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2000</DefaultLandHeight>
+      <DefaultWaterHeight>-2100</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">DLCPitt\Interface\DLC01PittWorldMap.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>1024</X>
+        <Y>1024</Y>
+      </UsableSize>
+      <MinX>-10</MinX>
+      <MinY>10</MinY>
+      <MaxX>10</MaxX>
+      <MaxY>-10</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>2</WorldMapScale>
+      <Offset>
+        <CellX>1000</CellX>
+        <CellY>5000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00092BC9">DLC01PittWrldISBasic</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">NeedsWaterAdjustment</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-45056</X>
+        <Y>-28672</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>53248</X>
+        <Y>81920</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

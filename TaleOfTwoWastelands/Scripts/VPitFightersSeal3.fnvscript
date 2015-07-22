@@ -1,0 +1,187 @@
+scn	VPitFightersSeal3
+
+; This script is tied to a trigger volume. It seals The Pit's contenders after the fight is done. This is one of the main scripts responsible
+; for cleaning up the variables of The Thorn's features after fights have taken place. It also kick-starts the removal, and resurrection, of
+; defeated contenders. That code resides in the "codebox" running the VPitFightScript (GameMode). Players, trigger this code when returning
+; from the Arena, before heading to its upper level. Creatures trigger it when they start their path back into their holding-pens area. In the event of
+; all parties having died (creature fights, we don't care about the player fights in this case) the VPitFighterDeath script resurrects one of the dead
+; contenders and places it right on top of this trigger, thereby starting the clean-up of variables as usual.
+; - Jorge
+
+Ref	Fighter01
+Ref	Fighter02
+Ref	Fighter03
+Ref	Fighter04
+Ref	Fighter05
+Ref	Fighter06
+
+Begin OnTriggerEnter
+
+	If VMS38.PitFightOn != 1
+		Return
+	Elseif VMS38.PitFightOn == 1 && VMS38.PitFightFinishing != 1
+		Return
+	Elseif VMS38.PitFightOn == 1 && VMS38.PitFightFinishing == 1 && VMS38.CreaturesFight == 1
+		Set Fighter01 to VMS38.PitFighter01
+		Set Fighter02 to VMS38.PitFighter02
+		Set Fighter03 to VMS38.PitFighter03
+		Set Fighter04 to VMS38.PitFighter04
+		Set Fighter05 to VMS38.PitFighter05
+		Set Fighter06 to VMS38.PitFighter06
+		Fighter01.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter02.RemoveScriptPackage VPitFighter02ToAppear
+		Fighter03.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter04.RemoveScriptPackage VPitFighter02ToAppear
+		Fighter05.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter06.RemoveScriptPackage VPitFighter02ToAppear
+		VPitFighter01AccessDoorREF.Lock 255
+		VPitFighter02AccessDoorREF.Lock 255
+		;VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+		;VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+		VPitFighter01AccessDoor2REF.Lock 255
+		VPitFighter02AccessDoor2REF.Lock 255
+		VSewerToPitCreatureFightRoom.Unlock
+
+		Set VMS38.PitFightFinishing to 0
+		Set VMS38.iCount to 0
+		Set VMS38.bFightersMoved to 0
+		Set VMS38.CreaturesFight to 0
+		Set VMS38.CreaturesBlueInThorn to 0
+		Set VMS38.CreaturesRedInThorn to 0
+
+		VSpawnThornCitizenAREF.RemoveScriptPackage OVSewerThornCitizenCheer01
+		VSpawnThornCitizenBREF.RemoveScriptPackage OVSewerThornCitizenCheer02
+		VSpawnThornCitizenCREF.RemoveScriptPackage OVSewerThornCitizenCheer03
+		VSpawnThornCitizenDREF.RemoveScriptPackage OVSewerThornCitizenCheer04
+		VSpawnThornCitizenEREF.RemoveScriptPackage OVSewerThornCitizenCheer05
+		VSpawnThornCitizenFREF.RemoveScriptPackage OVSewerThornCitizenCheer06
+		VSpawnThornCitizenGREF.RemoveScriptPackage OVSewerThornCitizenCheer07
+		VSpawnThornCitizenHREF.RemoveScriptPackage OVSewerThornCitizenCheer08
+
+		Set VMS38.CreaturesRespawned to 1
+		Set VMS38.Timer to 0
+;		VPitRefreshREF.EnterTrigger Player
+	Elseif VMS38.PitFightOn == 1 && VMS38.PitFightFinishing == 1 && VMS38.PlayerFights == 1 && IsActionRef Player == 1
+		Set Fighter01 to VMS38.PitFighter01
+		Set Fighter02 to VMS38.PitFighter02
+		Set Fighter03 to VMS38.PitFighter03
+		Set Fighter04 to VMS38.PitFighter04
+		Set Fighter05 to VMS38.PitFighter05
+		Set Fighter06 to VMS38.PitFighter06
+		Fighter01.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter02.RemoveScriptPackage VPitFighter02ToAppear
+		Fighter03.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter04.RemoveScriptPackage VPitFighter02ToAppear
+		Fighter05.RemoveScriptPackage VPitFighter01ToAppear
+		Fighter06.RemoveScriptPackage VPitFighter02ToAppear
+		VPitFighter01AccessDoorREF.Lock 255
+		VPitFighter02AccessDoorREF.Lock 255
+		;VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+		;VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+		VPitFighter01AccessDoor2REF.Lock 255
+		VPitFighter02AccessDoor2REF.Lock 255
+		VPitAccessDoorREF.Unlock
+
+		Set VMS38.PlayerFights to 0
+		Set VMS38.PitFightFinishing to 0
+		Set VMS38.iCount to 0
+		Set VMS38.bFightersMoved to 0
+		Set VMS38.CreaturesBlueInThorn to 0
+		Set VMS38.CreaturesRedInThorn to 0
+
+		VSpawnThornCitizenAREF.RemoveScriptPackage OVSewerThornCitizenCheer01
+		VSpawnThornCitizenBREF.RemoveScriptPackage OVSewerThornCitizenCheer02
+		VSpawnThornCitizenCREF.RemoveScriptPackage OVSewerThornCitizenCheer03
+		VSpawnThornCitizenDREF.RemoveScriptPackage OVSewerThornCitizenCheer04
+		VSpawnThornCitizenEREF.RemoveScriptPackage OVSewerThornCitizenCheer05
+		VSpawnThornCitizenFREF.RemoveScriptPackage OVSewerThornCitizenCheer06
+		VSpawnThornCitizenGREF.RemoveScriptPackage OVSewerThornCitizenCheer07
+		VSpawnThornCitizenHREF.RemoveScriptPackage OVSewerThornCitizenCheer08
+
+		Set VMS38.CreaturesRespawned to 1
+		Set VMS38.Timer to 0
+;		VPitRefreshREF.EnterTrigger Player
+		If (VNPCFollowers.nCurrentFollowers >= 1)
+			If (VNPCFollowers.ArcadeHired == 1)
+				If (ArcadeREF.GetInCell OVWestSewers03 == 1)
+					ArcadeREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bBooneHired == 1)
+				If (CraigBooneREF.GetInCell OVWestSewers03 == 1)
+					CraigBooneREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bVeronicaHired == 1)
+				If (VeronicaREF.GetInCell OVWestSewers03 == 1)
+					VeronicaREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.RaulHired == 1)
+				If (RaulREF.GetInCell OVWestSewers03 == 1)
+					RaulREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bEDEHired == 1)
+				If (EDE1REF.GetInCell OVWestSewers03 == 1 || EDE2REF.GetInCell OVWestSewers03 == 1 || EDE3REF.GetInCell OVWestSewers03 == 1)
+				Endif
+			Endif
+			If (VNPCFollowers.RexHired == 1)
+				If (RexREF.GetInCell OVWestSewers03 == 1)
+					RexREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bCassHired == 1)
+				If (RoseofSharonCassidyREF.GetInCell OVWestSewers03 == 1)
+					RoseofSharonCassidyREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bLilyHired == 1)
+				If (LilyREF.GetInCell OVWestSewers03 == 1)
+					LilyREF.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.CharonHired == 1)
+				If (CharonRef.GetInCell OVWestSewers03 == 1)
+					CharonRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.ButchHired == 1)
+				If (ButchRef.GetInCell OVWestSewers03 == 1)
+					ButchRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.CloverHired == 1)
+				If (CloverRef.GetInCell OVWestSewers03 == 1)
+					CloverRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.JerichoHired == 1)
+				If (JerichoRef.GetInCell OVWestSewers03 == 1)
+					JerichoRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.FawkesHired == 1)
+				If (MQ08FawkesRef.GetInCell OVWestSewers03 == 1)
+					MQ08FawkesRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.StarPaladinCrossHired == 1)
+				If (StarPaladinCrossRef.GetInCell OVWestSewers03 == 1)
+					StarPaladinCrossRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.DogmeatHired == 1)
+				If (DogmeatRef.GetInCell OVWestSewers03 == 1)
+					DogmeatRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.RL3Hired == 1)
+				If (RL3REF.GetInCell OVWestSewers03 == 1)
+					RL3REF.SetRestrained 0;
+				Endif
+			Endif
+		Endif
+	Endif
+
+End

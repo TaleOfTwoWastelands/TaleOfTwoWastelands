@@ -1,0 +1,123 @@
+scn DLC05crusherSCRIPT
+;======================================================================;
+; basic script to make this thing smashy.
+; you know I always say these things will be "simple" and that's like a guarantee it's going to get complicated.
+;======================================================================;
+short powerOn
+short init
+short active
+short activeSetup
+short playerHit
+ref actronaut
+float timer
+float rand
+float max			; max interval between smashes
+float min				; min interval between smashes
+;======================================================================;
+BEGIN onActivate
+
+	if powerOn == 0
+		set powerOn to 1		; turn me ON
+			set active to 1
+	else
+		set powerOn to 0		; turn me OFF
+		set active to 0
+		set timer to 0
+	endif
+
+END
+;======================================================================;
+BEGIN gameMode
+
+	if init == 0
+		set powerOn to 1
+		set active to 1
+		set min to 0.25
+		set max to 2
+		set init to 1
+	endif
+		
+	if powerOn == 1
+		if active == 1
+			if activeSetup == 0
+				playgroup forward 0				; animate down to smash
+				set activeSetup to 1
+			endif
+				
+			if isAnimPlaying forward == 0
+					; set up timer to control how long until we reset.
+				set rand to getRandomPercent
+				set rand to (min + GetRandomPercent * (max - min) / 99)
+				set timer to rand
+					; reset flags
+				set active to 0
+				set playerHit to 0
+				set activeSetup to 0
+			endif
+		elseif active == 0
+			if timer > 0
+				set timer to (timer - getSecondsPassed)
+			else
+				set active to 1
+			endif
+		endif
+	endif
+	
+
+END
+;======================================================================;
+BEGIN onTriggerEnter				; using onTrigger to deliver damage
+
+	set actronaut to getActionRef
+		
+	if actronaut == player
+		if playerHit == 0
+			player.say Hit
+			placeatme FakeForceBall250
+			imod GetHit
+			player.DamageAV health 45
+			set playerHit to 1						; player can only get hit once per activation
+				if player.getDead == 1
+					player.killactor player 0		; pop off limbs, I don't care who or what you are.
+					player.killactor player 1
+					player.killactor player 2
+					player.killactor player 3
+					player.killactor player 4
+					player.killactor player 5
+					player.killactor player 6
+					player.killactor player 7
+					player.killactor player 8
+					player.killactor player 9
+					player.killactor player 10
+					player.killactor player 11
+					player.killactor player 12
+					player.killactor player 13
+					player.killactor player 14
+				endif
+		endif
+	else
+		actronaut.do 45 					; in case not an actor.  Let this damage grenades, etc.
+		if actronaut.getDead == 0
+			actronaut.killactor player
+		endif
+		actronaut.killactor DLC05SallyREF 0		; pop off limbs, I don't care who or what you are.
+		actronaut.killactor DLC05SallyREF 1
+		actronaut.killactor DLC05SallyREF 2
+		actronaut.killactor DLC05SallyREF 3
+		actronaut.killactor DLC05SallyREF 4
+		actronaut.killactor DLC05SallyREF 5
+		actronaut.killactor DLC05SallyREF 6
+		actronaut.killactor DLC05SallyREF 7
+		actronaut.killactor DLC05SallyREF 8
+		actronaut.killactor DLC05SallyREF 9
+		actronaut.killactor DLC05SallyREF 10
+		actronaut.killactor DLC05SallyREF 11
+		actronaut.killactor DLC05SallyREF 12
+		actronaut.killactor DLC05SallyREF 13
+		actronaut.killactor DLC05SallyREF 14		
+		placeatme FakeForceBall250
+	endif
+
+END
+;======================================================================;
+;======================================================================;

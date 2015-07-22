@@ -1,0 +1,11 @@
+scn TTWTrigPlayerEnable02SCRIPT
+
+; This trigger is triggered by the player only and enables its Linked ref.  
+
+ref targetREF
+
+Begin onTriggerEnter Player
+		set targetREF to getLinkedRef
+		targetREF.enable
+	endif
+End

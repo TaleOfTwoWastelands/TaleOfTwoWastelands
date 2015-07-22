@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0C004C5B">TTWNVDLC01Radio</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWNVDLC01Radio</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-16</X>
+        <Y>-13</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>15</X>
+        <Y>13</Y>
+        <Z>42</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Radio</Name>
+    <Model>
+      <FileName Tag="MODL">NVDLC01\clutter\ArtDecoRadio\NVDLC01_ArtDecoRadio.NIF</FileName>
+    </Model>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>1</Health>
+        <Count>0</Count>
+        <Flags>0</Flags>
+        <Unknown>GAA=</Unknown>
+      </Header>
+    </Destructable>
+    <Sound>
+      <Activation Tag="VNAM">
+        <Reference ID="00036C2A">OBJSwitchRadioOnOff</Reference>
+      </Activation>
+    </Sound>
+    <RadioTemplate Tag="INAM">
+      <Reference ID="01012872">AMLNVDLC01Radio</Reference>
+    </RadioTemplate>
+    <RadioStation Tag="RNAM">
+      <Reference ID="01006E8D">NVDLC01RadioStationSpeakers</Reference>
+    </RadioStation>
+  </Subrecords>
+</Record>

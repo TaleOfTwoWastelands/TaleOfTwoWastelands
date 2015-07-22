@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="06029769">MQ04RollingPin</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ04RollingPin</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-3</X>
+        <Y>-16</Y>
+        <Z>-3</Z>
+      </Point1>
+      <Point2>
+        <X>3</X>
+        <Y>50</Y>
+        <Z>3</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Rolling Pin</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandMelee\RollingPin.NIF</FileName>
+      <TextureFileHash Tag="MODT">7ukKckKQx7huaQpyR5DHuGVlG3RpDHeO7t8Mcgc8K3NuXwxyDDwrc2VlG3RpDHeO898Mcgc8K3NzXwxyDDwrc2VlG3RpDHeO</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_rolling_pin.dds</Large>
+    </Icon>
+    <Script Tag="SCRI">
+      <Reference ID="060298CB">MQ04RollingPinScript</Reference>
+    </Script>
+    <RepairList Tag="REPL">
+      <Reference ID="00047FBE">RepairRollingPin</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
+    <VATSAttackName Tag="VANM">Lights Out</VATSAttackName>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00019085">PhysicalLargeImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="00029776">1stPersonRollingPin</Reference>
+    </FirstPersonModel>
+    <Sound>
+      <Melee>
+        <Block Tag="NAM6">
+          <Reference ID="000BE3E8">WPNBlockWood</Reference>
+        </Block>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="00044523">WPNRollingPinEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00044524">WPNRollingPinUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <Data Tag="DATA">
+      <Value>10</Value>
+      <Health>100</Health>
+      <Weight>2</Weight>
+      <BaseDamage>20</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandMelee</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>CantDrop</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>0</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>0</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>0</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <BaseVATSToHitChance>5</BaseVATSToHitChance>
+      <AttackAnimation>Default</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>2000</Max>
+      </Range>
+      <LimbKillBehavior>NormalFormulaBehavior</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost, OverrideDamageToWeaponMult</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>24</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>2.30769205</AttackShotsPerSecond>
+      <ReloadTime>0</ReloadTime>
+      <JamTime>0</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>MeleeWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0.100000001</Min>
+        <Max>0.5</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>AttackCustom2Power</PowerAttackAnimation>
+      <StrengthRequirement>2</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>8</Damage>
+      <ChanceMult>0</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>50</SkillRequirement>
+      <DamageMult>1.25</DamageMult>
+      <APCost>30</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Silent</SoundLevel>
+  </Subrecords>
+</Record>

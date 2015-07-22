@@ -1,0 +1,320 @@
+ScriptName NVDLC04MQ00SCRIPT
+
+
+; Quest script 		- handles initial loading of NVDLC04.
+; TLS 01/20/2011
+; JSH 02/10/11 		- Updated Embedded Weapons formlist.
+; TLS 03/14/2011 	- Scritping standards update
+; CES 3/16/11 		- Added new Eyebot weapons to the Embedded weapon list.
+; ETB 3/16/11 		- Added new leveled weapons to the Embedded weapon list (Sentry Bot, Turrets).
+; TLS 04/22/2011	- Updated formlists
+; TLS 04/25/2011	- Added Flashbang to Loose Cannon list.
+; OMP 04/27/2011	- More FormList changes.
+; CES 06/27/11 - Added the black combat armor to the combat armor repair list.
+; CES 07/01/11 - Added in variable to track the flashbang note
+; CES 07/21/11 - Added new power armor to power armor list.
+; CES 07/22/11 - Removed the unique grenade launchers from the repair list so you can't repair them with each other.
+; JS 08/12/11 - Commented out call to add the Scorched Power Armor into NV's power armor repair list (to prevent being able to use this unique item to repair generic power armor).
+
+
+Short	nEnableDLC;				; Allow the DLC messages to appear and start the initial quest.
+										; 0 = Not started.
+										; 1 = Display of DLC messages in progresses.
+										; 2 = DLC messages displayed.
+
+Short bFormListsUpdated;		; Used as a doOnce
+
+Float fStartTimer;					; Timer countdown
+
+Short bInMojave					; 1 = Player has returned to the Mojave.
+
+Short bFlashbangInfo				; 1 = Player has recieved the info/note on flashbangs.
+
+
+BEGIN GameMode
+
+	; used to add forms to existing formlists, used primarily to add items to formlists that the animation system uses for conditions
+	If ( bFormListsUpdated == 0 )
+		; -------------------------------------	Embedded Weapons ----------------------------------	\/
+		; NVDLC04 ED-E Arc Welder
+		AddFormToFormList EmbeddedWeapons NVDLC04WeapEDEArcWelder;
+		AddFormToFormList EmbeddedWeapons NVDLC04WeapUlyssesEyebotGun;
+
+		; Mark II Turret Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIILaser2HR20;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIILaser2HR30;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIILaser2HR40;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIILaser2HR50;
+
+		; Mark IV Turret Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIVLaser2HR20;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIVLaser2HR30;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIVLaser2HR40;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkIVLaser2HR50;
+
+		; Mark VI Turret Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkVILaser2HR20;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkVILaser2HR30;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkVILaser2HR40;
+		AddFormToFormList EmbeddedWeapons NVDLC04TurretMarkVILaser2HR50;
+
+		; Sentry Bot (Gattling Laser) Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotGatling2HH20;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotGatling2HH30;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotGatling2HH40;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotGatling2HH50;
+
+		; Sentry Bot (Minigun) Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMinigun2HR20;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMinigun2HR30;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMinigun2HR40;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMinigun2HR50;
+
+		; Sentry Bot (Missile Launcher) Weapon
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMissileLauncher2HL20;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMissileLauncher2HL30;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMissileLauncher2HL40;
+		AddFormToFormList EmbeddedWeapons NVDLC04SentryBotMissileLauncher2HL50;
+
+		; -------------------------------------	Perk Related -----------------------------------------------	\/
+		; Cowboy
+		AddFormToFormList PerkCowboyWeapons NVDLC04WeapBowieKnife;
+		AddFormToFormList PerkCowboyWeapons NVDLC04WeapBowieKnifeUnique;
+
+		; Demolition Expert
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC04WeapRedGlare;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC04WeapGrenadeRifleBLUE;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC04WeapGrenadeRifleRED;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC04WeapSatchelCharge;
+
+		; Laser Commander
+		AddFormToFormList LaserCommanderWeaponsList NVDLC04WeapArcWelder;
+
+		; The Professional
+		AddFormToFormList TheProfessionalWeaponsList NVDLC04WeapNailgun;
+
+		; LooseCannon
+		AddFormToFormList PerkLooseCannonWeapons NVDLC04WeapGrenadeFlashBang;
+
+		; Pyromaniac
+		AddFormToFormList PerkPyromaniacWeapons NVDLC04WeapFlareGun;
+
+		; Travel Light
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorLegateCustom;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorMarkedMenPatrol;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorMarkedMenTribal;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorMarkedMenTrooper;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorPowerNCRScorched;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorRiotGear;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorRiotGearCustom;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorRiotGearUnique;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC04ArmorUSArmyCombatArmor;
+
+		; -------------------------------------	Repair Lists -----------------------------------------------	\/
+		; Blade of the West
+		AddFormToFormList RepairNVRebarClub NVDLC04WeapBladeWest;
+		AddFormToFormList RepairKnifeCombat NVDLC04WeapBowieKnife;
+		;AddFormToFormList RepairNVGrenadeRifle NVDLC04WeapGrenadeRifleBLUE;
+		;AddFormToFormList RepairNVGrenadeRifle NVDLC04WeapGrenadeRifleRED;
+		;AddFormToFormList RepairPowerArmor NVDLC04ArmorPowerNCRScorched;
+		AddFormToFormList RepairCombatArmor ArmorCombatBlack;
+
+		; -------------------------------------	Every Weapon --------------------------------------------	\/
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotGatling2HH20;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotGatling2HH30;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotGatling2HH40;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotGatling2HH50;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMinigun2HR20;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMinigun2HR30;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMinigun2HR40;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMinigun2HR50;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMissileLauncher2HL20;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMissileLauncher2HL30;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMissileLauncher2HL40;
+		AddFormToFormList NVAllWeapons NVDLC04SentryBotMissileLauncher2HL50;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIILaser2HR20;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIILaser2HR30;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIILaser2HR40;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIILaser2HR50;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIVLaser2HR20;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIVLaser2HR30;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIVLaser2HR40;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkIVLaser2HR50;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkVILaser2HR20;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkVILaser2HR30;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkVILaser2HR40;
+		AddFormToFormList NVAllWeapons NVDLC04TurretMarkVILaser2HR50;
+		AddFormToFormList NVAllWeapons NVDLC04WeapArcWelder;
+		AddFormToFormList NVAllWeapons NVDLC04WeapBladeWest;
+		AddFormToFormList NVAllWeapons NVDLC04WeapBowieKnife;
+		AddFormToFormList NVAllWeapons NVDLC04WeapBowieKnifeUnique;
+		AddFormToFormList NVAllWeapons NVDLC04WeapDeathclawGauntletUnique;
+		AddFormToFormList NVAllWeapons NVDLC04WeapDeathclawGauntletUniqueWildWasteland;
+		AddFormToFormList NVAllWeapons NVDLC04WeapEDEArcWelder;
+		AddFormToFormList NVAllWeapons NVDLC04WeapFlagpole;
+		AddFormToFormList NVAllWeapons NVDLC04WeapFlagpoleNPC20;
+		AddFormToFormList NVAllWeapons NVDLC04WeapFlagpoleNPC30;
+		AddFormToFormList NVAllWeapons NVDLC04WeapFlagpoleNPC40;
+		AddFormToFormList NVAllWeapons NVDLC04WeapFlagpoleNPC50;
+		AddFormToFormList NVAllWeapons NVDLC04weapflaregun;
+		AddFormToFormList NVAllWeapons NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList NVAllWeapons NVDLC04WeapGrenadeRifleBLUE;
+		AddFormToFormList NVAllWeapons NVDLC04WeapGrenadeRifleRED;
+		AddFormToFormList NVAllWeapons NVDLC04WeapIndustrialHand;
+		AddFormToFormList NVAllWeapons NVDLC04WeapNailGun;
+		AddFormToFormList NVAllWeapons NVDLC04WeapRedGlare;
+		AddFormToFormList NVAllWeapons NVDLC04WeapSatchelCharge;
+		AddFormToFormList NVAllWeapons NVDLC04WeapSMMG;
+		AddFormToFormList NVAllWeapons NVDLC04WeapSonicDetonator;
+		AddFormToFormList NVAllWeapons NVDLC04WeapUlyssesEyebotGun;
+		AddFormToFormList NVAllWeapons NVDLC04WeapUlyssesEyebotHealGun;
+		AddFormToFormList NVAllWeapons WeapNVDLC00Faderator;
+
+		; -------------------------------------	Melee Weapons -----------------------------------------	\/
+		; All Melee Weapons
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapBladeWest;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapBowieKnife;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapBowieKnifeUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapDeathclawGauntletUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapDeathclawGauntletUniqueWildWasteland;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapFlagpole;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapFlagpoleNPC20;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapFlagpoleNPC30;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapFlagpoleNPC40;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapFlagpoleNPC50;
+		AddFormToFormList WeaponListMeleeALL NVDLC04WeapIndustrialHand;
+
+		; Power Fist Weapons
+		AddFormToFormList FistWeaponsList NVDLC04WeapDeathclawGauntletUnique;
+		AddFormToFormList FistWeaponsList NVDLC04WeapDeathclawGauntletUniqueWildWasteland;
+		AddFormToFormList FistWeaponsList NVDLC04WeapIndustrialHand;
+
+		; Automatic Melee Weapons
+		AddFormToFormList WeaponsAutomaticMeleeLIST NVDLC04WeapIndustrialHand;
+
+		; -------------------------------------	Ranged Weapons ---------------------------------------	\/
+		; All Ranged
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotGatling2HH20;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotGatling2HH30;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotGatling2HH40;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotGatling2HH50;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMinigun2HR20;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMinigun2HR30;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMinigun2HR40;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMinigun2HR50;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMissileLauncher2HL20;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMissileLauncher2HL30;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMissileLauncher2HL40;
+		AddFormToFormList WeaponListRangedALL NVDLC04SentryBotMissileLauncher2HL50;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIILaser2HR20;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIILaser2HR30;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIILaser2HR40;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIILaser2HR50;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIVLaser2HR20;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIVLaser2HR30;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIVLaser2HR40;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkIVLaser2HR50;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkVILaser2HR20;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkVILaser2HR30;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkVILaser2HR40;
+		AddFormToFormList WeaponListRangedALL NVDLC04TurretMarkVILaser2HR50;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapArcWelder;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapEDEArcWelder;
+		AddFormToFormList WeaponListRangedALL NVDLC04weapflaregun;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapGrenadeRifleBLUE;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapGrenadeRifleRED;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapNailGun;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapRedGlare;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapSatchelCharge;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapSMMG;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapSonicDetonator;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapUlyssesEyebotGun;
+		AddFormToFormList WeaponListRangedALL NVDLC04WeapUlyssesEyebotHealGun;
+		AddFormToFormList WeaponListRangedALL WeapNVDLC00Faderator;
+
+		; Energy Weapons
+		AddFormToFormList EnergyWeapons NVDLC04WeapArcWelder;
+		AddFormToFormList EnergyWeapons NVDLC04WeapEDEArcWelder;
+		AddFormToFormList EnergyWeapons NVDLC04WeapFlareGun;
+		AddFormToFormList EnergyWeapons NVDLC04WeapSonicDetonator;
+
+		; Machine Guns
+		AddFormToFormList WeaponMachineGunLIST NVDLC04WeapSMMG;
+		AddFormToFormList WeaponMachineGunLIST NVDLC04WeapNailGun;
+
+		; Grenade / Mine Weapons
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC04WeapSatchelCharge;
+
+		; Launcher Weapons
+		AddFormToFormList WeaponLauncherLIST NVDLC04WeapRedGlare;
+
+		; -------------------------------------	Poisonable Weapons ------------------------------------	\/
+		AddFormToFormList VPoisonWeapons NVDLC04WeapBladeWest;
+		AddFormToFormList VPoisonWeapons NVDLC04WeapBowieKnife;
+		AddFormToFormList VPoisonWeapons NVDLC04WeapBowieKnifeUnique;
+		AddFormToFormList VPoisonWeapons NVDLC04WeapDeathclawGauntletUnique;
+		AddFormToFormList VPoisonWeapons NVDLC04WeapDeathclawGauntletUniqueWildWasteland;
+
+		; -------------------------------------	Improved Holdout Weapons ------------------------------------	\/
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC04WeapBowieKnife;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC04WeapBowieKnifeUnique;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC04WeapFlareGun;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC04WeapIndustrialHand;
+
+		; -------------------------------------	Ignite Gas Volumes ------------------------------------	\/
+		; On Hit
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapArcWelder;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapEDEArcWelder;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapFlareGun;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapSonicDetonator;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapGrenadeFlashBang;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapGrenadeRifleBLUE;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapGrenadeRifleRED;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapRedGlare;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC04WeapSatchelCharge;
+
+		; -------------------------------------	New Ammo ------------------------------------	\/
+		AddItemToLeveledList VendorAmmoBullets100 NVDLC04AmmoNails100 1 5 100;
+		AddItemToLeveledList VendorAmmoBullets100 NVDLC04VendorAmmoRockets100 1 1 100;
+		AddItemToLeveledList VendorAmmoBullets100 NVDLC04VendorAmmoRocketsHE100 1 1 100;
+		AddItemToLeveledList VendorAmmoBullets100 NVDLC04VendorAmmoRocketsIncendiary100 1 1 100;
+
+		; On Touch
+		AddFormToFormList ExplodesGasTrapsOnTouch NVDLC04WeapArcWelder;
+
+		; VATS Banned
+		AddFormToFormList VATSBannedWeaponsList NVDLC04WeapSonicDetonator;
+
+		; -------------------------------------	New Armor ------------------------------------	\/
+		
+		AddFormToFormList AllPowerArmor NVDLC04ArmorPowerNCRScorched;
+
+		; -----------------------------------------------------------------------------------------------------------	\/
+
+
+		Set bFormListsUpdated To 1;
+	EndIf
+
+	; if the player is not in Doc's house, it means the player has completed chargen and has exited Doc Mitchell's house.
+	If ( nEnableDLC == 0 )
+		If ( Player.GetInCell GSDocMitchellHouse == 0  && getquestcompleted VCG01)
+			Set nEnableDLC To 1;
+			Set fStartTimer To 5;
+		EndIf
+	ElseIf ( nEnableDLC == 1 )
+		If ( fStartTimer <= 0 )
+			SetStage NVDLC04MQ00 10;
+			ShowMessage NVDLC04LoadMessage01;
+			ShowMessage NVDLC04LoadMessage02;
+			Set nEnableDLC To 2;
+		Else
+			Set fStartTimer To (fStartTimer - GetSecondsPassed);
+		EndIf
+
+	EndIf
+
+END

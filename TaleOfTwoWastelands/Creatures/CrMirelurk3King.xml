@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0007C6EF">CrMirelurk3King</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrMirelurk3King</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-39</X>
+        <Y>-24</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>39</X>
+        <Y>24</Y>
+        <Z>146</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Mirelurk King</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\MirelurkKing\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0005876C">MirklurkWaterBreathing</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>mirelurkking.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAbk3w5tWiJze2RfDm1fInN7Z24fdAeK3bzu3w5tWiJze25fDm1fInN7Z24fdAeK3bzz3w5tWiJze3NfDm1fInN7Z24fdAeK3byxsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Swims, Walks, NoLowLevelProcessing, AllowPickpocket</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>12</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021477">MirelurkFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000770CA">DeathItemMirelurkKing100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00056634">AmmoMirelurkKing</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0607F598">MirelurkSonic2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedAnimal</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>375</Health>
+      <Damage>35</Damage>
+      <Strength>5</Strength>
+      <Perception>7</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">165</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0007C6F0">CSMirelurKing</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0005362D">MirelurkKingBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">200</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">8</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000C3B2E">AudioTemplateMirelurkKing</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00156ED5">MirelurkClawAttack</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

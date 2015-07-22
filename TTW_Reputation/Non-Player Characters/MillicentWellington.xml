@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156D8">MillicentWellington</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MillicentWellington</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Millicent Wellington</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>4</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00019017">WellingtonFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1E">FemaleAdult13</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0601901A">MillicentWellingtonScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D1">OutfitPrewarSpringDirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF72">TenpennyResidentKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>99</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E8">MS12KillSusanLancasterTravelShoot</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E7">MS12KillSusanLancasterTravel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E4">MS12KillHusbandAgainTravel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E3">MS12KillHusbandWander</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E2">MS12KillHusbandTravel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E5">MS12KillHusbandDialog</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291EA">MS12MillicentWanderWasteland</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060291E9">MS12MillicentLeaveTenpennyTower</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0607E2DD">MS12MillicentWellingtonPackupToLeave</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06027A63">MillicentWellingtonEat1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06027D0F">MillicentWellingtonEat2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06027D12">MillicentWellingtonEat3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06027F00">MillicentWellingtonSleep</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06027A62">MillicentWellingtonFollowEdgar</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06019251">MillicentWellingtonHome</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015672">Settler</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>43</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>39</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002B137">HairWasteF</Reference>
+      </Type>
+      <Length Tag="LNAM">0.120899998</Length>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>50</Green>
+        <Blue>25</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">INz2vuSAM7/cUfo/1ESLvzB+fb98XZG+bAnRvm+ppD+gtqq929c7vyQB+r5ZE5hAKELnvkDMpL6cURnAlFZtvhgLaEDypJK/Q2MPQRWy7L8ydNi/c1AcQPi0zD4VHBvAVvvPwPpzlUCR1T/B5t/Cvuh+5z6bt42/JFa4QARMlD+GIOg/otx9Pyiju0AQnh+/tKeFwFTk6r9CLFtARuRkwBa+BcDE94HAiqvDP4B+Yz4mz5I/GNpjQE7Sj0BhrATAiJdJP89oC0E=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">GMGzv4Do/jxz7TY/lMuOP1jTzb74024/K4fzvjKX9j5P8QhAoFJVPUZyGcAScgK/4JpAv2LG0T8k842/AEbNvfzeWb+g5CA+AX5PP+f2qz56Csw/0hn5vk66qL9KFFK9jDMGQGyciz7I6ZS9xqlCvy2sAMCAfcg81r2XP4OCOb+yPp4+c3aGQOBGEDwa7PI+AIiCPFQkM758gNQ+uNHdPmD1Vz50nhw/lgK6v+P5AUBe9IK/0AU6vgi3l77eeDQ/pdhwPkg/QUA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01859C">TTWChallengeEnemyOfStates</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeEnemyOfStates</EditorID>
+    <Name Tag="FULL">Enemy of States</Name>
+    <Description Tag="DESC">Kill Enclave soldiers.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>100</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>20</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185C2">TTWChallengeEnemyOfStatesEnemies</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

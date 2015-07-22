@@ -1,0 +1,139 @@
+scn DLC02MontgomeryScript
+
+;ACTOR VALUE VARIABLES:
+;variable01 -- strike team attacks
+;variable02:	 	1 = "attack current objective", -1 = "attack completed stop attacking" -- needs to sync with DLC02StrikeTeam.STRallyAttack
+;variable10 means "What is my current rally point" -- needs to sync with DLC02StrikeTeam.STRallyPoint
+
+short TalkStart
+short SafeToTalk
+short AnimStarted
+
+short teammateToggle
+
+begin OnLoad
+	SetGhost 1
+
+end
+
+begin OnActivate Player
+
+	if ( SafeToTalk == 0 )
+		;Do Nothing
+	elseif ( SafeToTalk >= 1 )
+		Activate
+	endif
+
+	if ( DLC02OA3.OA3GoMontgomery >= 1 )
+		;Do Nothing
+	endif
+
+end
+
+begin gamemode
+
+	;This next bit makes him a teammate or not a teammate:
+	if teammateToggle == 0 && GetQuestRunning DLC02OA2
+		SetPlayerTeammate 1
+		set teammateToggle to 1		
+
+	elseif teammateToggle == 1
+		if GetInWorldSpace DLC02AnchorageBattle == 1
+			setPlayerTeammate 0
+			set teammateToggle to -1
+		endif
+	endif
+
+
+
+
+	;-------------SYNC ME TO CURRENT RALLY POINT
+	;please make sure these are implemented the same in both DLC02MontgomeryScript and DLC02StrikeTeamMemberScript
+	if getAV variable10 != DLC02StrikeTeam.STRallyPoint
+		setAV variable10 DLC02StrikeTeam.STRallyPoint
+		evp
+	endif
+	;---------------
+
+	;-------------SYNC ME TO CURRENT RALLY POINT ATTACK STATE
+	;please make sure these are implemented the same in both DLC02MontgomeryScript and DLC02StrikeTeamMemberScript
+	if getAV variable02 != DLC02StrikeTeam.STRallyAttack
+		setAV variable02 DLC02StrikeTeam.STRallyAttack
+		evp
+	endif
+	;---------------
+
+;This series of two blocks handles Montgomery dropping from the Vent and meeting the player in the Artillery Base segment of the game
+
+	if ( DLC02OA2.OA2AnimTrigger == 1 )
+		if ( IsAnimPlaying SpecialIdle != 0 )
+			set AnimStarted to 1
+			endif	
+		if ( AnimStarted == 1 && IsAnimPlaying SpecialIdle == 0 )
+			setDestroyed 0
+			set DLC02OA2.OA2MontgomeryMoves to 2
+			Evp
+			Set DLC02OA2.OA2AnimTrigger to 2
+		endif
+	endif
+
+	if ( TalkStart == 0 )
+		if ( DLC02OA2.OA2MontgomeryTalk == 1 )
+			Say DLC02OA2MontTalk01 1
+			Set TalkStart to 1
+		endif
+	endif
+
+end
+
+;These are speech blocks to handle the initial meeting with the Player once they have entered the sim
+
+begin SayToDone DLC02OA2MontTalk01
+
+	Say DLC02OA2MontTalk03 1
+	Player.Additem DLC02Weap10mmPistolSilenced 1
+	Player.Additem Ammo10mm 60
+	Player.Additem DLC02WeapKnifeCombat 1
+	Player.Additem DLC02Charges 3
+	Player.Additem DLC02ArmorCombatSnow 1
+	Player.Additem DLC02ArmorCombatSnowHelmet 1
+	Player.Additem Stealthboy 1
+	Player.Additem Lockpick 50
+
+end
+
+begin SayToDone DLC02OA2MontTalk03
+
+	Say DLC02OA2MontTalk04 1
+	Player.EquipItem DLC02ArmorCombatSnow
+	Player.Equipitem DLC02ArmorCombatSnowHelmet
+
+	Player.EquipItem DLC02Weap10mmPistolSilenced
+
+end
+
+begin SayToDone DLC02OA2MontTalk04
+
+	Say DLC02OA2MontTalk06 1
+
+end
+
+begin SayToDone DLC02OA2MontTalk06
+
+	Say DLC02OA2MontTalk07 1
+
+end
+
+begin SayToDone DLC02OA2MontTalk07
+
+	setDestroyed 1
+	setactorfullname DLC02EmptyName
+	set DLC02OA2.OA2MontgomeryTalk to 2
+	set DLC02OA2.OA2SetupPlayer to 3
+	EnablePlayerControls
+	SetStage DLC02OA1 200
+	SetObjectiveDisplayed DLC02OA2 10 1
+	Set DLC02OA2.OA2MontgomeryLeaves to 1
+	Evp
+
+end

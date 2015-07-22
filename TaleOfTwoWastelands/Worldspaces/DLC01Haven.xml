@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="080011AA">DLC01Haven</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01Haven</EditorID>
+    <Name Tag="FULL">Uptown</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0800B72E">DLC01PittZone</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="080008C0">DLC01PittWorld</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">UseMapData</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="000922D5">DLC01PittUpTownClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="0004DBDF">TakomaParkMuddyWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00000018">DefaultWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>0</DefaultLandHeight>
+      <DefaultWaterHeight>-4000</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>2</WorldMapScale>
+      <Offset>
+        <CellX>14000</CellX>
+        <CellY>34500</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00092BC9">DLC01PittWrldISBasic</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-32768</X>
+        <Y>-20480</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>32768</X>
+        <Y>28672</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

@@ -1,0 +1,14 @@
+ScriptName DLC05GenericQuestScript
+
+short DLC05HoloCount
+
+
+Begin GameMode
+
+	if ( DLC05HoloCount >= 25 )
+		;AddAchievement 72
+		set DLC05HoloCount to -1
+	endif
+
+
+End		

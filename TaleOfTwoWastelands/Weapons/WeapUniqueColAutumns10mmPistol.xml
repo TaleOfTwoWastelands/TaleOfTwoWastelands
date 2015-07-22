@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0606B531">WeapUniqueColAutumns10mmPistol</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WeapUniqueColAutumns10mmPistol</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-4</X>
+        <Y>-4</Y>
+        <Z>-1</Z>
+      </Point1>
+      <Point2>
+        <X>17</X>
+        <Y>7</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Col. Autumn's 10mm Pistol</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandPistol\10mmPistol.NIF</FileName>
+      <TextureFileHash Tag="MODT">7O8KMW8JlaFsbwoxdAmVoWxvHHRFwEip7t8MMSzw+nBuXwwxMfD6cGxvHHRFwEip898MMSzw+nBzXwwxMfD6cGxvHHRFwEip8OkIMf4NpE9waQgxAw6kT2xvHHRFwEip7t8KMcWbLEZuXwoxypssRmxvHHRFwEip898KMcWbLEZzXwoxypssRmxvHHRFwEip</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_10mm_pistol.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="001537E6">AmmoList10mm</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="00034232">Repair10mmPistol</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">SmallGuns</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000864D5">ITMPistolUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000864D6">ITMPistolDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="00036ADB">WPN10mmSMGFire3D</Reference>
+          </_3D>
+          <Distant Tag="SNAM">
+            <Reference ID="0012018C">WPN10mm3DDIST</Reference>
+          </Distant>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="00036ADA">WPN10mmSMGFire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="00021E6E">WPNPistol0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00021E6F">WPNPistol0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ShellCasingModel>
+      <FileName Tag="MOD2">Projectiles\45CalCasing.NIF</FileName>
+      <TextureFileHash Tag="MO2T">8+wGc3QPd8FzbAZzeQ93wXNlFHQMr2Kv7t8Ic/tCrbZuXwhzAEOttnNlFHQMr2Kv898Ic/tCrbZzXwhzAEOttnNlFHQMr2Kv</TextureFileHash>
+    </ShellCasingModel>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00019083">BallisticImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="00025B82">1stPerson10mmPistol</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>1100</Value>
+      <Health>120</Health>
+      <Weight>3</Weight>
+      <BaseDamage>33</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandPistol</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>0</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0.800000012</MinSpread>
+      <Spread>0.5</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>65</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0002CD5F">10mmBulletProjectile</Projectile>
+      <BaseVATSToHitChance>15</BaseVATSToHitChance>
+      <AttackAnimation>AttackRight</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>256</Min>
+        <Max>768</Max>
+      </Range>
+      <LimbKillBehavior>NormalFormulaBehavior</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1.10000002</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>17</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.5</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0.150000006</Duration>
+        <Pattern>Square</Pattern>
+        <Wavelength>0.150000006</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>2.75</AttackShotsPerSecond>
+      <ReloadTime>1.29999995</ReloadTime>
+      <JamTime>1.39999998</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Guns</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0.300000012</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>4</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>9</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>25</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>33</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

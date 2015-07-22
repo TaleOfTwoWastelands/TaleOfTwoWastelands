@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0A0125F5">DLC04WeapKnifeNonPlayable</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04WeapKnifeNonPlayable</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Knife</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandMelee\RustyKnife.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_knife.dds</Large>
+    </Icon>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0A0125F3">DLC04NonPlayerDamageAdd</Reference>
+    </ObjectEffect>
+    <RepairList Tag="REPL">
+      <Reference ID="000CC83C">RepairKnife</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000854E0">ITMKnifeUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000854DF">ITMKnifeDown</Reference>
+      </Drop>
+      <Melee>
+        <Block Tag="NAM6">
+          <Reference ID="000BF0EF">WPNBlockKnife</Reference>
+        </Block>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="0008B5B2">WPNKnifeEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0008B5B3">WPNKnifeUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <VATSAttackName Tag="VANM">Back Slash</VATSAttackName>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00060A0F">KnifeImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000B1294">1stPersonRustyKnife</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>20</Value>
+      <Health>150</Health>
+      <Weight>1</Weight>
+      <BaseDamage>8</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandMelee</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>0.5</Reach>
+      <Flags1>CantDrop, NonPlayable</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>0</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>0</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <BaseVATSToHitChance>10</BaseVATSToHitChance>
+      <AttackAnimation>Default</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>2000</Max>
+      </Range>
+      <LimbKillBehavior>DismemberOnly</LimbKillBehavior>
+      <Flags2>NPCsUseAmmo, OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1.29999995</AttackAnimationMultiplier>
+      <FireRate>0</FireRate>
+      <ActionPointCost>20</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>3</AttackShotsPerSecond>
+      <ReloadTime>0</ReloadTime>
+      <JamTime>0</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>MeleeWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>AttackCustom3Power</PowerAttackAnimation>
+      <StrengthRequirement>1</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>8</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>50</SkillRequirement>
+      <DamageMult>0.699999988</DamageMult>
+      <APCost>16</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Silent</SoundLevel>
+  </Subrecords>
+</Record>

@@ -1,0 +1,23 @@
+scn TTWUnStnFlapBoardONScript
+
+int bTriggered
+
+BEGIN OnTriggerEnter Player
+	set bTriggered to 1
+END
+
+BEGIN GameMode
+	if bTriggered == 1
+		if GetQuestRunning TTWUnStnPowerQuest == 1
+			if (TTWUnStnPowerQuest.iButtonCount == 4)
+				SetObjectiveCompleted TTWUnStnPowerQuest 30 1
+				SetObjectiveCompleted TTWUnStnPowerQuest 10 1
+	
+				FlapBoardRow01REF.PlayGroup Forward 0
+				SetStage TTWUnStnPowerQuest 30
+				disable
+				markfordelete
+			endif
+		endif
+	endif
+END

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018591">TTWChallengeOdditiesAndArtifacts</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeOdditiesAndArtifacts</EditorID>
+    <Name Tag="FULL">Oddities and Artifacts</Name>
+    <Description Tag="DESC">Cause damage with unique Capital Wasteland weapons.</Description>
+    <Data Tag="DATA">
+      <Type>DoDamage</Type>
+      <Threshold>10000</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>2000</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185BE">TTWChallengeOdditiesAndArtifactsWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

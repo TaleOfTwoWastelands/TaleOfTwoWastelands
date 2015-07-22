@@ -1,0 +1,93 @@
+scn GomorrahElevatorDoorScript
+
+int Button
+
+begin OnActivate
+	ref reffer
+	set reffer to GetActionRef
+	if GetActionRef == player
+		showmessage GomorraElevatorMessage
+	else
+		if reffer.GetPlayerTeammate == 1
+			reffer.moveto player
+		endif
+	endif
+end
+
+begin GameMode
+	set Button to GetButtonPressed
+	ref rMarker
+	if Button == 1
+		player.MoveTo GomorrahLLMarker
+		set rMarker to GomorrahLLMarker
+		Autosave
+	elseif Button == 2
+		player.MoveTo Gomorrah1stMarker
+		set rMarker to Gomorrah1stMarker
+		Autosave
+	elseif Button == 3
+		player.MoveTo Gomorrah3rdMarker
+		set rMarker to Gomorrah3rdMarker
+		Autosave
+	elseif Button == 4
+		player.MoveTo GomorrahTopMarker
+		set rMarker to GomorrahTopMarker
+		Autosave
+	endif
+	if (Button == 1 || Button == 2 || Button == 3 || Button == 4)
+		if (VNPCFollowers.bBooneHired) && (CraigBooneREF.Waiting != 1)
+			CraigBooneREF.MoveTo rMarker;
+		endif
+		if (VNPCFollowers.bCassHired) && (RoseofSharonCassidyREF.Waiting != 1)
+			RoseofSharonCassidyREF.MoveTo rMarker;
+		endif		
+		if (VNPCFollowers.bVeronicaHired) && (VeronicaREF.Waiting != 1)
+			VeronicaREF.MoveTo rMarker;
+		endif
+		if (VNPCFollowers.bLilyHired) && (LilyREF.Waiting != 1)
+			LilyREF.MoveTo rMarker;
+		endif
+		if (VNPCFollowers.RaulHired) && (RaulREF.Waiting != 1)
+			RaulREF.MoveTo rMarker;
+		endif
+		if (VNPCFollowers.ArcadeHired) && (ArcadeREF.Waiting != 1)
+			ArcadeREF.MoveTo rMarker;
+		endif
+		if (VNPCFollowers.bEDEHired) && (EDE1REF.Waiting != 1)
+			if EDE1Ref.GetDisabled == 0
+				EDE1Ref.MoveTo rMarker
+			elseif EDE2Ref.GetDisabled == 0
+				EDE2Ref.MoveTo rMarker
+			elseif EDE3Ref.GetDisabled == 0
+				EDE3Ref.MoveTo rMarker
+			endif
+		endif
+		if (VNPCFollowers.RexHired) && (RexREF.Waiting != 1)
+			RexREF.MoveTo rMarker;
+		endif	
+		if (Followers.CharonHired) && (CharonRef.Waiting != 1)
+			CharonRef.MoveTo rMarker;
+		endif		
+		if (Followers.DogmeatHired) && (DogmeatRef.Waiting != 1)
+			DogmeatRef.MoveTo rMarker;
+		endif		
+		if (Followers.ButchHired) && (ButchRef.Waiting != 1)
+			ButchRef.MoveTo rMarker;
+		endif		
+		if (Followers.CloverHired) && (CloverRef.Waiting != 1)
+			CloverRef.MoveTo rMarker;
+		endif		
+		if (Followers.JerichoHired) && (JerichoRef.Waiting != 1)
+			JerichoRef.MoveTo rMarker;
+		endif		
+		if (Followers.FawkesHired) && (MQ08FawkesRef.Waiting != 1)
+			MQ08FawkesRef.MoveTo rMarker;
+		endif		
+		if (Followers.RL3Hired) && (RL3REF.Waiting != 1)
+			RL3REF.MoveTo rMarker;
+		endif		
+		if (Followers.StarPaladinCrossHired) && (StarPaladinCrossRef.Waiting != 1)
+			StarPaladinCrossRef.MoveTo rMarker;
+		endif		
+	endif
+end

@@ -1,0 +1,247 @@
+scn HVBunkerExplosionScript
+
+int ExplosionState
+float Timer
+float Time
+
+begin OnTrigger player
+
+	if VDialogueHiddenValley.GeneratorSetToBlow == 1
+
+		if ExplosionState == 0
+
+			; Disable fast travel temporarily so the player must witness the explosion
+			EnableFastTravel 0
+
+			if Timer >= 1.0
+
+				; Do explosion
+				HVBunkerExplosionMarker.PlaceAtMe HVBunkerExplosion			
+				set VHiddenValleyDustStorm.BunkerDestroyed to 1
+
+				; JSH 7/28 - Remove Explosive Collar if the player still has it
+				player.RemoveItem HVExplosiveCollar 1000
+
+				; Update quests that call for the Brotherhood's destruction
+				if GetObjectiveDisplayed VMQ05 50 == 1
+
+					; If the player was about to report to Colonel Moore that the 		BoS is
+					; allying with the NCR, update that
+					if GetObjectiveDisplayed VMQ05 56 == 1 && GetObjectiveCompleted 	VMQ05 56 == 0
+						SetObjectiveDisplayed VMQ05 56 0
+						SetObjectiveDisplayed VMQ05 50 0
+						SetObjectiveDisplayed VMQ05 50 1
+					endif
+
+					SetObjectiveCompleted VMQ05 50 1
+					SetObjectiveDisplayed VMQ05 55 1
+				elseif GetObjectiveDisplayed VMQ02 70 == 1
+					SetObjectiveCompleted VMQ02 70 1
+					SetObjectiveDisplayed VMQ02 75 1
+				elseif GetObjectiveDisplayed VMQHouse5 60 == 1
+					SetObjectiveCompleted VMQHouse5 60 1
+					SetObjectiveDisplayed VMQHouse5 64 1
+
+				; Yes Man should be handled by setting the Brotherhood global var
+
+				endif
+
+				; Set global state of the Brotherhood to destroyed
+				set VStoryEventBoS to 2
+
+				; vilified with the brotherhood after this. Helps Veronica to react appropriately.
+				addreputation repnvbrotherhood 0 5
+				addreputation repnvbrotherhood 0 5
+
+				; Lose karma for a dastardly deed
+				player.RewardKarma -100
+
+				; Enable rubble in bunker interior - no more entering Hidden Valley
+				HVBlockingRubbleREF.enable
+
+				; Kill everyone in Hidden Valley
+				; Really, just kill the main guys since they affect quests
+				NolanMcNamaraREF.kill
+				EdgarHardinREF.kill
+				LindaSchulerREF.kill
+				LarsTaggartREF.kill
+				HVKnightEDEREF.kill
+				MelissaWatkinsREF.kill
+
+				; Kill any companions that are still inside the bunker, but only when in hardcore mode
+				if player.IsHardcore
+					if RoseOfSharonCassidyREF.GetInCell HiddenValley01 || RoseOfSharonCassidyREF.GetInCell HiddenValley02
+						RoseOfSharonCassidyREF.SetPlayerTeammate 0
+						RoseOfSharonCassidyREF.kill
+					elseif LilyREF.GetInCell HiddenValley01 || LilyREF.GetInCell HiddenValley02
+						LilyREF.SetPlayerTeammate 0
+						LilyREF.kill
+					elseif ArcadeREF.GetInCell HiddenValley01 || ArcadeREF.GetInCell HiddenValley02
+						ArcadeREF.SetPlayerTeammate 0
+						ArcadeREF.kill
+					elseif RaulREF.GetInCell HiddenValley01 || RaulREF.GetInCell HiddenValley02
+						RaulREF.SetPlayerTeammate 0
+						RaulREF.kill
+					elseif CraigBooneREF.GetInCell HiddenValley01 || CraigBooneREF.GetInCell HiddenValley02
+						CraigBooneREF.SetPlayerTeammate 0
+						CraigBooneREF.kill
+					elseif VeronicaREF.GetInCell HiddenValley01 || VeronicaREF.GetInCell HiddenValley02
+						VeronicaREF.SetPlayerTeammate 0
+						VeronicaREF.kill
+					elseif CharonRef.GetInCell HiddenValley01 || CharonRef.GetInCell HiddenValley02
+						CharonRef.SetPlayerTeammate 0
+						CharonRef.kill
+					elseif ButchRef.GetInCell HiddenValley01 || ButchRef.GetInCell HiddenValley02
+						ButchRef.SetPlayerTeammate 0
+						ButchRef.kill
+					elseif CloverRef.GetInCell HiddenValley01 || CloverRef.GetInCell HiddenValley02
+						CloverRef.SetPlayerTeammate 0
+						CloverRef.kill
+					elseif JerichoRef.GetInCell HiddenValley01 || JerichoRef.GetInCell HiddenValley02
+						JerichoRef.SetPlayerTeammate 0
+						JerichoRef.kill
+					elseif MQ08FawkesRef.GetInCell HiddenValley01 || MQ08FawkesRef.GetInCell HiddenValley02
+						MQ08FawkesRef.SetPlayerTeammate 0
+						MQ08FawkesRef.kill
+					elseif StarPaladinCrossRef.GetInCell HiddenValley01 || StarPaladinCrossRef.GetInCell HiddenValley02
+						StarPaladinCrossRef.SetPlayerTeammate 0
+						StarPaladinCrossRef.kill
+					endif
+
+					if RexREF.GetInCell HiddenValley01 || RexREF.GetInCell HiddenValley02
+						RexREF.SetPlayerTeammate 0
+						RexREF.kill
+					elseif EDE1REF.GetInCell HiddenValley01 || EDE1REF.GetInCell HiddenValley02
+						EDE1REF.SetPlayerTeammate 0
+						EDE1REF.kill
+					elseif EDE2REF.GetInCell HiddenValley01 || EDE2REF.GetInCell HiddenValley02
+						EDE2REF.SetPlayerTeammate 0
+						EDE2REF.kill
+					elseif EDE3REF.GetInCell HiddenValley01 || EDE3REF.GetInCell HiddenValley02
+						EDE3REF.SetPlayerTeammate 0
+						EDE3REF.kill
+					elseif DogmeatRef.GetInCell HiddenValley01 || DogmeatRef.GetInCell HiddenValley02
+						DogmeatRef.SetPlayerTeammate 0
+						DogmeatRef.kill
+					elseif RL3REF.GetInCell HiddenValley01 || RL3REF.GetInCell HiddenValley02
+						RL3REF.SetPlayerTeammate 0
+						RL3REF.kill
+					endif
+				endif
+
+				; Fail the Hidden Valley quests immediately so the player doesn't have
+				; to wait for gamemode scripts to catch up
+				if GetStage VMS55 < 100
+					SetStage VMS55 200
+				endif
+
+				if GetStage VMS55a < 100
+					SetStage VMS55a 200
+				endif
+
+				if GetStage VMS55b < 100
+					SetStage VMS55b 200
+				endif
+
+				set ExplosionState to 1			
+
+				; Intentionally not reseting the Timer here
+
+			else
+
+				; Disable fast travel temporarily so the player must witness the explosion
+				EnableFastTravel 0
+
+				set Timer to Timer + GetSecondsPassed
+			endif
+		elseif ExplosionState == 1
+			if Timer >= 3.5
+
+				set Time to GetCurrentTime
+
+				; If the sandstorm is currently blowing, turn it off
+				if Time > 21.0 || Time < 6.0
+
+					; Reset the weather
+					ReleaseWeatherOverride
+					set VHiddenValleyDustStorm.WeatherSet to 0
+
+					; Make the sandstorms die down
+					HVSandStormNight01REF.PlayGroup Backward 2
+					HVSandStormNight02REF.PlayGroup Backward 2
+					HVSandStormNight03REF.PlayGroup Backward 2
+					HVSandStormNight04REF.PlayGroup Backward 2
+					HVSandStormNight05REF.PlayGroup Backward 2
+					HVSandStormNight06REF.PlayGroup Backward 2
+					HVSandStormNight07REF.PlayGroup Backward 2
+					HVSandStormNight08REF.PlayGroup Backward 2
+					HVSandStormNight09REF.PlayGroup Backward 2
+					HVSandStormNight10REF.PlayGroup Backward 2
+
+				endif
+
+				set ExplosionState to 2
+				set Timer to 0.0
+			else
+
+				; Disable fast travel temporarily so the player must witness the explosion
+				EnableFastTravel 0
+
+				set Timer to Timer + GetSecondsPassed
+			endif
+
+		elseif ExplosionState == 2
+
+			if Timer > 2.0
+
+				; Enable smoke
+				HVDestroyedSmoke01REF.enable
+				HVDestroyedSmoke02REF.enable
+				HVDestroyedSmoke03REF.enable
+				HVDestroyedSmoke04REF.enable
+				HVDestroyedSmoke05REF.enable
+				HVDestroyedSmoke06REF.enable
+				HVDestroyedSmoke07REF.enable
+				HVDestroyedSmoke08REF.enable
+				HVDestroyedSmoke09REF.enable
+				HVDestroyedSmoke10REF.enable
+				HVDestroyedSmoke11REF.enable
+
+				set VDialogueHiddenValley.GeneratorSetToBlow to 2
+
+				; Re-enable fast travel
+				EnableFastTravel 1
+
+				; Clean up the dust storm objects
+				HVSandStormNight01REF.disable
+				HVSandStormNight01REF.MarkForDelete
+				HVSandStormNight02REF.disable
+				HVSandStormNight02REF.MarkForDelete
+				HVSandStormNight03REF.disable
+				HVSandStormNight03REF.MarkForDelete
+				HVSandStormNight04REF.disable
+				HVSandStormNight04REF.MarkForDelete
+				HVSandStormNight05REF.disable
+				HVSandStormNight05REF.MarkForDelete
+				HVSandStormNight06REF.disable
+				HVSandStormNight06REF.MarkForDelete
+				HVSandStormNight07REF.disable
+				HVSandStormNight07REF.MarkForDelete
+				HVSandStormNight08REF.disable
+				HVSandStormNight08REF.MarkForDelete
+				HVSandStormNight09REF.disable
+				HVSandStormNight09REF.MarkForDelete
+				HVSandStormNight10REF.disable
+				HVSandStormNight10REF.MarkForDelete
+
+			else
+
+				; Disable fast travel temporarily so the player must witness the explosion
+				EnableFastTravel 0
+
+				set Timer to Timer + GetSecondsPassed
+			endif
+		endif
+	endif
+
+end

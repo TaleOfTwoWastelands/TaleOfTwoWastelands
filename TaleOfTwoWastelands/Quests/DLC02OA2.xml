@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="070009BF">DLC02OA2</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02OA2</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="070014F4">DLC02OA2QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">The Guns of Anchorage</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">Guns of Anchorage Completed</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgEArREFAAEAcgEANhAFAAEAcgIAoxEPAAMAcgIAbgoAAABuAQAAABUACgByAgBzAwACACAxdxEHAAEAbmQAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">StopQuest DLC02OA2
+CompleteAllObjectives DLC02OA2
+StartQuest DLC02OA3
+SetObjectiveDisplayed DLC02OA3 10 1
+Set DLC02OA3.OA3Explain to 1
+;AddAchievement 52
+RewardXP 100</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="070009BF">DLC02OA2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="070009C0">DLC02OA3</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Infiltrate the Chinese Artillery site.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070019DE">DLC02OA2QuestTargetEntryMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Destroy all three Artillery Guns.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070020B8">DLC02ExplosiveARef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009BF">DLC02OA2</Quest>
+                  <VariableIndex>17</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070020BA">DLC02ExplosiveBRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009BF">DLC02OA2</Quest>
+                  <VariableIndex>18</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070020BC">DLC02ExplosiveCRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009BF">DLC02OA2</Quest>
+                  <VariableIndex>19</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Report to General Chase at the U.S. Field Headquarters.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070019A7">DLC02GeneralChaseREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009BF">DLC02OA2</Quest>
+                  <VariableIndex>20</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Rendezvous with Sergeant Montgomery.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070019DD">DLC02OA2MontgomeryAppears</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

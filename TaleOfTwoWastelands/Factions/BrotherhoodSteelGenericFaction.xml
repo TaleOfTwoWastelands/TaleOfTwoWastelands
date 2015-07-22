@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="00030512">BrotherhoodSteelGenericFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">BrotherhoodSteelGenericFaction</EditorID>
+    <Name Tag="FULL">Brotherhood of Steel</Name>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001D1EB">SuperMutantFaction</Faction>
+        <Modifier>-100</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001D3FE">BrotherhoodSteelFaction</Faction>
+        <Modifier>100</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001D3FF">BrotherhoodOutcastFaction</Faction>
+        <Modifier>-100</Modifier>
+        <CombatReaction>Enemy</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="000410B5">MQPlayerBOSAllyFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00088B0D">BrotherhoodMQ11Faction</Faction>
+        <Modifier>100</Modifier>
+        <CombatReaction>Friend</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Modifier>100</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>0</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Ranks>
+      <Rank>
+        <Rank Tag="RNAM">0</Rank>
+        <Title>
+          <Male Tag="MNAM">Squire</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">1</Rank>
+        <Title>
+          <Male Tag="MNAM">Knight</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">2</Rank>
+        <Title>
+          <Male Tag="MNAM">Knight Sergeant</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">3</Rank>
+        <Title>
+          <Male Tag="MNAM">Knight Captain</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">4</Rank>
+        <Title>
+          <Male Tag="MNAM">Paladin</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">5</Rank>
+        <Title>
+          <Male Tag="MNAM">Star Paladin</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">6</Rank>
+        <Title>
+          <Male Tag="MNAM">Sentinel</Male>
+        </Title>
+      </Rank>
+      <Rank>
+        <Rank Tag="RNAM">7</Rank>
+        <Title>
+          <Male Tag="MNAM">Elder</Male>
+        </Title>
+      </Rank>
+    </Ranks>
+  </Subrecords>
+</Record>

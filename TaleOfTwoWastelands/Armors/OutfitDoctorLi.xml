@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060340DA">OutfitDoctorLi</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitDoctorLi</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-19</Y>
+        <Z>5</Z>
+      </Point1>
+      <Point2>
+        <X>19</X>
+        <Y>15</Y>
+        <Z>6</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Doctor Li's Outfit</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ProjectPurityDoctor\outfitm.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CnJvInRpoPrg7t8JbwDNHjVuXwlvBc0eNXJvInRpoPrg898JbwDNHjVzXwlvBc0eNXJvInRpoPrgsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\DoctorLi\F\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5vQHbwcx/gpmdAdvDDH+CmlsF3QMZaYB7t8Jb/nMHjVuXwlv/sweNWlsF3QMZaYB898Jb/nMHjVzXwlv/sweNWlsF3QMZaYB5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\DoctorLi\F\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">5vQHbwcx/gpmdAdvDDH+CmlsF3QMZaYB7t8Jb/nMHjVuXwlv/sweNWlsF3QMZaYB898Jb/nMHjVzXwlv/sweNWlsF3QMZaYB</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_rivet_city_scientist.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_rivet_city_scientist.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9E7">RepairClothingScientist</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="000372C0">DoctorLiOutfitList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>8</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

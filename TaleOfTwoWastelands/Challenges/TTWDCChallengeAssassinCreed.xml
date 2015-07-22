@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01859F">TTWDCChallengeAssassinCreed</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDCChallengeAssassinCreed</EditorID>
+    <Name Tag="FULL">Assassin Creed ***</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E2">TTWChallengeThreeStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill any named Brotherhood of Steel officer (Knight, Paladin, Scribe, Elder) with energy rifles or pistols.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>15</Threshold>
+      <Flags>StartDisabled</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185C3">TTWChallengeAssassinCreedEnemies</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

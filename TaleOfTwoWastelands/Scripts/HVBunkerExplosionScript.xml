@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0016007A">HVBunkerExplosionScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">HVBunkerExplosionScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>62</ReferenceCount>
+        <CompiledSize>2692</CompiledSize>
+        <VariableCount>4</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAYAHEKAAABAHICABYAEACnAAwAIHIxAHM1ACAxID09FgANAGcACQAgcwMAIDAgPT0REQcAAQBuAAAAABYADwBhAAsAIGYCACAxLjAgPj0cAAEAJRAFAAEAcjIAFQAKAHIzAHMFAAIAIDEcAAIAUhAKAAIAcjQAbugDAAAWABkABwAVACBYpREKAAIAcjUAbjIAAAAgMSA9PRYAMQADAC0AIFilEQoAAgByNQBuOAAAACAxID09IFikEQoAAgByNQBuOAAAACAwID09ICYmoxEPAAMAcjUAbjgAAABuAAAAAKMRDwADAHI1AG4yAAAAbgAAAACjEQ8AAwByNQBuMgAAAG4BAAAAGQAAAKIRDwADAHI1AG4yAAAAbgEAAACjEQ8AAwByNQBuNwAAAG4BAAAAGAAZAAIAFQAgWKURCgACAHI2AG5GAAAAIDEgPT2iEQ8AAwByNgBuRgAAAG4BAAAAoxEPAAMAcjYAbksAAABuAQAAABgAGQACABUAIFilEQoAAgByNwBuPAAAACAxID09ohEPAAMAcjcAbjwAAABuAQAAAKMRDwADAHI3AG5AAAAAbgEAAAAZAAAAFQAHAEc4AAIAIDI5Eg8AAwByOQBuAAAAAG4FAAAAORIPAAMAcjkAbgAAAABuBQAAABwAAgAEEgcAAQBunP///xwAAwAhEAIAAAAcAAQAixACAAAAHAAFAIsQAgAAABwABgCLEAIAAAAcAAcAixACAAAAHAAIAIsQAgAAABwACQCLEAIAAAAWAA0AOAAJACByAgBYShIAABYAIwACAB8AIHIKAFhDEAUAAQByOgAgcgoAWEMQBQABAHI7ACB8fBwACgDFEQcAAQBuAAAAABwACgCLEAIAAAAYACMAAgAfACByCwBYQxAFAAEAcjoAIHILAFhDEAUAAQByOwAgfHwcAAsAxREHAAEAbgAAAAAcAAsAixACAAAAGAAjAAIAHwAgcgwAWEMQBQABAHI6ACByDABYQxAFAAEAcjsAIHx8HAAMAMURBwABAG4AAAAAHAAMAIsQAgAAABgAIwACAB8AIHINAFhDEAUAAQByOgAgcg0AWEMQBQABAHI7ACB8fBwADQDFEQcAAQBuAAAAABwADQCLEAIAAAAYACMAAgAfACByDgBYQxAFAAEAcjoAIHIOAFhDEAUAAQByOwAgfHwcAA4AxREHAAEAbgAAAAAcAA4AixACAAAAGAAjAAIAHwAgcg8AWEMQBQABAHI6ACByDwBYQxAFAAEAcjsAIHx8HAAPAMURBwABAG4AAAAAHAAPAIsQAgAAABgAIwACAB8AIHIQAFhDEAUAAQByOgAgchAAWEMQBQABAHI7ACB8fBwAEADFEQcAAQBuAAAAABwAEACLEAIAAAAYACMAAgAfACByEQBYQxAFAAEAcjoAIHIRAFhDEAUAAQByOwAgfHwcABEAxREHAAEAbgAAAAAcABEAixACAAAAGAAjAAIAHwAgchIAWEMQBQABAHI6ACByEgBYQxAFAAEAcjsAIHx8HAASAMURBwABAG4AAAAAHAASAIsQAgAAABgAIwACAB8AIHITAFhDEAUAAQByOgAgchMAWEMQBQABAHI7ACB8fBwAEwDFEQcAAQBuAAAAABwAEwCLEAIAAAAYACMAAgAfACByFABYQxAFAAEAcjoAIHIUAFhDEAUAAQByOwAgfHwcABQAxREHAAEAbgAAAAAcABQAixACAAAAGAAjAAIAHwAgchUAWEMQBQABAHI6ACByFQBYQxAFAAEAcjsAIHx8HAAVAMURBwABAG4AAAAAHAAVAIsQAgAAABkAAAAWACMAAgAfACByFgBYQxAFAAEAcjoAIHIWAFhDEAUAAQByOwAgfHwcABYAxREHAAEAbgAAAAAcABYAixACAAAAGAAjAAIAHwAgchcAWEMQBQABAHI6ACByFwBYQxAFAAEAcjsAIHx8HAAXAMURBwABAG4AAAAAHAAXAIsQAgAAABgAIwACAB8AIHIYAFhDEAUAAQByOgAgchgAWEMQBQABAHI7ACB8fBwAGADFEQcAAQBuAAAAABwAGACLEAIAAAAYACMAAgAfACByGQBYQxAFAAEAcjoAIHIZAFhDEAUAAQByOwAgfHwcABkAxREHAAEAbgAAAAAcABkAixACAAAAGAAjAAIAHwAgchoAWEMQBQABAHI6ACByGgBYQxAFAAEAcjsAIHx8HAAaAMURBwABAG4AAAAAHAAaAIsQAgAAABgAIwACAB8AIHIbAFhDEAUAAQByOgAgchsAWEMQBQABAHI7ACB8fBwAGwDFEQcAAQBuAAAAABwAGwCLEAIAAAAZAAAAGQAAABYAFQABABEAIFg6EAUAAQByPAAgMTAwIDw5EAoAAgByPABuyAAAABkAAAAWABUAAQARACBYOhAFAAEAcj0AIDEwMCA8ORAKAAIAcj0AbsgAAAAZAAAAFgAVAAEAEQAgWDoQBQABAHI+ACAxMDAgPDkQCgACAHI+AG7IAAAAGQAAABUABwBzAwACACAxFwACAAIAEREHAAEAbgAAAAAVABEAZgIADAAgZgIAIFgMEAAAICsZAAAAGAANABYACQAgcwMAIDEgPT0WAA8AEQALACBmAgAgMy41ID49FQALAGYEAAYAIFgSEAAAFgAcAAwAGAAgZgQAIDIxLjAgPiBmBAAgNi4wIDwgfHxYEQAAFQAKAHIzAHMCAAIAIDAcABwAExAJAAIABABuAgAAABwAHQATEAkAAgAEAG4CAAAAHAAeABMQCQACAAQAbgIAAAAcAB8AExAJAAIABABuAgAAABwAIAATEAkAAgAEAG4CAAAAHAAhABMQCQACAAQAbgIAAAAcACIAExAJAAIABABuAgAAABwAIwATEAkAAgAEAG4CAAAAHAAkABMQCQACAAQAbgIAAAAcACUAExAJAAIABABuAgAAABkAAAAVAAcAcwMAAgAgMhUACQBmAgAEACAwLjAXAAIAAgAREQcAAQBuAAAAABUAEQBmAgAMACBmAgAgWAwQAAAgKxkAAAAYAA0AJgAJACBzAwAgMiA9PRYADgAhAAoAIGYCACAyLjAgPhwAJgAhEAIAAAAcACcAIRACAAAAHAAoACEQAgAAABwAKQAhEAIAAAAcACoAIRACAAAAHAArACEQAgAAABwALAAhEAIAAAAcAC0AIRACAAAAHAAuACEQAgAAABwALwAhEAIAAAAcADAAIRACAAAAFQAKAHIxAHM1AAIAIDIREQcAAQBuAQAAABwAHAAiEAIAAAAcABwAuxEAABwAHQAiEAIAAAAcAB0AuxEAABwAHgAiEAIAAAAcAB4AuxEAABwAHwAiEAIAAAAcAB8AuxEAABwAIAAiEAIAAAAcACAAuxEAABwAIQAiEAIAAAAcACEAuxEAABwAIgAiEAIAAAAcACIAuxEAABwAIwAiEAIAAAAcACMAuxEAABwAJAAiEAIAAAAcACQAuxEAABwAJQAiEAIAAAAcACUAuxEAABcAAgACABERBwABAG4AAAAAFQARAGYCAAwAIGYCACBYDBAAACArGQAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="HVBunkerExplosionScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ExplosionState</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Time</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00161269">HVBunkerExplosionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016126D">HVBlockingRubbleREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2F87">NolanMcNamaraREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2F88">EdgarHardinREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2808">LindaSchulerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2F89">LarsTaggartREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A41DB">HVKnightEDERef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2F86">MelissaWatkinsREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000D7830">HVSandStormNight01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D8">HVSandStormNight02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D9">HVSandStormNight03REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18DA">HVSandStormNight04REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D6">HVSandStormNight05REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D2">HVSandStormNight06REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18DE">HVSandStormNight07REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E379C">HVSandStormNight08REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D1">HVSandStormNight09REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E18D7">HVSandStormNight10REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00160090">HVDestroyedSmoke01REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008F">HVDestroyedSmoke02REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008E">HVDestroyedSmoke03REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008D">HVDestroyedSmoke04REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008C">HVDestroyedSmoke05REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008B">HVDestroyedSmoke06REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016008A">HVDestroyedSmoke07REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00160089">HVDestroyedSmoke08REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00160088">HVDestroyedSmoke09REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00160087">HVDestroyedSmoke10REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016163B">HVDestroyedSmoke11REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E327C">VDialogueHiddenValley</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016126C">HVBunkerExplosion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00161869">VHiddenValleyDustStorm</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E3791">HVExplosiveCollar</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00136166">VMQ05</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129D14">VMQ02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00147889">VMQHouse5</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00132F36">VStoryEventBoS</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011E662">RepNVBrotherhood</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000D7506">HiddenValley01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000D7505">HiddenValley02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015D79D">VMS55</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001633F2">VMS55a</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001638F0">VMS55b</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

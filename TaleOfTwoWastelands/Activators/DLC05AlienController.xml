@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0B001F52">DLC05AlienController</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05AlienController</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Control</Name>
+    <Model>
+      <FileName Tag="MODL">DLC05\Dungeons\MZ\Misc\DLC05Terminal01.NIF</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0B001F53">DLC05AlienControllerSCRIPT</Reference>
+    </Script>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>250</Health>
+        <Count>1</Count>
+        <Flags>0</Flags>
+        <Unknown>Ukk=</Unknown>
+      </Header>
+      <DestructionStages>
+        <DestructionStage>
+          <StageData Tag="DSTD">
+            <HealthPercentage>0</HealthPercentage>
+            <Index>0</Index>
+            <Stage>0</Stage>
+            <Flags>Disable, Destroy</Flags>
+            <SelfDamagePerSecond>0</SelfDamagePerSecond>
+            <Explosion ID="0B00C0C7">DLC05AlienControllerExplosion</Explosion>
+            <Debris ID="000B8FF4">RobotGoreBits01</Debris>
+            <DebrisCount>5</DebrisCount>
+          </StageData>
+          <EndMarker Tag="DSTF" />
+        </DestructionStage>
+      </DestructionStages>
+    </Destructable>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="0B00D866">OBJDLC05AlienTerminalLP</Reference>
+      </Looping>
+    </Sound>
+  </Subrecords>
+</Record>

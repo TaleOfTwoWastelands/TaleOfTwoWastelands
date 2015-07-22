@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0601CC62">DoctorLiScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DoctorLiScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>18</ReferenceCount>
+        <CompiledSize>1089</CompiledSize>
+        <VariableCount>7</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAA8AAACrEAcAAQBuAQAAABEAAAAQAAYAAACCAgAAFgANAAoACQAgcwUAIDAgPT0WABUACAARACBYOhAFAAEAcgYAIDEwID09FgAVAAYAEQAgWAEQBQABAHIHACA3MDAgPBYAFwAEABMAIHIIAFhDEAUAAQByCQAgMSA9PRYAFwACABMAIHIBAFhDEAUAAQByCQAgMCA9PRwAAQCeEAUAAQByCgAVAAcAcwUAAgAgMRkAAAAZAAAAGQAAABkAAAAZAAAAFgANAAQACQAgcwIAIDAgPT0WABUAAgARACBYARAFAAEAcggAIDMwMCA8HAACADQQCAACAHIIAHILABUABwBzAgACACAxGQAAABkAAAAWABAABwAMACByBgBzBgAgMCA9PRYAFQAFABEAIFg6EAUAAQByBgAgNzUgPT0WABAAAwAMACByBgBzAQAgNiA+PRYAEgABAA4AIHIBAFguEAAAIDEgPT0VAAoAcgYAcwYAAgAgMRkAAAAZAAAAGQAAABkAAAAWABUAEQARACBYOhAFAAEAcgYAIDg1ID49FgAQAAcADAAgcgYAcwkAIDAgPT0WABgABQAUACByAgBYARAFAAEAcgwAIDcwMCA8FgAYAAMAFAAgcggAWAEQBQABAHIMACA4MDAgPBUACgByBgBzCQACACAyHAACADQQCAACAHIIAHINABwAAgBeEAAAGQAAABkAAAAYABAABAAMACByBgBzCQAgMiA9PRYAGAACABQAIHICAFgBEAUAAQByDgAgMjAwIDwVAAoAcgYAcwkAAgAgMxwAAgA0EAgAAgByBQByDQAZAAAAGAAQAAIADAAgcgYAcwkAIDUgPT0VAAoAcgYAcwkAAgAgNhwAAgBeEAAAGQAAABkAAAARAAAAEAALAAcATAAAAAEAcg8AFgAgAAEAHAAgcgMAWC4QAAAgMCA9PSByEABzKwAgMCA+IHx8HAADADMQBQABAHIRABcAAgABABwABAAzEAUAAQByEQAZAAAAEQAAABAACwAHAEwAAAABAHIRABYAIAABABwAIHIDAFguEAAAIDAgPT0gchAAcysAIDAgPiB8fBwAAwAzEAUAAQByEgAXAAIAAQAcAAQAMxAFAAEAchIAGQAAABEAAAAQAAsABwA6AAAAAQByDQAWABAAAgAMACByBgBzCQAgMyA9PRUACgByBgBzCQACACA0HAAFADQQCAACAHICAHINABkAAAARAAAAEAAIAAIAVAAAAAAAFgAgAAMAHAAgWGkQBQABAHIIACByAgBYxhEAACAxID09ICYmFQAHAHMHAAIAIDHFEQcAAQBuAAAAAA0QAgAAABcAAgABAA0QAgAAABkAAAARAAAAEAAGAAAALwAAABYADQACAAkAIHMHACAxID09FQAHAHMHAAIAIDDFEQcAAQBuAQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DoctorLiScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Stage75Hello</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WaveTrig</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Stage80Greet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CitadelForceGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TeammateSwapped</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06019D09">MQDadRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06019FC5">DoctorLiRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601DB54">HarknessRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E748">DanversRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0608DE18">CitadelBOSGuardRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8B">MQ05</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601F00E">ScienceLabMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601D6AB">RCHangarDeckAft</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A69FD">MQ05DadWarpMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A98EE">MQ05LiGreetStage75</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0605CF9F">MQ05LiEndMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001CDCE">MQ05LiEndSpeech</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0608DE1A">MQ05LiCitadelIntercomMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001878A">RCMotion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E9B">MS08</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00018787">RCVote1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00018780">RCVote2</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

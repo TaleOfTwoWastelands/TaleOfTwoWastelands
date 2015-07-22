@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="TERM">
+  <Flags>0</Flags>
+  <FormID ID="0C012024">TTWUnStnMetroProtectronTerminal</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWUnStnMetroProtectronTerminal</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-12</X>
+        <Y>-18</Y>
+        <Z>-23</Z>
+      </Point1>
+      <Point2>
+        <X>52</X>
+        <Y>22</Y>
+        <Z>19</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Metro Security Terminal</Name>
+    <Model>
+      <FileName Tag="MODL">Terminals\Terminal01.NIF</FileName>
+    </Model>
+    <WelcomeText Tag="DESC">RobCo Service Terminal
+V 6.0.3.2.1.a
+
+------------------------------------
+For More Top Of The Line 
+RobCo Products See
+Your Local Showroom.</WelcomeText>
+    <LoopingSound Tag="SNAM">
+      <Reference ID="00018EC0">OBJComputerTerminalLP</Reference>
+    </LoopingSound>
+    <Data Tag="DNAM">
+      <HackingDifficulty>Average</HackingDifficulty>
+      <Flags>0</Flags>
+      <ServerType>Server7</ServerType>
+    </Data>
+    <Selections>
+      <Selection>
+        <ItemText Tag="ITXT">Run Ticket Check Routine</ItemText>
+        <ResultText Tag="RNAM">...Loading Sequence</ResultText>
+        <Flags Tag="ANAM">ForceRedraw</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>2</ReferenceCount>
+            <CompiledSize>33</CompiledSize>
+            <VariableCount>4</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+          <CompiledScript Tag="SCDA">FQALAGYEAAYAIFhrEQAAHAABAA0QCgACAHICAG4BAAAA</CompiledScript>
+          <ScriptSource Tag="SCTX">ref linkedProtectron
+set linkedProtectron to getLinkedRef
+linkedProtectron.activate door 1</ScriptSource>
+          <LocalVariables>
+            <Variable>
+              <Data Tag="SLSD">
+                <Index>4</Index>
+                <Flags>0</Flags>
+              </Data>
+              <Name Tag="SCVR">linkedProtectron</Name>
+            </Variable>
+          </LocalVariables>
+          <References>
+            <Reference Tag="SCRV">4</Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="060B5BEB">Door</Reference>
+            </Reference>
+          </References>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetActorValue</Type>
+              <ActorValue>62</ActorValue>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>LinkedReference</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Run Ticket Check Routine</ItemText>
+        <ResultText Tag="RNAM">&lt;ERROR&gt; Maintenance In Progress</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetActorValue</Type>
+              <ActorValue>62</ActorValue>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>LinkedReference</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">DCTA Metro Map</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <SubMenu Tag="TNAM">
+          <Reference ID="000C0C7F">genericMetroProtectronTerminalSubMenu01</Reference>
+        </SubMenu>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+    </Selections>
+  </Subrecords>
+</Record>

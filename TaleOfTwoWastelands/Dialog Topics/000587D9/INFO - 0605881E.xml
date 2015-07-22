@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0605881E">INFO - 0605881E</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="060173D1">FreeformDC</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Excellent. How many are you willing to trade?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000943F2">PreWarBook</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000C5D24">BookGeneric01</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9C0">BookGeneric02b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BA">BookGeneric03b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BB">BookGeneric04b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BC">BookGeneric05b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BD">BookGeneric06b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BE">BookGeneric07b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="000FC9BF">BookGeneric08b</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="060173D1">FreeformDC</Quest>
+          <VariableIndex>17</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156EB">ScribeYearling</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="000587CD">FFDCArlingtonYearlingBooksAll</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000587CC">FFDCArlingtonYearlingBooksNone</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000587CE">FFDCArlingtonYearlingBooksEND</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>13</ReferenceCount>
+        <CompiledSize>338</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAMAHIBAHMXAAQAIEcCABUADAByAQBzGAAEACBHAwAVABYAcgEAcxUADgAgcgQAWC8QBQABAHIFABUAHwByAQBzFQAXACByAQBzFQAgcgQAWC8QBQABAHIGACArFQAfAHIBAHMVABcAIHIBAHMVACByBABYLxAFAAEAcgcAICsVAB8AcgEAcxUAFwAgcgEAcxUAIHIEAFgvEAUAAQByCAAgKxUAHwByAQBzFQAXACByAQBzFQAgcgQAWC8QBQABAHIJACArFQAfAHIBAHMVABcAIHIBAHMVACByBABYLxAFAAEAcgoAICsVAB8AcgEAcxUAFwAgcgEAcxUAIHIEAFgvEAUAAQByCwAgKxUAHwByAQBzFQAXACByAQBzFQAgcgQAWC8QBQABAHIMACArFQAfAHIBAHMVABcAIHIBAHMVACByBABYLxAFAAEAcg0AICs=</CompiledScript>
+      <ScriptSource Tag="SCTX">set FreeformDC.BookPurchaseReward to FreeformDCLibrarianReward
+set FreeformDC.BookXPReward to FreeformDCLibrarianXPReward
+set FreeformDC.PlayerBookCount to ( Player.GetItemCount BookGeneric01 )
+
+; TTW Sesom: count the DC Pre-War Book because it is used in Vegas
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount PreWarBook )
+
+; TTW Sesom: count the NV Books the player has
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric02b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric03b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric04b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric05b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric06b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric07b )
+set FreeformDC.PlayerBookCount to FreeformDC.PlayerBookCount + ( Player.GetItemCount BookGeneric08b )</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="060173D1">FreeformDC</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0006B1CA">FreeformDCLibrarianReward</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007771E">FreeformDCLibrarianXPReward</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C5D24">BookGeneric01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000943F2">PreWarBook</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9C0">BookGeneric02b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BA">BookGeneric03b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BB">BookGeneric04b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BC">BookGeneric05b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BD">BookGeneric06b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BE">BookGeneric07b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000FC9BF">BookGeneric08b</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

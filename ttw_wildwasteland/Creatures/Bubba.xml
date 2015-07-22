@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0D0037CA">Bubba</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Bubba</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-30</X>
+        <Y>-24</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>30</X>
+        <Y>24</Y>
+        <Z>157</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Bubba</Name>
+    <Model>
+      <FileName Tag="MODL">DLC04\Creatures\Hillfolk1\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>hillfolk_skin.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>0</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>50</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0A00A882">DLC04MaleYokelLarge</Reference>
+    </VoiceType>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>3000</AggroRadius>
+    </AIData>
+    <Data Tag="DATA">
+      <CreatureType>Abomination</CreatureType>
+      <Skill>
+        <Combat>85</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>0</Health>
+      <Damage>15</Damage>
+      <Strength>8</Strength>
+      <Perception>3</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>5</Agility>
+      <Luck>7</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">192</AttackReach>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0A010C37">DLC04Hillfolk1BodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0001FF5F">AudioTemplateSuperMutant</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00075A49">SuperMutantHandImpactDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

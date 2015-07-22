@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01859E">TTWDLC05ChallengeXenophobe</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC05ChallengeXenophobe</EditorID>
+    <Name Tag="FULL">Xenophobe</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E0">TTWChallengeXenophobeSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill more aliens.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>150</Threshold>
+      <Flags>StartDisabled, ShowZeroProgress</Flags>
+      <Interval>15</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185C0">TTWDLC05ChallengeUnknownEnemyList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

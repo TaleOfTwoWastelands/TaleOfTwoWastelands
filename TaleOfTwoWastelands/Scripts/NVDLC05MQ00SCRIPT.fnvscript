@@ -1,0 +1,555 @@
+ScriptName	NVDLC05MQ00SCRIPT
+
+
+; This script handles the addition of DLC05's new items into appropriate formlists (ammo, weapons, and perks).
+; JS 04/12/2011
+
+; JS 04/25/2011 - Updated Container Section - All containers are now moved to their respective positions (used non-mobile refs, where possible, to avoid moving containers out of their pertinent cells).
+; OMP 04/26/2011 - Added weapons to some form lists. Not all lists are covered yet.
+; OMP 04/27/2011 - Finished adding weapons to the form lists.
+; JES 04/27/2011 - Added Fat Man, Tiny Tots ammo to LibertyPrimeWeapons
+; JES 05/04/2011 - Added 5.56mm Pistol to That Gun repair list, added Battle Rifle to This Machine repair list
+; JES 05/17/2011 - Added variables for Challenge completion Achievements/Trophies
+; JS 06/05/2011 - Added condition checks to move containers to GunRunners' Vendortron in case the original vendor is hostile to player, or dead. Also updated names of NVDLC05 explosives to conform to their latest naming convention.
+; CES 06/07/11 - Updated script to only pop up messages once outside of Doc Mitchell's house.
+; JES 07/20/11 - Added the GRA Plasma Defender to our old friend ExplodesGasTrapsOnHit
+; JES 07/26/11 - Added the CZ57 Avenger to the Machine Gun List
+; JES 07/28/11 - Added Fat Mine and MFC Cluster to VATSBannedWeaponsList
+; JS 7/29/11 - Added faction to the Boomers' Munitions Manager, to reference it in the ownership of his GRA container.
+; JES 8.10.11 - All script-adds of DLC05 ammo types to formlists disabled to prevent hanged load with DLC05 ammo on hotkeyed weapons (directly added to base game formlists in DLC05 .esm)
+; JS 8/11/11 - Added WeapNVSilenced22SMG to the WeaponMachinegunLIST formlist.
+; JS 8/15/11 - Added the new NVDLC05WeapFatManCustom weapon to its pertinent formlists.
+
+Int		nDLCSetup;					; 1 = All initial formlist operations are complete; 2 = Unique Merchant Containers are moved, and assigned ownership; 3 = Generic merchant containers populated; 4 = Notification messages have been displayed. 5 = Done!
+Float	fTimer;						; Float var to calculate a small delay between loading the game, and receiving the notification messages.
+
+Short nEnableDLC;				;Allow the DLC messages to appear
+Float fStartTimer;					;Timer countdown for messages
+
+; JES - Challenge completion variables
+
+Int		nOneStarChallengesCompleted;
+Int		bOneStarChallengeAchievementGiven;
+Int		nTwoStarChallengesCompleted;
+Int		bTwoStarChallengeAchievementGiven;
+Int		nThreeStarChallengesCompleted;
+Int		bThreeStarChallengeAchievementGiven;
+
+
+BEGIN GameMode
+
+	If ( nDLCSetup == 0 )
+
+		AddFormToFormList NVAllWeapons NVDLC05Weap10mmSubmachineGunUnique;						---> NVAllWeapons.
+		AddFormToFormList NVAllWeapons NVDLC05Weap25mmGrenadeAPWCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapBaseballBatCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapFatmanCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapFatmanUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapFlamerUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapGatlingLaserUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapGrenadeTin;
+		AddFormToFormList NVAllWeapons NVDLC05WeapHuntingRifleUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapKatanaCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapGrenadeMFC;
+		AddFormToFormList NVAllWeapons NVDLC05WeapMineMFCCluster;
+		AddFormToFormList NVAllWeapons NVDLC05WeapMineFat;
+		AddFormToFormList NVAllWeapons NVDLC05WeapGrenadeNuka;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNV127mmPistolUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNV127mmSubmachineGunCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVAntiMaterielRifleCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVAssaultCarbineCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVBallisticFistUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVBattleRifleCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVBrushGunUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVChainsawCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVHuntingRevolverCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVLightMachineGunUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVMantisGauntletUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVPlasmaCasterUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVPlasmaDefenderCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVRebarClubUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVTimeBombCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapNVTriBeamLaserRifleCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapPlasmaPistolCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapPowerFistCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapPowerFistUnique;
+		AddFormToFormList NVAllWeapons NVDLC05WeapRipperCustom;
+		AddFormToFormList NVAllWeapons NVDLC05WeapShishkebabUnique;
+
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapGrenadeTin;								---> WeaponGrenadeMineLIST.
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapGrenadeMFC;
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapMineMFCCluster;
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapMineFat;
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapGrenadeNuka;
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC05WeapNVTimeBombCustom;
+
+		AddFormToFormList WeaponLauncherLIST NVDLC05WeapFatmanCustom;								---> WeaponLauncherLIST.
+		AddFormToFormList WeaponLauncherLIST NVDLC05WeapFatmanUnique;
+
+		AddFormToFormList WeaponMachineGunLIST NVDLC05Weap10mmSubmachineGunUnique;			---> WeaponMachineGunLIST.
+		AddFormToFormList WeaponMachineGunLIST NVDLC05WeapNVLightMachineGunUnique;
+		AddFormToFormList WeaponMachineGunLIST NVDLC05WeapNV127mmSubmachineGunCustom;
+		AddFormToFormList WeaponMachineGunLIST NVDLC05WeapNVAssaultCarbineCustom;
+		AddFormToFormList WeaponMachineGunLIST WeapNVMinigunUnique;
+		AddFormToFormList WeaponMachineGunLIST WeapNVSilenced22SMG;
+
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapNVBallisticFistUnique;						---> WeaponListMeleeALL.
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapNVMantisGauntletUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapNVRebarClubUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapPowerFistUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapShishkebabUnique;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapBaseballBatCustom;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapKatanaCustom;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapNVChainsawCustom;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapPowerFistCustom;
+		AddFormToFormList WeaponListMeleeALL NVDLC05WeapRipperCustom;
+
+		AddFormToFormList WeaponListRangedALL NVDLC05Weap10mmSubmachineGunUnique;			---> WeaponListRangedALL.
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapFatmanCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapFatmanUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapFlamerUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapGatlingLaserUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapHuntingRifleUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNV127mmPistolUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVBrushGunUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVLightMachineGunUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVPlasmaCasterUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList WeaponListRangedALL NVDLC05Weap25mmGrenadeAPWCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapGrenadeTin;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapGrenadeMFC;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapMineMFCCluster;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapMineFat;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapGrenadeNuka;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNV127mmSubmachineGunCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVAntiMaterielRifleCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVAssaultCarbineCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVBattleRifleCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVHuntingRevolverCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVPlasmaDefenderCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVTimeBombCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapNVTriBeamLaserRifleCustom;
+		AddFormToFormList WeaponListRangedALL NVDLC05WeapPlasmaPistolCustom;
+
+		AddFormToFormList WeaponsAutomaticMeleeLIST NVDLC05WeapNVChainsawCustom;				---> WeaponsAutomaticMeleeLIST.
+		AddFormToFormList WeaponsAutomaticMeleeLIST NVDLC05WeapRipperCustom;
+
+		AddFormToFormList WeaponRiflesLIST NVDLC05WeapHuntingRifleUnique;								---> WeaponRiflesLIST.
+		AddFormToFormList WeaponRiflesLIST NVDLC05WeapNVBrushGunUnique;
+		AddFormToFormList WeaponRiflesLIST NVDLC05WeapNVAntiMaterielRifleCustom;
+		AddFormToFormList WeaponRiflesLIST NVDLC05WeapNVAssaultCarbineCustom;
+		AddFormToFormList WeaponRiflesLIST NVDLC05WeapNVBattleRifleCustom;
+
+		AddFormToFormList EnergyWeapons NVDLC05WeapFlamerUnique;										---> EnergyWeapons.
+		AddFormToFormList EnergyWeapons NVDLC05WeapGatlingLaserUnique;
+		AddFormToFormList EnergyWeapons NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList EnergyWeapons NVDLC05WeapNVPlasmaCasterUnique;
+		AddFormToFormList EnergyWeapons NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList EnergyWeapons NVDLC05WeapNVPlasmaDefenderCustom;
+		AddFormToFormList EnergyWeapons NVDLC05WeapNVTriBeamLaserRifleCustom;
+		AddFormToFormList EnergyWeapons NVDLC05WeapPlasmaPistolCustom;
+
+		AddFormToFormList FistWeaponsLIST NVDLC05WeapNVBallisticFistUnique;								---> FistWeaponsLIST.
+		AddFormToFormList FistWeaponsLIST NVDLC05WeapNVMantisGauntletUnique;
+		AddFormToFormList FistWeaponsLIST NVDLC05WeapPowerFistUnique;
+		AddFormToFormList FistWeaponsLIST NVDLC05WeapPowerFistCustom;
+
+		AddFormToFormList VPoisonWeapons NVDLC05WeapKatanaCustom;										---> VPoisonWeapons.
+		AddFormToFormList VPoisonWeapons NVDLC05WeapNVMantisGauntletUnique;
+
+		AddFormToFormList NVHoldoutWeapons NVDLC05WeapGrenadeTin;										---> NVHoldoutWeapons.
+		AddFormToFormList NVHoldoutWeapons NVDLC05WeapGrenadeMFC;
+		AddFormToFormList NVHoldoutWeapons NVDLC05WeapGrenadeNuka;
+		AddFormToFormList NVHoldoutWeapons NVDLC05WeapNV127mmPistolUnique;
+
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapLaserPistolCustom;					---> NVImprovedHoldoutWeapons.
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapPlasmaPistolCustom;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapRipperCustom;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapPowerFistCustom;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapPowerFistUnique;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapNVTimeBombCustom;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05Weap10mmSubmachineGunUnique;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapMineMFCCluster;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapMineFat;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapNVBallisticFistUnique;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC05WeapNV556mmPistolCustom;
+
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapFatmanCustom;								---> ExplodesGasTrapsOnHit.
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapFatmanUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapFlamerUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapGatlingLaserUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVPlasmaCasterUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVRebarClubUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapShishkebabUnique;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05Weap25mmGrenadeAPWCustom;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapGrenadeTin;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapGrenadeMFC;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapMineMFCCluster;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapMineFat;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapGrenadeNuka;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVTimeBombCustom;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVTriBeamLaserRifleCustom;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapPlasmaPistolCustom;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC05WeapNVPlasmaDefenderCustom;
+
+		AddFormToFormList BeamChallengeWeaponList NVDLC05WeapNVTriBeamLaserRifleCustom;		---> BeamChallengeWeaponList.
+
+		AddFormToFormList LaserCommanderWeaponsList NVDLC05WeapNVTriBeamLaserRifleCustom;		---> LaserCommanderWeaponsList.
+		AddFormToFormList LaserCommanderWeaponsList NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList LaserCommanderWeaponsList NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList LaserCommanderWeaponsList NVDLC05WeapGatlingLaserUnique;
+
+		AddFormToFormList OldVaqueroWeapons NVDLC05WeapNVHuntingRevolverCustom;					---> OldVaqueroWeapons.
+		AddFormToFormList OldVaqueroWeapons NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList OldVaqueroWeapons NVDLC05WeapNVBrushGunUnique;
+
+		AddFormToFormList PerkCowboyWeapons NVDLC05WeapNVHuntingRevolverCustom;					---> PerkCowboyWeapons.
+		AddFormToFormList PerkCowboyWeapons NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList PerkCowboyWeapons NVDLC05WeapNVBrushGunUnique;
+
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05Weap25mmGrenadeAPWCustom;		---> PerkDemolitionExpertWeapons.
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapGrenadeMFC;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapMineMFCCluster;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapMineFat;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapFatmanCustom;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapFatmanUnique;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapNVTimeBombCustom;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapGrenadeNuka;
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC05WeapGrenadeTin;
+
+		AddFormToFormList PerkLooseCannonWeapons NVDLC05WeapGrenadeMFC;							---> PerkLooseCannonWeapons.
+		AddFormToFormList PerkLooseCannonWeapons NVDLC05WeapMineMFCCluster;
+		AddFormToFormList PerkLooseCannonWeapons NVDLC05WeapGrenadeNuka;
+		AddFormToFormList PerkLooseCannonWeapons NVDLC05WeapGrenadeTin;
+
+		AddFormToFormList PerkPyromaniacWeapons NVDLC05WeapFlamerUnique;							---> PerkPyromaniacWeapons.
+		AddFormToFormList PerkPyromaniacWeapons NVDLC05WeapShishkebabUnique;
+
+		AddFormToFormList PlasmaSpazWeaponList NVDLC05WeapNVPlasmaDefenderCustom;				---> PlasmaSpazWeaponList.
+		AddFormToFormList PlasmaSpazWeaponList NVDLC05WeapPlasmaPistolCustom;
+		AddFormToFormList PlasmaSpazWeaponList NVDLC05WeapNVPlasmaCasterUnique;
+		AddFormToFormList PlasmaSpazWeaponList NVDLC05WeapGrenadeMFC;
+		AddFormToFormList PlasmaSpazWeaponList NVDLC05WeapMineMFCCluster;
+
+		AddFormToFormList SupermutantWeapons NVDLC05WeapNVAssaultCarbineCustom;					---> SupermutantWeapons.
+		AddFormToFormList SupermutantWeapons NVDLC05WeapGatlingLaserUnique;
+		AddFormToFormList SupermutantWeapons NVDLC05WeapNVRebarClubUnique;
+		AddFormToFormList SupermutantWeapons NVDLC05WeapHuntingRifleUnique;
+		AddFormToFormList SupermutantWeapons NVDLC05WeapBaseballBatCustom;
+
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05Weap10mmSubmachineGunUnique;		---> TheProfessionalWeaponsList.
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNV127mmPistolUnique;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNVRechargerPistolUnique;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNV127mmSubmachineGunCustom;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNVHuntingRevolverCustom;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapLaserPistolCustom;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapNVPlasmaDefenderCustom;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC05WeapPlasmaPistolCustom;
+
+		; JES 8.10.11 - All script-adds of DLC05 ammo types to formlists disabled to prevent hanged load with DLC05 ammo on hotkeyed weapons (directly added to base game formlists in DLC05 .esm)
+
+		; AddFormToFormList AmmoList127mm NVDLC05Ammo127mmJHPHandLoad;								---> AmmoList127mm
+
+		; AddFormToFormList AmmoList12Ga NVDLC05Ammo12Ga40Buck;											---> AmmoList12Ga.
+		; AddFormToFormList AmmoList12Ga NVDLC05Ammo12Ga40BuckMagnum;
+		; AddFormToFormList AmmoList12Ga NVDLC05Ammo12GaDragonsBreath;
+		; AddFormToFormList AmmoList12Ga NVDLC05Ammo12GaFlechette;
+		; AddFormToFormList AmmoList12Ga NVDLC05Ammo12GaPulseSlug;
+
+		; AddFormToFormList AmmoList20Ga NVDLC05Ammo20Ga30Buck;											---> AmmoList20Ga.
+		; AddFormToFormList AmmoList20Ga NVDLC05Ammo20Ga30BuckMagnum;
+		; AddFormToFormList AmmoList20Ga NVDLC05Ammo20GaPulseSlug;
+
+		; AddFormToFormList AmmoList25mmGrenade NVDLC05Ammo25mmGrenadePlasma;					---> AmmoList25mmGrenade.
+		; AddFormToFormList AmmoList25mmGrenade NVDLC05Ammo25mmGrenadePulse;
+		; AddFormToFormList AmmoList25mmGrenade NVDLC05Ammo25mmGrenadeTimed;
+
+		; AddFormToFormList AmmoList40mmGrenade NVDLC05Ammo40mmGrenadePlasma;					---> AmmoList40mmGrenade.
+		; AddFormToFormList AmmoList40mmGrenade NVDLC05Ammo40mmGrenadePulse;
+
+		; AddFormToFormList AmmoList50MG NVDLC05Ammo50MGExplosive;										---> AmmoList50MG.
+
+		; AddFormToFormList AmmoList556mm NVDLC05Ammo556mmMatchHandLoad;							---> AmmoList556mm.
+
+		; AddFormToFormList AmmoList5mm NVDLC05Ammo5mmJSPHandLoad;									---> AmmoList5mm.
+
+		; AddFormToFormList AmmoList9mm NVDLC05Ammo9mmJHPHandLoad;									---> AmmoList9mm.
+
+		; AddFormToFormList AmmoListElectronChargePack NVDLC05AmmoElectronChargePackOptimized;	---> AmmoListElectronChargePack.
+
+		; AddFormToFormList AmmoListFlamerFuel NVDLC05AmmoFlamerFuelOptimized;							---> AmmoListFlamerFuel.
+
+		; AddFormToFormList AmmoListMicroFusionCell NVDLC05AmmoMicroFusionCellOptimized;			---> AmmoListMicroFusionCell.
+
+		; AddFormToFormList AmmoListMissile NVDLC05AmmoMissileHive;											---> AmmoListMissile.
+
+		; AddFormToFormList AmmoListSmallEnergyCell NVDLC05AmmoSmallEnergyCellOptimized;			---> AmmoListSmallEnergyCell.
+
+		; AddFormToFormList LibertyPrimeWeapons NVDLC05AmmoFatMansBigKid;								---> LibertyPrimeWeapons. (formlist for Fat Man ammo types)
+		; AddFormToFormList LibertyPrimeWeapons NVDLC05AmmoFatMansLowYield;
+		; AddFormToFormList LibertyPrimeWeapons NVDLC05AmmoFatMansTimed;
+		; AddFormToFormList LibertyPrimeWeapons NVDLC05AmmoFatMansTinyTots;
+
+		; JES 07.28.11 - Mines for GRA needed to be added to the VATSBannedWeaponsList so they can't be used in VATS (durrrrrrrr)
+
+		AddFormToFormList VATSBannedWeaponsList NVDLC05WeapMineMFCCluster;
+		AddFormToFormList VATSBannedWeaponsList NVDLC05WeapMineFat;
+
+		; JES 05.04.11 - Adding 5.56mm Pistol to That Gun repair list (hijacked empty formlist) and Battle Rifle to This Machine repair list (same)
+
+		AddFormToFormList NPCAndaleResidentLIST NVDLC05WeapNV556mmPistolCustom;
+		AddFormToFormList NPCArefuResidentLIST NVDLC05WeapNVBattleRifleCustom;
+
+		; JSH 04/15/11 - Bullet-proofing Gun Runner vendor.
+
+		; Robotics Expert exemption applied.
+		SetEssential GunRunnerProtectron 1;
+
+		; Make the Vendorton ignore any hits from the player (like explosions).
+		VendortronREF.AddToFaction NVDLC05VendortronFaction 1;
+		SetAlly PlayerFaction NVDLC05VendortronFaction 1 1;
+		VendortronREF.SetIgnoreFriendlyHits 1;
+
+		; Stand down, Vendortron!
+		If ( VendortronREF.IsInCombat == 1 )
+			VendortronREF.StopCombat;
+			VendortronREF.ResetAI;
+		EndIf
+
+		; If Vendortron was disabled by Robotics Expert, wake him up.
+		If ( VendortronREF.GetUnconscious == 1 )
+			VendortronREF.SetUnconscious 0;
+		EndIf
+
+		; Back in your kiosk!
+		If ( VendortronREF.GetPos X != -11064.08 ) || ( VendortronREF.GetPos Y != 98436.95 ) || ( VendortronREF.GetPos Z != 4369.02 )
+			VendortronREF.SetPos X -11064.08;
+			VendortronREF.SetPos Y 98436.95;
+			VendortronREF.SetPos Z 4369.02;
+		EndIf	
+		; End bullet-proofing.
+
+		BoomerMunitionsManagerREF.AddToFaction NVDLC05BoomerVendorFaction 1;							; JS (7/29/11) - Added new vendor faction to the Boomers' Munitions Manager. This is used in the ownership of his GRA container.
+
+		Set nDLCSetup To 2;
+		Return;
+
+	ElseIf ( nDLCSetup == 2 )																									; Here, we set up unique merchant containers, moving them to appropriate cells, and setting ownership if necessary.
+																																		; Also, note that some containers are moved to the Vendortron if the original owner is dead, or in permanent hostile state to the Player, when the script runs.
+																																		; This is a safeguard against losing weapons due to prior actions. But if players mess with the original owners after installing the DLC then all bets are off.
+
+		; Example:
+		; NVDLC05UniqueContainer01REF.MoveTo OwnerMerchantRefID (If in interior, or different worldspace than WastelandNV, do a MoveTo VendorREF first).
+		; NVDLC05UniqueContainer01REF.SetPos X; (Do the same for Y, and Z, axis).
+		; NVDLC05UniqueContainer01REF.SetOwnership OwnerMerchantFormID; (not ref, but Base Form ID)
+
+		NVDLC05VendorContainerGunRunnersREF.MoveTo VendortronREF;
+		NVDLC05VendorContainerGunRunnersREF.SetPos X -11064;
+		NVDLC05VendorContainerGunRunnersREF.SetPos Y 98438;
+		NVDLC05VendorContainerGunRunnersREF.SetPos Z 4170;
+
+		NVDLC05VendorContainerUniqueGunRunnersREF.MoveTo VendortronREF;
+		NVDLC05VendorContainerUniqueGunRunnersREF.SetPos X -11064;
+		NVDLC05VendorContainerUniqueGunRunnersREF.SetPos Y 98500;
+		NVDLC05VendorContainerUniqueGunRunnersREF.SetPos Z 4170;
+
+		If (FreesideMickREF.GetDead == 1)
+			NVDLC05VendorContainerMickAndRalphREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerMickAndRalphREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos X -11064;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos Y 98438;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos Z 4170;
+
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos X -11064;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos Y 98500;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos Z 4170;
+		Else
+			NVDLC05VendorContainerMickAndRalphREF.MoveTo SecretSalesMarkerREF;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos X 3900;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos Y 500;
+			NVDLC05VendorContainerMickAndRalphREF.SetPos Z 8700;
+
+			NVDLC05VendorContainerUniqueMickAndRalphREF.MoveTo SecretSalesMarkerREF;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos X 3900;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos Y 500;
+			NVDLC05VendorContainerUniqueMickAndRalphREF.SetPos Z 8600;
+		Endif
+
+		NVDLC05VendorContainer188NCRREF.MoveTo TradingPostTentMarker;
+		NVDLC05VendorContainer188NCRREF.SetPos X 28665;
+		NVDLC05VendorContainer188NCRREF.SetPos Y 30585;
+		NVDLC05VendorContainer188NCRREF.SetPos Z 5311;
+
+		NVDLC05VendorContainer188AlexanderREF.MoveTo TradingPostTentMarker;
+		NVDLC05VendorContainer188AlexanderREF.SetPos X 30035;
+		NVDLC05VendorContainer188AlexanderREF.SetPos Y 32985;
+		NVDLC05VendorContainer188AlexanderREF.SetPos Z 4850;
+
+		If (CliffBriscoeREF.GetDead == 1)
+			NVDLC05VendorContainerCliffBriscoeREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerCliffBriscoeREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos X -11064;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos Y 98438;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos Z 4170;
+
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos X -11064;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos Y 98500;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos Z 4170;
+		Else
+			NVDLC05VendorContainerCliffBriscoeREF.MoveTo XMarkerBoonePatrolGiftShop;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos X 2040;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos Y 851;
+			NVDLC05VendorContainerCliffBriscoeREF.SetPos Z 8760;
+
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.MoveTo XMarkerBoonePatrolGiftShop;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos X 2040;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos Y 651;
+			NVDLC05VendorContainerUniqueCliffBriscoeREF.SetPos Z 8760;
+		Endif
+
+		NVDLC05VendorContainerLaceyREF.MoveTo CassHomeMarkerREF;
+		NVDLC05VendorContainerLaceyREF.SetPos X 2072;
+		NVDLC05VendorContainerLaceyREF.SetPos Y 2304;
+		NVDLC05VendorContainerLaceyREF.SetPos Z 9128;
+
+		If (vCassCompanion.bKilledVanGraffs == 1 || GetPCEnemyOfFaction VanGraffFaction == 1)
+			NVDLC05VendorContainerVanGraffsREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerVanGraffsREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerVanGraffsREF.SetPos X -11064;
+			NVDLC05VendorContainerVanGraffsREF.SetPos Y 98438;
+			NVDLC05VendorContainerVanGraffsREF.SetPos Z 4170;
+
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerUniqueVanGraffsREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos X -11064;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos Y 98500;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos Z 4170;
+		Else
+			NVDLC05VendorContainerVanGraffsREF.MoveTo VFSSilverRushBehindCounterMarkerREF;
+			NVDLC05VendorContainerVanGraffsREF.SetPos X 3587;
+			NVDLC05VendorContainerVanGraffsREF.SetPos Y -2964;
+			NVDLC05VendorContainerVanGraffsREF.SetPos Z 500;
+
+			NVDLC05VendorContainerUniqueVanGraffsREF.MoveTo VFSSilverRushBehindCounterMarkerREF;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos X 3300;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos Y -2964;
+			NVDLC05VendorContainerUniqueVanGraffsREF.SetPos Z 500;
+		Endif
+
+		NVDLC05VendorContainerChetREF.MoveTo GSChetRef;
+		NVDLC05VendorContainerChetREF.SetPos X -593;
+		NVDLC05VendorContainerChetREF.SetPos Y 535;
+		NVDLC05VendorContainerChetREF.SetPos Z 300;
+
+		NVDLC05VendorContainerJohnsonNashREF.MoveTo VickyVanceBankXMarkerref;
+		NVDLC05VendorContainerJohnsonNashREF.SetPos X 1150;
+		NVDLC05VendorContainerJohnsonNashREF.SetPos Y 4200;
+		NVDLC05VendorContainerJohnsonNashREF.SetPos Z 7000;
+
+		If (TorresREF.GetDead == 1 || (GetPCEnemyOfFaction BrotherhoodSteelFaction == 1 && GetStage VMS55 > 0) || VStoryEventBos == 2 || GetReputationThreshold RepNVBrotherhood 2 >= 2)
+			NVDLC05VendorContainerBrotherhoodREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerBrotherhoodREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos X -11064;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos Y 98438;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos Z 4170;
+
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetOwnership NVDLC05VendortronFaction;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.MoveTo VendortronREF;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos X -11064;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos Y 98500;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos Z 4170;
+		Else
+			NVDLC05VendorContainerBrotherhoodREF.MoveTo VendorContainerTorresREF;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos X 450;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos Y -8100;
+			NVDLC05VendorContainerBrotherhoodREF.SetPos Z 14400;
+
+			NVDLC05VendorContainerUniqueBrotherhoodREF.MoveTo VendorContainerTorresREF;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos X 250;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos Y -8100;
+			NVDLC05VendorContainerUniqueBrotherhoodREF.SetPos Z 14400;
+		Endif
+
+		NVDLC05VendorContainerBoomersREF.MoveTo NellisJanetMarker3;
+		NVDLC05VendorContainerBoomersREF.SetPos X 1137;
+		NVDLC05VendorContainerBoomersREF.SetPos Y 1304;
+		NVDLC05VendorContainerBoomersREF.SetPos Z -200;
+
+		NVDLC05VendorContainerDaleBartonREF.MoveTo FromSecondaryCampMarker;
+		NVDLC05VendorContainerDaleBartonREF.SetPos X 96563;
+		NVDLC05VendorContainerDaleBartonREF.SetPos Y 41549;
+		NVDLC05VendorContainerDaleBartonREF.SetPos Z 5520;
+
+		Set nDLCSetup To 3;
+		Return;
+
+	ElseIf ( nDLCSetup == 3 )																									; Here, we set up generic merchants, by adding leveled lists to their respective containers, or to their leveled lists.
+																																		; Actually, changed my mind ;). Generic traveler mechants have received their items directly into their vendor containers.
+																																		; This prevents excessive propagation of items through generic lists, or disappearing items after cell respawns (items added through script do NOT respawn in a container).
+
+		; Example:
+		;AddItemToLeveledList GenericVendorAmmoList NVDLC05GenericAmmoList 1 1 1; (This adds a NVDLC05 generic ammo list to an NV generic vendor ammo list. The parameters are: 1 = level at which the list/item is available; 2 = amount of lists/items to add; 3 = condition of list/item).
+
+		;VendorContainerWastelandMerchant02REF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerWastelandMerchant02REF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerWastelandMerchant02REF.AddItem NVDLC05VendorWeapRandom 1;
+
+		;VendorContainerWastelandMerchant01REF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerWastelandMerchant01REF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerWastelandMerchant01REF.AddItem NVDLC05VendorWeapRandom 1;
+
+		;VendorContainerPrimmDenMerchantREF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerPrimmDenMerchantREF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerPrimmDenMerchantREF.AddItem NVDLC05VendorWeapRandom 1;
+
+		;VendorContainerNovacWastesMerchantREF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerNovacWastesMerchantREF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerNovacWastesMerchantREF.AddItem NVDLC05VendorWeapRandom 1;
+
+		;VendorContainerNVTownMerchantREF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerNVTownMerchantREF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerNVTownMerchantREF.AddItem NVDLC05VendorWeapRandom 1;
+
+		;VendorContainerMojaveOutpostMerchantREF.AddItem NVDLC05VendorAmmoRandom 1;
+		;VendorContainerMojaveOutpostMerchantREF.AddItem NVDLC05VendorModRandom 1;
+		;VendorContainerMojaveOutpostMerchantREF.AddItem NVDLC05VendorWeapRandom 1;
+
+		SetQuestDelay NVDLC05MQ00 5;
+		Set nDLCSetup To 4;
+		Return;
+
+	ElseIf ( nDLCSetup == 4 )
+
+		If (nEnableDLC == 0)
+			If (Player.GetInCell GSDocMitchellHouse == 0 && getquestcompleted VCG01)
+				Set nEnableDLC to 1;
+				Set fStartTimer to 5;
+			EndIf
+		ElseIf (nEnableDLC == 1)
+			If (fStartTimer <= 0)
+				ShowMessage NVDLC05LoadMessage01;
+				ShowMessage NVDLC05LoadMessage02;
+				Set nEnableDLC to 2;
+				Set nDLCSetup To 5;
+				StopQuest NVDLC05MQ00;
+			Else
+				Set fStartTimer to (fStartTimer - GetSecondsPassed);
+			EndIf
+		EndIf
+
+	EndIf
+
+END

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0602B8EA">Cerberus</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Cerberus</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-26</X>
+        <Y>-26</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>26</X>
+        <Y>26</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Cerberus</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\MisterGutsy\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88C">MrGutsyDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>BrainGutsy.NIF</Entry>
+      <Entry>FXMrHandyJetAddOn.NIF</Entry>
+      <Entry>GutsyflameTank(army).NIF</Entry>
+      <Entry>GutsyflameThrower(army).NIF</Entry>
+      <Entry>Gutsyfrontclaw.NIF</Entry>
+      <Entry>GutsyPlasmaGun(army).NIF</Entry>
+      <Entry>GutsyPlasmaPack(army).NIF</Entry>
+      <Entry>MisterGutsy.NIF</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">CAAAAAP58wttNJD6aHlzC205kPpoeXMedMQcaazu3w1temUDM25fDW1/ZQMzeXMedMQcaazz3w1temUDM3NfDW1/ZQMzeXMedMQcaawD5fQHZkXSDphldAdmStIOmHN0EHSz4clt7t8OZl2ZtxpuXw5mYpm3GnN0EHSz4clt8uUNZsB5e3RyZQ1mxXl7dHN0EHSz4cltA6n5GG07VorFKXkYbUBWisV5cx50xBxprO7fGm0rmYi7bl8abTCZiLt5cx50xBxprPPfGm0rmYi7c18abTCZiLt5cx50xBxprAOp+RhtO1aKxSl5GG1AVorFeXMedMQcaazu3xptK5mIu25fGm0wmYi7eXMedMQcaazz3xptK5mIu3NfGm0wmYi7eXMedMQcaawE+fMLbTSQ+mh5cwttOZD6aHlzHnTEHGms7t8NbXplAzNuXw1tf2UDM3lzHnTEHGms898NbXplAzNzXw1tf2UDM3lzHnTEHGms598LbR5L/itnXwttI0v+K3lkHnRTJ9OsCOX0B2ZF0g6YZXQHZkrSDphzdBB0s+HJbe7fDmZdmbcabl8OZmKZtxpzdBB0s+HJbfPfDmZdmbcac18OZmKZtxpzdBB0s+HJbeXfDXOrGjp/ZV8Nc7AaOn9zdBB0s+HJbfTsCWYjf+wpdGwJZih/7ClzdBB0s+HJban5GG07VorFKXkYbUBWisV5cx50xBxprO7fGm0rmYi7bl8abTCZiLt5cx50xBxprPPfGm0rmYi7c18abTCZiLt5cx50xBxprAOp+RhtO1aKxSl5GG1AVorFeXMedMQcaazu3xptK5mIu25fGm0wmYi7eXMedMQcaazz3xptK5mIu3NfGm0wmYi7eXMedMQcaawH+fMLbTSQ+mh5cwttOZD6aHlzHnTEHGms7t8NbXplAzNuXw1tf2UDM3lzHnTEHGms898NbXplAzNzXw1tf2UDM3lzHnTEHGms598LbR5L/itnXwttI0v+K3lkHnRTJ9Os8OEMaPv0AjdwYQxoAPUCN2VyDXQ4ejhx7t8OaErSBR1uXw5oT9IFHWVyDXQ4ejhx898OaErSBR1zXw5oT9IFHWVyDXQ4ejhx</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Flies, Walks, AllowPCDialogue</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>9</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseActorEffectList, UseModelAnimation, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000C8690">UnderworldCerebusFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95F">DeathItemMrGutsy75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FDD">RobotMisterGutsy02</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="00021EBD">CrMisterGutsy</Reference>
+    </Template>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029372">AmmoFlamerFuel75</Item>
+          <Count>32</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029377">AmmoSmallEnergyCell75</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029642">ClipFlamer60</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003954F">MisterGutsyPlasma1HP</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00039550">MisterGutsyFlamer2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00031969">UnderworldCerberusPatrolConcourse0x24</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>1hpaim.kf</Entry>
+      <Entry>1hpaimdown.kf</Entry>
+      <Entry>1hpaimup.kf</Entry>
+      <Entry>1hpattackright.kf</Entry>
+      <Entry>1hpequip.kf</Entry>
+      <Entry>1hpholster.kf</Entry>
+      <Entry>1hpunequip.kf</Entry>
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlattackspin.kf</Entry>
+      <Entry>2hlattackspindown.kf</Entry>
+      <Entry>2hlattackspinup.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlholster.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>70</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>75</Health>
+      <Damage>23</Damage>
+      <Strength>5</Strength>
+      <Perception>6</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A377">CSMisterGutsy</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00036C17">MRGutsyBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">40</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0004D036">AudioTemplateRobotMrHandy</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0005FD3F">PipeImpactSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

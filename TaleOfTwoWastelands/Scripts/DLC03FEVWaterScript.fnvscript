@@ -1,0 +1,17 @@
+ScriptName DLC03FEVWaterScript
+
+Begin ScriptEffectStart
+	If DLC03CreatorQuest.FEVaquaPuraCount >= 3
+		Player.Kill
+	Else
+		set DLC03CreatorQuest.FEVaquaPuraCount to DLC03CreatorQuest.FEVaquaPuraCount + 1
+		set AchievementQuest.FEVaquaPuraDays to AchievementQuest.FEVaquaPuraDays + GameDaysPassed + 2
+		if DLC03CreatorQuest.FEVaquaPuraCount == 1
+			ShowMessage DLC03FEVwaterMsg01
+		elseif DLC03CreatorQuest.FEVaquaPuraCount == 2
+			ShowMessage DLC03FEVwaterMsg02
+		else
+			ShowMessage DLC03FEVwaterMsg
+		endif
+	EndIf
+End

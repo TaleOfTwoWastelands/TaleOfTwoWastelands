@@ -1,0 +1,51 @@
+ScriptName TTWUnStnReactorSCRIPT
+
+short button
+short checkButtons
+short bFixed
+
+Begin OnActivate
+	if (IsActionRef Player == 1)
+		if (GetObjectiveCompleted TTWUnStnPowerQuest 17 == 0)
+			if (Player.GetItemCount TTWUnStnReactorPrimer == 0)
+				SetObjectiveDisplayed TTWUnStnPowerQuest 17 1
+			else
+				SetObjectiveCompleted TTWUnStnPowerQuest 17 1
+			endif
+		endif
+		ShowMessage TTWUnStnReactorBrokeMsg
+		set checkButtons to 1
+	endif
+End
+
+Begin gameMode			
+	if (checkButtons == 1)
+		set button to getbuttonpressed
+		if (button == 0)
+			if (player.GetItemCount TTWUnStnReactorPrimer > 0)
+				ShowMessage TTWUnStnReactorFixedMsg
+				Player.removeitem TTWUnStnReactorPrimer 1
+				set bFixed to 1
+			else
+				ShowMessage TTWUnStnReactorFailedNoItemMsg
+			endif
+		elseif (button == 1)
+			if (Player.GetActorValue Repair >= 50)
+				ShowMessage TTWUnStnReactorFixedMsg
+				set bFixed to 1
+			else
+				ShowMessage TTWUnStnReactorFailedNoSkillMsg
+			endif
+		elseif (button == 2)
+			; don't do anything
+		endif
+
+		if (bFixed == 1)
+			SetObjectiveCompleted TTWUnStnPowerQuest 16 1
+			SetObjectiveDisplayed TTWUnStnPowerQuest 15 1	; force this to be shown again to remind them, just because :P
+			set TTWUnStnPowerQuest.bReactorPrimed to 1
+			SetDestroyed 1
+		endif
+		set checkButtons to 0
+	endif
+End

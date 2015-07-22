@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0C011FE2">TTWUnStnPowerQuest</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWUnStnPowerQuest</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0C011FE6">TTWUnStnPowerQuestSCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Union Station</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Find the mapmarker</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgUAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed TTWUnStnPowerQuest 5 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C011FE2">TTWUnStnPowerQuest</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Restore the Power</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgUAAABuAQAAAKMRDwADAHIBAG4KAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted TTWUnStnPowerQuest 5 1
+SetObjectiveDisplayed TTWUnStnPowerQuest 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C011FE2">TTWUnStnPowerQuest</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">DREKAAIAcgEAbgAAAACtEQUAAQByAgBxEAUAAQByAgA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetQuestObject TTWUnStnReactorPrimer 0
+CompleteAllObjectives TTWUnStnPowerQuest
+CompleteQuest TTWUnStnPowerQuest</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C011FD0">TTWUnStnReactorPrimer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0C011FE2">TTWUnStnPowerQuest</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Restore power to the station.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Turn the breakers back on.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C014014">TTWUnStnPowerSwitch04REF</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDestroyed</Type>
+                  <UnusedArg1>P8MDDQ==</UnusedArg1>
+                  <UnusedArg2>BQAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0C014016">TTWUnStnPowerSwitch01REF</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C014013">TTWUnStnPowerSwitch03REF</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDestroyed</Type>
+                  <UnusedArg1>P8MDDQ==</UnusedArg1>
+                  <UnusedArg2>BAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0C014013">TTWUnStnPowerSwitch03REF</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C014015">TTWUnStnPowerSwitch02REF</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDestroyed</Type>
+                  <UnusedArg1>P8MDDQ==</UnusedArg1>
+                  <UnusedArg2>AwAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0C014015">TTWUnStnPowerSwitch02REF</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C014016">TTWUnStnPowerSwitch01REF</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDestroyed</Type>
+                  <UnusedArg1>P8MDDQ==</UnusedArg1>
+                  <UnusedArg2>AgAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0C014016">TTWUnStnPowerSwitch01REF</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">27</Index>
+        <Description Tag="NNAM">2/4 Breakers Enabled.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">26</Index>
+        <Description Tag="NNAM">1/4 Breakers Enabled.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">29</Index>
+        <Description Tag="NNAM">4/4 Breakers Enabled.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Turn the reactor on.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C0127D6">REFR - 0C0127D6</Target>
+              <Flags>CompassMarkerIgnoresLocks</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">28</Index>
+        <Description Tag="NNAM">3/4 Breakers Enabled.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Go view the train schedule.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C01401D">REFR - 0C01401D</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">16</Index>
+        <Description Tag="NNAM">Reprime the reactor.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C01280C">TTWUnStationReactorPrimeDeviceREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">17</Index>
+        <Description Tag="NNAM">(Optional) Obtain reactor primer.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C01283C">REFR - 0C01283C</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Find a entry to a trainstation</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0C013C6E">REFR - 0C013C6E</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

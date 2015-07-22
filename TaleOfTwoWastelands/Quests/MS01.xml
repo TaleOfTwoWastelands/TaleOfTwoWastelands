@@ -1,0 +1,1365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E94">MS01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS01</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0602B4FB">MS01QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Big Trouble in Big Town</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; this stage is set if you know about Red or Shorty
+; used to conditionalize "failure" objective appearing
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">start big town quest</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAQAAADkQCgACAHIBAG4FAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS01 10 1
+setstage MS01 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4UAAAAbgEAAAA5EAoAAgByAQBuBQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted MS01 10 1
+setObjectiveDisplayed MS01 20 1
+setstage MS01 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>33</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhkAAABuAQAAADkQCgACAHIBAG4FAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; in case you find Shorty first
+setObjectiveDisplayed MS01 25 1
+setstage MS01 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>150</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgMAbgUAAACjEQ8AAwByAwBuHgAAAG4BAAAAohEPAAMAcgMAbhQAAABuAQAAAKIRDwADAHIDAG4ZAAAAbgEAAABVEAUAAQByBAAVAAoAcgIAcwEAAgAgMRUACgByAgBzAgACACAxBBIHAAEAbmQAAAAcAAEAfxEKAAIAcgUAbgAAAAAcAAIAgBEFAAEAcgYA</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MS01 5
+setObjectiveDisplayed MS01 30 1
+setObjectiveCompleted MS01 20 1
+setObjectiveCompleted MS01 25 1
+ShowMap BigTownMapMarkerREF
+Set RedRef.rescued to 1
+Set RedRef.followingPlayer to 1
+rewardKarma 100
+; put player in allied faction
+player.addToFaction MS01RescueFaction 0
+; remove from Doctor faction until back at Big Town
+RedREF.removeFromFaction DoctorsDialogueFaction</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060032F3">BigTownMapMarkerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D9">MS01RescueFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D8">DoctorsDialogueFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAKIRDwADAHIBAG4UAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed MS01 40 1
+setObjectiveCompleted MS01 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>199</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgMAbgUAAACjEQ8AAwByAwBuLQAAAG4BAAAAohEPAAMAcgMAbhQAAABuAQAAAKIRDwADAHIDAG4oAAAAbgEAAABVEAUAAQByBAAVAAoAcgEAcwYAAgAgMRUACgByAQBzBwACACAxHAABAA8QCgACAAAAcgEAcwMAHAABAPMQBwABAG4AAAAAHAABAIARBQABAHIFAAQSBwABAG5kAAAAHAACAH8RCgACAHIGAG4AAAAAHAABAMoRAAAcAAEAFxAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MS01 5
+setObjectiveDisplayed MS01 45 1
+setObjectiveCompleted MS01 20 1
+setObjectiveCompleted MS01 40 1
+ShowMap BigTownMapMarkerREF
+set ShortyRef.rescued to 1
+set ShortyRef.followingPlayer to 1
+ShortyRef.setav Aggression ShortyRef.startingAggression
+ShortyRef.setRestrained 0
+ShortyRef.removeFromFaction MS01KitchenFaction
+rewardKarma 100
+; put player in allied faction
+player.addToFaction MS01RescueFaction 0
+; clear anything that he might be mad about
+ShortyREF.ClearActorsFactionsPlayerEnemyFlag
+ShortyREF.stopcombat
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060032F3">BigTownMapMarkerRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AB91">MS01KitchenFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D9">MS01RescueFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>30</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbhkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MS01 25</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>68</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEAdxEHAAEAbiwBAAAVAAoAcgIAcxAAAgAgMRUAEAByAQBmLwAIACBHAwAgMiArFQAKAHIBAHMuAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; finished rescue part of quest and got rewarded
+CompleteAllObjectives MS01
+rewardXP 300
+;addachievement 14
+set StickyRef.HasBigTownTopics to 1
+; set variables for when town should be killed if player leaves
+set MS01.killTownDay to GameDaysPassed + 2
+set MS01.killTown to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>196</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIKAHMCAAIAIDEcAAEAAhAKAAIAcgsAbgEAAAAcAAIAAhAKAAIAcgsAbgEAAAAcAAMAAhAKAAIAcgsAbgEAAAAcAAQAAhAKAAIAcgsAbgEAAAAcAAUAAhAKAAIAcgsAbgEAAAAcAAYAAhAKAAIAcgsAbgEAAAAcAAcAAhAKAAIAcgsAbgEAAAAcAAgAAhAKAAIAcgsAbgEAAAAcAAkAIRACAAAAFQAKAHIKAHMqAAIAIDEVAAoAcgoAcwgAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; teach guns
+set MS01.shoot to 1
+ShortyRef.addItem NPCsettlerGun 1
+BittercupRef.addItem NPCsettlerGun 1
+FlashRef.addItem NPCsettlerGun 1
+RedRef.addItem NPCsettlerGun 1
+PappyRef.addItem NPCsettlerGun 1
+TimebombRef.addItem NPCsettlerGun 1
+KimbaRef.addItem NPCsettlerGun 1
+StickyRef.addItem NPCsettlerGun 1
+;enable the shooting range havoc objects
+xMS01ShootingRangeToggle.enable
+set MS01.townMob to 1 ; make sure they don't do normal behavior
+set ms01.townEVP to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06027F12">BittercupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602802A">FlashREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06027FAA">PappyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602805B">TimebombREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06027F3D">KimbaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602E73A">xMS01ShootingRangeToggle</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022234">NPCSettlerGunDC</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">61</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMDAAIAIDEVAAoAcgEAcwgAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; teach sneak
+set MS01.sneak to 1
+set ms01.townEVP to 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">62</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>64</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">3BEOAAIAcgIAensUrkfheoQ/FQAKAHICAHMJAAIAIDEVAAoAcgIAcwgAAgAgMRwAAQACEAoAAgByAwBuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; teach mines
+setQuestDelay MS01 .01
+set ms01.Mine to 1
+set ms01.townEVP to 1
+player.additem weapMineFrag 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000433C">WeapMineFrag</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">63</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMHAAIAIDEVAAoAcgMAcwgAAgAgMRwAAQDMEAcAAQBuAAAAABwAAgDMEAcAAQBuAAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; teach robots
+set ms01.robot to 1
+set ms01.townEVP to 1
+MS01Protectron1Ref.setDestroyed 0
+MS01Protectron2Ref.setDestroyed 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602C11B">MS01Protectron1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D934">MS01Protectron2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">3BEOAAIAcgEAegAAAAAAAAAAFQAKAHIBAHMqAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; done teaching
+SetQuestDelay MS01 0  ; back to default
+set MS01.townMob to 1 ; make sure they don't do normal behavior
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>123</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbh4AAABuAQAAAKMRDwADAHIDAG4yAAAAbgEAAAAcAAEAfxEKAAIAcgQAbgAAAAAcAAEAfxEKAAIAcgUAbgAAAAAVAAoAcgEAcwMAAgAgMRUACgByAQBzAgACACAwHAABAFARAAAcAAIAgBEFAAEAcgYA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Red back in Big Town
+SetObjectiveCompleted MS01 30 1
+SetObjectiveDisplayed MS01 50 1
+RedREF.addToFaction DoctorsDialogueFaction 0
+RedREF.addToFaction BigTownFaction 0
+set RedREF.ArrivedAtBigTown to 1
+set RedREF.followingPlayer to 0
+RedREF.resethealth
+; remove player from allied faction
+player.RemoveFromFaction MS01RescueFaction
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D8">DoctorsDialogueFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AB90">BigTownFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D9">MS01RescueFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>92</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAH8RCgACAHICAG4AAAAAFQAKAHIBAHMHAAIAIDAVAAoAcgEAcwgAAgAgMaIRDwADAHIDAG4oAAAAbgEAAACiEQ8AAwByAwBuLQAAAG4BAAAAHAABAFARAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Shorty back in Big Town
+ShortyREF.addToFaction BigTownFaction 0
+set ShortyREF.followingPlayer to 0
+set ShortyREF.ArrivedAtBigTown to 1
+SetObjectiveCompleted MS01 40 1
+SetObjectiveCompleted MS01 45 1
+ShortyREF.resethealth
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002AB90">BigTownFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>80</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06025251">Red</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>13</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAIARBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; remove player from allied faction if Red is rescued or back
+player.RemoveFromFaction MS01RescueFaction
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000251D9">MS01RescueFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbh4AAABuAAAAAKMRDwADAHIBAG4yAAAAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Red has died
+;turn off objectives about Rescuing Red
+SetObjectiveDisplayed MS01 30 0
+SetObjectiveDisplayed MS01 50 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetScriptVar</Type>
+                  <Quest ID="06025252">RedRef</Quest>
+                  <VariableIndex>3</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>34</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAAoxEPAAMAcgIAbjEAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">ShowMessage MS01RedDied
+;turn on failure objective
+setObjectiveDisplayed MS01 49 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="000892B9">MS01RedDied</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetScriptVar</Type>
+                  <Quest ID="06025252">RedRef</Quest>
+                  <VariableIndex>3</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestCompleted</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbvoAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; fail quest in this case (Red's back, and died, and the quest isn't complete yet)
+setstage MS01 250</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">160</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAAAAAKMRDwADAHIBAG4tAAAAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Shorty has died
+;turn off objectives about Rescuing Shorty
+SetObjectiveDisplayed MS01 40 0
+SetObjectiveDisplayed MS01 45 0
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetScriptVar</Type>
+                  <Quest ID="06028029">ShortyREF</Quest>
+                  <VariableIndex>8</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>15</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">ShowMessage MS01ShortyDied</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006D917">MS01ShortyDied</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="06025251">Red</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbjEAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;turn on failure objective
+setObjectiveDisplayed MS01 49 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">180</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestCompleted</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="06014E94">MS01</Quest>
+                  <QuestStage>5</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>15</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">showMessage MS01QuestFailedMessage
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003CF4A">MS01QuestFailedMessage</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEANxAFAAEAcgEANxAFAAEAcgIA</CompiledScript>
+              <ScriptSource Tag="SCTX">; everyone in Big Town has died
+completeAllObjectives MS01
+stopquest ms01
+stopQuest MS01Crowd</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D954">MS01Crowd</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>63</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NhAFAAEAcgEABBIHAAEAbpYAAAAVABAAcgIAZiIACAAgRwMAIDEgKxUACgByAgBzNQACACAxrREFAAEAcgQA</CompiledScript>
+              <ScriptSource Tag="SCTX">;player has helped defend the town from Mutants
+;Quest is stopped after the cheering scene in MS01QuestScript
+startQuest MS01Fin
+rewardKarma 150
+Set RadioGalaxyNewsQuest.MS01Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+completeAllObjectives MS01
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602ECDC">MS01Fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">250</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>125</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgMAFQAQAHIEAGYiAAgAIEcFACAxICsVAAoAcgQAczUAAgAgMRYAFwABABMAIHIBAFhDEAUAAQByBgAgMSA9PRwAAQAiEAIAAAAZAAAAFgAXAAEAEwAgcgIAWEMQBQABAHIGACAxID09HAACACIQAgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Since killing Red / Shorty displays objectives, make sure we call this *before* killing them to avoid having the new objectives show up as Completed
+completeAllObjectives MS01
+Set RadioGalaxyNewsQuest.MS01Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+;just in case they aren't dead and the player tells the town he's not doing it
+if RedRef.getInCell GermPoliceHQ == 1
+    RedRef.disable
+endif
+if ShortyRef.getInCell GermPoliceHQ == 1
+    ShortyRef.disable
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602900C">GermPoliceHQ</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">251</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgEANxAFAAEAcgIAFQAQAHIDAGYiAAgAIEcEACAxICsVAAoAcgMAczUAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">;The player has turned his back on the town and they have been killed offscreen by mutants
+; NPC scripts handle killing them when this stage is set
+stopquest ms01
+stopQuest MS01Crowd
+Set RadioGalaxyNewsQuest.MS01Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D954">MS01Crowd</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">255</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>279</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMOAAIAIDEVAAoAcgEAcwsAAgAgMRUACgByAQBzAQACACAyHAABAJ4QBQABAHIEABUACgByAgBzAQACACAxFQAKAHICAHMCAAIAIDIcAAIAnhAFAAEAcgQAFQAMAHIDAHMCAAQAIDEgfhUACgByAwBzBgACACAxFQAKAHIDAHMIAAIAIDEVAAoAcgMAcwcAAgAgMhwAAwCeEAUAAQByBAAVAAoAcgUAcyQAAgAgMRUACgByBQBzKwACACAxORAKAAIAcgUAbhQAAAA5EAoAAgByBQBuHgAAADkQCgACAHIFAG4oAAAAORAKAAIAcgUAbi0AAAA5EAoAAgByBQBuMgAAADkQCgACAHIFAG7IAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;!!!!!!!!!!!!DEBUG END QUEST!!!!!!!!!!!!!!!!!!!!!!!!!
+;This sets up the quest as done so that Erik can test the packages etc. of Big Town people
+set StickyRef.playerEscorting to 1
+set stickyRef.arrivedAtBigTown to 1
+set StickyRef.followingPlayer to 2
+stickyRef.moveto xMS01BigTown
+
+set RedRef.rescued to 1
+set RedRef.followingPlayer to 2
+RedRef.moveto xMS01BigTown
+
+set ShortyRef.kitchenStage to -1
+set ShortyRef.rescued to 1
+set ShortyRef.arrivedAtBigTown to 1
+set ShortyRef.followingPlayer to 2
+ShortyRef.moveto xMS01BigTown
+
+set MS01.trained to 1
+set MS01.mutantsDealtWith to 1
+setStage MS01 20
+setStage MS01 30
+setStage MS01 40
+setStage MS01 45
+setStage MS01 50
+setStage MS01 200
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060295EE">StickyRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06025252">RedRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06028029">ShortyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602AB9D">xMS01BigTown</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E94">MS01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Rescue the Big Town captives from the Super Mutants.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0602AB9B">xMS01RedLockedUp</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0602900C">GermPoliceHQ</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Escort Red safely back to Big Town.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06028A72">BigtownCenterMARKER</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025252">RedRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>-1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetScriptVar</Type>
+                  <Quest ID="06025252">RedRef</Quest>
+                  <VariableIndex>2</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">[Optional] Rescue Shorty.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06028029">ShortyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">45</Index>
+        <Description Tag="NNAM">Escort Shorty safely back to Big Town</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06028A72">BigtownCenterMARKER</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06028029">ShortyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>-1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetScriptVar</Type>
+                  <Quest ID="06028029">ShortyREF</Quest>
+                  <VariableIndex>7</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Ask the people of Big Town about their captured friends.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">49</Index>
+        <Description Tag="NNAM">Explain Red's death to the people of Big Town.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06028A72">BigtownCenterMARKER</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Rescue Red.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025252">RedRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Speak to Red about your reward.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06025252">RedRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

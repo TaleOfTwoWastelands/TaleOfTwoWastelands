@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06060C72">ArmorPowerHelmetOutcast</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorPowerHelmetOutcast</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-12</X>
+        <Y>-9</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>14</Y>
+        <Z>19</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Outcast T-45d Power Helmet</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D331">EnchPowerArmorHelmet</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Head, Hair, Headband, Hat, Eyeglasses, Mask</Slots>
+      <Flags>-842150624</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\PowerArmor\Helmet.NIF</FileName>
+          <TextureHashes Tag="MODT">9OUQcI059Id0ZRBwkjn0h3JhF3RrmCVO7t8ScNzufcluXxJw4e59yXJhF3RrmCVO898ScNzufclzXxJw4e59yXJhF3RrmCVOsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>PAHelmet	:0</Name>
+                <TextureSet ID="06060C71">OutcastPowerArmorHelmet</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\PowerArmor\PowerArmorHelmetGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">9OUQcI059Id0ZRBwkjn0h3JhF3RrmCVO7t8ScNzufcluXxJw4e59yXJhF3RrmCVO898ScNzufclzXxJw4e59yXJhF3RrmCVO</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>PAHelmetGO:0</Name>
+                <TextureSet ID="06060C71">OutcastPowerArmorHelmet</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_power_armor_helmet.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_power_armor_helmet.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="0007520B">RepairPowerArmorHelmet</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>1300</Value>
+      <MaxCondition>75</MaxCondition>
+      <Weight>5</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>ModulatesVoice</Flags>
+      <DamageThreshold>5</DamageThreshold>
+      <Unknown>AQAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

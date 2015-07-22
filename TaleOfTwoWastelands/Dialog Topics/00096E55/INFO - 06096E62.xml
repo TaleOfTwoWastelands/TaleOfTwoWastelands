@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06096E62">INFO - 06096E62</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="060943EE">FollowersHireFawkes</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">It seems I didn't know you as well as I had thought. My mistake.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>15</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I've read about a museum of history in the south. Perhaps I can learn more about the world there, without facing such enmity.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>15</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I will take my leave of you. Goodbye, my rescuer.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0003D34E">MQ08Fawkes</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>168</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAMAHICAHMBAAQAIDEgfhUACgByAwBzCAACACAwFQAKAHIDAHMJAAIAIDEVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgQAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQDFEQcAAQBuAAAAABwAAQCAEQUAAQByBQA3EAUAAQByAgBeEAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">set FollowersHireFawkes.FawkesWaitRREntrance to -1
+set Followers.FawkesHired to 0
+set Followers.FawkesFired to 1
+set MQ08FawkesREF.IsFollowingDefault to 1
+set MQ08FawkesREF.IsFollowingLong to 0
+set MQ08FawkesREF.IsFollowingShort to 0
+MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
+set MQ08FawkesREF.CombatStyleRanged to 1
+set MQ08FawkesREF.CombatStyleMelee to 0
+MQ08FawkesREF.SetPlayerTeammate 0
+MQ08FawkesREF.RemoveFromFaction FollowerFaction
+StopQuest FollowersHireFawkes
+evp</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060943EE">FollowersHireFawkes</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I was in that situation once, myself. Deal with it.</Prompt>
+  </Subrecords>
+</Record>

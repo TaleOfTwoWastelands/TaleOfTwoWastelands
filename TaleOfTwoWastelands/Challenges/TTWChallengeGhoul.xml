@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018588">TTWChallengeGhoul</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeGhoul</EditorID>
+    <Name Tag="FULL">Ghoul Grinder</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E3">TTWChallengeGhoulSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill feral ghouls.</Description>
+    <Data Tag="DATA">
+      <Type>KillAnyInACategory</Type>
+      <Threshold>50</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>10</Interval>
+      <BodyPart>None</BodyPart>
+      <CreatureType>Robot</CreatureType>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+  </Subrecords>
+</Record>

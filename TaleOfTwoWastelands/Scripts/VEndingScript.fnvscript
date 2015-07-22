@@ -1,0 +1,43 @@
+scn VEndingScript
+
+short bStartSlideShow
+
+begin GameMode
+
+	if bStartSlideShow == 0
+
+		; Disable all companions so they don't trip and die during credits
+		CraigBooneRef.Disable
+		ArcadeRef.Disable
+		RaulRef.Disable
+		VeronicaRef.Disable
+		LilyRef.Disable
+		RoseOfSharonCassidyRef.Disable
+		RexRef.Disable
+		EDE1Ref.Disable
+		EDE2Ref.Disable
+		EDE3Ref.Disable
+		VHDSecuritronEscort01Ref.Disable
+		CharonRef.Disable
+		ButchRef.Disable
+		CloverRef.Disable
+		JerichoRef.Disable
+		MQ08FawkesRef.Disable
+		StarPaladinCrossRef.Disable
+		DogmeatRef.Disable
+		RL3REF.Disable
+
+		RemoveImageSpaceModifier FriendOfTheNightInteriorISFX
+		RemoveImageSpaceModifier FriendOfTheNightISFX
+		StopQuest DisguiseFactionPulseQuest ; Turn off disguise notifications.
+		player.DispelAllSpells ; Removes all chem effects.
+		PipBoyRadioOff ; Turn off PipBoy radio.
+		PlayMusic EndSlideShow
+		Player.ResetHealth
+		SetInCharGen 1
+		DisablePlayerControls 1 1 1 1 1 1 1 
+		player.MoveTo PlayerSlideshowMarker
+		set bStartSlideShow to 1
+	endif
+
+end

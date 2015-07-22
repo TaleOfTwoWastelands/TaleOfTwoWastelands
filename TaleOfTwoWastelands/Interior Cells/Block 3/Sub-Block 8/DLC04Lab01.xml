@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0A00977F">DLC04Lab01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04Lab01</EditorID>
+    <Name Tag="FULL">Underground Lab</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>24</Red>
+          <Green>35</Green>
+          <Blue>41</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>43</Red>
+          <Green>79</Green>
+          <Blue>70</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>0</Near>
+        <Far>5000</Far>
+        <ClipDistance>6100</ClipDistance>
+        <Power>0.600000024</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0006A0C0">RCUpperDecksTemplate</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">0</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0A004E2C">DLC04SeaCaveImagespace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0A010E5F">DLC04MansionZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="06063A82">IntGenericHallwayMetalSmall</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

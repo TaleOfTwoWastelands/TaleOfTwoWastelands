@@ -1,0 +1,207 @@
+ScriptName DLC02OA1QuestScript
+
+short RadioEnabled 			;flag set when radio signal is first enabled
+short OutcastsHostile		;flag set if player decides to pick a fight with the outcasts in the base
+short MorrillGreet				;flag set when Morrill force-greets the player; keeps it from happening again
+short MorrillFooled			;flag set to 1 if player is wearing outcast armor and manages to fool morrill
+short PlayerHelped			;player killed at least one mutant during the battle in worldspace, used for Morrill's dialogue
+short McGrawTalked			;flag set after first time McGraw addresses player
+short PlayerInChair			;flag set when player is sitting in sim chair, used for scripting 
+short PlayerinSim				;flag set after we move the player into the Sim
+short MorrillClear				;flag set if Morrill clears player to head down into base
+short OA1AnimSetup
+short OlinGoodSide			;flag set if player gets on Olin's good side during quest
+short PlayerTrigger			;flag set when player passes through DLC02OA1VSStrigger
+short SibleyTrigger			;flag set when Sibley passes through DLC02OA1VSStrigger
+short SibleyCRTrigger		;fllag set when Sibley passes through DLC02OA1CommandRoomTrigger
+short TrigPlayerAhead		;flag set if player beats Sibley to McGraw
+short SibleyMcGrawConv	;flag incremented for Sibley's conversation w/ McGraw
+short SibleyOlinConv			;flag incremented for Sibley's conversation w/Olin
+short IntroDeadCount			;flag incremented each time one of the outcasts dies during the intro
+short BaseDeadCount		;flag incremented each time one of the outcasts inside the base dies
+
+short RuinsBattleDone		;flag flipped on when all mutants @ Baileys ruins are dead or player has bypassed
+
+float RadioTimer				;timer var used for keeping radio transmissions intermittent
+float AnimTimer
+float StartTimer					;timer used for delaying initial broadcast
+
+short GuardGreet				; flag set if the player has been greeted by the elevator guard in Baileys (Joel)
+
+short listsUpdated				;this is a doOnce
+
+Begin GameMode
+
+;This adds items to formlists, most of these are for adding things for animation idle manager conditions.
+if listsUpdated == 0
+
+	AddFormToFormList DialogueAnimationBulkyArmors DLC02ArmorPowerT51b
+	AddFormToFormList DialogueAnimationBulkyArmors DLC02ArmorPowerT51bWasteland
+
+	AddFormToFormList AnimationRestrictedArmors DLC02ArmorPowerT51b
+	AddFormToFormList AnimationRestrictedArmors DLC02ArmorPowerT51bWasteland
+	
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorChineseHelmet
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorChineseHelmetWasteland
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorCombatSnowHelmet
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorCombatSnowHelmetWasteland
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorPowerT51bHelmet
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorPowerT51bHelmetWasteland
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorStealthHelmet
+	AddFormToFormList AnimationRestrictedHeadGear DLC02ArmorStealthHelmetWasteland
+
+	set listsUpdated to 1
+endif
+
+
+
+; if Enclave Radio ref has been enabled, it means the player is out of the vault, which means it's time to enable our radio signal
+
+	if ( RadioEnabled == 0 )
+		if ( RadioEnclaveRef.GetDisabled == 0 )
+;			DLC02OutcastRadioSignalRef.Enable
+;			ForceRadioStationUpdate
+;			SetStage DLC02OA1 10
+			Set RadioEnabled to 1
+			set StartTimer to 60
+		elseif ( GetStage MQ09 >= 60 )
+;			DLC02OutcastRadioSignalRef.Enable
+;			ForceRadioStationUpdate
+;			ResetPipboyManager
+;			SetStage DLC02OA1 10
+			Set RadioEnabled to 1
+			Set StartTimer to 60
+		endif
+	elseif ( RadioEnabled == 1 )
+		if ( StartTimer <= 0 )
+			DLC02OutcastRadioSignalRef.Enable
+			ForceRadioStationUpdate
+			ResetPipboyManager
+			SetStage DLC02OA1 10
+			Set RadioEnabled to 2
+		else
+			set StartTimer to ( StartTimer - GetSecondsPassed )
+		endif
+		
+	endif
+
+;have radio broadcast every once in a while rather than constantly
+
+
+	if DLC02OutcastRadioREF.GetDestroyed == 0
+		if RadioTimer > 0
+			set RadioTimer to RadioTimer - GetSecondsPassed
+		else
+			DLC02OutcastRadioSignalREF.startRadioConversation
+			set RadioTimer to 10
+		endif
+	endif
+
+;Once player has entered interior, turn off the radio
+
+	if ( Player.GetInCell DLC02VSS01 == 1 )
+		if ( DLC02OutcastRadioSignalREF.GetDisabled == 0 )
+			DLC02OutcastRadioSignalREF.Disable
+		endif
+	endif
+
+;and Update quest stage if player has started killing people inside.
+
+	if ( BaseDeadCount > 0 )
+		if ( GetStage DLC02OA1 < 45 )
+			if ( GetStage DLC02OA1 == 40 )
+				SetObjectiveDisplayed DLC02OA1 40 0
+			endif
+			SetStage DLC02OA1 30
+
+		endif
+	endif
+
+;Update quest stage if player has a suit
+
+	if ( GetStage DLC02OA1 < 45 )
+		if ( Player.GetItemCount DLC02ArmorSimSuit > 0 )
+;			if ( Player.GetEquipped DLC02ArmorSimSuit == 0 )
+				SetStage DLC02OA1 45
+;			endif
+		endif
+	endif
+
+;and update stage to 50 once the player has the suit on.
+
+	if ( GetStage DLC02OA1 == 45 )
+		if ( Player.GetEquipped DLC02ArmorSimSuit == 1 )
+			SetStage DLC02OA1 50
+		endif
+	endif
+
+;------- Moving player into Simulation------
+
+;PlayerinChair is set in DLC02SimChairScript
+
+		if ( PlayerInChair == 2 )
+
+		if ( Player.GetInCell DLC02VSS01 == 1 )
+
+
+
+;Remove all the player's inventory and add the stuff he'll need for the sim
+;then set up the initial scene in the sim
+
+;NOTE: Adding items back to player's inventory and re-enabling radio refs is handled in script DLC02PlayerContainerScript
+
+;			SetLocationSpecificLoadScreensOnly 1
+			Player.RemoveItem DLC02ArmorSimSuit 1 1
+			Player.RemoveAllItems DLC02PlayerContainerRef
+;			Player.Additem DLC02WeapKnifeCombat 1
+;			Player.Additem DLC02Charges 3
+;			Player.Additem Ammo10mm 60
+;			Player.Additem DLC02ArmorCombatSnow 1
+;			Player.Additem DLC02ArmorCombatSnowHelmet 1
+;			Player.Additem Stealthboy 1
+;			Player.Additem Lockpick 50
+;			Player.EquipItem DLC02Weap10mmPistolSilenced
+;			Player.EquipItem DLC02ArmorCombatSnow
+;			Player.Equipitem DLC02ArmorCombatSnowHelmet
+			Player.Dispel Stealthboy
+			DisablePlayerControls 1 1 1 1 0 1 1
+			Player.moveto DLC02SimulationStart
+;			Set StageUpdateTimer to 3
+;			Set PlayerInTL to 1
+			Set PlayerInChair to -1
+
+;			if ( OA1AnimSetup == 1 )
+;				if ( AnimTimer > 0 ) && ( DLC02OA2.OA2GetUpGo == 1 )	
+;					Set AnimTimer to ( AnimTimer - GetSecondsPassed )
+;				elseif ( AnimTimer <= 0 ) && ( DLC02OA2.OA2GetUpGo == 1 )
+;					Player.AddScriptPackage DLC02OA2PlayerAwakens
+;					set OA1AnimSetup to 2
+;				endif
+;			endif
+
+;finally, disable both Enclave Radio and GNR broadcast refs while the player is in the sim
+
+			if ( RadioGalaxyNewsRef01.GetDisabled == 0 )
+				RadioGalaxyNewsRef01.Disable
+			endif
+			if ( RadioGalaxyNewsRef02.GetDisabled == 0 )
+				RadioGalaxyNewsRef02.Disable
+			endif
+			if ( MS16Vault101ExternalRadioREF.GetDisabled == 0 )
+				MS16Vault101ExternalRadioREF.Disable
+			endif
+			RadioEnclaveRef.Disable
+			if ( MS17RadioRef.GetDisabled == 0 )
+				MS17RadioRef.Disable
+			endif
+
+			PipBoyRadioOff
+			
+
+		endif
+	endif
+
+
+
+
+End

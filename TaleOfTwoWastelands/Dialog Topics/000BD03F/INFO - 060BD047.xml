@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060BD047">INFO - 060BD047</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060942A9">INFO - 060942A9</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Surprise</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Leaving a soldier behind? Very bad form. Making base in Canterbury Commons for when you come to your senses, sir!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="06094285">RL3REF</Quest>
+          <VariableIndex>1</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0009426E">RL3Follower</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>293</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDAVAAoAcgIAczAAAgAgMBUAEwByAgBzEwALACByAgBzEwAgMSAtHAABAKgRBQABAHIDABwAAQAPEAkAAgA5AG4AAAAAFQAKAHIEAHMWAAIAIDAVAAoAcgQAcxcAAgAgMRUACgByAQBzBQACACAwFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwHAABALEQBQABAHIFABUACgByAQBzAwACACAxFQAKAHIBAHMEAAIAIDAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgYAHAABAPoRAAAWABAAAQAMACByAgBzEwAgMCA9PRUACgByAgBzEgACACAwGQAAABwAAQBPEgUAAQByBwA=</CompiledScript>
+        <ScriptSource Tag="SCTX">set RL3REF.Waiting to 0
+set VNPCFollowers.bCritterInParty to 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+RL3REF.removeperk CompanionSuite
+RL3REF.SetAV Assistance 0
+
+set Followers.RL3Hired to 0
+set Followers.RL3Fired to 1
+set RL3REF.IsFollowingDefault to 0
+set RL3REF.IsFollowingDefault to 1
+set RL3REF.IsFollowingLong to 0
+set RL3REF.IsFollowingShort to 0
+RL3REF.SetCombatStyle FollowersCombatStyleRanged
+set RL3REF.CombatStyleRanged to 1
+set RL3REF.CombatStyleMelee to 0
+RL3REF.SetPlayerTeammate 0
+RL3REF.RemoveFromFaction FollowerFaction
+
+RL3REF.ResetAI
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+RL3REF.MoveToMarkerWithFade CCBazaarMarker</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="06094285">RL3REF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015C571">CompanionSuite</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06059413">CCBazaarMarker</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">You didn't mishear me. Leave.</Prompt>
+  </Subrecords>
+</Record>

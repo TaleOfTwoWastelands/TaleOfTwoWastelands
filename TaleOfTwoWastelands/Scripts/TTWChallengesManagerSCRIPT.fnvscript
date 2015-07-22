@@ -1,0 +1,97 @@
+scn TTWChallengesManagerSCRIPT
+
+; Local Vars
+int iCurrLevel
+int iPrevLevel
+
+; General Vars
+int iTemp
+float fTemp
+
+int FEVaquaPuraDays		; Track days since the player drank some water
+int prevLocationDC		; The number of locations discovered in DC
+int prevLocationNV		; The number of locations discovered in NV
+int firedMIRV			; if the player has fired the MIRV
+int preMIRVKillCount
+
+Begin GameMode
+
+	; Anything that needs to be done only once per level goes in this block
+	set iCurrLevel to Player.GetLevel
+	if (iCurrLevel != iPrevLevel)
+		set iPrevLevel to iCurrLevel
+	endif
+
+	; detect when the player kills 10 enemies with one shot from the MIRV
+	if (Player.GetEquipped WeapUniqueMIRV == 1)
+		if (firedMIRV == 1)
+			set preMIRVKillCount to (GetPCMiscStat "Total Things Killed") + 10
+			set firedMIRV to 2
+		elseif (firedMIRV == 2)
+			if (GetPCMiscStat "Total Things Killed" >= preMIRVKillCount)
+				IncrementScriptedChallenge TTWChallengeDidntWantTo
+			endif
+		endif
+	else
+		set firedMIRV to 0
+	endif
+	
+	
+	
+	
+	; Handles the Aqua Pura Challenge if player put FEV in the water
+	if (DLC03CreatorQuest.FEVaquaPuraCount > 0)
+		if (GameDaysPassed > FEVaquaPuraDays)
+			set DLC03CreatorQuest.FEVaquaPuraCount to DLC03CreatorQuest.FEVaquaPuraCount - 1
+			set FEVaquaPuraDays to GameDaysPassed + (DLC03CreatorQuest.FEVaquaPuraCount * 2)
+			;ShowMessage DLC03FEVwaterMsg03
+			PlaySound UIHealthChemsWearOff
+		endif
+	endif
+	
+	if TTWHasNVSE
+		; track number of map markers discovered, and increment the appropriate challenge
+		if (LogicalAnd TTWWorldLocation 55)			; DC
+			if (prevLocationDC < GetPCMiscStat "Locations Discovered")
+				set prevLocationDC to GetPCMiscStat "Locations Discovered"
+				if (prevLocationDC <= 44)		; Tourist
+					IncrementScriptedChallenge TTWChallengeTourist
+				elseif (prevLocationDC <= 110)		; Tour Guide
+					IncrementScriptedChallenge TTWChallengeGuide
+				endif
+			endif
+		
+		elseif (LogicalAnd TTWWorldLocation 15872)	; NV
+			if (prevLocationNV < GetPCMiscStat "Locations Discovered")
+				set prevLocationNV to GetPCMiscStat "Locations Discovered"
+				if (prevLocationNV <= 50)		; Walker of the Mojave
+					IncrementScriptedChallenge NVChallengeExplore
+				elseif (prevLocationNV <= 125)		; Master of the Mojave
+					IncrementScriptedChallenge NVChallengeMojaveMaster
+				endif
+			endif
+		endif
+	else
+		; track number of map markers discovered, and increment the appropriate challenge
+		if bInDCWasteland			; DC
+			if (prevLocationDC < GetPCMiscStat "Locations Discovered")
+				set prevLocationDC to GetPCMiscStat "Locations Discovered"
+				if (prevLocationDC <= 44)		; Tourist
+					IncrementScriptedChallenge TTWChallengeTourist
+				elseif (prevLocationDC <= 110)		; Tour Guide
+					IncrementScriptedChallenge TTWChallengeGuide
+				endif
+			endif
+		
+		elseif bInNVWasteland		; NV
+			if (prevLocationNV < GetPCMiscStat "Locations Discovered")
+				set prevLocationNV to GetPCMiscStat "Locations Discovered"
+				if (prevLocationNV <= 50)		; Walker of the Mojave
+					IncrementScriptedChallenge NVChallengeExplore
+				elseif (prevLocationNV <= 125)		; Master of the Mojave
+					IncrementScriptedChallenge NVChallengeMojaveMaster
+				endif
+			endif
+		endif
+	endif
+END

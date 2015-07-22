@@ -1,0 +1,214 @@
+ScriptName NVDLC03MQ00SCRIPT
+
+
+; Quest script - handles initial loading of NVDLC03.
+; JSH 12/07/2010
+; JDJ 02/23/2011	- Added nvdlc03playerfaction to player.
+; AH 03/07/2011	- Added activate for radio broadcast quest.
+; OMP 04/25/2011	- Recompiled the script after swapping out the bad Proton Axe template.
+; OMP 04/27/2011	- Updated Form List with appropriate weapons.
+
+
+Short	nEnableDLC;						; 0 = Not started, 1 = Display of DLC messages in progress, 2 = DLC messages displayed.
+
+Short	bFormListsUpdated;				; Updates F:NV formlists with new weapons, armor, etc. from NVDLC03.
+
+Short	bMoviePlaying;					; 0 = Mojave Drive-in movie not playing, 1 = movie is playing.
+
+Float	fStartTimer;							; Displays NVDLC03 loaded messages a short while afte
+
+
+BEGIN GameMode
+
+	; Used to add forms to existing formlists (weapons, armor, etc).
+	If ( bFormListsUpdated == 0 )
+
+		; -------------------------------------	Every Weapon --------------------------------------------	\/
+		AddFormToFormList NVAllWeapons NVDLC03WeapLaer;
+		AddFormToFormList NVAllWeapons NVDLC03WeapLaerUniqueElijah;
+		AddFormToFormList NVAllWeapons NVDLC03WeapGlovesScientist;
+		AddFormToFormList NVAllWeapons NVDLC03WeapGlovesCorrosive;
+		AddFormToFormList NVAllWeapons NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList NVAllWeapons NVDLC03WeapGlovesDrKleinL;
+		AddFormToFormList NVAllWeapons NVDLC03WeapGlovesDrMobiusL;
+		AddFormToFormList NVAllWeapons NVDLC03WeapCyberdogGun;
+		AddFormToFormList NVAllWeapons NVDLC03WeapCyberdogGunFido;
+		AddFormToFormList NVAllWeapons NVDLC03WeapProtonAxe;
+		AddFormToFormList NVAllWeapons NVDLC03WeapProtonAxeInversal;
+		AddFormToFormList NVAllWeapons NVDLC03WeapProtonAxeThrown;
+		AddFormToFormList NVAllWeapons NVDLC03WeapProtonAxeInversalThrown;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSaturniteFist;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSaturniteFistHeat;
+		AddFormToFormList NVAllWeapons NVDLC03WeapAntenna;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSonicGunOperaSinger;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSonicGunGabrielsBark;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSonicGunRevelation;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSonicGunRoboScorpion;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSonicGunTarantula;
+		AddFormToFormList NVAllWeapons NVDLC03WeapSniperRifleUniqueChristine;
+		AddFormToFormList NVAllWeapons NVDLC03WeapTeslaCannonUniqueElijah;
+
+		; -------------------------------------	Perk Associated ------------------------------------------	\/
+		; Laser Commander
+		AddFormToFormList LaserCommanderWeaponsList NVDLC03WeapLaer;
+		AddFormToFormList LaserCommanderWeaponsList NVDLC03WeapLaerUniqueElijah;
+
+		; Loose Cannon (thrown weapons)
+		AddFormToFormList PerkLooseCannonWeapons NVDLC03WeapProtonAxeThrown;
+		AddFormToFormList PerkLooseCannonWeapons NVDLC03WeapProtonAxeInversalThrown;
+
+		; Pyromaniac (fire/heat based weapons)
+		AddFormToFormList PerkPyromaniacWeapons NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList PerkPyromaniacWeapons NVDLC03WeapSaturniteFistHeat;
+		AddFormToFormList PerkPyromaniacWeapons NVDLC03WeapSonicGunTarantula;
+
+		; The Professional (pistols, revolvers and submachine guns - guns/energy weapons)
+		AddFormToFormList TheProfessionalWeaponsList NVDLC03WeapSonicGunGabrielsBark;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC03WeapSonicGunOperaSinger;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC03WeapSonicGunRevelation;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC03WeapSonicGunRoboScorpion;
+		AddFormToFormList TheProfessionalWeaponsList NVDLC03WeapSonicGunTarantula;
+
+		; Travel Light
+		AddFormToFormList NVTravelLightBadArmorList NVDLC03ArmorUniqueReconChristine;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC03AuralStealthsuit;
+
+		; Beam Weapons
+		AddFormToFormList BeamChallengeWeaponList NVDLC03WeapLaer;
+		AddFormToFormList BeamChallengeWeaponList NVDLC03WeapLaerUniqueElijah;
+
+		; Repair Lists
+		AddFormToFormList RepairGlasses NVDLC03LobotomiteGoggles;
+		AddFormToFormList RepairRadiationSuit NVDLC03GhostHoodlessbody;
+		AddFormToFormList RepairClothingRobCo NVDLC03DeadMansJumpSuit;
+
+		; -------------------------------------	Melee Weapons ------------------------------------------	\/
+		; All Melee
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapAntenna;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapProtonAxe;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapProtonAxeInversal;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapGlovesCorrosive;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapGlovesDrKleinL;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapGlovesDrMobiusL;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapGlovesScientist;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapSaturniteFist;
+		AddFormToFormList WeaponListMeleeALL NVDLC03WeapSaturniteFistHeat;
+
+		; Fist / Glove / Gauntlet Weapons
+		AddFormToFormList FistWeaponsList NVDLC03WeapGlovesCorrosive;
+		AddFormToFormList FistWeaponsList NVDLC03WeapGlovesDrKleinL;
+		AddFormToFormList FistWeaponsList NVDLC03WeapGlovesDrMobiusL;
+		AddFormToFormList FistWeaponsList NVDLC03WeapGlovesScientist;
+		AddFormToFormList FistWeaponsList NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList FistWeaponsList NVDLC03WeapSaturniteFist;
+		AddFormToFormList FistWeaponsList NVDLC03WeapSaturniteFistHeat;
+
+		; -------------------------------------	Ranged Weapons ---------------------------------------	\/
+		; All Ranged
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapLaer;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapLaerUniqueElijah;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapProtonAxeThrown;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapProtonAxeInversalThrown;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapCyberdogGun;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapCyberdogGunFido;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSonicGunOperaSinger;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSonicGunGabrielsBark;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSonicGunRevelation;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSonicGunRoboScorpion;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSonicGunTarantula;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapSniperRifleUniqueChristine;
+		AddFormToFormList WeaponListRangedALL NVDLC03WeapTeslaCannonUniqueElijah;
+
+		; Rifles
+		AddFormToFormList WeaponRiflesLIST NVDLC03WeapSniperRifleUniqueChristine;
+
+		; Energy Weapons
+		AddFormToFormList EnergyWeapons NVDLC03WeapLaer;
+		AddFormToFormList EnergyWeapons NVDLC03WeapLaerUniqueElijah;
+		AddFormToFormList EnergyWeapons NVDLC03WeapSonicGunOperaSinger;
+		AddFormToFormList EnergyWeapons NVDLC03WeapSonicGunGabrielsBark;
+		AddFormToFormList EnergyWeapons NVDLC03WeapSonicGunRevelation;
+		AddFormToFormList EnergyWeapons NVDLC03WeapSonicGunRoboScorpion;
+		AddFormToFormList EnergyWeapons NVDLC03WeapSonicGunTarantula;
+		AddFormToFormList EnergyWeapons NVDLC03WeapTeslaCannonUniqueElijah;
+
+		; Machine Guns
+		AddFormToFormList WeaponMachinegunLIST NVDLC03WeapCyberdogGun;
+		AddFormToFormList WeaponMachinegunLIST NVDLC03WeapCyberdogGunFido;
+
+		; ------------------------------------- Improved Holdout Weapons ------------------------------------- \/
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapGlovesCorrosive;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapGlovesDrKleinL;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapGlovesDrMobiusL;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapGlovesScientist;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSaturniteFist;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSaturniteFistHeat;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSonicGunGabrielsBark;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSonicGunOperaSinger;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSonicGunRevelation;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSonicGunRoboScorpion;
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC03WeapSonicGunTarantula;
+
+		; -------------------------------------	Ignite Gas Volumes ------------------------------------- \/
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapLaer;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapLaerUniqueElijah;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapGlovesSterilizer;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapProtonAxe;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapProtonAxeInversal;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapProtonAxeThrown;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapProtonAxeInversalThrown;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapSaturniteFistHeat;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapAntenna;
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC03WeapTeslaCannonUniqueElijah;
+
+		; ------------------------------------ VATS Banned List -------------------------------------------- V
+		AddFormToFormList VATSBannedWeaponsList NVDLC03WeapTeleporter;
+
+		Set bFormListsUpdated to 1;
+
+	EndIf
+
+	; Make the Player Brain shrug off attacks from the player.
+	SetAlly NVDLC03PlayerBrainFaction PlayerFaction;
+	NVDLC03PlayerBrainREF.SetIgnoreFriendlyHits 1;
+
+	; Muggy! Don't hurt Muggy. He just loves mugs.
+	SetAlly NVDLC03MuggyFaction PlayerFaction;
+	NVDLC03MuggyREF.SetIgnoreFriendlyHits 1;
+
+	;Adding player to nvdlc03playerfaction
+	Player.AddToFaction NVDLC03PlayerFaction 1;	
+
+	; If the player is not in Doc's house, it means the player has completed chargen and has exited Doc Mitchell's house.
+	If ( nEnableDLC == 0 )
+
+		If ( Player.GetInCell GSDocMitchellHouse == 0 && getquestcompleted VCG01 )
+			Set nEnableDLC to 1;
+			Set fStartTimer to 5;
+			StartQuest NVDLC03RadioBroadcast;									;Start the DLC03 Radio Broadcast Quest
+		EndIf
+
+	ElseIf ( nEnableDLC == 1 )
+
+		If ( fStartTimer <= 0 )
+			; Enable DLC03 Radio
+			; StartQuest NVDLC03RadioMessage
+			PlaySound NVDLC03UIRadioSignalFound;      						     ; Sound for Pop up
+			ShowMessage NVDLC03LoadMessage01;
+			ShowMessage NVDLC03LoadMessage02;
+			ForceRadioStationUpdate;
+			ResetPipboyManager;
+			SetStage NVDLC03MQ00 10;
+			Set nEnableDLC to 2;
+			NVDLC03RadioREF.Enable;													;Enable the Talking Activator for the quest
+		Else
+			Set fStartTimer to ( fStartTimer - GetSecondsPassed );
+		EndIf
+
+	EndIf
+
+END
+
+

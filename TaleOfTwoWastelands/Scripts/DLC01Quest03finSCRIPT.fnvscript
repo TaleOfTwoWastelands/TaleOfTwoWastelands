@@ -1,0 +1,29 @@
+scn DLC01Quest03finSCRIPT
+
+;variables for new ammo mill
+short iBrass
+short iPlastic
+short iPowder
+short iLead
+short iPrimer
+short iSwap
+short iScrap
+short iSteel
+
+;Set Variables for Toys for Marie
+short ToyCount
+short ToyRewardCapsBase
+short ToyRewardXPBase
+short ToyRewardCapsCurrent
+short ToyRewardXPCurrent
+
+;Set Variables for Ashur post-quest conversation
+short AshurBoS
+short SlaveWorker
+
+begin gameMode
+	if iswap
+		TTWDLC01AmmoCorpseREF.removeallitems DLC01MillAmmoBoxREF
+		set iSwap to 0
+	endif
+end

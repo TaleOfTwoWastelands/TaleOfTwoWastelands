@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>NavMeshGenerationBoundingBox</Flags>
+  <FormID ID="0D0047C5">TTWGrillBBQDirtyCrafting</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWGrillBBQDirtyCrafting</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-29</X>
+        <Y>-28</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>29</X>
+        <Y>28</Y>
+        <Z>71</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">BBQ Grill</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Grill\GrillAged.NIF</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0013E3FB">CraftingCampfireRecipesScript</Reference>
+    </Script>
+    <Sound>
+      <Activation Tag="VNAM">
+        <Reference ID="00071F96">FXFireSconceLP</Reference>
+      </Activation>
+    </Sound>
+  </Subrecords>
+</Record>

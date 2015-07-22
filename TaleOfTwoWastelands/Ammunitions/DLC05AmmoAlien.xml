@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="AMMO">
+  <Flags>0</Flags>
+  <FormID ID="0B00160C">DLC05AmmoAlien</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05AmmoAlien</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Alien Power Module</Name>
+    <Model>
+      <FileName Tag="MODL">DLC05\Weapons\1HandPistol\DLC05AlienPowerCell.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_alien_blaster_ammo.dds</Large>
+    </Icon>
+    <Data Tag="DATA">
+      <Speed>1</Speed>
+      <Flags>0</Flags>
+      <Value>5</Value>
+      <ClipRounds>50</ClipRounds>
+    </Data>
+    <ExtraData Tag="DAT2">
+      <ProjectilesPerShot>0</ProjectilesPerShot>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <Weight>0.100000001</Weight>
+      <ConsumedAmmo ID="00000000">NullReference</ConsumedAmmo>
+      <ConsumedPercentage>0</ConsumedPercentage>
+    </ExtraData>
+    <ShortName Tag="ONAM">Power Module</ShortName>
+    <AmmoEffects>
+      <Effect Tag="RCIL">
+        <Reference ID="0C018017">TTWAmmoEffectAlienPowerModule</Reference>
+      </Effect>
+    </AmmoEffects>
+  </Subrecords>
+</Record>

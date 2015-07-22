@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156DA">LydiaMontenegro</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">LydiaMontenegro</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Lydia Montenegro</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000CADF8">TenpennyBoutiqueVendorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D8C">DeathItemLydiaMontenegro</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0607EA1E">FemaleAdult13</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C5">HispanicOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="06003120">LydiaMontenegroScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D1">OutfitPrewarSpringDirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF72">TenpennyResidentKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>99</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Weapons, Armor, Books, Chems, Stimpacks, Miscellaneous, Unk_Potions</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00098CED">LydiaMontenegrorWanderWasteland</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019246">LydiaMontenegroEat1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000BF7CA">LydiaMontenegroVendorStart</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019247">LydiaMontenegroEat2Services</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00028FB0">LydiaMontenegroEat3Services</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019248">LydiaMontenegroServices</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019245">LydiaMontenegroSleep</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019249">LydiaMontenegroLounge</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001567A">VendorDrinks</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>30</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00022E4F">FemaleB</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>57</Red>
+        <Green>44</Green>
+        <Blue>43</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004255">EyeDefault</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">JyVpv1gbFD+gRdO9/8/dvkhxsz7nCJ2/wGWZPfy2qD6QjpW/qD+JP1jOGr/UN4M/BDMewHjiR790TExA0rVawNJsUj9ibaI/BA1WPvOZyT8QwzG+//8GwEiUnr9ohbO/JbIywChEbsAVgxLAVHmhP3ECFr9CrQ0/MGcFQOa1OMBQrGa/igRuP+BMnD9IsHI+OIYCv4gsc7/4PzI/kuEDQDB1d8B4lP6/WJwiQCoO5j9jrDBA1NBbvwO51r/IQWg/gLnnPhPIRME=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">PUuCv+yeD7/aCT4/ipsTvyvWRr+UNQY/T9+rP7khAcBjG+S+s2d+P3V/+T+Qvu8+cKXlPiR9bD7GxgO+7B56Px2iHb4xrBY/I0RbP6AIgzzWfw9AKiCivzQJIL+P90M+MOSPv0BiTz9oDzG/QHd1vbIJir+Zw9W+EK4wP1qEMkD9kRPASGPjwMzxHT/QKPm/4bHwv+cfDECsqKy/Fwvvv+Aagb9lkG8/qtuTPxYoy78mGyPAkWCmP7w6x76eZmA+sq4iwB99esA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

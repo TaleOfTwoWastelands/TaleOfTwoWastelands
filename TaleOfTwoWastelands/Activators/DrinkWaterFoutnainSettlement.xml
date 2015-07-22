@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0602A2B2">DrinkWaterFoutnainSettlement</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DrinkWaterFoutnainSettlement</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-15</X>
+        <Y>-14</Y>
+        <Z>-49</Z>
+      </Point1>
+      <Point2>
+        <X>15</X>
+        <Y>14</Y>
+        <Z>49</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Water Fountain</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Office\WaterCooler01.NIF</FileName>
+      <TextureFileHash Tag="MODT">8uULd25QA5dyZQt3c1ADl2VjF3SNeWt/7t8NdzulLYVuXw13QKUthWVjF3SNeWt/898NdzulLYVzXw13QKUthWVjF3SNeWt/</TextureFileHash>
+    </Model>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="00173686">EMTWaterPressureB</Reference>
+      </Looping>
+      <Activation Tag="VNAM">
+        <Reference ID="000A538B">NPCHumanDrinkingWaterfountainLPM</Reference>
+      </Activation>
+    </Sound>
+    <WaterType Tag="WNAM">
+      <Reference ID="00020518">d2GoodWater4r30h</Reference>
+    </WaterType>
+  </Subrecords>
+</Record>

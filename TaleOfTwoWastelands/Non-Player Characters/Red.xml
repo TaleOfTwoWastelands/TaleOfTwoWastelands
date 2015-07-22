@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06025251">Red</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Red</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Red</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>4</CalcMin>
+      <CalcMax>8</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000251D8">DoctorsDialogueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000251D9">MS01RescueFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0002AB90">BigTownFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0003D1FC">MS13AlwaysMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00047CCB">MS08NoteOwnerFactionRed</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D90">DeathItemRed</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCB">FemaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0602AB92">RedScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001C296">GlassesReading</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.300000012</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060340EA">MS01OutfitRed</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.449999988</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060340EB">MS01OutfitRedHat</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>10</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Pleasant</Mood>
+      <Services>Chems, Stimpacks, Miscellaneous</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06056AC3">MS13RedEnslaved</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602ABA5">MS01RedToBigTown</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06054C5D">MS01RedFollowingPlayerParadiseFalls</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602AB9F">MS01RedFollowingPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609D233">MS01RedBackToJail</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609D412">MS01RedWaitHere</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0607408F">MS01RedLockedUpGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602ABA3">MS01RedLockedUp</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602ECDB">MS01MobCheer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D94D">MS01Mine2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060929BE">MS01GuardCenterOfTown</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D93C">MS01MineLearn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D937">MS01Robot2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D936">MS01Robot1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D938">MS01RobotLearn1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06064EF8">MS01ShootMutants2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06030608">MS01RunToHide1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602C111">MS01HideAt1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602C110">MS01HideLearn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602BF68">MS01ShootAt4From4</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B501">MS01ShootAt3From3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B4FE">MS01ShootAt2From2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B4FD">MS01ShootAt1From1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B4FC">MS01ShootFrom1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602E73C">MS01MobGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602E73B">MS01MobWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078FE7">DoctorGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00078F40">DoctorHoldPosition</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC3">BigTownRedEat22x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC4">BigTownRedServices10x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC5">BigTownRedEat8x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00028C7C">BigTownRedSleep0x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002FBC6">BigTownRedDefaultHome</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015679">Doctor</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>50</BaseHealth>
+      <Strength>4</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>5</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>44</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005DC78">HairAfricanAmericanF</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>29</Red>
+        <Green>27</Green>
+        <Blue>29</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">uLLwv7Ngsz8Pyzu/gGaKPaZoNT+o9gu9DI7zvYCQJb3g+DG+UD2jvX55wL9yvUw/iELsvzzoO75uEXM/AOZEusxDVL70lDS/EBcJvipeBMDCsGTAKFU0vkxtKj9qxrK/zsTKP5rO0b7GY3W/IAUtPlIxBMCtPZe/hVv9v+hIWr5AuNK/+L9NwMWvCcAV17W/9HM1wJTmQ0Dg8o+90M/UP1aNDUCuIIm/qJ5ZQOzuBT/WXyE/MG4nwJRPIUAc+DQ/RIFRQJIThEA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">Nmbhv0hc6L6bg72+bTSIP6IzY77w0tu/LTKQv8q73b90VK4+XCHLv0ZyEMAQ7H2+6I4dPiJWa0Cxb5u/BK6yv9FdDcCa8yC/ANPIvzzkab+mF5c/mlgRQCS0RUAV0S5AjViVv7khFr9HVic/LXcwwGKLQ0BcSqm/IA83QGQiab5guC5AtQDYPxXZtMBODG/ALiMFPqBIS79UFtJAct7MP3CTjD7ONQRAmrqfv0pKXD/7o7c/pEN2wIAuc7/s4B5AwOASPxqDBkE=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

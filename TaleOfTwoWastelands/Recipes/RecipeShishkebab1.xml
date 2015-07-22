@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0C00BD15">RecipeShishkebab1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RecipeShishkebab1</EditorID>
+    <Name Tag="FULL">Shishkebab</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="00033BCC">SchematicsShishkebabNote</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="000C33BA">SchematicsShishkebabNote10</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="000C33BB">SchematicsShishkebabNote20</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>None</Skill>
+      <Level>0</Level>
+      <Category ID="0013B2C1">WorkbenchRecipes</Category>
+      <SubCategory ID="0013E11A">WeaponSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="00025E03">LawnmowerBlade</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="000220FB">MotorcycleGasTank</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="000220FE">MotorcycleHandbrake</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="000220FC">PilotLight</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="0000434E">WeapShishkebab</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

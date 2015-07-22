@@ -1,0 +1,67 @@
+scn FortGladiatorSlaveScript
+
+begin OnDeath
+
+	set VMS34.nSlavesKilled to VMS34.nSlavesKilled + 1
+
+	if (VMS34.nSlavesKilled == 2)
+		FortOthoRef.SetGhost 0
+		set VMS34.ArenaDuelEnabled to 0
+		set VMS34.DefeatedSlaves to 1
+		FortArenaGateRef.Unlock
+		FortArenaGateRef.SetOpenState 1
+		AddReputation RepNVCaesarsLegion 1 1
+		SetEnemy TheFortGladiatorFaction PlayerFaction 0 0
+		set VMS34.bOthoCongratulations to 1
+		FortPlayerEquipmentContainerRef.RemoveAllTypedItems player
+		FortGladiatorSlave01Ref.RemoveItem WeapNVMacheteGladiator 1000
+		FortGladiatorSlave02Ref.RemoveItem WeapNVMacheteGladiator 1000
+		player.RemoveItem WeapNVMacheteGladiator 1000
+		player.RemoveItem ArmorLeatherGladiator 1000
+		ShowMessage FortArenaEquipmentMsg
+
+		if (VNPCFollowers.ArcadeHired)
+			ArcadeRef.Enable
+ 		elseif (VNPCFollowers.bLilyHired)
+			LilyRef.Enable
+		elseif (VNPCFollowers.RaulHired)
+			RaulRef.Enable
+		elseif (VNPCFollowers.bBooneHired)
+			CraigBooneRef.Enable
+		elseif (VNPCFollowers.bVeronicaHired)
+			VeronicaRef.Enable
+		elseif (VNPCFollowers.bCassHired)
+			RoseOfSharonCassidyRef.Enable
+		elseif (Followers.CharonHired)
+			CharonRef.Enable
+		elseif (Followers.ButchHired)
+			ButchRef.Enable
+		elseif (Followers.CloverHired)
+			CloverRef.Enable
+		elseif (Followers.JerichoHired)
+			JerichoRef.Enable
+		elseif (Followers.FawkesHired)
+			MQ08FawkesRef.Enable
+		elseif (Followers.StarPaladinCrossHired)
+			StarPaladinCrossRef.Enable
+		endif
+
+		if (VNPCFollowers.bEDEHired)
+			if VDialogueEDE.iHVUpgrade != 0
+				EDE3Ref.Enable
+			elseif VDialogueEDE.iFolUpgrade != 0
+				EDE2Ref.Enable
+			else
+				EDE1Ref.Enable
+			endif
+		elseif (VNPCFollowers.RexHired)
+			RexRef.Enable
+		elseif (Followers.DogmeatHired)
+			DogmeatRef.Enable
+		elseif (Followers.RL3Hired)
+			RL3REF.Enable
+		endif	
+		
+	endif
+
+end

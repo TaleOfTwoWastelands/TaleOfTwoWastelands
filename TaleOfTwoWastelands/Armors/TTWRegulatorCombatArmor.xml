@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0C01801C">TTWRegulatorCombatArmor</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWRegulatorCombatArmor</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Regulator Combat Armor</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0008B608">EnchClothingDuster</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150648</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">TTW\Armor\regulator1.nif</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">TTW\Armor\regulator1f.nif</FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">NVDLC04\Armor\NVDLC04RiotGearArmor\NVDLC04RiotGearArmorOutfit_GO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">NVDLC04\Interface\icons\NVDLC04apparel_riot_gear_suit.dds</Male>
+        <Female Tag="ICO2">NVDLC04\Interface\icons\NVDLC04apparel_riot_gear_suit.dds</Female>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">NVDLC04\Interface\icons\NVDLC04apparel_riot_gear_suit.dds</Male>
+        <Female Tag="MIC2">NVDLC04\Interface\icons\NVDLC04apparel_riot_gear_suit.dds</Female>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="0400D4C9">RepairNVDLC04ArmorRiotGear</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0008A3CC">OutfitRegulatorList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>1500</Value>
+      <MaxCondition>500</MaxCondition>
+      <Weight>30</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>17</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

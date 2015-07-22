@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0200A3E1">NVDLC02CrYaoGuai</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC02CrYaoGuai</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-60</X>
+        <Y>-95</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>60</X>
+        <Y>94</Y>
+        <Z>145</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Yao Guai</Name>
+    <Model>
+      <FileName Tag="MODL">NVDLC02\Creatures\YaoGuai\Skeleton.nif</FileName>
+    </Model>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">92</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>nvdlc02yaoguai.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAjp4Qd54ZQAZmlhB3nmlABmaWEadH0Kk2Du3wl5Kd9lWm5fCXku32VaaWEadH0Kk2Dz3wl5Kd9lWnNfCXku32VaaWEadH0Kk2Dy9Qt5b3X5/3J1C3l0dfn/aWEadH0Kk2Du3w15rF3vC25fDXmxXe8LaWEadH0Kk2CxsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Walks, NoLowLevelProcessing, CannotOpenDoors, TiltFrontBack</Flags>
+      <Fatigue>180</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>12</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>125</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00000013">CreatureFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0005FF9F">AnimalFriendFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E275">CreatureHitYaoGuai</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0200B457">NVDLC02CrYaoGuaiFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0003A58E">DeathItemYaoGuai100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="02010CDB">NVDLC02YaoGuaiSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>20</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>700</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedAnimal</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>125</Health>
+      <Damage>50</Damage>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>8</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">100</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="020116BE">NVDLC02CSYaoGuai</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="02009F6D">NVDLC02YaoGuaiBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">200</TurningSpeed>
+    <BaseScale Tag="BNAM">1.25</BaseScale>
+    <FootWeight Tag="WNAM">5</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0003FB04">AudioTemplateYaoGuai</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007E684">ClawDataSet</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

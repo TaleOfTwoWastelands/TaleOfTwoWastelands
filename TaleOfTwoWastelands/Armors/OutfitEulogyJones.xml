@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="00034125">OutfitEulogyJones</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitEulogyJones</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-13</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>17</Y>
+        <Z>14</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Eulogy Jones' Suit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B90">EnchClothingEulogySuit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\EulogyJones\outfitm.NIF</FileName>
+          <TextureHashes Tag="MODT">5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84Hg5N8GbZ+kC75kXwZtpKQLvnNlGnQXzZ2S7t8GbZ+kC75uXwZtpKQLvnNlGnQXzZ2S898GbZ+kC75zXwZtpKQLvnNlGnQXzZ2SsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\EulogyJones\outfitf.NIF</FileName>
+          <TextureHashes Tag="MO3T">5N8IZlcBtFlkXwhmXAG0WXNlGnQXzZ2S7t8IZlcBtFluXwhmXAG0WXNlGnQXzZ2S898IZlcBtFlzXwhmXAG0WXNlGnQXzZ2ScGEUYgPMzglwYRRiA8zOCS4AAS4AAAAAcGEVYqjKdhVwYRViqMp2FS4AAS4AAAAAsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\EulogyJones\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">5N8GbZ+kC75kXwZtpKQLvnNlGnQXzZ2S7t8GbZ+kC75uXwZtpKQLvnNlGnQXzZ2S898GbZ+kC75zXwZtpKQLvnNlGnQXzZ2S</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4">Armor\EulogyJones\GO.NIF</FileName>
+          <TextureHashes Tag="MO4T">5N8GbZ+kC75kXwZtpKQLvnNlGnQXzZ2S7t8GbZ+kC75uXwZtpKQLvnNlGnQXzZ2S898GbZ+kC75zXwZtpKQLvnNlGnQXzZ2S</TextureHashes>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_eulogy_jones_suit.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_eulogy_jones_suit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9E4">RepairClothingPrewarBusinessSuit</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>6</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

@@ -1,0 +1,63 @@
+ScriptName CRBrahminScript
+
+ref Self				;stores reference ID for what to push
+short Push			;flag set when animation starts, used to trigger timer
+
+float PushTimer	;timer var used to delay pushing until proper point in animation
+
+;Cow tipping!
+
+;When activated, check to make sure:
+; A. Player has no weapon out.
+; B. Player is sneaking
+; C. Player is undetected
+;if the above are true, set Push and PushTimer vars
+
+Begin OnActivate
+if IsActionRef player == 1
+
+	Set Self to GetSelf	
+	
+	if GetDead == 0
+		if ( Player.IsSneaking == 1 )
+			if ( Player.IsWeaponOut == 0 )
+				set Push to 1
+				set PushTimer to 0.8
+				Self.PlaySound NPCBrahminIdleMoo
+				IncrementScriptedChallenge TTWChallengeBrahminTipper
+			endif
+		endif
+	else
+		Activate
+	endif
+else
+	Activate
+endif
+
+End
+
+;If Push has been set to 1 (meaning a successful push took place)
+;wait until timer runs out, then actually do the pushing and reset push to 0
+
+Begin GameMode
+
+; Added conditional code to reduce the cost of running the script on every frame. Part of a game-wide revision of scripts - Jorge 03/14/10
+
+If Push != 1
+	Return
+Elseif Push == 1
+;Check what perspective player is in, and play the proper animation
+	if ( IsPC1stPerson == 1 )
+		Player.playidle Loose1stPBrahminPush
+	else
+		Player.playIdle Loose3rdPBrahminPush
+	endif
+	if ( PushTimer <= 0 )
+		Player.pushactoraway self 1
+		set Push to 0
+	else
+		set PushTimer to ( PushTimer - GetSecondsPassed )
+	endif
+endif
+
+End

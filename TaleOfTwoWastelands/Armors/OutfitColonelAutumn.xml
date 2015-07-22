@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0605157E">OutfitColonelAutumn</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitColonelAutumn</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-15</X>
+        <Y>-15</Y>
+        <Z>5</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>18</Y>
+        <Z>20</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Colonel Autumn's Uniform</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B8E">EnchClothingAutumnOutfit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ColonelAutumn\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+Cm5tHHTOUrU87t8JbwDNHjVuXwlvBc0eNW5tHHTOUrU8898JbwDNHjVzXwlvBc0eNW5tHHTOUrU8sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\ColonelAutumn\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5vQHbwcx/gpmdAdvDDH+Cm5tHHTOUrU87t8Jb/nMHjVuXwlv/sweNW5tHHTOUrU8898Jb/nMHjVzXwlv/sweNW5tHHTOUrU8sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\ColonelAutumn\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+Cm5tHHTOUrU87t8JbwDNHjVuXwlvBc0eNW5tHHTOUrU8898JbwDNHjVzXwlvBc0eNW5tHHTOUrU8</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_colonel_autmn_uniform.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_colonel_autmn_uniform.dds</Male>
+      </Message>
+    </Icon>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="000532A1">ColonelAutumnOutfitList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>12</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>12</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

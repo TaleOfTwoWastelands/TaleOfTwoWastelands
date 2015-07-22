@@ -1,0 +1,103 @@
+scn VES01VictorGSMyBodyguardScript
+
+; This script handles the robot Victor when the Player is in danger from random encounters near Goodsprings
+; Victor will show up and help the Player defeat their enemies and then initiate a short dialogue with the Player
+; Afterwards Victor will return to his "home" in Goodsprings
+
+int nVictorAttack																				; 1 = Victor has attacked an enemy of the Player
+int nVictorArrived																				; 1 = Victor has arrived and is helping the Player
+int nVictorTalk																					; 1 = Victor has talked to the Player
+int nVictorTryTalk																				; 1 = Victor is currently pathing to Player to begin dialogue (and hoping a fight doesn't break out before he gets there)
+int nCombatDone																				; 1 = Victor and Player have fought and defeated all immediate enemies (the threat is over)
+
+begin GameMode
+
+																									; This check is essentially the "off switch" --> when nVictorTalk equals 1 the "GoHome" package is added 
+																									; The "GoHome" package stops the quest when it completes 
+
+	if nVictorTalk == 1 && nVictorAttack != 1												; if Victor has already talked to Player (and is not attacking) then stop the quest
+		GSVictorRef.RemoveScriptPackage VES01VictorGSTalkToPCPackage 	; After Victor talks to Player "nVictorTalk" is set to 1 (which is the only time this "if" will be true) so remove package
+		GSVictorRef.AddScriptPackage VES01VictorGSGoHomePackage 			;		<<<This loops to ensure Victor makes it home -- REMOVE WHEN PATHING/NAVMESH FIXED>>>
+																									; NOTE: MyBodyguard Quest is stopped at the end of GoHome Package (added above and at end of TalkToPC Package)
+
+; --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+																									; This check is waiting for the Player to both "be in combat" and "be at half health" --> then Victor arrives to save the day!
+																									; (There are suplimental checks to make sure the Player is near Goodsprings and not fighting quest-specific enemies)
+
+	elseif nVictorTalk != 1 && nVictorAttack != 1 && nVictorArrived != 1				; If Victor isn't talking or attacking and hasn't arrived yet
+		if player.IsInCombat == 1 && player.GetHealthPercentage <= 0.50 		; 		<<<A FIGHT IS ON AND PLAYER IS HURTING>>>
+
+			; TTW Sesom: 
+			; ---------------------
+			; Changes for TTW so that Victor doesn't try to protect the player in the CW
+			; A check is added so the Bodyguard function only works in the NV Wasteland
+			;					
+
+			if player.GetDistance VES01VictorsRescueRangeCenter <= 27840 && player.GetInWorldSpace WastelandNV == 1 	; If Player is near Goodsprings (don't have Victor come help if Player is too far away)
+
+																									; The next four checks (if and elseif (x3)) are to ensure Victor doesn't show up during Sunny's "Back in the Saddle" quest or...
+																									; ...the Powder Ganger shoot-out in Goodsprings (checks for all specific creatures/enemies from those events)
+
+			if ( GetQuestRunning VCG02 != 1 && EasyPeteRef.GetCombatTarget != playerREF && GoodspringsSettler01Ref.GetCombatTarget != playerREF && GoodspringsSettler02Ref.GetCombatTarget != playerREF && GoodspringsSettler03Ref.GetCombatTarget != playerREF && GoodspringsSettler04Ref.GetCombatTarget != playerREF && VCG02GSSettlerREF.GetCombatTarget != playerREF && GSJoeCobbRef.GetCombatTarget != playerREF )
+				if GSPG01Ref.GetIsAlerted != 1 && GSPG02Ref.GetIsAlerted != 1 && GSPG03Ref.GetIsAlerted != 1 && GSPG04Ref.GetIsAlerted != 1 && GSPG05Ref.GetIsAlerted != 1 && GSPG06Ref.GetIsAlerted != 1 && VCG02Gecko1REF.GetIsAlerted != 1 && VCG02Gecko2REF.GetIsAlerted != 1 && VFreeformGoodspringsWell2Gecko1REF.GetIsAlerted != 1 && GSBighorner01Ref.GetCombatTarget != playerREF && GSBighorner02Ref.GetCombatTarget != playerREF && GSBighorner03Ref.GetCombatTarget != playerREF
+					if VFreeformGoodspringsWell2Gecko2REF.GetIsAlerted != 1 && VFreeformGoodspringsWell2Gecko3REF.GetIsAlerted != 1 && VFreeformGoodspringsWell3Gecko1REF.GetIsAlerted != 1 && VFreeformGoodspringsWell3Gecko2REF.GetIsAlerted != 1 && VFreeformGoodspringsWell3Gecko3REF.GetIsAlerted != 1 && vGSBrahmin01Ref.GetCombatTarget != playerREF && vGSBrahmin02Ref.GetCombatTarget != playerREF && vGSBrahmin03Ref.GetCombatTarget != playerREF
+						if GSPG01Ref.GetCombatTarget != playerREF && GSPG02Ref.GetCombatTarget != playerREF && GSPG03Ref.GetCombatTarget != playerREF && GSPG04Ref.GetCombatTarget != playerREF && GSPG05Ref.GetCombatTarget != playerREF && GSPG06Ref.GetCombatTarget != playerREF && VCG02Gecko1REF.GetCombatTarget != playerREF && VCG02Gecko2REF.GetCombatTarget != playerREF && VFreeformGoodspringsWell2Gecko1REF.GetCombatTarget != playerREF
+							if VFreeformGoodspringsWell2Gecko2REF.GetCombatTarget != playerREF && VFreeformGoodspringsWell2Gecko3REF.GetCombatTarget != playerREF && VFreeformGoodspringsWell3Gecko1REF.GetCombatTarget != playerREF && VFreeformGoodspringsWell3Gecko2REF.GetCombatTarget != playerREF && VFreeformGoodspringsWell3Gecko3REF.GetCombatTarget != playerREF && SunnyRef.GetCombatTarget != playerREF && TrudyRef.GetCombatTarget != playerREF && DocMitchellREF.GetCombatTarget != playerREF && CheyenneREF.GetCombatTarget != playerREF
+
+								if player.GetDistance GSVictorRef >= 10000
+									GSVictorRef.MoveTo Player 2500 2500
+									GSVictorRef.AddScriptPackage VES01VictorGSPathToPCPackage
+									;GSVictorRef.SetPlayerTeammate 1					; Victor will now fight with the Player (and enemies will attack Victor)
+									GSVictorRef.AddToFaction VESVictorMyBodyguardFaction 1
+									set nVictorAttack to 1 										; Victor is close to the Player and the Player is in combat so Victor is attacking (has attacked) too
+									set nVictorArrived to 1									; Victor has arrived
+								else GSVictorRef.AddScriptPackage VES01VictorGSPathToPCPackage
+									if GSVictorRef.GetDistance player <= 1000
+										;GSVictorRef.SetPlayerTeammate 1				; Victor will now fight with the Player (and enemies will attack Victor)
+										GSVictorRef.AddToFaction VESVictorMyBodyguardFaction 1
+										set nVictorAttack to 1									; Victor is now close enough to the Player to see enemies so Victor is attacking (has attacked) too
+										set nVictorArrived to 1								; Victor has arrived
+									endif
+								endif
+
+							endif
+						endif
+					endif
+				endif
+			endif
+
+			endif
+		endif
+
+; --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+																									; This check is waiting for the Player to "be out of combat" before sending Victor to talk to the Player 
+																									; Victor's other actions (to "Go Home") are handled in the dialogue "VES01VictorGSMyBodyguard"
+																									; (There is also a check to make sure combat doesn't start again before Victor begins dialogue -- Victor will return to combat if this happens)
+
+	elseif nVictorTalk != 1 && nVictorAttack == 1											; if Victor has not talked to Player and is attacking (has attacked)
+		if player.IsInCombat == 0															; keeps checking to see when the Player is done with the fight
+			set nCombatDone to 1															; 					<<<THE FIGHT IS OVER>>>
+			if nCombatDone == 1 && nVictorTalk != 1 && nVictorTryTalk != 1		; if the fight is over and Victor has not talked to Player...and is not trying currently to reach the Player to talk
+																									; Start Package that sends Victor to talk to the Player
+				GSVictorRef.RemoveFromFaction VESVictorMyBodyguardFaction		; Added as part of a fix for issue# 52147. (11_15_10) -ETB
+				GSVictorRef.AddScriptPackage VES01VictorGSTalkToPCPackage
+				set nVictorTryTalk to 1
+				if player.IsInCombat == 1													; if while Victor is trying to talk to the Player and combat begins (again) stop trying to talk and fight enemies!
+					set nCombatDone to 0													; 					<<<A NEW FIGHT HAS BEGUN>>>
+					set nVictorTalk to 0
+					set nVictorTryTalk to 0
+					GSVictorRef.RemoveScriptPackage VES01VictorGSTalkToPCPackage
+																									; <<<THE FOLLOWING ARE ADDED TO END OF VICTORS FINAL DIALOGUE (result of "VES01VictorGSTalkToPC Package" above)>>>
+																									; GSVictorRef.SetPlayerTeammate 0
+																									; GSVictorRef.RemoveScriptPackage VES01VictorGSTalkToPCPackage
+																									; GSVictorRef.AddScriptPackage VES01VictorGSGoHomePackage
+																									; set VES01VictorGSMyBodyguard.nVictorTalk to 1 	
+																									; set VES01VictorGSMyBodyguard.nVictorAttack to 0
+				endif
+			endif
+		endif
+	endif
+
+end

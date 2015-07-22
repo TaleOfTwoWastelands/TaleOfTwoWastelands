@@ -1,0 +1,70 @@
+scn NVDLC01MQ00Script
+; JSH-OEI
+
+short	DoOnceMessage
+
+short bTeleportOut
+
+short FormListsUpdated		;used as a doOnce
+
+float StartTimer
+
+BEGIN GameMode
+
+	; Player is inside the bunker (pre-patch), so warp him out for safety.
+	if (Player.GetInCell SLBoSBunkerINT) && (bTeleportOut == 0) && (bInDCWasteland == 0)
+		Player.Moveto NVDLC01BunkerExitMarker;
+		SLBoSBunkerEntranceRef.Lock 255;
+		set bTeleportOut to 1;
+	endif
+
+	; used to add forms to existing formlists, used primarily to add items to formlists that the animation system uses for conditions
+	if FormListsUpdated == 0
+				
+		; Regular Holdout Weapons
+		AddFormToFormList NVHoldoutWeapons NVDLC01WeapSpaceAgeKnife
+		AddFormToFormList NVHoldoutWeapons NVDLC01WeapSpaceAgeKnifeClean
+		AddFormToFormList NVHoldoutWeapons NVDLC01WeapSpaceAgeKnifeHeated
+		AddFormToFormList NVHoldoutWeapons NVDLC01WeapPolicePistol
+
+		; Improved Holdout Weapons
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC01WeapSpaceAgeKnife
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC01WeapSpaceAgeKnifeClean
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC01WeapSpaceAgeKnifeHeated
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC01WeapPolicePistol
+		
+		; Vera's Dress for Veronica
+		AddFormToFormList SkirtOutfits nvdlc01starletclean;
+		
+		; Make Holorifle ignite gas when fired within gas volume
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC01WeapHolorifle
+
+		set FormListsUpdated to 1 
+
+	endif
+
+	; if Radio New Vegas is enabled, it means the player has completed chargen and has exited Doc Mitchell's house.
+	if ( DoOnceMessage == 0 )
+		if (RNVTARef.GetDisabled == 0 && getquestcompleted VCG01)
+			set DoOnceMessage to 1
+			set StartTimer to 30
+		endif
+
+	elseif ( DoOnceMessage == 1 )
+		if ( StartTimer <= 0 )
+			set bTeleportOut to 1;
+			SetStage NVDLC01MQ00 10
+			ShowMessage NVDLC01DownloadMessage
+			set DoOnceMessage to 1
+			NVDLC01RadioStationRef.enable
+			ForceRadioStationUpdate
+			ResetPipboyManager
+			Set DoOnceMessage to -1
+			ShowMessage NVDLC01LoadedMsg
+		else
+			set StartTimer to ( StartTimer - GetSecondsPassed )
+		endif
+		
+	endif
+
+END

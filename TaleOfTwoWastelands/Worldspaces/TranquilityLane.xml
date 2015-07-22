@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="060244A7">TranquilityLane</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TranquilityLane</EditorID>
+    <Name Tag="FULL">Tranquility Lane</Name>
+    <Climate Tag="CNAM">
+      <Reference ID="0002BF98">TranquilityClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00000018">DefaultWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00000018">DefaultWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>-2048</DefaultLandHeight>
+      <DefaultWaterHeight>-5000</DefaultWaterHeight>
+    </LandData>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>0</X>
+        <Y>0</Y>
+      </UsableSize>
+      <MinX>0</MinX>
+      <MinY>0</MinY>
+      <MaxX>0</MaxX>
+      <MaxY>0</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00079191">TLBlackandWhitetest</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, CannotFastTravel, NoLODWater</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-20480</X>
+        <Y>-20480</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>24576</X>
+        <Y>20480</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="000BAD30">TranquilityLaneLP</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM">Data\Textures\Trees\CanopyShadow.dds</CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

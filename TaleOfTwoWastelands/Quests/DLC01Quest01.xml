@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0800108C">DLC01Quest01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01Quest01</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="08000875">DLC01Quest01SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Into The Pitt</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CC">DLC01RaiderFemaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CD">DLC01RaiderFemaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CA">DLC01RaiderMaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CB">DLC01RaiderMaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2B">DLC01SlaveFemale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2C">DLC01SlaveFemale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD5">DLC01SlaveMale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD6">DLC01SlaveMale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD3">DLC01SlaverMaleVoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035C9">DLC01UniqueAshur</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CF">DLC01UniqueMidea</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080045F9">DLC01UniqueSandra</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080009A6">DLC01UniqueWernher</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>13</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Quest Setup for testing
+
+player.MoveTo DLC01RadioTowerMARKER</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001658">DLC01RadioTowerMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>39</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgMAbgoAAABuAQAAABwAAQAiEAIAAAAcAAIAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Initial stage, set when DLC Loads
+
+SetObjectiveDisplayed DLC01Quest01 10 1
+DLC01FF003EnableMarker.disable
+DLC01RadioStationREF.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008C9F">DLC01FF003EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001657">DLC01RadioStationREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG4yAAAAbgEAAAAcAAEAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must find Slave Outfit
+
+SetObjectiveCompleted DLC01Quest01 10 1
+SetObjectiveDisplayed DLC01Quest01 50 1
+DLC01RadioStationREF.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001657">DLC01RadioStationREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">51</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG4zAAAAbgEAAAAcAAEAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC01Quest01 10 1
+SetObjectiveDisplayed DLC01Quest01 51 1
+DLC01RadioStationREF.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001657">DLC01RadioStationREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>59</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbjIAAABuAQAAAKMRDwADAHICAG5aAAAAbgEAAAAcAAEAnhAFAAEAcgMAHAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has Slave Outfit, must return to Wernher
+
+SetObjectiveCompleted DLC01Quest01 50 1
+SetObjectiveDisplayed DLC01Quest01 90 1
+
+DLC01WernherREF.MoveTo DLC01WernherSlaverCampMoveToMARKER
+DLC01WernherREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A6B3">DLC01WernherSlaverCampMoveToMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">91</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjMAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC01Quest01 51 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStageDone</Type>
+                  <Quest ID="0800108C">DLC01Quest01</Quest>
+                  <QuestStage>50</QuestStage>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>62</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbloAAABuAQAAAKMRDwADAHICAG5kAAAAbgEAAAAcAAEAIhACAAAAVRAKAAIAcgMAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player must travel to The Pitt
+
+SetObjectiveCompleted DLC01Quest01 90 1
+SetObjectiveDisplayed DLC01Quest01 100 1
+
+DLC01RadioTowerMapMarker.Disable
+ShowMap DLC01RadioTunnelMapMarker 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800221D">DLC01RadioTowerMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800221E">DLC01RadioTunnelMapMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>67</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbgoAAABuAQAAAKMRDwADAHIDAG5kAAAAbgEAAAAcAAEAIhACAAAAHAACACEQAgAAAFUQBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC01Quest01 10 1
+SetObjectiveDisplayed DLC01Quest01 100 1
+
+DLC01RadioTowerMapMarker.Disable
+DLC01RadioTunnelMapMarker.enable
+ShowMap DLC01RadioTunnelMapMarker</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800221D">DLC01RadioTowerMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800221E">DLC01RadioTunnelMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbmQAAABuAQAAAKMRDwADAHICAG6vAAAAbgEAAAAcAAEAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has reached the end of Wernher's escort.
+
+SetObjectiveCompleted DLC01Quest01 100 1
+SetObjectiveDisplayed DLC01Quest01 175 1
+;SetObjectiveDisplayed DLC01Quest01 200 1
+
+DLC01DCSlaverParentMARKER.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800632F">DLC01DCSlaverParentMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">175</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbq8AAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player has had belongings taken.
+
+SetObjectiveCompleted DLC01Quest01 175 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">199</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>66</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbsgAAABuAQAAAKMRDwADAHIBAG7SAAAAbgEAAAA5EAoAAgByAQBuyAAAADkQCgACAHICAG4KAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC01Quest01 200 1
+SetObjectiveDisplayed DLC01Quest01 210 1
+
+SetStage DLC01Quest01 200
+SetStage DLC01Quest02 10</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>84</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMBAAIAIDEcAAEAUhAKAAIAcgMAbmMAAAAcAAEAAhAKAAIAcgQAbgEAAAB3EQcAAQBulgAAADkQCgACAHIFAG4KAAAANxAFAAEAcgYA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Quest Complete
+
+Set DLC01DowntownAmbushControlREF.AmbushCheck to 1
+DLC01WernherREF.RemoveItem DLC01WernherWeap44MagnumScoped 99
+DLC01WernherREF.AddItem CondScoped44MagnumNPC 1
+RewardXP 150
+SetStage DLC01Quest02 10
+;AddAchievement 55
+StopQuest DLC01Quest01</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A741">DLC01DowntownAmbushControlREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B74B">DLC01WernherWeap44MagnumScoped</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003A8C9">CondScoped44MagnumNPC</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108B">DLC01Quest02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108C">DLC01Quest01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find the source of the radio transmissions.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="0800108C">DLC01Quest01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Acquire a slave outfit.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08005FAC">REFR - 07005FAC</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">Return to Wernher.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Travel to The Pitt.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0800A75C">REFR - 0700A75C</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">200</Index>
+        <Description Tag="NNAM">Infiltrate The Pitt.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0800150C">PittWorldtoMarketSquareREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">51</Index>
+        <Description Tag="NNAM">(Optional) Aquire a slave outfit.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="0602AE21">Cherry</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Cherry</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Cherry</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0002B8D8">DukovFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A6">GeneralIdleFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00095982">DukovsGirls</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000C3370">DukovShareFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCB">FemaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000038E6">Asian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0602CD5D">CherryScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340E6">OutfitPrewarNegligee</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.400000006</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006698F">FoodLiquorMild100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0609DF04">CherryRCSleep20x10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602CD5E">CherryRCWander</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602CD5C">CherryFollowPC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0605C6BB">CherryFindPC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0605C6BC">CherryStealKey</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C9521">GirlAccompanyDukov</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0604651B">CherryEat21x1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609D8A4">GirlFollowDukov13x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609D8A5">CherryFollowFantasia13x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06078C76">CherryWander13x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0604651A">CherryEat12x1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B8D7">CherrySleep3x9</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0604650D">CherryDefaultHome</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015672">Settler</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>27</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>31</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>27</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0005239D">HairFemaleCherry</Reference>
+      </Type>
+      <Length Tag="LNAM">0.730000019</Length>
+      <Color Tag="HCLR">
+        <Red>155</Red>
+        <Green>61</Green>
+        <Blue>47</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">Qi/ovoCT5r8htNw/I0iLv/5NT0BY0pQ+i+fwvxSfgD9qqQc/ZtHMvyYv/L/DhQ5Ac6TRPwKeuL94wa4+CF/EP5y7uL6YO2M/Mzj2vqJAhr8AFwlAbEYcwEbMjD9wClK+ZQFCwEFdHED0/HW/SfXgPrtzgsClUxrA09/FQMgOEL8cR/c/0I+mvYw+WUAIDAG+S0HPP7SYr78OoNJA1cKawKKQRMC/4oHAsSfCP/Yk38Cwb7C+fkIBwN1L6L+gexBAaOinwPp5IkE=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">e/fBvUDrXb1m0QK+1BfVPXiUDT82hBg/0yGEv+imTD/iPhm/9GV+Pr6e977Q+Ks+9PPfvk3PuT8dNYI/J7uTv9zsGz4E4VG91MQxvlSstT5O05M/Cn8OQGo1oL6br64+2LvVviL8fr84PCi/RxXyPhhHKj4/Nw2/bpuRPlW9F79qZSFAeFWqvrAjPL+kiYHAeBBEP56kzD9GbyhAJJ5sPz4B3r9inGpAHLOwv+ACY0CQGou+aO59Pueobr/S6n5AAecOwP4VT0A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

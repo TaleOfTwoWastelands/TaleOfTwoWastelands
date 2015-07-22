@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="060340FC">MQ04SlasherMask</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ04SlasherMask</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-13</X>
+        <Y>-6</Y>
+        <Z>-10</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>-1</Y>
+        <Z>40</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Pint-Sized Slasher Mask</Name>
+    <Script Tag="SCRI">
+      <Reference ID="060286D7">MQ04SlasherOutfitScript</Reference>
+    </Script>
+    <BipedData Tag="BMDT">
+      <Slots>Head, Hair, Headband, Hat, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\ClownMask\M\ClownMask.NIF</FileName>
+          <TextureHashes Tag="MODT">6/MJYzOvVDNrcwljOK9UM3JhF3RrmCVO7t8LY+v0v7NuXwtj8PS/s3JhF3RrmCVO898LY+v0v7NzXwtj8PS/s3JhF3RrmCVO</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\ClownMask\M\ClownMaskGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">6/MJYzOvVDNrcwljOK9UM3JhF3RrmCVO7t8LY+v0v7NuXwtj8PS/s3JhF3RrmCVO898LY+v0v7NzXwtj8PS/s3JhF3RrmCVO</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_security_helmet.dds</Male>
+      </Inventory>
+    </Icon>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>60</Value>
+      <MaxCondition>150</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>2</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

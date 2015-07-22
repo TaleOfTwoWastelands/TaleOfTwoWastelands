@@ -1,0 +1,323 @@
+scn	VPitFighterDeath
+
+; This script is tied to a critter. It governs events after a Pit's fight is over. Basically, OnDeath we update a counter, making sure that if the creature with this script is the last of her
+; group to die, then the opposing fighters are given behaviors to retreat into the cages, triggering volumes in the process that seal the arena, while also signaling the GameMode code "director"
+; to remove/resurrect/reposition the fighters for the next bout (in tandem with the VPitFighterSeal3 script). 
+; Another function of the code here  is to randomize cheering sounds from the crowds, and also to take into account if players are attempting to get freebie xp by interfering with the fights. In that case,
+; The Thorn's guards are none too happy.
+; - Jorge
+
+Ref	Self
+Ref	Fighter01
+Ref	Fighter02
+Ref	Fighter03
+Ref	Fighter04
+Ref	Fighter05
+Ref	Fighter06
+
+Short	RandomApplause
+
+Begin OnDeath
+
+
+	; Set the Ref to the proper contender
+	Set Fighter01 to VMS38.PitFighter01
+	Set Fighter02 to VMS38.PitFighter02
+	Set Fighter03 to VMS38.PitFighter03
+	Set Fighter04 to VMS38.PitFighter04
+	Set Fighter05 to VMS38.PitFighter05
+	Set Fighter06 to VMS38.PitFighter06
+
+	Set RandomApplause to GetRandomPercent
+	If RandomApplause <= 33
+		PlaySound AmbPittCrowdCheer03
+	Elseif RandomApplause > 33 && RandomApplause <= 66
+		PlaySound AmbPittCrowdCheer02
+	Elseif RandomApplause > 66
+		PlaySound AmbPittCrowdCheer01
+	Endif
+
+	Set Self to GetSelf
+	If (Self == Fighter01) || (Self == Fighter03) || (Self == Fighter05)
+		Set VMS38.CreaturesRedDefeated to VMS38.CreaturesRedDefeated + 1
+		If VMS38.CreaturesRedNumber <= VMS38.CreaturesRedDefeated
+			Set VMS38.CreaturesRedLose to 1
+			;ShowWarning "Red Loses."
+		Endif
+
+	Elseif (Self == Fighter02) || (Self == Fighter04) || (Self == Fighter06)
+		Set VMS38.CreaturesBlueDefeated to VMS38.CreaturesBlueDefeated + 1
+		If VMS38.CreaturesBlueNumber <= VMS38.CreaturesBlueDefeated
+			Set VMS38.CreaturesBlueLose to 1
+			;ShowWarning "Blue Loses."
+		Endif
+	Endif
+
+	If VMS38.PlayerFights != 1
+		If IsKiller Player == 1
+			SendAssaultAlarm Player VThornDwellers
+		Endif
+		If VMS38.CreaturesBlueLose == 1
+			If Fighter01.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter01.AddScriptPackage VPitFighter01ToAppear
+				Fighter01.CIOS VPitFighterHealthBoost01
+			Endif
+			If Fighter03.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter03.AddScriptPackage VPitFighter01ToAppear
+				Fighter03.CIOS VPitFighterHealthBoost01
+			Endif
+			If Fighter05.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter05.AddScriptPackage VPitFighter01ToAppear
+				Fighter05.CIOS VPitFighterHealthBoost01
+			Endif
+
+			If Fighter01.GetDead == 1 && Fighter03.GetDead == 1 && Fighter05.GetDead == 1
+				Fighter01.MoveTo VPitFighter1AppearMarker3REF
+				Fighter01.Resurrect
+				Fighter01.AddScriptPackage VPitFighter01ToAppear
+			Endif
+
+			Set VMS38.FightersFight to 0
+			Set VMS38.PitFightFinishing to 1
+			Set VMS38.FightersAtAppear to 0
+			Set VMS38.FightersAtStart to 0
+			Set VMS38.FightersClash to 0
+			Set VMS38.FightersSealed1 to 0
+			Set VMS38.FightersSealed2 to 0
+
+			VPitFighter01AccessDoorREF.UnLock
+			VPitFighter02AccessDoorREF.UnLock
+			VPitFighter01AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter02AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter01AccessDoor2REF.UnLock
+			VPitFighter02AccessDoor2REF.UnLock
+			;VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+			;VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+			VPitAccessDoorREF.Unlock
+
+
+			If VMS38.PlayerBetsRed != 1
+				Set VMS38.PlayerWins to 0
+			Elseif VMS38.PlayerBetsRed == 1
+				Set VMS38.PlayerWins to 1
+			Endif
+
+			; Contenders are made neutral to each other
+			Fighter01.RemoveFromFaction VPitFighter01Faction
+			Fighter02.RemoveFromFaction VPitFighter02Faction
+			Fighter03.RemoveFromFaction VPitFighter01Faction
+			Fighter04.RemoveFromFaction VPitFighter02Faction
+			Fighter05.RemoveFromFaction VPitFighter01Faction
+			Fighter06.RemoveFromFaction VPitFighter02Faction
+
+		Elseif VMS38.CreaturesRedLose == 1
+			If Fighter02.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter02.AddScriptPackage VPitFighter02ToAppear
+				Fighter02.CIOS VPitFighterHealthBoost01
+			Endif
+			If Fighter04.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter04.AddScriptPackage VPitFighter02ToAppear
+				Fighter04.CIOS VPitFighterHealthBoost01
+			Endif
+			If Fighter06.GetDead != 1	; Winner moves to its start position and combat variables are reset
+				Fighter06.AddScriptPackage VPitFighter02ToAppear
+				Fighter06.CIOS VPitFighterHealthBoost01
+			Endif
+
+			If Fighter02.GetDead == 1 && Fighter04.GetDead == 1 && Fighter06.GetDead == 1
+				Fighter02.MoveTo VPitFighter2AppearMarker2REF
+				Fighter02.Resurrect
+				Fighter02.AddScriptPackage VPitFighter02ToAppear
+			Endif
+
+			Set VMS38.FightersFight to 0
+			Set VMS38.PitFightFinishing to 1
+			Set VMS38.FightersAtAppear to 0
+			Set VMS38.FightersAtStart to 0
+			Set VMS38.FightersClash to 0
+			Set VMS38.FightersSealed1 to 0
+			Set VMS38.FightersSealed2 to 0
+
+			VPitFighter01AccessDoorREF.UnLock
+			VPitFighter02AccessDoorREF.UnLock
+			VPitFighter01AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter02AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter01AccessDoor2REF.UnLock
+			VPitFighter02AccessDoor2REF.UnLock
+			;VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+			;VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+			VPitAccessDoorREF.Unlock
+
+			If VMS38.PlayerBetsRed != 1
+				Set VMS38.PlayerWins to 1
+				Set VMS38.PlayerBetsBlue to 0
+			Elseif VMS38.PlayerBetsRed == 1
+				Set VMS38.PlayerWins to 0
+				Set VMS38.PlayerBetsRed to 0
+			Endif
+
+			; Contenders are made neutral to each other
+			Fighter01.RemoveFromFaction VPitFighter01Faction
+			Fighter02.RemoveFromFaction VPitFighter02Faction
+			Fighter03.RemoveFromFaction VPitFighter01Faction
+			Fighter04.RemoveFromFaction VPitFighter02Faction
+			Fighter05.RemoveFromFaction VPitFighter01Faction
+			Fighter06.RemoveFromFaction VPitFighter02Faction
+
+		Endif
+
+	Elseif VMS38.PlayerFights == 1
+		If VMS38.CreaturesBlueLose == 1
+
+			Set VMS38.PlayerWinsFight to 1
+			Set VMS38.FightersFight to 0
+			Set VMS38.PitFightFinishing to 1
+			Set VMS38.FightersAtAppear to 0
+			Set VMS38.FightersAtStart to 0
+			Set VMS38.FightersClash to 0
+			Set VMS38.FightersSealed1 to 0
+			Set VMS38.FightersSealed2 to 0
+
+			Player.RemoveFromFaction VPitFighter01Faction
+			Fighter02.StopCombat Player
+			Fighter04.StopCombat Player
+			Fighter06.StopCombat Player
+			Fighter02.RemoveFromFaction VPitFighter02Faction
+			Fighter04.RemoveFromFaction VPitFighter02Faction
+			Fighter06.RemoveFromFaction VPitFighter02Faction
+
+			VPitFighter01AccessDoorREF.UnLock
+			VPitFighter02AccessDoorREF.UnLock
+			VPitFighter01AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter02AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter01AccessDoor2REF.UnLock
+			VPitFighter02AccessDoor2REF.UnLock
+			;VPitFighter01AccessDoor2REF.Activate VMS38RedLucyREF
+			;VPitFighter02AccessDoor2REF.Activate VMS38RedLucyREF
+	
+			VPitPlayerAccessDoorREF.Unlock
+
+			If (VNPCFollowers.nCurrentFollowers >= 1)
+				If (VNPCFollowers.ArcadeHired == 1)
+					If (ArcadeREF.GetInCell OVWestSewers03 == 1)
+						ArcadeREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bBooneHired == 1)
+					If (CraigBooneREF.GetInCell OVWestSewers03 == 1)
+						CraigBooneREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bVeronicaHired == 1)
+					If (VeronicaREF.GetInCell OVWestSewers03 == 1)
+						VeronicaREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.RaulHired == 1)
+					If (RaulREF.GetInCell OVWestSewers03 == 1)
+						RaulREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bEDEHired == 1)
+					If (EDE1REF.GetInCell OVWestSewers03 == 1 || EDE2REF.GetInCell OVWestSewers03 == 1 || EDE3REF.GetInCell OVWestSewers03 == 1)
+					Endif
+				Endif
+				If (VNPCFollowers.RexHired == 1)
+					If (RexREF.GetInCell OVWestSewers03 == 1)
+						RexREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bCassHired == 1)
+					If (RoseofSharonCassidyREF.GetInCell OVWestSewers03 == 1)
+						RoseofSharonCassidyREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bLilyHired == 1)
+					If (LilyREF.GetInCell OVWestSewers03 == 1)
+						LilyREF.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.CharonHired == 1)
+					If (CharonRef.GetInCell OVWestSewers03 == 1)
+						CharonRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.ButchHired == 1)
+					If (ButchRef.GetInCell OVWestSewers03 == 1)
+						ButchRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.CloverHired == 1)
+					If (CloverRef.GetInCell OVWestSewers03 == 1)
+						CloverRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.JerichoHired == 1)
+					If (JerichoRef.GetInCell OVWestSewers03 == 1)
+						JerichoRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.FawkesHired == 1)
+					If (MQ08FawkesRef.GetInCell OVWestSewers03 == 1)
+						MQ08FawkesRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.StarPaladinCrossHired == 1)
+					If (StarPaladinCrossRef.GetInCell OVWestSewers03 == 1)
+						StarPaladinCrossRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.DogmeatHired == 1)
+					If (DogmeatRef.GetInCell OVWestSewers03 == 1)
+						DogmeatRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.RL3Hired == 1)
+					If (RL3REF.GetInCell OVWestSewers03 == 1)
+						RL3REF.SetRestrained 0;
+					Endif
+				Endif
+			Endif
+		Endif
+	Endif
+End
+
+Begin OnHit Player
+
+	If GetDead == 1 || VMS38.PitFightOn != 1
+		Return
+	Elseif VMS38.PitFightOn == 1 && VMS38.PlayerFights == 1
+		Set RandomApplause to GetRandomPercent
+		If RandomApplause <= 33
+			Return
+		Elseif RandomApplause > 33 && RandomApplause <= 55
+			PlaySound AmbPittCrowdAhh01
+		Elseif RandomApplause > 55 && RandomApplause <= 77
+			PlaySound AmbPittCrowdAhh02
+		Elseif RandomApplause > 77
+			PlaySound AmbPittCrowdAhh03
+		Endif
+	Elseif VMS38.PitFightOn == 1 && VMS38.PlayerFights != 1
+		SendAssaultAlarm Player VThornDwellers
+	Endif
+
+End
+
+Begin OnHit
+
+	If GetDead == 1 || VMS38.PitFightOn != 1
+		Return
+	Elseif VMS38.PitFightOn == 1
+		Set RandomApplause to GetRandomPercent
+		If RandomApplause <= 33
+			Return
+		Elseif RandomApplause > 33 && RandomApplause <= 55
+			PlaySound AmbPittCrowdAhh01
+		Elseif RandomApplause > 55 && RandomApplause <= 77
+			PlaySound AmbPittCrowdAhh02
+		Elseif RandomApplause > 77
+			PlaySound AmbPittCrowdAhh03
+		Endif
+	Endif
+
+End

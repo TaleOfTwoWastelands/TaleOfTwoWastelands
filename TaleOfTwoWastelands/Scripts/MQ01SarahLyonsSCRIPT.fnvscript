@@ -1,0 +1,302 @@
+scn MQ01SarahLyonsSCRIPT
+
+;; // ===============================================================// 
+
+short MQ11SarahTravel			;flag set for updating packages as Sarah paths out to the exterior
+short MQ11Follow					;var set based on whether Sarah is following the player during MQ11
+short AirlockTalk					;var set to have Sarah say lines to the player if the Airlock isn't opened
+short AirlockTimer					;timer used for spacing out lines about the airlock
+short AirlockActivate				;flag set when Sarah activates the airlock for the player
+short MQ11PanelAnimate		;flag set when Sarah activates the control panel, used for juggling animations
+short HelmetGone					;flag set when player loads into Citadel Lab in MQ09
+Short MQ11AirlockGo				;flag set when Sarah is in position for activating panel
+short MQ11AirlockEVP			;flag set when telling Sarah to update packages
+short MQ11Forcegreet			;flag set when Autumn is dead or has left the Rotunda
+
+float MQ11GreetTimer			;timer used for delaying forcegreet in Rotunda
+
+;; // ===============================================================// 
+
+;prevent player from talking to Sarah during Elder Lyons' speech in MQ11
+;and also during her briefing at stage 10
+
+Begin OnActivate
+
+	if ( GetStage MQ11 == 1 )
+		Return
+	elseif ( MQ11.SarahSpeech >= 1 )
+		if ( MQ01SarahRef.GetCurrentAIProcedure == 4 )
+			return
+		else
+			Activate
+		endif
+	elseif ( MQ11.IntConvInit == 1 )
+		return
+	elseif ( MQ11.IntConvInit == -1 )
+		if ( MQ01SarahRef.GetCurrentAiProcedure == 4 )
+			return
+		else
+			Activate
+		endif
+	else
+		Activate
+	endif
+
+	if ( ElderLyonsRef.NoActivate == 1 )
+		Return
+	else
+		Activate
+	endif
+
+End
+
+
+
+begin gamemode
+
+; // MQ11 Scripting Stuff =====//
+
+;Pull Sarah's helmet
+
+	if ( GetStage MQ09 == 60 )
+		if ( GetInSameCell Player == 1 )
+			if ( HelmetGone == 0 )
+				RemoveItem ArmorReconHelmet 1
+				set HelmetGone to 1
+			endif
+		endif
+	endif			
+
+;When Autumn is dead, or has left, pause for a moment before re-evaluating packages
+
+	if ( GetStage MQ11 >= 40 )
+		if ( MQ11Forcegreet == 0 )
+			if ( MQ11.AutumnDead >= 3 )
+				set MQ11ForceGreet to 1
+				set MQ11GreetTimer to 3
+			elseif ( MQ11.AutumnLeave >= 1 )
+				set MQ11Forcegreet to 1
+				set MQ11GreetTimer to 3
+			endif
+		elseif ( MQ11ForceGreet == 1 )
+			if ( MQ11GreetTimer <= 0 )
+				Set MQ11ForceGreet to 2
+				MQ01SarahRef.EVP
+			else
+				set MQ11GreetTimer to  ( MQ11GreetTimer - GetSecondsPassed )
+			endif
+		endif
+	endif
+	
+
+
+;Check for distance from airlock wait marker before allowing Sarah to activate panel
+;used to make sure she doesn't start Activate package early
+
+	if ( GetStage MQ11 >= 50 )
+		if ( MQ11AirlockGo == 0 )
+			if ( GetDistance MQ11AirlockWaitMarker <= 150 )
+				Set MQ11AirlockGo to 1
+				MQ01SarahRef.EVP
+			endif
+		endif
+	endif
+
+
+
+
+;When Sarah's done with the keypad animation, update the variable for panel activation so she'll run her death anim
+
+	if ( MQ11PanelAnimate == 1 )
+		if IsIdlePlaying == 0 
+			set MQ11PanelAnimate to 2
+			set PPurityKeypadEnterRef.PanelActivated to 2
+		endif
+	endif
+
+
+
+;Have Sarah fire off a line to Rothchild when she's done with her speech
+
+	if ( MQ11.SarahPrimeLine == 0 )
+		if ( MQ11.SarahSpeech >= 9 )
+			if ( GetCurrentAIProcedure != 4 )
+				set MQ11.SarahPrimeLine to 1
+				MQ01SarahRef.SayTo ScribeRothchildRef MQ11SarahActivatePrimeLine
+
+			endif
+		endif
+	endif
+
+
+
+;update MQ11SarahTravel when Sarah reaches the Bailey Marker
+
+	if ( MQ11SarahTravel == 0 )
+		if ( GetStage MQ11 == 30 )
+			if ( GetDistance MQ11SarahBaileyMarker < 400 )
+				set MQ11SarahTravel to 1
+				EVP
+			endif
+		endif
+	endif
+
+;update MQ11SarahTravel again when she reaches the exterior marker
+
+	if ( MQ11SarahTravel == 1 )
+		if ( GetStage MQ11 == 30  )
+			if ( GetDistance MQ11SarahExitCitadelMarker <= 512 )
+				if ( Player.GetDistance MQ11SarahExitCitadelMarker <= 512 )
+					Set MQ11SarahTravel to 2
+					Set MQ11Follow to 1
+				endif
+			endif
+		endif
+	endif
+
+
+;Run lines when waiting for the player to open the airlock.
+	if ( MQ11.Code == 2 )
+		if ( PPBulkhead01Ref.GetOpenState == 0 )
+			if ( MQ01SarahRef.GetDistance MQ11AirlockWaitMarker < 100 )
+				if ( AirlockTimer <= 0 )
+					if ( AirlockTalk == 0 )
+						SayTo Player MQ11SarahAirlockLines
+						set AirlockTalk to 1
+					endif		
+				else
+					set AirlockTimer to ( AirlockTimer - GetSecondsPassed )
+				endif
+			endif
+		endif
+	endif			
+
+;If player is putting in the code, activate the airlock when she's close enough to the button and the player is inside the airlock
+
+	if ( MQ11.Code == 1 )
+		if ( AirlockActivate == 0 )
+			if ( MQ01SarahRef.GetDistance MQ11SarahAirlockButtonMarker < 50 )
+				if ( Player.GetDistance MQ11AirlockWaitMarker < 150 )
+;					MQ11AirlockControlRef.Activate MQ01SarahRef
+					If ( PPBulkhead02Ref.GetOpenState == 1 )
+						set MQ11AirlockControlRef.OpenState to 1
+						set MQ11AirlockControlRef.SarahOpened to 1
+						set AirlockActivate to 1
+					endif
+				endif
+			endif
+		endif
+	endif
+
+
+
+
+
+
+end
+
+
+
+;; // ===============================================================// 
+
+; when done talking, set variable to tell anyone else they can talk now
+begin SayToDone MQ01LyonsPrideSarah
+	set MQ01.talking to 0
+end
+
+;; // ===============================================================// 
+
+
+; this package only completes when Vargas is seated and Sarah is nearby
+begin OnPackageDone MQ01SarahGNRToVargas2
+	setstage MQ01 143
+
+end
+
+
+
+Begin SayToDone MQ09ElderSarahConv
+
+	if ( ElderLyonsRef.ConvFlag == 1 )
+		set ElderLyonsRef.ConvFlag to 2
+		ElderLyonsRef.SayTo MQ01SarahRef MQ09ElderSarahConv
+	endif
+
+	if ( ElderLyonsRef.ConvFlag == 3 )
+		set ElderLyonsRef.ConvFlag to 4
+		ElderLyonsRef.SayTo MQ01SarahRef MQ09ElderSarahConv
+	endif
+
+	if ( ElderLyonsRef.ConvFlag == 6 )
+		set ElderLyonsRef.ConvFlag to 7
+		ElderLyonsRef.SayTo MQ01SarahRef MQ09ElderSarahConv
+	endif
+
+	if ( ElderLyonsRef.ConvFlag == 8 )
+		Set ElderLyonsRef.NoActivate to 0
+		set ElderLyonsRef.ConvFlag to -1
+	endif
+
+End
+
+
+Begin SayToDone MQ11ElderSarahConv
+
+	if ( ElderLyonsRef.ConvFlag2 == 1 )
+		set ElderLyonsRef.ConvFlag2 to 2
+		ElderLyonsRef.SayTo MQ01SarahRef MQ11ElderSarahConv
+	endif
+
+	if ( ElderLyonsRef.ConvFlag2 == 3 )
+		set ElderLyonsRef.ConvFlag2 to 4
+		ElderLyonsRef.SayTo MQ01SarahRef MQ11ElderSarahConv
+	endif
+
+
+	if ( ElderLyonsRef.ConvFlag2 == 11 )
+		Set ElderLyonsRef.NoActivate to 0
+		set ElderLyonsRef.ConvFlag2 to -1
+		MQ01SarahRef.EVP
+	endif
+End
+
+
+Begin SayToDone MQ11SarahActivatePrimeLine
+
+	set MQ11.PrimeActivate to 1
+
+
+End
+
+Begin SayToDone MQ11SarahAirlockLines
+
+	Set AirlockTimer to 15
+
+End
+
+
+;---------------------------------
+
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && MQ01SarahRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

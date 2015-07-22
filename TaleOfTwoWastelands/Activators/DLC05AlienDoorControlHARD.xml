@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0B0082CD">DLC05AlienDoorControlHARD</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05AlienDoorControlHARD</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-29</X>
+        <Y>-31</Y>
+        <Z>-35</Z>
+      </Point1>
+      <Point2>
+        <X>29</X>
+        <Y>29</Y>
+        <Z>34</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Door Controls</Name>
+    <Model>
+      <FileName Tag="MODL">DLC05\Dungeons\MZ\Misc\DLC05Terminal01.NIF</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0B0082CB">DLC05AlienDoorControlSCRIPT</Reference>
+    </Script>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>250</Health>
+        <Count>1</Count>
+        <Flags>0</Flags>
+        <Unknown>Ukk=</Unknown>
+      </Header>
+      <DestructionStages>
+        <DestructionStage>
+          <StageData Tag="DSTD">
+            <HealthPercentage>0</HealthPercentage>
+            <Index>0</Index>
+            <Stage>0</Stage>
+            <Flags>Disable, Destroy</Flags>
+            <SelfDamagePerSecond>0</SelfDamagePerSecond>
+            <Explosion ID="0000446C">MediumExplosion</Explosion>
+            <Debris ID="00000000">NullReference</Debris>
+            <DebrisCount>0</DebrisCount>
+          </StageData>
+          <EndMarker Tag="DSTF" />
+        </DestructionStage>
+      </DestructionStages>
+    </Destructable>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="0B00D866">OBJDLC05AlienTerminalLP</Reference>
+      </Looping>
+    </Sound>
+  </Subrecords>
+</Record>

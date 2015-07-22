@@ -1,0 +1,119 @@
+scn DLC05SpaceWalk02MasTrigSCRIPT
+
+short onLoad
+short runTimer
+short timerStage
+float timer
+
+float currentScale
+float newScale
+short runScaleTimer
+float scaleTimer
+
+short numRepaired
+short allNodesRepaired
+
+Begin GameMode
+
+	if (onLoad == 0)
+		DisablePlayerControls 0 1 1 0 0 0 0 
+		player.SetAv SpeedMult 75
+		DLC05SpaceBridge02Door01REF.Lock 255
+		DLC05SpaceWalkAlienInner01REF.EVP
+		DLC05SpaceWalkAlienInner02REF.EVP
+		DLC05SpaceWalkAlienInner03REF.EVP
+		set scaleTimer to .005
+		set runTimer to 1
+		set timerStage to 1
+		set timer to .00025
+		set onLoad to 1
+	endif
+
+
+	if (runScaleTimer == 1)
+
+		if (scaleTimer < 0)
+			set currentScale to (DLC05SpaceGravLightBeamREF.GetScale + .0001)
+			set newScale to (newScale + currentScale)
+			DLC05SpaceGravLightBeamREF.setScale newScale
+			set scaleTimer to .005
+
+			if (DLC05SpaceGravLightBeamREF.getScale >= .8)
+				set runScaleTimer to 0
+			endif
+
+		else
+			set scaleTimer to (scaleTimer - GetSecondsPassed)
+		endif
+
+	endif
+
+;--------------------------------------------------------------------------------
+;----If at Zero Atmosphere, and no Astro Suit, kill player
+;--------------------------------------------------------------------------------
+	if (DLC05SpaceWalkQ.zeroAtmo == 1) && ((Player.GetEquipped DLC05AstronautSuit == 0) && (Player.GetEquipped ArmorNVSpaceSuit == 0) || (Player.GetEquipped HelmetNVSpaceSuit == 0))
+		ShowMessage DLC05DeathInSpaceMessage
+		Player.Kill Player 1
+		set DLC05SpaceWalkQ.zeroAtmo to 2
+	endif
+
+
+	if (allNodesRepaired == 0)
+		if (numRepaired == 3)
+			set allNodesRepaired to 1
+		endif
+	endif
+
+	if (allNodesRepaired == 1)
+		;Lower Central Column
+		;ShowWarning "All Nodes Repaired.  Central Column Lowered"
+		set runScaleTimer to 1
+		DLC05SpaceGravLightBeamREF.enable 0
+		DLC05SpaceIrisDoor01REF.PlayGroup Forward 1
+		DLC05SpaceWalkLevitateTrigREF.enable
+		set allNodesRepaired to 2
+	endif
+
+
+	if (runTimer == 1)
+		
+		if (timerStage == 1)
+			
+			if (timer < 0)
+				player.MoveTo DLC05SpaceBridgeToWaterREF
+				set timer to .00025
+				set timerStage to 2
+			else
+				set timer to (timer - GetSecondsPassed)
+			endif
+
+		endif
+
+		if (timerStage == 2)
+		
+			if (timer < 0)
+				player.MoveTo DLC05SpaceBridgeFromWaterREF
+				set timer to 2
+				set timerStage to 3
+			else
+				set timer to (timer - GetSecondsPassed)
+			endif
+
+		endif
+
+		if (timerStage == 3)
+		
+			if (timer < 0)
+				DLC05SpaceDoor01REF.PlayGroup Forward 1
+				DLC05SpaceWalkEnableDeathTriggerTrigREF.Enable
+				set timer to 2
+				set timerStage to 4
+			else
+				set timer to (timer - GetSecondsPassed)
+			endif
+
+		endif
+
+	endif
+
+End

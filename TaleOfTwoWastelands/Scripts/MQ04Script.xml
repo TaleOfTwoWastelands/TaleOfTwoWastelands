@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="060254C9">MQ04Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ04Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>65</ReferenceCount>
+        <CompiledSize>2706</CompiledSize>
+        <VariableCount>37</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAIQKAAAWAA0AXwAJACBzHwAgMiA9PRYAFwBdABMAIHIBAFhDEAUAAQByFQAgMSA9PRYAEAACAAwAIHIWAHMCACAxID09FQAKAHIWAHMJAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIaAHMHACAxID09FQAKAHIaAHMPAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIbAHMBACAxID09FQAKAHIbAHMIAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIcAHMEACAxID09FQAKAHIcAHMLAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIdAHMBACAxID09FQAKAHIdAHMIAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIeAHMBACAxID09FQAKAHIeAHMIAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIfAHMBACAxID09FQAKAHIfAHMIAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIgAHMBACAxID09FQAKAHIgAHMIAAIAIDEVABIAchcAZhkACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMGACAxID09FQAKAHIiAHMIAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMVACAxID09FQAKAHIjAHMBAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMbACAxID09FQAKAHIkAHMJAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMhACAxID09FQAKAHIlAHMBAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMJACAxID09FQAKAHImAHMDAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAACAAwAIHIhAHMMACAxID09FQAKAHInAHMBAAIAIDEVABIAciEAZhQACgAgRxgAIEcZACArGQAAABYAEAAIAAwAIHIhAHMeACAxID09FgASAAEADgAgcigAWCMQAAAgMCA9PRUACgByKABzAQACACAxGAASAAEADgAgcikAWCMQAAAgMCA9PRUACgByKQBzAQACACAxGAASAAEADgAgcioAWCMQAAAgMCA9PRUACgByKgBzAQACACAxGQAAABUAEgByIQBmFAAKACBHGAAgRxkAICsZAAAAFgAQAAIADAAgciEAcw8AIDEgPT0VAAoAcisAcwgAAgAgMRUAEgByIQBmFAAKACBHGAAgRxkAICsZAAAAABIHAAEAbgEAAAAcAAEAQhEFAAEAciwAHAABAJ4QBQABAHItABwAAQCtEAUAAQByLgAcAAEAUhAPAAMAci8AbgEAAABuAQAAABwAAQBSEA8AAwByMABuAQAAAG4BAAAA5hEHAAEAbgEAAAAcAAEA5BEHAAEAbv////8cAAEAAhAPAAMAcjEAbgEAAABuAQAAABwAAQDuEA8AAwByMQBuAQAAAG4BAAAAFQAHAGYXAAIAIDMVAAcAcxkAAgAgMRUACQBzHwAEACAxIH4WABIAAQAOACByAgBYIxAAACAwID09HAACACIQAgAAABkAAAAWABIAAQAOACByAwBYIxAAACAwID09HAADACIQAgAAABkAAAAcAAQAIhACAAAAJBIAAGAQAgAAACUSBwABAG4BAAAAGQAAABkAAAAWABQACwAQACBYOhAFAAEAcjIAIDAgPT0WABcACQATACByAQBYNhEFAAEAcjMAIDEgPT0WAAwAAQAIACBmFwAgMCA+FQARAGYXAAwAIGYXACBYDBAAACAtFwACAAUAFgAVAAEAEQAgWDoQBQABAHI0ACAxMCA+PTkQCgACAHI0AG7IAAAAGQAAADkQCgACAHIyAG4FAAAA3BEOAAIAcjIAegAAAAAAAAAAGQAAABkAAAAZAAAAFgAQAAMADAAgcggAcwEAIDAgPT0WABcAAQATACByAQBYQxAFAAEAcjUAIDEgPT0VAAoAcggAcwEAAgAgMRkAAAAZAAAAFgANAB4ACQAgcyQAIDAgPT0WABAAHAAMACByMgBzFgAgMSA9PRwABQCMEAcAAQBuAAAAABwABQCeEAUAAQByNgAcAAYAjBAHAAEAbgAAAAAcAAYAnhAFAAEAcjcAHAAHAIwQBwABAG4AAAAAHAAHAJ4QBQABAHI4ABwACACMEAcAAQBuAAAAABwACACeEAUAAQByOQAcAAkAjBAHAAEAbgAAAAAcAAkAnhAFAAEAcjoAHAAKAIwQBwABAG4AAAAAHAAKAJ4QBQABAHI7ABwACwCMEAcAAQBuAAAAABwACwCeEAUAAQByPAAWABIAAQAOACByDABYIxAAACAwID09HAAMACIQAgAAABkAAAAcAA0AIRACAAAAHAAOACEQAgAAABwADwAhEAIAAAAcABAAIRACAAAAHAARACEQAgAAABwAEgAhEAIAAAAcABMAIRACAAAAHAAUACEQAgAAADkQCgACAHIyAG5GAAAABBIHAAEAbiwBAAAVAAcAcyQAAgAgMRkAAAAYAA0AAgAJACBzJAAgMSA9PdwRDgACAHIyAHoAAAAAAAAAABUABwBzJAACACAyGQAAABYAFQAJABEAIFg6EAUAAQByMgAgMTUgPT0WABAAAwAMACByDABzAwAgMSA9PRYAFAABABAAIHIMAFhuEAAAIFo9ACAhPRwADABeEAAAGQAAABgAEAADAAwAIHIMAHMEACAxID09FgAUAAEAEAAgcgwAWG4QAAAgWj4AICE9HAAMAF4QAAAZAAAAGQAAABkAAAAWABAABgAMACByBwBzAgAgMSA9PRYAEgAEAA4AIHIHAHMBACAxIH4gPT0WABUAAgARACBYOhAFAAEAcjIAIDM1ID09ORAKAAIAcjIAbigAAAAVAAwAcgcAcwIABAAgMSB+GQAAABkAAAAZAAAAFgAVAAQAEQAgWDoQBQABAHIyACAzNSA9PRYAFwACABMAIHI/AFiZEQUAAQByBwAgMSA9PRUACgByMgBzDwACACA0ORAKAAIAcjIAbigAAAAZAAAAGQAAABYAFQAFABEAIFg6EAUAAQByMgAgNDUgPT0WABYAAwASACByAQBYLxAFAAEAckAAIDAgPhYAFgABABIAIHIBAFgvEAUAAQByQQAgMCA+ORAKAAIAcjIAbjIAAAAZAAAAGQAAABkAAAAWABUAAwARACBYOhAFAAEAcjIAIDUwID09FgANAAEACQAgcxAAIDggPj05EAoAAgByMgBuPAAAABkAAAAZAAAAFgAVAAMAEQAgWDoQBQABAHIyACA3MCA9PRYAFwABABMAIHIBAFhDEAUAAQByFQAgMSA9PTkQCgACAHIyAG5LAAAAGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MQ04Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SafetyLock</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">NPCReset</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BettyRefuse</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task1</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task2</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task3</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task1Complete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task2Complete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MarthaInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">undiesplaced</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RockwellConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Task3Complete</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SlasherKills</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">JanetFollow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BasementBody</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BasementBody</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DithersInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DeadNPCs</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FailSeq</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Invasion</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">StageUpdateTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FailLast</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerInTL</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HouseEnter</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BettyHit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MiseryInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ResetInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>31</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerinChair</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>33</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadDogInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>34</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">BraunInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>35</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TLInfo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>36</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">InvasionStep</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602248E">RadioEnclaveREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025091">GeorgeNeusbaumRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025092">PatNeusbaumRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025090">MabelHendersonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602508F">OldLadyDithersRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025097">MarthaSimpsonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025096">RogerRockwellRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025095">JanetRockwellRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06025094">TimmyNeusbaumRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F7">MQ04SoldierRef1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F6">MQ04SoldierRef2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8EE">MQ04SoldierRef3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F0">MQ04SoldierRef4</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F1">MQ04SoldierRef5</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8EF">MQ04SoldierRef6</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8F2">MQ04SoldierRef7</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060553ED">MQ04ExitDoorActRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601852C">Vault112a</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53F5">FollowerWaitTime</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00043E94">StealthBoy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060254CB">MQ04StartBench</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0604C253">MQ04PlayerContainerRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00015038">PipBoy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00025B83">PipBoyGlove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000ABBE2">MQ04PlayerOutfit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8A">MQ04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060244A7">TranquilityLane</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E89">MQ03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B52F">TLAbandonedHouse</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C791">MQ04GeorgeInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C790">MQ04PatInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C78E">MQ04MabelInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C78F">MQ04DithersInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C78D">MQ04MarthaInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C78B">MQ04RogerInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602C78C">MQ04JanetInvasionMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06027F5F">MQ04TimmyMournGeorge</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060296C3">MQ04TimmyMournPat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060296C6">TLHendersonRobotRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060340FC">MQ04SlasherMask</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602869C">MQ04SlasherKnife</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="00125C10">INFO - 00125C10</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0010D2C6">VMS18</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0012690C">INFO - 0012690C</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Any word as to our arrangement?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetObjectiveCompleted</Type>
+          <Quest ID="0010D2C6">VMS18</Quest>
+          <ObjetiveIndex>200</ObjetiveIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="0010D2C6">VMS18</Quest>
+          <VariableIndex>42</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0010D4E8">VMS18Mortimer</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="00125C0F">VMS18VMS18MortimerTopic034</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00126504">VMS18VMS18MortimerTopic037</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00126503">VMS18VMS18MortimerTopic038</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00126501">VMS18VMS18MortimerTopic040</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00127D9F">VMS18VMS18MortimerTopic044</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00127D9E">VMS18VMS18MortimerTopic045</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00127D9D">VMS18VMS18MortimerTopic046</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00129A36">VMS18VMS18MortimerTopic047</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00126505">VMS18VMS18MortimerTopic036</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>13</ReferenceCount>
+        <CompiledSize>803</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FgAUAAUAEAAgWKQRCgACAHIBAG7IAAAAFgAgAAMAHAAgcgEAcykAIDAgPT0gRwIAIHIBAHMnACA+IHx8FgAjAAEAHwAgWBIQAAAgMjEgPiBHAgAgcgEAcycAIDEgKyA+IHx8FQAKAHIBAHMoAAIAIDEZAAAAGQAAABkAAAAVAAoAcgEAcyQAAgAgMBYANAABADAAIHIDAHMGACByBABYIBAFAAEAcgUAICYmIHIEAFgBEAUAAQByBQAgMTUwMCA8ICYmFQATAHIBAHMkAAsAIHIBAHMkACAxICsZAAAAFgA0AAEAMAAgcgMAcxUAIHIGAFggEAUAAQByBQAgJiYgcgYAWAEQBQABAHIFACAxNTAwIDwgJiYVABMAcgEAcyQACwAgcgEAcyQAIDEgKxkAAAAWADQAAQAwACByAwBzGwAgcgcAWCAQBQABAHIFACAmJiByBwBYARAFAAEAcgUAIDE1MDAgPCAmJhUAEwByAQBzJAALACByAQBzJAAgMSArGQAAABYANAABADAAIHIDAHMMACByCABYIBAFAAEAcgUAICYmIHIIAFgBEAUAAQByBQAgMTUwMCA8ICYmFQATAHIBAHMkAAsAIHIBAHMkACAxICsZAAAAFgA0AAEAMAAgcgkAcw4AIHIKAFggEAUAAQByBQAgJiYgcgoAWAEQBQABAHIFACAxNTAwIDwgJiYVABMAcgEAcyQACwAgcgEAcyQAIDEgKxkAAAAWADQAAQAwACByCQBzEgAgcgsAWCAQBQABAHIFACAmJiByCwBYARAFAAEAcgUAIDE1MDAgPCAmJhUAEwByAQBzJAALACByAQBzJAAgMSArGQAAABYANAABADAAIHIJAHMGACByDABYIBAFAAEAcgUAICYmIHIMAFgBEAUAAQByBQAgMTUwMCA8ICYmFQATAHIBAHMkAAsAIHIBAHMkACAxICsZAAAAFgA0AAEAMAAgcgkAcwoAIHINAFggEAUAAQByBQAgJiYgcg0AWAEQBQABAHIFACAxNTAwIDwgJiYVABMAcgEAcyQACwAgcgEAcyQAIDEgKxkAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">; if a banquet has occurred since the player brought this up.
+if (GetObjectiveCompleted VMS18 200)
+	if (VMS18.bDayMustPass == 0 || GameDaysPassed &gt; VMS18.nDayOfCompletion)
+		if (GetCurrentTime &gt; 21 || GameDaysPassed &gt; VMS18.nDayOfCompletion + 1)	
+			set VMS18.bWGSConverted to 1;
+		endif
+	endif
+endif
+
+set VMS18.nHumanFollowers to 0;
+if (VNPCFollowers.bBooneHired &amp;&amp; CraigBooneREF.GetInSameCell player &amp;&amp; CraigBooneREF.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (VNPCFollowers.bCassHired &amp;&amp; RoseOfSharonCassidyREF.GetInSameCell player &amp;&amp; RoseofSharonCassidyREF.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (VNPCFollowers.bVeronicaHired &amp;&amp; VeronicaREF.GetInSameCell player &amp;&amp; VeronicaREF.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (VNPCFollowers.ArcadeHired &amp;&amp; ArcadeREF.GetInSameCell player &amp;&amp; ArcadeREF.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (Followers.ButchHired &amp;&amp; ButchRef.GetInSameCell player &amp;&amp; ButchRef.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (Followers.CloverHired &amp;&amp; CloverRef.GetInSameCell player &amp;&amp; CloverRef.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (Followers.JerichoHired &amp;&amp; JerichoRef.GetInSameCell player &amp;&amp; JerichoRef.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif
+if (Followers.StarPaladinCrossHired &amp;&amp; StarPaladinCrossRef.GetInSameCell player &amp;&amp; StarPaladinCrossRef.GetDistance player &lt; 1500)
+   set VMS18.nHumanFollowers to VMS18.nHumanFollowers + 1
+endif</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D2C6">VMS18</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

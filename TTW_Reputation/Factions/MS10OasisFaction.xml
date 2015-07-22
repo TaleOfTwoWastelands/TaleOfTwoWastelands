@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="0004DECA">MS10OasisFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS10OasisFaction</EditorID>
+    <Name Tag="FULL">Oasis Faction</Name>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="0004DECA">MS10OasisFaction</Faction>
+        <Modifier>100</Modifier>
+        <CombatReaction>Friend</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>HiddenFromPC</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Ranks>
+      <Rank>
+        <Rank Tag="RNAM">0</Rank>
+        <Title>
+          <Male Tag="MNAM">Treeminder</Male>
+          <Female Tag="FNAM">Treeminder</Female>
+        </Title>
+      </Rank>
+    </Ranks>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017FA">RepTTWOasis</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

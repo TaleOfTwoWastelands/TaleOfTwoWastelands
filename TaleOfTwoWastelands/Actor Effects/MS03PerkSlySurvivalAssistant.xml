@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="0006F59E">MS03PerkSlySurvivalAssistant</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS03PerkSlySurvivalAssistant</EditorID>
+    <Name Tag="FULL">Sly Wasteland Survival Assistant</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D74">IncreaseSkillSpeech</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Speech</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D79">IncreasePoisonResistance</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>PoisonResistance</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00015179">IncreaseRadiationResistance</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadResistance</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031D73">IncreaseSkillSneak</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>2</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Sneak</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00134B25">IncreaseSkillSurvival</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>3</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Survival</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

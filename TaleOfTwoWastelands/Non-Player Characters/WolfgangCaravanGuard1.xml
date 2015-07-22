@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="06069C45">WolfgangCaravanGuard1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WolfgangCaravanGuard1</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Caravan Guard</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>100</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1500</Level>
+      <CalcMin>12</CalcMin>
+      <CalcMax>20</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseFactions, UseAIData, UseBaseData, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000448D1">MS13CanMez</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00065374">TraderFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="060717E3">MaleAdult18</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="06065375">CaravanGuard1TEMPLATE</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004330">WeapGrenadeFrag</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>2</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020423">ArmorLeather</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06029367">WithAmmoAssaultRifleNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06069C4F">CaravanGuardCrazyWolfgang</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00069C51">CaravanGuardRetreat</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001873F">SoldierLeader</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>7</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>76</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>78</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>74</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000306BE">HairAfricanAmericanBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>23</Red>
+        <Green>21</Green>
+        <Blue>21</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">VG5hvsAfIL0YowK/WaKNPzKsLT/5UGVAHx3MPpqMDcAAx/07LK+uP2RW/D6GoGI/rHrov9HAQsDuXLi/5vY/wBRr5D5gj7C/Bo8YwPjHqL/sNpXALp/sPuMDub9WuUfAXpgJQGz9jz/gq4a/EskgwNvDb0DULuW/MLIJwJqjTkBMxmy/Eq1OwIyqu8Dot3Q+wAqQv7zakb6GQmdAwE8XPahrjcD01g+/praOv/lbSsAw+aQ+IlmeQLhwdsDWedi/eIIYwBpctsA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">DOOmv2hnW7/zto4/BPPnPjG0jT5kmws/0ZIov6ArgzvW9Sm/MM5xvQSttj7abnW/4FQcvsb14r78yQ2+kNtRv7xqo71uSrO/FxG6PvhU5T5jhJ8/7l+JPw5tL79qq7K/Jv0DwKCk173oVpU+QESZPLuVo7/1ggXAumkIQEjPZr/gylY+dR8kQBAhYj/gOWW9UApyPg5XpL7JK84/qtbjP/iqVL7+ZgFAJikbwByE3b5Jncy+qP/dvpRfGcACC+y/PK/dP4F4UUA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">1</Height>
+    <Weight Tag="NAM7">1</Weight>
+  </Subrecords>
+</Record>

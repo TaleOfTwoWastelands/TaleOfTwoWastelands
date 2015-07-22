@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060626FF">INFO - 060626FF</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06062736">FollowersHireCross</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Then I shall follow your leave and submit to your command.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">As James' child, I know I don't need to explain, but I am not your servant. If I do not like the path your actions take, I will return here.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Now, let us go forward, crush the Enclave, and fulfill your father's mission.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156E5">StarPaladinCross</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="000626DB">FollowersHireCrossTopicComeWith1</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000626DA">FollowersHireCrossTopicComeWith2</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000626D9">FollowersHireCrossTopicComeWith3</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>8</ReferenceCount>
+          <CompiledSize>315</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">NxAFAAEAcgIAFQAKAHIDAHMvAAIAIDEcAAEAdhEFAAEAcgQAFQAKAHIBAHMIAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgMAcxIAAgAgMRUAEwByAwBzEwALACByAwBzEwAgMSArFQAKAHIFAHMYAAIAIDEVAAoAcgUAcwoAAgAgMRUACgByAQBzAQACACAxFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwHAABALEQBQABAHIGABUACgByAQBzAwACACAwFQAKAHIBAHMEAAIAIDEcAAEAxREHAAEAbgEAAAAcAAEAfxEKAAIAcgcAbgEAAAAcAAEAiRAKAAIAcgcAbgEAAAAcAAEAfxEKAAIAcggAbgEAAAD6EQAA</CompiledScript>
+        <ScriptSource Tag="SCTX">StopQuest FollowersHireCross
+set VNPCFollowers.bHumanoidInParty to 1;
+StarPaladinCrossREF.AddPerk CompanionSuite
+Set StarPaladinCrossREF.Waiting to 0
+StarPaladinCrossREF.IgnoreCrime 1
+StarPaladinCrossREF.SetIgnoreFriendlyHits 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+set Followers.PlayerHasFollower to 1
+set Followers.StarPaladinCrossHired to 1
+set StarPaladinCrossREF.HasBeenHired to 1
+set StarPaladinCrossREF.IsFollowingDefault to 1
+set StarPaladinCrossREF.IsFollowingLong to 0
+set StarPaladinCrossREF.IsFollowingShort to 0
+StarPaladinCrossREF.SetCombatStyle FollowersCombatStyleMelee
+set StarPaladinCrossREF.CombatStyleRanged to 0
+set StarPaladinCrossREF.CombatStyleMelee to 1
+StarPaladinCrossREF.SetPlayerTeammate 1
+StarPaladinCrossREF.AddToFaction TeammateFaction 1
+StarPaladinCrossREF.SetFactionRank TeammateFaction 1
+StarPaladinCrossREF.AddToFaction FollowerFaction 1
+
+ResetAI</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="06062735">StarPaladinCrossREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06062736">FollowersHireCross</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015C571">CompanionSuite</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00046312">TeammateFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

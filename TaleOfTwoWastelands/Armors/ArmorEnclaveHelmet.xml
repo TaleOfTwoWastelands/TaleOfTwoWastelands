@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0004443F">ArmorEnclaveHelmet</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorEnclaveHelmet</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-9</X>
+        <Y>-14</Y>
+        <Z>-10</Z>
+      </Point1>
+      <Point2>
+        <X>9</X>
+        <Y>14</Y>
+        <Z>9</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Advanced Power Helmet Mk II</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0004443D">EnchEnclaveArmorHelmet</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Head, Hair, Headband, Hat, Eyeglasses, Mask</Slots>
+      <Flags>PowerArmor</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\EnclavePowerArmor\helmet.NIF</FileName>
+          <TextureHashes Tag="MODT">sbAPZWvpefgxMA9lcOl5+HJvIHQoep3d7t8RZWyCOOFuXxFlcYI44XJvIHQoep3d898RZWyCOOFzXxFlcYI44XJvIHQoep3d598RZWyCOOFnXxFlcYI44XJvIHQoep3dsbAOZcuOojIxMA5l0I6iMnJvIHQoep3d7t8QZcx3pPZuXxBl0Xek9nJvIHQoep3d898QZcx3pPZzXxBl0Xek9nJvIHQoep3dsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\EnclavePowerArmor\helmetGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">sbAPZWvpefgxMA9lcOl5+HJvIHQoep3d7t8RZWyCOOFuXxFlcYI44XJvIHQoep3d898RZWyCOOFzXxFlcYI44XJvIHQoep3d598RZWyCOOFnXxFlcYI44XJvIHQoep3d</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_enclave _power_armor_helmet.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_enclave _power_armor_helmet.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075210">RepairEnclaveArmorHelmet</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>2200</Value>
+      <MaxCondition>75</MaxCondition>
+      <Weight>5</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>ModulatesVoice</Flags>
+      <DamageThreshold>6</DamageThreshold>
+      <Unknown>AQAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

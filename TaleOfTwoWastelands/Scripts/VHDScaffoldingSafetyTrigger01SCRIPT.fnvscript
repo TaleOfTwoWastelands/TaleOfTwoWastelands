@@ -1,0 +1,124 @@
+scn VHDScaffoldingSafetyTrigger01SCRIPT
+
+Ref ActivatorREF;
+
+BEGIN OnTriggerEnter
+
+	Set ActivatorREF to GetActionRef;
+	ActivatorREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+BEGIN OnTrigger Player
+
+	Player.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Boone
+BEGIN OnTrigger CraigBooneREF
+
+	CraigBooneREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Cass
+BEGIN OnTrigger RoseofSharonCassidyREF
+
+	RoseofSharonCassidyREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Veronica
+BEGIN OnTrigger VeronicaREF
+
+	VeronicaREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Lily
+BEGIN OnTrigger LilyREF
+
+	LilyREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;EDE
+BEGIN OnTrigger EDE1REF
+
+	EDE1REF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+BEGIN OnTrigger EDE2REF
+
+	EDE2REF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+BEGIN OnTrigger EDE3REF
+
+	EDE3REF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Raul
+BEGIN OnTrigger RaulREF
+
+	RaulREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Arcade
+BEGIN OnTrigger ArcadeREF
+
+	ArcadeREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+
+;Rex
+BEGIN OnTrigger RexREF
+
+	RexREF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger CharonRef
+
+	CharonRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger ButchRef
+
+	ButchRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger CloverRef
+
+	CloverRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger JerichoRef
+
+	JerichoRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger MQ08FawkesRef
+
+	MQ08FawkesRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger StarPaladinCrossRef
+
+	StarPaladinCrossRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger DogmeatRef
+
+	DogmeatRef.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END
+BEGIN OnTrigger RL3REF
+
+	RL3REF.MoveTo VHDLegionWestDamNCRRespawner01Marker;
+
+END

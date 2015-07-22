@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0A00D5A8">DLC04WeapUniqueFertilizerShovel</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04WeapUniqueFertilizerShovel</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-124</X>
+        <Y>-3909</Y>
+        <Z>-439</Z>
+      </Point1>
+      <Point2>
+        <X>179</X>
+        <Y>1459</Y>
+        <Z>459</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Fertilizer Shovel</Name>
+    <Model>
+      <FileName Tag="MODL">DLC04\Weapons\2HandMelee\DLC04Shovel.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">DLC04\Interface\Icons\Weapons_Shovel.dds</Large>
+    </Icon>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0A00D5A7">DLC04EnchFertilizerShovel</Reference>
+    </ObjectEffect>
+    <RepairList Tag="REPL">
+      <Reference ID="0A01098D">DLC04RepairShovel</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
+    <VATSAttackName Tag="VANM">Grand Slam</VATSAttackName>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="0A010ACF">DLC04ShovelSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="0A0082B4">1stPersonDLC04Shovel</Reference>
+    </FirstPersonModel>
+    <Sound>
+      <Melee>
+        <Block Tag="NAM6">
+          <Reference ID="000BE3E8">WPNBlockWood</Reference>
+        </Block>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="0004451F">WPNBaseballBatEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00044520">WPNBaseballBatUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <Data Tag="DATA">
+      <Value>55</Value>
+      <Health>400</Health>
+      <Weight>3</Weight>
+      <BaseDamage>15</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandMelee</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>0.600000024</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>0</Spread>
+      <Unknown>AACAPw==</Unknown>
+      <SightFOV>0</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <BaseVATSToHitChance>30</BaseVATSToHitChance>
+      <AttackAnimation>Default</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>2000</Max>
+      </Range>
+      <LimbKillBehavior>NoDismemberOrExplode</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1.10000002</AttackAnimationMultiplier>
+      <FireRate>0</FireRate>
+      <ActionPointCost>28</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>1.64999998</AttackShotsPerSecond>
+      <ReloadTime>0</ReloadTime>
+      <JamTime>0</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>MeleeWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>AttackCustom3Power</PowerAttackAnimation>
+      <StrengthRequirement>3</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>30</Damage>
+      <ChanceMult>3</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="0001DEA8">VictoryRifleKnockdownSpell</Effect>
+      <SkillRequirement>50</SkillRequirement>
+      <DamageMult>1</DamageMult>
+      <APCost>36</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Silent</SoundLevel>
+  </Subrecords>
+</Record>

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06000A6A">MisterBurke</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MisterBurke</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Mister Burke</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>12</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-900</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000854D2">MS11BurkeSimmsCombatFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0602D95D">MaleUniqueMisterBurke</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0601E9F6">MisterBurkeScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340C8">HatPrewarHat</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005C682">OutfitPrewarBusinesswearDirty</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005C9A1">GlassesTortiseshell</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0603029B">WithAmmo10mmPistolSilencedLoot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06040C40">MS11BurkeFlee</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06040C3F">MS11ThreatenPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0603DA33">MS11BurkeBattle</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0603DA31">MS11BurkeCharmed</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06014F8D">MS11MisterBurkeTravelTenpenny</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601502D">MS11BurkeForceGreetAtDetonator</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06014F78">MS11MisterBurkeForceGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601ECD5">MS11MisterBurkeSitinSaloon</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0606EB5C">MS11BurkeAndTenpennyChatAboutNUke</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602B3D6">MS11MisterBurkeWaitOnRoof</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0601EC87">MS11MisterBurkeWatchBombExplode</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00003F60">MegMisterBurkeHomeCompPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00003B66">MegMisterBurkeBreakfastHome</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00003F62">MegMisterBurkeMoriartys</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00003F64">MegMisterBurkeRestroom</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00003B65">MegMisterBurkeSleep</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00014F8E">MegMisterBurkeSandboxTenpenny</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00019267">TenpennyMisterBurkeLancaster10x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001503C">DefaultStayAtCurrentLocationSkipFallout</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015677">VillageLeader</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>6</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>4</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>77</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>73</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>77</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDB">HairBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>52</Red>
+        <Green>43</Green>
+        <Blue>37</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">WG2KvuheB0A1rBPAAL5RvdobN0AR2JW/eO+7P9rFpr/cpXc/AW4GwOiFI75D+xLABQi6vrRQZMBBP5M/VtUrwHs447+ChaDA3hpxwASUAUCqgJjA/uJOwJ5wA8B0zpS/bPsLwEmBAMAgaOY+BK9FwMeaP8AkU8+/KMUIQD4o4MCM9g1A6jSiP5UnTcDfYxo/rqO9wFSvEMD6k/m/SYchQJfdVsB0ics/HQP8P6wVqb+wZZS+Uu3BQDOa2ECuForAry0KwW4FnD8=</Symmetric>
+        <Asymmetric Tag="FGGA">SFuUP7aOqT1UQwy/BFC2P88ppz0Utwk/R37oPmuSij7in/I7MNwUP7ri6T3Jvcw+KG9Jv7MUNj/UQ1Y/qgQHPxUfHb8YKqC/o9yxP3Z6Rb6u7Za/gFaUvwzBE7/loJM/TMo1vZPlSz8LqOI8IaFoPsLvdz/VI8e+</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">77q1v5b+Zb679oQ/xqG6P6LNXEAFgO8/ws+eP2kalj8V1+W/pU8UwCCKF73gGVNALSAowEPbxz+0OR1Al6FzP2Cxtz/5uey/7GbqP6i7J0D93Z9AXPtOvih5vb34go8/geqoPyDzRj74Sxq+iR8eQNCSez5mkQq/3D9rP+aCET5IGOe/4B10PuGAG0H4IdO/+VgcP9jCQj5L//m/J/1ZP8mTNcD+QOo/36yIwFwC/r910pa/wNv/vzb4WMAWtFTAEnohwCDGD74=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">1</Height>
+    <Weight Tag="NAM7">1</Weight>
+  </Subrecords>
+</Record>

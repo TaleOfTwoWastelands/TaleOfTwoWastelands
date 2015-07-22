@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018581">TTWChallengeRoachStomper</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeRoachStomper</EditorID>
+    <Name Tag="FULL">Roach Stomper</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185DC">TTWChallengeVeryLowXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill radroaches with two-handed melee weapons.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>200</Threshold>
+      <Flags>0</Flags>
+      <Interval>20</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>_2HandMelee</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="000CC839">RadroachList</Reference>
+    </FormList>
+  </Subrecords>
+</Record>

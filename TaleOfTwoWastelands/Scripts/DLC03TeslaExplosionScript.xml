@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="000E29BD">DLC03TeslaExplosionScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03TeslaExplosionScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>3</ReferenceCount>
+        <CompiledSize>233</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAHsAAAAWAA8ACQALACBYIxAAACAwID09FgANAAIACQAgcwMAIDAgPT0VAAcAZgQAAgAgMhUABwBzAwACACAxGQAAABYADAABAAgAIGYEACAwID4VABEAZgQADAAgZgQAIFgMEAAAIC0XAAIAAQAiEAIAAAAZAAAAGQAAABEAAAAQAAgAGgBUAAAAAAAVAAsAZgIABgAgWM0QAAAWABIAAwAOACByAQBYdBEFAAEAcgIAFQAHAHMGAAIAIDEcAAEAbBELAAEAegAAAAAAauhAdRIFAAEAcgMAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC03TeslaExplosionScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">triggerActor</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">disableTimerInit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">disableTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">spellOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">targetAcquired</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2C45">DLC03TeslaExplosionList</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185A9">TTWDLC03ChallengeVertibird</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

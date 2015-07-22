@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C018608">RemoveAllItemsFiltered</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RemoveAllItemsFiltered</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>830</CompiledSize>
+        <VariableCount>12</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAAGAANAB4DAAABBQEABAIABAMABAsAAQwAAQA5FRMAARIAVgQAAAQAWAAAzhAEAAAAABYADwAFAAsAIFi6FAUAAQByAQAWABMAAQAPACBYPxQFAAEAcgEAIDAgPjkVDAABCwBWAQAABgBCAQAXAAIAAQA5FQwAAQsAVgEAAAYAQgAAGQAAABcAAgABADkVDAABCwBWAQAABgBCAAAZAAAAFgAPAAUACwAgWLoUBQABAHICABYAEwABAA8AIFg/FAUAAQByAgAgMCA+ORUMAAELAFYBAAAHAEIBABcAAgABADkVDAABCwBWAQAABwBCAAAZAAAAFwACAAEAORUMAAELAFYBAAAHAEIAABkAAAAWABkAAgAVACBzBwAgMCA9PSBzBgAgMCA9PSAmJq0QDwADAHIDAG4BAAAAbgEAAAAeAAAAGQAAADkVDAABCwBWAQAACQBCAAA9FRQAOgMAAAEPAFYEAAAFAFYEAAAEABo5FRMAARIAVgQAAAgAWAUAEBUEAAAAABYASwAPAEcAIHMGACAxID09IHIFAFisFQIAAAAgMSA9PSBzCwAgMCA9PSB8fCAmJiByBQBYfBQCAAAAIDAgPT0gcwwAIDEgPT0gfHwgJiYWABcADQATACBYERUIAAIAcgEAcgYAIDAgPj0WAA0ABgAJACBzBwAgMSA9PRYAFgAEABIAIFgRFQgAAgByAgByBgAgMCA8FgASAAAADgAgcgUAWP8UBQABAHIDABcAAgABAKAUCgABAAYARmFpbGVkGQAAABkAAAAXAAIABAAWABIAAAAOACByBQBY/xQFAAEAcgMAFwACAAEAoBQKAAEABgBGYWlsZWQZAAAAGQAAABkAAAAXAAIACAAWAEsABgBHACBzBwAgMSA9PSByBQBYrBUCAAAAIDEgPT0gcwsAIDAgPT0gfHwgJiYgcgUAWHwUAgAAACAwID09IHMMACAxID09IHx8ICYmFgAWAAQAEgAgWBEVCAACAHICAHIGACAwIDwWABIAAAAOACByBQBY/xQFAAEAcgMAFwACAAEAoBQKAAEABgBGYWlsZWQZAAAAGQAAABkAAAAZAAAAPBUAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="RemoveAllItemsFiltered.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">whitelist</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">blacklist</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">container</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">self</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bWhitelist</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bBlacklist</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">baseItem</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">maxItemCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">itemCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bOnlyPlayable</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bRemoveQuestItems</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">1</Reference>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRV">4</Reference>
+        <Reference Tag="SCRV">5</Reference>
+        <Reference Tag="SCRV">8</Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

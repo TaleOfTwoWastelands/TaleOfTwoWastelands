@@ -1,0 +1,90 @@
+scn VHDIndependentStartSCRIPT
+
+begin OnTriggerEnter Player
+
+	pcb
+	if VHDSecuritronEscort01REF.GetDisabled == 0
+		VHDSecuritronEscort01REF.SayTo Player Greeting 1
+	endif
+	if VHDSecuritronEscort01MK1REF.GetDisabled == 0
+		VHDSecuritronEscort01MK1REF.SayTo Player Greeting 1
+	endif
+
+			;Move Companions with the Player
+			if (VNPCFollowers.bBooneHired)
+				SET CraigBooneREF.Waiting TO 0;
+				CraigBooneREF.evp;
+			endif
+			if (VNPCFollowers.bCassHired)
+				SET RoseofSharonCassidyREF.Waiting TO 0;
+				RoseofSharonCassidyREF.evp;
+			endif	
+			if (VNPCFollowers.bVeronicaHired)
+				SET VeronicaREF.Waiting TO 0;
+				VeronicaREF.evp;
+			endif
+			if (VNPCFollowers.bLilyHired)
+				SET LilyREF.Waiting TO 0;
+				LilyREF.evp;
+			endif
+			if (VNPCFollowers.RaulHired)
+				SET RaulREF.Waiting TO 0;
+				RaulREF.evp;
+			endif
+			if (VNPCFollowers.ArcadeHired)
+				SET ArcadeREF.Waiting TO 0;
+				ArcadeREF.evp;
+			endif
+			if (VNPCFollowers.bEDEHired)
+				if EDE1Ref.GetDisabled == 0
+					SET EDE1Ref.Waiting TO 0;
+					EDE1Ref.evp;
+				elseif EDE2Ref.GetDisabled == 0
+					SET EDE2Ref.Waiting TO 0;
+					EDE2Ref.evp;
+				elseif EDE3Ref.GetDisabled == 0
+					SET EDE3Ref.Waiting TO 0;
+					EDE3Ref.evp;
+				endif
+			endif
+			if (VNPCFollowers.RexHired)
+				SET RexREF.Waiting TO 0;
+				RexREF.evp;
+			endif
+			if (Followers.CharonHired)
+				SET CharonRef.Waiting TO 0;
+				CharonRef.evp;
+			endif	
+			if (Followers.ButchHired)
+				SET ButchRef.Waiting TO 0;
+				ButchRef.evp;
+			endif	
+			if (Followers.CloverHired)
+				SET CloverRef.Waiting TO 0;
+				CloverRef.evp;
+			endif	
+			if (Followers.JerichoHired)
+				SET JerichoRef.Waiting TO 0;
+				JerichoRef.evp;
+			endif	
+			if (Followers.FawkesHired)
+				SET MQ08FawkesRef.Waiting TO 0;
+				MQ08FawkesRef.evp;
+			endif	
+			if (Followers.StarPaladinCrossHired)
+				SET StarPaladinCrossRef.Waiting TO 0;
+				StarPaladinCrossRef.evp;
+			endif	
+			if (Followers.DogmeatHired)
+				SET DogmeatRef.Waiting TO 0;
+				DogmeatRef.evp;
+			endif	
+			if (Followers.RL3Hired)
+				SET RL3REF.Waiting TO 0;
+				RL3REF.evp;
+			endif	
+
+
+	disable
+
+end

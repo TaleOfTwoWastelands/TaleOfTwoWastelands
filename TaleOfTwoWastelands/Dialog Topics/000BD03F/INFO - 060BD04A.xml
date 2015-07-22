@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060BD04A">INFO - 060BD04A</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060942AB">INFO - 060942AB</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I see how it is: the old man can't keep up. Whatever. I'm gonna go see if there's anything left of Megaton.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0001EECD">MegatonDestroyed</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="06003B5D">JerichoRef</Quest>
+          <VariableIndex>2</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06000A71">Jericho</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>8</ReferenceCount>
+          <CompiledSize>293</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDAcAAEAqBEFAAEAcgMADxAJAAIAOQBuAAAAABUACgByBABzBgACACAwFQAKAHIEAHMHAAIAIDEVAAoAcgEAcwkAAgAgMBUACgByAQBzBgACACAxFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwcAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwQAAgAgMRUACgByAQBzBQACACAwHAABAMURBwABAG4AAAAAHAABAIkQCgACAHIGAG7/////HAABAIARBQABAHIHABUAEwByAgBzEwALACByAgBzEwAgMSAtFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEA+hEAABwAAQBPEgUAAQByCAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 0;
+JerichoREF.removeperk CompanionSuite
+SetAV Assistance 0
+
+set Followers.JerichoHired to 0
+set Followers.JerichoFired to 1
+set JerichoREF.Waiting to 0
+set JerichoREF.IsFollowingDefault to 1
+set JerichoREF.IsFollowingLong to 0
+set JerichoREF.IsFollowingShort to 0
+JerichoREF.SetCombatStyle FollowersCombatStyleRanged
+set JerichoREF.CombatStyleRanged to 1
+set JerichoREF.CombatStyleMelee to 0
+JerichoREF.SetPlayerTeammate 0
+JerichoREF.SetFactionRank TeammateFaction -1
+JerichoREF.RemoveFromFaction FollowerFaction
+
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+JerichoREF.ResetAI
+JerichoREF.MoveToMarkerWithFade MegatonOutsideMarker</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="06003B5D">JerichoRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015C571">CompanionSuite</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00046312">TeammateFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06020223">MegatonOutsideMarker</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Don't make me repeat myself.</Prompt>
+  </Subrecords>
+</Record>

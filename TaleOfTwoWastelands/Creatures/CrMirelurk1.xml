@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0001CF83">CrMirelurk1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CrMirelurk1</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-56</X>
+        <Y>-59</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>56</X>
+        <Y>59</Y>
+        <Z>133</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Mirelurk</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Mirelurk\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0005876C">MirklurkWaterBreathing</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0C004B8B">MirelurkDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>hatchling.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAnn7hFt5DkDpWduEW3pOQOlZ24kdPT2AYTu3xNt3TXteW5fE23iNe15Z24kdPT2AYTz3xNt3TXteXNfE23iNe15Z24kdPT2AYTr8ghtKs//U2tyCG0vz/9Ta3IbdFBPim7u3wptI4lr7G5fCm0oiWvsa3IbdFBPim7z3wptI4lr7HNfCm0oiWvsa3IbdFBPim704w1tNt+ZonRjDW0735miZXINdDh6OHHu3w9th0/XdG5fD22MT9d0ZXINdDh6OHHz3w9th0/XdHNfD22MT9d0ZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, Swims, Walks, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>6</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021477">MirelurkFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000CA988">DeathItemMirelurk100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00025482">DefaultPatrolCasual</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedAnimal</CreatureType>
+      <Skill>
+        <Combat>40</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>50</Health>
+      <Damage>34</Damage>
+      <Strength>7</Strength>
+      <Perception>4</Perception>
+      <Endurance>8</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>3</Agility>
+      <Luck>8</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">150</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000AB5F0">CSMirelurk</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="000354E3">MirelurkBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">0.75</BaseScale>
+    <FootWeight Tag="WNAM">10</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicBug</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000710A3">AudioTemplateMirelurk</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00156ED5">MirelurkClawAttack</Reference>
+    </ImpactDataset>
+  </Subrecords>
+</Record>

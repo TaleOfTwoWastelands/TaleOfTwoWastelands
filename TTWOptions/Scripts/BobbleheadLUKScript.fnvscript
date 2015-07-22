@@ -1,0 +1,37 @@
+scn BobbleheadLUKScript
+;This is a Bobblehead script for the Collector Bobbleheads located in game
+;On pickup, you recieve the motivational phrase and the appropriate buff
+;Script overhauled 4.17.15 for TTWOptionals --TJ
+
+short DoOnce
+
+begin OnActivate
+if IsActionRef player == 1
+
+	if ( DoOnce == 0 )
+		if BobbleHeadOverhaul
+			player.addperk TTWBobbleheadPerkLuck
+			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qThere's only one way to give 110%%.%q %r Each point of Luck gives you an additional 1%% chance to critically hit an opponent."
+		else
+			if ( Player.GetPermanentActorValue Luck < 10 )
+				Player.ModAv Luck 1																				;Mod the perm. pool so it sticks
+			endif
+			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qThere's only one way to give 110%%.%q %r Your Luck has been permanently increased by 1."
+		endif
+		
+		Activate																								;Allow item pickup
+		Set BH01.Bobbles to ( BH01.Bobbles + 1 )													;Add 1 to master count
+		Set BH01.Carrying to 1																			;Tell the script the Player has one or more Bobbleheads (for display case)
+		;ModPCMiscStat "Bobbleheads Found", 1
+		Set BH01.HaveLUK to 1																			;Set the variable for Display Case
+			if ( BH01.Bobbles == 10 )
+				;Addachievement 49
+			elseif ( BH01.Bobbles == 20 )
+				;Addachievement 50
+			endif																	
+		Set DoOnce to 1
+		IncrementScriptedChallenge TTWDCChallengeBaubleHead
+	endif
+
+endif
+end

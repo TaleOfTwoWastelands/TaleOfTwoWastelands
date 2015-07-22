@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D0037B6">WildWastelandDogemeatScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WildWastelandDogemeatScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>89</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAEsAAAAWAA0ABAAJACBzAQAgMCA9PRYAEgABAA4AIHICAFjBEQUAAQByAwAcAAEAHBEFAAEAcgQAGQAAABUABwBzAQACACAxGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="WildWastelandDogemeatScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doonce</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000ED568">WildWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0037B7">WildWastelandTTWDogemeat</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

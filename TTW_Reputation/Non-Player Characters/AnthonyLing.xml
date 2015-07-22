@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060156DB">AnthonyLing</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AnthonyLing</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Anthony Ling</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>4</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000179EA">TenpennyTowerResidentFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00078C9F">TenpennyTowerAllResidents</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000CADF7">TenpennyApparelVendorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D00D6FA">TTWTenpennyTowerHumanFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="000B9D76">DeathItemAnthonyLing</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0602AB62">MaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000038E6">Asian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0600311B">AnthonyLingScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0001EA6D">OutfitPrewarCasualwear</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00031DA3">CapsChange100</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007CF72">TenpennyResidentKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>Armor, Stimpacks, Unk_Potions</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00098CF1">AnthonyLingWanderWasteland</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022A26">MS12AttackPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06022169">MS12DebugStandInLobby</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000BF7CB">AnthonyLingVendorStart</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273BE">AnthonyLingFlirtWithMaleGuards</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273B9">AnthonyLingEat1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273BA">AnthonyLingEat2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273BB">AnthonyLingEat3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273BC">AnthonyLingSleep</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0001924D">AnthonyLingSandboxVendor</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000273BF">AnthonyLingSandboxFirstFloor</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001567A">VendorDrinks</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>7</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>42</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000218C7">HairPompadour</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>26</Red>
+        <Green>28</Green>
+        <Blue>28</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">KMLAvbzilr7OUq8/A+nEP3Hbtr524vs+kE3Tv5Aq2j0Olee/3pTAvtqZhkDEl9k+aCHnPyL8FMDaFTPAOvxDwDvxDsDuRv+/aOTZPmQLMkC4ownA2sNWwPXOiMC+yaa/wCSLwGVCDUAxL49AXD/QvjzZgz4onoe/f54cQJHHLMDfyZ0/sDJHv4iYYUAIo8FAKBfoPkOQbcCKX9HAyzQTwSxXpMCIWf4/+EQZQKjqyz+kZqw/wDsmwCIQmcD+5PJAiDD6P+bUh8A=</Symmetric>
+        <Asymmetric Tag="FGGA">5HVPPyEqjL4DD2Q/h0iuP9NmQT+UTg4+4ytiQMMBE8A2kb0+yFyAv56rKL/2jKy/ZHiPP8hSMUDAgvQ9gWiTP37jOr+hS3a//UC+PzZ3lj8uXbu/UUiYv+uboz812m3AUHPtPu6cfUDklzm/WOFfP+cS+D66pHhA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">FHiKv0wijL30bAC/uLswPkD9Fj4AewI+XkiSvnayqj8EK+s/5lwUv9KA2b95bI0/3f40QI0O0j9stBRANWqnv5jT9r+plBvAvLo+QGU/qb7gOLc9bpq1QFOkhUC0NUBAaqgvv/ZKUUDQZtI/WD+fv/5wIj44mPE/iY23v4C5TrynW9/AGBiewB1GxsDCG5TA3CcqvyTOlz8D2RTBEtI2wHvumsHe0zpB+aokwbovKUByxBw/iD7YQEruVsBZl6VAwPT8PQTdr8A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

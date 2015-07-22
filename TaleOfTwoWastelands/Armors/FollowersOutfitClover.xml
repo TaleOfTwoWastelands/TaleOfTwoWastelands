@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="06066C71">FollowersOutfitClover</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FollowersOutfitClover</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-14</X>
+        <Y>-21</Y>
+        <Z>-2</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>14</Y>
+        <Z>10</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Dirty Pre-War Spring Outfit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B87">EnchClothingComfortable</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>NonPlayable</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\1950StyleCasual02\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+CjIwIHRMJeHC7t8JbwDNHjVuXwlvBc0eNTIwIHRMJeHC898JbwDNHjVzXwlvBc0eNTIwIHRMJeHC5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84Hg6/MQdYhA96JrcxB1jUD3omVsGHTW84HgsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms1</Name>
+                <TextureSet ID="000615C6">1950sCasual02OldM</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000615C6">1950sCasual02OldM</TextureSet>
+                <Index>8</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\1950StyleCasual02\OutfitF.nif</FileName>
+          <TextureHashes Tag="MO3T">sbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx5vQHbwcx/gpmdAdvDDH+CjIwIHRMJeHC7t8Jb/nMHjVuXwlv/sweNTIwIHRMJeHC898Jb/nMHjVzXwlv/sweNTIwIHRMJeHC5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+6/MSdUkNtBBrcxJ1Tg20EGVsGnTVDM9+</TextureHashes>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000615C5">1950sCasual02OldF</TextureSet>
+                <Index>2</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\1950StyleCasual02\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CjIwIHRMJeHC7t8JbwDNHjVuXwlvBc0eNTIwIHRMJeHC898JbwDNHjVzXwlvBc0eNTIwIHRMJeHC</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>GO</Name>
+                <TextureSet ID="000615C6">1950sCasual02OldM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_casual_wear_outfit_2.dds</Male>
+      </Inventory>
+    </Icon>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>40</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

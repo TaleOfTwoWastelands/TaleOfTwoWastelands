@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0603E877">TrapShotgunCombatSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TrapShotgunCombatSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>13</ReferenceCount>
+        <CompiledSize>801</CompiledSize>
+        <VariableCount>7</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAD0AAAA5EAoAAgByAgBuAQAAABYADQACAAkAIHMEACAwID09FQAHAHMBAAIAIDEVAAcAcwQAAgAgMRkAAAARAAAAEAAIAAIAvAAAAAAAFgANAA0ACQAgcwEAIDEgPT0WABQABgAQACBYaRAFAAEAcgEAIDEgPT0WABsAAgAXACByAQBYDhAEAAEAJwAgcgIAcx4AID49WRALAAEAcgMAAAAAAAAAFQAHAHMDAAIAIDEXAAIAAQBZEBEAAQByBAABAHICAHMeAAAAAAAZAAAAFwACAAQAFgANAAIACQAgcwUAIDAgPT3iEQUAAQByBQAVAAcAcwUAAgAgMRkAAAAZAAAAGQAAABEAAAAQAAYAAAAEAgAAFgANABwACQAgcwMAIDEgPT0VAAsAcwIABgAgWB8QAAAWAA4AGQAKACBzAgAgMSB+ID4WAA0AFgAJACBzAgAgMSA9PVkQCwABAHIGAAAAAAAAABUABwBzAQACACAwFgANAA8ACQAgcwYAIDAgPT0WACwAAQAoACByAgBzHgAgWAARGQABABUAaUxvY2tMZXZlbE1heFZlcnlFYXN5IDwVAAcAcwcAAgAgMBgAKAABACQAIHICAHMeACBYABEVAAEAEQBpTG9ja0xldmVsTWF4RWFzeSA8FQAJAHMHAAQAIEcHABgAKwABACcAIHICAHMeACBYABEYAAEAFABpTG9ja0xldmVsTWF4QXZlcmFnZSA8FQAJAHMHAAQAIEcIABgAKAABACQAIHICAHMeACBYABEVAAEAEQBpTG9ja0xldmVsTWF4SGFyZCA8FQAJAHMHAAQAIEcJABgALAABACgAIHICAHMeACBYABEZAAEAFQBpTG9ja0xldmVsTWF4VmVyeUhhcmQgPBUACQBzBwAEACBHCgAXAAIAAQAVAAkAcwcABAAgRwsAGQAAABUABwBzBgACACAxdxEFAAEAcwcAGQAAACUQCgACAHIMAG4BAAAAHAABAAIQCgACAHINAG4BAAAAIhACAAAAGQAAABUABwBzAwACACAwGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TrapShotgunCombatSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">armed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">skillPassed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">init</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">rewardXPOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">XPForDisarm</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002012B">NQlvl</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003E878">TrapShotgunDetectMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003888A">TrapLowSkillRepairMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06004327">WeapShotgunCombat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038887">TrapDisarmMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062DA1">TrapXPRewardVeryEasy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062DA2">TrapXPRewardEasy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062DA3">TrapXPRewardAverage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062DA4">TrapXPRewardHard</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00062DA5">TrapXPRewardVeryHard</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00029433">ShotgunTrapShell01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E86F2">Ammo20Ga</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

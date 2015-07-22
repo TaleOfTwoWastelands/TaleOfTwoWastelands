@@ -1,0 +1,170 @@
+SCN VFSSilverRushFriskingTriggerSCRIPT
+
+ref Companion1REF
+ref Companion2REF
+
+BEGIN OnActivate
+
+	if (IsActionREF VFSSimonREF) && (VFSSimonREF.SimonSearched == 0)
+		player.RemoveAllTypedItems VFSSilverRushPlayerLockerREF 1 0 40
+		set VFSSimonREF.SimonSearched to 1
+		;ShowWarning "Running onActivate!"
+	; Checks for followers
+		if VNPCFollowers.bPlayerHasFollower == 1
+			if VNPCFollowers.bBooneHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CraigBooneREF
+				else
+					set Companion2REF to CraigBooneREF
+				endif
+			endif
+			if VNPCFollowers.bCassHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RoseofSharonCassidyREF
+				else
+					set Companion2REF to RoseofSharonCassidyREF
+				endif
+			endif
+			if VNPCFollowers.bVeronicaHired == 1
+				if Companion1REF == 0
+					set Companion1REF to VeronicaREF
+				else
+					set Companion2REF to VeronicaREF
+				endif
+			endif
+			if VNPCFollowers.bLilyHired == 1
+				if Companion1REF == 0
+					set Companion1REF to LilyREF
+				else
+					set Companion2REF to LilyREF
+				endif
+			endif
+			if VNPCFollowers.bEDEHired == 1
+				if Companion1REF == 0 && EDE1Ref.GetDisabled == 0
+					set Companion1REF to EDE1REF
+				elseif Companion1REF == 0 && EDE2Ref.GetDisabled == 0
+					set Companion1REF to EDE2REF
+				elseif Companion1REF == 0 && EDE3Ref.GetDisabled == 0
+					set Companion1REF to EDE3REF
+				elseif EDE1Ref.GetDisabled == 0
+					set Companion2REF to EDE1REF
+				elseif EDE2Ref.GetDisabled == 0
+					set Companion2REF to EDE2REF
+				elseif EDE3Ref.GetDisabled == 0
+					set Companion2REF to EDE3REF
+				endif
+			endif
+			if VNPCFollowers.RaulHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RaulREF
+				else
+					set Companion2REF to RaulREF
+				endif
+			endif
+			if VNPCFollowers.ArcadeHired == 1
+				if Companion1REF == 0
+					set Companion1REF to ArcadeREF
+				else
+					set Companion2REF to ArcadeREF
+				endif
+			endif
+			if VNPCFollowers.RexHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RexREF
+				else
+					set Companion2REF to RexREF
+				endif
+			endif
+			if Followers.CharonHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CharonRef
+				else
+					set Companion2REF to CharonRef
+				endif
+			endif
+			if Followers.ButchHired == 1
+				if Companion1REF == 0
+					set Companion1REF to ButchRef
+				else
+					set Companion2REF to ButchRef
+				endif
+			endif
+			if Followers.CloverHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CloverRef
+				else
+					set Companion2REF to CloverRef
+				endif
+			endif
+			if Followers.JerichoHired == 1
+				if Companion1REF == 0
+					set Companion1REF to JerichoRef
+				else
+					set Companion2REF to JerichoRef
+				endif
+			endif
+			if Followers.FawkesHired == 1
+				if Companion1REF == 0
+					set Companion1REF to MQ08FawkesRef
+				else
+					set Companion2REF to MQ08FawkesRef
+				endif
+			endif
+			if Followers.StarPaladinCrossHired == 1
+				if Companion1REF == 0
+					set Companion1REF to StarPaladinCrossRef
+				else
+					set Companion2REF to StarPaladinCrossRef
+				endif
+			endif
+			if Followers.DogmeatHired == 1
+				if Companion1REF == 0
+					set Companion1REF to DogmeatRef
+				else
+					set Companion2REF to DogmeatRef
+				endif
+			endif
+			if Followers.RL3Hired == 1
+				if Companion1REF == 0
+					set Companion1REF to RL3REF
+				else
+					set Companion2REF to RL3REF
+				endif
+			endif
+		endif
+
+		; Takes companion weapons away
+		if Companion1REF
+			Companion1REF.RemoveAllTypedItems VFSSilverRushCompanion01LockerREF 1 0 40
+		endif
+		if Companion2REF
+			Companion2REF.RemoveAllTypedItems VFSSilverRushCompanion02LockerREF 1 0 40
+		endif
+
+		; Activate door so player enters the Silver Rush
+		VFSSilverRushExtDoorREF.Activate Player
+
+	elseif (IsActionREF VFSSimonREF) && (VFSSimonREF.SimonSearched == 1)
+
+	; Gives the player and his companions back their weapons after they leave.
+		VFSSilverRushPlayerLockerREF.RemoveAllItems Player
+
+		; Need to check if Companion 1 exists, otherwise script stops running here
+		if Companion1REF
+			VFSSilverRushCompanion01LockerREF.RemoveAllItems Companion1REF
+		endif
+
+		; Need to check if Companion 2 exists, otherwise script stops running here
+		if Companion2REF
+			VFSSilverRushCompanion02LockerREF.RemoveAllItems Companion2REF
+		endif
+
+	; Clears Companion REFs for safety
+		set Companion1REF to 0
+		set Companion2REF to 0
+	; sets frisked variable back to 0
+		set VFSSimonREF.SimonSearched to 0
+
+	endif
+
+end

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0015EB23">NVChallengeAbom</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVChallengeAbom</EditorID>
+    <Name Tag="FULL">Abominable</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EABC">ChallengeAbominationSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Abominations.
+
+* Aliens
+* Centaurs
+* Deathclaws
+* Ghost people 
+* Mr. House
+* Nightstalkers
+* Spore carriers
+* Spore plants
+* Think tank 
+* Tunnelers </Description>
+    <Data Tag="DATA">
+      <Type>KillAnyInACategory</Type>
+      <Threshold>100</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>20</Interval>
+      <BodyPart>None</BodyPart>
+      <CreatureType>SuperMutant</CreatureType>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+  </Subrecords>
+</Record>

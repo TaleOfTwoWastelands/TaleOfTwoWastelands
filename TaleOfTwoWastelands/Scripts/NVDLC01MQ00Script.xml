@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="010062B1">NVDLC01MQ00Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVDLC01MQ00Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>21</ReferenceCount>
+        <CompiledSize>505</CompiledSize>
+        <VariableCount>4</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAOsBAAAWACoAAwAmACByAQBYQxAFAAEAcgQAIHMEACAwID09ICYmIEcFACAwID09ICYmHAABAJ4QBQABAHIGABwAAgByEAcAAQBu/wAAABUABwBzBAACACAxGQAAABYADQALAAkAIHMCACAwID09MxIIAAIAcgcAcggAMxIIAAIAcgcAcgkAMxIIAAIAcgcAcgoAMxIIAAIAcgcAcgsAMxIIAAIAcgwAcggAMxIIAAIAcgwAcgkAMxIIAAIAcgwAcgoAMxIIAAIAcgwAcgsAMxIIAAIAcg0Acg4AMxIIAAIAcg8AchAAFQAHAHMCAAIAIDEZAAAAFgANAAQACQAgcwEAIDAgPT0WACAAAgAcACByEQBYIxAAACAwID09IFgiEgUAAQByEgAgJiYVAAcAcwEAAgAgMRUACABmAwADACAzMBkAAAAYAA0ADQAJACBzAQAgMSA9PRYADQAJAAkAIGYDACAwIDw9FQAHAHMEAAIAIDE5EAoAAgByEwBuCgAAAFkQCwABAHIUAAAAAAAAABUABwBzAQACACAxHAADACEQAgAAACwSAAABEgAAFQAJAHMBAAQAIDEgflkQCwABAHIVAAAAAAAAABcAAgABABUAEQBmAwAMACBmAwAgWAwQAAAgLRkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="NVDLC01MQ00Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnceMessage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FormListsUpdated</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">StartTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bTeleportOut</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001558AB">SLBoSBunkerEntranceRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="010062B4">NVDLC01RadioStationRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001555FD">SLBoSBunkerINT</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01013419">NVDLC01BunkerExitMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000F0F05">NVHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0100BD09">NVDLC01WeapSpaceAgeKnife</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01012209">NVDLC01WeapSpaceAgeKnifeClean</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01010589">NVDLC01WeapSpaceAgeKnifeHeated</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0100BBC2">NVDLC01WeapPolicePistol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129876">NVImprovedHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009B5D1">SkirtOutfits</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01006ED6">nvdlc01starletclean</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007627F">ExplodesGasTrapsOnHit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="010092EF">NVDLC01WeapHolorifle</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0014DF03">RNVTARef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C1C">VCG01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01005229">NVDLC01MQ00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="010062B2">NVDLC01DownloadMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0100F41E">NVDLC01LoadedMsg</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

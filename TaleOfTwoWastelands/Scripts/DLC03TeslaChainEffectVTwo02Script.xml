@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0900D4FC">DLC03TeslaChainEffectVTwo02Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03TeslaChainEffectVTwo02Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>1142</CompiledSize>
+        <VariableCount>22</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAGEAAAAWAA0ABQAJACBzBAAgMCA9PRUAGABmBQATACAuNSBYTRAAACAwLjAwMyAqICsVAAcAcwMAAgAgMBUABwBzAgACACAwFQAHAHMBAAIAIDAVAAcAcwQAAgAgMRkAAAARAAAAEAAIABoAjAAAAAAAFQALAGYWAAYAIFjNEAAAFgASAAIADgAgcgEAWHQRBQABAHIDABwAAQBsEQsAAQB6AAAAAABq6EB1EgUAAQByBAAZAAAAFgASAAMADgAgcgEAWGERAAAgMSA9PRYAEgABAA4AIHIBAFguEAAAIDAgPT0VAAsAZhQABgAgWM0QAAAZAAAAGQAAABEAAAAQAAYAAABlAwAAFgANAAEACQAgcwMAIDEgPT27EQAAGQAAABYADQACAAkAIGYFACAwIDw9IhACAAAAFQAHAHMDAAIAIDEZAAAAFgAOADEACgAgZgUAIDAuMyA8FgANAC8ACQAgcwEAIDAgPT0WABIALQAOACByAgBYYREAACAxID09FgASACsADgAgcgIAWC4QAAAgMCA9PRUAEABmDgALACBYARAFAAEAcgIAFgAOACgACgAgZg4AIDEwMCA+FQAOAGYHAAkAIFgGEAMAAQBYFQAOAGYIAAkAIFgGEAMAAQBZFQARAGYJAAwAIHICAFgGEAMAAQBYFQARAGYKAAwAIHICAFgGEAMAAQBZFQAPAGYLAAoAIGYJACBmBwAgLRUADwBmDAAKACBmCgAgZggAIC0WAAwACQAIACBmCwAgMCA8FgAMAAMACAAgZgwAIDAgPBUADwBmDQAKACBmDAAgZgsAIC8VABUAZgYAEAAgWB4SCgACAGYNAG4BAAAAFQAPAGYGAAoAIDI3MCBmBgAgLRcAAgADABUAEQBmDQAMACBmDAAgZgsAIH4gLxUAFQBmBgAQACBYHhIKAAIAZg0AbgEAAAAVAA4AZgYACQAgZgYAIDkwIC0ZAAAAFwACAAkAFgAMAAMACAAgZgwAIDAgPBUAEQBmDQAMACBmDAAgfiBmCwAgLxUAFQBmBgAQACBYHhIKAAIAZg0AbgEAAAAVAA4AZgYACQAgZgYAIDkwICsXAAIAAwAVAA8AZg0ACgAgZgwAIGYLACAvFQAVAGYGABAAIFgeEgoAAgBmDQBuAQAAABUADgBmBgAJACA5MCBmBgAgLRkAAAAZAAAAFQAOAGYPAAkAIFgGEAMAAQBaFQARAGYQAAwAIHICAFgGEAMAAQBaFQAOAGYQAAkAIGYQACA2NCArFQAPAGYRAAoAIGYPACBmEAAgLRUADwBmEwAKACBmEQAgZg4AIC8VABUAZhIAEAAgWBwSCgACAGYTAG4BAAAAFgAMAAEACAAgZgwAIDAgPBUADQBmEgAIACAwIGYSACAtGQAAAAkQBgACAFhmEgAJEAYAAgBaZgYA4hEFAAEAcgUAFQAHAHMBAAIAIDEZAAAAGQAAABkAAAAZAAAAGQAAABUAEQBmBQAMACBmBQAgWAwQAAAgLREAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC03TeslaChainEffectVTwo02Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoShoot</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DeleteMe</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Init</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">Timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">zAngle</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">thisX</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">thisY</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">targetX</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">targetY</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">deltaX</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">deltaY</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">tanZAngle</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">distance</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">triggerZCoord</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">targetZCoord</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">deltaZ</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">AimAngleX</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">RatioDist</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">triggerActor</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">triggerObject</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">22</Reference>
+        <Reference Tag="SCRV">20</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E2C45">DLC03TeslaExplosionList</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185A9">TTWDLC03ChallengeVertibird</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0900D4F8">DLC03WeapTeslaChainEffect02</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

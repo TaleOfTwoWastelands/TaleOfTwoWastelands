@@ -1,0 +1,56 @@
+SCN TTWSESAdvertitronScript
+
+short sRunLoad
+float fHeading
+float fBombtimer
+
+ref NPC
+
+Begin OnLoad
+
+	; start the Radio Signal
+
+	if sRunLoad == 0 && GetDead == 0
+		set sRunLoad to 1
+		set NPC to GetSelf
+		TTWSESAdvertRadioSignalRef.enable
+	endif
+
+End
+
+Begin Gamemode
+
+; Let the Encounter vanish if the player isn't looking and far away enough
+
+	IF GetDisabled == 0												; only run if encounter is active (to avoid GetDistance stress on the engine)
+		If GetDistance player > 5000								; Player is 5000 units away
+			set fHeading to Player.GetHeadingAngle NPC		; isn't looking at me
+			If (((90 < fHeading) && (fHeading < 270)) || ((-270 < fHeading) && (fHeading < -90)))
+				TTWSESAdvertRadioSignalRef.disable			; stop radio
+				Disable													
+				RemoveMe 												; I am gone
+			Endif
+		Endif
+	EndIf
+
+; Easter Egg: If Adevertiron plays the nuke radio piece he gives a live demonstration...
+
+	If TTWSESAdvertRadio.sBomb == 1
+
+		set fBombtimer to 22											; length of the audio until the bom starts
+		set TTWSESAdvertRadio.sBomb to 2
+
+	EndIf
+
+	If TTWSESAdvertRadio.sBomb == 2
+
+		If (fBombtimer > 0)
+			Set fBombtimer to fBombtimer - GetSecondsPassed
+		Else
+			set TTWSESAdvertRadio.sbomb to 0
+			placeatme SmallNukeExplosionNoKD				; Advertitron having fun!!! 
+		EndIf
+
+	EndIf
+
+End

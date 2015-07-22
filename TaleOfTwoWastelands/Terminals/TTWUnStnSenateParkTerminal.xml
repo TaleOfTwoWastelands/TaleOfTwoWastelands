@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="TERM">
+  <Flags>0</Flags>
+  <FormID ID="0C012023">TTWUnStnSenateParkTerminal</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWUnStnSenateParkTerminal</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-18</X>
+        <Y>-20</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>24</X>
+        <Y>20</Y>
+        <Z>37</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Personal Computer</Name>
+    <Model>
+      <FileName Tag="MODL">terminals\terminaldesk01.nif</FileName>
+    </Model>
+    <WelcomeText Tag="DESC">== LOWER SENATE PARK EMERGENCY RESPONSE DETAIL 041B ==
+
+PLEASE LOGOFF AT END OF SESSION
+
+Welcome, 
+
+SGM. TERESA MORGAN
+CHIEF MEDICAL OFFICER</WelcomeText>
+    <LoopingSound Tag="SNAM">
+      <Reference ID="00018EC0">OBJComputerTerminalLP</Reference>
+    </LoopingSound>
+    <Data Tag="DNAM">
+      <HackingDifficulty>VeryEasy</HackingDifficulty>
+      <Flags>Unlocked</Flags>
+      <ServerType>Server5</ServerType>
+    </Data>
+    <Selections>
+      <Selection>
+        <ItemText Tag="ITXT">11/02/2077</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <DisplayNote Tag="INAM">
+          <Reference ID="0C011FD3">TTWUnStnLowerSenateCampNote01</Reference>
+        </DisplayNote>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">11/15/2077</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <DisplayNote Tag="INAM">
+          <Reference ID="0C011FD4">TTWUnStnLowerSenateCampNote02</Reference>
+        </DisplayNote>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">11/17/2077</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <DisplayNote Tag="INAM">
+          <Reference ID="0C011FD5">TTWUnStnLowerSenateCampNote03</Reference>
+        </DisplayNote>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">&lt;null&gt;</ItemText>
+        <ResultText Tag="RNAM"></ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+      </Selection>
+    </Selections>
+  </Subrecords>
+</Record>

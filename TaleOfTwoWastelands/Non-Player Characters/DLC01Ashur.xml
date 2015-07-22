@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="08000F20">DLC01Ashur</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01Ashur</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Ashur</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential, AutoCalcStats, PCLevelMult, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1500</Level>
+      <CalcMin>7</CalcMin>
+      <CalcMax>17</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A4">SmokerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A6">GeneralIdleFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000942BE">WastelanderForceGoodbye</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="080039EC">DLC01AshurFamilyFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="080035C9">DLC01UniqueAshur</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0004BF72">AfricanAmericanRaider</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="08005957">DLC01AshurSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004330">WeapGrenadeFrag</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00028EAD">ArmorReconHelmet</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000E86F2">Ammo20Ga</Item>
+          <Count>6</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000F379C">Ammo20Ga75</Item>
+          <Count>20</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0016BB4E">Ammo20GaScrounger</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06004327">WeapShotgunCombat</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="08006852">DLCPittArmorPowerAshur</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="08007FC1">DLC01AshurKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>5</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Pleasant</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="080039CA">DLC01TP03ConfrontPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="08005958">DLC01TP03AshurScene1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="080039CE">DLC01TP03AshurGreetPlayer2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="08009546">DLC01TP03AshurWaitForScene</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="080029DA">DLC01TP03AshurGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="080029DB">DLC01TP03AshurGoodbyeDialogue</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="080029DC">DLC01TP03AshurLeavesPalace</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="080032F4">DLC01AshurGiveSpeech</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0800A378">DLC01DefaultSandboxEditorLocation512NoWander</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001873F">SoldierLeader</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>30</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>6</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>7</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>62</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>56</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>58</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>54</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0009F920">BeardMustacheFull</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000BA475">BeardGoateeWideFull</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0006FC19">HairRaiderMid</Reference>
+      </Type>
+      <Length Tag="LNAM">0.889999986</Length>
+      <Color Tag="HCLR">
+        <Red>94</Red>
+        <Green>87</Green>
+        <Blue>85</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="0004CB10">EyeRaider</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">9fg/v9qOMj8f7uI+wPvbPu5RWL+YSI49zGXkvYCs7zvWiLs/SLkwwIGSVsA4cQ+9II0bv8IMNT9lCYM/9LA6PmiE5D8tDj/AiIqWviFfh8DCIwPA0OspwGZ+jb+IWw4/xDBowPWwYj8HRJTAyI4nwLvVFcEBIhq/uN9/QOCQ8789i3fAwLKswEJw/8DS8MDAkn+1wNhbnT54jw5Anz4zv2wmksD+TNw/Gz8rwJgRhcBTXwvBXTcZvzoajcDd7fxARjq9wCBoaMA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">GKHJvuEnD79iUjK/qIleP1pxZD+zl0Q+rujSP9AFR75Usta+IA5yPnofLL9uFxy/3N7UPuXS/z6Gk04/MIyNPpiHUD5O0z4/bs9ev2jLyj5IqeI9JKU/P98Ggb8exsK+oDuovGj5HL8IqYa+H8QEP4xegz5CLi0+6GR7PnNYtL70uFk/AOGPPRV/b7++xI+/AIhqu6DL5T4Wx6Q/dE4ZP7CmtT6+f8Y+ROzJPpiAVz5MKxa/0HrNvgBosrymYJQ/+ocSv6wm2z8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0A005847">DLC04MQ02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04MQ02</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0A006632">DLC04MQ02SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Walking With Spirits</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Quest start</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgUAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed DLC04MQ02 5 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005847">DLC04MQ02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player agrees to the plan and receives info from Desmond</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgUAAABuAQAAAKMRDwADAHIBAG4KAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted DLC04MQ02 5 1
+setObjectiveDisplayed DLC04MQ02 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005847">DLC04MQ02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player reports to the Cathedral, is told about ritual</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>67</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG5kAAAAbgEAAACiEQ8AAwByAgBuBQAAAG4BAAAAHAABAHMQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted DLC04MQ02 10 1
+setObjectiveDisplayed DLC04MQ02 100 1
+setObjectiveCompleted DLC04MQ02 5 1
+
+;Enable access to bog
+DLC04BogDoorREF.unlock
+;DLC04MotherPungaTEMPREF.enable
+;DLC04PungaSeedTEMPREF.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A007AFA">DLC04BogDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005847">DLC04MQ02</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has acquired seeds from the Mother Pod</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>103</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbmQAAABuAQAAAKMRDwADAHIFAG6WAAAAbgEAAAAcAAEAAhAKAAIAcgYAbgEAAAAcAAEAEBAJAAIADQBu9AEAABwAAgAhEAIAAAAcAAMAIRACAAAAHAAEACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;DisablePlayerControls 0 1 1 0 0 0 0
+setObjectiveCompleted DLC04MQ02 100 1
+setObjectiveDisplayed DLC04MQ02 150 1
+player.additem DLC04pungaseeds 1
+player.modav carryweight 500
+DLC04MainHallucinationXMRK.enable
+DLC04CathedralOutsideEnableMarker.enable
+DLC05BogSoundNormalHeartREF.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00AE4E">DLC04MainHallucinationXMRK</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A01265D">DLC04CathedralOutsideEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A003E66">DLC05BogSoundNormalHeartREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005847">DLC04MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00A87A">DLC04PungaSeeds</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">180</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player passes out and wakes up outside the bog, post-hallucinations</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>15</ReferenceCount>
+                <CompiledSize>240</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YBAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAQAAAG4BAAAAbgEAAAAcAAEAAhAPAAMAcgYAbgEAAABuAQAAABwAAQDuEA8AAwByBgBuAQAAAG4BAAAAHAACACIQAgAAAJIRBQABAHIHAJIRBQABAHIIAJIRBQABAHIJAJIRBQABAHIKAJIRBQABAHILAJIRBQABAHIMABwAAQCeEAUAAQByDQAcAAMAnhAFAAEAcg4AHAADAF4QAAAcAAEAUhAKAAIAcg8AbgEAAAAcAAQAcxACAAAAHAABABAQCQACAA0Abgz+//8cAAUAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Hallucination end
+EnablePlayerControls 1 1 1 1 1 1 1
+player.additem dlc04headscar 1 1
+player.equipItem DLC04Headscar 1 1
+DLC04MainHallucinationXMRK.disable
+rimod DLC04HallucinationStage01
+rimod DLC04HallucinationStage01Trans
+rimod DLC04HallucinationStage02
+rimod DLC04HallucinationStage02Trans
+rimod DLC04HallucinationStage03
+rimod DLC04HallucinationStage03Pulse
+;Move player
+player.moveto DLC04BogAwakenMarker
+DLC04JimsonREF.moveto DLC04WakeUpMarker2REF
+DLC04JimsonREF.evp
+player.removeitem DLC04pungaseeds 1
+DLC04CathGateREF.unlock
+player.modav carryweight -500
+DLC04PostBogBloatFliesMarker.enable ;enables bloat flies outside bog</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00AE4E">DLC04MainHallucinationXMRK</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00927E">DLC04JimsonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00AC52">DLC04CathGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F76F">DLC04PostBogBloatFliesMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00C509">DLC04headscar</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F679">DLC04HallucinationStage01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F67A">DLC04HallucinationStage01Trans</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F67C">DLC04HallucinationStage02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F67B">DLC04HallucinationStage02Trans</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F677">DLC04HallucinationStage03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F678">DLC04HallucinationStage03Pulse</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A011E14">DLC04BogAwakenMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A009287">DLC04WakeUpMarker2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00A87A">DLC04PungaSeeds</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">190</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player returns to Cathedral, is welcomed as member</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">quest completed, start MQ03</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>127</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgMANhAFAAEAcgQAORAKAAIAcgQAbgoAAACiEQ8AAwByAwBulgAAAG4BAAAANxAFAAEAcgMAHAABAHYRBQABAHIFAFkQCwABAHIGAAAAAAAAABwAAQB3EQcAAQBuLAEAAAMQCgACAHIHAG4AAAAAHAACAHMQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">CompleteAllObjectives DLC04MQ02
+startQuest DLC04MQ03
+setStage DLC04MQ03 10
+setObjectiveCompleted DLC04MQ02 150 1
+stopQuest DLC04MQ02
+player.addperk DLC04PungaPoweralt01
+showMessage DLC04MQ02PerkAdded
+player.rewardxp 300
+setEssential DLC04Jimson 0
+DLC04CathExtDoor.unlock
+;addachievement 66</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00438F">DLC04CathExtDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005847">DLC04MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A005848">DLC04MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A011096">DLC04PungaPoweralt01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00F3DD">DLC04MQ02PerkAdded</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0A00927D">DLC04Jimson</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Investigate the Tribals at the Cathedral.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A009280">DLC04CathedralIntercomREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Collect seeds from the giant Punga plant.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00AFC6">DLC04PungaSeedPodREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0A00E91D">DLC04BogEntrance</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A00A88C">DLC4Bog</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00E931">DLC04ToBogREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0A00E91D">DLC04BogEntrance</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A00A88C">DLC4Bog</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A007AFA">DLC04BogDoorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0A00E91D">DLC04BogEntrance</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A00A88C">DLC4Bog</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">150</Index>
+        <Description Tag="NNAM">Return to the Cathedral.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A009280">DLC04CathedralIntercomREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A00A88C">DLC4Bog</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A00E931">DLC04ToBogREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0A00A88C">DLC4Bog</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Talk with Desmond about his offer.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0A0035B3">DLC04DesmondREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

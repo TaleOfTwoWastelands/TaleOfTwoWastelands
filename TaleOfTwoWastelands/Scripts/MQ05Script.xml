@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0601B52E">MQ05Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ05Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>14</ReferenceCount>
+        <CompiledSize>1321</CompiledSize>
+        <VariableCount>33</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAABsFAAAWABUAOQARACBYOhAFAAEAcgcAIDIwID09FgANADcACQAgcx0AIDAgPT0WABAAFgAMACByCABzBAAgMTQgPBUABwBzHgACACAxFgAZABMAFQAgcgkAWAEQBQABAHIKACAxMDAwIDwWABsAAQAXACByAQBYARAFAAEAcgoAIDEwMDAwID49HAABAJ4QBQABAHILABkAAAAWABsAAQAXACByAgBYARAFAAEAcgoAIDEwMDAwID49HAACAJ4QBQABAHILABkAAAAWABsAAQAXACByAwBYARAFAAEAcgoAIDEwMDAwID49HAADAJ4QBQABAHILABkAAAAWABsAAwAXACByBABYARAFAAEAcgoAIDEwMDAwID49FgASAAEADgAgcgQAWC4QAAAgMCA9PRwABACeEAUAAQByCwAZAAAAGQAAABYAGwADABcAIHIFAFgBEAUAAQByCgAgMTAwMDAgPj0WABIAAQAOACByBQBYLhAAACAwID09HAAFAJ4QBQABAHILABkAAAAZAAAAGQAAABcAAgAeABYAFwAcABMAIHIJAFhDEAUAAQByDAAgMSA9PRYAFwAEABMAIHIBAFhDEAUAAQByDAAgMCA9PRYADQACAAkAIHMWACAwID09HAABAJ4QBQABAHIKABUABwBzFgACACAxGQAAABkAAAAWABcABAATACByAgBYQxAFAAEAcgwAIDAgPT0WAA0AAgAJACBzFwAgMCA9PRwAAgCeEAUAAQByCgAVAAcAcxcAAgAgMRkAAAAZAAAAFgAXAAYAEwAgcgQAWEMQBQABAHIMACAwID09FgANAAQACQAgcxgAIDAgPT0WABIAAgAOACByBABYLhAAACAwID09HAAEAJ4QBQABAHIKABUABwBzGAACACAxGQAAABkAAAAZAAAAFgAXAAYAEwAgcgUAWEMQBQABAHIMACAwID09FgANAAQACQAgcxkAIDAgPT0WABIAAgAOACByBQBYLhAAACAwID09HAAFAJ4QBQABAHIKABUABwBzGQACACAxGQAAABkAAAAZAAAAGQAAABkAAAAZAAAAGQAAABYAFQAEABEAIFg6EAUAAQByBwAgMjUgPT0WABEAAgANACByCABzBAAgMTQgPj05EAoAAgByBwBuGgAAABUACgByBwBzHgACACAyGQAAABkAAAAWABUABgARACBYOhAFAAEAcgcAIDIwID09FgANAAQACQAgcx4AIDEgPT0WABEAAgANACByCABzBAAgMTQgPj05EAoAAgByBwBuGgAAABUACgByBwBzHgACACAyGQAAABkAAAAZAAAAFgAQAAMADAAgcgcAcwEAIDEgPT0cAAYA3RAHAAEAbgAAAAAVAAoAcgcAcwEAAgAgMhwAAwDzEAcAAQBuAQAAABkAAAAWAA0AAgAJACBzBgAgMSA9PRwAAgBeEAAAFQAHAHMGAAIAIDIZAAAAFgAMAAYACAAgcwkAIDAgPhYAGQAEABUAIHIJAFgBEAUAAQByAgAgNTAwMCA+FgANAAIACQAgcx8AIDAgPT0VAAcAcx8AAgAgMRUACgByBwBzCQACACA2GQAAABkAAAAZAAAAFgAhAAEAHQAgcyAAIDEgPT0gWDoQBQABAHIHACAxMDAgPCAmJv8RBQABAHINABgAIgACAB4AIHMgACAxID09IFg6EAUAAQByBwAgMTAwID49ICYm/xEFAAEAcg4AFQAHAHMgAAIAIDIZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MQ05Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ConvVar</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doonce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiFollow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiWait</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiEnd</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">NoWay20</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GarzaSit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DanGun</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiGarzaConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadLiConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Broadcast</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MutantsKilled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">greettimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DeathScene</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AutumnMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LiMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AnnaMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GarzaMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">NoFighting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GarzaKillPostSit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>28</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DadEscort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SciMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AllClear</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>31</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GateOpen</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CueMusic</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>33</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TTWBridgeOpend</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06019D09">MQDadRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06019FC5">DoctorLiRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06019FC6">JaniceKaplinskiRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06038DF6">AnnaHoltRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601E764">GarzaRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0607CC05">PPBulkhead01Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8B">MQ05</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E89">MQ03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06072A0B">MQ05ScientistExteriorWaitMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060AAE60">MQ05ScientistCatchUpMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060AAE57">PPurity</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0008957D">DefaultBattle</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00090908">DefaultExplore</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

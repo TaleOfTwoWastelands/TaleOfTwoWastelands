@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="09001032">DLC03Talon4MeleeAAMTEMPLATE</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03Talon4MeleeAAMTEMPLATE</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Talon Company Merc</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Respawn, AutoCalcStats, NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>17</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0004443B">TalonCompany</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000711A4">SmokerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="060B7CC2">DeathItemTalonCo75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0009C465">MaleGroupTalonCompany</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="0000424A">AfricanAmerican</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0604390B">TalonWeaponGrenade20</Item>
+          <Count>4</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06044466">TalonWeaponMelee</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060BDA3C">TalonLoot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C004C53">Talon4Armor</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00023619">DefaultPatrolWeaponDrawn</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00074FE6">DefaultSandboxEditorLocation512</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="000A84E1">TalonMeleeClass</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>195</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>7</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>90</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>90</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>90</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0002F21F">BeardThin</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002242B">HairBuzzCut</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>28</Red>
+        <Green>23</Green>
+        <Blue>24</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">F+JRv/aCgD98UKm/KvQlPyK8mz9wzBA+0+AYP/oUpr8QErm+mmYmQJ9+ur8mfmrABBaNP9SFEL+mIK6/HpGLPwDPHcAW47S/oHNXwIKwrD/eJpzAyA4wvvWd4b9AtBo/vsUjQCLjID+7gL7ASixSP+CShj4ER4M//IRHQPwVJ0DEYBxAZERMwDjuHUC+9chAXItWQOo8l7+iLGg/zOcTwOTw58AUZ++/6kOAQCULm0AQtxY+MymbwDxgCMCunJrA4msgwNyoRkA=</Symmetric>
+        <Asymmetric Tag="FGGA">uAIZvfU/Gb+nuX69qFuKPWKklD8Yp4o+L2YEvxqXiz41XA0+HmqBP7YivD7EOje+Qve7vkeDPL+2Fca+6gdPvhj9Mj/StQu/MSKfv7aMu71RC7i+P3gKvzcsvD5cnZe93/5Vv3QKKL84Fh4+adhhPuH1Nj9AUgO/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">uFKLvyxKR7/uVkk/IN0+P5wEWT+hHJ4/a3JpP3NJBcAG3Q4/vKgbP/DmgT/I4rq/X+olv2KXmz8L4R5AtFZVv8Cy0z+srHU/EzkrP6LkBcCwOkJA2YYIQO+3C7+o6iNAcGBvPbeCtD9G1Aw/cAUaPq3Cur9Y34q/XaUeQJCyer1EHjG/Oum4vxaT87+I5RDAoJEnwDICsT74OIm/z9LJP/Um77+wpDpAm0AewHaXdb8zaovADpKQPm4Zfb80t/I/BNsawMYTKr8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

@@ -1,0 +1,158 @@
+ScriptName DLC03BS3QuestScript
+
+short BS3Alarm															;1= Margot has set off the alarm inside the Presidential Metro
+short BS3GetSecurity														;1= Margot summoned security detail and activated her turrets
+short BS3Clear																;1= Margot has cleared the Player and will dialogue
+short BS3Senator															;1= Player possessed Senate ID for use in Margot's dialogue
+short BS3Breach															;1= Makes Security Breach dialogue available
+short BS3BreachMore													;1= Opens more options on the Security Breach dialogue sub-branch
+short BS3BreachDone													;1= The "breach" in the Metro has been secured
+short BS3Seal																;1= Player is aware of the sealed train blocking the way to Adams AFB
+short BS3StrikeTarget													;1= Player chose to blow up Enclave Base  2= Player chose to blow up Citadel
+short BS3ArrivedMetro													;1= Player has arrived at the Presidential Metro
+short BS3ArrivedAdams													;1= Player has arrived at Adams AFB
+short BS3ArrivedPlatform												;1= Player has arrived inside the Enclave Mobile Platform
+short BS3GhoulCount														;1= Number of Feral Ghouls slain in the Presidential Metro to contribute to completing optional objective
+short BS3Self																;1= Player went through the Self path of dialogue with Margot
+short BS3SecondChance												;1= Player used his second chance at Margot
+short BS3CrawlerRamp													;0= Crawler Ramp is Closed  1=Crawler Ramp is Open
+short BS3SetupEntourage												;1= Player has destroyed the Platform
+short BS3MargotUnlock													;1= Margot has unlocked the load door from her area
+short BS3SarahAtVertibird01											;1= Sarah is outside of Vertibird01 near the Enclave Tower
+short BS3SarahAtVertibird02											;1= Sarah is outside of Vertibird02 near the Air Traffic Control Tower
+short BS3SarahAtVertibird03											;1= Sarah is outside of Vertibird03 outside the blown up Citadel
+short BS3Evil																;1= Starts the Evil Timer in case player avoids Forcegreet somehow
+short BS3QTFlip															;0= Player is on pre-ride side of train run 1= Player is on post-ride side of train run
+short BS3OptionCheck													;1= Player made it to Adams AFB without clearing the breach (for objective handling)
+
+short DoOnce
+short DoOnceA
+short DoOnce1
+
+float EvilTimer
+
+begin gamemode
+
+;This is a series of LD handshake blocks
+
+	if ( DoOnce == 0 )
+		if ( BS3Clear == 1 )
+			Set DLC03NQlvl.botsFriendly to 1
+			set DoOnce to 1
+		endif
+	endif
+
+	if ( DoOnceA == 0 )
+		if ( BS3Alarm == 0 )
+			if ( DLC03NQlvl.PlayerHarmed == 1 )
+				set BS3Alarm to 1
+				set DoOnceA to 1
+			endif
+		endif
+	endif
+
+;This block handles the objective handoff when the Player arrives at the Presidential Metro
+
+	if ( BS3ArrivedMetro == 0 )
+		if ( Player.GetInCell DLC03PresMetro01 == 1 )
+			if ( GetObjectiveDisplayed DLC03BS3 10 == 1 )
+				SetObjectiveCompleted DLC03BS3 10 1
+				SetObjectiveDisplayed DLC03BS3 20 1
+				Set BS3ArrivedMetro to 1
+			endif
+		endif
+	endif
+
+;This block handles the objective handoff when the Player arrives at Adams AFB
+
+	if ( BS3ArrivedAdams == 0 )
+		if ( Player.GetDistance DLC03AFBArrivalMarker < 400 )
+			if ( GetObjectiveDisplayed DLC03BS3 20 == 1 )
+				SetObjectiveCompleted DLC03BS3 20 1
+				SetObjectiveDisplayed DLC03BS3 30 1
+				Set BS3ArrivedAdams to 1
+			endif
+		endif
+	endif
+
+;This block checks the status of the Optional objective to clear the Metro once player hits Adams AFB
+
+	if ( BS3OptionCheck == 0 )
+		if ( BS3ArrivedAdams == 1 )
+			if ( GetObjectiveCompleted DLC03BS3 25 == 0 )
+				SetObjectiveCompleted DLC03BS3 25 1
+				Set BS3OptionCheck to 1
+			endif
+		endif
+	endif
+
+;This block handles the objective handoff when the Player arrives at the Enclave Mobile Platform
+
+	if ( BS3ArrivedPlatform == 0 )
+		if ( Player.GetInCell DLC03EnclaveBase01 == 1 )
+			if ( GetObjectiveDisplayed DLC03BS3 50 == 1 )
+				SetObjectiveCompleted DLC03BS3 50 1
+				SetObjectiveDisplayed DLC03BS3 60 1
+				Set BS3ArrivedPlatform to 1
+			endif
+		endif
+	endif
+
+;This block signals the quest to advance if the requisite number of Feral Ghouls are slain in the Metro
+;The computer will unseal the trains remotely as soon as it "detects" the breach being quelled
+
+	if ( BS3BreachDone == 0 )
+		if ( DLC03NQlvl.PlayerHelped == 1 )
+			SetObjectiveCompleted DLC03BS3 25 1
+			set BS3BreachDone to 1
+		endif
+	endif
+
+;This handles moving all of the Citadel NPCs to the welcome markers if Player was successful at the end
+;Sarah and Vargas are optional of course (we check if they are alive)
+
+	if ( BS3SetupEntourage == 0 )
+		if ( DLC03PlatformBoom == 1 )
+			ScribeRothchildRef.MoveTo DLC03EndGameRothchildMarker
+			ElderLyonsRef.MoveTo DLC03EndGameElderLyonsMarker
+			DLC03TristanRef.MoveTo DLC03EndGamePaladinTristanMarker
+			;DLC03EndGameRandomBoS01Marker
+			;DLC03EndGameRandomBoS02Marker
+				if (DLC03BS1.SarahDead == 0)
+					DLC03SarahRef.MoveTo DLC03EndGameSarahLyonsMarker
+				endif
+			ScribeRothchildRef.Evp
+			ElderLyonsRef.Evp
+			DLC03TristanRef.Evp
+			MQ01SarahRef.Evp
+			Set BS3SetupEntourage to 1
+		endif
+	endif
+
+;If the Player elects to avoid the Forcegreet from the BoS Pilot at the conclusion of the "Evil" ending
+;This block kicks off a timer that sets the BoS against the Player in 15 seconds as a failsafe
+
+	if ( DoOnce1 == 0 )
+		if ( BS3Evil == 1 ) && ( EvilTimer > 0 )
+			Set EvilTimer to ( EvilTimer - GetSecondsPassed )
+		elseif ( BS3Evil == 1 ) && ( EvilTimer <= 0 )
+			DLC03SarahRef.SayTo Player DLC03SarahAngry
+			Player.RemoveFromFaction BrotherhoodSteelFaction
+			Player.RemoveFromFaction MQPlayerBOSAllyFaction
+			StarPaladinCrossREF.RemoveFromFaction FollowerFaction
+			StarPaladinCrossREF.SetFactionRank TeammateFaction -1
+			Set Followers.StarPaladinCrossFired to 1
+			StarPaladinCrossREF.SetPlayerTeammate 0
+			SetEnemy BrotherhoodSteelFaction PlayerFaction 0
+			setEssential DLC03SarahLyons 0
+			Set DLC03PilotGreet to 1
+			SetStage DLC03BS3 200
+			Set DoOnce1 to 1
+			Set BS3Evil to 2
+               AddReputation RepTTWEnclave 1 5
+               AddReputation RepTTWBrotherhood 0 5
+               AddReputation RepTTWBrotherhood 0 5
+		endif
+	endif
+
+end

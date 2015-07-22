@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="06044CAB">Cyborg</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Cyborg</EditorID>
+    <Name Tag="FULL">Cyborg</Name>
+    <Description Tag="DESC">You've made permanent enhancements to your body! The Cyborg perk instantly adds +10% to your Poison and Radiation Resistances, +5 to DT, and 5 points to the Energy Weapons skill.</Description>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Perks\Perk_Cyborg.dds</Large>
+    </Icon>
+    <Requirements>
+      <Requirement Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>60</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetPermanentActorValue</Type>
+          <ActorValue>Medicine</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Requirement>
+      <Requirement Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>60</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetPermanentActorValue</Type>
+          <ActorValue>Science</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Requirement>
+    </Requirements>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>14</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>Yes</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="00031D8D">PerkCyborg</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

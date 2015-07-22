@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0007691E">AchievementScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AchievementScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>25</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>24</VariableCount>
+        <Type>Quest</Type>
+        <Flags>0</Flags>
+      </Data>
+      <ScriptSource Tag="SCTX" External="AchievementScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Ten</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Twenty</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Thirty</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fTemp</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FEVaquaPuraDays</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000000F">Caps001</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09000801">DLC03CreatorQuest</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C0185D4">TTWDLC03FEVwaterMsg03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0003DC5E">UIHealthChemsWearOff</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

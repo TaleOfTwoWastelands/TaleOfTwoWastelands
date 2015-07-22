@@ -1,0 +1,10 @@
+scn ChallengeTwoStarSCRIPT
+
+BEGIN ScriptEffectStart
+	SetStage AchievementQuest 8	; 500
+	set NVDLC05MQ00.nTwoStarChallengesCompleted to (NVDLC05MQ00.nTwoStarChallengesCompleted + 1);
+	if (NVDLC05MQ00.nTwoStarChallengesCompleted >= 3) && (NVDLC05MQ00.bTwoStarChallengeAchievementGiven != 1)
+		AddAchievement 74;
+		set NVDLC05MQ00.bTwoStarChallengeAchievementGiven to 1;
+	endif
+END

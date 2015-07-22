@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0C018649">INFO - 0C018649</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0C01862A">TTWSESAdvertRadio</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I would never do such thing! My programming doesn't allow it. Thanks for the business.</ResponseText>
+        <ScriptNotes Tag="NAM2">(simpleton)</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>800</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="0000000F">Caps001</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0C0185F6">TTWSESAdvertitron</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>78</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FgAUAAQAEAAgWDgQBQABAHIBACAwID09NhAFAAEAcgEAFgATAAEADwAgWDoQBQABAHIBACA1IDw5EAoAAgByAQBuBQAAABkAAAAZAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">If GetQuestRunning TTWUnStnPowerQuest == 0
+
+	startquest TTWUnStnPowerQuest 
+
+	If getstage TTWUnStnPowerQuest &lt; 5
+		setstage TTWUnStnPowerQuest 5
+	EndIf
+
+EndIf
+
+
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0C011FE2">TTWUnStnPowerQuest</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>6</ReferenceCount>
+          <CompiledSize>78</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG4gAwAAHAABAAIQCgACAHIEAG4BAAAAHAABAAIQCgACAHIFAG4FAAAAFQAKAHIGAHMEAAIAIDIcAAIAIRACAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">player.removeitem caps001 800
+player.additem TTWTrainTicket02 1
+player.additem TheTopsChip 5
+set TTWSESAdvertRadio.plinfo to 2
+
+TTWSESAdvertRadioSignalRef.enable</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00181B">TTWSESAdvertRadioSignalRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0000000F">Caps001</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E15">TTWTrainTicket02</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00144C3B">TheTopsChip</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01862A">TTWSESAdvertRadio</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="0C0185F6">TTWSESAdvertitron</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

@@ -1,0 +1,111 @@
+scn DLC04BeachHoleSCRIPT
+
+ref myLinkedRef
+ref myLinkedRefsRef
+
+;// disable timer
+short digTimerStart
+short scaleTimer
+float digTimer
+short shovelCheck
+short dismembererCheck
+short throwDirt
+short unequipOnce
+short dirtExplosion
+short digTimerRun
+
+BEGIN ONLOAD
+
+	set digTimer to 0
+
+	;// get the links
+	set myLinkedRef to getLinkedRef
+
+END
+
+BEGIN ONACTIVATE
+
+	IF ( isActionRef player == 1 )
+
+		IF ( player.getItemCount DLC04WeapShovel >= 1 || player.getItemCount DLC04WeapUniqueFertilizerShovel >= 1 )
+
+			;///////////
+			;// unequip the weapons and make the timer longer
+			;///////////
+			IF ( player.getEquipped DLC04WeapShovel == 1 )
+				player.unequipItem DLC04WeapShovel 0 1
+				set shovelCheck to 1
+			ENDIF
+	
+			IF ( player.getEquipped DLC04WeapUniqueFertilizerShovel == 1 )
+				set dismembererCheck to 1
+				player.unequipItem DLC04WeapUniqueFertilizerShovel 0 1
+			ENDIF
+
+			;// start the anim and the timer
+			activate player
+			set digTimerStart to 1
+		
+		ELSE
+			showMessage DLC04BeachPOIShovelMsg
+		ENDIF
+
+	ENDIF
+
+END
+
+BEGIN GAMEMODE
+
+	IF ( digTimerStart == 1 )
+
+		IF ( dirtExplosion == 0 && player.GetSitting == 2 )
+			placeAtMe DLC04ShovelDirtExplosion 1
+			set digTimer to 7
+			set dirtExplosion to 1
+			set digTimerRun to 1
+		ENDIF
+
+		IF ( digTimerRun == 1 )
+			IF ( digTimer > 0 )
+				set digTimer to digTimer - getSecondsPassed
+			
+				;// scale the model down to make it go away
+				IF ( scaleTimer == 0 && digTimer < 5 )
+					set scaleTimer to 1
+					setScale 0.01
+
+					;// if its the treasure hole, add the treasure
+					IF ( getSelf == DLC04BeachTreasureHoleSand )
+						DLC04BeachTreasure.enable 0
+					ENDIF
+				ENDIF
+
+				;// have the hole remove itself
+;				IF ( throwDirt == 0 && digTimer < 2.3 )
+;					myLinkedRef.playgroup forward 0
+;					set throwDirt to 1
+;				ENDIF
+
+			ELSE
+
+				enablePlayerControls
+
+				;///////////
+				;// if the player had a shovel equipped, re-equip it
+				;///////////
+				IF ( shovelCheck == 1 )
+					player.equipItem DLC04WeapShovel 0 1
+
+				ELSEIF ( dismembererCheck == 1 )
+					player.equipItem DLC04WeapUniqueFertilizerShovel 0 1
+
+				ENDIF
+
+				set digTimerStart to 2
+				disable
+
+			ENDIF
+		ENDIF
+	ENDIF
+
+END

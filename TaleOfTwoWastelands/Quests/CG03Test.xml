@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06038AEF">CG03Test</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG03Test</EditorID>
+    <Name Tag="FULL">G.O.A.T. script quest</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedStages</Flags>
+      <Priority>0</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Check if barter skill (skill 1) is now one of the 3 highest skills?</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM1AAsAIHIBAHM1ACAxICsWABAAAQAMACByAQBzRgAgMSA9PRUADwByAQBzRwAHACByAQBzNQAYABAAAQAMACByAQBzSAAgMSA9PRUADwByAQBzSQAHACByAQBzNQAYABAAAQAMACByAQBzSgAgMSA9PRUADwByAQBzSwAHACByAQBzNQAXAAIADQAWABQAAwAQACByAQBzNQAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczUAFQAKAHIBAHNGAAIAIDHNEQkAAgAgAG4AAAAAGAAUAAMAEAAgcgEAczUAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM1ABUACgByAQBzSAACACAxzREJAAIAIABuAQAAABgAFAADABAAIHIBAHM1ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzNQAVAAoAcgEAc0oAAgAgMc0RCQACACAAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatBarter to CG03.goatBarter + 1
+; 1. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 1
+  set CG03.valueFirst to CG03.goatBarter
+elseif CG03.skillSecond == 1
+  set CG03.valueSecond to CG03.goatBarter
+elseif CG03.skillThird == 1
+  set CG03.valueThird to CG03.goatBarter
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatBarter &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatBarter
+    set CG03.skillFirst to 1
+    setPlayerTagSkill Barter 0
+  elseif CG03.goatBarter &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatBarter
+    set CG03.skillSecond to 1
+    setPlayerTagSkill Barter 1
+  elseif CG03.goatBarter &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatBarter
+    set CG03.skillThird to 1
+    setPlayerTagSkill Barter 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM2AAsAIHIBAHM2ACAxICsWABAAAQAMACByAQBzRgAgMiA9PRUADwByAQBzRwAHACByAQBzNgAYABAAAQAMACByAQBzSAAgMiA9PRUADwByAQBzSQAHACByAQBzNgAYABAAAQAMACByAQBzSgAgMiA9PRUADwByAQBzSwAHACByAQBzNgAXAAIADQAWABQAAwAQACByAQBzNgAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczYAFQAKAHIBAHNGAAIAIDLNEQkAAgAsAG4AAAAAGAAUAAMAEAAgcgEAczYAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM2ABUACgByAQBzSAACACAyzREJAAIALABuAQAAABgAFAADABAAIHIBAHM2ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzNgAVAAoAcgEAc0oAAgAgMs0RCQACACwAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatBigGuns  to CG03.goatBigGuns + 1
+; 2. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 2
+  set CG03.valueFirst to CG03.goatBigGuns
+elseif CG03.skillSecond == 2
+  set CG03.valueSecond to CG03.goatBigGuns
+elseif CG03.skillThird == 2
+  set CG03.valueThird to CG03.goatBigGuns
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatBigGuns &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatBigGuns
+    set CG03.skillFirst to 2
+    setPlayerTagSkill Survival 0
+  elseif CG03.goatBigGuns &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatBigGuns
+    set CG03.skillSecond to 2
+    setPlayerTagSkill Survival 1
+  elseif CG03.goatBigGuns &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatBigGuns
+    set CG03.skillThird to 2
+    setPlayerTagSkill Survival 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">3</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM3AAsAIHIBAHM3ACAxICsWABAAAQAMACByAQBzRgAgMyA9PRUADwByAQBzRwAHACByAQBzNwAYABAAAQAMACByAQBzSAAgMyA9PRUADwByAQBzSQAHACByAQBzNwAYABAAAQAMACByAQBzSgAgMyA9PRUADwByAQBzSwAHACByAQBzNwAXAAIADQAWABQAAwAQACByAQBzNwAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczcAFQAKAHIBAHNGAAIAIDPNEQkAAgAiAG4AAAAAGAAUAAMAEAAgcgEAczcAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM3ABUACgByAQBzSAACACAzzREJAAIAIgBuAQAAABgAFAADABAAIHIBAHM3ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzNwAVAAoAcgEAc0oAAgAgM80RCQACACIAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatEnergyWeapons to CG03.goatEnergyWeapons + 1
+; 3. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 3
+  set CG03.valueFirst to CG03.goatEnergyWeapons
+elseif CG03.skillSecond == 3
+  set CG03.valueSecond to CG03.goatEnergyWeapons
+elseif CG03.skillThird == 3
+  set CG03.valueThird to CG03.goatEnergyWeapons
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatEnergyWeapons &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatEnergyWeapons
+    set CG03.skillFirst to 3
+    setPlayerTagSkill energyWeapons 0
+  elseif CG03.goatEnergyWeapons &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatEnergyWeapons
+    set CG03.skillSecond to 3
+    setPlayerTagSkill energyWeapons 1
+  elseif CG03.goatEnergyWeapons &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatEnergyWeapons
+    set CG03.skillThird to 3
+    setPlayerTagSkill energyWeapons 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">4</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM4AAsAIHIBAHM4ACAxICsWABAAAQAMACByAQBzRgAgNCA9PRUADwByAQBzRwAHACByAQBzOAAYABAAAQAMACByAQBzSAAgNCA9PRUADwByAQBzSQAHACByAQBzOAAYABAAAQAMACByAQBzSgAgNCA9PRUADwByAQBzSwAHACByAQBzOAAXAAIADQAWABQAAwAQACByAQBzOAAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczgAFQAKAHIBAHNGAAIAIDTNEQkAAgAjAG4AAAAAGAAUAAMAEAAgcgEAczgAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM4ABUACgByAQBzSAACACA0zREJAAIAIwBuAQAAABgAFAADABAAIHIBAHM4ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzOAAVAAoAcgEAc0oAAgAgNM0RCQACACMAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatExplosives  to CG03.goatExplosives + 1
+; 4. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 4
+  set CG03.valueFirst to CG03.goatExplosives
+elseif CG03.skillSecond == 4
+  set CG03.valueSecond to CG03.goatExplosives
+elseif CG03.skillThird == 4
+  set CG03.valueThird to CG03.goatExplosives
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatExplosives &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatExplosives
+    set CG03.skillFirst to 4
+    setPlayerTagSkill explosives 0
+  elseif CG03.goatExplosives &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatExplosives
+    set CG03.skillSecond to 4
+    setPlayerTagSkill explosives 1
+  elseif CG03.goatExplosives &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatExplosives
+    set CG03.skillThird to 4
+    setPlayerTagSkill explosives 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM5AAsAIHIBAHM5ACAxICsWABAAAQAMACByAQBzRgAgNSA9PRUADwByAQBzRwAHACByAQBzOQAYABAAAQAMACByAQBzSAAgNSA9PRUADwByAQBzSQAHACByAQBzOQAYABAAAQAMACByAQBzSgAgNSA9PRUADwByAQBzSwAHACByAQBzOQAXAAIADQAWABQAAwAQACByAQBzOQAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczkAFQAKAHIBAHNGAAIAIDXNEQkAAgAkAG4AAAAAGAAUAAMAEAAgcgEAczkAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM5ABUACgByAQBzSAACACA1zREJAAIAJABuAQAAABgAFAADABAAIHIBAHM5ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzOQAVAAoAcgEAc0oAAgAgNc0RCQACACQAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatLockpick to CG03.goatLockpick + 1
+; 5. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 5
+  set CG03.valueFirst to CG03.goatLockpick
+elseif CG03.skillSecond == 5
+  set CG03.valueSecond to CG03.goatLockpick
+elseif CG03.skillThird == 5
+  set CG03.valueThird to CG03.goatLockpick
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatLockpick &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatLockpick
+    set CG03.skillFirst to 5
+    setPlayerTagSkill lockpick 0
+  elseif CG03.goatLockpick &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatLockpick
+    set CG03.skillSecond to 5
+    setPlayerTagSkill lockpick 1
+  elseif CG03.goatLockpick &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatLockpick
+    set CG03.skillThird to 5
+    setPlayerTagSkill lockpick 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">6</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM6AAsAIHIBAHM6ACAxICsWABAAAQAMACByAQBzRgAgNiA9PRUADwByAQBzRwAHACByAQBzOgAYABAAAQAMACByAQBzSAAgNiA9PRUADwByAQBzSQAHACByAQBzOgAYABAAAQAMACByAQBzSgAgNiA9PRUADwByAQBzSwAHACByAQBzOgAXAAIADQAWABQAAwAQACByAQBzOgAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczoAFQAKAHIBAHNGAAIAIDbNEQkAAgAlAG4AAAAAGAAUAAMAEAAgcgEAczoAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM6ABUACgByAQBzSAACACA2zREJAAIAJQBuAQAAABgAFAADABAAIHIBAHM6ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzOgAVAAoAcgEAc0oAAgAgNs0RCQACACUAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatMedicine to CG03.goatMedicine + 1
+; 6. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 6
+  set CG03.valueFirst to CG03.goatMedicine
+elseif CG03.skillSecond == 6
+  set CG03.valueSecond to CG03.goatMedicine
+elseif CG03.skillThird == 6
+  set CG03.valueThird to CG03.goatMedicine
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatMedicine &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatMedicine
+    set CG03.skillFirst to 6
+    setPlayerTagSkill medicine 0
+  elseif CG03.goatMedicine &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatMedicine
+    set CG03.skillSecond to 6
+    setPlayerTagSkill medicine 1
+  elseif CG03.goatMedicine &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatMedicine
+    set CG03.skillThird to 6
+    setPlayerTagSkill medicine 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM7AAsAIHIBAHM7ACAxICsWABAAAQAMACByAQBzRgAgNyA9PRUADwByAQBzRwAHACByAQBzOwAYABAAAQAMACByAQBzSAAgNyA9PRUADwByAQBzSQAHACByAQBzOwAYABAAAQAMACByAQBzSgAgNyA9PRUADwByAQBzSwAHACByAQBzOwAXAAIADQAWABQAAwAQACByAQBzOwAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczsAFQAKAHIBAHNGAAIAIDfNEQkAAgAmAG4AAAAAGAAUAAMAEAAgcgEAczsAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM7ABUACgByAQBzSAACACA3zREJAAIAJgBuAQAAABgAFAADABAAIHIBAHM7ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzOwAVAAoAcgEAc0oAAgAgN80RCQACACYAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatMeleeWeapons to CG03.goatMeleeWeapons + 1
+; 7. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 7
+  set CG03.valueFirst to CG03.goatMeleeWeapons
+elseif CG03.skillSecond == 7
+  set CG03.valueSecond to CG03.goatMeleeWeapons
+elseif CG03.skillThird == 7
+  set CG03.valueThird to CG03.goatMeleeWeapons
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatMeleeWeapons &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatMeleeWeapons
+    set CG03.skillFirst to 7
+    setPlayerTagSkill meleeWeapons 0
+  elseif CG03.goatMeleeWeapons &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatMeleeWeapons
+    set CG03.skillSecond to 7
+    setPlayerTagSkill meleeWeapons 1
+  elseif CG03.goatMeleeWeapons &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatMeleeWeapons
+    set CG03.skillThird to 7
+    setPlayerTagSkill meleeWeapons 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM8AAsAIHIBAHM8ACAxICsWABAAAQAMACByAQBzRgAgOCA9PRUADwByAQBzRwAHACByAQBzPAAYABAAAQAMACByAQBzSAAgOCA9PRUADwByAQBzSQAHACByAQBzPAAYABAAAQAMACByAQBzSgAgOCA9PRUADwByAQBzSwAHACByAQBzPAAXAAIADQAWABQAAwAQACByAQBzPAAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAczwAFQAKAHIBAHNGAAIAIDjNEQkAAgAnAG4AAAAAGAAUAAMAEAAgcgEAczwAIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM8ABUACgByAQBzSAACACA4zREJAAIAJwBuAQAAABgAFAADABAAIHIBAHM8ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzPAAVAAoAcgEAc0oAAgAgOM0RCQACACcAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatRepair to CG03.goatRepair + 1
+; 8. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 8
+  set CG03.valueFirst to CG03.goatRepair
+elseif CG03.skillSecond == 8
+  set CG03.valueSecond to CG03.goatRepair
+elseif CG03.skillThird == 8
+  set CG03.valueThird to CG03.goatRepair
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatRepair &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatRepair
+    set CG03.skillFirst to 8
+    setPlayerTagSkill repair 0
+  elseif CG03.goatRepair &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatRepair
+    set CG03.skillSecond to 8
+    setPlayerTagSkill repair 1
+  elseif CG03.goatRepair &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatRepair
+    set CG03.skillThird to 8
+    setPlayerTagSkill repair 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">9</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>364</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM9AAsAIHIBAHM9ACAxICsWABAAAQAMACByAQBzRgAgOSA9PRUADwByAQBzRwAHACByAQBzPQAYABAAAQAMACByAQBzSAAgOSA9PRUADwByAQBzSQAHACByAQBzPQAYABAAAQAMACByAQBzSgAgOSA9PRUADwByAQBzSwAHACByAQBzPQAXAAIADQAWABQAAwAQACByAQBzPQAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAcz0AFQAKAHIBAHNGAAIAIDnNEQkAAgAoAG4AAAAAGAAUAAMAEAAgcgEAcz0AIHIBAHNJACA+FQAPAHIBAHNJAAcAIHIBAHM9ABUACgByAQBzSAACACA5zREJAAIAKABuAQAAABgAFAADABAAIHIBAHM9ACByAQBzSwAgPhUADwByAQBzSwAHACByAQBzPQAVAAoAcgEAc0oAAgAgOc0RCQACACgAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatScience to CG03.goatScience + 1
+; 9. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 9
+  set CG03.valueFirst to CG03.goatScience
+elseif CG03.skillSecond == 9
+  set CG03.valueSecond to CG03.goatScience
+elseif CG03.skillThird == 9
+  set CG03.valueThird to CG03.goatScience
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatScience &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatScience
+    set CG03.skillFirst to 9
+    setPlayerTagSkill science 0
+  elseif CG03.goatScience &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatScience
+    set CG03.skillSecond to 9
+    setPlayerTagSkill science 1
+  elseif CG03.goatScience &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatScience
+    set CG03.skillThird to 9
+    setPlayerTagSkill science 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>370</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM+AAsAIHIBAHM+ACAxICsWABEAAQANACByAQBzRgAgMTAgPT0VAA8AcgEAc0cABwAgcgEAcz4AGAARAAEADQAgcgEAc0gAIDEwID09FQAPAHIBAHNJAAcAIHIBAHM+ABgAEQABAA0AIHIBAHNKACAxMCA9PRUADwByAQBzSwAHACByAQBzPgAXAAIADQAWABQAAwAQACByAQBzPgAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAcz4AFQALAHIBAHNGAAMAIDEwzREJAAIAKQBuAAAAABgAFAADABAAIHIBAHM+ACByAQBzSQAgPhUADwByAQBzSQAHACByAQBzPgAVAAsAcgEAc0gAAwAgMTDNEQkAAgApAG4BAAAAGAAUAAMAEAAgcgEAcz4AIHIBAHNLACA+FQAPAHIBAHNLAAcAIHIBAHM+ABUACwByAQBzSgADACAxMM0RCQACACkAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatSmallGuns to CG03.goatSmallGuns + 1
+; 10. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 10
+  set CG03.valueFirst to CG03.goatSmallGuns
+elseif CG03.skillSecond == 10
+  set CG03.valueSecond to CG03.goatSmallGuns
+elseif CG03.skillThird == 10
+  set CG03.valueThird to CG03.goatSmallGuns
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatSmallGuns &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatSmallGuns
+    set CG03.skillFirst to 10
+    setPlayerTagSkill Guns 0
+  elseif CG03.goatSmallGuns &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatSmallGuns
+    set CG03.skillSecond to 10
+    setPlayerTagSkill Guns 1
+  elseif CG03.goatSmallGuns &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatSmallGuns
+    set CG03.skillThird to 10
+    setPlayerTagSkill Guns 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">11</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>370</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHM/AAsAIHIBAHM/ACAxICsWABEAAQANACByAQBzRgAgMTEgPT0VAA8AcgEAc0cABwAgcgEAcz8AGAARAAEADQAgcgEAc0gAIDExID09FQAPAHIBAHNJAAcAIHIBAHM/ABgAEQABAA0AIHIBAHNKACAxMSA9PRUADwByAQBzSwAHACByAQBzPwAXAAIADQAWABQAAwAQACByAQBzPwAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAcz8AFQALAHIBAHNGAAMAIDExzREJAAIAKgBuAAAAABgAFAADABAAIHIBAHM/ACByAQBzSQAgPhUADwByAQBzSQAHACByAQBzPwAVAAsAcgEAc0gAAwAgMTHNEQkAAgAqAG4BAAAAGAAUAAMAEAAgcgEAcz8AIHIBAHNLACA+FQAPAHIBAHNLAAcAIHIBAHM/ABUACwByAQBzSgADACAxMc0RCQACACoAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatSneak to CG03.goatSneak + 1
+; 11. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 11
+  set CG03.valueFirst to CG03.goatSneak
+elseif CG03.skillSecond == 11
+  set CG03.valueSecond to CG03.goatSneak
+elseif CG03.skillThird == 11
+  set CG03.valueThird to CG03.goatSneak
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatSneak &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatSneak
+    set CG03.skillFirst to 11
+    setPlayerTagSkill sneak 0
+  elseif CG03.goatSneak &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatSneak
+    set CG03.skillSecond to 11
+    setPlayerTagSkill sneak 1
+  elseif CG03.goatSneak &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatSneak
+    set CG03.skillThird to 11
+    setPlayerTagSkill sneak 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">12</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>370</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHNAAAsAIHIBAHNAACAxICsWABEAAQANACByAQBzRgAgMTIgPT0VAA8AcgEAc0cABwAgcgEAc0AAGAARAAEADQAgcgEAc0gAIDEyID09FQAPAHIBAHNJAAcAIHIBAHNAABgAEQABAA0AIHIBAHNKACAxMiA9PRUADwByAQBzSwAHACByAQBzQAAXAAIADQAWABQAAwAQACByAQBzQAAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAc0AAFQALAHIBAHNGAAMAIDEyzREJAAIAKwBuAAAAABgAFAADABAAIHIBAHNAACByAQBzSQAgPhUADwByAQBzSQAHACByAQBzQAAVAAsAcgEAc0gAAwAgMTLNEQkAAgArAG4BAAAAGAAUAAMAEAAgcgEAc0AAIHIBAHNLACA+FQAPAHIBAHNLAAcAIHIBAHNAABUACwByAQBzSgADACAxMs0RCQACACsAbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatSpeech to CG03.goatSpeech + 1
+; 12. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 12
+  set CG03.valueFirst to CG03.goatSpeech
+elseif CG03.skillSecond == 12
+  set CG03.valueSecond to CG03.goatSpeech
+elseif CG03.skillThird == 12
+  set CG03.valueThird to CG03.goatSpeech
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatSpeech &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatSpeech
+    set CG03.skillFirst to 12
+    setPlayerTagSkill speech 0
+  elseif CG03.goatSpeech &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatSpeech
+    set CG03.skillSecond to 12
+    setPlayerTagSkill speech 1
+  elseif CG03.goatSpeech &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatSpeech
+    set CG03.skillThird to 12
+    setPlayerTagSkill speech 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">13</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>370</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHIBAHNCAAsAIHIBAHNCACAxICsWABEAAQANACByAQBzRgAgMTMgPT0VAA8AcgEAc0cABwAgcgEAc0IAGAARAAEADQAgcgEAc0gAIDEzID09FQAPAHIBAHNJAAcAIHIBAHNCABgAEQABAA0AIHIBAHNKACAxMyA9PRUADwByAQBzSwAHACByAQBzQgAXAAIADQAWABQAAwAQACByAQBzQgAgcgEAc0cAID4VAA8AcgEAc0cABwAgcgEAc0IAFQALAHIBAHNGAAMAIDEzzREJAAIALQBuAAAAABgAFAADABAAIHIBAHNCACByAQBzSQAgPhUADwByAQBzSQAHACByAQBzQgAVAAsAcgEAc0gAAwAgMTPNEQkAAgAtAG4BAAAAGAAUAAMAEAAgcgEAc0IAIHIBAHNLACA+FQAPAHIBAHNLAAcAIHIBAHNCABUACwByAQBzSgADACAxM80RCQACAC0AbgIAAAAZAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set CG03.goatUnarmed to CG03.goatUnarmed + 1
+; 13. If I'm already one of the top skills, update my value
+if CG03.skillFirst == 13
+  set CG03.valueFirst to CG03.goatUnarmed
+elseif CG03.skillSecond == 13
+  set CG03.valueSecond to CG03.goatUnarmed
+elseif CG03.skillThird == 13
+  set CG03.valueThird to CG03.goatUnarmed
+else
+  ; I wasn't a top skill. Am I now?
+  if CG03.goatUnarmed &gt; CG03.valueFirst
+    set CG03.valueFirst to CG03.goatUnarmed
+    set CG03.skillFirst to 13
+    setPlayerTagSkill unarmed 0
+  elseif CG03.goatUnarmed &gt; CG03.valueSecond
+    set CG03.valueSecond to CG03.goatUnarmed
+    set CG03.skillSecond to 13
+    setPlayerTagSkill unarmed 1
+  elseif CG03.goatUnarmed &gt; CG03.valueThird
+    set CG03.valueThird to CG03.goatUnarmed
+    set CG03.skillThird to 13
+    setPlayerTagSkill unarmed 2
+  endif
+ 
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E85">CG03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

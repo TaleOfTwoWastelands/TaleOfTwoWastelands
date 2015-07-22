@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="06004327">WeapShotgunCombat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WeapShotgunCombat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-19</X>
+        <Y>-7</Y>
+        <Z>-6</Z>
+      </Point1>
+      <Point2>
+        <X>50</X>
+        <Y>9</Y>
+        <Z>6</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Combat Shotgun</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\2HandRifle\CombatShotgun.NIF</FileName>
+      <TextureFileHash Tag="MODT">7vUNY/uUppRudQ1jAJWmlGVsG3SjDAM07t8PYzR37aJuXw9jOXftomVsG3SjDAM0898PYzR37aJzXw9jOXftomVsG3SjDAM07fURY8LI41NtdRFjx8jjU2VsG3SjDAM07t8TY3o3vxJuXxNjfze/EmVsG3SjDAM0898TY3o3vxJzXxNjfze/EmVsG3SjDAM0</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_combat_shotgun.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="0015367E">AmmoList20Ga</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="06034237">RepairShotgunCombat</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">SmallGuns</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="00087D63">ITMRifleUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="00087D62">ITMRifleDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="0002FF3A">WPNShotgunCombatFire3D</Reference>
+          </_3D>
+          <Distant Tag="SNAM">
+            <Reference ID="00133F3C">WPNShotgunRiotFire3DDIST</Reference>
+          </Distant>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="0002FF30">WPNShotgunCombatFire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="000C029B">WPNShotgunCombatEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0001D4BE">WPNRifle0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ShellCasingModel>
+      <FileName Tag="MOD2">Projectiles\ShotgunShellCasing.NIF</FileName>
+      <TextureFileHash Tag="MO2T">8+wGc3QPd8FzbAZzeQ93wXNlFHQMr2Kv7t8Ic/tCrbZuXwhzAEOttnNlFHQMr2Kv898Ic/tCrbZzXwhzAEOttnNlFHQMr2Kv</TextureFileHash>
+    </ShellCasingModel>
+    <ModelWithMod1 Tag="MWD1">weapons\2handrifle\combatshotgunStock.nif</ModelWithMod1>
+    <ModelWithMod2 Tag="MWD2">weapons\2handrifle\combatshotgunParts.nif</ModelWithMod2>
+    <ModelWithMod1_2 Tag="MWD3">weapons\2handrifle\combatshotgunPartsStock.nif</ModelWithMod1_2>
+    <ModelWithMod3 Tag="MWD4">weapons\2handrifle\combatshotgunSight.nif</ModelWithMod3>
+    <ModelWithMod1_3 Tag="MWD5">weapons\2handrifle\combatshotgunSightStock.nif</ModelWithMod1_3>
+    <ModelWithMod2_3 Tag="MWD6">weapons\2handrifle\combatshotgunPartsSight.nif</ModelWithMod2_3>
+    <ModelWithMod1_2_3 Tag="MWD7">weapons\2handrifle\combatshotgunPartsSightStock.nif</ModelWithMod1_2_3>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00019083">BallisticImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000B2C20">1stPersonCombatShotgun</Reference>
+    </FirstPersonModel>
+    <FirstPersonModelWithMod1 Tag="WNM1">
+      <Reference ID="0C018056">1stPersonCombatShotgunStockDUPLICATE000</Reference>
+    </FirstPersonModelWithMod1>
+    <FirstPersonModelWithMod2 Tag="WNM2">
+      <Reference ID="0C018050">1stPersonCombatShotgunParts</Reference>
+    </FirstPersonModelWithMod2>
+    <FirstPersonModelWithMod1_2 Tag="WNM3">
+      <Reference ID="0C018053">1stPersonCombatShotgunPartsStock</Reference>
+    </FirstPersonModelWithMod1_2>
+    <FirstPersonModelWithMod3 Tag="WNM4">
+      <Reference ID="0C018054">1stPersonCombatShotgunSightDUPLICATE000</Reference>
+    </FirstPersonModelWithMod3>
+    <FirstPersonModelWithMod1_3 Tag="WNM5">
+      <Reference ID="0C018055">1stPersonCombatShotgunSightStock</Reference>
+    </FirstPersonModelWithMod1_3>
+    <FirstPersonModelWithMod2_3 Tag="WNM6">
+      <Reference ID="0C018051">1stPersonCombatShotgunPartsSight</Reference>
+    </FirstPersonModelWithMod2_3>
+    <FirstPersonModelWithMod1_2_3 Tag="WNM7">
+      <Reference ID="0C018052">1stPersonCombatShotgunPartsSightStock</Reference>
+    </FirstPersonModelWithMod1_2_3>
+    <WeaponMod1 Tag="WMI1">
+      <Reference ID="0C018032">ModTTWCombatShotgunStock</Reference>
+    </WeaponMod1>
+    <WeaponMod2 Tag="WMI2">
+      <Reference ID="0C018031">ModTTWCombatShotgunParts</Reference>
+    </WeaponMod2>
+    <WeaponMod3 Tag="WMI3">
+      <Reference ID="0C018030">ModTTWCombatShotgunSights</Reference>
+    </WeaponMod3>
+    <Data Tag="DATA">
+      <Value>4000</Value>
+      <Health>100</Health>
+      <Weight>7</Weight>
+      <BaseDamage>52</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandRifle</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadD</ReloadAnimation>
+      <MinSpread>2</MinSpread>
+      <Spread>0</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>70</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0003BF07">BuckshotProjectile</Projectile>
+      <BaseVATSToHitChance>35</BaseVATSToHitChance>
+      <AttackAnimation>AttackLeft</AttackAnimation>
+      <ProjectileCount>7</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>192</Min>
+        <Max>640</Max>
+      </Range>
+      <LimbKillBehavior>ExplodeOnly</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1.39999998</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>27</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.899999976</LeftMotorStrength>
+        <RightMotorStrength>0.899999976</RightMotorStrength>
+        <Duration>0.200000003</Duration>
+        <Pattern>Triangle</Pattern>
+        <Wavelength>0.200000003</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>3</AttackShotsPerSecond>
+      <ReloadTime>3.33330011</ReloadTime>
+      <JamTime>1.66670001</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Guns</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>1</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0.300000012</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>DecreaseWeight</Effect>
+          <ValueA>3</ValueA>
+          <ReloadAnimation>ReloadD</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>IncreaseMaxCondition</Effect>
+          <ValueA>50</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>DecreaseSpread</Effect>
+          <ValueA>0.5</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>6</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>75</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>8</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>No</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Loud</SoundLevel>
+  </Subrecords>
+</Record>

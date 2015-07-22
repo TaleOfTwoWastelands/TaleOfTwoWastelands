@@ -1,0 +1,20 @@
+scn MisterBurkeScript
+
+short Greet			;flag on force greet package
+short GreetRoof	; flag on hello on roof -- set to 1 when done saying hello
+
+
+Begin OnDeath
+	setStage MSObjectives 11
+
+	;evp Simms if he is on a package to deal with Burke
+	if LucasSimmsRef.getIsCurrentPackage MS11EscortBurke
+		LucasSimmsRef.evp
+	elseif LucasSimmsRef.getIsCurrentPackage MS11SimmsBattle
+		LucasSimmsRef.evp
+	endif
+	;Added 10/17/14 to deal with the 10mm pistol issue. --TJ
+	additem TTWWithSilencer10MMPistolMrBurke 1 1
+	setQuestDelay MS11Fin 0
+
+End

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="RCPE">
+  <Flags>0</Flags>
+  <FormID ID="0C004C00">TTWRecipeMirelurkCakes</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWRecipeMirelurkCakes</EditorID>
+    <Name Tag="FULL">Mirelurk Cakes</Name>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetHasNote</Type>
+          <Note ID="000AC3BB">AWMNoteMirelurkRecipe</Note>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Data Tag="DATA">
+      <Skill>Survival</Skill>
+      <Level>50</Level>
+      <Category ID="0013B2C0">CampfireRecipes</Category>
+      <SubCategory ID="001613CE">FoodSubRecipes</SubCategory>
+    </Data>
+    <Ingredients>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0003404E">MirelurkMeat</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0008C558">InstaMash</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Ingredient>
+      <Ingredient>
+        <Item Tag="RCIL">
+          <Reference ID="0015E5CC">AntEgg</Reference>
+        </Item>
+        <Quantity Tag="RCQY">2</Quantity>
+      </Ingredient>
+    </Ingredients>
+    <Outputs>
+      <Output>
+        <Item Tag="RCOD">
+          <Reference ID="0603404D">MirelurkCakes</Reference>
+        </Item>
+        <Quantity Tag="RCQY">1</Quantity>
+      </Output>
+    </Outputs>
+  </Subrecords>
+</Record>

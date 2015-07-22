@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D00377D">TTWOutcastTradePlayerContSCPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWOutcastTradePlayerContSCPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>879</CompiledSize>
+        <VariableCount>20</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAGEDAAAWABYAHAASACByBABYLxAFAAEAcgUAIDAgPj0VEQDKAQAAAQwAVgQAAAkAUgQAGhYAFwAQABMAIFgRFQgAAgByBQByAQAgMCA+PTkVEwABEgBWBAAADwBYAQADFAQAAAAAORUTAAESAFYBAAAMAFgBAHYUBAAAAAA5FQwAAQsAVgEAAA0AQgAAORUTAAESAFYAAAAQAFgBAAYUBAAAAAA5FR0AARwAVgAAABAAVgAAABAAQgoRWgAAAAAAAOA/EwA5FRkAARgAVgEAAA4AWAYALxAHAAEAcgMAQgEOAKAUHgADABQAJS4wZiAlbiBhbHJlYWR5IHNvbGRzDgBmCQA7FRQAsQEAAAEPAFYBAAANAFYBAAAMAAc5FRcAARYAVgAAABEAVgAAABAAVgEAAA4AEQCgFDUABAAoAFR1cm5lZCBpbiAlbiBudW1iZXIgJS4wZiBmb3IgJS4yZiBwb2ludHNmCQBzDgBmEQA5FRAAAQ8AVgAAAAQAVgAAABEAHDkVDAABCwBWAQAADQBCARw5FQwAAQsAVgEAAA4AQgEcPBUAABwAAQD/FAUAAQByBgA/FQAAGQAAADwVAAAVAAkAcwIABAAgZgQAFQAPAGYEAAoAIGYEACBzAgAgLRYADQAEAAkAIHMCACAxID49oBQWAAIADwBSZXAgQWRkZWQ6ICUuMGZzAgA7Eg0AAwByBwBuAQAAAHMCABUAFQBzAgAQACBYPRIKAAIAcgcAbgEAAACgFB4AAgAXAFRvdGFsIE91dGNhc3QgUmVwOiAlLjBmcwIAGQAAABkAAAAWAA0AAwAJACBzAQAgMSA9Pa0QDwADAHICAG4AAAAAbgEAAABhEBYABABuAAAAAG4BAAAAbgAAAABuAAAAABUABwBzAQACACAyGAANAAQACQAgcwEAIDIgPT0cAAIARRUPAAEFAFIIAAEIAFYDAAASABwAAgBFFQ8AAQUAUgkAAQgAVgMAABQAFQAHAHMBAAIAIDMVAAcAZhMAAgAgMRgADQAHAAkAIHMBACAzID09FgAMAAEACAAgZhMAIDAgPjkVEwABEgBWAAAAEwBYAAAMEAQAAAAgFwACAAMAFQAJAGYTAAQAIDEgfmAQAgAAABUABwBzAQACACAwGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWOutcastTradePlayerContSCPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bHasItems</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">count</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">i</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">soldCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">item</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">baseItem</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">value</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">diminishingValue</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fRep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iRep</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">equippedItems</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">hotkeys</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">fTimer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">9</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRV">15</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D00377A">TTWVendorChestBuriedOutcastsRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0017C7">TTWOutcastItems</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D006733">TTWOutcastTurnInRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0027A4">TTWRepOutcasts</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01860A">RestoreEquippedItems</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01860C">RestoreHotkeys</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="070009C0">DLC02OA3</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02OA3</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="070014F5">DLC02OA3QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Paving the Way</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">Quest Completed</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>57</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgEANxAFAAEAcgEAFQAKAHICAHNOAAIAIDE5EAoAAgByAwBuCgAAAHcRBwABAG5kAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">CompleteAllObjectives DLC02OA3
+StopQuest DLC02OA3
+set DLC02StrikeTeam.STDialogOff to 1
+setstage DLC02OA4 10
+;AddAchievement 53
+RewardXP 100</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="070009C0">DLC02OA3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="07002D0A">DLC02StrikeTeam</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="070014F6">DLC02OA4</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Destroy two Fuel Tanks at the Chimera Depot.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="07002F3D">DLC02FuelTankPanelARef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009C0">DLC02OA3</Quest>
+                  <VariableIndex>9</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="07002F3E">DLC02FuelTankPanelBRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="070009C0">DLC02OA3</Quest>
+                  <VariableIndex>10</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Secure the Chinese Listening Post.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0700C354">DLC02QTMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="070019F6">DLC02CommCenter</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">15</Index>
+        <Description Tag="NNAM">Speak with Lieutenant Morgan.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070019A8">DLC02MorganRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Listen to General Chase's briefing.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070019A7">DLC02GeneralChaseREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">17</Index>
+        <Description Tag="NNAM">(Optional) Speak to Sergeant Montgomery to command your Strike Team.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="070015F1">DLC02MontgomeryRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

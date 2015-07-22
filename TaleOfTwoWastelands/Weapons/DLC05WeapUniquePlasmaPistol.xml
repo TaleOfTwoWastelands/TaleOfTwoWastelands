@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0B00AB86">DLC05WeapUniquePlasmaPistol</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05WeapUniquePlasmaPistol</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">MPLX Novasurge</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandPistol\PlasmaPistolstatic.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_plasma_pistol.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="00158319">AmmoListSmallEnergyCell</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="00034242">RepairPlasmaPistol</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">EnergyWeapons</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000864D5">ITMPistolUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000864D6">ITMPistolDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="00044526">WPNPistolPlasmaFire3D</Reference>
+          </_3D>
+          <Distant Tag="SNAM">
+            <Reference ID="0013010F">WPNPlasmaPistolFire3DDIST</Reference>
+          </Distant>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="00044525">WPNPistolPlasmaFire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="00021E6E">WPNPistol0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00021E6F">WPNPistol0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="000361E7">EnergyImpactGreenDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000A2507">1stPersonPlasmaPistol</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>470</Value>
+      <Health>225</Health>
+      <Weight>6</Weight>
+      <BaseDamage>105</BaseDamage>
+      <ClipSize>32</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandPistolEnergy</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>0</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>2</AmmoUse>
+      <ReloadAnimation>ReloadH</ReloadAnimation>
+      <MinSpread>0.5</MinSpread>
+      <Spread>2.20000005</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>70</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="000A73D6">PlasmaProjectile02</Projectile>
+      <BaseVATSToHitChance>21</BaseVATSToHitChance>
+      <AttackAnimation>AttackRight</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>256</Min>
+        <Max>1024</Max>
+      </Range>
+      <LimbKillBehavior>NormalFormulaBehavior</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>0.699999988</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>30</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.5</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0.150000006</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>1.75</AttackShotsPerSecond>
+      <ReloadTime>2</ReloadTime>
+      <JamTime>1.33329999</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>EnergyWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>EnergyResistance</ResistanceType>
+      <SightUsage>1</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0.300000012</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>2</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>100</Damage>
+      <ChanceMult>2.25</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00092C48">PlasmaEffect</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

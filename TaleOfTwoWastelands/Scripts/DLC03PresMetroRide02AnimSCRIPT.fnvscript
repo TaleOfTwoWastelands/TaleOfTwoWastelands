@@ -1,0 +1,292 @@
+scn DLC03PresMetroRide02AnimSCRIPT
+
+short doOnce
+short handleFollowers
+short charonIsFollower
+short butchIsFollower
+short cloverIsFollower
+short dogmeatIsFollower
+short jerichoIsFollower
+short fawkesIsFollower
+short rl3IsFollower
+short crossIsFollower
+short BooneIsFollower
+short CassIsFollower
+short VeronicaIsFollower
+short LilyIsFollower
+short RaulIsFollower
+short ArcadeIsFollower
+short EDEIsFollower
+short RexIsFollower
+short autosaveReady
+
+ref actionRef
+float timer
+
+;********************************************************
+
+Begin onActivate
+
+	set actionRef to getActionRef
+
+	if (actionRef == Player)
+		disablePlayerControls 1 1 1 1 1 1 1
+
+		;Alan added this to handle Quest Target flip
+		Set DLC03BS3.BS3QTFlip to 0
+
+		DLC03PresMetro03Console01REF.playgroup forward 1
+		set timer to 1
+		set doOnce to 1
+	endif
+
+End
+
+;********************************************************
+
+Begin gameMode
+	if (doOnce == 1)
+		if (timer <= 0)
+			DLC03PresMetro02TrainPopREF.enable
+			DLC03PresMetro03ElectricLight01REF.enable 0
+			DLC03PresMetro03Rumble01REF.placeatme DLC03VertibirdRumble 1
+			playsound OBJMetroRide2D
+			set doOnce to 2
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+
+	elseif (doOnce == 2)
+		;disablePlayerControls 1 1 1 1 1 1 1
+		imod DLC03MetroFadeInFromWhiteISFX02
+		set handleFollowers to 1
+		set timer to 1
+		set doOnce to 3
+
+	elseif (doOnce == 3)
+		if (timer <= 0)
+			player.moveto DLC03PresMetroRideStart02REF
+			player.additem DLC03MetroCarArmor 1 1
+			player.equipitem DLC03MetroCarArmor 1 1
+			DLC03PresMetroRideCab03REF.disable
+			DLC03PresMetro03Console01REF.disable
+			player.dispel stealthboy
+			set timer to .5
+			set doOnce to 4
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+	
+	elseif (doOnce == 4)
+		if (timer <= 0)
+			player.addscriptpackage DLC03MetroCameraPackage
+			set timer to 18
+			set doOnce to 5
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+
+	elseif (doOnce == 5)
+		if (timer <= 0)
+			imod DLC03FadeToBlackISFX
+			set timer to 3
+			set doOnce to 6
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+	
+	elseif (doOnce == 6)
+		if (timer <= 0)
+			player.removeitem DLC03MetroCarArmor 1 1
+			player.removescriptpackage DLC03MetroCameraPackage
+			set timer to 1
+			set doOnce to 7
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+
+	elseif (doOnce == 7)
+		if (timer <= 0)
+			set doOnce to 0
+			set handleFollowers to 0
+
+			set charonIsFollower to 0
+			set butchIsFollower to 0
+			set cloverIsFollower to 0
+			set dogmeatIsFollower to 0
+			set jerichoIsFollower to 0
+			set fawkesIsFollower to 0
+			set rl3IsFollower to 0
+			set crossIsFollower to 0
+			set BooneIsFollower to 0
+			set CassIsFollower to 0
+			set VeronicaIsFollower to 0
+			set LilyIsFollower to 0
+			set RaulIsFollower to 0
+			set ArcadeIsFollower to 0
+			set EDEIsFollower to 0
+			set RexIsFollower to 0
+			
+			set DLC03MetroSwitch01REF.autosaveReady to 1
+			DLC03PresMetroRideCab03REF.enable
+			DLC03PresMetro03Console01REF.enable
+			DLC03PresMetro03ElectricLight01REF.disable 0
+			enablePlayerControls
+			player.moveto DLC03PresMetroRideEnd01REF
+		else
+			set timer to (timer - GetSecondsPassed)
+		endif
+	endif
+
+;now handle any followers
+	if (handleFollowers == 1)
+		if ( Followers.CharonHired == 1 ) && (CharonREF.Waiting == 0)
+			CharonRef.Moveto DLC03PresMetro02Follower01Marker
+			set charonIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.ButchHired == 1 ) && (ButchREF.Waiting == 0)
+			ButchREF.Moveto DLC03PresMetro02Follower01Marker
+			set butchIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.CloverHired == 1 ) && (CloverREF.Waiting == 0)
+			CloverREF.Moveto DLC03PresMetro02Follower01Marker
+			set cloverIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.DogmeatHired == 1 ) && (DogmeatREF.Waiting == 0)
+			DogmeatREF.Moveto DLC03PresMetro02Follower01Marker
+			set dogmeatIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.JerichoHired == 1 ) && (JerichoREF.Waiting == 0)
+			JerichoREF.Moveto DLC03PresMetro02Follower01Marker
+			set jerichoIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.FawkesHired == 1 ) && (MQ08FawkesREF.Waiting == 0)
+			MQ08FawkesREF.Moveto DLC03PresMetro02Follower01Marker
+			set fawkesIsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.RL3Hired == 1 ) && (RL3REF.Waiting == 0)
+			RL3REF.Moveto DLC03PresMetro02Follower01Marker
+			set rl3IsFollower to 1
+			set handleFollowers to 2
+		elseif ( Followers.StarPaladinCrossHired == 1 ) && (StarPaladinCrossREF.Waiting == 0)
+			StarPaladinCrossREF.Moveto DLC03PresMetro02Follower01Marker
+			set crossIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.bBooneHired == 1 ) && (CraigBooneREF.Waiting == 0)
+			CraigBooneREF.Moveto DLC03PresMetro02Follower01Marker
+			set BooneIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.bCassHired == 1 ) && (RoseofSharonCassidyREF.Waiting == 0)
+			RoseofSharonCassidyREF.Moveto DLC03PresMetro02Follower01Marker
+			set CassIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.bVeronicaHired == 1 ) && (VeronicaREF.Waiting == 0)
+			VeronicaREF.Moveto DLC03PresMetro02Follower01Marker
+			set VeronicaIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.bLilyHired == 1 ) && (LilyREF.Waiting == 0)
+			LilyREF.Moveto DLC03PresMetro02Follower01Marker
+			set LilyIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.RaulHired == 1 ) && (RaulREF.Waiting == 0)
+			RaulREF.Moveto DLC03PresMetro02Follower01Marker
+			set RaulIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.ArcadeHired == 1 ) && (ArcadeREF.Waiting == 0)
+			ArcadeREF.Moveto DLC03PresMetro02Follower01Marker
+			set ArcadeIsFollower to 1
+			set handleFollowers to 2
+		elseif ( vNPCFollowers.bEDEHired == 1 )
+			if EDE1Ref.GetDisabled == 0
+				if (EDE1Ref.Waiting == 0)
+					EDE1Ref.Moveto DLC03PresMetro02Follower01Marker
+					set EDEIsFollower to 1
+					set handleFollowers to 2
+				endif
+			elseif EDE2Ref.GetDisabled == 0
+				if (EDE2Ref.Waiting == 0)
+					EDE2Ref.Moveto DLC03PresMetro02Follower01Marker
+					set EDEIsFollower to 1
+					set handleFollowers to 2
+				endif
+			elseif EDE3Ref.GetDisabled == 0
+				if (EDE3Ref.Waiting == 0)
+					EDE3Ref.Moveto DLC03PresMetro02Follower01Marker
+					set EDEIsFollower to 1
+					set handleFollowers to 2
+				endif
+			endif
+		elseif ( vNPCFollowers.RexHired == 1 ) && (RexREF.Waiting == 0)
+			RexREF.Moveto DLC03PresMetro02Follower01Marker
+			set RexIsFollower to 1
+			set handleFollowers to 2
+		endif
+	elseif (handleFollowers == 2)
+		if ( Followers.CharonHired == 1 ) && (CharonREF.Waiting == 0) && (charonIsFollower == 0)
+			CharonRef.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.ButchHired == 1 ) && (ButchREF.Waiting == 0) && (butchIsFollower == 0)
+			ButchREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.CloverHired == 1 ) && (CloverREF.Waiting == 0) && (cloverIsFollower == 0)
+			CloverREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.DogmeatHired == 1 ) && (DogmeatREF.Waiting == 0) && (dogmeatIsFollower == 0)
+			DogmeatREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.JerichoHired == 1 ) && (JerichoREF.Waiting == 0) && (jerichoIsFollower == 0)
+			JerichoREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.FawkesHired == 1 ) && (MQ08FawkesREF.Waiting == 0) && (fawkesIsFollower == 0)
+			MQ08FawkesREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.RL3Hired == 1 ) && (RL3REF.Waiting == 0) && (rl3IsFollower == 0)
+			RL3REF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( Followers.StarPaladinCrossHired == 1 ) && (StarPaladinCrossREF.Waiting == 0) && (crossIsFollower == 0)
+			StarPaladinCrossREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.bBooneHired == 1 ) && (CraigBooneREF.Waiting == 0) && (BooneIsFollower == 0)
+			CraigBooneREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.bCassHired == 1 ) && (RoseofSharonCassidyREF.Waiting == 0) && (CassIsFollower == 0)
+			RoseofSharonCassidyREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.bVeronicaHired == 1 ) && (VeronicaREF.Waiting == 0) && (VeronicaIsFollower == 0)
+			VeronicaREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.bLilyHired == 1 ) && (LilyREF.Waiting == 0) && (LilyIsFollower == 0)
+			LilyREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.RaulHired == 1 ) && (RaulREF.Waiting == 0) && (RaulIsFollower == 0)
+			RaulREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.ArcadeHired == 1 ) && (ArcadeREF.Waiting == 0) && (ArcadeIsFollower == 0)
+			ArcadeREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		elseif ( vNPCFollowers.bEDEHired == 1 ) && (EDEIsFollower == 0)
+			if EDE1Ref.GetDisabled == 0
+				 if (EDE1Ref.Waiting == 0)
+					EDE1Ref.Moveto DLC03PresMetro02Follower02Marker
+					set handleFollowers to 3
+				 endif
+			elseif EDE2Ref.GetDisabled == 0
+				 if (EDE2Ref.Waiting == 0)
+					EDE2Ref.Moveto DLC03PresMetro02Follower02Marker
+					set handleFollowers to 3
+				 endif
+			elseif EDE3Ref.GetDisabled == 0
+				 if (EDE3Ref.Waiting == 0)
+					EDE3Ref.Moveto DLC03PresMetro02Follower02Marker
+					set handleFollowers to 3
+				 endif
+			endif
+		elseif ( vNPCFollowers.RexHired == 1 ) && (RexREF.Waiting == 0) && (RexIsFollower == 0)
+			RexREF.Moveto DLC03PresMetro02Follower02Marker
+			set handleFollowers to 3
+		endif
+	endif
+
+End
+
+;********************************************************			

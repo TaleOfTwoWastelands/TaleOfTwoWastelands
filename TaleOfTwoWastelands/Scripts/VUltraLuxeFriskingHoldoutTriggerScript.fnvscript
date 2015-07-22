@@ -1,0 +1,166 @@
+scn VUltraLuxeFriskingHoldoutTriggerScript
+
+ref Companion1REF
+ref Companion2REF
+
+Begin OnActivate
+
+if (IsActionREF Player == 0)
+	; Removes all Player weapons
+	if Player.GetActorValue Sneak >= 50
+		player.RemoveAllTypedItems UltraLuxeWeaponLockerREF 1 0 40 NVImprovedHoldoutWeapons
+	else
+		player.RemoveAllTypedItems UltraLuxeWeaponLockerREF 1 0 40 NVHoldoutWeapons
+	endif
+
+		; Checks for followers
+		; Clears Companion REFs for safety
+		set Companion1REF to 0
+		set Companion2REF to 0
+		if VNPCFollowers.bPlayerHasFollower == 1
+			if VNPCFollowers.bBooneHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CraigBooneREF
+				else
+					set Companion2REF to CraigBooneREF
+				endif
+			endif
+			if VNPCFollowers.bCassHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RoseofSharonCassidyREF
+				else
+					set Companion2REF to RoseofSharonCassidyREF
+				endif
+			endif
+			if VNPCFollowers.bVeronicaHired == 1
+				if Companion1REF == 0
+					set Companion1REF to VeronicaREF
+				else
+					set Companion2REF to VeronicaREF
+				endif
+			endif
+			if VNPCFollowers.bLilyHired == 1
+				if Companion1REF == 0
+					set Companion1REF to LilyREF
+				else
+					set Companion2REF to LilyREF
+				endif
+			endif
+			if VNPCFollowers.bEDEHired == 1
+				if Companion1REF == 0 && EDE1Ref.GetDisabled == 0
+					set Companion1REF to EDE1REF
+				elseif Companion1REF == 0 && EDE2Ref.GetDisabled == 0
+					set Companion1REF to EDE2REF
+				elseif Companion1REF == 0 && EDE1Ref.GetDisabled == 0
+					set Companion1REF to EDE3REF
+				elseif EDE1Ref.GetDisabled == 0
+					set Companion2REF to EDE1REF
+				elseif EDE2Ref.GetDisabled == 0
+					set Companion2REF to EDE2REF
+				elseif EDE3Ref.GetDisabled == 0
+					set Companion2REF to EDE3REF
+				endif
+			endif
+			if VNPCFollowers.RaulHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RaulREF
+				else
+					set Companion2REF to RaulREF
+				endif
+			endif
+			if VNPCFollowers.ArcadeHired == 1
+				if Companion1REF == 0
+					set Companion1REF to ArcadeREF
+				else
+					set Companion2REF to ArcadeREF
+				endif
+			endif
+			if VNPCFollowers.RexHired == 1
+				if Companion1REF == 0
+					set Companion1REF to RexREF
+				else
+					set Companion2REF to RexREF
+				endif
+			endif
+			if Followers.CharonHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CharonRef
+				else
+					set Companion2REF to CharonRef
+				endif
+			endif
+			if Followers.ButchHired == 1
+				if Companion1REF == 0
+					set Companion1REF to ButchRef
+				else
+					set Companion2REF to ButchRef
+				endif
+			endif
+			if Followers.CloverHired == 1
+				if Companion1REF == 0
+					set Companion1REF to CloverRef
+				else
+					set Companion2REF to CloverRef
+				endif
+			endif
+			if Followers.JerichoHired == 1
+				if Companion1REF == 0
+					set Companion1REF to JerichoRef
+				else
+					set Companion2REF to JerichoRef
+				endif
+			endif
+			if Followers.FawkesHired == 1
+				if Companion1REF == 0
+					set Companion1REF to MQ08FawkesRef
+				else
+					set Companion2REF to MQ08FawkesRef
+				endif
+			endif
+			if Followers.StarPaladinCrossHired == 1
+				if Companion1REF == 0
+					set Companion1REF to StarPaladinCrossRef
+				else
+					set Companion2REF to StarPaladinCrossRef
+				endif
+			endif
+			if Followers.DogmeatHired == 1
+				if Companion1REF == 0
+					set Companion1REF to DogmeatRef
+				else
+					set Companion2REF to DogmeatRef
+				endif
+			endif
+			if Followers.RL3Hired == 1
+				if Companion1REF == 0
+					set Companion1REF to RL3REF
+				else
+					set Companion2REF to RL3REF
+				endif
+			endif
+		endif
+
+	if Companion1REF
+		if Player.GetActorValue Sneak >= 50
+			Companion1REF.RemoveAllTypedItems UltraLuxeCompanionLocker1REF 1 0 40 NVImprovedHoldoutWeapons
+		else
+			Companion1REF.RemoveAllTypedItems UltraLuxeCompanionLocker1REF 1 0 40 NVHoldoutWeapons
+		endif
+	ENDIF
+	
+	if Companion2REF
+		if Player.GetActorValue Sneak >= 50
+			Companion2REF.RemoveAllTypedItems UltraLuxeCompanionLocker2REF 1 0 40 NVImprovedHoldoutWeapons
+		else
+			Companion2REF.RemoveAllTypedItems UltraLuxeCompanionLocker2REF 1 0 40 NVHoldoutWeapons
+		endif
+	endif
+
+else ; player is activator
+; Gives the player and his companions back their weapons after they leave.
+	UltraLuxeWeaponLockerREF.RemoveAllItems Player
+	UltraLuxeCompanionLocker1REF.RemoveAllItems Companion1REF
+	UltraLuxeCompanionLocker2REF.RemoveAllItems Companion2REF
+endif
+
+end

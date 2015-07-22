@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00096C">DLC05MZ2QuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05MZ2QuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>13</ReferenceCount>
+        <CompiledSize>1271</CompiledSize>
+        <VariableCount>26</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAOkEAAAWAA0ABwAJACBzFQAgMCA9PRYAEgAFAA4AIHIBAFguEAAAIDAgPT0cAAEAnhAFAAEAcgQAHAABAAIQCgACAHIFAG4BAAAAHAABAAIQCgACAHIGAG5kAAAAHAABAF4QAAAVAAcAcxUAAgAgMRkAAAAZAAAAFgANAA0ACQAgcwgAIDAgPT0WAA0ACwAJACBzBwAgMSA9PRUABwBzCAACACAxFgAcAAIAGAAgcgcAcwsAIDEgPT0gcxIAIDAgPT0gJiaiEQ8AAwByCABuHgAAAG4BAAAAFQAHAHMSAAIAIDEYACUAAgAhACBYOxAKAAIAcgkAbv8AAAAgMSA9PSBzFAAgMCA9PSAmJqIRDwADAHIIAG4oAAAAbgEAAAAVAAcAcxQAAgAgMRgAJQACACEAIFg7EAoAAgByCgBu/wAAACAxID09IHMTACAwID09ICYmohEPAAMAcggAbjIAAABuAQAAABUABwBzEwACACAxGQAAABkAAAAZAAAAFgANAA0ACQAgcwkAIDAgPT0WAA0ACwAJACBzBwAgMiA9PRUABwBzCQACACAxFgAcAAIAGAAgcgcAcwsAIDEgPT0gcxIAIDAgPT0gJiaiEQ8AAwByCABuHgAAAG4BAAAAFQAHAHMSAAIAIDEYACUAAgAhACBYOxAKAAIAcgkAbv8AAAAgMSA9PSBzFAAgMCA9PSAmJqIRDwADAHIIAG4oAAAAbgEAAAAVAAcAcxQAAgAgMRgAJQACACEAIFg7EAoAAgByCgBu/wAAACAxID09IHMTACAwID09ICYmohEPAAMAcggAbjIAAABuAQAAABUABwBzEwACACAxGQAAABkAAAAZAAAAFgANABMACQAgcwoAIDAgPT0WAA0AEQAJACBzBwAgMyA+PRUABwBzCgACACAxFgAcAAQAGAAgcgcAcwsAIDEgPT0gcxIAIDAgPT0gJiaiEQ8AAwByCABuHgAAAG4BAAAAohEPAAMAcggAbiMAAABuAQAAAKMRDwADAHIIAG48AAAAbgEAAAAVAAcAcxIAAgAgMRgAJQAEACEAIFg7EAoAAgByCQBu/wAAACAxID09IHMUACAwID09ICYmohEPAAMAcggAbigAAABuAQAAAKIRDwADAHIIAG4jAAAAbgEAAACjEQ8AAwByCABuPAAAAG4BAAAAFQAHAHMUAAIAIDEYACUABAAhACBYOxAKAAIAcgoAbv8AAAAgMSA9PSBzEwAgMCA9PSAmJqIRDwADAHIIAG4yAAAAbgEAAACiEQ8AAwByCABuIwAAAG4BAAAAoxEPAAMAcggAbjwAAABuAQAAABUABwBzEwACACAxGQAAABkAAAAZAAAAFgANAAwACQAgcxEAIDAgPT0WAA0ACgAJACBzCgAgMSA9PRYAFwAIABMAIHILAFhDEAUAAQByDAAgMSA9PRUACgByCABzAwACACAwFQAKAHIIAHMGAAIAIDAVAAoAcggAcwUAAgAgMBUACgByCABzBAACACAwHAACAF4QAAAcAAEAXhAAABwAAwBeEAAAFQAHAHMRAAIAIDEZAAAAGQAAABkAAAAWAA0ABAAJACBzDgAgMCA9PRYAFwACABMAIHILAFhDEAUAAQByDQAgMSA9PTkQCgACAHIIAG7IAAAAFQAHAHMOAAIAIDEZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05MZ2QuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2Unfrozen</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SallyTalked</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2Follow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2PaulsonFollow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2TercorienFollow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SomahFollow</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2Generator</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2FirstGenerator</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SecondGenerator</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2ThirdGenerator</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SomahTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2TercorienTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2PaulsonTrigger</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2QuestDone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2CryoGet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SamuraiTalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2EndFollows</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2CryoBoom</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2AsmBoom</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2HQBoom</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SomahMove</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SallyStash</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SamuraiGone</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2PaulsonBG</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2SomahBG</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MZ2GoVent</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000988">DLC05SomahREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003304">DLC05PaulsonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003308">DLC05TercorienRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A71F">DLC05MZ2SomahStartMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603A8CA">CondShotgunCombatNPC</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0008ECF5">Ammo12Ga</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003CB8">DLC05CryoQ</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000803">DLC05MZ2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0041CC">DLC05HQ</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003392">DLC05Asm</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B002FD2">DLC05EngineCore</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B002FCF">DLC05ExLab01</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

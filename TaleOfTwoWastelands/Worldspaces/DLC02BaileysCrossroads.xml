@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="07000804">DLC02BaileysCrossroads</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02BaileysCrossroads</EditorID>
+    <Name Tag="FULL">Bailey's Crossroads</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0700C4D9">DLC02BaileysZone</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">65284</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00064602">UrbanClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="000AFB9A">d4BadWater10r20h</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>12288</DefaultLandHeight>
+      <DefaultWaterHeight>-25000</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>0.75</WorldMapScale>
+      <Offset>
+        <CellX>-22000</CellX>
+        <CellY>-35000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00015588">UrbanImageSpace01</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, NoLODNoise</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>0</X>
+        <Y>-53248</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>53248</X>
+        <Y>4096</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="00090907">DefaultDungeon</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+    <SwappedImpacts>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="0001E37D">BalisticDirtImpact</OldImpact>
+        <NewImpact ID="070034FD">BalisticSnowImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="000A9D70">ExplosionDirtLargeImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="00094B90">ExplosionDirtImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+    </SwappedImpacts>
+    <FootstepMaterial Tag="IMPF">
+      <ConcreteSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteSolid>
+      <ConcreteBroken>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteBroken>
+      <MetalSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSolid>
+      <MetalHollow>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalHollow>
+      <MetalSheet>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSheet>
+      <Wood>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Wood>
+      <Sand>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Sand>
+      <Dirt>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Dirt>
+      <Grass>U25vdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Grass>
+      <Water>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Water>
+    </FootstepMaterial>
+  </Subrecords>
+</Record>

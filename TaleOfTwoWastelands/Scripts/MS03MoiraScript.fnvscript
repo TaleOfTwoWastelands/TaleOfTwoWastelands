@@ -1,0 +1,71 @@
+scn MS03MoiraScript
+
+short	BeginMedicalServices			;Set to 1 in dialog, starts script below.
+short	DoOnce								;Script blocker
+
+float	Timer									;Timer used for animation control
+
+short MoiraDead
+short Button
+
+BEGIN GameMode
+
+	;When set to 1, plays medical animations for five seconds then restarts conversation with the player
+
+	if (GetObjectiveCompleted MS03 20)		; cascaded NOT to fix bug with BeginMedicalServices being set by unknown - Roy
+	elseif (GetObjectiveCompleted MS03 24)
+	elseif (GetObjectiveCompleted MS03 60)
+	elseif (GetObjectiveCompleted MS03 64)
+	else
+		set BeginMedicalServices to 0
+		set DoOnce to 0
+	endif
+	
+	if ( BeginMedicalServices == 1 )
+		if ( DoOnce== 0 )
+			disablePlayerControls
+			SetRestrained 1
+			sayto player MS03MoiraBrownMedicalChatter
+			;PlayIdle LooseDoctorHealPlayer
+			set Timer to 8
+			set DoOnce to 1
+		endif
+
+		set Timer to ( Timer - GetSecondsPassed )
+
+		if ( Timer <= 10 ) && ( DoOnce == 1 )
+			IMod FadeToBlackISFX
+			set DoOnce to 2
+		endif
+
+		if ( Timer <= 0 )
+			if (MS03.MS03a2 == 2 || MS03.MS03a2 == 3)
+				player.restoreav radiationrads 1000
+				Set Ms03.MS03a2TurnIn to 1
+			elseif (MS03.MS03b3 == 2 || MS03.MS03b3 == 3)
+				player.resethealth
+				;Player.CastImmediateOnSelf FFSawbonesHealEffect
+				Set Ms03.MS03b3TurnIn to 1
+			endif
+			enablePlayerControls
+			SetRestrained 0
+			if DoOnce == 2
+				addScriptPackage DefaultNPCDialogPlayer
+				set DoOnce to 3
+			endif
+		endif
+	endif
+
+END
+
+BEGIN OnDeath
+
+	if (GetStage MS03 > 0 && GetStage MS03 < 200)
+		ShowMessage MS03FailedMsg
+		Set MoiraDead to 1
+		SetStage MS03 210
+	endif
+
+	set DialogueMegaton.MoiraDead to 1
+
+END

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060CB604">OutfitUniqueChineseCommandoHat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitUniqueChineseCommandoHat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-7</X>
+        <Y>-7</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>7</X>
+        <Y>8</Y>
+        <Z>11</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Hat of the People</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B8B">EnchClothingChinComSuit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Headband, Hat</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\ChineseCommando\HatChineseCommando.NIF</FileName>
+          <TextureHashes Tag="MODT">8OESYxrfvFZwYRJjH9+8VnJhF3RrmCVO7t8UY+mcrjluXxRj7pyuOXJhF3RrmCVO898UY+mcrjlzXxRj7pyuOXJhF3RrmCVO</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\ChineseCommando\HatChineseCommandoGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">8OESYxrfvFZwYRJjH9+8VnJhF3RrmCVO7t8UY+mcrjluXxRj7pyuOXJhF3RrmCVO898UY+mcrjlzXxRj7pyuOXJhF3RrmCVO</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_chinese_officer_hat.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_chinese_officer_hat.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9DD">RepairChineseCommandoHat</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>30</Value>
+      <MaxCondition>20</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>100</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

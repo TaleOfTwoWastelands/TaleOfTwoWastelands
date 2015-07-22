@@ -1,0 +1,16 @@
+SCN TTWSESAdvSpawnerScript
+
+short doonce
+
+Begin Gamemode
+
+; simple Token that is added to FO3 FFER original random Encounters (FFER06NPC1 Wasteland Doctor, FFER21NPC1 simple Dead Guy)
+; which spawns the Advertitron and then removes itself
+
+	If doonce == 0
+		set doonce to 1
+		PlaceAtme TTWSESAdvertitron 1
+		removeme
+	Endif
+
+End

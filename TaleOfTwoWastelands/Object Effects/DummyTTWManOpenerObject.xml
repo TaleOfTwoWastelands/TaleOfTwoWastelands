@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ENCH">
+  <Flags>0</Flags>
+  <FormID ID="0C004B8D">DummyTTWManOpenerObject</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DummyTTWManOpenerObject</EditorID>
+    <Name Tag="FULL">Ignores DT/DR Dummy Effect</Name>
+    <Data Tag="ENIT">
+      <Type>Weapon</Type>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0017B76F">DummyNVIgnoresDTDR</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00109049">DummyNVLimbDamage</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Touch</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

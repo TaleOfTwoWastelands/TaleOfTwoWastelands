@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="000B01DC">CG04OverseerDresser</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG04OverseerDresser</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-35</X>
+        <Y>-16</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>35</X>
+        <Y>19</Y>
+        <Z>82</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Dresser</Name>
+    <Model>
+      <FileName Tag="MODL">Furniture\Vault\VDresser01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbAMdldZfEIxMAx2XFl8QnRsGHSQ81XK7t8Odli8KWduXw52XbwpZ3RsGHSQ81XK898Odli8KWdzXw52XbwpZ3RsGHSQ81XK</TextureFileHash>
+    </Model>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0000431E">VaultSuit101</Item>
+          <Count>3</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.550000012</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0002E0B4">Vault101OverseersKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0008ED03">Ammo9mm</Item>
+          <Count>12</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <OpenSound Tag="SNAM">
+      <Reference ID="000A0817">DRSDresserOpen</Reference>
+    </OpenSound>
+    <CloseSound Tag="QNAM">
+      <Reference ID="000A0818">DRSDresserClose</Reference>
+    </CloseSound>
+  </Subrecords>
+</Record>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C00DFAC">TTWFunctionsSCPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFunctionsSCPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>322</CompiledSize>
+        <VariableCount>5</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAADQBAAA5EAoAAgByAgBu+gAAABYACAAIAAQAIEcDABYAIAACABwAIFjPFAoAAgBHBABuAwAAACBHBQAgMCA9PSAmJjkQCgACAHICAG4CAAAAORAKAAIAcgIAbgEAAAAZAAAAFgAgAAIAHAAgWM8UCgACAEcEAG4AAgAAIEcGACAwID09ICYmORAKAAIAcgIAbgAAAAA5EAoAAgByAgBuAwAAABkAAAAXAAIACAAWAB4AAgAaACByBwBYNhEFAAEAcggAIEcFACAwID09ICYmORAKAAIAcgIAbgIAAAA5EAoAAgByAgBuAQAAABkAAAAWAB4AAgAaACByBwBYNhEFAAEAcgkAIEcGACAwID09ICYmORAKAAIAcgIAbgAAAAA5EAoAAgByAgBuAwAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWFunctionsSCPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iDaysToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iMonthsToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iYearsToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iIndex</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rWorldList</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">5</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAB">TTWFunctions</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FA6">TTWHasNVSE</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0607EA1F">Wasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000DA726">WastelandNV</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

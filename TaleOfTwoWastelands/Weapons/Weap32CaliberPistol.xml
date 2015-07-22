@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0600080A">Weap32CaliberPistol</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Weap32CaliberPistol</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-3</X>
+        <Y>-3</Y>
+        <Z>-2</Z>
+      </Point1>
+      <Point2>
+        <X>12</X>
+        <Y>6</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">.22 Revolver</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandPistol\32SnubNose.NIF</FileName>
+      <TextureFileHash Tag="MODT">5+4OM2KX7oJnbg4zZ5fugmxvHHRFwEip7t8QM1u0BRxuXxAzYLQFHGxvHHRFwEip898QM1u0BRxzXxAzYLQFHGxvHHRFwEip8uUNMwAtzftyZQ0zBS3N+2xvHHRFwEip7t8PM81YrrJuXw8z0liusmxvHHRFwEip898PM81YrrJzXw8z0liusmxvHHRFwEip5fMKM+AyDPxlcwoz5TIM/GxvHHRFwEip7t8MMxJyFmhuXwwzF3IWaGxvHHRFwEip898MMxJyFmhzXwwzF3IWaGxvHHRFwEip5d8Nc6saOn9lXw1zsBo6f3N0EHSz4clt7d8MMxJyFmhtXwwzF3IWaGxvHHRFwEip</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_32_snub_nose.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Weapons_small\glow_weapons_32_snub_nose.dds</Small>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="001537EB">AmmoList22LR</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="06034231">Repair32CaliberPistol</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">SmallGuns</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000864D5">ITMPistolUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000864D6">ITMPistolDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="00018F68">WPNPistol32Fire3D</Reference>
+          </_3D>
+          <Distant Tag="SNAM">
+            <Reference ID="0011F28E">WPN357RevolverFire3DDIST</Reference>
+          </Distant>
+        </Shoot>
+        <Shoot2D Tag="XNAM">
+          <Reference ID="00018F67">WPNPistol32Fire2D</Reference>
+        </Shoot2D>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="00021E6E">WPNPistol0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00021E6F">WPNPistol0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ModelWithMod1 Tag="MWD1">weapons\1handpistol\32snubnoseAction.nif</ModelWithMod1>
+    <ModelWithMod2 Tag="MWD2">weapons\1handpistol\32snubnoseCylinder.nif</ModelWithMod2>
+    <ModelWithMod1_2 Tag="MWD3">weapons\1handpistol\32snubnoseCylinder.nif</ModelWithMod1_2>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00019083">BallisticImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000ACD9A">1stPerson32CaliberPistol</Reference>
+    </FirstPersonModel>
+    <FirstPersonModelWithMod1 Tag="WNM1">
+      <Reference ID="0C018042">1stPerson32CaliberPistolAction</Reference>
+    </FirstPersonModelWithMod1>
+    <FirstPersonModelWithMod2 Tag="WNM2">
+      <Reference ID="0C018057">1stPerson32CaliberPistolCylinder</Reference>
+    </FirstPersonModelWithMod2>
+    <FirstPersonModelWithMod1_2 Tag="WNM3">
+      <Reference ID="0C018058">1stPerson32CaliberPistolActionCylinder</Reference>
+    </FirstPersonModelWithMod1_2>
+    <WeaponMod1 Tag="WMI1">
+      <Reference ID="0C018033">ModTTW22RevolverAction</Reference>
+    </WeaponMod1>
+    <WeaponMod2 Tag="WMI2">
+      <Reference ID="0C01803B">ModTTW22RevolverCylinder</Reference>
+    </WeaponMod2>
+    <Data Tag="DATA">
+      <Value>100</Value>
+      <Health>200</Health>
+      <Weight>2</Weight>
+      <BaseDamage>20</BaseDamage>
+      <ClipSize>5</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandPistol</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadK</ReloadAnimation>
+      <MinSpread>0.699999988</MinSpread>
+      <Spread>3</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>50</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0008F20E">22LRPistolProjectile</Projectile>
+      <BaseVATSToHitChance>12</BaseVATSToHitChance>
+      <AttackAnimation>AttackLeft</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>128</Min>
+        <Max>512</Max>
+      </Range>
+      <LimbKillBehavior>NormalFormulaBehavior</LimbKillBehavior>
+      <Flags2>NoJamAfterReload, OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>20</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.400000006</LeftMotorStrength>
+        <RightMotorStrength>0.200000003</RightMotorStrength>
+        <Duration>0.25</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>1.875</AttackShotsPerSecond>
+      <ReloadTime>2.33330011</ReloadTime>
+      <JamTime>1.5</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Guns</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>1</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0.300000012</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>IncreaseRateOfFire</Effect>
+          <ValueA>0.349999994</ValueA>
+          <ReloadAnimation>ReloadK</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>IncreaseClipCapacity</Effect>
+          <ValueA>3</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>3</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>0</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>20</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

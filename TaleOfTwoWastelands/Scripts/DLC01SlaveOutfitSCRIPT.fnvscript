@@ -1,0 +1,13 @@
+SCN DLC01SlaveOutfitSCRIPT
+
+BEGIN GameMode
+
+	if ( GetStageDone DLC01Quest01 90 ) || ( GetStageDone DLC01Quest01 91 ) || ( GetContainer != player )
+		return
+	elseif ( GetStageDone DLC01Quest01 50 == 1 )
+		SetStage DLC01Quest01 90
+	elseif ( GetStageDone DLC01Quest01 51 == 1 )
+		SetStage DLC01Quest01 91
+	endif
+
+END

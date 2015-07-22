@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E97">MS04</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS04</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="060307C6">MS04Script</Reference>
+    </Script>
+    <Name Tag="FULL">Those!</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>50</Priority>
+      <QuestDelay>0.100000001</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbgoAAABuAQAAAFUQBQABAHICAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS04 10 1
+ShowMap GrayditchMapMarkerRef
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06002EC9">GrayditchMapMarkerREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAIAFQAgWKURCgACAHIBAG4KAAAAIDEgPT2jEQ8AAwByAQBuFAAAAG4BAAAAohEPAAMAcgEAbgoAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetObjectiveDisplayed MS04 10 == 1 )
+SetObjectiveDisplayed MS04 20 1
+SetObjectiveCompleted MS04 10 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Remove the source of Fire Ants</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>104</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAEAFQAgWKURCgACAHIBAG4jAAAAIDAgPT2jEQ8AAwByAQBuHgAAAG4BAAAAGQAAABYAGQABABUAIFilEQoAAgByAQBuFAAAACAxID09ohEPAAMAcgEAbhQAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetObjectiveDisplayed MS04 35 == 0 )
+SetObjectiveDisplayed MS04 30 1
+endif
+if ( GetObjectiveDisplayed MS04 20 == 1 )
+SetObjectiveCompleted MS04 20 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbigAAABuAQAAAKMRDwADAHICAG4qAAAAbgEAAAAcAAEAcxACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MS04 40 1
+SetObjectiveDisplayed MS04 42 1
+MS04HatcheryDoor.Unlock</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A8A2D">MS04HatcheryDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbigAAABuAQAAAKMRDwADAHIBAG4tAAAAbgEAAAAVAAoAcgEAcyEAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MS04 40 1
+SetObjectiveDisplayed MS04 45 1
+Set MS04.ChamberSecure to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>306</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAEAFQAgWKURCgACAHICAG4tAAAAIDEgPT2iEQ8AAwByAgBuLQAAAG4BAAAAGQAAABYAGQABABUAIFg7EAoAAgByAgBuCgAAACAxID09oxEPAAMAcgIAbjIAAABuAQAAABkAAAAWABAAAQAMACByAgBzQwAgMCA9PRUACgByAgBzQwACACAxGQAAABYAGQABABUAIFilEQoAAgByAgBuKgAAACAxID09ohEPAAMAcgIAbioAAABuAQAAABkAAAAWABkAAQAVACBYpREKAAIAcgIAbh4AAAAgMSA9PaIRDwADAHICAG4eAAAAbgEAAAAZAAAAFgAZAAEAFQAgWKURCgACAHICAG4jAAAAIDEgPT2iEQ8AAwByAgBuIwAAAG4BAAAAGQAAABwAAQBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetObjectiveDisplayed MS04 45 == 1 )
+SetObjectiveCompleted MS04 45 1
+endif
+if ( GetStageDone MS04 10 == 1 )
+SetObjectiveDisplayed MS04 50 1
+endif
+if ( MS04.MasterKill == 0 )
+set MS04.MasterKill to 1
+endif
+if ( GetObjectiveDisplayed MS04 42 == 1 )
+SetObjectiveCompleted MS04 42 1
+endif
+if ( GetObjectiveDisplayed MS04 30 == 1 )
+SetObjectiveCompleted MS04 30 1
+endif
+if ( GetObjectiveDisplayed MS04 35 == 1 )
+SetObjectiveCompleted MS04 35 1
+endif
+
+DocLeskoRef.Evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060393EB">DocLeskoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>79</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAZAAEAFQAgWKURCgACAHICAG4yAAAAIDEgPT2iEQ8AAwByAgBuMgAAAG4BAAAAGQAAAKMRDwADAHICAG48AAAAbgEAAAAcAAEAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetObjectiveDisplayed MS04 50 == 1 )
+SetObjectiveCompleted MS04 50 1
+endif
+SetObjectiveDisplayed MS04 60 1
+BryanWilksRef.Evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06033096">BryanWilksRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>166</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">dxEHAAEAbiwBAAAWABQABAAQACBYVBAFAAEAcgYAIDAgPT0cAAEAnhAFAAEAcgcAHAACAJ4QBQABAHIIABkRCAACAHIJAHIGABwAAwBzEAIAAAAZAAAArREFAAEAcgoAFQAQAHILAGYlAAgAIEcMACAxICsVAAoAcgsAczUAAgAgMRwABABeEAAAHAAFACEQAgAAADcQBQABAHIKADYQBQABAHINAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">RewardXP 300
+if (GetDeadCount DoctorLesko == 0 )
+DocLeskoRef.Moveto MS04FinLeskoMarker
+LeskoRobotRef.Moveto MS04FinLeskoRobotMarker
+SetCellOwnership GrayditchDoctorLeskosLab DoctorLesko
+MS04LeskoShackDoorRef.Unlock
+endif
+CompleteAllObjectives MS04
+Set RadioGalaxyNewsQuest.MS04Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+BryanWilksRef.Evp
+MS04FFEnable.Enable
+StopQuest MS04
+StartQuest MS04Fin
+;addachievement 17
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060393EB">DocLeskoRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06031813">LeskoRobotRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06057E00">MS04LeskoShackDoorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06033096">BryanWilksRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C6038">MS04FFEnable</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060307C8">DoctorLesko</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06085ABF">MS04FinLeskoMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06085AC0">MS04FinLeskoRobotMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06057B37">GrayditchDoctorLeskosLab</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E97">MS04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06036C05">MS04Fin</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Find Bryan Wilks's father.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060393EA">FredWilksRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Remove the source of the Fire Ants.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Eliminate all five Nest Guardians from the Ant Queen's Hatchery.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605F11B">MS04NestGuard01</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0605F11B">MS04NestGuard01</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605F11C">MS04NestGuard02</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0605F11C">MS04NestGuard02</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060C20E3">MS04NestGuard03</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060C20E3">MS04NestGuard03</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060C20E2">MS04NestGuard04</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="060C20E2">MS04NestGuard04</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0605F11D">MS04NestGuard05</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDead</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="0605F11D">MS04NestGuard05</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Return to Bryan Wilks.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06033096">BryanWilksRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Deliver the bad news to Bryan Wilks.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06033096">BryanWilksRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Find a home for Bryan Wilks.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06033096">BryanWilksRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">45</Index>
+        <Description Tag="NNAM">Return to Doctor Lesko.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060393EB">DocLeskoRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">35</Index>
+        <Description Tag="NNAM">Investigate Marigold Metro Station and remove the source of the Fire Ants.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">42</Index>
+        <Description Tag="NNAM">(Optional) Do not harm the Ant Queen.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">52</Index>
+        <Description Tag="NNAM">Find Bryan Wilks in Grayditch.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06033096">BryanWilksRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">43</Index>
+        <Description Tag="NNAM">Send the Inhibitor Pulse from Lesko's portable terminal or Kill the Ant Queen.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0603181C">MS04LeskoPortacompRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0603181E">MS04QueenRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

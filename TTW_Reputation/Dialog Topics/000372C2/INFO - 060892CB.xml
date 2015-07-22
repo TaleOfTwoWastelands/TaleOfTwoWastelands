@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060892CB">INFO - 060892CB</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06018579">DialogueLilLamplight</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0603C06F">INFO - 0603C06F</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Enjoy, if you've got the caps.</ResponseText>
+        <ScriptNotes Tag="NAM2">A little resentful, and happily bilking the player out of money.</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1000</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetDistance</Type>
+          <ObjectReferences ID="0605FFBB">LLFoodMarker</ObjectReferences>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06015682">Eclair</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>107</CompiledSize>
+          <VariableCount>2</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAVAHMBABAAIFg/EgoAAgByAQBuAQAAABUAEQBzAgAMACBzAQAgMSAtIDUgKhUAFQBzAQAQACBYPxIKAAIAcgEAbgIAAAAVABcAcwIAEgAgcwIAIHMBACAxIC0gNSAqIC1zEQUAAQBzAgA=</CompiledScript>
+        <ScriptSource Tag="SCTX">short rep
+short discount
+ 
+;Get positive rep and increase discount
+set rep to GetReputationThreshold RepTTWLittleLamplight 1
+set discount to (rep - 1) * 5
+ 
+;Get negative rep and decrease discount
+set rep to GetReputationThreshold RepTTWLittleLamplight 2
+set discount to discount - ((rep - 1) * 5)
+
+ShowBarterMenu discount
+</ScriptSource>
+        <LocalVariables>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>1</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">rep</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>2</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">discount</Name>
+          </Variable>
+        </LocalVariables>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0017EF">RepTTWLittleLamplight</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I'd like some food.</Prompt>
+  </Subrecords>
+</Record>

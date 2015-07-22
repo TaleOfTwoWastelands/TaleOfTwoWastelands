@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060A5ECB">INFO - 060A5ECB</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06061F98">FFOutcasts</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060A5ECA">INFO - 060A5ECA</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Let's see what you've got.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>2</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="06061F98">FFOutcasts</Quest>
+          <VariableIndex>4</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06040C39">ProtectorCasdin</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>9</ReferenceCount>
+          <CompiledSize>247</CompiledSize>
+          <VariableCount>3</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">ORUcAAEbAFYDAAACAFgCAEUVDQABBQBSAwABBABCAQA5FRgAARcAVgMAAAMAWAIARRUJAAEFAFIEAAAAHAABAEUVHgABBQBSBQAFBQBSBgAFAFIHAAUAUggABABCAQQAQgAVABUAcwEAEAAgWD0SCgACAHIJAG4BAAAAFQAbAHMBABYAIHMBACBYPRIKAAIAcgkAbgAAAAAgLRUADwBzAQAKACBzAQAgMSB+ICoVAA8AcwEACgAgcwEAIDEwMCArcxEFAAEAcwEAFQAKAHIIAHMBAAIAIDEVAAwAcggAZhIABAAgZgIAFQAMAHIIAGYUAAQAIGYDAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">short iRep
+array_var equipment
+array_var hotkeys
+
+let equipment := player.Call SaveEquippedItems 1
+let hotkeys := player.Call SaveHotkeys
+
+player.Call RemoveAllItemsFiltered TTWEmptyList TTWOutcastItems TTWOutcastTradePlayerChestRef 1 0
+
+set iRep to GetReputation TTWRepOutcasts 1		;Get Good Rep
+set iRep to iRep - GetReputation TTWRepOutcasts 0	;Subtract Bad Rep
+
+set iRep to iRep * -1	;Rep is used for trade reduction, so it needs to be negative (or positive for negative rep)
+
+set iRep to iRep + 100	;Villified results in Barter 200, Idolized results in Barter 0
+
+ShowBarterMenu iRep
+
+set TTWOutcastTradePlayerChestRef.bHasItems to 1
+set TTWOutcastTradePlayerChestRef.equippedItems to equipment
+set TTWOutcastTradePlayerChestRef.hotkeys to hotkeys
+</ScriptSource>
+        <LocalVariables>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>1</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">iRep</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>2</Index>
+              <Flags>0</Flags>
+            </Data>
+            <Name Tag="SCVR">equipment</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>3</Index>
+              <Flags>0</Flags>
+            </Data>
+            <Name Tag="SCVR">hotkeys</Name>
+          </Variable>
+        </LocalVariables>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C018609">SaveEquippedItems</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01860B">SaveHotkeys</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C018608">RemoveAllItemsFiltered</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D005742">TTWEmptyList</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0017C7">TTWOutcastItems</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D00377C">TTWOutcastTradePlayerChestRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0027A4">TTWRepOutcasts</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I've got some technology to trade.</Prompt>
+  </Subrecords>
+</Record>

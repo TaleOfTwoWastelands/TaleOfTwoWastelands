@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A6">TTWChallengeTooGood</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeTooGood</EditorID>
+    <Name Tag="FULL">Too Good to be Two *</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E1">TTWChallengeTwoStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill all Gary clones with a lead pipe.</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>1</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <FormList Tag="SNAM">
+      <Reference ID="0C0185D0">TTWChallengeTooGoodList</Reference>
+    </FormList>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185CA">TTWChallengeTooGoodWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

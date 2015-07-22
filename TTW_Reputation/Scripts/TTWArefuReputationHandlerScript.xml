@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D00C6F7">TTWArefuReputationHandlerScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWArefuReputationHandlerScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>519</CompiledSize>
+        <VariableCount>13</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAPkBAAAVAAkAZgUABAAgWgMAFQAJAGYGAAQAIFoEABUAFQBzBwAQACBYPxIKAAIAcgEAbgAAAAAVABUAcwgAEAAgWD8SCgACAHIBAG4BAAAAFQAVAHMJABAAIFg/EgoAAgByAQBuAgAAABYAGQAGABUAIHMHACAxID49IHMKACAwID09ICYmeBASAAQAcgIAcgUAbgEAAABuAQAAABUABwBzCgACACAxFQAHAHMLAAIAIDAVAAcAcwwAAgAgMBUABwBzDQACACAwHgAAABgAGQAGABUAIHMIACA1ID49IHMNACAwID09ICYmeRASAAQAcgIAcgUAbgAAAABuAAAAABUABwBzCgACACAwFQAHAHMLAAIAIDAVAAcAcwwAAgAgMBUABwBzDQACACAxHgAAABgAGQAGABUAIHMIACAyID49IHMLACAwID09ICYmeRASAAQAcgIAcgUAbgEAAABuAQAAABUABwBzCgACACAwFQAHAHMLAAIAIDEVAAcAcwwAAgAgMBUABwBzDQACACAwHgAAABgAGQAGABUAIHMJACA1ID49IHMMACAwID09ICYmeBASAAQAcgIAcgUAbgAAAABuAAAAABUABwBzCgACACAwFQAHAHMLAAIAIDAVAAcAcwwAAgAgMRUABwBzDQACACAwHgAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWArefuReputationHandlerScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">reputation</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">faction</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repNeutral</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repPositive</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repNegative</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isNeutral</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isFriend</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isEnemy</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isAlly</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">5</Reference>
+        <Reference Tag="SCRV">6</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0017F3">RepTTWArefu</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00003130">ArefuFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001B2A4">PlayerFaction</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

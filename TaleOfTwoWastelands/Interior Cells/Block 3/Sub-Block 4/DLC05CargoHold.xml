@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0B00098B">DLC05CargoHold</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05CargoHold</EditorID>
+    <Name Tag="FULL">Cargo Hold</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>22</Red>
+          <Green>30</Green>
+          <Blue>37</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>41</Red>
+          <Green>38</Green>
+          <Blue>31</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>44</Red>
+          <Green>60</Green>
+          <Blue>67</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>300</Near>
+        <Far>2500</Far>
+        <ClipDistance>2500</ClipDistance>
+        <Power>0.5</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>30</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">3.40282347E+38</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0B00AC1E">DLC05MZCargoHold</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0B0058D3">DLC05ZetaZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0B00D0C8">IntDLC05MothershipMachineA</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

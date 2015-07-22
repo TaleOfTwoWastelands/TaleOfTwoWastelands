@@ -1,0 +1,439 @@
+scn DLC05TeleporterDoorMasterScript
+
+;NOTE ABOUT BASE OBJECTS
+;DLC05TeleporterDoorScripted01 is for doors that need to start ENABLED
+;DLC05TeleporterDoorScripted02 is for doors that need to start DISABLED
+
+
+ref triggerRef	;used by trigger script
+
+ref userRef		;used by activate script
+
+short state
+;0 = unsert default ("on")
+;1 = on
+;-1 = off
+
+short animToPlay
+;0 = unset	 						(default SpecialIdle)
+;1 = on								SpecialIdle  (looping)
+;2 = actively "teleporting"		Forward
+;3 = spooling down to off			Left
+;4 = spooling up to on			Right
+;-n = actively playing that anim
+;-999 done should be looping on SpecialIdle now
+
+
+;LIGHT & SOUND
+short lightState
+;0= unset,
+;1 = light should be on
+;-1 light should be off
+
+ref myLightRef
+ref mySoundRef
+
+;special handling variables
+short doOnce	;this is not a generic variable, is used by special handling for core scene (see onActivate block)
+short active		;this is used to turn on the specific door from core to sewers: DLC05hubToSewer01 no one else should use this var
+
+
+;----------------ACTIVATOR
+
+Begin OnLoad
+
+	;LIGHT
+	set myLightRef to placeAtMe DLC05TeleporterLight01 1	
+
+	;SOUND
+	if mySoundRef == 0
+		set mySoundRef to placeatme DRSDLC05TeleporterIdleLP 1
+		mySoundRef.disable
+	endif
+	
+	;On/Off state
+	if state == 0
+		if getIsID DLC05TeleporterDoorScripted02 == 1
+			set state to -1
+		else
+			set state to 1
+		endif
+
+	endif
+
+
+End
+
+Begin GameMode
+	
+
+	;LIGHT & SOUND
+	if state == 1 
+		if myLightRef.getIsID DLC05TeleporterLight01 == 1
+			if lightState != 1
+				myLightRef.playgroup Forward 1
+				mySoundRef.enable
+				set lightState to 1
+			endif
+		endif
+
+	elseif state == -1 
+		if myLightRef.getIsID DLC05TeleporterLight01 == 1
+			if lightState != -1
+				myLightRef.playgroup Backward 1
+				mySoundRef.disable
+				set lightState to -1
+			endif
+		endif
+	endif
+		
+
+	;ANIMATION SCRIPTING----------------------------------------
+	if state == -1
+		;should be powered down, if not make it so
+		if isAnimPlaying != 0
+			if isAnimPlaying Left == 0
+				set animToPlay to 3
+			endif
+		endif
+	else
+		;state is on, if nothing is playing, kick it on
+		if isAnimPlaying == 0										;it's not playing anything
+			if animToPlay == 0 || animToPlay == -999		;it's not deciding to play something
+				set animToPlay to 4
+			endif
+		endif
+	endif
+	
+	;Play the correct animation
+	if animToPlay > 0
+		if animToPlay == 1
+			playgroup SpecialIdle 1
+		elseif animToPlay == 2
+			playgroup Forward 1
+		elseif animToPlay == 3
+			playgroup Left 1			
+		elseif animToPlay == 4
+			playgroup Right 1
+		endif
+		set animToPlay to (0 - animToPlay)	;makes it negative
+	endif
+		
+		
+	;If we are playing a special anim, once it's done, play the normal SpecialIdle
+	if animToPlay == -1
+		;do nothing
+		set animToPlay to -999
+	
+	elseif animToPlay == -2
+		;if the anim is done playing, set it to play the specialidele
+		if isAnimPlaying Forward == 0
+			playgroup SpecialIdle 1
+			set animToPlay to -999
+		endif
+			
+	elseif animToPlay == -3
+		if IsAnimPlaying Left == 0
+			set animToPlay to -999
+		endif
+		
+	elseif animToPlay == -4
+		if IsAnimPlaying Right == 0
+			playgroup SpecialIdle 1
+			set animToPlay to -999
+		endif
+	
+	endif
+	;/ANIMATION SCRIPTING----------------------------------------		
+
+
+End
+
+Begin OnActivate
+	
+	set userRef to getActionRef
+
+	if userRef != player
+		if userRef.getInSameCell player == 1
+			;Do nothing
+		else
+			;I'm activating a door in different cell from the player, so give me a spell effect in case I show up in the cell with the player it looks like I'm teleporting in
+			userRef.addspell DLC05TeleportSpell
+		endif
+
+		set animToPlay to 2			;play the "actively teleporting" anim
+
+		activate userRef
+
+	else		;userRef is player
+		
+		;check to make sure teleporter is active, if not throw a message
+		if state == -1
+			showmessage DLC05MZ3CoreTeleporterMessage
+		
+		else
+			;activate door and play image space mod
+			IMOD DLC05TeleportInISFX
+			set animToPlay to 2
+			
+			;SPECIAL HANDLING---------------------------------------------------------------------
+
+			;door to Maintenance section-----------
+			if getIsReference DLC05hubToSewer01 == 1
+				setStage DLC05MZ2 2
+			endif
+			;/door to Maintenance section-----------
+
+
+			;door to wasteland handling--------------
+			if getIsReference DLC05TeleporterToWasteland == 1
+	
+				DLC05SallyRef.EVP
+				DLC05TercorienREF.EVP
+
+				if ( JerichoRef.HasBeenHired == 1 )
+					if JerichoRef.Waiting == 1
+						set JerichoRef.Waiting to 0
+						JerichoRef.EVP
+					endif
+				endif
+				if ( CharonRef.HasBeenHired == 1 )
+					if CharonRef.Waiting == 1
+						set CharonRef.Waiting to 0
+						CharonRef.EVP
+					endif
+				endif
+				if ( DogmeatRef.HasBeenHired == 1 )
+					if DogmeatRef.Waiting == 1
+						set DogmeatRef.Waiting to 0
+						DogmeatRef.EVP
+					endif
+				endif
+				if ( ButchRef.HasBeenHired == 1 )
+					if ButchRef.Waiting == 1
+						set ButchRef.Waiting to 0
+						ButchRef.EVP
+					endif
+				endif
+				if ( CloverRef.HasBeenHired == 1 )
+					if CloverRef.Waiting == 1
+						set CloverRef.Waiting to 0
+						CloverRef.EVP
+					endif
+				endif
+				if ( RL3Ref.HasBeenHired == 1 )
+					if RL3Ref.Waiting == 1
+						set RL3Ref.Waiting to 0
+						RL3Ref.EVP
+					endif
+				endif
+				if ( MQ08FawkesRef.HasBeenHired == 1 )
+					if MQ08FawkesRef.Waiting == 1
+						set MQ08FawkesRef.Waiting to 0
+						MQ08FawkesRef.EVP
+					endif	
+				endif
+				if ( StarPaladinCrossRef.HasBeenHired == 1 )
+					if StarPaladinCrossRef.Waiting == 1 
+						set StarPaladinCrossRef.Waiting to 0
+						StarPaladinCrossRef.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bBooneHired == 1 )
+					if CraigBooneREF.Waiting == 1 
+						set CraigBooneREF.Waiting to 0
+						CraigBooneREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bCassHired == 1 )
+					if RoseofSharonCassidyREF.Waiting == 1 
+						set RoseofSharonCassidyREF.Waiting to 0
+						RoseofSharonCassidyREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bVeronicaHired == 1 )
+					if VeronicaREF.Waiting == 1 
+						set VeronicaREF.Waiting to 0
+						VeronicaREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bLilyHired == 1 )
+					if LilyREF.Waiting == 1 
+						set LilyREF.Waiting to 0
+						LilyREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.RaulHired == 1 )
+					if RaulREF.Waiting == 1 
+						set RaulREF.Waiting to 0
+						RaulREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.ArcadeHired == 1 )
+					if ArcadeREF.Waiting == 1 
+						set ArcadeREF.Waiting to 0
+						ArcadeREF.EVP
+					endif
+				endif
+				if ( vNPCFollowers.bEDEHired == 1 )
+					if EDE1Ref.GetDisabled == 0
+						if EDE1Ref.Waiting == 1 
+							set EDE1Ref.Waiting to 0
+							EDE1Ref.EVP
+						endif
+					elseif EDE2Ref.GetDisabled == 0
+						if EDE2Ref.Waiting == 1 
+							set EDE2Ref.Waiting to 0
+							EDE2Ref.EVP
+						endif
+					elseif EDE3Ref.GetDisabled == 0
+						if EDE3Ref.Waiting == 1 
+							set EDE3Ref.Waiting to 0
+							EDE3Ref.EVP
+						endif
+					endif
+				endif
+				if ( vNPCFollowers.RexHired == 1 )
+					if RexREF.Waiting == 1 
+						set RexREF.Waiting to 0
+						RexREF.EVP
+					endif
+				endif
+
+;check stage in MQ09; if player hasn't left yet, enable radio again
+;otherwise check RRDestroy var
+	
+				if ( GetStage MQ09 < 60 )
+					RadioEnclaveRef.Enable
+				else
+					if ( MQ09.RRDestroy == 0 )
+						RadioEnclaveRef.Enable
+					endif
+				endif
+
+;check whether player did MQ02 or not, and enable the proper ref
+
+				if ( GNRDishDone == 0 )
+					RadioGalaxyNewsRef01.Enable
+				elseif ( GNRDishDone == 1 )
+					RadioGalaxyNewsRef02.Enable
+				endif
+
+;Re-enable Agatha's station if that was running prior to entering the sim
+
+				if ( GetStageDone MS17 100 == 1 )
+					MS17RadioRef.Enable
+				endif
+
+;finally, check if MS16 is running. If so, re-enable radio ref
+
+				if ( DLC05MZ1.DLC05MS16Check == 1 )
+					MS16Vault101ExternalRadioREF.Enable
+				elseif ( DLC05Post.DLC05PQMS16Check == 1 )
+					MS16Vault101ExternalRadioREF.Enable
+				endif
+
+				if ( DLC05Post.DLC05PQPlayerLeft == 0 )
+					Set DLC05Post.DLC05PQPlayerLeft to 1
+					if ( DLC05PaulsonRef.GetDisabled == 0 )
+						if ( DLC05PaulsonRef.GetDead == 0 )
+							DLC05PaulsonRef.Disable
+						endif
+					endif
+					if ( DLC05SomahRef.GetDisabled == 0 )
+						if ( DLC05SomahRef.GetDead == 0 )
+							DLC05SomahRef.Disable
+						endif
+					endif
+				endif
+			
+			endif
+			;/door to wasteland handling--------------
+			
+			;core scene handling--------------------------
+			if getIsReference DLC05SewertoCoreRef == 1 || DLC05TeleportDoorSewer01toCoreRef == 1
+
+				;If the player has found teh sword, or the third generator has been destroyed, disable the samurai
+				if ( DoOnce == 0 )
+					if ( DLC05Conversations.DLC05SwordFound == 2 )
+						DLC05SamuraiRef.Disable
+						Set DLC05MZ2.MZ2SamuraiGone to 1
+						setstage DLC05SamuraiScenes 5		;handles the sword if player hasn't found it yet
+						Set DoOnce to 1
+						elseif ( DLC05MZ2.MZ2ThirdGenerator == 1 )
+						DLC05SamuraiRef.Disable
+						set DLC05MZ2.MZ2SamuraiGone to 1
+						setstage DLC05SamuraiScenes 5		;handles the sword if player hasn't found it yet
+						set DoOnce to 1
+					endif
+				endif
+
+				;the first time you go through this door, back into the engine core, and DLC05FF01.coreStage == 1, the core alien scene will start
+				if (DLC05FF01.coreStage == 1)
+					if (DLC05CoreScene.running == 0)
+						setstage DLC05CoreScene 1
+					endif
+				endif
+
+				;the third time you enter the engine core after either destroying a generator or exploring the cell
+				;   two aliens will spawn and attack the survivors.  The following script will make sure that they
+				;   spawn on the opposite side of the engine core as the player
+				if (DLC05FF01.CoreStage == 3)
+					;Player comes from Sewer Bay
+					if (getIsReference DLC05SewertoCoreRef == 1)
+						set DLC05FF01.playerFromSewer to 1
+					endif
+				endif
+
+			endif
+			;/core scene handling---------------------------
+
+			;/SPECIAL HANDLING---------------------------------------------------------------------
+
+			activate userRef		;player
+
+		endif
+	endif
+
+End
+
+
+
+;---------------TRIGGER
+
+Begin OnTriggerEnter
+	set triggerRef to getActionRef
+
+	;apply spell effects - player gets a glow, others are assumed to be teleporting
+	if triggerRef == player
+		if state != -1
+			triggerRef.cios DLC05TeleportGlowSpell
+		endif
+	
+	elseif state != -1		;triggerRef is not the player
+	
+		if triggerRef.isSpellTarget DLC05TeleportSpell		
+			;then do nothing because he already has effects for the "teleporting in"
+
+		else
+			;otherwise, give him "teleporting out" effects
+			triggerRef.cios DLC05TeleportOutSpell
+
+		endif
+
+	endif
+End
+
+Begin OnTriggerLeave
+	set triggerRef to getActionRef
+
+	;remove spell effects applied when entering
+	if triggerRef == player
+		triggerRef.dispel DLC05TeleportGlowSpell
+
+	else
+		triggerRef.dispel DLC05TeleportOutSpell
+		saa 1
+	endif
+
+End

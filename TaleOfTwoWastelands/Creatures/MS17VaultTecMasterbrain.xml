@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0601EE61">MS17VaultTecMasterbrain</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS17VaultTecMasterbrain</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-119</X>
+        <Y>-125</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>119</X>
+        <Y>125</Y>
+        <Z>430</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Masterbrain</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Robobrain\skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88F">RobobrainDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>brain.nif</Entry>
+      <Entry>lefttrack.nif</Entry>
+      <Entry>righttrack.nif</Entry>
+      <Entry>robobrian.nif</Entry>
+      <Entry>vaulttecdecal.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">BQAAAAPu6QlyGsG+iG5pCXIfwb6IbmkcdK8QycTu3wty34DnxG5fC3LkgOfEbmkcdK8QycTz3wty34DnxHNfC3LkgOfEbmkcdK8QycQF7ukJchrBvohuaQlyH8G+iG5pHHSvEMnE7t8Lct+A58RuXwty5IDnxG5pHHSvEMnE898Lct+A58RzXwty5IDnxG5pHHSvEMnE5d8Nc6saOn9lXw1zsBo6f3N0EHSz4clt7eUMcoqZ3/BtZQxyj5nf8G5pHHSvEMnEBe7pCXIawb6IbmkJch/BvohuaRx0rxDJxO7fC3LfgOfEbl8LcuSA58RuaRx0rxDJxPPfC3LfgOfEc18LcuSA58RuaRx0rxDJxOXfDXOrGjp/ZV8Nc7AaOn9zdBB0s+HJbe3lDHKKmd/wbWUMco+Z3/BuaRx0rxDJxA7u6QlyGsG+iG5pCXIfwb6IbmkcdK8QycTu3wty34DnxG5fC3LkgOfEbmkcdK8QycTz3wty34DnxHNfC3LkgOfEbmkcdK8QycTl3w1zqxo6f2VfDXOwGjp/c3QQdLPhyW3t5Qxyipnf8G1lDHKPmd/wbmkcdK8QycTw4Qxo+/QCN3BhDGgA9QI3ZXINdDh6OHHu3w5oStIFHW5fDmhP0gUdZXINdDh6OHHz3w5oStIFHXNfDmhP0gUdZXINdDh6OHHz8w5yB542tXNzDnIMnja1bmkcdK8QycTu3xByx7nv725fEHLMue/vbmkcdK8QycTz3xByx7nv73NfEHLMue/vbmkcdK8QycSxsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHED7OEOdoZb+BpsYQ52i1v4Gm5pHHSvEMnE7t8QdlGjGtVuXxB2VqMa1W5pHHSvEMnE898QdlGjGtVzXxB2VqMa1W5pHHSvEMnE</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, NoKnockdowns</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>6</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseStats, UseActorEffectList, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00074EF6">MS17MechanizedFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95C">DeathItemRobobrain75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FDE">RobotRoboBrain02</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0001CF89">CrRobobrain</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="06074727">MS17MasterbrainInternalScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029377">AmmoSmallEnergyCell75</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00050ED0">RobobrainLaser1HPRight</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000B0279">RobotFissionBattery20</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000BF5A4">RobobrainMesmetron</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>75</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06074721">MS17MasterbrainPatrol</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>1hpleft_aim.kf</Entry>
+      <Entry>1hpleft_attackleft.kf</Entry>
+      <Entry>1hpleft_attackleftdown.kf</Entry>
+      <Entry>1hpleft_attackleftup.kf</Entry>
+      <Entry>1hpleft_equip.kf</Entry>
+      <Entry>1hpleft_unequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>125</Health>
+      <Damage>5</Damage>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A383">CSRoboBrain</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0002E7AF">Robobrainbodypartdata</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">100</TurningSpeed>
+    <BaseScale Tag="BNAM">0.330000013</BaseScale>
+    <FootWeight Tag="WNAM">20</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0005CC52">AudioTemplateRobotRobobrain</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

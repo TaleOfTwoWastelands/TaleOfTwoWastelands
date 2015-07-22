@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="000331DA">MS03Perk2D</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS03Perk2D</EditorID>
+    <Name Tag="FULL">Survival Expert</Name>
+    <Description Tag="DESC">You've been tested in some of the most dangerous parts of the wastes, and you've not only survived - you've learned a few things. You've gained +4% bonus to Poison Resistance &amp; Radiation Resistance, 4 points to both the Speech and Sneak skills, and 6 points to the Survival skill.</Description>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Perks\Perk_Survival Expert.dds</Large>
+    </Icon>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0006F599">MS03PerkSlySurvivalExpert</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

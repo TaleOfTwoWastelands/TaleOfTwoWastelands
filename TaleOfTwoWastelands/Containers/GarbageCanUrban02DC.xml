@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>NavMeshGenerationBoundingBox</Flags>
+  <FormID ID="0601CF65">GarbageCanUrban02DC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">GarbageCanUrban02DC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-21</X>
+        <Y>-25</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>22</X>
+        <Y>20</Y>
+        <Z>85</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Garbage Can</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\GarbageCan\GarbageCanUrban02.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbARZ9Vkaz0xMBFn2mRrPW5hG3SB+u4R7t8TZ9boToNuXxNn2+hOg25hG3SB+u4R898TZ9boToNzXxNn2+hOg25hG3SB+u4R</TextureFileHash>
+    </Model>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0603787A">ClutterOffice15DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06059A9A">ClutterOfficeB15DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <OpenSound Tag="SNAM">
+      <Reference ID="000179E1">DRSTrashCanOpen</Reference>
+    </OpenSound>
+    <CloseSound Tag="QNAM">
+      <Reference ID="000179E2">DRSTrashCanClose</Reference>
+    </CloseSound>
+    <Random_LoopingSound Tag="RNAM">
+      <Reference ID="0014EFBC">EMTTrashCanFlies</Reference>
+    </Random_LoopingSound>
+  </Subrecords>
+</Record>

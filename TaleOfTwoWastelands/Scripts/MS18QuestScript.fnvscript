@@ -1,0 +1,156 @@
+scn MS18QuestScript
+
+short TalkedBarrows																;When this flag is set to 1, the player may attempt to awaken Reilly with proper skill
+short ReillyNeg																	;When flag is set to 1, Reilly is angry at player (for dialog)
+short ProposalDone																;When flag is set to 1, Reilly is primed for proposal (for dialog)
+short BarrowsActive																;When flag is set to 1, Doc Barrows will forcegreet Player after activating Reilly
+short DonCell																		;When flag is set to 1, Donovan has the Cell and kicks off his repair package
+short RoofReady																	;When flag is set to 1, the Rangers on the roof of the hotel get ready for player
+short AllMove																		;When flag is set to 1, the Rangers on the roof move through elevator to ambush markers
+short Ambush																		;Each time a Ranger gets to a given X-Marker it adds 1 to this flag. At 3, the ambush begins (when player in range)
+short ButcherTalk																	;When flag is set to 1, Butcher will enter into a Dialog package at the conclusion of the Ambush
+short ButcherDead																;When flag is set to 1, Butcher has died
+short DonDead																		;When flag is set to 1, Donovan has died
+short BrickDead																	;When flag is set to 1, Brick has died
+short EndEarly																		;When flag is set to 1, the quest has terminated early because all the Rangers have died
+short AmbushCounter																;Each time an Ambush Mutant is killed it adds 1 to this flag.  At 5, the Ambush has ended and all Mutants have been killed.
+short DocRevive																	;Kicks off Doc Barrow's AI package to revive Reilly
+short AltReward																	;1=If the player selected an alternate reward (other than armor)
+short EndAIButcher																;1=A condition limiter for AI packages on Butcher
+short EndAIBrick																	;1=A condition limiter for AI packages on Brick
+short EndAIDonovan																;1=A condition limiter for AI packages on Donovan
+short EquipCheck																	;1=Player has entered Ranger Compound
+short Sidearm																		;1=Equip all of the Rangers with Pistols on the fly
+short Order																			;1=Player started the quest at the Rangers
+short Fixed																			;1= Elevator on roof has been repaired
+short DoneWalk																	;1= Doc Barrows has completed his travel to Reilly
+short Waypoint																		;1= Quest Target assistance
+short Battery																		;1= Player has one or more batteries
+short DonFixed																		;1= Donovan fixed the elevator
+short DeadMode																	;1= All Rangers Killed handling for Hostile
+short AmmoGivenBrick															;1= Loaded with ammo
+short AmmoGivenButcher														;1= Loaded with ammo
+short AmmoGivenDon															;1= Loaded with ammo
+
+float FixitTimer																		;x= Delay for Donovan's Fixing Animation
+
+
+short MS18Good
+short MS18Bad																	;1= All rangers dead
+
+begin gamemode
+
+;This block handles if the Rangers are all killed early
+	
+	if ( EndEarly == 0 )
+		if ( ButcherDead == 1 ) && ( DonDead == 1 ) && ( BrickDead == 1 )		;All Rangers are dead
+			ShowMessage MS18RangersDeadMsg									;Make a message box
+			SetStage MS18 50																;Set Player to immediately return to Reilly
+			SetObjectiveDisplayed MS18 5 0
+			SetObjectiveDisplayed MS18 20 0
+			SetObjectiveDisplayed MS18 25 0
+			SetObjectiveDisplayed MS18 28 0
+			SetObjectiveDisplayed MS18 30 0
+			SetObjectiveDisplayed MS18 40 0
+			set EndEarly to 1																;Set Flag
+		endif
+	endif
+
+;This block will handle Fission Battery pickup
+
+	if ( Battery == 0 )
+		if ( GetStage MS18 >= 30 )
+			if ( Player.GetItemCount FissionBattery >= 1 )
+				SetObjectiveCompleted MS18 25 1
+				SetObjectiveDisplayed MS18 28 1
+				Set Battery to 1
+			endif
+		endif
+	endif
+
+;This block will equip the Rangers with Sidearms when the flag is set
+
+	if ( Sidearm == 1 )
+		if ( GetStage MS18 >= 30 )
+			BrickRef.AddItemHealthPercent Weap10mmPistol 1 .6
+			BrickRef.AddItem Ammo10mm 10
+			DonovanRef.AddItemHealthPercent Weap10mmPistol 1 .5
+			DonovanRef.AddItem Ammo10mm 10
+			ButcherRef.AddItem Ammo44magnum 10
+			ButcherRef.AddItemHealthPercent Weap44MagnumScoped 1 .5
+			Set Sidearm to 2
+		endif
+	endif
+
+;This block handles the triggering of Stage 20
+
+	if ( GetStage MS18 == 10 )
+		if ( Player.GetInCell OurLadyHope01 )
+			SetStage MS18 20
+		endif
+	endif
+
+;This block advances the quest once the Ambush Counter reaches 5
+
+	if ( AmbushCounter == 5 )															;5 Mutants have been slain
+		SetStage MS18 50
+		Set AmbushCounter to 6															
+	endif
+
+;This block is an emergency override for Butcher, in case player misses his Dialog Package
+
+	if ( ButcherTalk == 2 )
+		if ( GetStage MS18 >= 50 )
+			if ( Player.GetInCell StatesmanHotel01 == 0 )
+				ButcherRef.Disable
+				ButcherRef.Moveto MS18FinButcherRef
+				Set MS18.EndAIButcher to 1
+				Set MS18.ButcherTalk to 3
+			endif
+		endif
+	endif
+
+;This block is the timer for Donovan's fixing animation
+
+	if ( DonCell == 2 ) && Fixed == 0
+		if ( FixitTimer > 0 )
+			Set FixitTimer to ( FixitTimer - GetSecondsPassed )
+		else
+			set Fixed to 1
+			MS18PanelRef.Playgroup Forward 1
+			Playsound3D AMBElevatorMonumentPowerUp
+			SetStage MS18 40
+			Set AllMove to 1
+			DonovanRef.Evp
+			ButcherRef.Evp
+			BrickRef.Evp
+		endif
+	endif
+
+;This block is a bit of handling if the Player kills Reilly before taking the quest or before getting to the location
+
+	if ( DeadMode == 1 )
+		BrickRef.Kill
+		DonovanRef.Kill
+		ButcherRef.Kill
+		Set DeadMode to 2
+	endif
+
+;This block clears the gearing up Objective if the Player goes to Ranger Compound before entering the Statesman
+;If the Player gets to the Statesman Hotel and Speaks to Butcher without having done the Objective, remove it
+
+	if ( EquipCheck == 0 )
+		if ( GetStage MS18 < 30 )
+			if ( Player.GetInCell zDCint12RangerCompound == 1 )
+				SetObjectiveCompleted MS18 12 1
+				Set EquipCheck to 1
+			endif
+		elseif ( GetStage MS18 >= 30 )
+			if ( GetObjectiveCompleted MS18 12 == 0 )
+				SetObjectiveDisplayed MS18 12 0
+				Set EquipCheck to 1
+			endif
+		endif
+	endif
+
+end

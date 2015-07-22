@@ -1,0 +1,10 @@
+scn ChallengeThreeStarSCRIPT
+
+BEGIN ScriptEffectStart
+	SetStage AchievementQuest 9	; 1000
+	set NVDLC05MQ00.nThreeStarChallengesCompleted to (NVDLC05MQ00.nThreeStarChallengesCompleted + 1);
+	if (NVDLC05MQ00.nThreeStarChallengesCompleted >= 3) && (NVDLC05MQ00.bThreeStarChallengeAchievementGiven != 1)
+		AddAchievement 75;
+		set NVDLC05MQ00.bThreeStarChallengeAchievementGiven to 1;
+	endif
+END

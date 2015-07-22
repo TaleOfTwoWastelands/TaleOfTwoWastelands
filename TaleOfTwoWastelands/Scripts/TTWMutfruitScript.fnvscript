@@ -1,0 +1,33 @@
+scn TTWMutfruitScript
+
+int State
+
+
+begin onActivate
+	if State == 0 && GetActionRef == player
+		if (GetIsID TTWMutfruitPlant01Pickable) || (GetIsID TTWMutfruitPlant02Pickable)
+			player.additem Mutfruit1 2
+		elseif (GetIsID TTWMutfruitVine01Pickable) || (GetIsID TTWMutfruitVine02Pickable)
+			player.additem Mutfruit2 2
+		endif
+		set State to 1
+		playGroup Backward 1
+		setdestroyed 1
+	endif
+end
+
+begin onLoad
+	if State == 0
+		playGroup Forward 1
+	elseif State == 1
+		playGroup Backward 1		
+	endif
+end
+
+begin onReset
+	if State == 1
+		playgroup Backward 1
+		set State to 0
+		setdestroyed 0
+	endif
+end

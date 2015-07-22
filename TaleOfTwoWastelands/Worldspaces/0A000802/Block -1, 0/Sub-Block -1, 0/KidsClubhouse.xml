@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0A00083B">KidsClubhouse</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">KidsClubhouse</EditorID>
+    <CellFlags Tag="DATA">HasWater</CellFlags>
+    <Grid Tag="XCLC">
+      <X>-3</X>
+      <Y>4</Y>
+      <ForceHideLand>0</ForceHideLand>
+    </Grid>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">3.40282347E+38</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <Regions Tag="XCLR">
+      <Forms>
+        <Form ID="0A005845">DLC04SwampWeather</Form>
+        <Form ID="0A00CF0E">DLC04WorldBorder</Form>
+        <Form ID="0A010EEB">AudioExtDLC04General</Form>
+        <Form ID="0A0113F2">DLC04LighthouseWeather</Form>
+      </Forms>
+    </Regions>
+    <Water Tag="XCWT">
+      <Reference ID="0A004831">DLC04SwampWater01</Reference>
+    </Water>
+  </Subrecords>
+</Record>

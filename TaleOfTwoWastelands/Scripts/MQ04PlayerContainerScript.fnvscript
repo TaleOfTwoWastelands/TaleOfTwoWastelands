@@ -1,0 +1,56 @@
+ScriptName MQ04PlayerContainerScript
+
+short doonce
+
+;When player is back in Vault 112 after being in Tranquility Lane, put all objects back in his inventory
+;Also script player's pod and Dad's pod to open
+
+
+Begin GameMode
+	if ( DoOnce == 1 )
+		ResetPipboyManager	;reset manager frame after we get the pipboy back
+		set DoOnce to 2
+	endif
+
+	if ( Doonce == 0 )
+		if ( GetStage MQ04 > 10 )
+			if ( Player.GetinCell Vault112a == 1 )
+				set doonce to 1
+
+				disableplayercontrols 0 1 0 0 0 0 0
+				Player.AgeRace 1
+				setPCYoung 0
+				Player.unequipitem MQ04PlayerOutfit 0 1
+				Player.Removeitem MQ04PlayerOutfit 1 1
+				Player.RemoveAllItems 			;pull everything off the player he may have acquired in TL
+				RemoveAllItems Player 0 1				;pull everything out of this container and put it back in player inventory
+
+			;re-enable GNR and Enclave Radio Broadcast Refs
+				RadioEnclaveRef.Enable
+				if ( GNRDishDone == 0 )
+					RadioGalaxyNewsRef01.Enable
+				elseif ( GNRDishDone == 1 )
+					RadioGalaxyNewsRef02.Enable
+				endif
+
+
+
+				Player.EquipItem VaultSuit112 0 1
+				Player.Additem Pipboy 1 1
+				player.AddItem PipboyGlove 1 1
+				Player.EquipItem PipboyGlove 1 1
+				Set MQ04.PlayerInTL to 0
+				MQ04DadPodShellRef.PlayGroup Forward 1
+				MQ04PlayerPodShellRef.PlayGroup Forward 1
+				MQ04PlayerPodShellRef.PlaySound OBJTranquilityLanePodOpen2D
+				Set MQ04.DadGreet to 1
+				MQDadRef.SetGhost 0
+				MQDadRef.SetUnconscious 0
+				Vault112SecretHatchREF.SetOpenState 1
+				MQDadRef.EVP
+			endif
+		endif
+	endif
+
+
+End

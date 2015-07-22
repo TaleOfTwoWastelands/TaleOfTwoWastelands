@@ -1,0 +1,467 @@
+ScriptName DLC05MZ1QuestScript
+
+
+;handling for DLC05MZ1
+
+
+short DLC05MessageRan
+short DLC05Abducted
+
+short DLC05MZ1ClawFlag				;flag used to track whether claw has gone past, used in dialogue and anim scripting
+
+short DLC05MZ1Fight 					;flag set to 1 when player agrees to fight Somah
+short DLC05MZ1Attack					;flag set if player didn't agree to fight Somah but started fight on his own
+short DLC05MZ1FightOb					;incremented to update objective as fight progresses
+
+short DLC05MZ1GeneratorConv		;incremented as we step through lines about the generator
+
+short DLC05MZ1AbductionImod		;incremented as we run imagespace mods during abduction
+short DLC05MZ1AbductionHappy 			;incrimented as happy place objects are swapped
+
+short DLC05MZ1SomahFree			;flag set when the alien guards are down and the cell is free
+short DLC05MZ1SomahName			;flag set if player bothers to ask Somah about herself
+
+short DLC05MZ1SallyDoor				;flag set when Sally goes to open the door
+short DLC05MZ1SallyCoreUpdate		;flag set when player or Sally hits trigger in engine core cell, used for package update
+
+short DLC05MS16Check
+
+
+short frameWait
+
+float DLC05MZ1ClawTimer				;timer used to control dialogue/packages for claw animation
+float DLC05MessageTimer
+float DLC05AbductionTimer
+float DLC05MZ1SallyDoorTimer
+float RadioTimer
+
+
+
+ref fxRef
+
+short init										;"Do Once" setting up various book keeping tasks that need to be done when the DLC first runs
+
+Begin GameMode
+
+;====INIT=====
+;add various things to form lists, etc.
+
+if init == 0
+	;RockitLauncherAmmo:
+	addFormToFormlist RockItLauncherAmmo DLC05AlienCrystalLarge
+	addFormToFormlist RockItLauncherAmmo DLC05AlienCrystalSmall
+	addFormToFormlist RockItLauncherAmmo DLC05ButtercupToy
+
+	addFormToFormList RepairCombatArmor DLC05ArmorCombatMedic 
+	addFormToFormList RepairCombatArmorHelmet DLC05ArmorCombatHelmet 
+
+	set init to 1
+endif
+
+;============
+
+;---------Radio Beacon----------------
+
+	if DLC05AlienRadioBeaconRef.GetDisabled == 0
+		if Radiotimer > 0
+			set Radiotimer to Radiotimer - GetSecondsPassed
+		else
+			DLC05AlienRadioBeaconREF.startRadioConversation
+			set Radiotimer to 7
+		endif
+	endif
+
+
+; if Enclave Radio ref has been enabled, it means the player is out of the vault, which means it's time to run the message box
+
+	if ( DLC05MessageRan == 0 )
+		if ( RadioEnclaveRef.GetDisabled == 0 )
+
+			Set DLC05MessageRan to 1
+			set DLC05MessageTimer to 60
+		elseif ( GetStage MQ09 >= 60 )
+			Set DLC05MessageRan to 1
+			Set DLC05MessageTimer to 60
+		endif
+	elseif ( DLC05MessageRan == 1 )
+		if ( DLC05MessageTimer <= 0 )
+			AlienRadioBeaconREF.Disable
+			ShowMessage DLC05StartMessage
+			SetStage DLC05MZ1 10
+			Set DLC05MessageRan to 2
+		else
+			set DLC05MessageTimer to ( DLC05MessageTimer - GetSecondsPassed )
+		endif
+		
+	endif
+
+
+;beam the player up to the ship the first time he goes near Recon Craft Theta after loading DLC
+
+	if ( DLC05Abducted == 0 ) ;Freeze player and add effects
+		if ( Player.GetDistance AlienRadioBeaconREF < 1000 )
+			if (frameWait == 0 )
+
+				imod DLC05BeamUpISFX
+
+				DisablePlayerControls 1 1 1 1 1 1 1
+
+				if ( MS16Vault101ExternalRadioREF.GetDisabled == 0 )
+					Set DLC05MS16Check to 1
+				endif
+
+
+;While we're here, set any followers to Waiting
+
+				if ( JerichoRef.HasBeenHired == 1 )
+					set JerichoRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( CharonRef.HasBeenHired == 1 )
+					set CharonRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( DogmeatRef.HasBeenHired == 1 )
+					set DogmeatRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( ButchRef.HasBeenHired == 1 )
+					set ButchRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( CloverRef.HasBeenHired == 1 )
+					set CloverRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( RL3Ref.HasBeenHired == 1 )
+					set RL3Ref.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( MQ08FawkesRef.HasBeenHired == 1 )
+					set MQ08FawkesRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( StarPaladinCrossRef.HasBeenHired == 1 )
+					set StarPaladinCrossRef.Waiting to 1
+					set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.bBooneHired == 1 )
+					set CraigBooneREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.bCassHired == 1 )
+					set RoseofSharonCassidyREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.bVeronicaHired == 1 )
+					set VeronicaREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.bLilyHired == 1 )
+					set LilyREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.RaulHired == 1 )
+					set RaulREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.ArcadeHired == 1 )
+					set ArcadeREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+				if ( vNPCFollowers.bEDEHired == 1 )
+					if EDE1Ref.GetDisabled == 0
+						set EDE1Ref.Waiting to 1
+						set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+					elseif EDE2Ref.GetDisabled == 0
+						set EDE2Ref.Waiting to 1
+						set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+					elseif EDE3Ref.GetDisabled == 0
+						set EDE3Ref.Waiting to 1
+						set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+					endif
+				endif
+				if ( vNPCFollowers.RexHired == 1 )
+					set RexREF.Waiting to 1
+					set vNPCFollowers.fFollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				endif
+
+
+;specifically remove any unarmed weapons so they don't interfere with animation
+
+				Player.RemoveAllTypedItems DLC05PlayerContainerREF 1 1 40
+
+;place fx and start the animation sequence
+
+				set fxRef to player.PlaceAtMe DLC05FXBeamMeUp 1, 0, 0	 ;Mark's FX stuff-----------------------------------------------			
+				fxRef.setAngle z 0
+				fxRef.setAngle y 0
+				fxRef.setAngle x 0
+				DLC05RadDisableMarker.Disable
+				set frameWait to 1
+
+				imod DLC05AbductionISFX  ;Mark's FX stuff-----------------------------------------------
+
+			elseif (frameWait < 10 )  ;Mark's FX stuff-----------------------------------------------
+				set frameWait to ( frameWait + 1)
+
+			elseif (frameWait == 10 )  ;Mark's FX stuff-----------------------------------------------
+				fxRef.moveTo player
+				player.pms DLC05BeamUpFXShader
+				fxRef.pms DLC05BeamUpFXShader
+				fxRef.playgroup forward 1
+				set frameWait to 11
+			elseif ( frameWait > 10 && frameWait < 40 )
+				set frameWait to ( frameWait + 1)
+				fxRef.moveTo player
+			elseif (frameWait == 40 )
+				Set DLC05Abducted to 1
+			endif
+
+		endif
+	elseif ( DLC05Abducted == 1 )
+		if ( fxRef.isAnimPlaying == 0)
+			Player.addscriptpackage dlc05playerabductionpackage
+			set dlc05abductiontimer to 27
+			set DLC05Abducted to 2
+
+			fxRef.playgroup backward 1
+
+		else
+			set DLC05AbductionTimer to ( DLC05AbductionTimer - GetSecondsPassed )
+		endif
+	elseif ( DLC05Abducted == 2 )
+		if ( DLC05AbductionTimer <= 5 )
+			if ( DLC05MZ1AbductionImod == 0 )
+				set DLC05MZ1AbductionImod to 1
+
+			endif
+		endif
+
+		if ( DLC05AbductionTimer <= 0 )
+			Player.sms DLC05BeamUpFXShader
+			Player.RemoveScriptPackage DLC05PlayerAbductionPackage
+
+;disable wasteland radio stations for the duration of the player's stay onboard
+
+			if ( RadioGalaxyNewsRef01.GetDisabled == 0 )
+				RadioGalaxyNewsRef01.Disable
+			endif
+			if ( RadioGalaxyNewsRef02.GetDisabled == 0 )
+				RadioGalaxyNewsRef02.Disable
+			endif
+			if ( MS16Vault101ExternalRadioREF.GetDisabled == 0 )
+				MS16Vault101ExternalRadioREF.Disable
+			endif
+			RadioEnclaveRef.Disable
+			if ( MS17RadioRef.GetDisabled == 0 )
+				MS17RadioRef.Disable
+			endif
+
+				
+
+
+			PipBoyRadioOff
+			SetNoActivationSound QSTDLC05ProbeStruggle
+			Player.Moveto DLC05PlayerStartMarker
+			fxRef.disable 1 ;clean up beam up stuff-----------------------------------------------------
+			rimod  DLC05AbductionISFX  ;Mark's FX stuff-------------------------------------------------------
+			imod DLC05FadeInButtProbeISFX ;Mark's FX stuff-----------------------------------------------
+			imod DLC05AlienBlurISFX  ;Mark's FX stuff-----------------------------------------------
+			DLC05MZ1AnimationAlien1REF.EVP
+			DLC05MZ1AnimationAlien2REF.EVP
+			DLC05MZ1AnimationAlien3REF.EVP	
+			Player.RemoveAllItems DLC05PlayerContainerREF 1
+			set DLC05Abducted to 3
+			set DLC05AbductionTimer to 1
+
+		else
+			set DLC05AbductionTimer to ( DLC05AbductionTimer - GetSecondsPassed )
+		endif
+
+	elseif ( DLC05Abducted == 3 )
+		if ( Player.GetDistance DLC05PlayerStartMarker < 50 )
+			if ( Player.HasLoaded3D == 1 )
+				if ( DLC05AbductionTimer <= 0 )
+					set DLC05Abducted to 4
+					set DLC05AbductionTimer to 56
+				else
+					set DLC05AbductionTimer to ( DLC05AbductionTimer - GetSecondsPassed )
+				endif
+			endif
+		endif
+
+;run all the animations here
+
+	elseif ( DLC05Abducted == 4 )
+		DLC05MZ1AnimationAlien1REF.Moveto DLC05MZ1Alien1StartMarker
+
+		DLC05MZ1AnimationAlien2REF.Moveto DLC05MZ1Alien2StartMarker
+
+		DLC05MZ1AnimationAlien3REF.Moveto DLC05MZ1Alien3StartMarker
+
+		Set DLC05Abducted to 5
+
+	elseif ( DLC05Abducted == 5 )
+		DLC05MZ1AnimationAlien1REF.EVP
+		DLC05MZ1AnimationAlien2REF.EVP
+		DLC05MZ1AnimationAlien3REF.EVP	
+		DLC05MZ1TortureDeviceREF.Playgroup forward 1
+		Player.addscriptpackage DLC05Playeranimationscenepackage
+		set DLC05Abducted to 6
+	elseif ( DLC05Abducted == 6 )
+		if ( DLC05AbductionTimer <= 24 )
+			if ( DLC05MZ1AbductionImod == 1 )
+				fxRef.markForDelete ;clean up beam up stuff----------------------------------------------------------
+				imod DLC05FadeOutButtProbeISFX ;Mark's fx -------------------------------------------------------
+				set DLC05MZ1AbductionImod to 2
+			endif
+		endif
+		if ( DLC05AbductionTimer <= 12 )  ;Mark's FX stuff-----------------------------------------------
+			if ( DLC05MZ1AbductionHappy == 0 )
+;-------
+;This was the spot where the birthday stuff would pop up I left the surrounding code here for placing the pain sfx
+;--------
+				set DLC05MZ1AbductionHappy to 1
+			endif
+		endif  ;Mark's FX stuff-----------------------------------------------
+
+		if ( DLC05AbductionTimer <= 0 )
+			Player.removescriptpackage DLC05Playeranimationscenepackage
+			ClearNoActivationSound
+			Player.Moveto DLC05PlayerHoldingCellMarker
+;			EnablePlayerControls
+			rimod DLC05AlienBlurISFX  ;Mark's FX stuff-----------------------------------------------
+			imod FadeInFromWhiteISFX  ;Mark's FX stuff-----------------------------------------------
+			DLC05SomahRef.SayTo Player DLC05MZ1SomahInitGreet
+			set DLC05Abducted to -1
+		else
+			set DLC05AbductionTimer to ( DLC05AbductionTimer - GetSecondsPassed )
+		endif
+	endif
+
+;TEMP
+
+
+;Run a timer while the claw is animating
+;DLC05MZ1ClawFlag is set in Somah's dialogue
+
+	if ( DLC05MZ1ClawFlag == 1 )
+		set DLC05MZ1ClawTimer to 20 
+		set DLC05MZ1ClawFlag to 2
+	elseif ( DLC05MZ1ClawFlag == 2 )
+		if ( DLC05MZ1ClawTimer <= 0 )
+			Set DLC05MZ1ClawFlag to -1
+		else
+			set DLC05MZ1ClawTimer to ( DLC05MZ1ClawTimer - GetSecondsPassed )
+		endif
+	endif
+
+
+
+
+;update quest for sequence with Somah and the guards
+
+	if ( DLC05MZ1Fight == 1 )
+		if ( DLC05MZ1Attack == 0 )
+			if ( DLC05MZ1FightOb == 0 )
+				SetObjectiveCompleted DLC05MZ1 10 1
+				SetObjectiveDisplayed DLC05MZ1 25 1
+				set DLC05MZ1FightOB to 1
+			endif
+		endif
+		if ( DLC05MZ1AlienGuardRef1.GetDistance DLC05MZ1AlienGuard1Marker < 50 )
+			if ( DLC05SomahRef.GetDead == 0 )
+				DLC05ClawNPCRef.Disable
+				DLC05MZ1AlienGuardRef1.SayTo Player DLC05MZ1AlienGuardLine
+				set DLC05MZ1Fight to 2
+			else
+				set DLC05MZ1Fight to 3
+			endif
+		endif
+	elseif ( DLC05MZ1Fight == 3 )
+		DLC05PlayerHoldingCellActivatorREF.Activate Player
+		set DLC05PlayerHoldingCellActivatorREF.State to 1
+		DLC05PlayerHoldingCellActivatorREF.Playgroup forward 1
+		DLC05MZ1AlienGuardRef1.SetAV Aggression 2
+		DLC05MZ1AlienGuardRef2.SetAV Aggression 2
+
+		set DLC05MZ1Fight to 4
+	elseif ( DLC05MZ1Fight == 4 )
+		if ( DLC05SomahRef.GetDead == 0 )
+			DLC05SomahREF.StopCombat
+			DLC05SomahRef.SetFactionRank DLC05NPCFollowerFaction 0
+		
+			DLC05SomahRef.SayTo Player DLC05MZ1SomahAttackGuard
+		endif
+		if ( DLC05MZ1FightOb < 2 )
+			SetObjectiveCompleted DLC05MZ1 10 1
+			SetObjectiveCompleted DLC05MZ1 20 1
+			SetObjectiveCompleted DLC05MZ1 25 1
+			SetObjectiveDisplayed DLC05MZ1 27 1
+			Set DLC05MZ1FightOb to 2
+		endif
+		set DLC05MZ1Fight to 5
+	elseif ( DLC05MZ1Fight == 6 )
+		if ( DLC05MZ1AlienGuardRef1.GetDead == 1 )
+			if ( DLC05MZ1AlienGuardRef2.GetDead == 1 )
+				
+				Set DLC05MZ1Fight to -1
+				SetObjectiveCompleted DLC05MZ1 27 1
+				if ( DLC05SomahRef.GetDead == 0 )
+					DLC05SomahRef.SayTo Player DLC05MZ1SomahPostFight
+				else
+					SetStage DLC05MZ1 30
+				endif
+			endif
+		endif
+	endif
+
+	if ( GetStage DLC05MZ1 == 30 )
+		if ( DLC05MZ1AlienHCMelee2.GetDead == 1 )
+			if ( DLC05MZ1AlienHCMelee1.GetDead == 1 )
+				SetStage DLC05MZ1 35
+			endif
+		endif
+	endif
+
+
+
+;move Sally to marker outside door and open it
+
+	if ( DLC05MZ1SallyDoor == 1 )
+		if ( DLC05SomahRef.GetDead == 0 )
+			DLC05SomahRef.SayTo Player DLC05MZ1SomahWaitForSally
+		endif
+		set DLC05MZ1SallyDoor to 2
+		DLC05SallyREF.EVP
+		set DLC05MZ1SallyDoorTimer to 10.5
+	elseif ( DLC05MZ1SallyDoor == 2 )
+		if ( DLC05SallyRef.GetSitting == 2 )
+			if ( DLC05MZ1SallyDoorTimer <= 0 )	
+				if ( DLC05SomahRef.GetDead == 0 ) && ( DLC05SomahRef.GetDistance DLC05MZ1SallyDoorMarker <= 800 )
+					DLC05SomahRef.SayTo Player DLC05MZ1SomahWaitForSally	
+				endif		
+				DLC05SallyRef.Moveto DLC05MZ1SallyDoorMoveMarker
+				set DLC05MZ1SallyDoorTimer to 10
+				set DLC05MZ1SallyDoor to 3
+				DLC05SallyRef.EVP
+			else
+				set DLC05MZ1SallyDoorTimer to ( DLC05MZ1SallyDoorTimer - GetSecondsPassed )
+			endif
+		endif
+	elseif ( DLC05MZ1SallyDoor == 3 )
+		if ( DLC05MZ1SallyDoorTimer >= 0 )
+			set DLC05MZ1SallyDoorTimer to ( DLC05MZ1SallyDoorTimer - GetSecondsPassed )
+		else
+			set DLC05MZ1SallyDoor to 4
+			DLC05MZ1HoldingCellIntDoorREF.Unlock
+			DLC05MZ1HoldingCellIntDoorREF.Activate DLC05SallyREF
+
+		endif
+	endif
+
+
+
+
+End

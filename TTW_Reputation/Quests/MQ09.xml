@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E8F">MQ09</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ09</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06036558">MQ09Script</Reference>
+    </Script>
+    <Name Tag="FULL">The American Dream</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">If the player has rescued Fawkes, he is moved outside Raven Rock, and set to wait for the player.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>134</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAgAEAAgWFQQBQABAHIDACAwID09FgAQAAYADAAgcgEAcwkAIDEgPT0cAAEAnhAFAAEAcgQAHAABAK0QAgAAABwAAQACEAoAAgByBQBuAQAAABwAAQDuEAUAAQByBQAcAAEAAhAKAAIAcgYAbmQAAAAcAAIAIRACAAAAGQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if (getDeadCount MQ08Fawkes == 0)
+   if (MQ08FawkesREF.Rescued == 1)
+      MQ08FawkesREF.moveto FawkesWaitMarker
+      MQ08FawkesREF.RemoveAllItems
+      MQ08FawkesREF.AddItem FollowersFawkesGatlingLaser 1
+      MQ08FawkesREF.EquipItem FollowersFawkesGatlingLaser 
+      MQ08FawkesREF.AddItem AmmoElectronChargePackRobot 100
+      FollowersHireFawkesEnableMARKER.enable
+   endif
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06097B4C">FollowersHireFawkesEnableMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D34E">MQ08Fawkes</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06096E6E">FawkesWaitMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601A333">FollowersFawkesGatlingLaser</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000615AF">AmmoElectronChargePackRobot</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>63</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgIAbsgAAAAcAAEA3RAHAAEAbgAAAAAcAAEAchAHAAEAbv8AAACjEQ8AAwByAwBuFAAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetStage MQ08 200
+MQ08CaptureDoor.SetOpenState 0
+MQ08CaptureDoor.Lock 255
+SetObjectiveDisplayed MQ09 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601707B">MQ08CaptureDoor</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8E">MQ08</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbhQAAABuAQAAAKMRDwADAHIBAG4eAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ09 20 1
+SetObjectiveDisplayed MQ09 30 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDGiEQ8AAwByAgBuHgAAAG4BAAAAoxEPAAMAcgIAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">Set RRFEVPanelRef.State to 1
+SetObjectiveCompleted MQ09 30 1
+SetObjectiveDisplayed MQ09 40 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB7C4">RRFEVPanelRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgIAbigAAABuAQAAAKMRDwADAHICAG4yAAAAbgEAAAAcAAEAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ09 40 1
+SetObjectiveDisplayed MQ09 50 1
+
+RRExteriorStage1TriggerREF.enable ;enables trigger outside of base
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BB9BE">RRExteriorStage1TriggerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>28</ReferenceCount>
+                <CompiledSize>383</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAchQAbjIAAABuAQAAAKMRDwADAHIUAG48AAAAbgEAAAAcAAEAiRAKAAIAchUAbgAAAAAcAAIAnhAFAAEAchYAHAADACIQAgAAABwABABSEAoAAgByFwBuAQAAABwABQACEAoAAgByGABuAQAAABwABgACEAoAAgByGQBuAQAAABwABwAhEAIAAAAcAAgAIRACAAAAHAAJACEQAgAAABwACgAhEAIAAAAcAAsAIRACAAAAHAAMACEQAgAAABwADQAhEAIAAAAcAA0AIRACAAAAFgAQAAIADAAgchQAcxEAIDEgPT13EQcAAQBuZAAAABwADgAiEAIAAAAXAAIAAgAcAA8AIhACAAAAHAAQACEQAgAAABkAAAAWABQABQAQACBYVBAFAAEAchoAIDAgPT0WABAAAwAMACByGwBzCQAgMSA9PRwAEQBeEAAAHAASAF4QAAAcABMAXhAAABkAAAAZAAAANhAFAAEAchwAORAKAAIAchwAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ09 50 1
+SetObjectiveDisplayed MQ09 60 1
+Player.SetFactionRank MQPlayerBOSAllyFaction 0
+ElderLyonsRef.Moveto CitElderLyonsSuperviseLibertyPrimeMarker
+MQ11ScribeDisableMarker.Disable
+MQ01SarahRef.RemoveItem ArmorReconHelmet 1
+PaladinKodiakRef.additem CondPowerArmorHelmetLyonsPride 1
+CitadelBoSGuardRef1.additem CondPowerArmorHelmet 1
+
+MQ11GateMarker.enable   ; Ensure that Enclave gates are turned on near Purifier
+MQ11WaitGate01.enable
+MQ11WaitGate02.enable
+MQ11WaitGate03.enable
+MQ11WaitGate04.enable
+MQ11Gate01ForcefieldsMarker.enable
+MQ11Gate03ForcefieldsMarker.enable
+MQ11Gate03ForcefieldsMarker.enable
+
+if ( MQ09.RRDestroy == 1 )
+RewardXP 100
+NathanRef.Disable
+else
+CitBaileyRadioGNRRef.Disable
+CitBaileyRadioENCRef.Enable
+endif
+
+if (getDeadCount MQ08Fawkes == 0)
+   if (MQ08FawkesREF.Rescued == 1)
+      FollowersHireFawkesEnclaveSoldiers03REF.evp
+      FollowersHireFawkesEnclaveSoldiers02REF.evp
+      FollowersHireFawkesEnclaveSoldiers01REF.evp
+   endif
+endif
+
+StartQuest MQ11
+SetStage MQ11 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A356A">MQ11ScribeDisableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210EA">PaladinKodiakREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608DE18">CitadelBOSGuardRef1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BE87E">MQ11GateMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060603D9">MQ11WaitGate01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060603DB">MQ11WaitGate02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06060A26">MQ11WaitGate03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608FA2D">MQ11WaitGate04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604C6F7">MQ11Gate01ForcefieldsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604C6FD">MQ11Gate03ForcefieldsMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06003B57">NathanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C5689">CitBaileyRadioGNRRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060C568A">CitBaileyRadioENCRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06097B4B">FollowersHireFawkesEnclaveSoldiers03REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06097B45">FollowersHireFawkesEnclaveSoldiers02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06097B44">FollowersHireFawkesEnclaveSoldiers01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000410B5">MQPlayerBOSAllyFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602132C">CitElderLyonsSuperviseLibertyPrimeMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00028EAD">ArmorReconHelmet</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000A1BF3">CondPowerArmorHelmetLyonsPride</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001D175">CondPowerArmorHelmet</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0003D34E">MQ08Fawkes</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>92</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjwAAABuAQAAADcQBQABAHIBABUAEAByAgBmIAAIACBHAwAgMSArFQAKAHICAHM1AAIAIDF3EQcAAQBuTAQAADkSDwADAHIEAG4BAAAAbgMAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ09 60 1
+StopQuest MQ09
+  Set RadioGalaxyNewsQuest.MQ09Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+RewardXP 1100
+AddReputation RepTTWBrotherhood 1 3
+;addachievement 12
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E8F">MQ09</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E7">RepTTWBrotherhood</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Get free from the chair.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Retrieve equipment from the locker.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060918B0">MQ09PlayerContainerRef1</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Meet President Eden in his office.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060BB7C4">RRFEVPanelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Take the vial of modified FEV.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060BB7C4">RRFEVPanelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Escape the Enclave base.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601E352">RavenRockDoorExteriorto01REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601853B">RavenRock01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601853A">RavenRock02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="06018539">RavenRock03</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0601E0F1">RavenRock04</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Report to Elder Lyons at the Citadel.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060210E6">ElderLyonsREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

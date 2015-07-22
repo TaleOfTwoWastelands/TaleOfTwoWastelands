@@ -1,0 +1,18 @@
+scn GraveContScript
+
+short Opened
+
+begin OnActivate
+
+	if IsActionRef player
+		if Opened
+			Activate
+		elseif ( player.GetItemCount WeapShovel >= 1 || player.GetItemCount DLC04WeapUniqueFertilizerShovel >= 1 )
+			Activate
+			set Opened to 1
+		else
+			showMessage NoShovelMsg
+		endif
+	endif
+
+end

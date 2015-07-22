@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00BDD6">DLC05crusherSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05crusherSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>1260</CompiledSize>
+        <VariableCount>10</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAFYAAAAAABYADQACAAkAIHMKACAwID09FQAHAHMKAAIAIDEVAAcAcwEAAgAgMRcAAgADABUABwBzCgACACAwFQAHAHMBAAIAIDAVAAcAZgYAAgAgMBkAAAARAAAAEAAGAAAAcwEAABYADQAFAAkAIHMEACAwID09FQAHAHMKAAIAIDEVAAcAcwEAAgAgMRUACgBmCQAFACAwLjI1FQAHAGYIAAIAIDIVAAcAcwQAAgAgMRkAAAAWAA0AFAAJACBzCgAgMSA9PRYADQAMAAkAIHMBACAxID09FgANAAIACQAgcwUAIDAgPT0TEAkAAgADAG4AAAAAFQAHAHMFAAIAIDEZAAAAFgATAAYADwAgWCgRBAABAAMAIDAgPT0VAAsAZgcABgAgWE0QAAAVACIAZgcAHQAgZgkAIFhNEAAAIGYIACBmCQAgLSAqIDk5IC8gKxUACQBmBgAEACBmBwAVAAcAcwEAAgAgMBUABwBzAwACACAwFQAHAHMFAAIAIDAZAAAAGAANAAUACQAgcwEAIDAgPT0WAAwAAQAIACBmBgAgMCA+FQARAGYGAAwAIGYGACBYDBAAACAtFwACAAEAFQAHAHMBAAIAIDEZAAAAGQAAABkAAAARAAAAEAAIABoA/QIAAAAAFQALAGYCAAYAIFjNEAAAFgAPABgACwAgZgIAIFoBACA9PRYADQAWAAkAIHMDACAwID09HAABADMQBQABAHIDACUQBQABAHIEAJERBQABAHIFABwAAQCBEQ0AAgAQAHoAAAAAAIBGQBUABwBzAwACACAxFgASAA8ADgAgcgEAWC4QAAAgMSA9PRwAAQCLEAoAAgByAQBuAAAAABwAAQCLEAoAAgByAQBuAQAAABwAAQCLEAoAAgByAQBuAgAAABwAAQCLEAoAAgByAQBuAwAAABwAAQCLEAoAAgByAQBuBAAAABwAAQCLEAoAAgByAQBuBQAAABwAAQCLEAoAAgByAQBuBgAAABwAAQCLEAoAAgByAQBuBwAAABwAAQCLEAoAAgByAQBuCAAAABwAAQCLEAoAAgByAQBuCQAAABwAAQCLEAoAAgByAQBuCgAAABwAAQCLEAoAAgByAQBuCwAAABwAAQCLEAoAAgByAQBuDAAAABwAAQCLEAoAAgByAQBuDQAAABwAAQCLEAoAAgByAQBuDgAAABkAAAAZAAAAFwACABQAHAACAGwRCwABAHoAAAAAAIBGQBYAEgABAA4AIHICAFguEAAAIDAgPT0cAAIAixAFAAEAcgEAGQAAABwAAgCLEAoAAgByBgBuAAAAABwAAgCLEAoAAgByBgBuAQAAABwAAgCLEAoAAgByBgBuAgAAABwAAgCLEAoAAgByBgBuAwAAABwAAgCLEAoAAgByBgBuBAAAABwAAgCLEAoAAgByBgBuBQAAABwAAgCLEAoAAgByBgBuBgAAABwAAgCLEAoAAgByBgBuBwAAABwAAgCLEAoAAgByBgBuCAAAABwAAgCLEAoAAgByBgBuCQAAABwAAgCLEAoAAgByBgBuCgAAABwAAgCLEAoAAgByBgBuCwAAABwAAgCLEAoAAgByBgBuDAAAABwAAgCLEAoAAgByBgBuDQAAABwAAgCLEAoAAgByBgBuDgAAACUQBQABAHIEABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05crusherSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">active</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">actronaut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">playerHit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">init</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">activeSetup</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rand</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">max</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">min</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">powerOn</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000000DD">Hit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0004813B">FakeForceBall250</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000162">GetHit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000987">DLC05SallyREF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

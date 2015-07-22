@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C01858D">TTWDLC04ChallengeHenry</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC04ChallengeHenry</EditorID>
+    <Name Tag="FULL">Oh Henry!</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EAA9">ChallengeMediumXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Inflict damage with lever-action rifles</Description>
+    <Data Tag="DATA">
+      <Type>DoDamage</Type>
+      <Threshold>5000</Threshold>
+      <Flags>StartDisabled, Recurring</Flags>
+      <Interval>1000</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185BA">TTWDLC04ChallengeHenryList</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

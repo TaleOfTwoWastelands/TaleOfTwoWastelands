@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="06034A90">AbandonedSewerValve01DC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AbandonedSewerValve01DC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-128</X>
+        <Y>-13</Y>
+        <Z>-342</Z>
+      </Point1>
+      <Point2>
+        <X>13</X>
+        <Y>48</Y>
+        <Z>26</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Gas Valve</Name>
+    <Model>
+      <FileName Tag="MODL">Architecture\Wasteland\WaterTowerPipes01.NIF</FileName>
+      <TextureFileHash Tag="MODT">sbARdyEQqo0xMBF3JhCqjWRuH3RW4Xi87t8TdyKuVO5uXxN3J65U7mRuH3RW4Xi8898TdyKuVO5zXxN3J65U7mRuH3RW4Xi8sbAMdy534vsxMAx3M3fi+2RuH3RW4Xi87t8Od69eMH9uXw53tF4wf2RuH3RW4Xi8898Od69eMH9zXw53tF4wf2RuH3RW4Xi8</TextureFileHash>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0009A24E">TrigPlayerDisableSCRIPT</Reference>
+    </Script>
+    <Sound>
+      <Looping Tag="SNAM">
+        <Reference ID="0015E250">EMTWaterPressure</Reference>
+      </Looping>
+      <Activation Tag="VNAM">
+        <Reference ID="0001F92B">NPCHumanDrinkingWaterValve</Reference>
+      </Activation>
+    </Sound>
+  </Subrecords>
+</Record>

@@ -1,0 +1,250 @@
+scn DLC05SpaceBridge04MasTrigSCRIPT
+
+short onLoad
+
+; Decompression Sequence Stuff
+float seqTimer
+short seqInit
+short seqStage
+short decompressionCompleted
+short decompressionBegun
+
+; SpeedMult Hack
+short runTimer
+short timerStage
+float timer
+
+
+Begin GameMode
+
+	if (onLoad == 0)
+		SetQuestObject DLC05AstronautSuit 0
+		IMOD FadeInFromWhiteISFX
+		player.SetAv SpeedMult 100
+		StopQuest DLC05SpaceWalkQ
+		EnablePlayerControls
+		set seqStage to 5
+		set timerStage to 1
+		set runTimer to 1
+		set onLoad to 1	
+	endif
+
+;--------------------------------------------------------------------------------
+;----If at Zero Atmosphere, and no Astro Suit, kill player
+;--------------------------------------------------------------------------------
+	if (DLC05SpaceWalkQ.zeroAtmo == 1) && ((Player.GetEquipped DLC05AstronautSuit == 0) && (Player.GetEquipped ArmorNVSpaceSuit == 0) || (Player.GetEquipped HelmetNVSpaceSuit == 0))
+		ShowMessage DLC05DeathInSpaceMessage
+		Player.Kill Player 1
+		set DLC05SpaceWalkQ.zeroAtmo to 2
+	endif
+
+;----------------------------------------------
+;----SpeedMult Hack
+;----------------------------------------------
+
+	if (runTimer == 1)
+		
+		if (timerStage == 1)
+			
+			if (timer < 0)
+				player.MoveTo DLC05SpaceBridgeToWater02REF
+				set timer to .00025
+				set timerStage to 2
+			else
+				set timer to (timer - GetSecondsPassed)
+			endif
+
+		endif
+
+		if (timerStage == 2)
+		
+			if (timer < 0)
+				player.MoveTo DLC05SpaceBridgeFromWater02REF
+				set timer to .0025
+				set timerStage to 3
+				set runTimer to 0
+			else
+				set timer to (timer - GetSecondsPassed)
+			endif
+
+		endif
+
+	endif
+
+
+;----------------------------------------------
+;----Decompression Sequence
+;----------------------------------------------
+
+	if (seqInit == 1)
+		
+		:----------------------------------------------
+		; Activate the Alarm Sound
+		:----------------------------------------------
+		if (seqStage == 5)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02Alarm01REF.Enable
+				DLC05SpaceBridge02DecompressionDoor01REF.SetOpenState 0
+				DLC05SpaceBridge02DecompressionDoor01REF.Lock 255
+				set seqTimer to .5
+				set seqStage to 10
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:-------------------------------------------------------------
+		; Close the door behind the player
+		:-------------------------------------------------------------
+		if (seqStage == 10)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02DecompressionDoor01REF.SetOpenState 0
+				set decompressionBegun to 1
+				set seqTimer to .5
+				set seqStage to 15
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:-------------------------------------------------------------------------------------------
+		; Activate the "Door Locked" lights behind the player
+		:-------------------------------------------------------------------------------------------
+		if (seqStage == 15)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02LockLight01bREF.Enable
+				DLC05SpaceBridge02LockLight02BonREF.Enable 0
+				DLC05SpaceBridge02LockLight01BonREF.Enable 0
+				DLC05SpaceBridge02LockLight02BoffREF.Disable 0
+				DLC05SpaceBridge02LockLight01BoffREF.Disable 0
+				set seqTimer to 2
+				set seqStage to 20
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:----------------------------------------------------------------------------
+		; Start decompression/turn on the spray effects
+		:----------------------------------------------------------------------------
+		if (seqStage == 20)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02Spray01REF.Enable 1
+				DLC05SpaceBridge02Spray02REF.Enable 1
+				DLC05SpaceBridge02Spray03REF.Enable 1
+				DLC05SpaceBridge02Spray04REF.Enable 1
+				DLC05SpaceBridge02Spray05REF.Enable 1
+				DLC05SpaceBridge02Spray06REF.Enable 1
+				DLC05SpaceBridge02Spray07REF.Enable 1
+				DLC05SpaceBridge02Spray08REF.Enable 1
+				DLC05SpaceBridge02Spray09REF.Enable 1
+				DLC05SpaceBridge02Spray10REF.Enable 1
+				set seqTimer to 8
+				set seqStage to 25
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:-------------------------------------------------------------------------------------------------------------------------
+		; From this point on the player will need the suit on or else he will die
+		:-------------------------------------------------------------------------------------------------------------------------
+		if (seqStage == 25)
+			if (seqTimer < 0)
+				set DLC05SpaceWalkQ.zeroAtmo to 0
+				set seqTimer to .5
+				set seqStage to 30
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:----------------------------------------------------------------------------
+		; Stop decompression/turn off the spray effects
+		:----------------------------------------------------------------------------
+		if (seqStage == 30)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02Spray01REF.Disable 1
+				DLC05SpaceBridge02Spray02REF.Disable 1
+				DLC05SpaceBridge02Spray03REF.Disable 1
+				DLC05SpaceBridge02Spray04REF.Disable 1
+				DLC05SpaceBridge02Spray05REF.Disable 1
+				DLC05SpaceBridge02Spray06REF.Disable 1
+				DLC05SpaceBridge02Spray07REF.Disable 1
+				DLC05SpaceBridge02Spray08REF.Disable 1
+				DLC05SpaceBridge02Spray09REF.Disable 1
+				DLC05SpaceBridge02Spray10REF.Disable 1
+				set seqTimer to 2
+				set seqStage to 35
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:-------------------------------------------------------------------------------------------
+		; Disable the "Door Locked" lights in front of the player
+		:-------------------------------------------------------------------------------------------
+		if (seqStage == 35)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02LockLight01AREF.disable
+				DLC05SpaceBridge02LockLight02AonREF.disable 0
+				DLC05SpaceBridge02LockLight01AonREF.disable 0
+				DLC05SpaceBridge02LockLight02AoffREF.Enable 0
+				DLC05SpaceBridge02LockLight01AoffREF.Enable 0
+				DLC05SpaceBridge02DecompressionDoor02REF.unlock
+				set decompressionCompleted to 1
+				set seqTimer to .5
+				set seqStage to 40
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:----------------------------------------------
+		; Disable Alarm Sound
+		:----------------------------------------------
+		if (seqStage == 40)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02Alarm01REF.Disable
+				set seqTimer to .5
+				set seqStage to 45
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+		:----------------------------------------------
+		; Open Door
+		:----------------------------------------------
+		if (seqStage == 45)
+			if (seqTimer < 0)
+
+				DLC05SpaceBridge02DecompressionDoor02REF.SetOpenState 1
+				set seqTimer to .5
+				set seqStage to 50
+
+			else
+				set seqTimer to (seqTimer - GetSecondsPassed)
+			endif
+		endif
+
+
+	endif
+
+
+End

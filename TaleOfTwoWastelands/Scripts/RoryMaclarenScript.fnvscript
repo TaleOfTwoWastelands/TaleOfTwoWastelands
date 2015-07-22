@@ -1,0 +1,77 @@
+ScriptName RoryMaclarenScript
+
+
+;script for NPC RoryMaclaren, used in quest MQ07
+
+short FollowPlayer		;flag used to update packages for Rory when following player
+short RoryClear			;flag set through dialogue when Rory reaches main gate; used for packages
+short ForceKill				;flag set if player's on combat path in PF
+
+Begin OnDeath
+
+;If Rory dies, increment RoryDead var in quest script, which updates stage and dialogue options for talking to Penny
+
+	if ( GetStage MQ07 < 80 )
+		if ( MQ07.RoryDead == 0 )
+			set MQ07.RoryDead to 1
+		endif
+	endif
+
+End
+
+
+Begin GameMode
+
+;if we're on the combat path, and haven't yet dealt with Rory, kill 'im
+
+	if ( ForceKill == 0 )
+		if ( MQ07.RoryFlee == 0 )
+			if ( FreeformParadiseFalls.hostile == 1 )
+				SetEssential RoryMaclaren 0
+
+				set ForceKill to 1
+				return
+			endif
+		endif
+	elseif ( ForceKill == 1 )
+		RoryMaclarenRef.Kill
+		set ForceKill to 2
+	endif
+
+
+
+;If Rory is following player (MQ07.RoryFlee set to 1 or 2) and he reaches the front gate, evaluate package and force-greet the player
+
+	if ( MQ07.RoryFlee >= 1 )
+		if ( MQ07.RoryFlee < 3 )
+			if ( GetDistance MQ07Stage90SquirrelMark < 300 )
+				set MQ07.RoryFlee to 10
+				EvaluatePackage
+			endif
+		endif
+	endif
+
+End
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && RoryMaclarenRef.GetPlayerTeammate == 1  
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

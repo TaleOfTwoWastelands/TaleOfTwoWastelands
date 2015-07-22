@@ -1,0 +1,272 @@
+SCN VMS42MicroclineRockScript
+
+SHORT poke
+SHORT used
+INT sciSkill
+SHORT btn
+SHORT moved
+SHORT doOnce
+
+BEGIN onActivate
+	IF (used ==0)
+		SET poke TO 1
+		IF (player.GetAV Science < 40)
+			ShowMessage VMS42MicroclineLowSkillMsg
+			SET sciSkill TO 0
+		ENDIF
+		IF (player.GetAV Science >= 40)
+			ShowMessage VMS42MicroclineMsg
+			SET sciSkill TO 1
+		ENDIF
+	ENDIF
+END
+
+BEGIN gameMode
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;player blows up cave;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	IF (poke ==1 && used ==0)
+		SET btn TO getButtonPressed
+;low skill msg
+		IF (btn == 1 && sciSkill==1 && player.GetAV Explosives < 60)
+			ShowMessage VMS42MicroclineLowSkillExpMsg
+		ENDIF
+		IF (btn == 1 && sciSkill==1 && player.GetAV Explosives >= 60 && player.getItemCount WeapNVC4PlasticExplosive < 3)
+			ShowMessage VMS42MicroclineC4Msg
+		ENDIF
+;has skill
+		IF (btn == 1 && sciSkill==1 && player.GetAV Explosives >= 60 && player.getItemCount WeapNVC4PlasticExplosive >= 3)
+			player.RemoveItem WeapNVC4PlasticExplosive 3
+			VMS42C401REF.enable
+			VMS42C402REF.enable
+			VMS42C403REF.enable
+;sets quests states & vars
+
+			SET VMS42.microclineArmedCave TO 1
+			SetObjectiveCompleted VMS42 20 1
+			SetObjectiveDisplayed VMS42 40 1
+			SET used TO 1
+			;SET VMS42.lemSulfurDestroyed TO 1
+			Player.moveTo VMS42CaveExplosionMoveTo
+			v19AltCaveDoorOpen.Disable
+			v19AltcaveDoorClosed.Enable
+;move companions
+			IF (VNPCFollowers.bBooneHired == 1)
+				CraigBooneREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bCassHired == 1)
+				RoseofSharonCassidyREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bVeronicaHired == 1)
+				VeronicaREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bLilyHired == 1)
+				LilyREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.RaulHired == 1)
+				RaulREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.ArcadeHired == 1)
+				ArcadeREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bEDEHired == 1)
+				if EDE1Ref.GetDisabled == 0
+					EDE1Ref.MoveTo VMS42CaveExplosionMoveToCompanion;
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2Ref.MoveTo VMS42CaveExplosionMoveToCompanion;
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3Ref.MoveTo VMS42CaveExplosionMoveToCompanion;
+				endif
+			ENDIF	
+			IF (VNPCFollowers.RexHired == 1)
+				RexREF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF
+			IF (Followers.CharonHired == 1)
+				CharonRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.ButchHired == 1)
+				ButchRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.CloverHired == 1)
+				CloverRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.JerichoHired == 1)
+				JerichoRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.FawkesHired == 1)
+				MQ08FawkesRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.StarPaladinCrossHired == 1)
+				StarPaladinCrossRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.DogmeatHired == 1)
+				DogmeatRef.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+			IF (Followers.RL3Hired == 1)
+				RL3REF.MoveTo VMS42CaveExplosionMoveToCompanion;
+			ENDIF	
+;enables explosion
+	;inside vault
+			v19SmallExplosion02REF.enable
+			v19SmallExplosion03REF.enable
+			v19SmallExplosion04REF.enable
+			v19SmallExplosion05REF.enable
+			v19SmallExplosion06REF.enable
+			v19SmallExplosion07REF.enable
+			v19SmallExplosionDoorREF.disable
+			VMS42DoorTo3rdFloor.disable
+			v19Gecko01Ref.KillActor
+			v19Gecko02Ref.KillActor
+			v19Gecko03Ref.KillActor
+			v19Gecko04Ref.KillActor
+			v19Gecko05Ref.KillActor
+			v19Gecko06Ref.KillActor
+			v19Gecko07Ref.KillActor
+			v19Gecko08Ref.KillActor
+			v19Gecko09Ref.KillActor
+			v19Gecko10Ref.KillActor
+			v19Gecko11Ref.KillActor
+	;outside vault
+			VMS42SulfurSmoke01.enable
+			VMS42SulfurSmoke02.enable
+			VMS42SulfurSmoke03.enable
+			VMS42SulfurRock01.enable
+			VMS42SulfurRock02.enable
+			VMS42SulfurRock03.enable
+			VMS42SulfurRock04.enable
+			VMS42SulfurRock05.enable
+			VMS42SulfurRock06.enable
+			VMS42SulfurRock07.enable
+
+			PlaySound3D FXExplosionVault19
+
+;if player hasn't talked to cooke yet - lock his door
+			IF (VMS42.cookeGoKillGeckos == 0)
+				CookeDoorREF.SetOpenState 0
+				CookeDoorREF.lock 255;
+			ENDIF
+		ENDIF
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;player blows up everything;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+		IF (btn == 2 && sciSkill==1 && player.GetAV Explosives >= 50 && player.getItemCount WeapNVC4PlasticExplosive >= 5)
+			player.RemoveItem WeapNVC4PlasticExplosive 5
+			VMS42C401REF.enable
+			VMS42C402REF.enable
+			VMS42C403REF.enable
+			VMS42C404REF.enable
+			VMS42C405REF.enable
+;sets quests states & vars
+			SET VMS42.microclineArmedVault TO 1
+			SetStage VMS42 30 
+			SET used TO 1
+;moves player to marker
+			player.moveto VMS42ExplosionMarker
+			SET moved to 1
+;move companions
+			IF (VNPCFollowers.bBooneHired == 1)
+				CraigBooneREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bCassHired == 1)
+				RoseofSharonCassidyREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bVeronicaHired == 1)
+				VeronicaREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bLilyHired == 1)
+				LilyREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.RaulHired == 1)
+				RaulREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.ArcadeHired == 1)
+				ArcadeREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (VNPCFollowers.bEDEHired == 1)
+				if EDE1Ref.GetDisabled == 0
+					EDE1Ref.MoveTo VMS42ExplosionMarkerCompanion;
+				elseif EDE2Ref.GetDisabled == 0
+					EDE2Ref.MoveTo VMS42ExplosionMarkerCompanion;
+				elseif EDE3Ref.GetDisabled == 0
+					EDE3Ref.MoveTo VMS42ExplosionMarkerCompanion;
+				endif
+			ENDIF	
+			IF (VNPCFollowers.RexHired == 1)
+				RexREF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF
+			IF (Followers.CharonHired == 1)
+				CharonRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.ButchHired == 1)
+				ButchRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.CloverHired == 1)
+				CloverRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.JerichoHired == 1)
+				JerichoRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.FawkesHired == 1)
+				MQ08FawkesRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.StarPaladinCrossHired == 1)
+				StarPaladinCrossRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.DogmeatHired == 1)
+				DogmeatRef.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+			IF (Followers.RL3Hired == 1)
+				RL3REF.MoveTo VMS42ExplosionMarkerCompanion;
+			ENDIF	
+
+;low skill msg
+		ELSEIF (btn == 2 && sciSkill==1 && player.GetAV Explosives < 50)
+			ShowMessage VMS42MicroclineLowSkillExpAltMsg
+		ELSEIF (btn == 2 && sciSkill==1 && player.getItemCount WeapNVC4PlasticExplosive < 5)
+			ShowMessage VMS42MicroclineC4AltMsg
+		ENDIF
+	ENDIF
+	IF (moved ==1 && doOnce ==0)
+		IF (VMS42.microclineArmedVault ==1 && doOnce==0)
+			PlaySound3D FXExplosionVault19
+	;outside vault
+			VMS42SulfurRock01.enable
+			VMS42SulfurRock02.enable
+			VMS42SulfurRock03.enable
+			VMS42SulfurRock04.enable
+			VMS42SulfurRock05.enable
+			VMS42SulfurRock06.enable
+			VMS42SulfurRock07.enable
+			VMS42SulfurRock08.enable
+			VMS42SulfurRock09.enable
+			VMS42SulfurRock10.enable
+			VMS42SulfurRock11.enable
+			VMS42SulfurRock12.enable
+			VMS42SulfurRock13.enable
+			VMS42SulfurRock14.enable
+			VMS42SulfurSmoke01.enable
+			VMS42SulfurSmoke02.enable
+			VMS42SulfurSmoke03.enable
+			VMS42SulfurSmoke04.enable
+			VMS42SulfurSmoke05.enable
+			VMS42SulfurSmoke06.enable
+			VMS42SulfurSmoke07.enable
+			VMS42SulfurSmoke08.enable
+			VMS42SulfurSmoke09.enable
+			VMS42SulfurSmoke10.enable
+			VMS42SulfurSmoke11.enable
+			VMS42SulfurSmoke12.enable
+			VMS42SulfurSmoke13.enable
+			VMS42SulfurCar01.enable
+			VMS42SulfurCar02.enable
+			VMS42SulfurCar03.enable
+			VMS42SulfurCar04.disable
+			VMS42SulfurCar05.disable
+			VMS42SulfurCar06.disable
+		ENDIF
+		SET doOnce TO 1
+	ENDIF
+END

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060340D2">OutfitChineseCommandoJumpsuit</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OutfitChineseCommandoJumpsuit</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-13</X>
+        <Y>-16</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>12</X>
+        <Y>17</Y>
+        <Z>13</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Chinese Jumpsuit</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D321">EnchClothingCommandoJumpsuit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ChineseCommando\ChineseCommandoM.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+Cm9kHnQ5ki2n7t8JbwDNHjVuXwlvBc0eNW9kHnQ5ki2n898JbwDNHjVzXwlvBc0eNW9kHnQ5ki2nsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\ChineseCommando\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5vQHbwcx/gpmdAdvDDH+Cm9kHnQ5ki2n7t8Jb/nMHjVuXwlv/sweNW9kHnQ5ki2n898Jb/nMHjVzXwlv/sweNW9kHnQ5ki2nsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\ChineseCommando\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+Cm9kHnQ5ki2n7t8JbwDNHjVuXwlvBc0eNW9kHnQ5ki2n898JbwDNHjVzXwlvBc0eNW9kHnQ5ki2n</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_chinese_officer_jumpsuit.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_chinese_officer_jumpsuit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9D8">RepairChineseCommandoJumpsuit</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>10</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>2</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

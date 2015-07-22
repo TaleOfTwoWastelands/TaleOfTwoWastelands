@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="060A0C2B">Oasis</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Oasis</EditorID>
+    <Name Tag="FULL">Oasis</Name>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">UseLandData, UseMapData</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00017907">WastelandClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00046241">OasisWater01</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00046241">OasisWater01</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1</WorldMapScale>
+      <Offset>
+        <CellX>0</CellX>
+        <CellY>0</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064608">WastelandBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-20480</X>
+        <Y>-4096</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>8192</X>
+        <Y>126976</Y>
+      </Max>
+    </ObjectBounds>
+    <CanopyShadow Tag="NNAM">Data\Textures\Trees\CanopyShadow.dds</CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

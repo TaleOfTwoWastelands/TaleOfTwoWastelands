@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="0601A25D">DCworld18</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DCworld18</EditorID>
+    <Name Tag="FULL">Arlington National Cemetery</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="06035AC1">DCArlingtonCemetary</Reference>
+    </EncounterZone>
+    <ParentWorldspace Tag="WNAM">
+      <Reference ID="0607EA1F">Wasteland</Reference>
+    </ParentWorldspace>
+    <ParentWorldspaceFlags Tag="PNAM">65412</ParentWorldspaceFlags>
+    <Climate Tag="CNAM">
+      <Reference ID="00064602">UrbanClimate</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="00000018">DefaultWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="00030009">Potomac</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>12288</DefaultLandHeight>
+      <DefaultWaterHeight>0</DefaultWaterHeight>
+    </LandData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>0.349999994</WorldMapScale>
+      <Offset>
+        <CellX>-4000</CellX>
+        <CellY>10000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="00064606">UburbanBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>12288</X>
+        <Y>-77824</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>57344</X>
+        <Y>-12288</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="00090CE7">DefaultBase</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+  </Subrecords>
+</Record>

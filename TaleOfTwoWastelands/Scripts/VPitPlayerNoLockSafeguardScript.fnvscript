@@ -1,0 +1,137 @@
+scn	VPitPlayerNoLockSafeguardScript
+
+; This script is tied to a trigger volume. It serves as a safeguard against variables possibly not updating properly when creatures run their OnDeath blocks.
+; The occurrence of this is extremely rare, and elusive to pinpoint, but it merits the caution. If players end a fight, and The Thorn does not open the doors for them
+; to leave the arena, touching a trigger volume (placed right by the exit out of the arena proper) with this script will make sure that the state "fight is finishing" is recognized
+; properly by The Thorn's scripting.
+; - Jorge
+
+Ref	Fighter01
+Ref	Fighter02
+Ref	Fighter03
+Ref	Fighter04
+Ref	Fighter05
+Ref	Fighter06
+
+Begin OnTriggerEnter Player
+
+	If VMS38.PlayerFights != 1 || VMS38.PitFightFinishing == 1
+		Return
+	Elseif VMS38.PlayerFights == 1 && VMS38.PitFightFinishing == 0
+		Set Fighter02 to VMS38.PitFighter02
+		Set Fighter04 to VMS38.PitFighter04
+		Set Fighter06 to VMS38.PitFighter06
+		If (VMS38.CreaturesBlueLose == 1 || (Fighter02.GetDead == 1 && Fighter04.GetDead == 1 && Fighter06.GetDead == 1))
+
+			Set VMS38.CreaturesBlueLose to 1
+			Set VMS38.PlayerWinsFight to 1
+			Set VMS38.FightersFight to 0
+			Set VMS38.PitFightFinishing to 1
+			Set VMS38.FightersAtAppear to 0
+			Set VMS38.FightersAtStart to 0
+			Set VMS38.FightersClash to 0
+			Set VMS38.FightersSealed1 to 0
+			Set VMS38.FightersSealed2 to 0
+
+			Player.RemoveFromFaction VPitFighter01Faction
+			Fighter02.StopCombat Player
+			Fighter04.StopCombat Player
+			Fighter06.StopCombat Player
+			Fighter02.RemoveFromFaction VPitFighter02Faction
+			Fighter04.RemoveFromFaction VPitFighter02Faction
+			Fighter06.RemoveFromFaction VPitFighter02Faction
+
+			VPitFighter01AccessDoorREF.UnLock
+			VPitFighter02AccessDoorREF.UnLock
+			VPitFighter01AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter02AccessDoorREF.Activate VMS38RedLucyREF
+			VPitFighter01AccessDoor2REF.UnLock
+			VPitFighter02AccessDoor2REF.UnLock
+	
+			VPitPlayerAccessDoorREF.Unlock
+
+			If (VNPCFollowers.nCurrentFollowers >= 1)
+				If (VNPCFollowers.ArcadeHired == 1)
+					If (ArcadeREF.GetInCell OVWestSewers03 == 1)
+						ArcadeREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bBooneHired == 1)
+					If (CraigBooneREF.GetInCell OVWestSewers03 == 1)
+						CraigBooneREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bVeronicaHired == 1)
+					If (VeronicaREF.GetInCell OVWestSewers03 == 1)
+						VeronicaREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.RaulHired == 1)
+					If (RaulREF.GetInCell OVWestSewers03 == 1)
+						RaulREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bEDEHired == 1)
+					If (EDE1REF.GetInCell OVWestSewers03 == 1 || EDE2REF.GetInCell OVWestSewers03 == 1 || EDE3REF.GetInCell OVWestSewers03 == 1)
+					Endif
+				Endif
+				If (VNPCFollowers.RexHired == 1)
+					If (RexREF.GetInCell OVWestSewers03 == 1)
+						RexREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bCassHired == 1)
+					If (RoseofSharonCassidyREF.GetInCell OVWestSewers03 == 1)
+						RoseofSharonCassidyREF.SetRestrained 0;
+					Endif
+				Endif
+				If (VNPCFollowers.bLilyHired == 1)
+					If (LilyREF.GetInCell OVWestSewers03 == 1)
+						LilyREF.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.CharonHired == 1)
+					If (CharonRef.GetInCell OVWestSewers03 == 1)
+						CharonRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.ButchHired == 1)
+					If (ButchRef.GetInCell OVWestSewers03 == 1)
+						ButchRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.CloverHired == 1)
+					If (CloverRef.GetInCell OVWestSewers03 == 1)
+						CloverRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.JerichoHired == 1)
+					If (JerichoRef.GetInCell OVWestSewers03 == 1)
+						JerichoRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.FawkesHired == 1)
+					If (MQ08FawkesRef.GetInCell OVWestSewers03 == 1)
+						MQ08FawkesRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.StarPaladinCrossHired == 1)
+					If (StarPaladinCrossRef.GetInCell OVWestSewers03 == 1)
+						StarPaladinCrossRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.DogmeatHired == 1)
+					If (DogmeatRef.GetInCell OVWestSewers03 == 1)
+						DogmeatRef.SetRestrained 0;
+					Endif
+				Endif
+				If (Followers.RL3Hired == 1)
+					If (RL3REF.GetInCell OVWestSewers03 == 1)
+						RL3REF.SetRestrained 0;
+					Endif
+				Endif
+			Endif
+		Endif
+	Endif
+
+End

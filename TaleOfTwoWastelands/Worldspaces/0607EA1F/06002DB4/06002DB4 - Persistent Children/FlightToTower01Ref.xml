@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="0601DA16">FlightToTower01Ref</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FlightToTower01Ref</EditorID>
+    <Base Tag="NAME">
+      <Reference ID="060A9CD3">RCSmDoorLoadL</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="0601DA74">TowerToFlight01Ref</Door>
+      <Position>
+        <X>3560</X>
+        <Y>2328</Y>
+        <Z>6736</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>4.71238899</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="0606D937">NAVM - 0606D937</NavigationMesh>
+      <Unknown>920977410</Unknown>
+    </NavigationDoorLink>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>80071.3672</X>
+        <Y>-72442.5781</Y>
+        <Z>12316.748</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>5.75958633</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

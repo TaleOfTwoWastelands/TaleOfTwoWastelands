@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="0C018091">TTWHomemadeRadAway</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWHomemadeRadAway</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-6</X>
+        <Y>-12</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>6</X>
+        <Y>8</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Wasteland RadAway</Name>
+    <Model>
+      <FileName Tag="MODL">TTWFood\WastelandRadAway.nif</FileName>
+      <TextureFileHash Tag="MODT">sbAJcrYEEVkxMAlyuwQRWWh0F3Sbszg57t8LYjajpeZuXwtiO6Ol5mRvFXTcQmKF898LYjajpeZzXwtiO6Ol5mRvFXTcQmKF598Lcjeo4NZnXwtyPKjg1mh0F3Sbszg5</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_radaway.dds</Large>
+    </Icon>
+    <EquipmentType Tag="ETYP">Chems</EquipmentType>
+    <Weight Tag="DATA">0</Weight>
+    <Data Tag="ENIT">
+      <Value>20</Value>
+      <Flags>NoAutoCalc, Medicine</Flags>
+      <WithdrawalEffect ID="00000000">NullReference</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="000A5394">NPCHumanUsingRadaway</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0001517A">RestoreRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>40</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0001517A">RestoreRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>40</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>IsHardcore</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0001517A">RestoreRadiationLevel</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>15</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadLevel</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="0015EADA">RadAwayChallengePerk</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00032DE1">ReduceIntelligence</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>Intelligence</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

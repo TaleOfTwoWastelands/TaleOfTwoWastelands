@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060A5EB7">INFO - 060A5EB7</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Random</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="06061F98">FFOutcasts</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Here you go. Try not to use it all in one place, unless you have to.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06040C39">ProtectorCasdin</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA4">FFOutcastsTechAlienBlaster</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA3">FFOutcastsTechAlienCell</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00061F95">FFOutcastsCombatGreet2</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EAA">FFOutcastsTechEnclavePA</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA9">FFOutcastsTechEnclavePAHelmet</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA7">FFOutcastsTechLaserPistol</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA8">FFOutcastsTechLaserRifle</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA5">FFOutcastsTechPlasmaPistol</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA6">FFOutcastsTechPlasmaRifle</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EAD">FFOutcastsTechPowerArmor</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EAC">FFOutcastsTechPowerArmorHelmet</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA2">FFOutcastsTechSensorUnit</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EA1">FFOutcastsTechSpareParts</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5EAB">FFOutcastsTechTeslaArmor</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5E9A">FFOutcastsTechInfo</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000A5E9C">FFOutcastsTechX</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>418</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FgAQAAEADAAgcgIAcwcAIDEgPT0cAAEAAhAKAAIAcgMAbgwAAAAYABAAAQAMACByAgBzBwAgMiA9PRwAAQACEAoAAgByAwBuGAAAABgAEAABAAwAIHICAHMHACAzID09HAABAAIQCgACAHIDAG4wAAAAGAAQAAEADAAgcgIAcwcAIDQgPT0cAAEAAhAKAAIAcgMAbmAAAAAYABAAAQAMACByAgBzBwAgNSA9PRwAAQACEAoAAgByAwBukAAAABgAEAABAAwAIHICAHMHACA2ID09HAABAAIQCgACAHIDAG7AAAAAGAAQAAEADAAgcgIAcwcAIDcgPT0cAAEAAhAKAAIAcgMAbvAAAAAYABAAAQAMACByAgBzBwAgOCA9PRwAAQACEAoAAgByAwBuIAEAABgAEAABAAwAIHICAHMHACA5ID09HAABAAIQCgACAHIDAG5QAQAAGAARAAEADQAgcgIAcwcAIDEwID49HAABAAIQCgACAHIDAG7kAQAAGQAAABUACgByAgBzBwACACAwORIPAAMAcgQAbgEAAABuAgAAAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">if (FFOutcasts.TechValue == 1)
+   player.additem ammo556mm 12
+elseif (FFOutcasts.TechValue == 2)
+   player.additem ammo556mm 24
+elseif (FFOutcasts.TechValue == 3)
+   player.additem ammo556mm 48
+elseif (FFOutcasts.TechValue == 4)
+   player.additem ammo556mm 96
+elseif (FFOutcasts.TechValue == 5)
+   player.additem ammo556mm 144
+elseif (FFOutcasts.TechValue == 6)
+   player.additem ammo556mm 192
+elseif (FFOutcasts.TechValue == 7)
+   player.additem ammo556mm 240
+elseif (FFOutcasts.TechValue == 8)
+   player.additem ammo556mm 288
+elseif (FFOutcasts.TechValue == 9)
+   player.additem ammo556mm 336
+elseif (FFOutcasts.TechValue &gt;= 10)
+   player.additem ammo556mm 484
+endif
+set FFOutcasts.TechValue to 0
+AddReputation RepTTWBrotherhoodOutcasts 1 2</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06061F98">FFOutcasts</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00004240">Ammo556mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0D0017E9">RepTTWBrotherhoodOutcasts</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I'll take 5.56 ammo.</Prompt>
+  </Subrecords>
+</Record>

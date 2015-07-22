@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0601CE2E">CG03Script</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG03Script</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>23</ReferenceCount>
+        <CompiledSize>4144</CompiledSize>
+        <VariableCount>85</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAACIQAAAWAA0ABwAJACBzTAAgMSA9PRYADAABAAgAIGZNACAwID4VABEAZk0ADAAgZk0AIFgMEAAAIC0XAAIAAwAWACYAAQAiACBYOhAFAAEAcgYAIDkwID09IHIHAFifEAAAIDAgPT0gJiY5EAoAAgByBgBuZAAAABkAAAAZAAAAGQAAABYADACJAAgAIHMuACAwID4WABkABwAVACBYOxAKAAIAcgYAbi0AAAAgMSA9PRUACgByBQBzAgACACAxFQAKAHIFAGYEAAIAIDIWAA4AAQAKACBzLgAgMTUgPj0VAAkAcy4ABAAgMSB+FwACAAEAFQAHAHMuAAIAIDAZAAAAFwACAH8AFgANABYACQAgcy8AIDAgPT0VAAcAcy8AAgAgMRYADQABAAkAIHMuACAxID09WRALAAEAcggAAAAAAAAAGAANAAEACQAgcy4AIDIgPT1ZEAsAAQByCQAAAAAAAAAYAA0AAQAJACBzLgAgMyA9PVkQCwABAHIKAAAAAAAAABgADQABAAkAIHMuACA0ID09WRALAAEAcgsAAAAAAAAAGAANAAEACQAgcy4AIDUgPT1ZEAsAAQByDAAAAAAAAAAYAA0AAQAJACBzLgAgNiA9PVkQCwABAHINAAAAAAAAABgADQABAAkAIHMuACA3ID09WRALAAEAcg4AAAAAAAAAGAANAAEACQAgcy4AIDggPT1ZEAsAAQByDwAAAAAAAAAYAA0AAQAJACBzLgAgOSA9PVkQCwABAHIQAAAAAAAAABgADgABAAoAIHMuACAxMCA9PVkQCwABAHIRAAAAAAAAABkAAAAXAAIAZgAVAAsAczAABgAgWB8QAAAWAA4AYwAKACBzMAAgMSB+ID4VAAcAcy8AAgAgMBYADQAJAAkAIHMuACAxID09FgANAAEACQAgczAAIDAgPT05EAoAAgByEgBuCQAAABgADQABAAkAIHMwACAxID09ORAKAAIAchIAbgwAAAAYAA0AAQAJACBzMAAgMiA9PTkQCgACAHISAG4HAAAAGAANAAEACQAgczAAIDMgPT05EAoAAgByEgBuCwAAABkAAAAYAA0ACQAJACBzLgAgMiA9PRYADQABAAkAIHMwACAwID09ORAKAAIAchIAbgcAAAAYAA0AAQAJACBzMAAgMSA9PTkQCgACAHISAG4MAAAAGAANAAEACQAgczAAIDIgPT05EAoAAgByEgBuBgAAABgADQABAAkAIHMwACAzID09ORAKAAIAchIAbgkAAAAZAAAAGAANAAgACQAgcy4AIDMgPT0WAA0AAQAJACBzMAAgMCA9PTkQCgACAHISAG4MAAAAGAANAAEACQAgczAAIDEgPT05EAoAAgByEgBuDQAAABgADQABAAkAIHMwACAyID09ORAKAAIAchIAbgsAAAAYAA0AAAAJACBzMAAgMyA9PRkAAAAYAA0ACQAJACBzLgAgNCA9PRYADQABAAkAIHMwACAwID09ORAKAAIAchIAbgQAAAAYAA0AAQAJACBzMAAgMSA9PTkQCgACAHISAG4NAAAAGAANAAEACQAgczAAIDIgPT05EAoAAgByEgBuBwAAABgADQABAAkAIHMwACAzID09ORAKAAIAchIAbgIAAAAZAAAAGAANAAkACQAgcy4AIDUgPT0WAA0AAQAJACBzMAAgMCA9PTkQCgACAHISAG4KAAAAGAANAAEACQAgczAAIDEgPT05EAoAAgByEgBuAQAAABgADQABAAkAIHMwACAyID09ORAKAAIAchIAbgIAAAAYAA0AAQAJACBzMAAgMyA9PTkQCgACAHISAG4EAAAAGQAAABgADQAKAAkAIHMuACA2ID09FgANAAEACQAgczAAIDAgPT05EAoAAgByEgBuBQAAABgADQACAAkAIHMwACAxID09ORAKAAIAchIAbgEAAAA5EAoAAgByEgBuBAAAABgADQABAAkAIHMwACAyID09ORAKAAIAchIAbgMAAAAYAA0AAQAJACBzMAAgMyA9PTkQCgACAHISAG4IAAAAGQAAABgADQAJAAkAIHMuACA3ID09FgANAAEACQAgczAAIDAgPT05EAoAAgByEgBuCgAAABgADQABAAkAIHMwACAxID09ORAKAAIAchIAbgYAAAAYAA0AAQAJACBzMAAgMiA9PTkQCgACAHISAG4BAAAAGAANAAEACQAgczAAIDMgPT05EAoAAgByEgBuAwAAABkAAAAYAA0ACQAJACBzLgAgOCA9PRYADQABAAkAIHMwACAwID09ORAKAAIAchIAbgEAAAAYAA0AAQAJACBzMAAgMSA9PTkQCgACAHISAG4KAAAAGAANAAEACQAgczAAIDIgPT05EAoAAgByEgBuCwAAABgADQABAAkAIHMwACAzID09ORAKAAIAchIAbgYAAAAZAAAAGAANAAkACQAgcy4AIDkgPT0WAA0AAQAJACBzMAAgMCA9PTkQCgACAHISAG4IAAAAGAANAAEACQAgczAAIDEgPT05EAoAAgByEgBuBAAAABgADQABAAkAIHMwACAyID09ORAKAAIAchIAbgsAAAAYAA0AAQAJACBzMAAgMyA9PTkQCgACAHISAG4FAAAAGQAAABgADgAAAAoAIHMuACAxMCA9PRkAAAAVAAoAcgUAcwIAAgAgMRYADgABAAoAIHMuACAxMCA+PRUACQBzLgAEACAxIH4XAAIAAQAVAAcAcy4AAgAgMBkAAAAZAAAAGQAAABkAAAAZAAAAFgAYACwAFAAgc1MAIDAgPiBzVAAgMCA9PSAmJhYADQAKAAkAIHNTACAxID09FQALAHMKAAYAIFhNEAAAFgANAAIACQAgcwoAIDUwID4cAAEANBAIAAIAcgMAchMAFQAHAHMpAAIAIDIXAAIAAgAcAAIANBAIAAIAcgMAchMAFQAHAHMpAAIAIDMZAAAAFQAHAHNUAAIAIDEVAAcAc1MAAgAgMhgADQAWAAkAIHNTACAyID09FQALAHMKAAYAIFhNEAAAFQALAHMLAAYAIFhNEAAAFgANAAcACQAgcwoAIDUwID4WAA4AAQAKACBzCwAgNjYgPj0cAAMANBAIAAIAcgQAchQAGAAOAAEACgAgcwsAIDMzID49HAADADQQCAACAHICAHIUABcAAgABABwAAwA0EAgAAgByAQByFAAZAAAAFwACAAcAFgANAAIACQAgcykAIDMgPT0cAAEANBAIAAIAcgMAchMAFQAHAHMpAAIAIDIXAAIAAgAcAAIANBAIAAIAcgMAchMAFQAHAHMpAAIAIDMZAAAAGQAAABUABwBzVAACACAxFQAHAHNTAAIAIDMVABYAZhAAEQAgWE0QAAAgMTAwIC8gLjIgKxgADQAEAAkAIHNTACAzID09FQARAGYQAAwAIGYQACBYDBAAACAtFgAMAAEACAAgZhAAIDAgPBUABwBzUwACACA0GQAAABgADQADAAkAIHNTACA0ID09HAAEADQQCAACAHIDAHITABUABwBzVAACACAxFQAHAHNTAAIAIDEZAAAAGQAAABYADQASAAkAIHMIACAxID09FgANABAACQAgZhEAIDAgPD0WAA0ABAAJACBzCQAgMCA9PRwAAwBeEAAAHAAEADQQCAACAHIBAHIVABUABwBmEQACACAxFQAKAHIGAHMJAAIAIDEYAA0AAwAJACBzCQAgMSA9PRwAAgA0EAgAAgByBAByFQAVAAcAZhEAAgAgMRUACgByBgBzCQACACAyGAANAAUACQAgcwkAIDIgPT0cAAEANBAIAAIAcgQAchUAFQAHAGYRAAIAIDEVAAoAcgYAcwkAAgAgMxUACQBzCAAEACAxIH45EAoAAgByBgBuHgAAABkAAAAZAAAAGQAAABYADQAiAAkAIHMHACAxID09FgANACAACQAgZhIAIDAgPD0WAA0ABAAJACBzBgAgMCA9PRwAAwBeEAAAHAABADQQCAACAHIEAHIWABUABwBmEgACACAxFQAHAHMGAAIAIDEYAA0AAwAJACBzBgAgMSA9PRwABAA0EAgAAgByAQByFgAVAAcAZhIAAgAgMRUABwBzBgACACAyGAANAAMACQAgcwYAIDIgPT0cAAEANBAIAAIAcgIAchYAFQAHAGYSAAIAIDEVAAcAcwYAAgAgMxgADQADAAkAIHMGACAzID09HAACADQQCAACAHIEAHIWABUABwBmEgACACAxFQAHAHMGAAIAIDQYAA0AAwAJACBzBgAgNCA9PRwABAA0EAgAAgByAQByFgAVAAcAZhIAAgAgMRUABwBzBgACACA1GAANAAMACQAgcwYAIDUgPT0cAAQANBAIAAIAcgMAchYAFQAHAGYSAAIAIDEVAAcAcwYAAgAgNhgADQAFAAkAIHMGACA2ID09HAAEADQQCAACAHIHAHIWABUABwBmEgACACAxFQAHAHMGAAIAIDcVAAkAcwcABAAgMSB+ORAKAAIAcgYAbh4AAAAZAAAAGQAAABkAAAAWACUADgAhACBzFQAgMSA9PSBYOxAKAAIAcgYAbh4AAAAgMCA9PSAmJhwABACAEQUAAQByFwAcAAEAgBEFAAEAchcAHAACAIARBQABAHIXABwABAAWEAUAAQByBwAcAAEAFhAFAAEAcgcAHAACABYQBQABAHIHABwABQBeEAAAFQAHAHNTAAIAIDAVABIAZhYADQAgcgQAWA4QBAABABAAFQASAGYXAA0AIHIBAFgOEAQAAQAQABUAEgBmGAANACByAgBYDhAEAAEAEAAVABIAZhkADQAgcgcAWA4QBAABABAAFQAHAHMVAAIAIDIcAAMAXhAAABkAAAAWAA0ACQAJACBzFQAgMiA9PRYAKQABACUAIHIEAFgOEAQAAQAQACBmFgAgLjUgKiA8PSBzGgAgMCA9PSAmJhUABwBzGgACACAxGAApAAEAJQAgcgEAWA4QBAABABAAIGYXACAuNSAqIDw9IHMaACAwID09ICYmFQAHAHMaAAIAIDEYACkAAQAlACByAgBYDhAEAAEAEAAgZhgAIC41ICogPD0gcxoAIDAgPT0gJiYVAAcAcxoAAgAgMRgAKQABACUAIHIHAFgOEAQAAQAQACBmGQAgLjUgKiA8PSBzHQAgMCA9PSAmJhUABwBzHQACACAxGQAAABkAAAAWAA0ACgAJACBzGgAgMSA9PRUABwBzFQACACAzHAADAF4QAAAcAAQAFxAAABwAAQAXEAAAHAACABcQAAAVAAcAcx4AAgAgMRUABwBzCAACACAxFQAHAHMtAAIAIDIVAAcAcxoAAgAgMjkQCgACAHIGAG4eAAAAGQAAABYADQAKAAkAIHMdACAxID09FQAHAHMVAAIAIDMcAAMAXhAAABwABAAXEAAAHAABABcQAAAcAAIAFxAAABUABwBzHgACACAxFQAHAHMIAAIAIDEVAAcAcy0AAgAgMhUABwBzHQACACAyORAKAAIAcgYAbh4AAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="CG03Script.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchHome</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WallyHome</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PaulHome</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WallyLeaveConvoVar</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WallyTurned</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchTurned</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchLeaveConvoVar</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">speakerRAN</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">targetRAN</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">handler</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">insulttimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">breaktimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>17</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchLeaveTalkTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">WallyLeaveTalkTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmataFatVAR</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HitButch</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HitSnake</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchHealth</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">WallyHealth</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">PaulHealth</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerHealth</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>26</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchQuit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerQuit</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchGreet</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmataLeaveVAR</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>35</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">dadjonasVAR</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>37</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">dadconvoVAR</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>39</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">JonasConvoVar</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>41</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">LastSpeaker</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>45</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmataOutcome</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>46</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">question</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>47</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>48</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>50</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">stanleyConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>53</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatBarter</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>54</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatBigGuns</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>55</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatEnergyWeapons</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>56</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatExplosives</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>57</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatLockpick</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>58</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatMedicine</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>59</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatMeleeWeapons</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>60</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatRepair</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>61</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatScience</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>62</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatSmallGuns</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>63</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatSneak</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>64</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatSpeech</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>66</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">goatUnarmed</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>70</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">skillFirst</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>71</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">valueFirst</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>72</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">skillSecond</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>73</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">valueSecond</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>74</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">skillThird</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>75</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">valueThird</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>76</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">runTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>77</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>78</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">turnInCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>79</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">turnInTestConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>80</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bullyConv</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>83</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bullyStage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>84</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bullyTalking</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0601CE2B">CG03WallyMackREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601CE29">CG03PaulHannonREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601CE25">CG03AmataREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601CE27">CG03ButchREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601CFB8">CG03MrBrotchREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E85">CG03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038ADF">CG03GoatQuestion01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE0">CG03GoatQuestion02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE2">CG03GoatQuestion03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE3">CG03GoatQuestion04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE6">CG03GoatQuestion05</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE7">CG03GoatQuestion06</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AE8">CG03GoatQuestion07</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AEA">CG03GoatQuestion08</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AEB">CG03GoatQuestion09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00038AED">CG03GoatQuestion10</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06038AEF">CG03Test</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001CDEA">CG03BullyTalk</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001CDE9">CG03AmataTalk</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001CDD9">CG03ButchLeavingTalk</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001CDDA">CG03WallyLeavingTalk</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001B2A4">PlayerFaction</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,12 @@
+scn TTWUnStnReactorPrimerSCRIPT
+
+BEGIN OnAdd Player	
+	if GetObjectiveDisplayed TTWUnStnPowerQuest 17 == 1
+		SetObjectiveCompleted TTWUnStnPowerQuest 17 1
+		SetObjectiveDisplayed TTWUnStnPowerQuest 16 1
+	else
+		StartQuest TTWUnStnPowerQuest
+		SetObjectiveCompleted TTWUnStnPowerQuest 17 1
+		SetObjectiveDisplayed TTWUnStnPowerQuest 16 1
+	endif
+END

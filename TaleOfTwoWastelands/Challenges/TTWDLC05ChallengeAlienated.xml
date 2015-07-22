@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018595">TTWDLC05ChallengeAlienated</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC05ChallengeAlienated</EditorID>
+    <Name Tag="FULL">Alienated</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185DC">TTWChallengeVeryLowXPSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Inflict damage with alien weapons.</Description>
+    <Data Tag="DATA">
+      <Type>DoDamage</Type>
+      <Threshold>4200</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>420</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <WeaponList Tag="XNAM">
+      <Reference ID="0C0185C1">TTWDLC05ChallengeAlienatedWeaponList</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

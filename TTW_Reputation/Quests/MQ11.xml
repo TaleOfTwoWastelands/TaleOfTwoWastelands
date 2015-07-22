@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E91">MQ11</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ11</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06025E1B">MQ11Script</Reference>
+    </Script>
+    <Name Tag="FULL">Take it Back!</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics, AllowRepeatedStages</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>85</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHIQBwABAG5kAAAAHAACAN0QBwABAG4AAAAAHAACAHIQBwABAG7/AAAAHAADACIQAgAAABwABAAiEAIAAAAcAAUAIRACAAAAHAAGACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">
+
+PPurity02PipeDoorRef.Lock 100
+
+PPBulkhead01Ref.SetOpenState 0
+PPBulkhead01Ref.Lock 255
+MQ03PurityStateRef.Disable
+MQ03MutantEnableMarker.Disable
+MQ11TeslaSoldier1.enable
+MQ11TeslaSoldier2.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E005">PPurity02PipeDoorRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607CC05">PPBulkhead01Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06056FCA">MQ03purityStateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BD690">MQ03MutantEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A0BD5">MQ11TeslaSoldier1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A0BD6">MQ11TeslaSoldier2</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">2</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>14</ReferenceCount>
+                <CompiledSize>112</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF0QAAAcAAIAXRAAABwAAwBdEAAAHAAEAF0QAAAcAAUAXRAAABwABgBdEAAAHAAHAF0QAAAcAAgAXRAAABwACQBdEAAAHAAKAF0QAAAcAAsAXRAAABwADABdEAAAHAANAF0QAAAcAA4AXRAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;END OF LYONS SPEECH
+ElderLyonsRef.StopLook
+ScribeRothchildRef.StopLook	
+ScribeBowditchRef.StopLook
+ScribePeabodyRef.StopLook
+MQ01SarahRef.StopLook
+CitadelScribeLP4Ref.StopLook
+CitadelScribeLP3Ref.StopLook
+CitadelScribeLP2Ref.StopLook
+CitadelScribeLP1Ref.StopLook
+MQ01VargasRef.StopLook
+PaladinGladeRef.StopLook
+PaladinKodiakRef.StopLook
+KnightCaptainDuskRef.StopLook
+KnightCaptainGallowsRef.StopLook</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F0C7">ScribeRothchildRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E4">ScribeBowditchREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E5">ScribePeabodyREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E3">CitadelScribeLP4Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E2">CitadelScribeLP3Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E1">CitadelScribeLP2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E0">CitadelScribeLP1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E9">PaladinGladeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210EA">PaladinKodiakREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210EB">KnightCaptainDuskREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210EC">KnightCaptainGallowsREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgEAAABuAQAAAKMRDwADAHIBAG4KAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">
+SetObjectiveCompleted MQ11 1 1
+SetObjectiveDisplayed MQ11 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>103</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgQAbgoAAABuAQAAAKMRDwADAHIEAG4UAAAAbgEAAAADEAoAAgByBQBuAAAAABwAAQAPEAkAAgA5AG4CAAAAHAACAA8QCQACADkAbgIAAAAcAAMADxAJAAIAOQBuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ11 10 1
+SetObjectiveDisplayed MQ11 20 1
+SetEssential ColonelAutumn 0
+ElderLyonsRef.SetAV Assistance 2
+MQ01SarahRef.SetAV Assistance 2
+ScribeRothchildRef.SetAV Assistance 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F0C7">ScribeRothchildRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019A1F">ColonelAutumn</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">ElderLyonsRef.EVP
+ScribeRothchildRef.EVP</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060210E6">ElderLyonsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601F0C7">ScribeRothchildRef</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>15</ReferenceCount>
+                <CompiledSize>238</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHIMABwAAQAhEAIAAAAcAAEA7BAHAAEAbgAAAAADEAoAAgByDQBuAAAAABwAAgDdEAcAAQBuAAAAABUACgByAgBzAQACACAwHAADAA8QCQACABAAbvQBAACiEQ8AAwByDgBuFAAAAG4BAAAAoxEPAAMAcg4Abh4AAABuAQAAADkQCgACAHIPAG4BAAAAORAKAAIAcg8AbgoAAAAcAAQAIhACAAAAHAAFACIQAgAAABwABgAiEAIAAAAcAAcAIhACAAAAHAAIACIQAgAAABwACQBeEAAAHAAKAF4QAAAcAAsAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">ColonelAutumnRef.MoveTo MQ11AutumnMarker
+ColonelAutumnRef.Enable
+ColonelAutumnRef.SetGhost 0
+SetEssential ColonelAutumn 0
+CitCraneRef.SetOpenState 0
+Set CitCraneRef.State to 0
+MQ01SarahRef.SetAV Health 500
+SetObjectiveCompleted MQ11 20 1
+SetObjectiveDisplayed MQ11 30 1
+SetStage MQ11LD 1
+SetStage MQ11LD 10
+;MQ01VargasRef.EVP
+;PaladinGladeRef.EVP
+;PaladinKodiakRef.EVP
+;KnightCaptainDuskRef.EVP
+;KnightCaptainGallowsRef.EVP
+CitadelSentryBotRef.disable
+CitadelBOSGuardRef1.disable
+MQ11BosExteriorGuard01REF.disable
+MQ11BosExteriorGuard02REF.disable
+GateGuardRef.disable
+CitBaileyInitiate04Ref.EVP
+CitBaileyInitiate05Ref.EVP
+CitadelBrotherhoodInitiate02REF.EVP</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601B52C">ColonelAutumnRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060341E9">CitCraneREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06071730">CitadelSentryBotRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608DE18">CitadelBOSGuardRef1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608DE16">MQ11BosExteriorGuard01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608DE17">MQ11BosExteriorGuard02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B8759">GateGuardRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020BE0">CitBaileyInitiate04Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020C34">CitBaileyInitiate05Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601E561">CitadelBrotherhoodInitiate02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06053409">MQ11AutumnMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019A1F">ColonelAutumn</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606023F">MQ11LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>13</ReferenceCount>
+                <CompiledSize>186</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgoAbh4AAABuAQAAAKMRDwADAHIKAG4oAAAAbgEAAAA5EAoAAgByCwBuCgAAABwAAQATEAkAAgADAG4BAAAAHAACAJ4QBQABAHIMABwAAwAhEAIAAAAcAAQAIRACAAAAHAAFACEQAgAAAAMQCgACAHINAG4AAAAAHAAGACEQAgAAABwABwAhEAIAAAAcAAgA3RAHAAEAbgAAAAAcAAgAchAHAAEAbv8AAAAcAAkAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ11 30 1
+SetObjectiveDisplayed MQ11 40 1
+SetStage MQA 10
+PPurityFXTankEffectRef.Playgroup Forward 1
+ColonelAutumnRef.MoveTo MQ11AutumnMarker
+MQ11EnclaveScientistDeadRef.Enable
+MQ11TeslaGoon1Ref.Enable
+MQ11TeslaGoon2Ref.Enable
+SetEssential ColonelAutumn 0
+MQ05Radiation1.Enable
+MQ05Radiation2.Enable
+PPBulkhead01Ref.SetOpenState 0
+PPBulkhead01Ref.Lock 255
+MQ03PurityStateRef.Disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060AED90">PPurityFXTankEffectRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601B52C">ColonelAutumnRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B2D97">MQ11EnclaveScientistDeadRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B2D9B">MQ11TeslaGoon1Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060B2D9A">MQ11TeslaGoon2Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A98F6">MQ05Radiation1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060A98F7">MQ05Radiation2</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0607CC05">PPBulkhead01Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06056FCA">MQ03purityStateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E93">MQA</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06053409">MQ11AutumnMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06019A1F">ColonelAutumn</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbigAAABuAQAAAKMRDwADAHIBAG4yAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ11 40 1
+SetObjectiveDisplayed MQ11 50 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG48AAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ11 50 1
+SetObjectiveDisplayed MQ11 60 1
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">61</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAAKMRDwADAHIBAG49AAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ11 50 1
+SetObjectiveDisplayed MQ11 61 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>120</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAQAHIBAGY7AAgAIEcCACAxICsVAAoAcgEAczUAAgAgMTcQBQABAHIDABYAGQACABUAIFg7EAoAAgByBABuZAAAACAwID09ohEPAAMAcgQAbgoAAABuAQAAADkQCgACAHIEAG7IAAAAGQAAAHcRBwABAG6wBAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">  Set RadioGalaxyNewsQuest.MQ11Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1
+StopQuest MQ11
+if ( GetStageDone MQA 100 == 0 )
+SetObjectiveCompleted MQA 10 1
+SetStage MQA 200
+endif
+RewardXP 1200
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E91">MQ11</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E93">MQA</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Speak with Sarah Lyons for the mission briefing.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D44F">MQ01SarahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Prepare for battle, and then report to Sarah Lyons.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D44F">MQ01SarahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Follow Liberty Prime as he makes his way to the Purifier.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601D44F">MQ01SarahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="0607EA1F">Wasteland</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06060A26">MQ11WaitGate03</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>2</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E91">MQ11</Quest>
+                  <VariableIndex>14</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060603D9">MQ11WaitGate01</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E91">MQ11</Quest>
+                  <VariableIndex>14</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060603DB">MQ11WaitGate02</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E91">MQ11</Quest>
+                  <VariableIndex>14</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Reach the Project Purity Control Room.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060410BD">PPControlPanelRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Secure the Project Purity Control Room.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Activate Project Purity!</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060A6ADE">PPurityKeypadEnterRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">1</Index>
+        <Description Tag="NNAM">Follow Elder Lyons to the Citadel Lab.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">61</Index>
+        <Description Tag="NNAM">Cycle the airlock.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="060A6B66">MQ11AirlockControlRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">65</Index>
+        <Description Tag="NNAM">Tell your follower to start the purifer.</Description>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

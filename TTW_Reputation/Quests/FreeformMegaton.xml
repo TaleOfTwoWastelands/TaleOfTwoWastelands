@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="060173D8">FreeformMegaton</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FreeformMegaton</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="06038996">FreeformMegatonQuestSCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Megaton</Name>
+    <Data Tag="DATA">
+      <Flags>25</Flags>
+      <Priority>30</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;Player has accepted mission to kill Tam Blackwell
+;Enables Tam Blackwell
+;TamBlackwellREF.enable</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">11</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">12</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;Tam Blackwell is dead</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;Set when player fixes water pipes</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">101</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAHMGAAQAIEcCABUADAByAQBzCQAEACBHAwAVABYAcgEAcwcADgAgcgQAWC8QBQABAHIFAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Sets variables for rewards
+
+set FreeformMegaton.PartsPurchaseReward to FreeformMegatonSparePartsReward
+set FreeformMegaton.PartsXPReward to FreeformMegatonSparePartsXPReward
+set FreeformMegaton.PlayerPartsCount to ( Player.GetItemCount SpareParts )
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006B1C8">FreeformMegatonSparePartsReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>115</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQATAHICAHMIAAsAIHICAHMGACA1ICocAAEAAhALAAIAcgMAcgIAcwgAFQAQAHICAHMKAAgAIEcEACA1ICp3EQgAAQByAgBzCgAcAAEAUhAKAAIAcgUAbgUAAAA7EhMAAwByBgBuAQAAAHoAAAAAAADwPw==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in 5 parts
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PartsPurchaseReward * 5 )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * 5 )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 5
+AddReputationExact RepTTWMegaton 1 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">110</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>117</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAUAHICAHMIAAwAIHICAHMGACAxMCAqHAABAAIQCwACAHIDAHICAHMIABUAEQByAgBzCgAJACBHBAAgMTAgKncRCAABAHICAHMKABwAAQBSEAoAAgByBQBuCgAAADsSEwADAHIGAG4BAAAAegAAAAAAAABA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in 10 parts
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PartsPurchaseReward * 10 )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * 10 )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 10
+AddReputationExact RepTTWMegaton 1 2</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">115</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>117</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAUAHICAHMIAAwAIHICAHMGACAxNSAqHAABAAIQCwACAHIDAHICAHMIABUAEQByAgBzCgAJACBHBAAgMTUgKncRCAABAHICAHMKABwAAQBSEAoAAgByBQBuDwAAADsSEwADAHIGAG4BAAAAegAAAAAAAAhA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in 15 parts
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PartsPurchaseReward * 15 )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * 15 )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 15
+AddReputationExact RepTTWMegaton 1 3</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">120</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>117</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAUAHICAHMIAAwAIHICAHMGACAyMCAqHAABAAIQCwACAHIDAHICAHMIABUAEQByAgBzCgAJACBHBAAgMjAgKncRCAABAHICAHMKABwAAQBSEAoAAgByBQBuFAAAADsSEwADAHIGAG4BAAAAegAAAAAAABBA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in 20 parts
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PartsPurchaseReward * 20 )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * 20 )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 20
+AddReputationExact RepTTWMegaton 1 4</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">125</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>117</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAUAHICAHMIAAwAIHICAHMGACAyNSAqHAABAAIQCwACAHIDAHICAHMIABUAEQByAgBzCgAJACBHBAAgMjUgKncRCAABAHICAHMKABwAAQBSEAoAAgByBQBuGQAAADsSEwADAHIGAG4BAAAAegAAAAAAABRA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in 25 parts
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PartsPurchaseReward * 25 )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * 25 )
+RewardXP FreeformMegaton.PlayerXPRewardAmount 
+player.RemoveItem SpareParts 25
+AddReputationExact RepTTWMegaton 1 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>125</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAYAHICAHMIABAAIHICAHMHACByAgBzBgAgKhwAAQACEAsAAgByAwByAgBzCAAVABUAcgIAcwoADQAgRwQAIHICAHMHACAqdxEIAAEAcgIAcwoAHAABAFIQCgACAHIFAG7oAwAAOxITAAMAcgYAbgEAAAB6AAAAAAAAGEA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in all parts for money
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PlayerPartsCount * FreeformMegaton.PartsPurchaseReward )
+player.AddItem Caps001 FreeformMegaton.PlayerRewardAmount
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * FreeformMegaton.PlayerPartsCount )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 1000
+AddReputationExact RepTTWMegaton 1 6</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">151</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>119</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAVAHICAHMIAA0AIHICAHMHACBHAwAgKhwAAQAEEggAAQByAgBzCAAVABUAcgIAcwoADQAgRwQAIHICAHMHACAqdxEIAAEAcgIAcwoAHAABAFIQCgACAHIFAG7oAwAAOxITAAMAcgYAbgEAAAB6AAAAAAAAHEA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set when player turns in all parts for karma
+
+set FreeformMegaton.PlayerRewardAmount to ( FreeformMegaton.PlayerPartsCount * FreeformMegatonSparePartsKarmaReward )
+player.RewardKarma FreeformMegaton.PlayerRewardAmount 
+set FreeformMegaton.PlayerXPRewardAmount to ( FreeformMegatonSparePartsXPReward * FreeformMegaton.PlayerPartsCount )
+RewardXP FreeformMegaton.PlayerXPRewardAmount
+player.RemoveItem SpareParts 1000
+AddReputationExact RepTTWMegaton 1 7</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060173D8">FreeformMegaton</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00093EDB">FreeformMegatonSparePartsKarmaReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0007771F">FreeformMegatonSparePartsXPReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00031944">SpareParts</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017E6">RepTTWMegaton</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

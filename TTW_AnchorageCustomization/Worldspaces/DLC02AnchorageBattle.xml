@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WRLD">
+  <Flags>0</Flags>
+  <FormID ID="07000E28">DLC02AnchorageBattle</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02AnchorageBattle</EditorID>
+    <Name Tag="FULL">Anchorage</Name>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0700848A">DLC02AnchorageBattleZone</Reference>
+    </EncounterZone>
+    <Climate Tag="CNAM">
+      <Reference ID="070022E5">DLC02AnchClimate01</Reference>
+    </Climate>
+    <Water Tag="NAM2">
+      <Reference ID="0700CE70">DLC02OceanWater</Reference>
+    </Water>
+    <LODWater>
+      <Type Tag="NAM3">
+        <Reference ID="0700CE70">DLC02OceanWater</Reference>
+      </Type>
+      <Height Tag="NAM4">0</Height>
+    </LODWater>
+    <LandData Tag="DNAM">
+      <DefaultLandHeight>12288</DefaultLandHeight>
+      <DefaultWaterHeight>0</DefaultWaterHeight>
+    </LandData>
+    <Icon>
+      <Large Tag="ICON">DLCAnch\Interface\Worldmap\DLCAnch_1024_no_Map.dds</Large>
+    </Icon>
+    <MapData Tag="MNAM">
+      <UsableSize>
+        <X>1024</X>
+        <Y>1024</Y>
+      </UsableSize>
+      <MinX>-25</MinX>
+      <MinY>25</MinY>
+      <MaxX>25</MaxX>
+      <MaxY>-25</MaxY>
+    </MapData>
+    <WorldMapOffsetData Tag="ONAM">
+      <WorldMapScale>1.125</WorldMapScale>
+      <Offset>
+        <CellX>-5000</CellX>
+        <CellY>-35000</CellY>
+      </Offset>
+    </WorldMapOffsetData>
+    <ImageSpace Tag="INAM">
+      <Reference ID="070022E7">DLC02AnchBaseImageSpace</Reference>
+    </ImageSpace>
+    <WorldspaceFlags Tag="DATA">SmallWorld, CannotFastTravel, NoLODNoise</WorldspaceFlags>
+    <ObjectBounds>
+      <Min Tag="NAM0">
+        <X>-81920</X>
+        <Y>-73728</Y>
+      </Min>
+      <Max Tag="NAM9">
+        <X>98304</X>
+        <Y>135168</Y>
+      </Max>
+    </ObjectBounds>
+    <Music Tag="ZNAM">
+      <Reference ID="00090CE7">DefaultBase</Reference>
+    </Music>
+    <CanopyShadow Tag="NNAM"></CanopyShadow>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WastelandWaterPotomac.dds</WaterNoiseTexture>
+    <SwappedImpacts>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="0001E37D">BalisticDirtImpact</OldImpact>
+        <NewImpact ID="070034FD">BalisticSnowImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="000A9D70">ExplosionDirtLargeImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+      <SwappedImpact Tag="IMPS">
+        <MaterialType>Grass</MaterialType>
+        <OldImpact ID="00094B90">ExplosionDirtImpact</OldImpact>
+        <NewImpact ID="070035FC">ExplosionSnowLgImpact</NewImpact>
+      </SwappedImpact>
+    </SwappedImpacts>
+    <FootstepMaterial Tag="IMPF">
+      <ConcreteSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteSolid>
+      <ConcreteBroken>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</ConcreteBroken>
+      <MetalSolid>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSolid>
+      <MetalHollow>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalHollow>
+      <MetalSheet>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</MetalSheet>
+      <Wood>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Wood>
+      <Sand>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Sand>
+      <Dirt>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Dirt>
+      <Grass>U25vdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Grass>
+      <Water>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Water>
+    </FootstepMaterial>
+  </Subrecords>
+</Record>

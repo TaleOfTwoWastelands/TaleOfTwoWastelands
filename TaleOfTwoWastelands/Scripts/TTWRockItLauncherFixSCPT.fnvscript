@@ -1,0 +1,13 @@
+scn TTWRockItLauncherFixSCPT
+
+short DoOnce
+
+Begin GameMode
+
+	If DoOnce == 0
+		AddFormToFormList RockItLauncherAmmo DinoToy
+		Set DoOnce to 1
+		StopQuest TTWRockItLauncherFix
+	Endif
+
+End

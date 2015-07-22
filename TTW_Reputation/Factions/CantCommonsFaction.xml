@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="00059410">CantCommonsFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CantCommonsFaction</EditorID>
+    <Name Tag="FULL">Canterbury Commons Faction</Name>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001B2A4">PlayerFaction</Faction>
+        <Modifier>20</Modifier>
+        <CombatReaction>Neutral</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00059410">CantCommonsFaction</Faction>
+        <Modifier>50</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00065374">TraderFaction</Faction>
+        <Modifier>20</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>HiddenFromPC</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Ranks>
+      <Rank>
+        <Rank Tag="RNAM">0</Rank>
+        <Title>
+          <Male Tag="MNAM">Canterbury Citizen</Male>
+          <Female Tag="FNAM">Canterbury Citizen</Female>
+        </Title>
+      </Rank>
+    </Ranks>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017ED">RepTTWCanterburyCommons</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

@@ -1,0 +1,130 @@
+scn DLC05MZ2QuestScript
+
+
+short MZ2SomahMove													;1= Somah has been moved to the engineering core
+short MZ2Unfrozen														;1= The stasis has been turned off (for dialogue)
+short MZ2SallyTalked													;1= Player got updated objective from Sally after opening Stasis
+short MZ2Follow															;1= An NPC is now in the Player's "group" (for dialogue)
+short MZ2PaulsonFollow												;1= Toggles Paulson's package follow
+short MZ2TercorienFollow												;1= Toggles Tercorien's package follow
+short MZ2SomahFollow													;1= Toggles Somah's package follow
+short MZ2Generator														;x= Number of Generators disabled (3 to complete)
+short MZ2FirstGenerator													;1= 1 Generator is down
+short MZ2SecondGenerator												;1= 2 Generators are down
+short MZ2ThirdGenerator												;1= 3 Generators are down
+short MZ2SomahTrigger													;1= Named NPC has been brought into "wrong" section of ship (kick off package)
+short MZ2TercorienTrigger												;1= Named NPC has been brought into "wrong" section of ship (kick off package)
+short MZ2PaulsonTrigger												;1= Named NPC has been brought into "wrong" section of ship (kick off package)
+short MZ2CryoGet															;1= Tercorien has finished the Cryo Labs with Player and has Cryo materials
+short MZ2QuestDone														;1= Player has entered upper level of vessel
+short MZ2SamuraiTalk													;1= Player attempted to communicate with the Samurai NPC (for dialogue)
+short MZ2EndFollows													;1= End all activate follows after third generator and in Engine Core
+short MZ2CryoBoom														;1= Cryo Generator is done
+short MZ2AsmBoom														;1= Robot Assembly Generator is done
+short MZ2HQBoom														;1= Hangar Generator is done
+short MZ2SallyStash														;1= Sally gives player extra items
+short MZ2SamuraiGone													;1= Samurai has been removed from Engineering Core
+short MZ2PaulsonBG														;1= Paulson has told the player his backstory
+short MZ2SomahBG														;1= Somah has told the player her backstory
+short MZ2GoVent															;1= Sally heads to the vent in the Engine Core to unlock all the "mini-dungeon" doors
+
+
+begin gamemode
+
+;Pop Somah into the Engineering Core at the beginning of this quest
+
+	if ( MZ2SomahMove == 0 )
+		if ( DLC05SomahRef.GetDead == 0 )
+			DLC05SomahRef.Moveto DLC05MZ2SomahStartMarker
+			DLC05SomahRef.Additem CondShotgunCombatNPC 1
+			DLC05SomahRef.Additem AmmoShotgunShell 100
+			DLC05SomahREF.EVP
+			set MZ2SomahMove to 1
+		endif
+	endif
+
+
+;This array of 3 blocks handles finding the generators in each of the "sub-levels" off of the engine core
+;As each one is disabled, we count how many generators are down. They can of course be done in any order
+
+
+	if ( MZ2FirstGenerator == 0 )
+		if ( MZ2Generator == 1 )
+			Set MZ2FirstGenerator to 1
+				if ( DLC05CryoQ.CryoGenDestroyed == 1 ) && ( MZ2CryoBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 30 1
+					Set MZ2CryoBoom to 1
+				elseif ( GetStageDone DLC05HQ 255 == 1 ) && ( MZ2HQBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 40 1	
+					Set MZ2HQBoom to 1
+				elseif ( GetStageDone DLC05Asm 255 == 1 ) && ( MZ2AsmBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 50 1
+					Set MZ2AsmBoom to 1
+				endif			
+		endif
+	endif
+			
+	if ( MZ2SecondGenerator == 0 )
+		if ( MZ2Generator == 2 )
+			Set MZ2SecondGenerator to 1
+				if ( DLC05CryoQ.CryoGenDestroyed == 1 ) && ( MZ2CryoBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 30 1
+					Set MZ2CryoBoom to 1
+				elseif ( GetStageDone DLC05HQ 255 == 1 ) && ( MZ2HQBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 40 1	
+					Set MZ2HQBoom to 1
+				elseif ( GetStageDone DLC05Asm 255 == 1 ) && ( MZ2AsmBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 50 1
+					Set MZ2AsmBoom to 1
+				endif
+		endif
+	endif
+
+	if ( MZ2ThirdGenerator == 0 )
+		if ( MZ2Generator >= 3 )
+			Set MZ2ThirdGenerator to 1
+				if ( DLC05CryoQ.CryoGenDestroyed == 1 ) && ( MZ2CryoBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 30 1
+					SetObjectiveCompleted DLC05MZ2 35 1
+					SetObjectiveDisplayed DLC05MZ2 60 1
+					Set MZ2CryoBoom to 1
+				elseif ( GetStageDone DLC05HQ 255 == 1 ) && ( MZ2HQBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 40 1
+					SetObjectiveCompleted DLC05MZ2 35 1	
+					SetObjectiveDisplayed DLC05MZ2 60 1
+					Set MZ2HQBoom to 1
+				elseif ( GetStageDone DLC05Asm 255 == 1 ) && ( MZ2AsmBoom == 0 )
+					SetObjectiveCompleted DLC05MZ2 50 1
+					SetObjectiveCompleted DLC05MZ2 35 1	
+					SetObjectiveDisplayed DLC05MZ2 60 1
+					Set MZ2AsmBoom to 1
+				endif
+		endif
+	endif
+
+	if ( MZ2EndFollows == 0 )
+		if ( MZ2ThirdGenerator == 1 )
+			if ( Player.GetInCell DLC05EngineCore == 1 )
+				set DLC05MZ2.MZ2Follow to 0
+				set DLC05MZ2.MZ2SomahFollow to 0
+				set DLC05MZ2.MZ2TercorienFollow to 0
+				set DLC05MZ2.MZ2PaulsonFollow to 0
+				DLC05PaulsonRef.Evp
+				DLC05SomahRef.Evp
+				DLC05TercorienRef.Evp
+				set MZ2EndFollows to 1
+			endif
+		endif
+	endif
+
+
+;This block checks if the Player has entered the top tier of the ship to do handoff for Quest 3
+
+	if ( MZ2QuestDone == 0 )
+	 	if ( Player.GetInCell DLC05Exlab01 == 1 )
+			SetStage DLC05MZ2 200
+			Set MZ2QuestDone to 1
+		endif
+	endif
+
+end

@@ -1,0 +1,10 @@
+scn DLC02GrenadeFragActivatorSCRIPT
+
+Begin OnActivate
+	if (IsActionRef player == 1)
+		player.additem WeapGrenadeFrag 1
+		disable
+	endif
+End
+
+

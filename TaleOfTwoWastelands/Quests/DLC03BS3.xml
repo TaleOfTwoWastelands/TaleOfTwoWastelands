@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="090011AD">DLC03BS3</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03BS3</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="090011AF">DLC03BS3QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Who Dares Wins</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>51</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NhAFAAEAcgMAoxEPAAMAcgMAbgoAAABuAQAAABwAAQCeEAUAAQByBAAcAAIAcxACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Test Stage
+StartQuest DLC03BS3
+SetObjectiveDisplayed DLC03BS3 10 1
+Player.Moveto DLC03Quest3Start
+DLC03PresMetroDoor01REF.Unlock
+;Shouldn't be unlocked until after power is turned on - Daryl
+;DLC03PresMetroDoor02REF.Unlock</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09001075">DLC03PresMetroDoor01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090011AD">DLC03BS3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09008CA6">DLC03Quest3Start</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>130</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">DREKAAIAcgEAbgAAAAA3EAUAAQByAgA2EAUAAQByAwAVAAoAcgMAcwEAAgAgMRUABwBHBAACACAwFQAJAEcFAAQAIDEwMGAQAgAAAHcRBwABAG7cBQAArREFAAEAcgIAFQAQAHIGAGY6AAgAIEcHACAxICsVAAoAcgYAczUAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetQuestObject DLC03SenateID 0
+StopQuest DLC03BS3
+StartQuest DLC03PostQuest
+Set DLC03PostQuest.DLC03PQSuperMutant to 1
+Set DLC03AdamsAirForceBaseCOMBAT to 0
+Set DLC03AdamsAirForceBasePEACE to 100
+EnablePlayerControls
+RewardXP 1500
+;Addachievement 61
+CompleteAllObjectives DLC03BS3
+Set RadioGalaxyNewsQuest.DLC03BS3Clear to ( GameDaysPassed + 1 )
+Set RadioGalaxyNewsQuest.ExploitReady to 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="09002E8E">DLC03SenateID</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="090011AD">DLC03BS3</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="09008C72">DLC03PostQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D543">DLC03AdamsAirForceBaseCOMBAT</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0900D544">DLC03AdamsAirForceBasePEACE</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Enter the Presidential Metro.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09008BB4">DLC03MetroEntryMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Locate the Exit to Adams Airforce Base.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09005DD0">DLC03AFBArrivalMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="090011AD">DLC03BS3</Quest>
+                  <VariableIndex>27</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0900386C">DLC03PresMetroRideStart01REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="090011AD">DLC03BS3</Quest>
+                  <VariableIndex>27</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Retrieve your orders and equipment from the Resupply Crate.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09005D8A">DLC03AFBTeslaCannonCrateREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Enter the Enclave Mobile Platform.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09008BB5">DLC03MobilePlatformEntryMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Destroy the Enclave Mobile Platform with an Orbital Strike.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0900824A">DLC03StrikeTerminalRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="09000806">DLC03EnclaveBase01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="090011C3">DLC03EnclaveBase02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09006EFB">DLC03MBExitDoor01</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="09000806">DLC03EnclaveBase01</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="090011C3">DLC03EnclaveBase02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Escape from the Enclave Mobile Platform.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0900A93B">DLC03AFBPlatformSarahLyonsMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">80</Index>
+        <Description Tag="NNAM">Board the Captured Vertibird.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">(Optional) Clear the security breach in the Presidential Metro.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Find the Access Terminal to lower the ramp on the Mobile Platform.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="09005DD2">DLC03RampTerminalRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

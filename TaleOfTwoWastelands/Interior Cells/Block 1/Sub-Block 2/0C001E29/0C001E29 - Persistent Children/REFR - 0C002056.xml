@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="0C002056">REFR - 0C002056</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Base Tag="NAME">
+      <Reference ID="00173889">NVInvisibleDoor</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="0C004880">REFR - 0C004880</Door>
+      <Position>
+        <X>-3797.47974</X>
+        <Y>298.684143</Y>
+        <Z>6380.06689</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>6.28283978</Y>
+        <Z>4.71238899</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <EnableParent Tag="XESP">
+      <Parent ID="0C001F86">TTWTrainDoorChangRef</Parent>
+      <Flags>EnableStateOppositeParent</Flags>
+    </EnableParent>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="0C001F96">NAVM - 0C001F96</NavigationMesh>
+      <Unknown>886374431</Unknown>
+    </NavigationDoorLink>
+    <Scale Tag="XSCL">0.109999999</Scale>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>1247.16125</X>
+        <Y>34.9865189</Y>
+        <Z>9928</Z>
+      </Position>
+      <Rotation>
+        <X>1.57079637</X>
+        <Y>0</Y>
+        <Z>1.57128501</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

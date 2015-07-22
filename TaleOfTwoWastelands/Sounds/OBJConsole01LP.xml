@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SOUN">
+  <Flags>0</Flags>
+  <FormID ID="0001BC62">OBJConsole01LP</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OBJConsole01LP</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Filename Tag="FNAM">fx\obj\obj_console_01_lp.wav</Filename>
+    <RandomChance Tag="RNAM">1</RandomChance>
+    <SoundData Tag="SNDD">
+      <Attenuation>
+        <Distance>
+          <Min>8</Min>
+          <Max>4</Max>
+        </Distance>
+        <StaticAttenuationcdB>1542</StaticAttenuationcdB>
+        <Curve>
+          <Point1>100</Point1>
+          <Point2>50</Point2>
+          <Point3>20</Point3>
+          <Point4>5</Point4>
+          <Point5>0</Point5>
+        </Curve>
+        <ReverbAttenuationControl>0</ReverbAttenuationControl>
+      </Attenuation>
+      <FrequencyAdjustmentPercentage>0</FrequencyAdjustmentPercentage>
+      <Flags>PlayAtRandom, MuteWhenSubmerged</Flags>
+      <Time>
+        <Stop>2</Stop>
+        <Start>4</Start>
+      </Time>
+      <Priority>128</Priority>
+      <Unknown>AAAAAAAAAAA=</Unknown>
+    </SoundData>
+  </Subrecords>
+</Record>

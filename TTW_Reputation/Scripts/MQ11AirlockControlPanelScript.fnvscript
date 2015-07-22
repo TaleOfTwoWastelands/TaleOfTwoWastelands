@@ -1,0 +1,181 @@
+ScriptName MQ11AirlockControlPanelScript
+
+;used in PPurity01 to control bulkheads used in MQ11
+
+short SarahOpened		;flag set if Sarah is the one that activates the airlock
+short openstate
+short init
+short SarahAnim			;flag set if player has passed through airlock, used for updating Sarah's packages
+
+float timer
+float ActivateTimer		;timer used to prevent player from activating airlock multiple times in succession
+
+Begin OnActivate
+
+	if ( IsActionRef MQ01SarahREF == 1 )
+		set SarahOpened to 1
+	else
+		set SarahOpened to 0
+		if IsActionRef player == 1
+			if ( GetStage MQ11 >= 10 )
+;				if ( ActivateTimer <= 0 )
+					if ( OpenState == 0 )
+						if ( MQ11.DLC03FollowerCode == 1 )
+							if ( MQ08FawkesRef.GetDistance MQ11AirlockWaitMarker < 100 )
+								Set OpenState to 1
+								DisablePlayerControls
+								return
+							else
+								;do nothing
+							endif
+						elseif ( MQ11.DLC03FollowerCode == 2 )
+							if ( CharonRef.GetDistance MQ11AirlockWaitMarker < 100 )
+								Set OpenState to 1
+								DisablePlayerControls
+								return
+							else
+								;do nothing
+							endif
+						elseif ( MQ11.DLC03FollowerCode == 3 )
+							if ( RL3Ref.GetDistance MQ11AirlockWaitMarker < 100 )
+								Set OpenState to 1
+								DisablePlayerControls
+								return
+							else
+								;do nothing
+							endif
+						endif
+
+						if ( MQ11.Code == 2 )
+							if ( MQ01SarahRef.GetDistance MQ11AirlockWaitMarker < 100 )
+								Set OpenState to 1
+								DisablePlayerControls
+							else
+								;do nothing
+							endif
+						endif
+						return
+					elseif ( OpenState == 4 )
+						set OpenState to 5
+						return
+					else
+						; do nothing
+					endif
+				else
+						; do nothing
+				endif
+			else
+				ShowMessage PPurityControlNoPowerMessage
+			endif
+
+		endif
+	
+End
+
+Begin GameMode
+
+
+;Intercom stuff
+;--------------------------
+
+;Run the first line for the intercom after Sarah finishes talking to player
+
+	if ( MQ11.IntercomSayTo  == 1 )
+		MQ11IntercomRef.Say MQ11IntercomLine
+		set MQ11.IntercomSayTo to -1
+	endif	
+
+;Check MQ11.EndTimer and run a line at 2 minute mark, 1 minute mark, 30 second mark, and 15 second mark
+
+	if ( MQ11.EndTimer > 0 )
+		if ( MQ11.EndTimer <= 120 )
+			if ( MQ11.IntercomTimedLines == 0 )
+				set MQ11.IntercomTimedLines to 1
+				MQ11IntercomRef.Say MQ11IntercomTimerLines
+			endif
+		elseif ( MQ11.EndTimer <= 70 )
+			if ( MQ11.IntercomTimedLines == 1 )
+				set MQ11.IntercomTimedLines to 2
+				MQ11IntercomRef.Say MQ11IntercomTimerLines
+			endif
+		elseif ( MQ11.EndTimer <= 40 )
+			if ( MQ11.IntercomTimedLines == 2 )
+				set MQ11.IntercomTimedLines to 3
+				MQ11IntercomRef.Say MQ11IntercomTimerLines
+			endif
+		elseif ( MQ11.EndTimer <= 25 )
+			if ( MQ11.IntercomTimedLines == 3 )
+				set MQ11.IntercomTimedLines to 4
+				MQ11IntercomRef.Say MQ11IntercomTimerLines
+			endif
+		endif
+	endif
+
+	if ( ActivateTimer >= 0 )
+		set ActivateTimer to ( ActivateTimer - GetSecondsPassed )
+	endif
+
+
+
+	if ( OpenState == 1 )
+		if ( SarahOpened == 1 )
+			DisablePlayercontrols 1 0 0 1 0 0 0
+		endif
+		MQ11AirlockCollisionPlaneRef.Enable
+		PPBulkhead02Ref.SetOpenState 0
+		set timer to 3
+		set OpenState to 2
+	elseif ( Openstate == 2 )
+		if ( timer <= 0 )
+			MQ11AirlockCollisionPlaneRef.Disable
+			PPBulkhead01Ref.SetOpenState 1
+			set OpenState to 3
+			if ( SarahOpened == 1 )
+				EnablePlayerControls 1 1 1 0 1 1 1
+				Set SarahAnim to 1
+			endif
+		else
+			set timer to ( timer - GetSecondsPassed )
+		endif
+	elseif ( OpenState == 3 )
+		if ( PPBulkhead01Ref.GetOpenState == 1 )
+		set OpenState to 4
+		if ( MQ11.DLC03FollowerCode == 0 )
+			MQ01SarahRef.EVP
+               AddReputation RepTTWBrotherhood 1 3
+		elseif ( MQ11.DLC03FollowerCode == 1 )
+			MQ08FawkesREF.EVP
+               AddReputation RepTTWBrotherhood 1 4
+		elseif ( MQ11.DLC03FollowerCode == 2 )
+			CharonREF.EVP
+               AddReputation RepTTWBrotherhood 1 4
+		elseif ( MQ11.DLC03FollowerCode == 3 )
+			RL3REF.EVP
+               AddReputation RepTTWBrotherhood 1 4
+		endif
+	endif
+	endif
+
+	if ( OpenState == 5 )
+		PPBulkhead01Ref.SetOpenState 0
+		set timer to 3
+		set OpenState to 6
+	elseif ( OpenState == 6 )
+		if ( timer <= 0 )
+			PPBulkhead02Ref.SetOpenState 1
+			set OpenState to 7
+		else
+			set timer to ( timer - GetSecondsPassed )
+		endif
+	elseif ( OpenState == 7 ) 
+		if ( PPBulkhead02Ref.GetOpenState == 1 )
+			set OpenState to 0
+		endif
+	endif
+
+
+
+End
+		
+		
+

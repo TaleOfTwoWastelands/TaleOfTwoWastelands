@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0011D23F">INFO - 0011D23F</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="00117AC4">VFreeformTheStreet01</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>80</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Oh, that makes me so happy! You are too much!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="00117AC4">VFreeformTheStreet01</Quest>
+          <VariableIndex>14</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="00117AC4">VFreeformTheStreet01</Quest>
+          <VariableIndex>15</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00116597">SarahWeintraub</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>266</CompiledSize>
+          <VariableCount>3</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQATAHMBAA4AIHIBAFgvEAUAAQByAgAVABUAcgMAcyAADQAgcgMAcyAAIHMBACArHAABAFIQCAACAHICAHMBABUADgBzAwAJACBzAQAgMzAgKhYAEAAFAAwAIHIDAHMXACAxID09FQAjAHMCAB4AIHIBAFgvEAUAAQByBAAgcgEAWC8QBQABAHIFACArFQAVAHIDAHMgAA0AIHIDAHMgACBzAgAgKxUAFABzAwAPACBzAwAgcwIAIDE1ICogKxwAAQBSEAoAAgByBABu5wMAABwAAQBSEAoAAgByBQBu5wMAABkAAAAcAAEAAhAIAAIAcgYAcwMAOxIQAAMAcgcAbgEAAAByAwBzIAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">int count
+int boomCount
+int CashMoney
+set count to player.GetItemCount RepairVaultSuit   ; no boomer suits in this list
+set VFreeformTheStreet01.Total to VFreeformTheStreet01.Total + count
+player.RemoveItem RepairVaultSuit count
+set CashMoney to count * 30
+
+If VFreeformTheStreet01.BoomerSuits == 1
+	Set boomCount to Player.GetItemCount OutfitBoomer1 + Player.GetItemCount OutfitBoomer2
+	set VFreeformTheStreet01.Total to VFreeformTheStreet01.Total + boomCount
+	set CashMoney to CashMoney + (boomCount * 15)
+	player.RemoveItem OutfitBoomer1 999
+	player.RemoveItem OutfitBoomer2 999
+endif
+
+player.additem caps001 CashMoney
+AddReputationExact RepNVTheStrip 1 VFreeformTheStreet01.Total </ScriptSource>
+        <LocalVariables>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>1</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">count</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>2</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">boomCount</Name>
+          </Variable>
+          <Variable>
+            <Data Tag="SLSD">
+              <Index>3</Index>
+              <Flags>IsLongOrShort</Flags>
+            </Data>
+            <Name Tag="SCVR">CashMoney</Name>
+          </Variable>
+        </LocalVariables>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000BE9F2">RepairVaultSuit</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00117AC4">VFreeformTheStreet01</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00109A92">OutfitBoomer1</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00109A93">OutfitBoomer2</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0000000F">Caps001</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00118F61">RepNVTheStrip</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="00116597">SarahWeintraub</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

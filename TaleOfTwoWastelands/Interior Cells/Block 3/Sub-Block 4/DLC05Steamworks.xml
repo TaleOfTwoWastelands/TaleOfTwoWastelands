@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0B002FD3">DLC05Steamworks</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05Steamworks</EditorID>
+    <Name Tag="FULL">Steamworks</Name>
+    <CellFlags Tag="DATA">IsInteriorCell</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>53</Red>
+          <Green>35</Green>
+          <Blue>30</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>69</Red>
+          <Green>63</Green>
+          <Blue>50</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>60</Red>
+          <Green>63</Green>
+          <Blue>50</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>128</Near>
+        <Far>3500</Far>
+        <ClipDistance>3500</ClipDistance>
+        <Power>0.5</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>30</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">3.40282347E+38</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0B00A780">DLC05MZSteamworks</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="0B0058D3">DLC05ZetaZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0B00D0C8">IntDLC05MothershipMachineA</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

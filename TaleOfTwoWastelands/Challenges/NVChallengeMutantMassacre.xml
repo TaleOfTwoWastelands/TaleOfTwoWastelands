@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0015EB21">NVChallengeMutantMassacre</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVChallengeMutantMassacre</EditorID>
+    <Name Tag="FULL">Super Mutant Massacre</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EABA">ChallengeMutantScript</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Super Mutants.</Description>
+    <Data Tag="DATA">
+      <Type>KillAnyInACategory</Type>
+      <Threshold>100</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>20</Interval>
+      <BodyPart>None</BodyPart>
+      <CreatureType>FeralGhoul</CreatureType>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+  </Subrecords>
+</Record>

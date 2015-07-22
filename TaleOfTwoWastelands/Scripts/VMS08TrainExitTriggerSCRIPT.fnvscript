@@ -1,0 +1,164 @@
+ScriptName VMS08TrainExitTriggerSCRIPT
+
+short bActive
+float fTimer;
+short bPlayedExplosion;
+short bPlayedExplosion2;
+short nEntrances;		if the player passes this trigger too many times without defusing the bomb, blam-o!
+short bResetTimer;
+
+BEGIN OnTriggerEnter player
+	; failsafe to prevent companions from getting stuck on the train - pathing often fails there.
+	; x of above -8000 indicates they are in the train.
+	if (Player.GetDistance VeronicaREF < 1500 && VeronicaREF.GetPos x > -8000)
+		VeronicaREF.MoveTo player;
+	endif	
+	if (Player.GetDistance ArcadeREF < 1500 && ArcadeREF.GetPos x > -8000)
+		ArcadeREF.MoveTo player;
+	endif	
+	if (Player.GetDistance RoseOfSharonCassidyREF < 1500 && RoseOfSharonCassidyREF.GetPos x > -8000)
+		RoseOfSharonCassidyREF.MoveTo player;
+	endif	
+	if (Player.GetDistance CraigBooneREF < 1500 && CraigBooneREF.GetPos x > -8000)
+		CraigBooneREF.MoveTo player;
+	endif	
+	if (Player.GetDistance RexREF < 1500 && RexREF.GetPos x > -8000)
+		RexREF.MoveTo player;
+	endif	
+	if (Player.GetDistance RaulREF < 1500 && RaulREF.GetPos x > -8000)
+		RaulREF.MoveTo player;
+	endif	
+	if (Player.GetDistance LilyREF < 1500 && LilyREF.GetPos x > -8000)
+		LilyREF.MoveTo player;
+	endif	
+	if (Player.GetDistance EDE1REF < 1500 && EDE1REF.GetPos x > -8000)
+		EDE1REF.MoveTo player;
+	endif	
+	if (Player.GetDistance EDE2REF < 1500 && EDE2REF.GetPos x > -8000)
+		EDE2REF.MoveTo player;
+	endif	
+	if (Player.GetDistance EDE3REF < 1500 && EDE3REF.GetPos x > -8000)
+		EDE3REF.MoveTo player;
+	endif	
+	if (Player.GetDistance CharonRef < 1500 && CharonRef.GetPos x > -8000)
+		CharonRef.MoveTo player;
+	endif	
+	if (Player.GetDistance ButchRef < 1500 && ButchRef.GetPos x > -8000)
+		ButchRef.MoveTo player;
+	endif	
+	if (Player.GetDistance CloverRef < 1500 && CloverRef.GetPos x > -8000)
+		CloverRef.MoveTo player;
+	endif	
+	if (Player.GetDistance JerichoRef < 1500 && JerichoRef.GetPos x > -8000)
+		JerichoRef.MoveTo player;
+	endif	
+	if (Player.GetDistance MQ08FawkesRef < 1500 && MQ08FawkesRef.GetPos x > -8000)
+		MQ08FawkesRef.MoveTo player;
+	endif	
+	if (Player.GetDistance StarPaladinCrossRef < 1500 && StarPaladinCrossRef.GetPos x > -8000)
+		StarPaladinCrossRef.MoveTo player;
+	endif	
+	if (Player.GetDistance DogmeatRef < 1500 && DogmeatRef.GetPos x > -8000)
+		DogmeatRef.MoveTo player;
+	endif	
+	if (Player.GetDistance RL3REF < 1500 && RL3REF.GetPos x > -8000)
+		RL3REF.MoveTo player;
+	endif	
+
+
+
+
+	if(GetObjectiveDisplayed VMS08 40 && GetObjectiveCompleted VMS08 40 == 0)
+		set nEntrances to nEntrances + 1;
+		if(nEntrances >= 3)
+			set VMS08.bPlayerTooLate to 1;
+		endif
+	endif
+
+	if(VMS08.bPlayerTooLate && VMS08.bMonorailDefused == 0)
+			VMS08MonorailTalkerREF.SayTo player VMS08MonorailRecording
+			set bActive to 1;
+			VMS08MonorailDoorCollisionREF.Enable;
+	endif
+
+	if( GetObjectiveDisplayed VMS08 80 && GetObjectiveCompleted VMS08 80 == 0)
+		set bActive to 1;
+		MCMonorailREF.playgroup forward 1;
+		PlaySound FXEventMonorailDepart;
+		VMS08MonorailBombPreCacheREF.Enable;
+
+		;hide the vent, bomb, and speaker
+		VMS08BombVentREF.Disable;
+		VMS08MonorailTalkerREF.Disable;
+		VMcCarranMonorailBombREF.Disable;
+	
+		set VMS08.bMonorailDestroyed to 1;
+		NVMonorailDoorREF.Disable;
+		NVMonorailDoorStripREF.Disable;
+		StartQuest VMS08Timer;
+		set VStoryEventMonorailDestroyed to 1;
+
+		;complete exit train objective if the bomb is set
+		SetObjectiveCompleted VMS08 80 1;
+
+		;if Hsu doesn't trust the player, there are no objectives to frame Crenshaw. Reward is Rep only. Quest completes.
+		if(GetObjectiveDisplayed VMS08 57)
+			AddReputation RepNVCaesarsLegion 1 4;
+			CompleteQuest VMS08;
+		endif
+
+		;if the player already planted evidence and killed Crenshaw, give objective to report to Hsu
+		if(GetObjectiveCompleted VMS08 90 && GetObjectiveCompleted VMS08 95)
+			SetObjectiveDisplayed VMS08 100 1;
+		endif
+	elseif (VMS08.bPlayerTooLate && VMS08.bMonorailDefused == 0)
+		;hide the "stop the explosion" objective - it's not really completed.
+		SetObjectiveDisplayed VMS08 40 0;
+		SetObjectiveDisplayed VMS08 50 1;
+	endif
+END
+
+BEGIN GameMode
+	if (bActive)
+		set fTimer to fTimer + GetSecondsPassed;
+
+		; throw on 2 seconds of dead time if the player is too late so we can play the recording before the train departs
+		if (VMS08.bPlayerTooLate && fTimer > 2 && bResetTimer == 0 && VMS08.bMonorailDefused == 0)
+			set fTimer to 0;
+			set bResetTimer to 1;
+			MCMonorailREF.playgroup forward 1;
+			PlaySound FXEventMonorailDepart;
+			VMS08MonorailBombPreCacheREF.Enable;
+
+			;hide the vent, bomb, and speaker
+			VMS08BombVentREF.Disable;
+			VMS08MonorailTalkerREF.Disable;
+			VMcCarranMonorailBombREF.Disable;
+	
+			set VMS08.bMonorailDestroyed to 1;
+			set VStoryEventMonorailDestroyed to 1;
+			NVMonorailDoorREF.Disable;
+			NVMonorailDoorStripREF.Disable;
+			StartQuest VMS08Timer;
+			VMS08MonorailDoorCollisionREF.Disable;
+
+		endif
+
+		if (fTimer > 8.0 && bPlayedExplosion == 0)
+			MCMonorailREF.DamageObject 4999;
+			PlaySound VMS08Explosion2D;
+			PlaySound VMS08Explosion3D;
+			Set bPlayedExplosion to 1;			
+		endif
+
+		if(fTimer > 8.2 && bPlayedExplosion2 == 0)
+			MCMonorailREF.Playgroup Forward 1;
+			Set bPlayedExplosion2 to 1;
+			Set bActive to 0;
+		endif
+	endif
+END
+
+BEGIN OnTriggerLeave player
+	VMS08MonorailBombPreCacheREF.Disable;
+END

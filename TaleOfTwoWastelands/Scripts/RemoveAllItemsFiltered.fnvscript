@@ -1,0 +1,91 @@
+scn RemoveAllItemsFiltered
+
+ref whitelist
+ref blacklist
+ref container
+
+ref self
+
+ref item
+ref baseItem
+
+short bWhitelist
+short bBlacklist
+short bOnlyPlayable
+short bRemoveQuestItems
+
+long maxItemCount
+long itemCount
+
+begin function { whitelist, blacklist, container, bOnlyPlayable, bRemoveQuestItems }
+
+	let self := GetSelf
+
+	if (IsFormValid whitelist)
+		if ( ListGetCount whitelist > 0 )
+			let bWhitelist := 1
+		else
+			let bWhitelist := 0
+		endif
+	else
+		let bWhitelist := 0
+	endif
+
+	if (IsFormValid blacklist)
+		if ( ListGetCount blacklist> 0 )
+			let bBlacklist:= 1
+		else
+			let bBlacklist:= 0
+		endif
+	else
+		let bBlacklist:= 0
+	endif
+
+	if ( bBlacklist == 0 && bWhitelist == 0 )
+		RemoveAllItems container 1 1
+		return
+	endif
+
+	let maxItemCount := 0
+
+	foreach item <- self
+		let baseItem := item.GetBaseForm
+		
+		if ( bWhitelist == 1 && ( item.IsPlayable == 1 || bOnlyPlayable == 0 ) && ( item.IsQuestItem == 0 || bRemoveQuestItems == 1 ))	;a whitelist was declared
+			if ( IsRefInList whitelist baseItem >= 0)	;the item is in the whitelist
+				if ( bBlacklist == 1 ) ;a blacklist was declared
+
+					if ( IsRefInList blacklist baseItem < 0) ;the item is not in the blacklist, safe to remove
+						
+						if ( item.RemoveMeIR container )
+						else
+printc "Failed"
+						endif
+					endif
+
+				else ;a blacklist was not declared, safe to remove
+
+					if ( item.RemoveMeIR container )
+					else
+printc "Failed"
+					endif
+				endif
+			endif
+
+		else ;a whitelist was not declared
+
+			if ( bBlacklist == 1 && ( item.IsPlayable == 1 || bOnlyPlayable == 0 ) && ( item.IsQuestItem == 0 || bRemoveQuestItems == 1 )) ;a blacklist was declared
+
+				if ( IsRefInList blacklist baseItem < 0 ) ;the item is not in the blacklist
+					
+					if ( item.RemoveMeIR container )
+					else
+printc "Failed"
+					endif
+
+				endif
+			endif	;we do not need to handle no blacklist and no whitelist because that is handled above with RemoveAllItems
+		endif
+	loop
+
+end

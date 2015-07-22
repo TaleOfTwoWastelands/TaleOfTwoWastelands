@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="TERM">
+  <Flags>0</Flags>
+  <FormID ID="0C001E26">TTWTicketTerminal02</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWTicketTerminal02</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>-18</Y>
+        <Z>-86</Z>
+      </Point1>
+      <Point2>
+        <X>62</X>
+        <Y>22</Y>
+        <Z>48</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Union Station Ticket Terminal</Name>
+    <Model>
+      <FileName Tag="MODL">Terminals\Terminal02.NIF</FileName>
+    </Model>
+    <WelcomeText Tag="DESC">Union Station Automated Ticket Services.</WelcomeText>
+    <LoopingSound Tag="SNAM">
+      <Reference ID="00018EC0">OBJComputerTerminalLP</Reference>
+    </LoopingSound>
+    <Data Tag="DNAM">
+      <HackingDifficulty>VeryEasy</HackingDifficulty>
+      <Flags>Unlocked</Flags>
+      <ServerType>Server5</ServerType>
+    </Data>
+    <Selections>
+      <Selection>
+        <ItemText Tag="ITXT">Purchase Ticket (500 caps)</ItemText>
+        <ResultText Tag="RNAM">Accessing....</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>3</ReferenceCount>
+            <CompiledSize>40</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+          <CompiledScript Tag="SCDA">HAABAFIQCgACAHICAG70AQAAHAABAAIQCgACAHIDAG4BAAAAIxIAAA==</CompiledScript>
+          <ScriptSource Tag="SCTX">player.removeitem caps001 500
+player.addItem TTWTrainTicket02 1
+forceTerminalBack</ScriptSource>
+          <References>
+            <Reference Tag="SCRO">
+              <Reference ID="00000014">UnfoundReference</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0000000F">Caps001</Reference>
+            </Reference>
+            <Reference Tag="SCRO">
+              <Reference ID="0C001E15">TTWTrainTicket02</Reference>
+            </Reference>
+          </References>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>GreaterThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>500</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0000000F">Caps001</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+      <Selection>
+        <ItemText Tag="ITXT">Purchase Ticket (500 caps)</ItemText>
+        <ResultText Tag="RNAM">Insufficient caps...</ResultText>
+        <Flags Tag="ANAM">0</Flags>
+        <Script>
+          <Data Tag="SCHR">
+            <ReferenceCount>0</ReferenceCount>
+            <CompiledSize>0</CompiledSize>
+            <VariableCount>0</VariableCount>
+            <Type>Object</Type>
+            <Flags>Enabled</Flags>
+          </Data>
+        </Script>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>Lessthan</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>500</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetItemCount</Type>
+              <InventoryObject ID="0000000F">Caps001</InventoryObject>
+              <Unused>AAAAAA==</Unused>
+            </Function>
+            <RunOn>Reference</RunOn>
+            <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Selection>
+    </Selections>
+  </Subrecords>
+</Record>

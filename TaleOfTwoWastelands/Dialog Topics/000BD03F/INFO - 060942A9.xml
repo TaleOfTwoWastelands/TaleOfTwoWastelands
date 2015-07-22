@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="060942A9">INFO - 060942A9</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0606C564">INFO - 0606C564</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I'm disappointed, but I cannot say I'm surprised. If you change your mind, I shall be studying in the American History Museum, downtown.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="0602D9CF">MQ08FawkesRef</Quest>
+          <VariableIndex>1</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0003D34E">MQ08Fawkes</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>275</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDAcAAEAqBEFAAEAcgMADxAJAAIAOQBuAAAAABUACgByBABzCAACACAwFQAKAHIEAHMJAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzBQACACAxFQAKAHIBAHMHAAIAIDAVAAoAcgEAcwYAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwMAAgAgMRUACgByAQBzBAACACAwHAABAMURBwABAG4AAAAAHAABAIARBQABAHIGABUAEwByAgBzEwALACByAgBzEwAgMSAtFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEA+hEAABwAAQBPEgUAAQByBwA=</CompiledScript>
+        <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 0;
+MQ08FawkesREF.removeperk CompanionSuite
+SetAV Assistance 0
+
+set Followers.FawkesHired to 0
+set Followers.FawkesFired to 1
+set MQ08FawkesREF.Waiting to 0
+set MQ08FawkesREF.IsFollowingDefault to 1
+set MQ08FawkesREF.IsFollowingLong to 0
+set MQ08FawkesREF.IsFollowingShort to 0
+MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
+set MQ08FawkesREF.CombatStyleRanged to 1
+set MQ08FawkesREF.CombatStyleMelee to 0
+MQ08FawkesREF.SetPlayerTeammate 0
+MQ08FawkesREF.RemoveFromFaction FollowerFaction
+
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+MQ08FawkesREF.ResetAI
+MQ08FawkesREF.MoveToMarkerWithFade FawkesMuseumWaitMarker</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015C571">CompanionSuite</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000371D1">Followers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00037136">FollowerFaction</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0606415F">FawkesMuseumWaitMarker</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Yes, I'm certain.</Prompt>
+  </Subrecords>
+</Record>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0D00D6EF">TTWBrotherhoodOutcastsReputationHandlerScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWBrotherhoodOutcastsReputationHandlerScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>519</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAPkBAAAVAAkAZgEABAAgWgMAFQAJAGYCAAQAIFoEABUAFQBzAwAQACBYPxIKAAIAcgEAbgAAAAAVABUAcwQAEAAgWD8SCgACAHIBAG4BAAAAFQAVAHMFABAAIFg/EgoAAgByAQBuAgAAABYAGQAGABUAIHMDACAxID49IHMGACAwID09ICYmeBASAAQAcgIAcgUAbgEAAABuAQAAABUABwBzBgACACAxFQAHAHMHAAIAIDAVAAcAcwgAAgAgMBUABwBzCQACACAwHgAAABgAGQAGABUAIHMEACA1ID49IHMJACAwID09ICYmeRASAAQAcgIAcgUAbgAAAABuAAAAABUABwBzBgACACAwFQAHAHMHAAIAIDAVAAcAcwgAAgAgMBUABwBzCQACACAxHgAAABgAGQAGABUAIHMEACAyID49IHMHACAwID09ICYmeRASAAQAcgIAcgUAbgEAAABuAQAAABUABwBzBgACACAwFQAHAHMHAAIAIDEVAAcAcwgAAgAgMBUABwBzCQACACAwHgAAABgAGQAGABUAIHMFACA1ID49IHMIACAwID09ICYmeBASAAQAcgIAcgUAbgAAAABuAAAAABUABwBzBgACACAwFQAHAHMHAAIAIDAVAAcAcwgAAgAgMRUABwBzCQACACAwHgAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWBrotherhoodOutcastsReputationHandlerScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">reputation</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">faction</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repNeutral</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repPositive</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">repNegative</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isNeutral</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isFriend</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isEnemy</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">isAlly</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">1</Reference>
+        <Reference Tag="SCRV">2</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D0017E9">RepTTWBrotherhoodOutcasts</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001D3FF">BrotherhoodOutcastFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001B2A4">PlayerFaction</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

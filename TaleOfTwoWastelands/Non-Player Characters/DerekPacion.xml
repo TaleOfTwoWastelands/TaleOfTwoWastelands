@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06031EC7">DerekPacion</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DerekPacion</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Derek Pacion</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Essential</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>2</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>40</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00059410">CantCommonsFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCE">MaleChild03</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C2">CaucasianChild</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0003C8DB">DerekPacionScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0003178E">RDGateKey</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340C1">KIDHatPrewarCapKid</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340C4">KIDOutfitPrewarChildOld</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000EC4AF">MagazineNVSurvival</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0609468A">MS02DerekWatchBattle</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0005942B">DerekPacionWork14x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059429">DerekPacionSleep22x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059423">UncleRoeDerekDinner19x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059436">UncleRoeDerekBreakfast8x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0005942A">DerekPacionJoePorterLunch11x3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00059428">DerekPacionTownDefault</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00015678">Villager</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00060233">HairChildMCurly</Reference>
+      </Type>
+      <Length Tag="LNAM">0.100000001</Length>
+      <Color Tag="HCLR">
+        <Red>116</Red>
+        <Green>66</Green>
+        <Blue>35</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004253">EyeBlue</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">rJ+mPkRhbL7y9f4+s1uHv9Pu17/wyoc+s+0qPwThYj9B6x0/+N2Kv3a2iL/+TJm+8uJvv+DJWz8wzGk+MjobwPwZYEBg/pQ9TjVLv1YWhkCgOg4/jrsjwHCBqb7OMY+/pfXIv/IEg7/A86Q9Vu4VwKrHyz/+SSq/kFeHv+uwQcBXDjNA+WcwwOw9Ob+qXUc/etm0v3BIhMBwgsC/eAFHP2eYFEAo/9K/JF/5v0igH76gZeA9Bqe9QIA/Ez12p+Q/mM63wFqKYMA=</Symmetric>
+        <Asymmetric Tag="FGGA">1M5DPLMkVT7LGqC9tZwevfiMqz4SxrG7a9Awvomhej4ZyIY+eeoPvTZyKz4Lmok9XqVAvnNDDL0k5Pa+xUvnvizXGjy/MBE+n+GYviIkBT6lDIa+cHDzvTrDbDs+19c+ab3SPmxqLr1T6Ng+Xb8NvyQJkr4Xw5U9</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">w+y/v+pEIr9ukxW/CKflPgQkiL4IUgzA6+6ivhwRyr+kanU/MIHHv2+xxT9ZnHbArj9EQOjeC0Ajwli/sKsuwEp6aT9SKPY/AEsiPe4Zir+rg7q/kgJyQP6w7L87pXFAXGNCQJpPZL9XM1FAItqiv4DdDjx0/6U++I8cwPrLBT/dFBxAxSWnwPDHnkB6Adu/2KtfvpA2FMCad97AzoeZvhuCe8D0D3k/xNLJQL4tcUAB5ac/1XrpP89ZtL+lmBS//waNwCRGq8A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

@@ -1,0 +1,521 @@
+scn CG03Script
+
+short dadconvoVAR 			; used to track dad dialogue
+short dadjonasVAR			; used to track Dad/Jonas conversation
+
+short stanleyConv				; set to -1 to trigger Stanley conv
+short JonasConvoVar			;used to track Jonas/Stanley conversation
+
+;*******************************************************************************************************************
+; AMATA SCENE:
+
+short bullyConv				; used to track Amata/Butch conversation
+short bullyTalking				; set to 1 while someone's talking
+short bullyStage				; set to 1 to start looping scene
+
+
+short speakerRAN 			;used to pick a random speaker for hallway taunting
+short LastSpeaker				;used to check against previous speaker so same person doesn't talk twice in a row
+short targetRAN				;used to pick a target if Amata responds
+
+;speaker variables are
+; 1-Butch
+; 2-Wally
+; 3-Paul
+; 4-Amata
+;short target				;set by targetRAN and used to select target
+;target variables are
+; 1-Butch
+; 2-Wally
+; 3-Paul
+short handler				;used to turn on and off conversation
+float insulttimer			;used to time lines of dialogue
+float breaktimer			;used to put a break between lines of dialogue
+short AmataLeaveVAR	;used to make Amata head to class
+
+
+;the following variables are used if the player elects to fight the Tunnel Snakes
+short HitButch
+short HitSnake
+float ButchHealth
+float WallyHealth
+float PaulHealth
+float PlayerHealth
+short ButchQuit
+short PlayerQuit
+short ButchGreet
+
+
+;used to track scripted conversations
+short WallyLeaveConvoVar
+short ButchLeaveConvoVar
+float ButchLeaveTalkTimer
+float WallyLeaveTalkTimer
+
+
+;set to 1 in dialogue to clear them away from Amata
+short ButchHome
+short WallyHome
+short PaulHome
+
+;set to 1 to initiate conversation if player convinces Wally to initiate exit
+short WallyTurned
+
+;set to 1 to initiate conversation if player convinces Butch to initiate exit
+short ButchTurned
+
+; set to 1 if player sides with Snakes
+short AmataFatVAR 				;used to say different audios if player sides with snakes
+
+; outcomes of Amata Scene:
+short AmataOutcome		; 1 = player convinces Wally to exit
+								; 2 = player convinces Butch to exit
+								; 3 = player sides with Snakes
+								; 4 = player ignores problem
+
+;*******************************************************************************************************************
+
+
+;*******************************************************************************************************************
+; GOAT
+short question			; what question to show -- set by Mr. Brotch's dialogue
+short waiting			; set to 1 when messageBox triggered
+short button				; used for GetButtonPressed
+
+; variables for skill tracking
+short goatBarter						; skill 1
+short goatBigGuns					; skill 2 ;Replaced with Survival
+short goatEnergyWeapons			; skill 3
+short goatExplosives					; skill 4
+short goatLockpick					; skill 5
+short goatMedicine					; skill 6
+short goatMeleeWeapons			; skill 7
+short goatRepair						; skill 8
+short goatScience						; skill 9
+short goatSmallGuns					; skill 10
+short goatSneak						; skill 11
+short goatSpeech						; skill 12
+short goatUnarmed 					; skill 13
+
+; variables for calculating tag skills
+; skill = number of skill that is currently first: see above
+; value = current number of choices for that skill
+
+short skillFirst
+short valueFirst
+
+short skillSecond
+short valueSecond
+
+short skillThird
+short valueThird
+
+;*******************************************************************************************************************
+
+; post GOAT:
+short turnInCount			; increment by 1 each time a student turns in their test
+short turnInTestConv		; used to conditionalize test turn in conversations
+
+
+
+; ending timer
+short runTimer
+float timer
+
+
+
+Begin GameMode
+
+if runTimer == 1
+	if timer > 0
+		set timer to timer - GetSecondsPassed
+	else
+		; special cases
+		if getStage CG03 == 90 && Player.GetSitting == 0
+			setstage CG03 100
+		endif
+	endif
+endif
+
+;*******************************************************************************************************************
+; GOAT
+
+if question > 0
+	; if player isn't taking GOAT, Mr. Brotch can just ask the next question (maybe after a pause)
+	if getStageDone CG03 45 == 1
+		; Mr. Brotch continues
+		set CG03MrBrotchREF.doTalk to 1
+		set CG03MrBrotchREF.timer to 2
+
+		; are we done?
+		if question >= 15
+			; done with test
+			set question to -1
+		else
+			; next question
+			set question to 0
+		endif
+	else
+
+	if waiting == 0
+		set waiting to 1
+		; trigger messageBox
+		if question == 1
+			ShowMessage CG03GoatQuestion01
+		elseif question == 2
+			ShowMessage CG03GoatQuestion02
+		elseif question == 3
+			ShowMessage CG03GoatQuestion03
+		elseif question == 4
+			ShowMessage CG03GoatQuestion04
+		elseif question == 5
+			ShowMessage CG03GoatQuestion05
+		elseif question == 6
+			ShowMessage CG03GoatQuestion06
+		elseif question == 7
+			ShowMessage CG03GoatQuestion07
+		elseif question == 8
+			ShowMessage CG03GoatQuestion08
+		elseif question == 9
+			ShowMessage CG03GoatQuestion09
+		elseif question == 10
+			ShowMessage CG03GoatQuestion10
+		; etc.
+		endif
+	else
+		; wait for button
+		set button to GetButtonPressed
+		if button > -1
+			; clear waiting var
+			set waiting to 0
+			; process question results
+			if question == 1
+				if button == 0
+					; science
+					setstage CG03Test 9
+				elseif button == 1
+					; speech
+					setstage CG03Test 12
+				elseif button == 2
+					; melee
+					setstage CG03Test 7
+				elseif button == 3
+					; sneak
+					setstage CG03Test 11
+				endif
+			elseif question == 2
+				if button == 0
+					; melee
+					setstage CG03Test 7
+				elseif button == 1
+					; speech
+					setstage CG03Test 12
+				elseif button == 2
+					; medicine
+					setstage CG03Test 6
+				elseif button == 3
+					; science
+					setstage CG03Test 9
+				endif
+			elseif question == 3
+				if button == 0
+					; speech
+					setstage CG03Test 12
+				elseif button == 1
+					; unarmed
+					setstage CG03Test 13
+				elseif button == 2
+					; sneak
+					setstage CG03Test 11
+				elseif button == 3
+				endif
+			elseif question == 4
+				if button == 0
+					; explosives
+					setstage CG03Test 4
+				elseif button == 1
+					; unarmed
+					setstage CG03Test 13
+				elseif button == 2
+					; melee
+					setstage CG03Test 7
+				elseif button == 3
+					; Survival
+					setstage CG03Test 2
+				endif
+			elseif question == 5
+				if button == 0
+					; small guns
+					setstage CG03Test 10
+				elseif button == 1
+					; barter
+					setstage CG03Test 1
+				elseif button == 2
+					; survival
+					setstage CG03Test 2
+				elseif button == 3
+					; explosives
+					setstage CG03Test 4
+				endif
+			elseif question == 6
+				if button == 0
+					; lockpick
+					setstage CG03Test 5
+				elseif button == 1
+					; barter
+					setstage CG03Test 1
+					; explosives
+					setstage CG03Test 4
+				elseif button == 2
+					; energy weapons
+					setstage CG03Test 3
+				elseif button == 3
+					; repair
+					setstage CG03Test 8
+				endif
+			elseif question == 7
+				if button == 0
+					; small guns
+					setstage CG03Test 10
+				elseif button == 1
+					; medicine
+					setstage CG03Test 6
+				elseif button == 2
+					; barter
+					setstage CG03Test 1
+				elseif button == 3
+					; energy weapons
+					setstage CG03Test 3
+				endif
+			elseif question == 8
+				if button == 0
+					; barter
+					setstage CG03Test 1
+				elseif button == 1
+					; small guns
+					setstage CG03Test 10
+				elseif button == 2
+					; sneak
+					setstage CG03Test 11
+				elseif button == 3
+					; medicine
+					setstage CG03Test 6
+				endif
+			elseif question == 9
+				if button == 0
+					; repair
+					setstage CG03Test 8
+				elseif button == 1
+					; explosives
+					setstage CG03Test 4
+				elseif button == 2
+					; sneak
+					setstage CG03Test 11
+				elseif button == 3
+					; lockpick
+					setstage CG03Test 5
+				endif
+			elseif question == 10
+				; do nothing
+			endif
+			
+			; Mr. Brotch continues
+			set CG03MrBrotchREF.doTalk to 1
+
+			; are we done?
+			if question >= 10
+				; done with test
+				set question to -1
+			else
+				; next question
+				set question to 0
+			endif
+	
+		endif
+	endif		; /if question > 0
+	endif		; /if getStageDone 45 == 1
+endif
+
+; END GOAT
+;*******************************************************************************************************************
+
+
+	;******** Tunnel Snakes scene *************
+	if bullyStage > 0 && bullyTalking == 0 
+		if bullyStage == 1
+			; Wally or Paul
+			set speakerRAN to GetRandomPercent
+			if speakerRAN > 50
+				CG03WallyMackREF.sayTo CG03AmataRef CG03BullyTalk
+				set LastSpeaker to 2
+			else
+				CG03PaulHannonREF.sayTo CG03AmataRef CG03BullyTalk
+				set LastSpeaker to 3
+			endif
+			set bullyTalking to 1
+			set bullyStage to 2
+		elseif bullyStage == 2
+			; Amata or Wally or Paul
+			set speakerRAN to GetRandomPercent
+			set targetRAN to GetRandomPercent
+			if speakerRAN > 50
+				; Amata
+				if targetRAN>= 66
+					CG03AmataRef.sayTo CG03ButchREF CG03AmataTalk
+				elseif targetRAN >= 33
+					CG03AmataRef.sayTo CG03PaulHannonREF CG03AmataTalk
+				else
+					CG03AmataRef.sayTo CG03WallyMackREF CG03AmataTalk
+				endif
+			else
+				if lastSpeaker == 3
+					CG03WallyMackREF.sayTo CG03AmataRef CG03BullyTalk
+					set lastSpeaker to 2
+				else
+					CG03PaulHannonREF.sayTo CG03AmataRef CG03BullyTalk
+					set lastSpeaker to 3
+				endif
+			endif
+			set bullyTalking to 1
+			set bullyStage to 3
+			; random timer before Butch speaks
+			set breakTimer to GetRandomPercent/100 + .2
+		elseif bullyStage == 3
+			set breakTimer to breakTimer - GetSecondsPassed
+			if breakTimer < 0
+				set bullyStage to 4
+			endif
+		elseif bullyStage == 4
+			; Butch to Amata
+			CG03ButchREF.sayTo CG03AmataRef CG03BullyTalk
+			set bullyTalking to 1
+			set bullyStage to 1
+		endif
+	endif
+
+
+;this section starts the exit conversation if the player has convinced Butch to quit teasing Amata
+
+if ( ButchTurned == 1 )
+;	set ButchLeaveTalkTimer to ( ButchLeaveTalkTimer - GetSecondsPassed )
+	if ( ButchLeaveTalkTimer <= 0 )
+		if ( ButchLeaveConvoVAR == 0 )
+			CG03AmataREF.evp	; stop her dialogue package if still in progress
+			CG03ButchREF.SayTo CG03WallyMackREF CG03ButchLeavingTalk
+			set ButchLeaveTalkTimer to 1
+			set CG03.ButchLeaveConvoVar to 1
+		elseif ( ButchLeaveConvoVAR == 1 )
+			CG03PaulHannonREF.SayTo CG03ButchREF CG03ButchLeavingTalk
+			set ButchLeaveTalkTimer to 1
+			set CG03.ButchLeaveConvoVar to 2
+		elseif ( ButchLeaveConvoVAR == 2 )
+			CG03WallyMackREF.SayTo CG03ButchREF CG03ButchLeavingTalk
+			set ButchLeaveTalkTimer to 1
+			set CG03.ButchLeaveConvoVar to 3
+			set ButchTurned to -1
+			SetStage CG03 30
+		endif
+	endif
+endif
+
+;this section starts the exit conversation if the player has convinced Wally Mack to quit teasing Amata
+
+if ( WallyTurned == 1 )
+	if ( WallyLeaveTalkTimer <= 0 )
+		if ( WallyLeaveConvoVAR == 0 )
+			CG03AmataREF.evp	; stop her dialogue package if still in progress
+			CG03WallyMackREF.SayTo CG03ButchREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 1
+		elseif ( WallyLeaveConvoVAR == 1 )
+			CG03ButchREF.SayTo CG03WallyMackREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 2
+		elseif ( WallyLeaveConvoVAR == 2 )
+			CG03WallyMackREF.SayTo CG03PaulHannonREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 3
+		elseif ( WallyLeaveConvoVAR == 3 )
+			CG03PaulHannonREF.SayTo CG03ButchREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 4
+		elseif ( WallyLeaveConvoVAR == 4 )
+			CG03ButchREF.SayTo CG03WallyMackREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 5
+		elseif ( WallyLeaveConvoVAR == 5 )
+			CG03ButchREF.SayTo CG03AmataREF CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 6
+		elseif ( WallyLeaveConvoVAR == 6 )
+			CG03ButchREF.SayTo Player CG03WallyLeavingTalk
+			set WallyLeaveTalkTimer to 1
+			set WallyLeaveConvoVAR to 7
+			set WallyTurned to -1
+			SetStage CG03 30
+		endif
+	endif
+endif
+
+;this section handles if the player decides to engage in combat with the Tunnel Snakes
+
+;this is set by the individual scripts on the NPCs
+if ( HitSnake == 1 ) && getStageDone CG03 30 == 0 
+	; remove from player faction so they'll fight player
+	CG03ButchREF.removeFromFaction playerFaction
+	CG03WallyMackREF.removeFromFaction playerFaction
+	CG03PaulHannonREF.removeFromFaction playerFaction
+	; start combat (also done in Begin block of new package -- seems to be more reliable that way)
+	CG03ButchREF.StartCombat player
+	CG03WallyMackREF.StartCombat player
+	CG03PaulHannonREF.StartCombat player
+	CG03MrBrotchREF.evp ; make sure in the right package
+	set bullyStage to 0
+	set ButchHealth to ( CG03ButchREF.GetAV Health )
+	set WallyHealth to ( CG03WallyMackREF.GetAV Health )
+	set PaulHealth to ( CG03PaulHannonREF.GetAV Health)
+	set PlayerHealth to ( player.GetAV Health)
+	set HitSnake to 2
+	CG03AmataREF.evp
+endif
+
+if ( HitSnake == 2 )
+	if ( CG03ButchREF.GetAV Health ) <= ( ButchHealth * .5 ) && ( ButchQuit == 0 )
+		set ButchQuit to 1
+	elseif ( CG03WallyMackREF.GetAV Health ) <= ( WallyHealth * .5 ) && ( ButchQuit == 0 )
+		set ButchQuit to 1
+	elseif ( CG03PaulHannonREF.GetAV Health ) <= ( PaulHealth * .5 ) && ( ButchQuit == 0 )
+		set ButchQuit to 1
+	elseif ( player.GetAV Health ) <= ( PlayerHealth * .5 ) && ( PlayerQuit == 0 )
+		set PlayerQuit to 1
+	endif
+endif
+
+; for now, if you force anybody out of the fight, they all back down
+if ( ButchQuit == 1 )
+	set HitSnake to 3
+	CG03AmataREF.evp
+	CG03ButchREF.StopCombat
+	CG03WallyMackREF.StopCombat
+	CG03PaulHannonREF.StopCombat
+	set ButchGreet to 1
+	set ButchTurned to 1
+	set AmataOutcome to 2 ; Butch convinced to leave
+	set ButchQuit to 2
+	setstage CG03 30
+endif
+
+if ( PlayerQuit == 1 )
+	set HitSnake to 3
+	CG03AmataREF.evp
+	CG03ButchREF.StopCombat Player
+	CG03WallyMackREF.StopCombat Player
+	CG03PaulHannonREF.StopCombat Player
+	set ButchGreet to 1
+	set ButchTurned to 1
+	set AmataOutcome to 2	; Butch convinced to leave
+	set PlayerQuit to 2
+	setstage CG03 30
+endif
+
+End

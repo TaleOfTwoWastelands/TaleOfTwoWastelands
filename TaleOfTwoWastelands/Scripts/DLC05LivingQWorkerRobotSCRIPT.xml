@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00585E">DLC05LivingQWorkerRobotSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05LivingQWorkerRobotSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>7</ReferenceCount>
+        <CompiledSize>509</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVADsAAAAWAA0AAwAJACBzAQAgMCA9PRUABwBzAQACACAx8RAHAAEAbgEAAAAVAAgAZgMAAwAgNTAZAAAAEQAAABAACAACAIgAAAAAABYADwAGAAsAIFjyEAAAIDEgPT0WACcAAgAjACBYzRAAACBaAQAgPT0gcgEAWA4QBAABACgAIDUwID49ICYmWRALAAEAcgIAAAAAAAAAFQAHAHMEAAIAIDEXAAIAAQBZEA4AAQByAwABAGYDAAAAAAAZAAAAFwACAAEADRACAAAAGQAAABEAAAAQAAYAAAC+AAAAFgANAA8ACQAgcwQAIDEgPT0VAAsAcwUABgAgWB8QAAAWAA4ADAAKACBzBQAgMSB+ID4VAAcAcwQAAgAgMBYADQACAAkAIHMFACAwID098RAHAAEAbgAAAABeEAAAGAANAAQACQAgcwUAIDEgPT1/EQoAAgByBABuBQAAAIARBQABAHIFAIARBQABAHIGAF4QAAAYAA0AAQAJACBzBQAgMiA9PRUABwBzBAACACAwGQAAABkAAAAZAAAAEQAAABAACAAIAEwAAAAAABYAHAADABgAIHMGACAxID09IFivEQAAIC4xIDw9ICYmixAFAAEAcgEAJRAKAAIAcgcAbgEAAAAVAAkAcwYABAAgMSB+GQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05LivingQWorkerRobotSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">unconOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">sciSkill</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">menuSelect</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">walkingBomb</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00585F">DLC05InteractLQWorkerRobotMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B002C64">DLC05InteractLowSkillScienceMsg</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001B2A4">PlayerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001FFB6">RobotFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0058CE">DLC05RobotFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007078C">MinePlasmaExplosion</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

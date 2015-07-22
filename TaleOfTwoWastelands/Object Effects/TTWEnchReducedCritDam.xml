@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ENCH">
+  <Flags>0</Flags>
+  <FormID ID="0C018018">TTWEnchReducedCritDam</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWEnchReducedCritDam</EditorID>
+    <Name Tag="FULL">Reduced Critical Damage</Name>
+    <Data Tag="ENIT">
+      <Type>0</Type>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="0C01801A">TTWDummyRedCritDamage</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>0</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>None</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

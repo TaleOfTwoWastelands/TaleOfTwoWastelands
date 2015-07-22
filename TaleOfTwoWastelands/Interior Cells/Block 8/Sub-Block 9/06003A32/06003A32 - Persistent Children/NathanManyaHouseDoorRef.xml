@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="REFR">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="06003A63">REFR - 06003A63</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NathanManyaHouseDoorRef</EditorID>
+    <Base Tag="NAME">
+      <Reference ID="06014F2F">RamshackleBusDoor01</Reference>
+    </Base>
+    <TeleportDestination Tag="XTEL">
+      <Door ID="06003A19">REFR - 06003A19</Door>
+      <Position>
+        <X>-1008.01868</X>
+        <Y>-27481.9316</Y>
+        <Z>12883.5137</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>1.72059965</Z>
+      </Rotation>
+      <Alarm>Yes</Alarm>
+    </TeleportDestination>
+    <Owner Tag="XOWN">
+      <Reference ID="00044CC9">MegatonNathanManyaFaction</Reference>
+    </Owner>
+    <Lock Tag="XLOC">
+      <Level>0</Level>
+      <Key ID="000430D0">MegatonNathanMaynaHouseKey</Key>
+      <Flags>IsLeveledLock</Flags>
+    </Lock>
+    <NavigationDoorLink Tag="XNDP">
+      <NavigationMesh ID="060BCF51">NAVM - 060BCF51</NavigationMesh>
+      <Unknown>276234241</Unknown>
+    </NavigationDoorLink>
+    <PositionRotation Tag="DATA">
+      <Position>
+        <X>-224.824371</X>
+        <Y>111.090454</Y>
+        <Z>-60.9670639</Z>
+      </Position>
+      <Rotation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>3.14159441</Z>
+      </Rotation>
+    </PositionRotation>
+  </Subrecords>
+</Record>

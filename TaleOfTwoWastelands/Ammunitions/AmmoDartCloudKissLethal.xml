@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="AMMO">
+  <Flags>0</Flags>
+  <FormID ID="0C00DF9D">AmmoDartCloudKissLethal</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AmmoDartCloudKissLethal</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Dart, Cloud Kiss Lethal</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\1HandPistol\Dart.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\items_dart.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Items_small\glow_items_dart.dds</Small>
+    </Icon>
+    <Script Tag="SCRI">
+      <Reference ID="0C00DFA5">TTWDartCloudKissLethalImpactScript</Reference>
+    </Script>
+    <PickUpSound Tag="YNAM">
+      <Reference ID="00088B16">ITMAmmunitionUp</Reference>
+    </PickUpSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="00088B17">ITMAmmunitionDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Speed>1</Speed>
+      <Flags>0</Flags>
+      <Value>1</Value>
+      <ClipRounds>20</ClipRounds>
+    </Data>
+    <ExtraData Tag="DAT2">
+      <ProjectilesPerShot>0</ProjectilesPerShot>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <Weight>0.00999999978</Weight>
+      <ConsumedAmmo ID="00000000">NullReference</ConsumedAmmo>
+      <ConsumedPercentage>0</ConsumedPercentage>
+    </ExtraData>
+    <ShortName Tag="ONAM">Cloud Kiss Lethal</ShortName>
+    <Abbreviation Tag="QNAM">CKL</Abbreviation>
+    <AmmoEffects>
+      <Effect Tag="RCIL">
+        <Reference ID="0C004C12">TTWAmmoEffectDartDTReduction</Reference>
+      </Effect>
+    </AmmoEffects>
+  </Subrecords>
+</Record>

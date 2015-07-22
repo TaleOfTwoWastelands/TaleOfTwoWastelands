@@ -1,0 +1,39 @@
+scn SaveHotkeys
+
+array_var hotkeys
+array_var entry
+ref item
+
+short i
+short j
+
+short type
+
+begin function { }
+
+	let hotkeys := ( ar_Construct Array )
+
+	set i to 1
+	set j to 0
+
+	while i <= 8
+		set item to GetHotkeyItem i
+
+		if (IsFormValid item)
+
+			let hotkeys[j] := item
+		
+		else
+
+			let hotkeys[j] := TTWNoHotkeyDummy
+
+		endif
+
+		let i += 1
+		let j += 1
+
+	loop
+
+	SetFunctionValue hotkeys
+
+end

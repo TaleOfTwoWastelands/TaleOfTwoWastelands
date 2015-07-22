@@ -1,0 +1,1255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="00104C1C">VCG01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">VCG01</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="00104C00">VCG01SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Ain't That a Kick in the Head</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>76</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>11</ReferenceCount>
+                <CompiledSize>241</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">NxAFAAEAcgQAHAABACIQAgAAABUADAByBQBmBAAEACAwLjIVAAoAcgUAcwMAAgAgMWAQGwAFAG4AAAAAbgAAAABuAAAAAG4AAAAAbgEAAABhECUABwBuAQAAAG4BAAAAbgEAAABuAQAAAG4AAAAAbgAAAABuAQAAABwAAgCXEAUAAQByBgCSEQUAAQByBwCREQUAAQByCAAcAAMAzBAHAAEAbgEAAAAWABQAAgAQACBYIhIFAAEAcgkAIDAgPT0cAAIAUhAPAAMAcgoAbgEAAABuAQAAABwAAgBSEA8AAwByCwBuAQAAAG4BAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">StopQuest VCG00
+; DEMO ONLY 
+;BennyREF.evp;
+;BennyREF.MoveTo BennyTopsSandboxMarkerREF
+;player.moveto VCG01PlayerStartMarkerREF
+; END DEMO CHANGES
+VictorREF.disable
+set VCG01.fTimer to 0.2;
+set VCG01.bRunTimer to 1;
+EnablePlayerControls 0 0 0 0 1 ; enable looking
+DisablePlayerControls 1 1 1 1 0 0 1 ; disable everything but looking
+player.addscriptpackage VCG01PlayerSection0
+
+; note that the name is incorrect - the fade is from white now.
+RemoveImageSpaceModifier WhiteISFX;
+ApplyImageSpaceModifier VCG01FadeInFromBlackISFX *
+
+; Set door to Doc's house to not work initially
+GSDocMitchellHouseIntDoorREF.setDestroyed 1
+
+; remove pip-boy
+if GetQuestCompleted CG04 == 0
+Player.RemoveItem Pipboy 1 1
+Player.RemoveItem PipboyGlove 1 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103DFE">VictorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00103E61">GSDocMitchellHouseIntDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001055BE">VCG01PlayerSection0</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000AC03C">WhiteISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00120E95">VCG01FadeInFromBlackISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00015038">PipBoy</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00025B83">PipBoyGlove</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">1</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDIuOA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set VCG01.fTimer to 2.8;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">3</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; doc speaks
+DocMitchellREF.SayTo player VCG01Intro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>39</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHICAJERBQABAHIDABUADQByBABmBAAFACAzLjI1</CompiledScript>
+              <ScriptSource Tag="SCTX">; player tries to get up
+player.addscriptpackage VCG01PlayerSection1
+ApplyImageSpaceModifier VCG01PlayerStrainISFX
+set VCG01.fTimer to 3.25;
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001055C3">VCG01PlayerSection1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00120E96">VCG01PlayerStrainISFX</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">7</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJcQBQABAHICABUACgByAwBmBAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; play looping bedsit anim
+player.addscriptpackage vcg01playersection1 ;this is the second time we call this - it triggers the OnChange animation
+set VCG01.fTimer to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001055C3">VCG01PlayerSection1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">8</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDABUACgByBABmBAACACAy</CompiledScript>
+              <ScriptSource Tag="SCTX">;Doc Speaks again - easy there.
+DocMitchellREF.SayTo player VCG01Intro
+set VCG01.fTimer to 2;
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">9</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;player.addscriptpackage vcg01playersection1 ;this is the second time we call this - it triggers the OnChange animation</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">4REAABUACgByAQBzAwACACAxFQAKAHIBAGYEAAIAIDE=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player chooses his name
+GetPlayerName;
+set VCG01.bRunTimer to 1;
+set VCG01.fTimer to 1;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">15</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; "wouldn't have picked that name"
+DocMitchellREF.SayTo player VCG01Intro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">17</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; player chooses his sex (handled in VCG01script)</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDAuMg==</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay after sex change
+set VCG01.fTimer to 0.2;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">25</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; doc resumes talking
+DocMitchellREF.SayTo player VCG01Intro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAGYEAAIAIDMcAAEAkBEWAAEAEgBWQ0cwMURvY0dpdmVNaXJyb3I=</CompiledScript>
+              <ScriptSource Tag="SCTX">; doc hands the player a reflectron
+set VCG01.fTimer to 3;
+DocMitchellREF.PlayIdle VCG01DocGiveMirror</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; doc asks how he did
+DocMitchellREF.SayTo player VCG01Intro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">36</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAEAEAAgWCISBQABAHIBACAxID098hEAABcAAgABANoQAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; reflectron UI pops up
+if GetQuestCompleted CG04 == 1
+ShowPlasticSurgeonMenu
+else
+ShowRaceMenu
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">37</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">;set when the player leaves menu mode</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc starts talking again
+DocMitchellREF.SayTo player VCG01Intro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">45</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAGYEAAIAIDM=</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay while the player stands
+set VCG01.fTimer to 3;
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>24</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDABwAAgCYEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc speaks - good, now move to the end of the room
+DocMitchellREF.SayTo player VCG01Intro
+
+; turn off the animated cam so the player can look around
+player.removescriptpackage
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>166</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">YRAlAAcAbgAAAABuAQAAAG4BAAAAbgAAAABuAAAAAG4AAAAAbgEAAABgECUABwBuAQAAAG4AAAAAbgAAAABuAQAAAG4BAAAAbgEAAABuAAAAACUSBwABAG4BAAAAXhEAAKMRDwADAHICAG4KAAAAbgEAAAAWABQAAQAQACBYIhIFAAEAcgMAIDAgPT05EAoAAgByBABuAgAAABkAAAAcAAEA+hEAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; player starts walking. enable controls, play tutorial message
+DisablePlayerControls 0 1 1 0 0 0 1
+EnablePlayerControls 1 0 0 1 1 1 0; only enable movement and looking and 3rd person
+AutoDisplayObjectives 1
+autosave
+SetObjectiveDisplayed VCG01 10 1
+if GetQuestCompleted CG04 == 0
+setstage CGTutorial 2 ; tutorial message
+endif
+DocMitchellREF.ResetAI ;walk doc to the tester observation spot. evp doesn't seem to get him out of the chair.
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00059C85">CGTutorial</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>35</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAKIRDwADAHIEAG4KAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; player reaches destination. doc congratulates him.
+DocMitchellREF.SayTo player VCG01Intro
+SetObjectiveCompleted VCG01 10 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDD">VCG01Intro</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">65</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAGYEAAIAIDGiEQ8AAwByAgBuHgAAAG4BAAAAHAABAMwQBwABAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; vigor tester activated, delay to doc's reaction
+set VCG01.fTimer to 1
+SetObjectiveCompleted VCG01 30 1
+VCG01VigorTesterREF.SetDestroyed 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C13">VCG01VigorTesterREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; doc reacts to the player's score
+DocMitchellREF.SayTo player VCG01DocReactions
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104BDC">VCG01DocReactions</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>62</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAEAEAAgWCISBQABAHIBACAxID09ORAKAAIAcgIAbmkAAAAXAAIAAQA5EAoAAgByAgBuTAAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc says let's go to the next room to run some more tests
+; DEMO: COMMENTING OUT and skipping stage
+;DocMitchellREF.SayTo player VCG01Intro
+if GetQuestCompleted CG04 == 1
+SetStage VCG01 105
+else
+SetStage VCG01 76
+endif
+; END DEMO</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">76</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbk8AAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc moves to the living room and says try to get the skull
+;; DEMO CODE - skip skull test
+setstage vcg01 79
+; commenting out for demo
+;DocMitchellREF.evp;
+;DocMitchellREF.SayTo player VCG01Intro
+;; END DEMO</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">78</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDguMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay between skull reaction and psych intro
+set VCG01.fTimer to 8.0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">79</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFwQBQABAHICABwAAQA0EAgAAgByAgByAwA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc says let's do a psych test.
+; Doc says let's go over to the couch and do the psych exam
+DocMitchellREF.Look Player
+DocMitchellREF.SayTo Player VCG01DocPsychIntro;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00105561">VCG01DocPsychIntro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>35</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF0QAAAcAAEAXhAAAKMRDwADAHICAG4oAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc heads to the exam area and sits down
+DocMitchellREF.StopLook player
+DocMitchellREF.evp;
+SetObjectiveDisplayed VCG01 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">85</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDEuMBUACgByAQBzAwACACAx</CompiledScript>
+              <ScriptSource Tag="SCTX">; Delay before showing tag skill screen
+set VCG01.fTimer to 1.0;
+set VCG01.bRunTimer to 1;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>58</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAEAEAAgWCISBQABAHIBACAwID09GhIMAAIAbgMAAABuAQAAABkAAAAVAAoAcgIAZgQAAgAgMQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; show tag skills
+if GetQuestCompleted CG04 == 0
+SetTagSkills 3 1;
+endif
+set VCG01.fTimer to 1;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">DocMitchellREF.SayTo player VCG01DocTraitIntro</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00105869">VCG01DocTraitIntro</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">98</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDEuMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; delay before trait screen
+set VCG01.fTimer to 1.0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAMAHIBAGYEAAQAIDAuMA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; bring up trait UI
+;ShowTraitSelectMenu;
+;set VCG01.fTimer to 1.0
+set VCG01.fTimer to 0.0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">102</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>48</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAEAEAAgWCISBQABAHIBACAwID09aBIAABkAAAAVAAwAcgIAZgQABAAgMS4w</CompiledScript>
+              <ScriptSource Tag="SCTX">if GetQuestCompleted CG04 == 0
+ShowTraitMenu;
+endif
+set VCG01.fTimer to 1.0;</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABADQQCAACAHICAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">DocMitchellREF.SayTo player VCG01DocFarewellTransition</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="001057ED">VCG01DocFarewellTransition</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">110</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>109</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAACjEQ8AAwByAgBuMgAAAG4BAAAAYRAlAAcAbgEAAABuAQAAAG4BAAAAbgEAAABuAQAAAG4BAAAAbgEAAABgECUABwBuAQAAAG4AAAAAbgAAAABuAQAAAG4BAAAAbgEAAABuAAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc walks to the exit
+DocMitchellREF.evp
+SetObjectiveDisplayed VCG01 50 1;
+DisablePlayerControls 1 1 1 1 1 1 1
+EnablePlayerControls 1 0 0 1 1 1 0; only enable movement, looking, 3rd person, pip-boy, rollover text
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">115</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Doc starts a conversation
+DocMitchellREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C0F">DocMitchellREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>102</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAHAEcBAAIAIDglEgcAAQBuAAAAADcQBQABAHICADYQBQABAHIDABYAFAABABAAIFgiEgUAAQByBAAgMCA9PTYQBQABAHIFABkAAAA5EAoAAgByAwBuCgAAAEoRBwABAG4fAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">Set GameHour to 8
+AutoDisplayObjectives 0
+StopQuest VCG01
+StartQuest VMQ01
+if GetQuestCompleted CG04 == 0
+StartQuest VCG04 ; Character Revision enabled
+endif
+Setstage VMQ01 10
+AddAchievement 31</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000038">GameHour</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00104C1C">VCG01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000842DD">VMQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E86">CG04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0011649E">VCG04</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="000842DD">VMQ01</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Walk to the Vit-o-matic Vigor Tester.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="00104C13">VCG01VigorTesterREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Use the Vit-o-matic Vigor Tester.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="00104C13">VCG01VigorTesterREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Sit down on the couch in Doc Mitchell's living room.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="00103E55">DocMitchellCouchREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Follow Doc Mitchell to the exit.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="00105BCF">VCG01DocMitchellExitMarkerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

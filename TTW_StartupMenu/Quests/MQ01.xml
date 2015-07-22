@@ -1,0 +1,1879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="06014E87">MQ01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ01</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="060151CB">MQ01Script</Reference>
+    </Script>
+    <Name Tag="FULL">Following in His Footsteps</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>47</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAEAEAAgWDoQBQABAHIBACAxMCA8oxEPAAMAcgIAbgoAAABuAQAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetStage MQ03 &lt; 10 )
+     SetObjectiveDisplayed MQ01 10 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>66</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAIAEAAgWDoQBQABAHIBACAxMCA8ohEPAAMAcgIAbgoAAABuAQAAAKMRDwADAHICAG4UAAAAbgEAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetStage MQ03 &lt; 10 )
+SetObjectiveCompleted MQ01 10 1
+SetObjectiveDisplayed MQ01 20 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>113</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAUAEAAgWDoQBQABAHIBACAxMCA8ohEPAAMAcgIAbhkAAABuAQAAAKIRDwADAHICAG4UAAAAbgEAAACiEQ8AAwByAgBuCgAAAG4BAAAAoxEPAAMAcgIAbigAAABuAQAAAFUQBQABAHIDABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetStage MQ03 &lt; 10 )
+SetObjectiveCompleted MQ01 25 1
+SetObjectiveCompleted MQ01 20 1
+SetObjectiveCompleted MQ01 10 1
+SetObjectiveDisplayed MQ01 40 1
+ShowMap GNRMapMarker
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0608C13E">GNRMapMarker</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ORAKAAIAcgEAbjIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setstage MQ01LD 50</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">52</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDUVAAoAcgEAcwYAAgAgMhUACgByAQBmBAACACAy</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah done talking to player
+; trigger Sarah to speak to Vargas
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 2 ; Vargas
+set MQ01.timer to 2</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>112</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">3BEOAAIAcgQAensUrkfheoQ/FQAKAHIEAHMFAAIAIDIVAAoAcgQAcwYAAgAgNRUACgByBABmBAACACAzHAABAF4QAAAcAAIAXhAAABwAAwBeEAAAFQAKAHICAHMBAAIAIDEVAAoAcgIAZgIAAgAgMg==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Supermutants dead. 
+; Control handed off to MQ01 for dialogue scene.
+setQuestDelay MQ01 .01
+; start scene A1
+set MQ01.speaker to 2 ; Vargas
+set MQ01.target to 5 ; Sarah
+set MQ01.timer to 3 ; delay a bit
+MQ01SarahRef.evp
+MQ01ReddinREF.evp
+MQ01VargasREF.evp
+; start Reddin's celebration
+set MQ01ReddinRef.talk to 1
+set MQ01ReddinRef.timer to 2
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">56</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMFAAIAIDAVAAoAcgIAcwEAAgAgMBwAAQBeEAAAHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; done with A1
+set MQ01.speaker to 0 ; stop talking
+set MQ01ReddinRef.talk to 0  ; turn off Reddin talking
+; trigger A2
+MQ01VargasREF.evp
+MQ01ReddinRef.evp
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">58</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; scene A2 done
+MQ01ReddinRef.evp
+MQ01VargasRef.evp
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>84</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDIVAAoAcgEAcwYAAgAgMxUACgByAQBmBAACACAxFQAKAHIBAHMMAAIAIDAVAAoAcgIAcwEAAgAgMDkQCgACAHIDAG48AAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Vargas talks to Reddin as they leave
+set MQ01.speaker to 2
+set MQ01.target to 3 ; Reddin
+set MQ01.timer to 1
+set MQ01.talking to 0
+; make sure Reddin isn't still talking
+set MQ01ReddinRef.talk to 0
+; control handed back to MQ01LD
+setstage MQ01LD 60</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">62</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>16</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Vargas and Reddin have talked, head back to checkpoint
+MQ01VargasRef.evp
+MQ01ReddinRef.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>78</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAHMFAAIAIDUVAAoAcgIAcwYAAgAgNBUACgByAgBzCgACACAxFQAKAHICAGYEAAIAIDAVAAoAcgIAcwwAAgAgMBwAAQBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; start checkpoint scene
+; Sarah speak to sniper
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 4 ; Colvin
+set MQ01.noLook to 1 ; Colvin don't look at Sarah
+set MQ01.timer to 0
+set MQ01.talking to 0
+; get Reddin into position
+MQ01ReddinRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">71</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>68</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDAVAAoAcgEAcwoAAgAgMBYAEgABAA4AIHICAFguEAAAIDEgPT05EAoAAgByAQBuSAAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah done talking -- if Supermutant dead, go on to stage 72
+set MQ01.speaker to 0
+set MQ01.noLook to 0 ; back to default
+if MQ01AmbushMutantRef.GetDead == 1
+  setstage MQ01 72
+endif
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06020777">MQ01AmbushMutantREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">72</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAAcAAIAXhAAABUACgByAwBzBQACACA0FQAKAHIDAHMGAAIAIDU=</CompiledScript>
+              <ScriptSource Tag="SCTX">; finish conversation
+MQ01ColvinRef.evp
+MQ01SarahRef.evp
+set MQ01.speaker to 4 ; Colvin
+set MQ01.target to 5 ; Sarah
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">74</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>8</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Colvin moves up -- him reaching point triggers stage 75
+MQ01ColvinRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">75</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDA5EAoAAgByAgBuRgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; checkpoint scene done
+set MQ01.speaker to 0
+; control handed back to MQ01LD
+setstage MQ01LD 70</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">80</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>168</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAA8QCQACAAAAbgAAAAAcAAIADxAJAAIAAABuAAAAABwAAwAPEAkAAgAAAG4AAAAAHAAEAA8QCQACAAAAbgAAAAAcAAEADxAJAAIAOQBuAAAAABwAAgAPEAkAAgA5AG4AAAAAHAADAA8QCQACADkAbgAAAAAcAAQADxAJAAIAOQBuAAAAABwAAQBQEQAAHAACAFARAAAcAAMAUBEAABwABABQEQAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Schoolhouse mutants all dead
+; wait to start schoolhouse scene (trigger zone)
+; make Lyons Pride passive (so don't aggro on GNR mutants)
+MQ01SarahRef.setav aggression 0
+MQ01VargasRef.setav aggression 0
+MQ01ReddinRef.setav aggression 0
+MQ01ColvinRef.setav aggression 0
+; make them unhelpful so they don't join GNR battle early
+MQ01SarahRef.setav assistance 0
+MQ01VargasRef.setav assistance 0
+MQ01ReddinRef.setav assistance 0
+MQ01ColvinRef.setav assistance 0
+; heal everybody
+MQ01SarahRef.resetHealth
+MQ01VargasRef.resetHealth
+MQ01ReddinRef.resetHealth
+MQ01ColvinRef.resetHealth
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">81</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDUVAAoAcgEAcwYAAgAgNBUACgByAQBzDAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; start schoolhouse scene with Brotherhood of Steel
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 4 ; Colvin
+set MQ01.talking to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">82</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>60</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIFAHMFAAIAIDAVAAoAcgUAcwwAAgAgMBwAAQBeEAAAHAACAF4QAAAcAAMAXhAAABwABABeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; first part of schoolhouse scene done -- Colvin heading for the roof
+set MQ01.speaker to 0
+set MQ01.talking to 0
+MQ01SarahRef.evp
+MQ01ColvinRef.evp
+MQ01VargasRef.evp
+MQ01ReddinRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">84</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDQVAAoAcgEAcwYAAgAgMBUACgByAQBzDAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; Colvin in position, reporting to Sarah
+set MQ01.speaker to 4 ; Colvin
+set MQ01.target to 0 ; nobody -- talking over the radio
+set MQ01.talking to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">86</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>60</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIFAHMFAAIAIDAVAAoAcgUAcwwAAgAgMBwAAQBeEAAAHAACAF4QAAAcAAMAXhAAABwABABeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; taking up firing positions for schoolhouse ambush
+set MQ01.speaker to 0
+set MQ01.talking to 0
+MQ01SarahRef.evp
+MQ01ColvinRef.evp
+MQ01VargasRef.evp
+MQ01ReddinRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">88</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDIVAAoAcgEAcwYAAgAgMBUACgByAQBzDAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; everybody in position -- Sarah and Vargas speak
+set MQ01.speaker to 2 ; Vargas
+set MQ01.target to 0 ; nobody (radio)
+set MQ01.talking to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">90</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>100</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>192</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIFAHMFAAIAIDAVAAoAcgUAcwwAAgAgMBwAAQAPEAkAAgAAAG4BAAAAHAACAA8QCQACAAAAbgEAAAAcAAMADxAJAAIAAABuAQAAABwABAAPEAkAAgAAAG4BAAAAHAABAA8QCQACADkAbgEAAAAcAAIADxAJAAIAOQBuAQAAABwAAwAPEAkAAgA5AG4BAAAAHAAEAA8QCQACADkAbgEAAAA5EAoAAgByBgBuXAAAADkQCgACAHIGAG5fAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; schoolhouse scene done
+set MQ01.speaker to 0
+set MQ01.talking to 0
+; make Lyons Pride aggressive again
+MQ01SarahRef.setav aggression 1
+MQ01VargasRef.setav aggression 1
+MQ01ReddinRef.setav aggression 1
+MQ01ColvinRef.setav aggression 1
+; make them help allies again
+MQ01SarahRef.setav assistance 1
+MQ01VargasRef.setav assistance 1
+MQ01ReddinRef.setav assistance 1
+MQ01ColvinRef.setav assistance 1
+; control handed back to MQ01LD
+setstage MQ01LD 92
+setstage MQ01LD 95</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Sarah done with conv with commander (just used as a variable)
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>211</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbgoAAABuAQAAAKIRDwADAHIFAG4UAAAAbgEAAACiEQ8AAwByBQBuGQAAAG4BAAAAohEPAAMAcgUAbh4AAABuAQAAAKIRDwADAHIFAG4oAAAAbgEAAACjEQ8AAwByBQBuRgAAAG4BAAAAFQAKAHIFAGYEAAIAIDMcAAEADxAJAAIAAABuAQAAABwAAgAPEAkAAgAAAG4BAAAAHAADAA8QCQACAAAAbgEAAAAcAAQADxAJAAIAAABuAQAAABUACwByBQBmFwADACA2MA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; start scene outside GNR
+;We close any objective that is no longer needed at this point
+SetObjectiveCompleted MQ01 10 1
+SetObjectiveCompleted MQ01 20 1
+SetObjectiveCompleted MQ01 25 1
+SetObjectiveCompleted MQ01 30 1
+SetObjectiveCompleted MQ01 40 1 ; found GNR
+SetObjectiveDisplayed MQ01 70 1 ; new objective: speak to Three Dog
+set MQ01.timer to 3
+; failsafe -- reset aggression
+; make Lyons Pride aggressive again
+MQ01SarahRef.setav aggression 1
+MQ01VargasRef.setav aggression 1
+MQ01ReddinRef.setav aggression 1
+MQ01ColvinRef.setav aggression 1
+; start failsafe timer
+set MQ01.failsafeTimer to 60</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">101</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>96</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIGAHMFAAIAIDMVAAoAcgYAcwYAAgAgMhUACgByBgBmBAACACAzFQAKAHIGAHMMAAIAIDAcAAEAXhAAABwAAgBeEAAAHAADAF4QAAAcAAQAXhAAABwABQBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; start scene between Reddin and Vargas
+set MQ01.speaker to 3 ; Reddin
+set MQ01.target to 2 ; Vargas
+set MQ01.timer to 3 ; pause first
+set MQ01.talking to 0
+MQ01SarahRef.evp
+MQ01VargasRef.evp
+MQ01ColvinRef.evp
+MQ01ReddinRef.evp
+MQ01GNRBoS05.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D431">MQ01ColvinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602029C">MQ01GNRBoS05</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">102</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMFAAIAIDAVAAoAcgMAcwwAAgAgMBwAAQBeEAAAHAACAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Reddin and Vargas conv done
+set MQ01.speaker to 0
+set MQ01.talking to 0
+MQ01ReddinRef.evp
+MQ01VargasRef.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42E">MQ01ReddinREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">104</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>71</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABALIQBQABAHIEABUACgByBQBzBQACACAzFQAKAHIFAHMGAAIAIDIVAAoAcgUAZgQAAgAgMRwAAgBeEAAAHAADAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Reddin reaches first marker
+; trigger conversation, sound
+MQ01BehemothArriveMarker.PlaySound3D NPCSuperMutantBehemothTauntDemo
+; start scene between Reddin and Vargas
+set MQ01.speaker to 3 ; Reddin
+set MQ01.target to 2 ; Vargas
+set MQ01.timer to 1 ; pause for sound
+MQ01VargasRef.evp ; start running towards behemoth
+MQ01SarahRef.evp  ; stop conversation with captain
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="060199A1">MQ01BehemothArriveMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000225CD">NPCSuperMutantBehemothTauntDemo</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>86</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">AxAKAAIAcgMAbgAAAAADEAoAAgByBABuAAAAABwAAQBeEAAAHAACAF4QAAA5EAoAAgByBQBuaQAAABUACgByBgBmBAACACAyFQAKAHIGAHMFAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; GNN scene done
+setEssential MQ01Reddin 0
+setEssential MQ01Colvin 0
+MQ01VargasRef.evp
+MQ01SarahRef.evp
+; control handed back to MQ01LD
+setstage MQ01LD 105
+set MQ01.timer to 2; wait to yell
+set MQ01.speaker to 0 ; Sarah</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42F">MQ01Reddin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D432">MQ01Colvin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D493">MQ01LD</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">110</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDUVAAoAcgEAcwYAAgAgMRUACgByAQBzDAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah shouts to take cover
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 1; player
+set MQ01.talking to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">112</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>28</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDAVAAoAcgEAZgQAAgAgNQ==</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah done talking
+; run timer before Fatman shout
+set MQ01.speaker to 0
+set MQ01.timer to 5</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">115</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDUVAAoAcgEAcwYAAgAgMRUACgByAQBzDAACACAw</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah shout about fatman
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 1; player
+set MQ01.talking to 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">120</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>14</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMFAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah done talking
+set MQ01.speaker to 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <VariableIndex>21</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbjwAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ01 60 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="06014E87">MQ01</Quest>
+                  <VariableIndex>21</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbkEAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed MQ01 65 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">140</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>22</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHICAGYEAAIAIDMcAAEAXhAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">; start final scene
+set MQ01.timer to 3
+MQ01GNRBoS04.evp
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D5C0">MQ01GNRBoS04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">141</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>72</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMFAAIAIDIVAAoAcgMAcwYAAgAgMBUACgByAwBzDAACACAwFQAKAHIDAGYEAAIAIDMcAAEAXhAAABwAAgBeEAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Behemoth dead
+set MQ01.speaker to 2 ; Vargas
+set MQ01.target to 0 ; nobody
+set MQ01.talking to 0
+set MQ01.timer to 3; slight delay
+MQ01VargasREF.evp
+MQ01SarahREF.evp</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>Lessthan</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>10</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetStage</Type>
+                  <Quest ID="06014E89">MQ03</Quest>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbkEAAABuAQAAAKMRDwADAHIBAG5GAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted MQ01 65 1
+SetObjectiveDisplayed MQ01 70 1
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">142</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>30</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAF4QAAB4EBIABAByAgByAwBuAQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Vargas sitting
+MQ01SarahREF.evp
+; make player no longer friends with DC brotherhood
+SetEnemy MQ01BrotherhoodDCFaction PlayerFaction 1 1 ; neutral
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000213FB">MQ01BrotherhoodDCFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">143</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>42</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIBAHMMAAIAIDAVAAoAcgEAcwUAAgAgNRUACgByAQBzBgACACAy</CompiledScript>
+              <ScriptSource Tag="SCTX">; Vargas sitting, Sarah nearby
+; trigger Sarah/Vargas conversation
+set MQ01.talking to 0
+set MQ01.speaker to 5 ; Sarah
+set MQ01.target to 2 ; Vargas
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">144</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>44</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAKAHIDAHMFAAIAIDAcAAEAXhAAABwAAgBeEAAAORAKAAIAcgMAbpYAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Sarah/Vargas exchange done
+set MQ01.speaker to 0 ; stop talking
+; trigger Vargas to get up
+MQ01VargasREF.evp
+MQ01SarahREF.evp
+setstage MQ01 150
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D42D">MQ01VargasREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">146</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Vargas/Sarah greeting done
+; Vargas gives closing line
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>32</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">3BEOAAIAcgEAegAAAAAAAAAAAxAKAAIAcgIAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">setQuestDelay MQ01 0
+setEssential MQ01Vargas 0
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44E">MQ01Vargas</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">175</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>6</ReferenceCount>
+                <CompiledSize>121</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHMQAgAAAFUQBQABAHICABYAFAAGABAAIFg6EAUAAQByAwAgMTAgPK0RBQABAHIEAHcRBwABAG4sAQAAORAKAAIAcgMAbgAAAAA3EAUAAQByBAAVABAAcgUAZhgACAAgRwYAIDEgK0oRBwABAG4EAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;For use with successful SC in MQ01
+GNR02toDupontCircle01REF.Unlock
+ShowMap RivetCityMapMarker
+if ( GetStage MQ03 &lt; 10 )
+CompleteAllObjectives MQ01
+RewardXP 300
+SetStage MQ03 0
+StopQuest MQ01
+  Set RadioGalaxyNewsQuest.MQ01Clear to ( GameDaysPassed + 1 )
+addachievement 04
+endif
+
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602625A">GNR02toDupontCircle01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06002E8F">RivetCityMapMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM"> </LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>228</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAUAAsAEAAgWDoQBQABAHICACAxMCA8ohEPAAMAcgMAbkYAAABuAQAAABYAMQABAC0AIFilEQoAAgByAwBuPAAAACAxID09IFikEQoAAgByAwBuPAAAACAwID09ICYmoxEPAAMAcgMAbjwAAABuAAAAABkAAAB3EQcAAQBuLAEAABYAEAABAAwAIHIEAHMBACAwID09ORAKAAIAcgUAbgoAAAAZAAAAFQAQAHIGAGYYAAgAIEcHACAxICsVAAoAcgYAczUAAgAgMTcQBQABAHIDABkAAAAcAAEAnhAFAAEAcggA</CompiledScript>
+              <ScriptSource Tag="SCTX">if ( GetStage MQ03 &lt; 10 )
+  SetObjectiveCompleted MQ01 70 1
+  if GetObjectiveDisplayed MQ01 60 == 1 &amp;&amp; GetObjectiveCompleted MQ01 60 == 0
+    SetObjectiveDisplayed MQ01 60 0 ; remove fatman objective if not already complete
+  endif
+  RewardXP 300
+  if ( MQ02DishRef.HaveDish == 0 )
+    SetStage MQ02 10
+  endif
+  Set RadioGalaxyNewsQuest.MQ01Clear to ( GameDaysPassed + 1 )
+  Set RadioGalaxyNewsQuest.ExploitReady to 1
+  StopQuest MQ01
+endif
+;addachievement 04
+MQ01SarahRef.Moveto CitLyonsPrideQuartersMarker
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E89">MQ03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0604D189">MQ02DishRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E88">MQ02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06022486">RadioGalaxyNewsQuest</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000039">GameDaysPassed</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602107E">CitLyonsPrideQuartersMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">210</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>31</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">rREFAAEAcgIANxAFAAEAcgIAHAABAJ4QBQABAHIDAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;Set if player skips over to MQ03
+CompleteAllObjectives MQ01
+StopQuest MQ01
+MQ01SarahRef.Moveto CitLyonsPrideQuartersMarker</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="06014E87">MQ01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602107E">CitLyonsPrideQuartersMARKER</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">250</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>27</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHICAA0RCgACAHIDAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Player killed Three Dog
+MQ01SarahRef.Moveto CitLyonsPrideQuartersMarker
+SetQuestObject MQ02VirgoIIDish 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0601D44F">MQ01SarahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0602107E">CitLyonsPrideQuartersMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0002393C">MQ02VirgoIIDish</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Travel to DC and investigate the town of Megaton for information about Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06014BC8">MegatonBombRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInZone</Type>
+                  <EncounterZone ID="00035AAA">MegatonZone</EncounterZone>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Speak to Colin Moriarty about Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06003B3C">ColinMoriartyRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Find Galaxy News Radio.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601B9FB">ChevyChasetoGNR01Ref</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">65</Index>
+        <Description Tag="NNAM">Help defeat the Super Mutant Behemoth.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0601F1F9">MQ01BehemothREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Ask Three Dog about Dad.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06023943">ThreeDogRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Continue your search for Dad.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">(Optional) Deal with Silver in Springvale.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0609EA7A">SilverRef</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0609EA79">MQ01Silver</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">Retrieve the Fat Man from the dead Brotherhood soldier.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="06020AF2">MQ01CorpseWithFatmanRef</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

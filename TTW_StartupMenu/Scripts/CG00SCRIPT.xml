@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0003A17C">CG00SCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG00SCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>871</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAABAHsAAAAAABYADQABAAkAIHMGACAxID09HgAAABcAAgAEABYANwACADMAIFg6EAUAAQByAgAgNSA8IFg6EAUAAQByAwAgNSA8ICYmIFg6EAUAAQByBAAgNSA8ICYmORAKAAIAcgIAbgAAAAAVAAcAcwYAAgAgMRkAAAAZAAAAEQAAABAABgAAAJcCAAAWABAAAAAMACByAgBzBAAgMiA9PRcAAgABAB4AAAAZAAAAFgANABsACQAgcwIAIDEgPT0WAAwAAQAIACBmAQAgMCA+FQARAGYBAAwAIGYBACBYDBAAACAtFwACABcAFgAUAAEAEAAgWDoQBQABAHIDACA1ID09ORAKAAIAcgMAbgYAAAAYABQAAQAQACBYOhAFAAEAcgMAIDYgPT05EAoAAgByAwBuCAAAABgAFAABABAAIFg6EAUAAQByAwAgOCA9PTkQCgACAHIDAG4JAAAAGAAUAAEAEAAgWDoQBQABAHIDACA5ID09ORAKAAIAcgMAbgoAAAAYABUAAwARACBYOhAFAAEAcgMAIDE4ID09ORAKAAIAcgMAbhQAAAAVAAcAcwQAAgAgMVkQCwABAHIFAAAAAAAAABgAFQABABEAIFg6EAUAAQByAwAgMjAgPT05EAoAAgByAwBuFgAAABgAFQABABEAIFg6EAUAAQByAwAgMzggPT05EAoAAgByAwBuKAAAABgAFQABABEAIFg6EAUAAQByAwAgNDAgPT05EAoAAgByAwBuKgAAABgAFQABABEAIFg6EAUAAQByAwAgNjEgPT05EAoAAgByAwBuPgAAABgAFQABABEAIFg6EAUAAQByAwAgOTAgPT05EAoAAgByAwBuZAAAABkAAAAZAAAAGQAAABYADQAJAAkAIHMEACAxID09FQALAHMFAAYAIFgfEAAAFgAOAAYACgAgcwUAIDEgfiA+FQAHAHMEAAIAIDIWAA0AAQAJACBzBQAgMCA9PRwAAQDnEQkAAgAAAG4BAAAAGAANAAEACQAgcwUAIDEgPT0cAAEA5xEJAAIAAQBuAQAAABkAAAAZAAAAGQAAABEAAAAQAAgAAQAvAAAAAAAWABUAAQARACBYOhAFAAEAcgMAIDYwID09ORAKAAIAcgMAbj0AAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="CG00SCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">runTimer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">chooseSex</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iDoOnce</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0D001514">TTWCG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001F388">CG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00102037">VCG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0005AD5C">CG00ChooseSexMessage</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

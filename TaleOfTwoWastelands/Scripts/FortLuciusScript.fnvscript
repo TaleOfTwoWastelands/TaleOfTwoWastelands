@@ -1,0 +1,136 @@
+scn FortLuciusScript
+
+short Button
+short bEndGameButton
+short bStartedEndGame
+
+Short bSaveGame;
+Float fSaveTimer;
+Short nSaveEvent;
+
+begin OnStartCombat player
+
+	if (GetStageDone VMQ02 110 == 0)
+		SetStage VMQ02 110
+	endif
+
+end
+
+begin OnDeath
+
+	if (GetStageDone VMS32 100 == 0)
+		SetStage VMS32 110
+	endif
+	
+	if (GetStageDone VMQ02 110 == 0)
+		SetStage VMQ02 110
+	endif
+
+end
+
+BEGIN GameMode
+
+	;This code runs the savegame.
+	If (bSaveGame == 1)
+		If (fSaveTimer > 0)
+			Set fSaveTimer to fSaveTimer - GetSecondsPassed
+		Else
+			If (nSaveEvent == 0)
+	
+				SystemSave;
+				Set fSaveTimer to 1.0;
+				Set nSaveEvent to 1;
+	
+			ElseIf (nSaveEvent == 1)
+	
+				EnablePlayerControls;
+	
+				;Show Message Script
+				ShowMessage VEndGameWarningMsgLegion;
+	
+				Set nSaveEvent to 0;
+				Set bSaveGame to 2;
+			EndIf
+		EndIf
+	EndIf
+
+	if bEndGameButton == 1
+		if ( bStartedEndGame == 0 )
+			set Button to GetButtonPressed
+			if ( Button == 0 )
+				;Reset Dialog Options So Caesar Redoes the "Are you ready" stuff.
+			elseif ( Button == 1 )
+				set bStartedEndGame to 1
+	
+				;Start Legion Stuff
+				Set VHDBattleController.iBattleState to 2
+				VHDLegionLegateCampPreBattleEnableMarker.enable
+
+				player.MoveTo VHDLegateStartMarker
+
+				;Move Companions with the Player
+				if (VNPCFollowers.bBooneHired)
+					CraigBooneREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bCassHired)
+					RoseofSharonCassidyREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif	
+				if (VNPCFollowers.bVeronicaHired)
+					VeronicaREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bLilyHired)
+					LilyREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.RaulHired)
+					RaulREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.ArcadeHired)
+					ArcadeREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bEDEHired)
+					if EDE1Ref.GetDisabled == 0
+						EDE1Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					elseif EDE2Ref.GetDisabled == 0
+						EDE2Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					elseif EDE3Ref.GetDisabled == 0
+						EDE3Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					endif
+				endif
+				if (VNPCFollowers.RexHired)
+					RexREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.CharonHired)
+					CharonRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.DogmeatHired)
+					DogmeatRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.ButchHired)
+					ButchRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.CloverHired)
+					CloverRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.JerichoHired)
+					JerichoRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.FawkesHired)
+					MQ08FawkesRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.RL3Hired)
+					RL3REF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.StarPaladinCrossHired)
+					StarPaladinCrossRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+
+				EnableFastTravel 0 0 1
+
+				;Autosave Game Here
+				autosave
+
+			endif
+		endif
+	endif
+
+END

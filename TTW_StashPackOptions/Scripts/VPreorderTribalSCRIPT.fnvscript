@@ -1,0 +1,12 @@
+ScriptName VPreorderTribalSCRIPT
+
+BEGIN GameMode
+	if (VDLCPackQuest.bTribalItemsGiven == 0) && ((GetQuestCompleted VCG01 == 1) || (GetQuestCompleted CG04 == 1))
+		ShowMessage PreorderMessageInventoryTribal;
+		Player.AddItem PreordArmorTribalRaiding 1;
+		Player.AddItem WeapNVThrowingSpear 10;
+		Player.AddItem WeapPreordMachete 1;
+		Player.AddItem BleakVenom 5;
+		set VDLCPackQuest.bTribalItemsGiven to 1;
+	endif
+END

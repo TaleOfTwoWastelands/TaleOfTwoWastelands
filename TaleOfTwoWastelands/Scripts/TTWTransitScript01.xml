@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C001E1D">TTWTransitScript01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWTransitScript01</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>25</ReferenceCount>
+        <CompiledSize>1103</CompiledSize>
+        <VariableCount>4</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAMEAAAAAABYAFAANABAAIFhpEAUAAQByAgAgMSA9PRYADQAFAAkAIEcDACAwID09FgAXAAEAEwAgcgIAWC8QBQABAHIEACAxID49WRALAAEAcgUAAAAAAAAAFwACAAEAWRALAAEAcgYAAAAAAAAAGQAAABcAAgAFABYAFwABABMAIHICAFgvEAUAAQByBwAgMSA+PVkQCwABAHIIAAAAAAAAABcAAgABAFkQCwABAHIJAAAAAAAAABkAAAAZAAAAGQAAABEAAAAQAAYAAAB0AwAAFgAaAAoAFgAgcwIAIDEgPCBYHxAAACAxID09ICYmFQAHAHMCAAIAIDEVAAcAZgQAAgAgN2EQIAAGAG4BAAAAbgAAAABuAAAAAG4AAAAAbgAAAABuAAAAAA0QCgACAHICAG4AAAAAFQALAGYDAAYAIFhrEQAAFgASAAEADgAgcgIAWEMQBQABAHIKABwAAQAiEAIAAAAYABIAAAAOACByAgBYQxAFAAEAcgsAGQAAABUABwBzAQACACAwGQAAABYADQAyAAkAIHMCACAxID09FQARAGYEAAwAIGYEACBYDBAAACAtFgAZAAcAFQAgZgQAIDUgPD0gcwEAIDAgPT0gJiYVAAcAcwEAAgAgMRYAIAABABwAIFg7EAoAAgByDABuAAAAACBHAwAgMCA9PSB8fJERBQABAHINABcAAgABAJERBQABAHIOABkAAAAcAAIAJhAFAAEAcg8AGQAAABYADQAmAAkAIGYEACAwIDw9HAABACIQAgAAABYAIAACABwAIFg7EAoAAgByDABuAAAAACBHAwAgMCA9PSB8fBQRFQABABEAMiB3ZWVrcyBsYXRlci5iaWuREQUAAQByEAAXAAIAAgAUERUAAQARADkgeWVhcnMgbGF0ZXIuYmlrkREFAAEAchEAGQAAAGAQAgAAABYADQAHAAkAIEcDACAwID09HAACAJ4QBQABAHISADkQCgACAHITAG4BAAAAORAKAAIAchMAbgIAAAAVAAcARxQAAgAgMRUACwByEwBzAQADACAxNDkQCgACAHITAG4UAAAAHAACAFIQCgACAHIEAG4BAAAAFwACABIAORAKAAIAchMAbgAAAAA5EAoAAgByEwBuAwAAABUACQBHFAAEACA1MTIWABQAAwAQACBYOxAKAAIAcgwAbgAAAAAcAAIAnhAFAAEAchUAFQALAHITAHMBAAMAIDE0ORAKAAIAchMAbhQAAAAXAAIACAAcAAIAUBEAABwAAgBSEAoAAgByBwBuAQAAABwAAgCtEAoAAgByFgBuAQAAABUACABHFwADACAxOBUABwBHGAACACA5FQAKAEcZAAUAIDIyODE2EAUAAQByDAA5EAoAAgByDABuAAAAABkAAAAcAAIAUhAKAAIAcgcAbgEAAAAZAAAAFQAHAHMCAAIAIDAZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWTransitScript01.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">playerTravel</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">myLink</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">timer</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E14">TTWTrainTicket01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E12">TTWTrainTravelNVtoDC</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E13">TTWTrainTravelNVtoDCNoTicket</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E15">TTWTrainTicket02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E10">TTWTrainTravelDCtoNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E11">TTWTrainTravelDCtoNVNoTicket</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E2A">TTWTrainEngine01a</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E2B">TTWTrainEngine01b</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00102037">VCG00</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E815D">FadeToBlack2sISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002ECC6">FadeToWhiteISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00177D6C">QSTEndPowerUpTurbine</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0011ECFE">FadeInFromBlack4sISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00039563">FadeInFromWhiteISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C002139">TTWDCTrainEngineXMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAB">TTWFunctions</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00206D">TTWNVTrainEngineXMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00CD38">TTWStolenWeaponsRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000037">GameDay</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000036">GameMonth</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000035">GameYear</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,76 @@
+scn TTWCG00Script
+
+
+short iMessageShown
+short iMessageToShow
+short iButtonPressed
+short iAwaitingInput
+short iGameChoice		;1 = start in NV, 2 = Start in CW
+short iDoOnce
+float fTimer
+
+;06/21/2012 by RickerHK
+
+begin gamemode
+
+; After player move to TTWPlayerStartMakerREF, gamemode starts. Now pick the real start
+
+		if (iMessageShown) 
+		else
+			if (iMessageToShow == 0)
+				set iMessageShown to 1
+				set iAwaitingInput to 1
+				set fTimer to 5
+				ShowMessage TTWNewGameStartMSG
+			elseif (iMessageToShow == 1)							;Timed out or interupted by another messagebox so buttonpressed invalid
+				set iMessageShown to 2
+				set iAwaitingInput to 1
+				set fTimer to 5
+				ShowMessage TTWNewGameStartTryAgainMSG				;Explain to player so they don't think we're stupid.
+			endif
+		endif
+
+		if (iAwaitingInput)
+			set iButtonPressed to GetButtonPressed
+			if (iButtonPressed > -1)
+				set iAwaitingInput to 0
+				
+				if (iMessageShown)
+					if (iButtonPressed == 0)			;New Vegas
+						set iGameChoice to 1			;Tell TTW functions what we did
+						set bInDCWasteland to 0
+						set bInNVWasteland to 1
+						setstage TTWFunctions 0
+						setstage TTWFunctions 3
+						SetStage CG00 85 			;gotta fully kill this quest in case the player disables this mod
+						CompleteQuest CG00			;we use stage 85 because it has no result script, and it just has to be any stage >5
+						StopQuest CG00 
+						setstage VCG00 0 				;start chargen
+					elseif(iButtonPressed == 1)			;Fallout 3
+						set iGameChoice to 2
+						set bInDCWasteland to 1		;Tell TTW functions what we did
+						set bInNVWasteland to 0
+						setstage TTWFunctions 1
+						setstage TTWFunctions 2
+						; StopQuest VCG00 				; No we can't do that, it messes up Doc Mitchell's.  Sorry RHK
+						setstage CG00 0				;start chargen
+					endif
+				endif
+			endif
+		endif
+		
+		if (fTimer > 0)
+			set fTimer to fTimer - GetSecondsPassed
+		else
+			if (iGameChoice == 0)
+				set iMessageToShow to 1
+				set iMessageShown to 0
+				set iAwaitingInput to 0
+			endif
+		endif
+	
+		if (iGameChoice)
+			StopQuest TTWCG00
+		endif
+
+end

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PROJ">
+  <Flags>0</Flags>
+  <FormID ID="0B0076C9">DLC05RobotCannonMineProjectile</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05RobotCannonMineProjectile</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Energy Ball</Name>
+    <Model>
+      <FileName Tag="MODL">DLC05\Effects\DLC05FXRobotCannonMine02.NIF</FileName>
+    </Model>
+    <Destructable>
+      <Header Tag="DEST">
+        <Health>200</Health>
+        <Count>0</Count>
+        <Flags>VATSTargetable</Flags>
+        <Unknown>RFQ=</Unknown>
+      </Header>
+    </Destructable>
+    <ProjectileData Tag="DATA">
+      <Flags>Explosion, AltTrigger, MuzzleFlash</Flags>
+      <Type>Lobber</Type>
+      <Gravity>0</Gravity>
+      <Speed>2000</Speed>
+      <Range>10000</Range>
+      <Light ID="00000000">NullReference</Light>
+      <MuzzleFlash>
+        <Light ID="0004DFE1">CaveLightFillCool</Light>
+        <Duration>0.200000003</Duration>
+      </MuzzleFlash>
+      <TracerChance>0</TracerChance>
+      <Explosion>
+        <AltTrigger>
+          <Proximity>0</Proximity>
+          <Timer>1</Timer>
+        </AltTrigger>
+        <Form ID="0B0076CA">DLC05RobotCannonMineExplosion</Form>
+      </Explosion>
+      <Sound ID="00000000">NullReference<Countdown ID="00000000">NullReference</Countdown><Disable ID="0007E91F">WPNMineDisarm</Disable></Sound>
+      <FadeDuration>0.5</FadeDuration>
+      <ImpactForce>5</ImpactForce>
+      <DefaultWeaponSource ID="0B000845">DLC05WeapRobotCannon</DefaultWeaponSource>
+      <XRotation>0</XRotation>
+      <YRotation>0</YRotation>
+      <ZRotation>0</ZRotation>
+      <BouncyMult>0</BouncyMult>
+    </ProjectileData>
+    <MuzzleFlash>
+      <Model>
+        <Filename Tag="NAM1">DLC05\Effects\DLC05FXRobotCannonMF01.NIF</Filename>
+        <TextureHash Tag="NAM2"></TextureHash>
+      </Model>
+    </MuzzleFlash>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

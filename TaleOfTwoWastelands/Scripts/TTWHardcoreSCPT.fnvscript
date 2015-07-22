@@ -1,0 +1,29 @@
+scn TTWHardcoreSCPT
+
+short doOnce
+short nButton
+
+begin GameMode
+
+if GetQuestCompleted VCG01
+	StopQuest TTWHardcoreExit
+endif
+
+if (doOnce == 0 && GetQuestCompleted CG04 == 1)
+	ShowMessage VCG01CasualHardcoreMessage 1
+	set doOnce to 1
+endif
+if (doOnce == 1)
+	set nButton to GetButtonPressed
+	if (nButton >= 0 && doOnce == 1)
+		if ( nButton == 1)
+			player.SetHardcore 1;
+		else
+			player.SetHardcore 0;
+		endif
+		set doOnce to 2;
+		StopQuest TTWHardcoreExit;
+	endif
+endif
+
+end

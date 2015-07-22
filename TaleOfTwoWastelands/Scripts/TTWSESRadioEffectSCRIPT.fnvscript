@@ -1,0 +1,14 @@
+scn TTWSESRadioEffectSCRIPT
+
+; Add the Radio Signal to Advertitron so he plays it while wandering.
+
+begin ScriptEffectStart
+	if GetDead == 0
+		SetNPCRadio 1 TTWSESAdvertRadioSignalRef
+	endif
+end
+
+
+begin ScriptEffectFinish
+	SetNPCRadio 0 TTWSESAdvertRadioSignalRef
+end

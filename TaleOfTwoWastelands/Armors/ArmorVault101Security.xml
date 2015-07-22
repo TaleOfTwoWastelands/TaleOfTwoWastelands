@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0601CBDD">ArmorVault101Security</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorVault101Security</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-14</X>
+        <Y>-19</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>14</X>
+        <Y>24</Y>
+        <Z>21</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Vault 101 Security Armor</Name>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>-842150656</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\VaultSecurity\M\Outfit.NIF</FileName>
+          <TextureHashes Tag="MODT">7fQHbwcx/gptdAdvDDH+Cnl0HHQgfQRn7t8JbwDNHjVuXwlvBc0eNXl0HHQgfQRn898JbwDNHjVzXwlvBc0eNXl0HHQgfQRnsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>7</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOff</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>PipBoyOn</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>Upperbody</Name>
+                <TextureSet ID="0C001BFF">TTWV101SecurityArmorM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\VaultSecurity\F\OutfitF.NIF</FileName>
+          <TextureHashes Tag="MO3T">5vQHbwcx/gpmdAdvDDH+Cnl0HHQgfQRn7t8Jb/nMHjVuXwlv/sweNXl0HHQgfQRn898Jb/nMHjVzXwlv/sweNXl0HHQgfQRnsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\VaultSecurity\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+Cnl0HHQgfQRn7t8JbwDNHjVuXwlvBc0eNXl0HHQgfQRn898JbwDNHjVzXwlvBc0eNXl0HHQgfQRn</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_vault_security_suit.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_vault_security_suit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075206">RepairCombatArmor</Reference>
+    </RepairList>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0001D4CF">OutfitVaultSecurityList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>70</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>15</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>8</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B5">ArmorLightAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

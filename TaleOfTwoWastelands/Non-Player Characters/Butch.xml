@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06027F65">Butch</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Butch</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Butch</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>50</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>500</Karma>
+      <DispositionBase>20</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001CE2C">Vault101TunnelSnakesFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0001CFB6">Vault101Faction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0002A4E4">Vault101ButchFamilyFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000872A0">MS16Vault101RebelFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000B8D50">MS16Vault101Faction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06061EA5">MaleUniqueButch</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="00036BB3">ButchScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000236D8">PipBoyNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00025B83">PipBoyGlove</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06061D98">FollwerOutfitButch</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.5</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0606407F">FollowersButchSwitchblade</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06078440">WeapUniqueButchToothpick</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.600000024</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Cocky</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00094269">FollowersButchFiredWaitRCBar</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06094268">FollowersButchFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609426C">FollowersButchFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609426B">FollowersButchFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060446DE">MS16finButchRCBar</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C2F13">MS16ButchGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C2F14">MS16ButchWatchEntrance12x12</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C2F24">MS16RebelHideout02ButchSpecial</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00000801">VaultDweller</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>175</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>30</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>30</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>28</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="000218C6">HairDA</Reference>
+      </Type>
+      <Length Tag="LNAM">0.0500000007</Length>
+      <Color Tag="HCLR">
+        <Red>80</Red>
+        <Green>79</Green>
+        <Blue>69</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004253">EyeBlue</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">6K99vu4wGz+ICkC9rvBPP94Xxr5XZ6m/QBAhvPi85z5o1Zm96X0lv0i3tz7m77G+l0YLQACQub+g6py/kXXxv7gwEL4wT2m/BBPZv3w4BD57yvu/hFPdv8Br0b5wlHLAXe3Iv5avnr/wAu097lSOv/AQXj6e78a/7T0DwBE9T8AaWExAdd9+wITyf79Jb1o/eh42wPCCAL6K0ijAsFd9vnCu5j/xFFbA6015QJxSXb9MMmxArqdgQHHkHEBUd0w/mPr0v8CQSsA=</Symmetric>
+        <Asymmetric Tag="FGGA">NJE+PeSpkL7ahTA+VIHyPlwbDr7bFYa+KF6dPxRjVr62etW9OK90vo7Bcr6lIIe+MmO1PugJ3D6zrZe+Xro6PxQt0r6CNWs9tyySP3e1BL9+WAU+vskLPtbKuz2iCLm/WDJ2v+IuC0ACfFC+sbuCP6JVzj6YT9U/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">3kMBwAHB3L7ebRY/OLRyPyTQcD50GGs+2wcfv/C7wL+YBLs+QQSCvycW/z/c+QC/w1KRPoTLOD+PZFW/KmTRviSUHUBIp6e+Uoe8vkitM8BnJI9AaoQLQKualz6EwjRA/K3YvyqIdT/QV4k+uAd7v5cJC0DIpxTAeNlyQO7XST5FzAnATASvwIwjhECoORXA/H/+PhyyNsBfTBfAPEywP2Jy6sCmhUZAox0YwIj1HL96fzVAQl0/wEOwwb8H4A3A7ljkvw1k1z8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

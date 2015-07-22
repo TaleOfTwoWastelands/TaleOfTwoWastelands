@@ -1,0 +1,13 @@
+ScriptName VPreorderClassicSCRIPT
+
+BEGIN GameMode
+	if (VDLCPackQuest.bClassicItemsGiven == 0) && ((GetQuestCompleted VCG01 == 1) || (GetQuestCompleted CG04 == 1))
+		ShowMessage PreorderMessageInventoryClassic;
+		Player.AddItem PreordArmorVault13Armored 1;
+		Player.AddItem PreordVaultCanteen 1;
+		Player.AddItem WeapPreord10mmPistol 1;
+		Player.AddItem Ammo10mm 50;
+		Player.AddItem Stimpak 5;
+		set VDLCPackQuest.bClassicItemsGiven to 1
+	endif
+END

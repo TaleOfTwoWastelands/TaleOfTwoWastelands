@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0B00C96D">DLC05GeneralCoat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05GeneralCoat</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Colonel Autumn's Uniform</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00071B8E">EnchClothingAutumnOutfit</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\ColonelAutumn\OutfitM.NIF</FileName>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>0</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>5</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody01</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>1</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\ColonelAutumn\OutfitF.NIF</FileName>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>7</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyoff</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>pipboyon</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>2</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\ColonelAutumn\GO.NIF</FileName>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>Object02</Name>
+                <TextureSet ID="0B00C96B">DLC05GeneralsCoat</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_colonel_autmn_uniform.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_apperal_colonel_autmn_uniform.dds</Male>
+      </Message>
+    </Icon>
+    <BipedModelList Tag="BIPL">
+      <Reference ID="0B00C96E">DLC05GeneralCoatList</Reference>
+    </BipedModelList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>12</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>3</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>12</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013EB33">ArmorMediumAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

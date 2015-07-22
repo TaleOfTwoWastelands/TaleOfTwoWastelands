@@ -1,0 +1,11 @@
+scn TTWChallengeOneStarSCRIPT
+
+Begin ScriptEffectStart
+
+	Player.RewardXP 250
+	Set NVDLC05MQ00.nOneStarChallengesCompleted to (NVDLC05MQ00.nOneStarChallengesCompleted + 1);
+	If (NVDLC05MQ00.nOneStarChallengesCompleted >= 3) && (NVDLC05MQ00.bOneStarChallengeAchievementGiven != 1)
+		Set NVDLC05MQ00.bOneStarChallengeAchievementGiven to 1;
+	EndIf
+
+End

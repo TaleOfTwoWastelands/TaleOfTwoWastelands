@@ -1,0 +1,11 @@
+scn TTWUnStnUnlockLinkedSCRIPT
+
+ref rLinked
+
+BEGIN OnTriggerEnter
+	set rLinked to GetLinkedRef
+	rLinked.Unlock
+	Disable	
+	MarkForDelete
+END
+	

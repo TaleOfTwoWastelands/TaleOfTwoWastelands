@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="0A00DE12">DLC04FF05SpyGlasses</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC04FF05SpyGlasses</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-5</X>
+        <Y>-4</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>5</X>
+        <Y>4</Y>
+        <Z>2</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Cryptochromatic Spectacles</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0A00DE10">DLC04SpyGlassesScript</Reference>
+    </Script>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="00135F74">EnchFourEyesGlasses</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Eyeglasses, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Characters\Hair\GlassesTortoiseshell.NIF</FileName>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Characters\Hair\GlassesTortoiseshellGO.NIF</FileName>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_eyeglasses.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075214">RepairGlasses</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>8</Value>
+      <MaxCondition>150</MaxCondition>
+      <Weight>0</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>0</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

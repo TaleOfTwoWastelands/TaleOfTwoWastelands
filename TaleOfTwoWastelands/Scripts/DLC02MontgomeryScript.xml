@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="070015F4">DLC02MontgomeryScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02MontgomeryScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>20</ReferenceCount>
+        <CompiledSize>1009</CompiledSize>
+        <VariableCount>8</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAVAA8AAADsEAcAAQBuAQAAABEAAAAQAAsAAgBIAAAAAQByAQAWAA0AAAAJACBzBAAgMCA9PRgADQABAAkAIHMEACAxID49DRACAAAAGQAAABYAEAAAAAwAIHICAHMQACAxID49GQAAABEAAAAQAAYAAAC8AQAAFgAbAAIAFwAgcwgAIDAgPT0gWDgQBQABAHIDACAmJsURBwABAG4BAAAAFQAHAHMIAAIAIDEYAA0ABAAJACBzCAAgMSA9PRYAFAACABAAIFg2EQUAAQByBAAgMSA9PcURBwABAG4AAAAAFQAJAHMIAAQAIDEgfhkAAAAZAAAAFgAYAAIAFAAgWA4QBAABAEcAIHIFAHNFACAhPQ8QCgACAEcAcgUAc0UAXhAAABkAAAAWABgAAgAUACBYDhAEAAEAPwAgcgUAc0cAICE9DxAKAAIAPwByBQBzRwBeEAAAGQAAABYAEAAJAAwAIHIDAHMZACAxID09FgATAAEADwAgWCgRBAABAAIAIDAgIT0VAAcAcwcAAgAgMRkAAAAWAB8ABAAbACBzBwAgMSA9PSBYKBEEAAEAAgAgMCA9PSAmJswQBwABAG4AAAAAFQAKAHIDAHMKAAIAIDJeEAAAFQAKAHIDAHMZAAIAIDIZAAAAGQAAABYADQAEAAkAIHMDACAwID09FgAQAAIADAAgcgMAcwYAIDEgPT0zEAoAAgByBgBuAQAAABUABwBzAwACACAxGQAAABkAAAARAAAAEAALAAcAogAAAAEAcgYAMxAKAAIAcgcAbgEAAAAcAAEAAhAKAAIAcggAbgEAAAAcAAEAAhAKAAIAcgkAbjwAAAAcAAEAAhAKAAIAcgoAbgEAAAAcAAEAAhAKAAIAcgsAbgMAAAAcAAEAAhAKAAIAcgwAbgEAAAAcAAEAAhAKAAIAcg0AbgEAAAAcAAEAAhAKAAIAcg4AbgEAAAAcAAEAAhAKAAIAcg8AbjIAAAARAAAAEAALAAcAOQAAAAEAcgcAMxAKAAIAchAAbgEAAAAcAAEA7hAFAAEAcgwAHAABAO4QBQABAHINABwAAQDuEAUAAQByCAARAAAAEAALAAcAEgAAAAEAchAAMxAKAAIAchEAbgEAAAARAAAAEAALAAcAEgAAAAEAchEAMxAKAAIAchIAbgEAAAARAAAAEAALAAcAbQAAAAEAchIAzBAHAAEAbgEAAAAcEQUAAQByEwAVAAoAcgMAcwYAAgAgMhUACgByAwBzAwACACAzYBACAAAAORAKAAIAchQAbsgAAACjEQ8AAwByAwBuCgAAAG4BAAAAFQAKAHIDAHMIAAIAIDFeEAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC02MontgomeryScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TalkStart</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">SafeToTalk</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AnimStarted</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">teammateToggle</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009C0">DLC02OA3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009BF">DLC02OA2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07000E28">DLC02AnchorageBattle</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07002D0A">DLC02StrikeTeam</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700435F">DLC02OA2MontTalk01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700435D">DLC02OA2MontTalk03</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003F4A">DLC02Weap10mmPistolSilenced</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00004241">Ammo10mm</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003F44">DLC02WeapKnifeCombat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070015F3">DLC02Charges</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003AF9">DLC02ArmorCombatSnow</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07003AFC">DLC02ArmorCombatSnowHelmet</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00043E94">StealthBoy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000000A">Lockpick</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700435C">DLC02OA2MontTalk04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700435A">DLC02OA2MontTalk06</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="07004359">DLC02OA2MontTalk07</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0700C368">DLC02EmptyName</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="070009BE">DLC02OA1</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

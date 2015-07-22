@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="AMMO">
+  <Flags>0</Flags>
+  <FormID ID="0013E447">Ammo12GaSlug</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Ammo12GaSlug</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">12 Gauge, Slug</Name>
+    <Model>
+      <FileName Tag="MODL">ammo\shotgunshellbox.nif</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">interface\icons\pipboyimages\items\items_shotgun_shell.dds</Large>
+      <Small Tag="MICO">interface\icons\pipboyimages_small\items_small\glow_items_shotgun_shell.dds</Small>
+    </Icon>
+    <PickUpSound Tag="YNAM">
+      <Reference ID="00088B16">ITMAmmunitionUp</Reference>
+    </PickUpSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="00088B17">ITMAmmunitionDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Speed>1</Speed>
+      <Flags>0</Flags>
+      <Value>2</Value>
+      <ClipRounds>12</ClipRounds>
+    </Data>
+    <ExtraData Tag="DAT2">
+      <ProjectilesPerShot>1</ProjectilesPerShot>
+      <Projectile ID="001572C5">12GaSlugProjectile</Projectile>
+      <Weight>0.075000003</Weight>
+      <ConsumedAmmo ID="00140AEB">Hull12Ga</ConsumedAmmo>
+      <ConsumedPercentage>30</ConsumedPercentage>
+    </ExtraData>
+    <ShortName Tag="ONAM">12ga S</ShortName>
+    <Abbreviation Tag="QNAM">Slg</Abbreviation>
+    <AmmoEffects>
+      <Effect Tag="RCIL">
+        <Reference ID="00157B59">AmmoEffectSlugSpreadReduction</Reference>
+      </Effect>
+    </AmmoEffects>
+  </Subrecords>
+</Record>

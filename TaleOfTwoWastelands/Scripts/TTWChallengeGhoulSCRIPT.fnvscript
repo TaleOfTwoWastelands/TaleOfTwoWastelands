@@ -1,0 +1,18 @@
+scn TTWChallengeGhoulSCRIPT
+
+int rank;
+
+BEGIN ScriptEffectStart
+	set rank to Player.HasPerk TTWGhoulChallengePerk
+
+	if (rank < 3)
+		set rank to (Player.AddPerk TTWGhoulChallengePerk)
+		ShowMessage TTWChallengeMessageGhoul rank
+	endif
+
+	if (rank > 2)
+		RemoveRecurringFromChallenge TTWChallengeGhoul
+	endif
+
+	RewardXP 50
+END

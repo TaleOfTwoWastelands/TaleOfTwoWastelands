@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="0C018094">TTWHomemadeRadX</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWHomemadeRadX</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-2</X>
+        <Y>-2</Y>
+        <Z>-4</Z>
+      </Point1>
+      <Point2>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>4</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Wasteland Rad-X</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Hospital\SurgicalSyringe01.NIF</FileName>
+      <TextureFileHash Tag="MODT">+OQEciaq2414ZARyK6rbjWh0F3Sbszg57t8GcrqiA75uXwZyv6IDvmh0F3Sbszg5898GcrqiA75zXwZyv6IDvmh0F3Sbszg55d8IYuFCNzBlXwhi5kI3MHN0EHSz4clt7eUHcm/upmBtZQdydO6mYGh0F3Sbszg5</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Items\item_morphine.dds</Large>
+      <Small Tag="MICO">Interface\Icons\PipboyImages_small\Items_small\glow_item_morphine.dds</Small>
+    </Icon>
+    <EquipmentType Tag="ETYP">Chems</EquipmentType>
+    <Weight Tag="DATA">0</Weight>
+    <Data Tag="ENIT">
+      <Value>20</Value>
+      <Flags>NoAutoCalc, Medicine</Flags>
+      <WithdrawalEffect ID="00000000">NullReference</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="00044434">NPCHumanUsingMorphine</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00015179">IncreaseRadiationResistance</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>20</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>RadResistance</ActorValue>
+        </EffectData>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00032DE1">ReduceIntelligence</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>240</Duration>
+          <Type>Self</Type>
+          <ActorValue>Intelligence</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

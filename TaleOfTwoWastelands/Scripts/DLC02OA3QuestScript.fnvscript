@@ -1,0 +1,154 @@
+scn DLC02OA3QuestScript
+
+short OA3ChaseDone											;1= General Chase has finished talking to Player
+short OA3Explain												;1= Gets the Map Trigger Box active
+short OA3BriefingDone										;1= The briefing has been completed (opens new topics)
+short OA3GoFuelA												;1= The charge has been set on Fuel Tank A
+short OA3GoFuelB												;1= The charge has been set on Fuel Tank B
+short OA3FuelTanks											;x= The number of Fuel Tanks at the Chimera Depot that have been destroyed
+short OA3Phase2Done										;1= Phase 2 is complete (which hands off OA3 to OA4)
+short OA3ListenPostKills									;x= Number of Chinese Units killed inside Listening Post (15 to "secure")
+short OA3FuelTanksDone									;1= Both Fuel Tanks at Chimera Depot have been destroyed
+short OA3ListenPostDone									;1= The Listening Post has been secured
+short OA3GoMontgomery									;1= After the Listen Post and/or Chimera Depot are done, send Montgomery to Player
+short OA3SayDoneChimera									;1= Montgomery has said the proper lines for Chimera Depot
+short OA3SayDoneListen									;1=  Montgomery has said the proper lines for Listening Post
+short OA3MoveDelay											;1=Kick off the Move Delay block to prevent instant transport after the Player finishes an objective
+short OA3GreetCheck											;1=Kick off the Greet Delay Block to prevent instant greet from Montgomery when an Objective is done
+short OA3MontDisCheck										;1=After completing an objective, check Montgomery's distance from Player to move them in lieu of forcegreet
+
+float ChargeTimerA
+float ChargeTimerB
+float MoveTimer
+float GreetTimer
+
+begin gamemode
+
+;This is the Explosion Timer for Fuel Tank A
+;Once the Explosive Charge is planted, this part of the script kicks off
+
+	if ( OA3GoFuelA == 1 )
+		set ChargeTimerA to 20
+		set OA3GoFuelA to 2
+	endif
+
+	if ( OA3GoFuelA == 2 ) && ( ChargeTimerA > 0 )
+		set ChargeTimerA to ( ChargeTimerA - GetSecondsPassed )
+	elseif ( OA3GoFuelA == 2 ) && ( ChargeTimerA <= 0 )
+		DLC02BombSoundFuelA.Disable
+		DLC02FuelTankARef.DamageObject 5000
+		DLC02FuelTankPanelARef.Disable
+		DLC02OA3ExplosiveARef.Disable
+		Set OA3FuelTanks to ( OA3FuelTanks + 1 )
+		Set OA3GoFuelA to 3
+	endif
+
+;This is the Explosion Timer for Fuel Tank B
+;Once the Explosive Charge is planted, this part of the script kicks off
+
+	if ( OA3GoFuelB == 1 )
+		set ChargeTimerB to 20
+		set OA3GoFuelB to 2
+	endif
+
+	if ( OA3GoFuelB == 2 ) && ( ChargeTimerB > 0 )
+		set ChargeTimerB to ( ChargeTimerB - GetSecondsPassed )
+	elseif ( OA3GoFuelB == 2 ) && ( ChargeTimerB <= 0 )
+		DLC02BombSoundFuelB.Disable
+		DLC02FuelTankBRef.DamageObject 5000
+		DLC02FuelTankPanelBRef.Disable
+		DLC02OA3ExplosiveBRef.Disable
+		Set OA3FuelTanks to ( OA3FuelTanks + 1 )
+		Set OA3GoFuelB to 3
+	endif
+
+;This block monitors if both Fuel Tanks have been destroyed. If so, complete the objective.
+
+	if ( OA3FuelTanksDone == 0 )
+		if ( OA3FuelTanks == 2 )
+			SetObjectiveCompleted DLC02OA3 20 1
+			Set DLC02StrikeTeam.STChimeraDone to 1
+			SetStage DLC02StrikeTeam 200
+			set GreetTimer to 5
+			set OA3SayDoneChimera to 1
+			set DLC02StrikeTeam.STChimeraDone to 1							;Strike Team AI stuff
+			set OA3GreetCheck to 1
+			set OA3FuelTanksDone to 1
+			Set OA3FuelTanks to 3
+		endif
+	endif
+
+;This block monitors how many Chinese Troops have been killed in the Listening Post. If the number reaches 15, complete the objective.
+
+	if ( OA3ListenPostDone == 0 )
+		if ( OA3ListenPostKills >= 17 )
+			SetObjectiveCompleted DLC02OA3 30 1
+			Set DLC02StrikeTeam.STListenDone to 1
+			SetStage DLC02StrikeTeam 200
+			set GreetTimer to 5
+			set OA3SayDoneListen to 1
+			set DLC02StrikeTeam.STListenDone to 1							;Strike Team AI stuff
+			set OA3GreetCheck to 1
+			set OA3ListenPostDone to 1
+		endif
+	endif
+
+;This handles Montgomery forcegreeting the Player after an objective and then moving the Player back to Field HQ
+;Some of this is triggered at the end of his dialog
+
+	if ( OA3GoMontgomery == 1 )
+		DLC02MontgomeryRef.Evp
+		set OA3GoMontgomery to 2
+	endif
+
+;This handles a timer and then the inevitable greet by Montgomery when an objective is done (also kicks off Distance Check)
+
+	if ( OA3GreetCheck == 1 ) && ( GreetTimer > 0 )
+		set GreetTimer to ( GreetTimer - GetSecondsPassed )
+	elseif ( OA3GreetCheck == 1 ) && ( GreetTimer <= 0 )
+		set OA3MontDisCheck to 1
+		set OA3GoMontgomery to 1
+		set OA3GreetCheck to 0
+	endif
+
+;This handles a timer and then the inevitable move after the Listening Post is done or the Fuel Tanks are done
+
+	if ( OA3MoveDelay == 1 ) && ( MoveTimer > 0 )
+		set MoveTimer to ( MoveTimer - GetSecondsPassed )
+	elseif ( OA3MoveDelay == 1 ) && ( MoveTimer <= 0 )
+		Player.Moveto DLC02CommandTentStartMarker
+		Player.ResetHealth
+		set DLC02OA3.OA3GoMontgomery to 0
+		Set DLC02StrikeTeam.STDialogOff to 0
+		DLC02MontgomeryRef.Moveto DLC02MontgomeryHQStartMarker
+		setstage DLC02StrikeTeam 255
+		set OA3MoveDelay to 0
+	endif
+
+;This block handles Montgomery's Distance Check from Player when an objective is done
+;If he is too far away, go ahead and do all of the movement and maintenance as if he greeted as well as resetting him
+
+	if ( OA3MontDisCheck == 1 )
+		if ( DLC02MontgomeryRef.GetDistance Player > 2000 )
+			imod DLC02PlayerRezInISFX
+			set DLC02OA3.MoveTimer to 3
+			set DLC02OA3.OA3MoveDelay to 1
+			set OA3MontDisCheck to 0
+		endif
+	endif
+
+;This block monitors both objectives and sets the quest done if they are both completed
+
+	if ( OA3Phase2Done == 0 )
+		if ( OA3FuelTanksDone == 1 ) && ( OA3ListenPostDone == 1 )
+			if ( OA3GoMontgomery == 0 )
+				if ( Player.GetInCell DLC02CommandTent == 1 )
+					SetStage DLC02OA3 200
+					Set OA3Phase2Done to 1
+					IncrementScriptedChallenge DLC02ChallengeContinue
+				endif
+			endif
+		endif
+	endif
+
+end

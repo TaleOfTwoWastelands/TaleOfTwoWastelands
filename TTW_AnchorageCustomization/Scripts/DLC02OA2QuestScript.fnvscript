@@ -1,0 +1,203 @@
+scn DLC02OA2QuestScript
+
+short OA2SetupPlayer									;1= Player has entered the simulation and is ready to go (set in DLC02OA1's Quest Script)
+short OA2MontgomeryTalk								;1= Sgt. Montgomery forcegreet trigger
+short OA2MontgomeryLeaves							;1= Sgt. Montgomery leaves the initial conversation
+short OA2InsideBase										;1= Player has entered the Artillery Base interior
+short OA2MontgomeryMoves							;1= Sgt. Montgomery has spawned inside the Artillery Base and is moving
+short OA2MontgomeryReturns							;1= Sgt. Montgomery has completed the rendezvous
+short OA2MontgomeryFollows							;1= Sgt. Montgomery is now Following the Player
+short OA2GoGunA											;1= Gun A's charge has been set and timer is counting
+short OA2GoGunB											;1= Gun B's charge has been set and timer is counting
+short OA2GoGunC											;1= Gun C's charge has been set and timer is counting
+short OA2GunADestroyed								;1= Gun A has been destroyed
+short OA2GunBDestroyed								;1= Gun B has been destroyed
+short OA2GunCDestroyed								;1= Gun C has been destroyed
+short OA2EndPhase1										;1= All Guns Destroyed
+short OA2GetUpGo										;1=
+short OA2AnimTrigger									;1= Helps determine when Montgomery's "drop-in" animation is complete
+short OA2GunCount										;1= Counts number of guns destroyed for Montgomery's Vox Triggers and Explosion Reactions
+short OA2MontgomeryYay								;1= Execute Montgomery's Boom Say dialog after a gun blows
+short EndWarp												;flag set to handle warping player to command tent at quest's end
+short OA2EndWait											;1= Initialize the delay between the last gun exploding and actually moving the Player
+
+
+float Timer
+float EndAnimTimer
+float ChargeTimerA
+float ChargeTimerB
+float ChargeTimerC
+float warptimer
+float WaitTimer
+
+begin gamemode
+
+	if ( DLC02OA1.OA1AnimSetup == 1 )
+		if ( Player.GetDistance DLC02MontgomeryRef < 500 )
+			Player.AddScriptPackage DLC02OA2PlayerAwakens
+			set DLC02OA1.OA1AnimSetup to 2
+			endif
+		endif
+	endif
+
+	if ( OA2SetupPlayer == 0 )
+		if ( DLC02OA1.OA1AnimSetup == 2 )
+			set Timer to 9
+			set OA2SetupPlayer to 1
+		endif
+	endif
+
+	if ( OA2SetupPlayer == 1 ) && ( Timer > 0 )
+		set Timer to ( Timer - GetSecondsPassed)
+	elseif ( OA2SetupPlayer == 1 ) && ( Timer <= 0 )
+		Player.RemoveScriptPackage
+		set OA2MontgomeryTalk to 1
+		DLC02MontgomeryRef.Evp
+		set OA2SetupPlayer to 2
+	endif
+
+;This changes the objectives to the guns themselves when the Player enters the Artillery Base
+
+	if ( OA2InsideBase == 0 )
+		if ( Player.GetInCell DLC02GlacierCave == 1 )
+			setObjectiveCompleted DLC02OA2 10 1
+			SetObjectiveDisplayed DLC02OA2 20 1
+			Set DLC02StrikeTeam.STDialogOff to 1
+			DLC02MontgomeryRef.Moveto DLC02OA2MontgomerySpawnMarker
+			Set DLC02OA2.OA2MontgomeryMoves to 1
+			Set DLC02MontgomeryRef.SafeToTalk to 1
+			DLC02MontgomeryRef.AddItem DLC02WeapMontgomeryAssaultRifle 1
+			DLC02MontgomeryRef.AddItem Ammo556mm 50
+			DLC02MontgomeryRef.EquipItem DLC02WeapMontgomeryAssaultRifle 1
+			Set OA2MontgomeryMoves to 1
+			Set OA2InsideBase to 1
+		endif
+	endif
+
+;This is the Explosion Timer for Gun A
+;Once the Explosive Charge is planted, this part of the script kicks off
+
+	if ( OA2GoGunA == 1 )
+		set ChargeTimerA to 20
+		set OA2GoGunA to 2
+	endif
+
+	if ( OA2GoGunA == 2 ) && ( ChargeTimerA > 0 )
+		set ChargeTimerA to ( ChargeTimerA - GetSecondsPassed )
+	elseif ( OA2GoGunA == 2 ) && ( ChargeTimerA <= 0 )
+		Set OA2GunCount to ( OA2GunCount + 1 )
+		DLC02BombSoundA.Disable
+		DLCAnchOverlookGunA.DamageObject 5000
+		DLC02ControlBoxA.DamageObject 90000
+		DLC02ExplosiveARef.Disable
+		Set OA2GunADestroyed to 1
+		Set OA2MontgomeryYay to 1
+		Set OA2GoGunA to 3
+	endif
+
+;This is the Explosion Timer for Gun B
+;Once the Explosive Charge is planted, this part of the script kicks off
+
+	if ( OA2GoGunB == 1 )
+		set ChargeTimerB to 20
+		set OA2GoGunB to 2
+	endif
+
+	if ( OA2GoGunB == 2 ) && ( ChargeTimerB > 0 )
+		set ChargeTimerB to ( ChargeTimerB - GetSecondsPassed )
+	elseif ( OA2GoGunB == 2 ) && ( ChargeTimerB <= 0 )
+		Set OA2GunCount to ( OA2GunCount + 1 )
+		DLC02BombSoundB.Disable
+		DLCAnchOverlookGunB.DamageObject 5000
+		DLC02ControlBoxB.DamageObject 90000
+		DLC02ExplosiveBRef.Disable
+		Set OA2GunBDestroyed to 1
+		Set OA2MontgomeryYay to 1
+		Set OA2GoGunB to 3
+	endif
+
+;This is the Explosion Timer for Gun C
+;Once the Explosive Charge is planted, this part of the script kicks off
+
+	if ( OA2GoGunC == 1 )
+		set ChargeTimerC to 20
+		set OA2GoGunC to 2
+	endif
+
+	if ( OA2GoGunC == 2 ) && ( ChargeTimerC > 0 )
+		set ChargeTimerC to ( ChargeTimerC - GetSecondsPassed )
+	elseif ( OA2GoGunC == 2 ) && ( ChargeTimerC <= 0 )
+		Set OA2GunCount to ( OA2GunCount + 1 )
+		DLC02BombSoundC.Disable
+		DLCAnchOverlookGunC.DamageObject 5000
+		DLC02ControlBoxC.DamageObject 90000
+		DLC02ExplosiveCRef.Disable
+		Set OA2GunCDestroyed to 1
+		Set OA2MontgomeryYay to 1
+		Set OA2GoGunC to 3
+	endif
+
+;This is a quick check to see which line Montgomery says as a gun is destroyed (based on which one exploded)
+
+	if ( OA2MontgomeryYay == 1 )
+		if ( OA2GunCount == 1 )
+			DLC02MontgomeryRef.Say DLC02MontBoomSay01
+			set OA2MontgomeryYay to 0
+		elseif ( OA2GunCount == 2 )
+			DLC02MontgomeryRef.Say DLC02MontBoomSay02
+			set OA2MontgomeryYay to 0
+		elseif ( OA2GunCount == 3 )
+			DLC02MontgomeryRef.Say DLC02MontBoomSay03
+			set OA2MontgomeryYay to 0
+		endif
+	endif
+
+;This checks if all Guns are Destroyed to advance the quest
+
+	if ( OA2EndPhase1 == 0 )
+		if ( OA2GunADestroyed == 1 ) && ( OA2GunBDestroyed == 1 ) && ( OA2GunCDestroyed == 1 )
+			;Commented the following line out because it wouldn't let me save the changes I made to get the Morgan Return animation working. -Daryl
+			;Player.Moveto DLC02OA3MorganMapC
+			Set WaitTimer to 10
+			SetObjectiveCompleted DLC02OA2 30 1
+			SetObjectiveDisplayed DLC02OA2 40 1
+			set OA2EndWait to 1
+			Set OA2EndPhase1 to 1
+		endif
+	endif
+
+	if ( OA2EndWait == 1 ) && ( WaitTimer > 0 )
+		set WaitTimer to ( WaitTimer - GetSecondsPassed )
+	elseif ( OA2EndWait == 1 ) && ( WaitTimer <= 0 )
+		set OA2EndWait to 2
+	endif
+
+;ADDED
+;When OA2EndPhase1 hits 1, update EndWarp var, run a short timer, and warp the player to the command tent
+
+	if ( OA2EndPhase1 == 1 ) && ( OA2EndWait == 2 )
+		imod DLC02PlayerRezInISFX
+		set OA2EndPhase1 to 2
+	endif
+
+	if ( OA2EndPhase1 == 2 )
+		if ( EndWarp == 0 )
+			Set EndWarp to 1
+			Set WarpTimer to 3
+		elseif ( EndWarp == 1 )
+			if ( WarpTimer <= 0 )
+				Set EndWarp to -1
+				Player.RemoveAllItems
+				TTWRequisitionDummyRef.RemoveAllItems
+				Player.ResetHealth
+				Player.AddItem TTWJumpsuitArmy 1 1
+				Player.EquipItem TTWJumpsuitArmy 0 1
+				Player.moveto DLC02TentStart
+			else
+				Set WarpTimer to  ( WarpTimer - GetSecondsPassed )
+			endif
+		endif
+	endif
+
+
+end

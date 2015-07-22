@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0B000802">DLC05MZ1</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05MZ1</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0B00096D">DLC05MZ1QuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Not of This World</Name>
+    <Data Tag="DATA">
+      <Flags>21</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>29</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgIAbgoAAABuAQAAABwAAQAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveDisplayed DLC05MZ1 10 1
+DLC05AlienRadioBeaconRef.Enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B003F1F">DLC05AlienRadioBeaconREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>38</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgoAAABuAQAAAKMRDwADAHIBAG4UAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC05MZ1 10 1
+SetObjectiveDisplayed DLC05MZ1 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>115</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbgoAAABuAQAAAKIRDwADAHIDAG4UAAAAbgEAAACiEQ8AAwByAwBuGQAAAG4BAAAAohEPAAMAcgMAbhsAAABuAQAAAKMRDwADAHIDAG4jAAAAbgEAAAAcAAEAcxACAAAAHAACACEQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC05MZ1 10 1
+SetObjectiveCompleted DLC05MZ1 20 1
+SetObjectiveCompleted DLC05MZ1 25 1
+SetObjectiveCompleted DLC05MZ1 27 1
+SetObjectiveDisplayed DLC05MZ1 35 1
+DLC05MZ1HoldingCellBlockingDoorREF.Unlock
+DLC05MZ1AlienHCMelee1.Enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B0068DE">DLC05MZ1HoldingCellBlockingDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B0068E2">DLC05MZ1AlienHCMelee1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">35</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>92</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgQAbiMAAABuAQAAABYAEgABAA4AIHIEAHMKACAxIH4gPT2iEQ8AAwByBABuGwAAAG4BAAAAGQAAABwAAQBzEAIAAAAcAAIAIRACAAAAHAADAF4QAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;SetObjectiveCompleted DLC05MZ1 30 1
+SetObjectiveDisplayed DLC05MZ1 35 1
+if ( DLC05MZ1.DLC05MZ1Fight == -1 )
+SetObjectiveCompleted DLC05MZ1 27 1
+endif
+DLC05MZ1HoldingCellBlockingDoorREF.Unlock
+DLC05MZ1AlienHCMelee1.Enable
+DLC05SomahRef.EVP</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B0068DE">DLC05MZ1HoldingCellBlockingDoorREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B0068E2">DLC05MZ1AlienHCMelee1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000988">DLC05SomahREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbigAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">;SetObjectiveCompleted DLC05MZ1 35 1
+SetObjectiveDisplayed DLC05MZ1 40 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>76</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbiMAAABuAQAAAKIRDwADAHIBAG4oAAAAbgEAAACjEQ8AAwByAQBuMgAAAG4BAAAAoxEPAAMAcgEAbh4AAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC05MZ1 35 1
+SetObjectiveCompleted DLC05MZ1 40 1
+SetObjectiveDisplayed DLC05MZ1 50 1
+SetObjectiveDisplayed DLC05MZ1 30 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>90</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbjIAAABuAQAAADYQBQABAHICAHcRBwABAG4sAQAAFgAPAAEACwAgcgIAcwEAIDEgPKMRDwADAHICAG4KAAAAbgEAAAAZAAAANxAFAAEAcgEA</CompiledScript>
+              <ScriptSource Tag="SCTX">SetObjectiveCompleted DLC05MZ1 50 1
+StartQuest DLC05MZ2
+RewardXP 300
+;addachievement 69
+if DLC05MZ2.MZ2Unfrozen &lt; 1
+SetObjectiveDisplayed DLC05MZ2 10 1
+endif
+StopQuest DLC05MZ1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000802">DLC05MZ1</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0B000803">DLC05MZ2</Reference>
+                </Reference>
+              </References>
+            </Script>
+            <NextQuest Tag="NAM0">
+              <Reference ID="0B000803">DLC05MZ2</Reference>
+            </NextQuest>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Investigate the strange radio signal coming from the Wasteland.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0607C709">AlienRadioBeaconREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="0B00096F">DLC05HoldingCells</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Find a way out of the holding cell.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0B000988">DLC05SomahREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Retrieve your equipment.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0B00293F">DLC05PlayerContainerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">40</Index>
+        <Description Tag="NNAM">Release Sally from her holding cell.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0B000987">DLC05SallyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Reach the engineering core of the ship.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0B0032F3">DLC05MZ1CoreMarker</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">60</Index>
+        <Description Tag="NNAM">(Optional) Free additional prisoners from their holding cells.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">25</Index>
+        <Description Tag="NNAM">Stage a fight with Somah to draw the guards' attention.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">27</Index>
+        <Description Tag="NNAM">Defeat the alien guards.</Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">35</Index>
+        <Description Tag="NNAM">Continue to look for a way out of the Holding Cells.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="0B000987">DLC05SallyREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

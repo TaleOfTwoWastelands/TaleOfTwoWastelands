@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="0607401C">MSMiniLedouxsMask</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MSMiniLedouxsMask</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Ledoux's Hockey Mask</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0007401E">MSMiniEnchLedouxHockeyMask</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>Headband, Hat, Eyeglasses, Mask</Slots>
+      <Flags>0</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\HeadGear\HockeyMask\M\HockeyMask.NIF</FileName>
+          <TextureHashes Tag="MODT">6/MKaAQvofhrcwpoCS+h+HJhF3RrmCVO7t8MaDycp4NuXwxoQZyng3JhF3RrmCVO898MaDycp4NzXwxoQZyng3JhF3RrmCVO</TextureHashes>
+          <FaceGenModelFlags Tag="MODD">Head</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3"></FileName>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\HeadGear\HockeyMask\M\HockeyMaskGO.NIF</FileName>
+          <TextureHashes Tag="MO2T">6/MKaAQvofhrcwpoCS+h+HJhF3RrmCVO7t8MaDycp4NuXwxoQZyng3JhF3RrmCVO898MaDycp4NzXwxoQZyng3JhF3RrmCVO</TextureHashes>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\apperal_hockey_mask.dds</Male>
+      </Inventory>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="000BE9E1">RepairHatHockyMask</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">HeadWear</EquipmentType>
+    <Data Tag="DATA">
+      <Value>100</Value>
+      <MaxCondition>25</MaxCondition>
+      <Weight>1</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>2</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+  </Subrecords>
+</Record>

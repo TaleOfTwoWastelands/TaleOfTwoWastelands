@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="06017F34">Tenpenny01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Tenpenny01</EditorID>
+    <Name Tag="FULL">Tenpenny Tower Lobby</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace, HandChanged</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>65</Red>
+          <Green>58</Green>
+          <Blue>44</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>122</Red>
+          <Green>100</Green>
+          <Blue>84</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>500</Near>
+        <Far>6000</Far>
+        <ClipDistance>6000</ClipDistance>
+        <Power>0.899999976</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="06065333">NeoclassicalDefaultTemplateDC</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, FogNear, FogFar, DirectionalRotation, DirectionalFade, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="000A846A">TenpennyImageSpace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="06035A96">TenpennyTowerZone</Reference>
+    </EncounterZone>
+    <Owner Tag="XOWN">
+      <Reference ID="000179EA">TenpennyTowerResidentFaction</Reference>
+    </Owner>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0606F688">IntTenpennyLobby</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

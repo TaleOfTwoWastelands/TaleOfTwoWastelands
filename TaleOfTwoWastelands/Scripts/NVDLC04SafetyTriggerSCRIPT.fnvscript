@@ -1,0 +1,147 @@
+scn NVDLC04SafetyTriggerSCRIPT
+
+
+; This script teleports the player out of areas that we've added collision in for DLC04. 
+; This is used at the entrance to DLC04.
+; CES 4/7/11
+
+
+Ref ActivatorREF;
+
+
+BEGIN OnTriggerEnter
+
+	Set ActivatorREF to GetActionRef;
+	ActivatorREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+BEGIN OnTrigger Player
+
+	Player.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Boone
+BEGIN OnTrigger CraigBooneREF
+
+	CraigBooneREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Cass
+BEGIN OnTrigger RoseofSharonCassidyREF
+
+	RoseofSharonCassidyREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Veronica
+BEGIN OnTrigger VeronicaREF
+
+	VeronicaREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Lily
+BEGIN OnTrigger LilyREF
+
+	LilyREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;EDE
+BEGIN OnTrigger EDE1REF
+
+	EDE1REF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+BEGIN OnTrigger EDE2REF
+
+	EDE2REF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+BEGIN OnTrigger EDE3REF
+
+	EDE3REF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Raul
+BEGIN OnTrigger RaulREF
+
+	RaulREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Arcade
+BEGIN OnTrigger ArcadeREF
+
+	ArcadeREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Rex
+BEGIN OnTrigger RexREF
+
+	RexREF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Charon
+BEGIN OnTrigger CharonRef
+
+	CharonRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Butch
+BEGIN OnTrigger ButchRef
+
+	ButchRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Clover
+BEGIN OnTrigger CloverRef
+
+	CloverRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Jericho
+BEGIN OnTrigger JerichoRef
+
+	JerichoRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Fawkes
+BEGIN OnTrigger MQ08FawkesRef
+
+	MQ08FawkesRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Cross
+BEGIN OnTrigger StarPaladinCrossRef
+
+	StarPaladinCrossRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;Dogmeat
+BEGIN OnTrigger DogmeatRef
+
+	DogmeatRef.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END
+
+;RL3
+BEGIN OnTrigger RL3REF
+
+	RL3REF.MoveTo NVDLC04CanyonWreckageMarkerREF;
+
+END

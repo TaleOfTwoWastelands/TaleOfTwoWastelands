@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06025280">INFO - 06025280</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>SayOnce</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="060173D1">FreeformDC</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0602527F">INFO - 0602527F</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">[SUCCEEDED] Wow... that's... that's easy. Now at least I can shoot back at those mutant bastards. Are you ready?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06019938">FFDCFallsChurchBoSLostInititate</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>25</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Repair</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="0002525F">FF02FallsChurchInitiateGreetingLetsGo1</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0006B19A">FF02FallsChurchInitiateGreetingLetsGo2</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>87</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4MAAAAHAABAO4QCgACAHICAG4BAAAAORAKAAIAcgQAbg4AAAAcAAEAXhAAAHcRBwABAG4ZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">FF02InititiateREF.Additem Weap10mmPistol 1
+FF02InititiateREF.Additem Ammo10mm 12
+FF02InititiateREF.EquipItem Weap10mmPistol 1
+SetStage FreeformDC 14
+FF02InititiateREF.evp
+rewardxp 25</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0601993B">FF02InititiateREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0000434F">Weap10mmPistol</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00004241">Ammo10mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060173D1">FreeformDC</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Sure can. Here, just pull this back to clear the chamber. </Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004B7">AVRepair</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

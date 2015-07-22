@@ -1,0 +1,224 @@
+scn Lucky38ElevatorDoorScript
+
+int Button
+
+ref ThisElevatorDoor
+
+
+
+begin OnActivate
+
+	Set ThisElevatorDoor to GetSelf
+	
+	if IsActionRef Player == 1
+		if (getStage vdialoguelucky38entrance == 10) || (getStage vdialoguelucky38entrance == 15) || (GetStageDone VMQ02 10) || (ThisElevatorDoor == Lucky38LoungeElevatorDoorREF) ; Added condition "(getStage vdialoguelucky38entrance == 15)" for quest "VMQHouseLockdown" -ETB
+			showmessage Lucky38ElevatorMessage
+		else
+			;Activate
+		endif
+	else
+		Activate
+	endif
+end
+
+begin GameMode
+	set Button to GetButtonPressed
+	if Button == 5																		; Button 5 = "Basement"
+
+	Set VMQHouse1.bOnLoungeFloor to 0										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 0									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+		player.MoveTo Lucky38BasementMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+	elseif Button == 4																	; Button 4 = "Casino"
+
+	Set VMQHouse1.bOnLoungeFloor to 0										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 0									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+		player.MoveTo Lucky38CasinoFloorMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+	elseif Button == 3																	; Button 3 = "Presidential Suite" (aka "High-Roller Suite")
+
+	Set VMQHouse1.bOnLoungeFloor to 0										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 0									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+		player.MoveTo Lucky38SuiteMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+	elseif Button == 2																	; Button 2 = "Cocktail Lounge"
+	
+	Set VMQHouse1.bOnLoungeFloor to 1										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 0									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+; -----------------	Make Followers Wait! ----------------- \/								; (Added 8_3_10) To keep the Followers from traveling to the Penthouse/Lounge. -ETB
+																							
+	if (VNPCFollowers.bBooneHired && CraigBooneREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	elseif (VNPCFollowers.bCassHired && RoseofSharonCassidyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	elseif (VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	elseif (VNPCFollowers.bLilyHired && LilyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	elseif (VNPCFollowers.RaulHired && RaulREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	elseif (VNPCFollowers.ArcadeHired && ArcadeREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+        	set ArcadeREF.Waiting to 1
+     	ArcadeREF.evp
+	elseif (Followers.CharonHired && CharonRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	elseif (Followers.ButchHired && ButchRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	elseif (Followers.CloverHired && CloverRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	elseif (Followers.JerichoHired && JerichoRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	elseif (Followers.FawkesHired && MQ08FawkesRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	elseif (Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired && (EDE1REF.Waiting != 1 || EDE2REF.Waiting != 1 || EDE3REF.Waiting != 1))
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	elseif (VNPCFollowers.RexHired && RexREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	elseif (Followers.DogmeatHired && DogmeatRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	elseif (Followers.RL3Hired && RL3REF.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif
+
+; ----------------------------------------------------------------------- /\
+
+		player.MoveTo Lucky38CocktailMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+
+	elseif Button == 1																	; Button 1 = "Penthouse"
+
+	Set VMQHouse1.bOnLoungeFloor to 0										; (8_11_10) To filter out Cocktail Lounge in "Lucky38ElevatorMessage" -ETB
+	Set VMQHouse1.bOnPenthouseFloor to 1									; (8_11_10) To filter out the Penthouse in "Lucky38ElevatorMessage" -ETB
+
+; -----------------	Make Followers Wait! ----------------- \/								; (Added 8_3_10) To keep the Followers from traveling to the Penthouse/Lounge. -ETB 
+																							
+	if (VNPCFollowers.bBooneHired && CraigBooneREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	elseif (VNPCFollowers.bCassHired && RoseofSharonCassidyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	elseif (VNPCFollowers.bVeronicaHired && VeronicaREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	elseif (VNPCFollowers.bLilyHired && LilyREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	elseif (VNPCFollowers.RaulHired && RaulREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	elseif (VNPCFollowers.ArcadeHired && ArcadeREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+        	set ArcadeREF.Waiting to 1
+     	ArcadeREF.evp
+	elseif (Followers.CharonHired && CharonRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	elseif (Followers.ButchHired && ButchRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	elseif (Followers.CloverHired && CloverRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	elseif (Followers.JerichoHired && JerichoRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	elseif (Followers.FawkesHired && MQ08FawkesRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	elseif (Followers.StarPaladinCrossHired && StarPaladinCrossRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired && (EDE1REF.Waiting != 1 || EDE2REF.Waiting != 1 || EDE3REF.Waiting != 1))
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	elseif (VNPCFollowers.RexHired && RexREF.Waiting != 1)
+		set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	elseif (Followers.DogmeatHired && DogmeatRef.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	elseif (Followers.RL3Hired && RL3REF.Waiting != 1)
+		set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif
+
+; ----------------------------------------------------------------------- /\
+
+		player.MoveTo Lucky38PenthouseMarker
+		playsound DRSElevatorHotelOpen
+		set VFreeformLucky38.bElevatorTeleport to 1
+	endif
+end
+

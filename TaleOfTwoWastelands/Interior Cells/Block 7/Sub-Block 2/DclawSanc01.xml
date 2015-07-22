@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="06018463">DclawSanc01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DclawSanc01</EditorID>
+    <Name Tag="FULL">Deathclaw Sanctuary</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, HasWater</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>35</Red>
+          <Green>30</Green>
+          <Blue>22</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>67</Red>
+          <Green>60</Green>
+          <Blue>55</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>30</Red>
+          <Green>28</Green>
+          <Blue>25</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>2000</Near>
+        <Far>5000</Far>
+        <ClipDistance>5500</ClipDistance>
+        <Power>1</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>0</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="060BA136">CavesDefaultTemplate02DC</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">FogNear, FogFar, DirectionalRotation, DirectionalFade, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM">Data\Textures\Water\WaterFlowRippleNoise01.dds</WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="000BA135">CaveDefaultImageSpace02</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="06035A70">DeathclawSanctuary</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="060AF611">IntCaveDefault01</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090907">DefaultDungeon</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

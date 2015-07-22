@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="060230DD">CG04Amata</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CG04Amata</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Amata</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, Essential, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>2</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>900</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseModelAnimation, UseBaseData</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0001B2A4">PlayerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0001CFB6">Vault101Faction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06061EA3">FemaleUniqueAmata</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0602549E">Amata</Reference>
+    </Template>
+    <Race Tag="RNAM">
+      <Reference ID="000038E5">Hispanic</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="060230D4">CG04AmataSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0000431E">VaultSuit101</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.850000024</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000236D8">PipBoyNPC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00025B83">PipBoyGlove</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0008ED03">Ammo9mm</Item>
+          <Count>6</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000E3778">WeapNV9mmPistol</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.899999976</Condition>
+        </ExtraData>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06067783">CG04AmataSayGoodbye</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00033B6D">CG04AmataWatchVaultDoor</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00069F9F">CG04AmataWalkAway</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00067782">CG04AmataWaitAtEntrance</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06067781">CG04AmataMournFather</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002E706">CG04AmataWaitForPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002E0B3">CG04AmataCower</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D966">CG04AmataInterrogationStart</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0608B172">CG04AmataWithGun</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0008F7BC">CG04AmataToApartmentDoor1</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000A90F7">CG04AmataToApartmentDoor2new</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00026EC7">CG04AmataToOverseersOffice</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002AE36">CG04AmataForceGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0009DF06">CG04AmataSection0</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B5F07">CG04AmataWait</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0002A4EB">CG04AmataStart</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00000801">VaultDweller</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>20</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>34</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>32</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00032D37">HairBun</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>19</Red>
+        <Green>18</Green>
+        <Blue>15</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004255">EyeDefault</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">khAAv811gT5lqGA/9GZ3vgDKiTsAfhi9rGy+Phz+ij5JtIk/yAnHPeAxBT7OMmu/OPsbvzAp+j8O8Jk+3LwQvyB4QD628gXAopYeQJTsRz4oYAVAFRrEv1jHgT7MAiPAWAO/v06fJ7+b3WC/UCJxP0SFKj7Aguk9eajGP2IkUsCK47TAiECuv4Ahhj+4q0VAJfccwKbdWL6+dHE/xYGrQG4iUL/+t6U/i21FwEBYgD9hwF3AdA4yPzYzCj8wEku+sK4QQGfPE0A=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">blKzv+6pxz6zRg6/mvvJPhpkj771nJI/LnK5vkAebL9AnwtAuwmEP1bimL/8lyG/BE2ivwxUwj89h5Q/dSwMwNM32r+jYbw+Z7g7P2YJB8Dc0RE/9ai0P/1VRr701UM/Wgdcvx7DwT4W8Ks+zOEaPwidSD/8+wq+gBuZPAJ/ij65HRk/HzJeQM4MW0CJ/EDA9kbyv8DEpz/rig9AasTDPrln0L+QIRo/tLjNvzufIL+krRLAAJeSPA631j0nnSFArBG3v7M2D0A=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

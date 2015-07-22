@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="080073E1">DLCPittEntranceDoor01SCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLCPittEntranceDoor01SCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>18</ReferenceCount>
+        <CompiledSize>632</CompiledSize>
+        <VariableCount>1</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAACAGgCAAAAABYAFAAaABAAIFhpEAUAAQByAQAgMSA9PRYAGQAWABUAIFg7EAoAAgByCQBuyAAAACAwID09FgAQAA8ADAAgcgoAcwwAIDEgPT0NEQoAAgByCwBuAAAAAA0RCgACAHIMAG4AAAAAHAABAFIQDwADAHILAG4BAAAAbgEAAAAcAAEAUhAPAAMAcgwAbgEAAABuAQAAABwAAQBSEA8AAwByDQBuAQAAAG4BAAAAHAABAK0QBQABAHICABwAAQACEA8AAwByDgBuAQAAAG4BAAAAHAABAO4QDwADAHINAG4AAAAAbgEAAAAcAAIASRIUAAQAcgEAbgEAAABuAQAAAG4oAAAAHAACAEkSFAAEAHIBAG4BAAAAbgEAAABuKQAAABYAFwABABMAIHIBAFgOEAQAAQAqACA1MCA+PRwAAQBJEhcABQByAgBuAQAAAG4AAAAAbigAAAByDwAXAAIAAQAcAAEASRIXAAUAcgIAbgEAAABuAAAAAG4oAAAAchAAGQAAABkAAAANEAIAAAAVAAcAcwEAAgAgMWAQAgAAABwAAwAiEAIAAAAcAAQAIRACAAAAFwACAAEADRACAAAAGQAAABcAAgABAA0QAgAAABkAAAAWAA0ACgAJACBzAQAgMSA9PRYAHwAGABsAIHIKAHMLACAxID09IHIKAHMNACAxID09IHx8HAAFACIQAgAAABwABgAiEAIAAAAcAAcAnhAFAAEAchEAHAAIACEQAgAAABUACgByEgBzAwACACAxFQAJAHMBAAQAIDEgfhcAAgABABUACQBzAQAEACAxIH4ZAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLCPittEntranceDoor01SCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">AmbushCheck</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="08002E49">DLC01PlayerItemContainerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800616C">DLC01DowntownGateCollisionREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A9B1">DLC01FF006EnableMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="080054DB">DLC01TrainYardMapMARKER</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="080054DC">DLC01PittBridgeMapMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="080045FF">DLC01ReddupREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A743">DLC01DowntownAmbushEnableMARKER</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800108C">DLC01Quest01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800108B">DLC01Quest02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A829">DLC01ConcealedPistol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A828">DLC01ConcealedSwitchblade</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800087A">DLC01SlaveOutfit</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800B7EF">DLC01CondSlaveOutfit01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129876">NVImprovedHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000F0F05">NVHoldoutWeapons</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A7E2">DLC01DowntownAmbushReddupMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0800A741">DLC01DowntownAmbushControlREF</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0800B66C">DLC01UniqueWeapManOpener</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01UniqueWeapManOpener</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-14</X>
+        <Y>-32</Y>
+        <Z>-10</Z>
+      </Point1>
+      <Point2>
+        <X>14</X>
+        <Y>45</Y>
+        <Z>10</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Man Opener</Name>
+    <Model>
+      <FileName Tag="MODL">DLCPitt\Weapons\2HandMelee\DLCAnchAutoAxe.nif</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">DLCPitt\Interface\Icons\weapons_Auto Axe.dds</Large>
+    </Icon>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0C004B8D">DummyTTWManOpenerObject</Reference>
+    </ObjectEffect>
+    <RepairList Tag="REPL">
+      <Reference ID="0800B644">DLC01RepairAutoAxe</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="0001D573">UIItemGunsBigUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="0001D574">UIItemGunsBigDown</Reference>
+      </Drop>
+      <Gun>
+        <Shoot3DLooping Tag="NAM7">
+          <Reference ID="00092BD8">WPNAutoAxeFireLPM</Reference>
+        </Shoot3DLooping>
+      </Gun>
+      <Idle Tag="UNAM">
+        <Reference ID="00170F22">WPNChainSawIdleLP</Reference>
+      </Idle>
+      <Equip Tag="NAM9">
+        <Reference ID="0001CCD3">WPNHeavy0Equip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0001D540">WPNHeavy0EquipUn</Reference>
+      </Unequip>
+    </Sound>
+    <ScopeEffectModel>
+      <FileName Tag="MOD4">DLCPitt\Weapons\2HandMelee\DLCAnchAutoAxeGO.nif</FileName>
+    </ScopeEffectModel>
+    <VATSAttackName Tag="VANM">Scrap Heap</VATSAttackName>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00056D0E">SwordImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="00092102">1stPersonDLC01AutoAxe</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>1400</Value>
+      <Health>1400</Health>
+      <Weight>20</Weight>
+      <BaseDamage>65</BaseDamage>
+      <ClipSize>1</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandMelee</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>IgnoresNormalWeaponResistance, IsAutomatic</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>10</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>0</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <BaseVATSToHitChance>45</BaseVATSToHitChance>
+      <AttackAnimation>AttackSpin</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>0</Min>
+        <Max>200</Max>
+      </Range>
+      <LimbKillBehavior>NormalFormulaBehavior</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost, OverrideDamageToWeaponMult, LongBurst</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>1</FireRate>
+      <ActionPointCost>65</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0.00499999989</DamageToWeaponMult>
+      <AttackShotsPerSecond>1</AttackShotsPerSecond>
+      <ReloadTime>0</ReloadTime>
+      <JamTime>0</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>MeleeWeapons</Skill>
+      <LimbDamageMult>2</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0.100000001</Min>
+        <Max>0</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0.100000001</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>AttackCustom5Power</PowerAttackAnimation>
+      <StrengthRequirement>7</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>25</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>7</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>0</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>50</SkillRequirement>
+      <DamageMult>0.5</DamageMult>
+      <APCost>45</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

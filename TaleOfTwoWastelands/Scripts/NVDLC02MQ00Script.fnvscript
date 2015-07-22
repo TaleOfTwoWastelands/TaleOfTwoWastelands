@@ -1,0 +1,230 @@
+scn NVDLC02MQ00SCRIPT
+; JSH 10.20.10
+; Quest script - handles initial loading of NVDLC02.
+
+; ETB 2.2.11 Added 10 new categories to Form List update section.
+; JS 2.22.11 - Added NVDLC02 Travel Light bad armors to NV lists.
+
+; Allow the DLC messages to appear and start the initial quest.
+; 0 = Not started.
+; 1 = Display of DLC messages in progresses.
+; 2 = DLC messages displayed.
+; 3 = Radio update applied
+short	nEnableDLC
+
+short bFormListsUpdated		; used as a doOnce
+short bNVQuestsDisabled		; <<<
+
+float fStartTimer
+
+short JedDead						; DoOnce for Jed's death message
+
+short iZionKnowledge			; Sets amount of knowledge of Zion Jed has dropped on the player
+
+BEGIN GameMode
+
+	; used to add forms to existing formlists, used primarily to add items to formlists that the animation system uses for conditions
+	if bFormListsUpdated == 0
+
+; ------------------------------------------	Perk Related ----------------------------------------------------------------------------------	\/
+		; Laser Commander
+		AddFormToFormList LaserCommanderWeaponsList NVDLC02WeapComplianceRegulator			
+		; Travel Light
+		AddFormToFormList NVTravelLightBadArmorList NVDLC02ArmorDesertRangerCombat;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC02ArmorMetalGecko;
+		AddFormToFormList NVTravelLightBadArmorList NVDLC02ArmorMetalReinforcedGecko;
+		; Cowboy												
+		AddFormToFormList PerkCowboyWeapons NVDLC02WeapTomahawk
+		AddFormToFormList PerkCowboyWeapons NVDLC02WeapWarClub
+		AddFormToFormList PerkCowboyWeapons NVDLC02WeapWarClubFollowsChalk
+		AddFormToFormList PerkCowboyWeapons NVDLC02WeapFireBomb
+		; Demolitions Expert
+		AddFormToFormList PerkDemolitionExpertWeapons NVDLC02WeapFireBomb
+		; Loose Cannon
+		AddFormToFormList PerkLooseCannonWeapons NVDLC02WeapTomahawk
+		AddFormToFormList PerkLooseCannonWeapons NVDLC02WeapFireBomb
+		AddFormToFormList PerkLooseCannonWeapons NVDLC02WeapThrowingSpearWakingCloud
+		; Pyromaniac
+		AddFormToFormList PerkPyromaniacWeapons NVDLC02WeapFireBomb
+		; Plasma Spaz
+		;AddFormToFormList PlasmaSpazWeaponList <name of weapon>											; <<<NONE>>>
+		; Shotgun Surgeon
+		;AddFormToFormList ShotgunSurgeonWeaponsList <name of weapon>										; <<<NONE>>>
+		; The Professional
+		AddFormToFormList TheProfessionalWeaponsList NVDLC02Weap45AutoPistol
+		AddFormToFormList TheProfessionalWeaponsList NVDLC02Weap45AutoPistolUnique
+		AddFormToFormList TheProfessionalWeaponsList NVDLC02Weap45AutoSubmachineGun
+		AddFormToFormList TheProfessionalWeaponsList NVDLC02WeapComplianceRegulator
+; ------------------------------------------	Armor Related --------------------------------------------------------------------------------	\/
+		; Hats
+		AddFormToFormList Hats NVDLC02ArmorJGrahamHeadwrap
+		AddFormToFormList Hats NVDLC02ChalkHeadress
+		AddFormToFormList Hats NVDLC02ChalkHeadressNPC
+		AddFormToFormList Hats NVDLC02Danielhat
+		AddFormToFormList Hats NVDLC02ParkRangerHat
+; ------------------------------------------	Weapon Related ----------------------------------------------------------------------------	\/
+		; All Weapons (NV)
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoPistol
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoPistolFollowsChalk
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoPistolUnique
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoPistolUniqueMelee
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoPistolUniqueNPC
+		AddFormToFormList NVAllWeapons NVDLC02Weap45AutoSubmachineGun
+		AddFormToFormList NVAllWeapons NVDLC02WeapComplianceRegulator
+		AddFormToFormList NVAllWeapons NVDLC02WeapEVMockCombat
+		AddFormToFormList NVAllWeapons NVDLC02WeapFireBomb
+		AddFormToFormList NVAllWeapons NVDLC02WeapGreenGeckoSpit
+		AddFormToFormList NVAllWeapons NVDLC02WeapNVDetonatorMQ03
+		AddFormToFormList NVAllWeapons NVDLC02WeapNVDetonatorPineCreek
+		AddFormToFormList NVAllWeapons NVDLC02WeapPowerFistUnique
+		AddFormToFormList NVAllWeapons NVDLC02WeapServiceRifleUnique
+		AddFormToFormList NVAllWeapons NVDLC02WeapSporePlantSpitMissile
+		AddFormToFormList NVAllWeapons NVDLC02WeapSporePlantSpitMissileLvl2
+		AddFormToFormList NVAllWeapons NVDLC02WeapThrowingSpearWakingCloud
+		AddFormToFormList NVAllWeapons NVDLC02WeapTomahawk
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClub
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubFollowsChalk
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubLvl1
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubLvl2
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubLvl3
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubLvl4
+		AddFormToFormList NVAllWeapons NVDLC02WeapWarClubLvl5
+		AddFormToFormList NVAllWeapons NVDLC02WeapYaoGuaiGauntlet
+		AddFormToFormList NVAllWeapons NVDLC02WeapYaoGuaiGauntletUnique
+		AddFormToFormList NVAllWeapons NVDLC02WeapYaoGuaiGauntletWakingCloud
+
+		; Grenade/Mine Weapons
+		AddFormToFormList WeaponGrenadeMineLIST NVDLC02WeapFireBomb
+
+		; All Launcher
+		;AddFormToFormList WeaponLauncherLIST <name of weapon>												; <<<NONE>>>	
+
+		; All Machinegun
+		AddFormToFormList WeaponMachinegunLIST NVDLC02Weap45AutoSubmachineGun
+
+		; All Melee
+		AddFormToFormList WeaponListMeleeALL NVDLC02Weap45AutoPistolUniqueMelee
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapEVMockCombat
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapThrowingSpearWakingCloud
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapTomahawk
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClub
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubFollowsChalk
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubLvl1
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubLvl2
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubLvl3
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubLvl4
+		AddFormToFormList WeaponListMeleeALL NVDLC02WeapWarClubLvl5
+
+		; All Ranged
+		AddFormToFormList WeaponListRangedALL NVDLC02Weap45AutoPistol
+		AddFormToFormList WeaponListRangedALL NVDLC02Weap45AutoPistolFollowsChalk
+		AddFormToFormList WeaponListRangedALL NVDLC02Weap45AutoPistolUnique
+		AddFormToFormList WeaponListRangedALL NVDLC02Weap45AutoPistolUniqueNPC
+		AddFormToFormList WeaponListRangedALL NVDLC02Weap45AutoSubmachineGun
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapComplianceRegulator
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapFireBomb
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapGreenGeckoSpit
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapServiceRifleUnique
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapSporePlantSpitMissile
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapSporePlantSpitMissileLvl2
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapThrowingSpearWakingCloud
+		AddFormToFormList WeaponListRangedALL NVDLC02WeapTomahawk
+
+		; All Rifles
+		AddFormToFormList WeaponRiflesLIST NVDLC02WeapServiceRifleUnique
+
+		; All Scoped (Large scope)
+		;AddFormToFormList WeaponsLargScopeList <name of weapon>												; <<<NONE>>>
+
+		; All Shotgun
+		;AddFormToFormList WeaponShotgunLIST <name of weapon>												; <<<NONE>>>
+
+		; Energy Weapons
+		AddFormToFormList EnergyWeapons NVDLC02WeapComplianceRegulator;
+
+		; Fist/Glove/Gauntlet Weapons (Unarmed)
+		AddFormToFormList FistWeaponsList NVDLC02WeapYaoGuaiGauntletWakingCloud
+		AddFormToFormList FistWeaponsList NVDLC02WeapYaoGuaiGauntletUnique
+		AddFormToFormList FistWeaponsList NVDLC02WeapYaoGuaiGauntlet
+		AddFormToFormList FistWeaponsList NVDLC02WeapPowerFistUnique
+
+		; Can be poisoned Weapons																							; Bladed or spike-y weapons
+		AddFormToFormList VPoisonWeapons NVDLC02WeapYaoGuaiGauntletWakingCloud
+		AddFormToFormList VPoisonWeapons NVDLC02WeapYaoGuaiGauntletUnique
+		AddFormToFormList VPoisonWeapons NVDLC02WeapYaoGuaiGauntlet
+
+
+		; Regular Holdout Weapons
+		;AddFormToFormList NVHoldoutWeapons <name of weapon>													; <<<NONE>>>
+
+		; Improved Holdout Weapons
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02Weap45AutoPistol
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02Weap45AutoPistolFollowsChalk
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02Weap45AutoPistolUnique
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02Weap45AutoPistolUniqueNPC
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02Weap45AutoPistolUniqueMelee
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapComplianceRegulator
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapFireBomb
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapPowerFistUnique
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapYaoGuaiGauntlet
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapYaoGuaiGauntletUnique
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapYaoGuaiGauntletWakingCloud
+		AddFormToFormList NVImprovedHoldoutWeapons NVDLC02WeapWarClub
+
+
+		; Ignite gas when fired within gas volume
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02WeapFireBomb
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02Weap45AutoPistol
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02Weap45AutoPistolFollowsChalk
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02Weap45AutoPistolUnique
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02Weap45AutoSubmachineGun
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02WeapServiceRifleUnique
+		AddFormToFormList ExplodesGasTrapsOnHit NVDLC02WeapComplianceRegulator
+; ------------------------------------------ Chem/Drink/Food/Med Related ------------------------------------------------------	\/
+		; Legion Allowed/Banned																								; Used by "FortEquipmentConfiscationQuestScript"
+		AddFormToFormList NVLegionChemsList NVDLC02BloodShield										
+		AddFormToFormList NVLegionChemsList NVDLC02DarkDatura
+		AddFormToFormList NVLegionChemsList NVDLC02DaturaHide
+		AddFormToFormList NVLegionChemsList NVDLC02Daturana
+		AddFormToFormList NVLegionChemsList NVDLC02HealingPoultice
+		AddFormToFormList NVLegionChemsList NVDLC02SacredDaturaRoot
+		AddFormToFormList NVLegionChemsList NVDLC02WeapBindRitual
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02BloodShield						
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02DarkDatura	
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02DaturaHide	
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02Daturana	
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02HealingPoultice	
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02SacredDaturaRoot	
+		AddFormToFormList NVLegionAllButMedsChemsList NVDLC02WeapBindRitual	
+
+		set bFormListsUpdated to 1 
+
+	endif
+
+	; if the player is not in Doc's house, it means the player has completed chargen and has exited Doc Mitchell's house.
+	if (nEnableDLC == 0)
+
+		if (Player.GetInCell GSDocMitchellHouse == 0 && getquestcompleted VCG01)
+			set nEnableDLC to 1
+			set fStartTimer to 5
+		endif
+
+	elseif (nEnableDLC == 1)
+
+		if (fStartTimer <= 0)
+			SetStage NVDLC02MQ00 10
+			NVDLC02JedRadioTAREF.Enable
+			StartQuest NVDLC02RadioMessage
+			ShowMessage NVDLC02LoadMessage01
+			ShowMessage NVDLC02LoadMessage02
+			ForceRadioStationUpdate
+			ResetPipboyManager
+			set nEnableDLC to 2
+		else
+			set fStartTimer to (fStartTimer - GetSecondsPassed)
+		endif
+
+	endif
+
+END
+

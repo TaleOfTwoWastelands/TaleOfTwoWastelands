@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="00129A37">INFO - 00129A37</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>SayOnce</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0010D2C6">VMS18</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Wonderful. You have come through with flying colors. On behalf of my colleagues, allow me to extend my thanks.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I know what a terrible sacrifice this must've been for you.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetObjectiveCompleted</Type>
+          <Quest ID="0010D2C6">VMS18</Quest>
+          <ObjetiveIndex>105</ObjetiveIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetObjectiveDisplayed</Type>
+          <Quest ID="0010D2C6">VMS18</Quest>
+          <ObjetiveIndex>125</ObjetiveIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetObjectiveCompleted</Type>
+          <Quest ID="0010D2C6">VMS18</Quest>
+          <ObjetiveIndex>125</ObjetiveIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0010D4E8">VMS18Mortimer</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <UnknownList>
+      <Unknown Tag="TCFU">
+        <Reference ID="00127DBA">INFO - 00127DBA</Reference>
+      </Unknown>
+    </UnknownList>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>23</ReferenceCount>
+        <CompiledSize>1663</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">ohEPAAMAcgoAbm4AAABuAQAAAKIRDwADAHIKAG59AAAAbgEAAAAWAAsADwAHACByCwBzAQAWAAsAAwAHACByDABzBgAVAAoAcgwAcy8AAgAgMBUAEwByDABzEwALACByDABzEwAgMSAtHAABAKgRBQABAHINABkAAAAcAAIAIhACAAAAHAACAMURBwABAG4AAAAAHAACAIARBQABAHIOABUACgByDABzBgACACAwFQAKAHIMAHMIAAIAIDAEEgcAAQBunP///xYAFAABABAAIFgiEgUAAQByDwAgMCA9PTkQCgACAHIPAG5QAAAAGQAAABUACgByDABzOgACACAxGAALAA8ABwAgcgsAcwUAFgALAAMABwAgcgwAcwwAFQAKAHIMAHMvAAIAIDAVABMAcgwAcxMACwAgcgwAcxMAIDEgLRwAAQCoEQUAAQByEAAZAAAAHAADACIQAgAAABwAAwDFEQcAAQBuAAAAABwAAwCAEQUAAQByDgAVAAoAcgwAcwwAAgAgMBUACgByDABzDQACACAwFQAKAHIMAHM+AAIAIDEEEgcAAQBunP///xYAFAABABAAIFgiEgUAAQByEQAgMCA9PTkQCgACAHIRAG5uAAAAGQAAABgACwAUAAcAIHILAHMCABYACwADAAcAIHIMAHMVABUACgByDABzLwACACAwFQATAHIMAHMTAAsAIHIMAHMTACAxIC0cAAEAqBEFAAEAchIAGQAAABwABAAiEAIAAAAcAAQAxREHAAEAbgAAAAAcAAQAgBEFAAEAcg4AFQAKAHIMAHMVAAIAIDAVAAoAcgwAcy4AAgAgMRUACgByDABzFwACACAwFQAKAHIMAHMuAAIAIDEEEgcAAQBunP///xYAFAABABAAIFgiEgUAAQByEwAgMCA9PTkQCgACAHITAG5uAAAAGQAAABYAMQACAC0AIFilEQoAAgByFABuKAAAACAxID09IFikEQoAAgByFABuKAAAACAwID09ICYmohEPAAMAchQAbigAAABuAQAAAKMRDwADAHIUAG4uAAAAbgEAAAAZAAAAGAALAA8ABwAgcgsAcwMAFgALAAMABwAgcgwAcxsAFQAKAHIMAHMvAAIAIDAVABMAcgwAcxMACwAgcgwAcxMAIDEgLRwAAQCoEQUAAQByFQAZAAAAHAAFACIQAgAAABwABQDFEQcAAQBuAAAAABwABQCAEQUAAQByDgAVAAoAcgwAcxsAAgAgMBUACgByDABzHQACACAwBBIHAAEAbpz///8VAAoAcgwAczwAAgAgMRYAFAABABAAIFgiEgUAAQByFgAgMCA9PTkQCgACAHIWAG7/AAAAGQAAABgACwAKAAcAIHILAHMGABYACwACAAcAIHIXAHMOABUACgByDABzLwACACAwFQATAHIMAHMTAAsAIHIMAHMTACAxIC0ZAAAAHAAGACIQAgAAABwABgDFEQcAAQBuAAAAABwABgCAEQUAAQByDgAVAAoAchcAcw4AAgAgMBUACgByFwBzDwACACAxBBIHAAEAbpz///8YAAsACgAHACByCwBzCAAWAAsAAgAHACByFwBzEgAVAAoAcgwAcy8AAgAgMBUAEwByDABzEwALACByDABzEwAgMSAtGQAAABwABwAiEAIAAAAcAAcAxREHAAEAbgAAAAAcAAcAgBEFAAEAcg4AFQAKAHIXAHMSAAIAIDAVAAoAchcAcxMAAgAgMQQSBwABAG6c////GAALAAoABwAgcgsAcwcAFgALAAIABwAgchcAcwYAFQAKAHIMAHMvAAIAIDAVABMAcgwAcxMACwAgcgwAcxMAIDEgLRkAAAAcAAgAIhACAAAAHAAIAMURBwABAG4AAAAAHAAIAIARBQABAHIOABUACgByFwBzBgACACAwFQAKAHIXAHMHAAIAIDEEEgcAAQBunP///xgACwAKAAcAIHILAHMJABYACwACAAcAIHIXAHMKABUACgByDABzLwACACAwFQATAHIMAHMTAAsAIHIMAHMTACAxIC0ZAAAAHAAJACIQAgAAABwACQDFEQcAAQBuAAAAABwACQCAEQUAAQByDgAVAAoAchcAcwoAAgAgMBUACgByFwBzCwACACAxBBIHAAEAbpz///8ZAAAAFgAQAAEADAAgcgwAcxMAIDAgPT0VAAoAcgwAcxIAAgAgMBkAAAAVAAoAcgoAcyYAAgAgMQ==</CompiledScript>
+      <ScriptSource Tag="SCTX">SetObjectiveCompleted VMS18 110 1;
+SetObjectiveCompleted VMS18 125 1;
+
+if (VMS18FreezerTriggerREF.bBooneInFreezer)
+	if (VNPCFollowers.bBooneHIred)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+		player.RemovePerk Spotting
+	endif
+	CraigBooneREF.Disable
+	CraigBooneREF.SetPlayerTeammate 0
+	CraigBooneREF.REmoveFromFaction FollowerFaction
+	set VNPCFollowers.bBooneHired to 0;
+	set VNPCFollowers.bBooneAvailable to 0;
+	RewardKarma -100
+	if(GetQuestCompleted VMS39 == 0)
+		setstage VMS39 80
+	endif
+	set VNPCFollowers.bBooneDead to 1
+
+elseif (VMS18FreezerTriggerREF.bArcadeInFreezer)
+	if (VNPCFollowers.ArcadeHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+		player.RemovePerk BetterHealing
+	endif
+	ArcadeREF.Disable
+	ArcadeREF.SetPlayerTeammate 0
+	ArcadeREF.RemoveFromFaction FollowerFaction
+	Set VNPCFollowers.ArcadeHired to 0;
+	Set VNPCFollowers.ArcadeAvailable to 0;
+	Set VNPCFollowers.bArcadeDead to 1;
+	RewardKarma -100
+	if (GetQuestCompleted VMS54 == 0)
+		setstage VMS54 110
+	endif
+elseif (VMS18FreezerTriggerREF.bCassInFreezer)
+	if (VNPCFollowers.bCassHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+		player.RemovePerk WhiskeyRose
+	endif
+	RoseofSharonCassidyREF.Disable;
+	RoseofSharonCassidyREF.SetPlayerTeammate 0
+	RoseofSharonCassidyREF.RemoveFromFaction FollowerFaction
+	set VNPCFollowers.bCassHired to 0;
+	set VNPCFollowers.bCassDead to 1;
+	set VNPCFollowers.bCassAvailable to 0;
+	set VNPCFollowers.bCassDead to 1;
+	RewardKarma -100
+	if(GetQuestCompleted VCassCompanion == 0)
+		setstage VCassCompanion 110
+	endif
+	if GetObjectiveDisplayed VMS29a 40 == 1 &amp;&amp; GetObjectiveCompleted VMS29a 40 == 0
+		SetObjectiveCompleted VMS29a 40 1
+		SetObjectiveDisplayed VMS29a 46 1
+	endif
+elseif (VMS18FreezerTriggerREF.bVeronicaInFreezer)
+	if (VNPCFollowers.bVeronicaHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+		player.RemovePerk ScribeAssistant
+	endif
+	VeronicaREF.Disable;
+	VeronicaREF.SetPlayerTeammate 0
+	VeronicaREF.RemoveFromFaction FollowerFaction
+	set VNPCFollowers.bVeronicaHired to 0;
+	set VNPCFollowers.bVeronicaAvailable to 0;
+	RewardKarma -100
+	set VNPCFollowers.bVeronicaDead to 1;
+	if(GetQuestCompleted VMS49 == 0)
+		setstage VMS49 255
+	endif
+elseif (VMS18FreezerTriggerREF.bButchInFreezer)
+	if (Followers.ButchHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+	endif
+	ButchREF.Disable;
+	ButchREF.SetPlayerTeammate 0
+	ButchREF.RemoveFromFaction FollowerFaction
+	set Followers.ButchHired to 0;
+	set Followers.ButchFired to 1;
+	RewardKarma -100
+elseif (VMS18FreezerTriggerREF.bCloverInFreezer)
+	if (Followers.CloverHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+	endif
+	CloverRef.Disable;
+	CloverRef.SetPlayerTeammate 0
+	CloverRef.RemoveFromFaction FollowerFaction
+	set Followers.CloverHired to 0;
+	set Followers.CloverFired to 1;
+	RewardKarma -100
+elseif (VMS18FreezerTriggerREF.bJerichoInFreezer)
+	if (Followers.JerichoHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+	endif
+	JerichoRef.Disable;
+	JerichoRef.SetPlayerTeammate 0
+	JerichoRef.RemoveFromFaction FollowerFaction
+	set Followers.JerichoHired to 0;
+	set Followers.JerichoFired to 1;
+	RewardKarma -100
+elseif (VMS18FreezerTriggerREF.bCrossInFreezer)
+	if (Followers.StarPaladinCrossHired)
+		set VNPCFollowers.bHumanoidInParty to 0;
+		set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1;
+	endif
+	StarPaladinCrossRef.Disable;
+	StarPaladinCrossRef.SetPlayerTeammate 0
+	StarPaladinCrossRef.RemoveFromFaction FollowerFaction
+	set Followers.StarPaladinCrossHired to 0;
+	set Followers.StarPaladinCrossFired to 1;
+	RewardKarma -100
+endif
+
+if (VNPCFollowers.nCurrentFollowers == 0)
+     set VNPCFollowers.bPlayerHasFollower to 0;
+endif
+Set VMS18.bSacrificedCompanion to 1;
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D2C6">VMS18</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00129A3A">VMS18FreezerTriggerREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60C">Spotting</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001349A7">VMS39</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60B">BetterHealing</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00157E60">VMS54</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60D">WhiskeyRose</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015DA16">VCassCompanion</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00124123">VMS29a</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C613">ScribeAssistant</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00145F85">VMS49</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="0010D4E8">VMS18Mortimer</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

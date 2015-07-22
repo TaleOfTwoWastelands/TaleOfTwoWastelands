@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C0185A7">TTWChallengeRoastedRoach</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWChallengeRoastedRoach</EditorID>
+    <Name Tag="FULL">Roasted Roach **</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185E1">TTWChallengeTwoStarSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill The Roach King with a fire based weapon.</Description>
+    <Data Tag="DATA">
+      <Type>KillASpecificFormID</Type>
+      <Threshold>1</Threshold>
+      <Flags>ShowZeroProgress</Flags>
+      <Interval>1</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <Actor Tag="SNAM">
+      <Reference ID="06030DE1">RoachKing</Reference>
+    </Actor>
+    <WeaponList Tag="XNAM">
+      <Reference ID="00031DA6">PerkPyromaniacWeapons</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>ChildCanUse_RefractedByAutoWater</Flags>
+  <FormID ID="0601A333">FollowersFawkesGatlingLaser</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FollowersFawkesGatlingLaser</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-27</X>
+        <Y>-40</Y>
+        <Z>-15</Z>
+      </Point1>
+      <Point2>
+        <X>27</X>
+        <Y>40</Y>
+        <Z>15</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Gatling Laser</Name>
+    <Model>
+      <FileName Tag="MODL">Weapons\2HandHandle\LaserGatling.NIF</FileName>
+      <TextureFileHash Tag="MODT">8uUMZ/olUP5yZQxn/yVQ/mVsHHT7ejYE7t8OZ8d0UC5uXw5nzHRQLmVsHHT7ejYE898OZ8d0UC5zXw5nzHRQLmVsHHT7ejYE598OZ8d0UC5nXw5nzHRQLmVsHHT7ejYE5d8Nc6saOn9lXw1zsBo6f3N0EHSz4clt7d8OZ8d0UC5tXw5nzHRQLmVsHHT7ejYE7OwGZWrB/r5sbAZlb8H+vmVsG3SjDAM07t8IZepZjwJuXwhl71mPAmVsG3SjDAM0898IZepZjwJzXwhl71mPAmVsG3SjDAM06+MUZ/9blmRrYxRnBFyWZGVsHHT7ejYE7t8WZ8f3T2tuXxZnzPdPa2VsHHT7ejYE898WZ8f3T2tzXxZnzPdPa2VsHHT7ejYE598WZ8f3T2tnXxZnzPdPa2VsHHT7ejYE7d8WZ8f3T2ttXxZnzPdPa2VsHHT7ejYE</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_gatling_laser.dds</Large>
+    </Icon>
+    <Ammo Tag="NAM0">
+      <Reference ID="000615AF">AmmoElectronChargePackRobot</Reference>
+    </Ammo>
+    <RepairList Tag="REPL">
+      <Reference ID="0003423C">RepairGatlingLaser</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">EnergyWeapons</EquipmentType>
+    <ShellCasingModel>
+      <FileName Tag="MOD2">Weapons\2HandAutomatic\AssaultRifleShellCasing.NIF</FileName>
+      <TextureFileHash Tag="MO2T">5+4SYUWGOfZnbhJhSoY59mNpH3QlqaGP7t8UYb5hgSxuXxRhw2GBLGNpH3QlqaGP898UYb5hgSxzXxRhw2GBLGNpH3QlqaGP</TextureFileHash>
+    </ShellCasingModel>
+    <ScopeEffectModel>
+      <FileName Tag="MOD4">Weapons\2HandHandle\GatlingLaserGO.NIF</FileName>
+    </ScopeEffectModel>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00019086">EnergyImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000A2509">1stPersonGatlingLaser</Reference>
+    </FirstPersonModel>
+    <Sound>
+      <Gun>
+        <Shoot>
+          <_3D Tag="SNAM">
+            <Reference ID="0013010B">WPNLaserPistolFire3DDIST</Reference>
+          </_3D>
+        </Shoot>
+        <Shoot3DLooping Tag="NAM7">
+          <Reference ID="0009B8DD">WPNGatlingLaserFireLPM</Reference>
+        </Shoot3DLooping>
+      </Gun>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0001F21C">WPNPistol10mmFireDry</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="00059C83">WPNMinigunEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00059C84">WPNMinigunUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <Data Tag="DATA">
+      <Value>2077</Value>
+      <Health>1500</Health>
+      <Weight>10</Weight>
+      <BaseDamage>11</BaseDamage>
+      <ClipSize>60</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_2HandHandle</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>IsAutomatic, CantDrop, HideBackpack, DontUse1stPersonIronSightAnimations, NonPlayable</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadC</ReloadAnimation>
+      <MinSpread>0.600000024</MinSpread>
+      <Spread>0.5</Spread>
+      <Unknown>AAAAAA==</Unknown>
+      <SightFOV>55</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0003BF08">BeamLaserAutoProjectile</Projectile>
+      <BaseVATSToHitChance>70</BaseVATSToHitChance>
+      <AttackAnimation>AttackSpin</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>100</Min>
+        <Max>1536</Max>
+      </Range>
+      <LimbKillBehavior>DismemberOnly</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost, DontUse3rdPersonIronSightAnimations</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>22</FireRate>
+      <ActionPointCost>30</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0.400000006</LeftMotorStrength>
+        <RightMotorStrength>0.400000006</RightMotorStrength>
+        <Duration>0.150000006</Duration>
+        <Pattern>Triangle</Pattern>
+        <Wavelength>0.150000006</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>22</AttackShotsPerSecond>
+      <ReloadTime>3</ReloadTime>
+      <JamTime>2.33330011</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>EnergyWeapons</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>EnergyResistance</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>8</StrengthRequirement>
+      <Unknown4>0</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>0</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>100</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>13</Damage>
+      <ChanceMult>0</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="000BDA30">LaserDisintegrationFXSpell</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Loud</SoundLevel>
+  </Subrecords>
+</Record>

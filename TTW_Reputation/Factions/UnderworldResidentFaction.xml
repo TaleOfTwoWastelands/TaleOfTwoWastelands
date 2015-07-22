@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="FACT">
+  <Flags>0</Flags>
+  <FormID ID="000179EB">UnderworldResidentFaction</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">UnderworldResidentFaction</EditorID>
+    <Relationships>
+      <Relationship Tag="XNAM">
+        <Faction ID="000179EB">UnderworldResidentFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0001B2A4">PlayerFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Neutral</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="00030727">UnderworldGhoulFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="000C8690">UnderworldCerebusFaction</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Ally</CombatReaction>
+      </Relationship>
+      <Relationship Tag="XNAM">
+        <Faction ID="0601D3FE">BrotherhoodSteelFactionDC</Faction>
+        <Modifier>0</Modifier>
+        <CombatReaction>Friend</CombatReaction>
+      </Relationship>
+    </Relationships>
+    <Data Tag="DATA">
+      <Flags1>0</Flags1>
+      <Flags2>TrackCrime</Flags2>
+    </Data>
+    <Reputation Tag="WMI1">
+      <Reference ID="0D0017F2">RepTTWUnderworld</Reference>
+    </Reputation>
+  </Subrecords>
+</Record>

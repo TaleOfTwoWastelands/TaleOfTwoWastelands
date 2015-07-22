@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ACTI">
+  <Flags>0</Flags>
+  <FormID ID="0C018105">TTWMaizePickable</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWMaizePickable</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-11</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>17</X>
+        <Y>24</Y>
+        <Z>101</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Maize</Name>
+    <Model>
+      <FileName Tag="MODL">landscape\plants\maize_healthy01ttw.nif</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="00164736">MaizeScript</Reference>
+    </Script>
+    <Sound>
+      <Activation Tag="VNAM">
+        <Reference ID="00178878">OBJPickPlant</Reference>
+      </Activation>
+    </Sound>
+    <ActivationPrompt Tag="XATO">Pick Maize</ActivationPrompt>
+  </Subrecords>
+</Record>

@@ -1,0 +1,2334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0800108D">DLC01Quest03</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC01Quest03</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="08000F3B">DLC01Quest03SCRIPT</Reference>
+    </Script>
+    <Name Tag="FULL">Free Labor</Name>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CC">DLC01RaiderFemaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CD">DLC01RaiderFemaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CA">DLC01RaiderMaleColdVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CB">DLC01RaiderMaleGruffVoice</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2B">DLC01SlaveFemale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08003E2C">DLC01SlaveFemale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD5">DLC01SlaveMale01VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD6">DLC01SlaveMale02VoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="00000000">NullReference</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="08002BD3">DLC01SlaverMaleVoiceType</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035C9">DLC01UniqueAshur</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080035CF">DLC01UniqueMidea</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080045F9">DLC01UniqueSandra</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>Or</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="080009A6">DLC01UniqueWernher</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has started the quest, must travel through Uptown to get to Haven</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>25</ReferenceCount>
+                <CompiledSize>452</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHISABwAAQBeEAAAAxAKAAIAchMAbgAAAAADEAoAAgByFABuAAAAABwAAgAPEAkAAgAAAG4BAAAAHAACAA8QCQACAAEAbgQAAAAcAAEADxAJAAIAAABuAQAAABwAAQAPEAkAAgABAG4EAAAAHAADACIQAgAAABwABAAiEAIAAAAcAAUAfxEKAAIAchUAbgEAAAAcAAYAfxEKAAIAchUAbgEAAAAcAAcAfxEKAAIAchUAbgEAAAAcAAUAfxEKAAIAchYAbgEAAAAcAAYAfxEKAAIAchYAbgEAAAAcAAcAfxEKAAIAchYAbgEAAAAVAAsAchcAcwoAAwAgMzAVAA8AchcAZgkABwAgchcAcwoAAxAKAAIAchgAbgAAAAAcAAgAgBEFAAEAchkAHAAJAHMQAgAAABwACgATEAkAAgAIAG4BAAAAoxEPAAMAchcAbgUAAABuAQAAABwACwBzEAIAAAAcAAwAcxACAAAAHAANACIQAgAAABwADgAiEAIAAAAcAA8AIhACAAAAHAAQACIQAgAAABwAEQAiEAIAAACjEQ8AAwByFwBuAQAAAG4BAAAAEREHAAEAbgAAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">DLC01AshurREF.moveto DLC01TP03AshurPlayerWait
+DLC01AshurREF.evp
+SetEssential DLC01Ashur 0
+SetEssential DLC01Midea 0
+
+;Set Krenshaw and Ashur to be Aggressive and Foolhardy again
+DLC01KrenshawREF.setav aggression 1
+DLC01KrenshawREF.setav confidence 4
+DLC01AshurREF.setav aggression 1
+DLC01AshurREF.setav confidence 4
+
+;Housecleaning
+DLC01FrontGateEnterTrigger01REF.disable
+DLC01FrontGateEnterTrigger02REF.disable
+DLC01MexREF.addToFaction DLC01CombatRaiders 1
+DLC01RaiderGateREF.addToFaction DLC01CombatRaiders 1
+DLC01PittGateGuardREF.addToFaction DLC01CombatRaiders 1
+DLC01MexREF.addToFaction DLC01PittRaiderFaction 1
+DLC01RaiderGateREF.addToFaction DLC01PittRaiderFaction 1
+DLC01PittGateGuardREF.addToFaction DLC01PittRaiderFaction 1
+ 
+set DLC01Quest03.BabyNoiseCount to 30
+set DLC01Quest03.BabyTimer to DLC01Quest03.BabyNoiseCount
+setEssential DLC01Wernher 0
+DLC01WernherREF.removefromfaction playerfaction
+
+DLC01DowntownGateToScaffoldsREF.unlock
+DLC01WernerCribREF.playgroup fastbackward 1
+
+setObjectiveDisplayed DLC01Quest03 5 1
+;setStage DLC01Quest03 10
+
+;Unlock Doors into Uptown
+MarketSquaretoHavenPREQ03Ref.unlock
+SteelMilltoHavenREF.unlock
+
+;Clear beaten slave and other freeforms
+DLC01FF002VictimREF.disable
+DLC01FF002GuardRef.disable
+DLC01FF002EnableMarker.disable
+DLC01FF005EnableMarker.disable
+DLC01FF003EnableMarker.disable
+
+
+
+;Tell player to retrieve their gear
+SetObjectiveDisplayed DLC01Quest03 1 1
+
+;Disable fast travel
+EnableFastTravel 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003301">DLC01KrenshawREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B720">DLC01FrontGateEnterTrigger01REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B71F">DLC01FrontGateEnterTrigger02REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08006167">DLC01MexREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800156D">DLC01RaiderGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A67F">DLC01PittGateGuardREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080062A7">DLC01DowntownGateToScaffoldsREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001097">DLC01WernerCribREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08009AFE">MarketSquaretoHavenPREQ03Ref</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080011B8">SteelMilltoHavenREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08002968">DLC01FF002VictimRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800294A">DLC01FF002GuardRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008E18">DLC01FF002EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008E17">DLC01FF005EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08008C9F">DLC01FF003EnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080029DD">DLC01TP03AshurPlayerWait</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AC">DLC01PittRaiderFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001082">DLC01Wernher</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has entered Haven, must talk to Ashur at the top floor</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>52</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgEAbgUAAABuAQAAAKMRDwADAHIBAG4KAAAAbgEAAAADEAoAAgByAgBuAAAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted DLC01Quest03 5 1
+setObjectiveDisplayed DLC01Quest03 10 1
+SetEssential DLC01Krenshaw 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003300">DLC01Krenshaw</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has finished talking with Ashur, Ashur is talking with intercom before leaving</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>10</ReferenceCount>
+                <CompiledSize>138</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgUAbgoAAABuAQAAAHgQCAACAHIGAHIHAHgQEgAEAHIIAHIJAG4BAAAAbgEAAAAWABIAAQAOACByAQBYLhAAACAwID09HAABAAIQCgACAHIKAG4BAAAAFwACAAEAHAACACEQAgAAABkAAAAcAAMAchAHAAEAbv8AAAAcAAQAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted DLC01Quest03 10 1
+setEnemy DLC01CombatSlaves DLC01CombatRaiders 
+setEnemy DLC01PittSlaveFaction DLC01PittRaiderFaction 1 1
+if DLC01MideaREF.getDead == 0
+   DLC01MideaREF.addItem DLC01MideaNoteItem 1
+else
+   DLC01MideaNoteBackupREF.enable
+endif
+
+;Lock Door out of Haven, to keep player from going out into the rioting too soon.
+DLC01AshurDoor2REF.lock 255
+
+;Disable Adan early
+DLC01AdanREF.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003099">DLC01MideaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FBD">DLC01MideaNoteBackupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007E01">DLC01AshurDoor2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E54">DLC01AdanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375B">DLC01CombatSlaves</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AB">DLC01PittSlaveFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AC">DLC01PittRaiderFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FBB">DLC01MideaNoteItem</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">22</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Ashur has talked to the intercom, made his pitch to the player, and is leaving</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>19</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgEAbhQAAABuAQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed DLC01Quest03 20 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has found out that the baby is the cure, must decide to kidnap or leave without it</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>3</ReferenceCount>
+                <CompiledSize>150</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAcgMAbhQAAABuAQAAABYAEgABAA4AIHIDAHMBACAxIH4gPT2jEQ8AAwByAwBuJQAAAG4BAAAAGAASAAEADgAgcgMAcwIAIDEgfiA9PaMRDwADAHIDAG4gAAAAbgEAAAAXAAIAAQCjEQ8AAwByAwBuHgAAAG4BAAAAGQAAABwAAQBzEAIAAAAcAAIAIhACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveCompleted DLC01Quest03 20 1
+if DLC01Quest03.PathA == -1
+   setObjectiveDisplayed DLC01Quest03 37 1
+elseif DLC01Quest03.PathB == -1
+   setObjectiveDisplayed DLC01Quest03 32 1
+else
+   setObjectiveDisplayed DLC01Quest03 30 1
+endif
+
+;Unlock door out of Haven
+DLC01AshurDoor2REF.unlock
+
+;In case the player is trying to be a jerk.
+DLC01AshurREF.disable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007E01">DLC01AshurDoor2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has left without the baby, stuck on Path A - Slaves are now hostile to player. Player must talk to Midea to find Wernher.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>17</ReferenceCount>
+                <CompiledSize>319</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcgcAbh4AAABuAAAAAKMRDwADAHIHAG4gAAAAbgEAAACiEQ8AAwByBwBuIAAAAG4BAAAAFgASAAEADgAgcgEAWC4QAAAgMCA9PaMRDwADAHIHAG5GAAAAbgEAAAAXAAIAAQCjEQ8AAwByBwBuRwAAAG4BAAAAGQAAABUACgByBwBzAQACACAxAxAKAAIAcggAbgEAAAADEAoAAgByCQBuAAAAAHgQCAACAHIKAHILAHgQCAACAHIKAHIMAHkQCAACAHIMAHILABwAAQAhEAIAAAAcAAIAIRACAAAAHAABAJ4QBQABAHINABwAAwCeEAUAAQByDgAcAAMAlxAFAAEAcg8AAxAKAAIAchAAbgAAAAAVAAcARxEAAgAgMRwABAAiEAIAAAAcAAUAcxACAAAAHAAGAIsQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed dlc01Quest03 30 0
+setObjectiveDisplayed dlc01Quest03 32 1
+setObjectiveCompleted dlc01Quest03 32 1
+
+;Set Objective based on whether Midea is alive or not
+if DLC01MideaREF.getDead == 0
+   setObjectiveDisplayed DLC01Quest03 70 1
+else
+   setObjectiveDisplayed DLC01Quest03 71 1
+endif
+
+
+set DLC01Quest03.PathA to 1
+setEssential DLC01Ashur 1
+setessential DLC01Midea 0
+setEnemy DLC01CombatSlaves PlayerFaction
+setEnemy DLC01CombatSlaves DLC01CombatRaiders
+setAlly DLC01CombatRaiders PlayerFaction
+DLC01MideaREF.enable
+DLC01MideaNoteBackupREF.enable
+DLC01MideaREF.moveto DLC01MideaHutMarker
+DLC01WernherREF.moveto DLC01WernherHideoutMarker
+DLC01WernherREF.addscriptpackage DLC01WernherWaitInHideout
+SetEssential DLC01Wernher 0
+
+;Make slaves aggressive
+set DLC01SlavesAreAngry to 1
+
+;Remove light terminal
+DLC01LightControlREF.disable
+
+;Unlock door out of Haven
+DLC01AshurDoor2REF.unlock
+
+;Clean up
+DLC01AdanREF.kill</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003099">DLC01MideaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FBD">DLC01MideaNoteBackupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08006BE8">DLC01LightControlREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007E01">DLC01AshurDoor2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E54">DLC01AdanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375B">DLC01CombatSlaves</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001099">DLC01MideaHutMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001098">DLC01WernherHideoutMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080029DE">DLC01WernherWaitInHideout</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001082">DLC01Wernher</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080068A0">DLC01SlavesAreAngry</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">55</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has left with the baby, stuck on Path B (for now), and Raiders are now hostile. Player is instructed to bring the baby to Midea</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>15</ReferenceCount>
+                <CompiledSize>265</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">oxEPAAMAcggAbh4AAABuAAAAAKMRDwADAHIIAG4lAAAAbgEAAACiEQ8AAwByCABuJQAAAG4BAAAAoxEPAAMAcggAbksAAABuAQAAABUACgByCABzAgACACAxFQAKAHIIAHMGAAIAIDF4EAgAAgByCQByCgB4EAgAAgByCwByCQB5EAgAAgByCwByCgAcAAEAIRACAAAAHAACACEQAgAAABwAAQCeEAUAAQByDAAcAAMAnhAFAAEAcg0AHAADAJcQBQABAHIOABwABACeEAUAAQByDwAcAAUAnhAFAAEAcg8AHAAEAIsQAgAAABwABQCLEAIAAAAcAAYAcxACAAAAHAAHAIsQAgAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">setObjectiveDisplayed dlc01Quest03 30 0
+setObjectiveDisplayed dlc01Quest03 37 1
+setObjectiveCompleted dlc01Quest03 37 1
+setObjectiveDisplayed DLC01Quest03 75 1
+set DLC01Quest03.PathB to 1
+set DLC01Quest03.SandraAnger to 1
+setEnemy DLC01CombatRaiders PlayerFaction
+setEnemy DLC01CombatSlaves DLC01CombatRaiders
+setAlly DLC01CombatSlaves PlayerFaction
+DLC01MideaREF.enable
+DLC01MideaNoteBackupREF.enable
+DLC01MideaREF.moveto DLC01MideaHutMarker
+DLC01WernherREF.moveto DLC01WernherHideoutMarker
+DLC01WernherREF.addscriptpackage DLC01WernherWaitInHideout
+
+;kill raiders at the door
+DLC01AshurPalaceGuard01.moveto DLC01RiotSlave1CREF
+DLC01AshurPalaceGuard02.moveto DLC01RiotSlave1CREF
+DLC01AshurPalaceGuard01.kill
+DLC01AshurPalaceGuard02.kill
+
+;Unlock door out of Haven
+DLC01AshurDoor2REF.unlock
+
+;Clean up
+DLC01AdanREF.kill</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003099">DLC01MideaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FBD">DLC01MideaNoteBackupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D3B">DLC01AshurPalaceGuard01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D3C">DLC01AshurPalaceGuard02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007E01">DLC01AshurDoor2REF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E54">DLC01AdanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375B">DLC01CombatSlaves</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001099">DLC01MideaHutMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001098">DLC01WernherHideoutMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080029DE">DLC01WernherWaitInHideout</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9C7">DLC01RiotSlave1CREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">70</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has talked to Midea, and now knows where Wernher is - either to stop him, or to bring him the baby.</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>4</ReferenceCount>
+                <CompiledSize>170</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAXAAQAEwAgcgIAWC8QBQABAHIDACAwID09ohEPAAMAcgQAbkYAAABuAQAAAKIRDwADAHIEAG5HAAAAbgEAAACjEQ8AAwByBABuMgAAAG4BAAAAFQAKAHIEAHMFAAIAIDEXAAIAAwCiEQ8AAwByBABuSwAAAG4BAAAAoxEPAAMAcgQAbjcAAABuAQAAABUACgByBABzBQACACAxGQAAABwAAQAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if player.getitemcount DLC01Baby == 0
+   setObjectiveCompleted DLC01Quest03 70 1
+   setObjectiveCompleted DLC01Quest03 71 1
+   setObjectiveDisplayed dlc01Quest03 50 1
+   Set DLC01Quest03.WernherLocation to 1
+else
+   setObjectiveCompleted DLC01Quest03 75 1
+   setObjectiveDisplayed dlc01Quest03 55 1
+   Set DLC01Quest03.WernherLocation to 1
+endif
+
+;enable wernher defenses in Steel Mill Exterior
+DLC01SMEWernherEnablerREF.enable
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005364">DLC01SMEWernherEnablerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">95</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has talked to Wernher, and must now make a choice to help him or oppose him</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>111</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgASAAEADgAgcgEAcwEAIDEgfiA9PaMRDwADAHIBAG5hAAAAbgEAAAAYABIAAQAOACByAQBzAgAgMSB+ID09oxEPAAMAcgEAblwAAABuAQAAABcAAgABAKMRDwADAHIBAG5aAAAAbgEAAAAZAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">if DLC01Quest03.PathA == -1
+   setObjectiveDisplayed DLC01Quest03 97 1
+elseif DLC01Quest03.PathB == -1
+   setObjectiveDisplayed DLC01Quest03 92 1
+else
+   setObjectiveDisplayed DLC01Quest03 90 1
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">100</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has killed Wernher or convinced him to leave, now stuck on Path A</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>14</ReferenceCount>
+                <CompiledSize>302</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAWAAkAEgAgcgYAWC8QBQABAHIHACAwID6jEQ8AAwByCABuWgAAAG4AAAAAoxEPAAMAcggAblwAAABuAQAAAKIRDwADAHIIAG5cAAAAbgEAAACjEQ8AAwByCABuZAAAAG4BAAAAHAABACEQAgAAABwAAQCeEAUAAQByCQAcAAIAFxAAABwAAgCAEQUAAQByCgAcAAIAnhAFAAEAcgsAFwACAAQAohEPAAMAcggAbjIAAABuAQAAAKMRDwADAHIIAG6+AAAAbgEAAAAcAAEAIRACAAAAHAABAJ4QBQABAHIJABkAAAAcAAMAcxACAAAAAxAKAAIAcgwAbgEAAAADEAoAAgByDQBuAQAAAAMQCgACAHIOAG4AAAAAHAAEACIQAgAAABwABQAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">if player.getItemCount DLC01Baby &gt; 0
+   setObjectiveDisplayed DLC01Quest03 90 0
+   setObjectiveDisplayed DLC01Quest03 92 1
+   setObjectiveCompleted DLC01Quest03 92 1
+   setObjectiveDisplayed DLC01Quest03 100 1
+   DLC01AshurREF.enable
+   DLC01AshurREF.moveto DLC01TP03AshurPlayerWait
+   DLC01SandraREF.stopcombat
+   DLC01SandraREF.removefromfaction DLC01PittRaiderFaction
+   DLC01SandraREF.moveto DLC01SandraWaitMarker
+else
+   setObjectiveCompleted DLC01Quest03 50 1
+   setObjectiveDisplayed DLC01Quest03 190 1
+   DLC01AshurREF.enable
+   DLC01AshurREF.moveto DLC01TP03AshurPlayerWait
+endif
+HaventoAshurPalaceREF.unlock
+setEssential DLC01Ashur 1
+setEssential DLC01Sandra 1
+setessential DLC01Midea 0
+
+;Remove light terminal
+DLC01LightControlREF.disable
+
+DLC01AshurChairREF.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F24">DLC01SandraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001505">HaventoAshurPalaceREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08006BE8">DLC01LightControlREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08004AA2">DLC01AshurChairREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080029DD">DLC01TP03AshurPlayerWait</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AC">DLC01PittRaiderFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9D8">DLC01SandraWaitMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F21">DLC01Sandra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">105</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has given the baby to Wernher, now stuck on Path B - told about light controller</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>189</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAFIQDwADAHIEAG4BAAAAbgEAAABZEAsAAQByBQAAAAAAAAAcAAIAExAJAAIABABuAQAAABwAAQACEAoAAgByBgBuAQAAAL8RDAABAAgAMDIwMkI3NTejEQ8AAwByBwBuaQAAAG4BAAAAoxEPAAMAcgcAbloAAABuAAAAAKMRDwADAHIHAG5hAAAAbgEAAACiEQ8AAwByBwBuYQAAAG4BAAAAAxAKAAIAcggAbgEAAAAcAAMAIRACAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">player.removeitem DLC01Baby 1 1
+showMessage DLC01BabyDrop
+DLC01WernerCribREF.playGroup Backward 1
+;player.additem DLC01Scrambler 1
+;HaventoAshurPalaceREF.unlock
+Player.additem DLC01powerplantkey 1
+DisableNavMesh 0202B757
+setObjectiveDisplayed dlc01quest03 105 1
+
+setObjectiveDisplayed dlc01quest03 90 0
+setObjectiveDisplayed dlc01quest03 97 1
+setObjectiveCompleted dlc01quest03 97 1
+
+setEssential DLC01Wernher 1
+
+DLC01AshurChairREF.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001097">DLC01WernerCribREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08004AA2">DLC01AshurChairREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080039D5">DLC01BabyDrop</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A5F8">DLC01PowerPlantKey</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001082">DLC01Wernher</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">150</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has returned the baby to Ashur's crib</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>8</ReferenceCount>
+                <CompiledSize>123</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABACEQAgAAABwAAQCeEAUAAQByAwCiEQ8AAwByBABuZAAAAG4BAAAAoxEPAAMAcgQAbr4AAABuAQAAAHgQEgAEAHIFAHIGAG4BAAAAbgEAAAB4EBIABAByBwByBQBuAQAAAG4BAAAAHAACAH8RCgACAHIIAG4AAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">DLC01AshurREF.enable
+DLC01AshurREF.moveto DLC01TP03AshurPlayerWait
+setObjectiveCompleted DLC01Quest03 100 1
+setObjectiveDisplayed DLC01Quest03 190 1
+setEnemy DLC01CombatRaiders PlayerFaction 1 1
+setEnemy DLC01CombatSlaves DLC01CombatRaiders 1 1
+DLC01SandraREF.addtofaction DLC01PittRaiderFaction 0</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F24">DLC01SandraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080029DD">DLC01TP03AshurPlayerWait</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375B">DLC01CombatSlaves</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AC">DLC01PittRaiderFaction</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">155</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <LogEntry Tag="CNAM">Player has deactivated the lights, and must exit Haven</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>40</ReferenceCount>
+                <CompiledSize>533</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">ohEPAAMAch0AbmkAAABuAQAAAKMRDwADAHIdAG7DAAAAbgEAAAAWABQAAwAQACBYVBAFAAEAch4AIDAgPT0cAAEAIRACAAAAHAABAJ4QBQABAHIfABwAAQCXEAUAAQByIAAZAAAAFgAUAAMAEAAgWFQQBQABAHIhACAwID09HAACACEQAgAAABwAAgCeEAUAAQByIgAcAAIAlxAFAAEAciMAGQAAABwAAwCeEAUAAQByJAAcAAQAIhACAAAAHAAFACEQAgAAABwABgAiEAIAAAAcAAcAIhACAAAAHAAIACIQAgAAABwACQAiEAIAAAAcAAoAIhACAAAAHAALACIQAgAAABwADAAiEAIAAAAcAA0AIhACAAAAHAAOACIQAgAAABwADwAhEAIAAAAcABAAixACAAAAHAARAIsQAgAAABwAEgCLEAIAAAAcABMAixACAAAAHAAUAIsQAgAAABwAFQCLEAIAAAAcABYAixACAAAAHAAXAIsQAgAAABwAGAAhEAIAAAAWABIAAQAOACByJQBYLhAAACAxID09HAAZACEQAgAAABkAAAAWABIAAQAOACByJgBYLhAAACAxID09HAAaACEQAgAAABkAAAAWABIAAQAOACByJwBYLhAAACAwID09HAAbACIQAgAAABkAAAAWABIAAQAOACByKABYLhAAACAwID09HAAcACIQAgAAABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Lights go out!
+setObjectiveCompleted DLC01Quest03 105 1
+setObjectiveDisplayed DLC01Quest03 195 1
+
+;Ashur &amp; Sandra's confrontation
+if getDeadCount DLC01Ashur == 0
+   DLC01AshurREF.enable
+   DLC01AshurREF.moveto DLC01AshurConfrontMarker
+   DLC01AshurREF.addscriptPackage DLC01TP03ConfrontPlayer
+endif
+if getDeadCount DLC01Sandra == 0
+   DLC01SandraREF.enable
+   DLC01SandraREF.moveto DLC01SandraConfrontMarker
+   DLC01SandraREF.addscriptPackage DLC01TP03SandraConfrontPlayer
+endif
+
+DLC01WernherREF.moveto DLC01TP03SlaveMeetingMarker
+DLC01WernerCribREF.disable
+DLC01MideaBabyStuffEnabler.enable
+
+;Disable riot slaves
+DLC01RiotSlave1AREF.disable
+DLC01RiotSlave1BREF.disable
+DLC01RiotSlave1CREF.disable
+DLC01RiotSlave2AREF.disable
+DLC01RiotSlave2BREF.disable
+DLC01RiotSlave2CREF.disable
+DLC01RiotSlave3AREF.disable
+DLC01RiotSlave3BREF.disable
+DLC01RiotSlave3CREF.disable
+
+;Jesse's Section
+
+DLC01SlaveRebellionEnableMarker.enable ;this sets up the downtown 
+;slaves and raiders to fight and take appropriate locations
+
+DLC01DowntownRaider04.kill
+DLC01DowntownRaider06.kill
+DLC01JacksonRef.kill
+DLC01HarrisRef.kill
+DLC01DukeRef.kill
+DLC01VikiaRef.kill
+
+;The following is prep for setting up the uptown trog invasion
+DLC01AshurPalaceGuard01.kill
+DLC01AshurPalaceGuard02.kill
+
+DLC01LightsOutRaiderSwap.enable
+
+if DLC01SquillREF.getDead == 1
+	DLC01SquillReplacement.enable
+endif
+
+if DLC01MonaRef.getDead == 1
+	DLC01MonaReplacement.enable
+endif
+
+
+if DLC01ReddupRef.getDead == 0
+	DLC01ReddupReplacement.disable
+endif
+
+if DLC01ODogRef.getDead == 0
+	DLC01ODogReplacement.disable
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F24">DLC01SandraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001081">DLC01WernherREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001097">DLC01WernerCribREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B3E4">DLC01MideaBabyStuffEnabler</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9C3">DLC01RiotSlave1AREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9C5">DLC01RiotSlave1BREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9C7">DLC01RiotSlave1CREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9C9">DLC01RiotSlave2AREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9CA">DLC01RiotSlave2BREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9CB">DLC01RiotSlave2CREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9D0">DLC01RiotSlave3AREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9D1">DLC01RiotSlave3BREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A9D2">DLC01RiotSlave3CREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08009B27">DLC01SlaveRebellionEnableMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800687F">DLC01DowntownRaider04</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08006859">DLC01DowntownRaider06</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E63">DLC01JacksonREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E61">DLC01HarrisRef</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080045FB">DLC01DukeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08004601">DLC01VikiaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D3B">DLC01AshurPalaceGuard01</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D3C">DLC01AshurPalaceGuard02</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08009ACF">DLC01LightsOutRaiderSwap</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08009ACA">DLC01SquillReplacement</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080094B7">DLC01MonaReplacement</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D54">DLC01ReddupReplacement</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005D55">DLC01ODogReplacement</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800AA78">DLC01AshurConfrontMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080039CA">DLC01TP03ConfrontPlayer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F21">DLC01Sandra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800AA79">DLC01SandraConfrontMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800AA7A">DLC01TP03SandraConfrontPlayer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080039F9">DLC01TP03SlaveMeetingMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08004600">DLC01SquillREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080045FD">DLC01MonaREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080045FF">DLC01ReddupREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080045FE">DLC01ODogREF</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">156</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">157</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">158</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">159</Index>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">200</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">(quest completed stage - PATH A)</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>19</ReferenceCount>
+                <CompiledSize>282</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHwRBQABAHIIAHcRBwABAG6WAAAAHAABAAERAAAcAAIAcxACAAAAHAADAHMQAgAAAKIRDwADAHIJAG6+AAAAbgEAAAA3EAUAAQByCQA2EAUAAQByCgADEAoAAgByCwBuAAAAAAMQCgACAHIMAG4AAAAAAxAKAAIAcg0AbgAAAAADEAoAAgByDgBuAAAAAAMQCgACAHIPAG4AAAAAHAAEACEQAgAAABwABQAiEAIAAAAcAAYAfxEKAAIAchAAbgEAAAAcAAcAfxEKAAIAchAAbgEAAAB4EBIABAByEQByEgBuAQAAAG4BAAAAEREHAAEAbgEAAABKEQcAAQBuOQAAABwAAQBSEA8AAwByEwBuAQAAAG4BAAAA</CompiledScript>
+              <ScriptSource Tag="SCTX">;Now you get rewards.
+;Player.addperk DLC01BoosterShot - ADDED DURING DIALOGUE
+Player.addnote DLC01MillAmmoNote
+RewardXP 150
+player.scaonactor
+PittWorldtoMarketSquareREF.unlock
+DLC01DowntownGateREF.unlock
+
+setObjectiveCompleted DLC01Quest03 190 1
+stopQuest DLC01Quest03
+startQuest DLC01Quest03fin
+
+setessential DLC01Midea 0
+setessential DLC01Wernher 0
+setessential DLC01Ashur 0
+setessential DLC01Sandra 0
+setessential DLC01Everett 0
+
+DLC01TrainYardMapMARKER.Enable
+
+;Remove light terminal
+DLC01LightControlREF.disable
+
+;Add Ashur and Sandra to appropriate factions, now that you can
+DLC01AshurREF.addtofaction DLC01PittRaiderFaction 1
+DLC01SandraREF.addtofaction DLC01PittRaiderFaction 1
+
+;Restore neutral faction relations
+setEnemy DLC01CombatRaiders PlayerFaction 1 1
+
+;Re-enable fast travel
+EnableFastTravel 1
+
+;Achievement!
+AddAchievement 57
+
+;Remove baby, just in case.
+player.removeitem DLC01Baby 1 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800150C">PittWorldtoMarketSquareREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FD2">DLC01DowntownGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080054DB">DLC01TrainYardMapMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08006BE8">DLC01LightControlREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F24">DLC01SandraREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007356">DLC01MillAmmoNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007353">DLC01Quest03fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001082">DLC01Wernher</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F21">DLC01Sandra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A688">DLC01Everett</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080032AC">DLC01PittRaiderFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375A">DLC01CombatRaiders</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">205</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">CompleteQuest</StageFlags>
+            <LogEntry Tag="CNAM">(quest completed - PATH B)</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>21</ReferenceCount>
+                <CompiledSize>293</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAHYRBQABAHIJAFkQCwABAHIKAAAAAAAAABwAAQB8EQUAAQByCwB3EQcAAQBulgAAABwAAQABEQAAHAACAHMQAgAAABwAAwBzEAIAAACiEQ8AAwByDABuwwAAAG4BAAAANxAFAAEAcgwANhAFAAEAcg0AAxAKAAIAcg4AbgAAAAADEAoAAgByDwBuAAAAAAMQCgACAHIQAG4AAAAAAxAKAAIAchEAbgAAAAADEAoAAgByEgBuAAAAABwABAAhEAIAAAB4EBIABAByEwByFABuAQAAAG4BAAAAEREHAAEAbgEAAAAcAAUAixACAAAAHAAGAIsQAgAAABwABwCLEAIAAAAcAAgAIhACAAAAHAABAFIQDwADAHIVAG4BAAAAbgEAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">;Now you get rewards
+Player.addperk DLC01BoosterShot
+ShowMessage DLC01PerkBoosterShotMessageBox
+Player.addnote DLC01MillAmmoNote
+RewardXP 150
+player.scaonactor
+PittWorldtoMarketSquareREF.unlock
+DLC01DowntownGateREF.unlock
+
+setObjectiveCompleted DLC01Quest03 195 1
+stopQuest DLC01Quest03
+startQuest DLC01Quest03fin
+
+;Make people non-essential anymore
+setessential DLC01Midea 0
+setessential DLC01Wernher 0
+setessential DLC01Ashur 0
+setessential DLC01Sandra 0
+setessential DLC01Everett 0
+
+DLC01TrainYardMapMARKER.Enable
+
+;Restore neutral faction relations
+setEnemy DLC01CombatSlaves PlayerFaction 1 1
+
+;Re-enable fast travel
+EnableFastTravel 1
+
+;Achievement!
+;AddAchievement 57
+
+;Disable slave in stockade
+DLC01SlaveStockadeREF.kill
+DLC01KaiREF.kill
+DLC01AdanREF.kill
+DLC01SpectatorMasterREF.disable
+
+;Remove baby, just in case.
+player.removeitem DLC01Baby 1 1</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800150C">PittWorldtoMarketSquareREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08005FD2">DLC01DowntownGateREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080054DB">DLC01TrainYardMapMARKER</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A3D9">DLC01SlaveStockadeREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E5B">DLC01KaiREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08003E54">DLC01AdanREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080038BC">DLC01SpectatorMasterREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007354">DLC01BoosterShot</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800B784">DLC01PerkBoosterShotMessageBox</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007356">DLC01MillAmmoNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08007353">DLC01Quest03fin</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800109B">DLC01Midea</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001082">DLC01Wernher</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F20">DLC01Ashur</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F21">DLC01Sandra</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800A688">DLC01Everett</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800375B">DLC01CombatSlaves</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001B2A4">PlayerFaction</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">255</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">FailQuest</StageFlags>
+            <LogEntry Tag="CNAM">(No paths can be completed, quest failed, end DLC main quest)</LogEntry>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>77</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">WRALAAEAcgMAAAAAAAAAFgAWAAEAEgAgcgQAWC8QBQABAHIFACAwID4cAAEAJRAFAAEAcgYAGQAAADcQBQABAHIHABwAAgAhEAIAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">showMessage DLC01QuestFailedBabyMessage
+if player.getitemcount DLC01Baby &gt; 0
+   DLC01MideaHutMarker.placeatme DLC01Beth
+endif
+stopQuest DLC01Quest03
+DLC01AshurRef.enable</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="08001099">DLC01MideaHutMarker</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F25">DLC01AshurREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080039D2">DLC01QuestFailedBabyMESSAGE</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="08000F39">DLC01Baby</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="080039C9">DLC01Beth</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0800108D">DLC01Quest03</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+    <Objectives>
+      <Objective>
+        <Index Tag="QOBJ">70</Index>
+        <Description Tag="NNAM">Find out Wernher's location from Midea.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0800109B">DLC01Midea</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08005FBD">DLC01MideaNoteBackupREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0800109B">DLC01Midea</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">10</Index>
+        <Description Tag="NNAM">Meet Ashur in Haven.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F25">DLC01AshurREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">20</Index>
+        <Description Tag="NNAM">Find the cure in Ashur's palace.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F24">DLC01SandraREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080080A4">DLC01SandraTerminalREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">30</Index>
+        <Description Tag="NNAM">Kidnap the baby and leave OR leave without the baby.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F36">DLC01AshurCribREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0800108D">DLC01Quest03</Quest>
+                  <VariableIndex>16</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="08000F39">DLC01Baby</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080071CE">DLC01HavenOutsideMarkerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">32</Index>
+        <Description Tag="NNAM">Leave without the baby.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080071CE">DLC01HavenOutsideMarkerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">55</Index>
+        <Description Tag="NNAM">Find Wernher.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3E">DLC01WernherHideout</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0800108D">DLC01Quest03</Quest>
+                  <VariableIndex>5</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080011C0">SteelMill02toSteelMillExteriorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3E">DLC01WernherHideout</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">0</Index>
+        <Description Tag="NNAM"></Description>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">37</Index>
+        <Description Tag="NNAM">Steal the baby and leave.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F36">DLC01AshurCribREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="08000F39">DLC01Baby</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080071CE">DLC01HavenOutsideMarkerREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="08000F39">DLC01Baby</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">50</Index>
+        <Description Tag="NNAM">Stop Wernher.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3E">DLC01WernherHideout</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0800108D">DLC01Quest03</Quest>
+                  <VariableIndex>5</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080011C0">SteelMill02toSteelMillExteriorREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08000F3E">DLC01WernherHideout</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">90</Index>
+        <Description Tag="NNAM">Give Wernher the baby, OR stop Wernher.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001097">DLC01WernerCribREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">92</Index>
+        <Description Tag="NNAM">Stop Wernher.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">97</Index>
+        <Description Tag="NNAM">Give Wernher the baby.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001097">DLC01WernerCribREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">100</Index>
+        <Description Tag="NNAM">Return the baby to her home.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F36">DLC01AshurCribREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">105</Index>
+        <Description Tag="NNAM">Shut off power for Uptown's lights.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08006BE8">DLC01LightControlREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08006355">DLC01PowerPlant</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001509">SteelMill01to02REF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011AA">DLC01Haven</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08006355">DLC01PowerPlant</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08006971">DLC01SteelYardtoPowerPlantREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011AA">DLC01Haven</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08006355">DLC01PowerPlant</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">190</Index>
+        <Description Tag="NNAM">Return to Ashur.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08000F25">DLC01AshurREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="080011AB">DLC01SteelMill02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08001338">DLC01SteelMill04</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080011B8">SteelMilltoHavenREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="080011AB">DLC01SteelMill02</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>Or</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInCell</Type>
+                  <Cell ID="08001338">DLC01SteelMill04</Cell>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetInWorldspace</Type>
+                  <Worldspace ID="080011A9">DLC01SteelMillExterior</Worldspace>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Reference</RunOn>
+                <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">195</Index>
+        <Description Tag="NNAM">Escape to Market Square.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001081">DLC01WernherREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">75</Index>
+        <Description Tag="NNAM">Bring the baby to Midea.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0800109B">DLC01Midea</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08005FBD">DLC01MideaNoteBackupREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0800109B">DLC01Midea</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">71</Index>
+        <Description Tag="NNAM">Search Midea or her room for clues about Wernher's location.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08005FBD">DLC01MideaNoteBackupREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetDeadCount</Type>
+                  <ActorBase ID="0800109B">DLC01Midea</ActorBase>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08003099">DLC01MideaREF</Target>
+              <Flags>0</Flags>
+            </Target>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>GreaterThanOrEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetItemCount</Type>
+                  <InventoryObject ID="08005FBA">DLC01MideaNote</InventoryObject>
+                  <Unused>AAAAAA==</Unused>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">5</Index>
+        <Description Tag="NNAM">Go through Uptown and enter Haven.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="08001505">HaventoAshurPalaceREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+      <Objective>
+        <Index Tag="QOBJ">1</Index>
+        <Description Tag="NNAM">Retrieve your gear.</Description>
+        <Targets>
+          <Target>
+            <Target Tag="QSTA">
+              <Target ID="080071C1">DLC01PlayerItemContainerReturnREF</Target>
+              <Flags>0</Flags>
+            </Target>
+          </Target>
+        </Targets>
+      </Objective>
+    </Objectives>
+  </Subrecords>
+</Record>

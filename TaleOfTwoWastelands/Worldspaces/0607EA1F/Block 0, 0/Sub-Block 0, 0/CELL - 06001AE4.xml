@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="06001AE4">CELL - 06001AE4</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <CellFlags Tag="DATA">HasWater</CellFlags>
+    <Grid Tag="XCLC">
+      <X>1</X>
+      <Y>1</Y>
+      <ForceHideLand>0</ForceHideLand>
+    </Grid>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogColor, FogNear, FogFar, FogClipDistance</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">10750</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <Regions Tag="XCLR">
+      <Forms>
+        <Form ID="0003899C">CapitalWastelandBorderRegion</Form>
+        <Form ID="0003DE77">Region8</Form>
+        <Form ID="00071404">Navmesh07</Form>
+        <Form ID="0009FA59">AudioExtWastelandA</Form>
+        <Form ID="06070823">navmesh06</Form>
+      </Forms>
+    </Regions>
+    <Water Tag="XCWT">
+      <Reference ID="0007E421">PotomacNRShallow</Reference>
+    </Water>
+  </Subrecords>
+</Record>

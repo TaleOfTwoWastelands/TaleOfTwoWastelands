@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0606F1E8">PerkLawbringer</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">PerkLawbringer</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0606F21D">PerkLawbringerQuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">Lawbringer</Name>
+    <Data Tag="DATA">
+      <Flags>25</Flags>
+      <Priority>60</Priority>
+      <QuestDelay>0</QuestDelay>
+    </Data>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>HasPerk</Type>
+          <Perk ID="06044CAC">Lawbringer</Perk>
+          <Rank>0</Rank>
+        </Function>
+        <RunOn>Reference</RunOn>
+        <RunOnReference ID="00000014">UnfoundReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>151</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAVAHICAHMDAA0AIHICAHMCACBHAwAgKhUAGAByAgBzBQAQACByAgBzBQAgcgIAcwIAICsVABUAcgIAcwYADQAgcgIAcwIAIEcEACAqHAABAAQSCAABAHICAHMGABwAAQACEAsAAgByBQByAgBzAwAcAAEAUhAKAAIAcgYAbucDAAA7EhAAAwByBwBuAQAAAHICAHMCAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set PerkLawbringer.FingerRewardAmount to ( PerkLawbringer.PlayerFingersCount * PerkLawbringerRewardMultBonus)
+set PerkLawbringer.TotalFingersSold to ( PerkLawbringer.TotalFingersSold + PerkLawbringer.PlayerFingersCount )
+set PerkLawbringer.KarmaRewardAmount to ( PerkLawbringer.PlayerFingersCount * PerkContractKarmaReward )
+player.RewardKarma PerkLawbringer.KarmaRewardAmount 
+player.AddItem Caps001 PerkLawbringer.FingerRewardAmount 
+player.RemoveItem Finger 999
+AddReputationExact RepTTWRegulators 1 PerkLawbringer.PlayerFingersCount</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606F1E8">PerkLawbringer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006F221">PerkLawbringerRewardMultBonus</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BF785">PerkContractKarmaReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000604DE">Finger</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F6">RepTTWRegulators</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">20</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>7</ReferenceCount>
+                <CompiledSize>151</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAVAHICAHMDAA0AIHICAHMCACBHAwAgKhUAGAByAgBzBQAQACByAgBzBQAgcgIAcwIAICsVABUAcgIAcwYADQAgcgIAcwIAIEcEACAqHAABAAQSCAABAHICAHMGABwAAQACEAsAAgByBQByAgBzAwAcAAEAUhAKAAIAcgYAbucDAAA7EhAAAwByBwBuAQAAAHICAHMCAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">set PerkLawbringer.FingerRewardAmount to ( PerkLawbringer.PlayerFingersCount * PerkLawbringerRewardMultNormal)
+set PerkLawbringer.TotalFingersSold to ( PerkLawbringer.TotalFingersSold + PerkLawbringer.PlayerFingersCount )
+set PerkLawbringer.KarmaRewardAmount to ( PerkLawbringer.PlayerFingersCount * PerkContractKarmaReward )
+player.RewardKarma PerkLawbringer.KarmaRewardAmount 
+player.AddItem Caps001 PerkLawbringer.FingerRewardAmount 
+player.RemoveItem Finger 999
+AddReputationExact RepTTWRegulators 1 PerkLawbringer.PlayerFingersCount</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0606F1E8">PerkLawbringer</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0006F22E">PerkLawbringerRewardMultNormal</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="060BF785">PerkContractKarmaReward</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0000000F">Caps001</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000604DE">Finger</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0017F6">RepTTWRegulators</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

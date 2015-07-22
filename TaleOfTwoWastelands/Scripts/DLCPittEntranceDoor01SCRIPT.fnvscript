@@ -1,0 +1,58 @@
+SCN DLCPittEntranceDoor01SCRIPT
+
+short	AmbushCheck
+
+BEGIN OnActivate
+
+	if ( IsActionRef Player == 1 )
+		if ( GetStageDone DLC01Quest01 200 == 0 )
+			if ( DLC01Quest02.PlayerPosedAsSlave == 1 )
+				SetQuestObject DLC01ConcealedPistol  0
+				SetQuestObject DLC01ConcealedSwitchBlade 0
+				Player.RemoveItem DLC01ConcealedPistol 1 1
+				Player.RemoveItem DLC01ConcealedSwitchblade 1 1
+				Player.RemoveItem DLC01SlaveOutfit 1 1
+				Player.RemoveAllItems DLC01PlayerItemContainerREF
+				Player.AddItem DLC01CondSlaveOutfit01 1 1
+				Player.EquipItem DLC01SlaveOutfit 0 1
+
+				DLC01PlayerItemContainerREF.RemoveAllTypedItems player 1 1 40
+				DLC01PlayerItemContainerREF.RemoveAllTypedItems player 1 1 41
+
+				;Remove all weapons except holdouts.
+				if Player.GetActorValue Sneak >= 50
+					player.RemoveAllTypedItems DLC01PlayerItemContainerREF 1 0 40 NVImprovedHoldoutWeapons
+				else
+					player.RemoveAllTypedItems DLC01PlayerItemContainerREF 1 0 40 NVHoldoutWeapons
+				endif
+
+			endif
+
+			Activate
+			Set AmbushCheck to 1
+			EnablePlayerControls 
+			DLC01DowntownGateCollisionREF.Disable
+			DLC01FF006EnableMarker.Enable
+			;SetStage DLC01Quest01 200
+		else
+			Activate
+		endif
+	else
+		Activate
+	endif
+
+	if ( AmbushCheck == 1 )
+		if ( DLC01Quest02.PlayerFoughtGateGuards == 1 ) || ( DLC01Quest02.PlayerFooledGateGuards == 1 ) 
+			DLC01TrainYardMapMARKER.Disable
+			DLC01PittBridgeMapMarker.Disable
+			DLC01ReddupREF.MoveTo DLC01DowntownAmbushReddupMarker
+			DLC01DowntownAmbushEnableMARKER.Enable
+			
+			set DLC01DowntownAmbushControlREF.AmbushGo to 1
+			set AmbushCheck to -1
+		else
+			set AmbushCheck to -1
+		endif
+	endif
+
+END

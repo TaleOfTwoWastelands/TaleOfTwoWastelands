@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="000331D6">MS03Perk1D</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS03Perk1D</EditorID>
+    <Name Tag="FULL">Junior Survivor</Name>
+    <Description Tag="DESC">You've been tested in some of the most dangerous parts of the wastes, and you're still alive to tell the tale. You've gained +2% bonus to Poison Resistance &amp; Radiation Resistance, 2 points to both the Speech and Sneak skills, and 3 points to the Survival skill.</Description>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Perks\Perk_Survival Assistant.dds</Large>
+    </Icon>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0006F59E">MS03PerkSlySurvivalAssistant</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

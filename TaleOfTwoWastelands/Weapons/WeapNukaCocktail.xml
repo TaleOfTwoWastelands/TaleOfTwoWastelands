@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="06004342">WeapNukaCocktail</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">WeapNukaCocktail</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-2</X>
+        <Y>-3</Y>
+        <Z>-4</Z>
+      </Point1>
+      <Point2>
+        <X>4</X>
+        <Y>5</Y>
+        <Z>3</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Nuka-Grenade</Name>
+    <Model>
+      <FileName Tag="MODL">NVDLC05\Weapons\1handgrenadethrow\NVDLC05NukaGrenade.nif</FileName>
+      <TextureFileHash Tag="MODT">5eQLbqfWAT5lZAturNYBPndvInQ7BHrt7t8NbqieWaVuXw1urZ5ZpXdvInQ7BHrt898NbqieWaVzXw1urZ5ZpXdvInQ7BHrt</TextureFileHash>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">Interface\Icons\PipboyImages\Weapons\weapons_nuka_grenade.dds</Large>
+    </Icon>
+    <EquipmentType Tag="ETYP">ThrownWeapons</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="00087D64">ITMGrenadeUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="00087D65">ITMGrenadeDown</Reference>
+      </Drop>
+      <Equip Tag="NAM9">
+        <Reference ID="00003A03">WPNGrenadeFragEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="00003A04">WPNGrenadeFragUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <ScopeEffectModel>
+      <FileName Tag="MOD4">NVDLC05\Weapons\1handgrenadethrow\NVDLC05NukaGrenade.nif</FileName>
+    </ScopeEffectModel>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="000CA77E">GrenadePhysicalImpactHackDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="000C4915">1stPersonNukaGrenade</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>50</Value>
+      <Health>5</Health>
+      <Weight>0.5</Weight>
+      <BaseDamage>1</BaseDamage>
+      <ClipSize>12</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandGrenade</AnimationType>
+      <AnimationMultiplier>1</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>DontUse1stPersonIronSightAnimations</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadA</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>5</Spread>
+      <Unknown>AACAPw==</Unknown>
+      <SightFOV>55</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="0500081A">NVDLC05GrenadeNukaProjectile</Projectile>
+      <BaseVATSToHitChance>50</BaseVATSToHitChance>
+      <AttackAnimation>AttackThrow</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>1024</Max>
+      </Range>
+      <LimbKillBehavior>ExplodeOnly</LimbKillBehavior>
+      <Flags2>NPCsUseAmmo, OverrideActionPointCost, DontUse3rdPersonIronSightAnimations</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>3</FireRate>
+      <ActionPointCost>24</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>0.652173996</AttackShotsPerSecond>
+      <ReloadTime>1.29999995</ReloadTime>
+      <JamTime>1.39999998</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>Explosives</Skill>
+      <LimbDamageMult>1</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0.100000001</Min>
+        <Max>0.5</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0.100000001</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>Default</PowerAttackAnimation>
+      <StrengthRequirement>2</StrengthRequirement>
+      <Unknown4>255</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>1</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>100</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>0</Damage>
+      <ChanceMult>1</ChanceMult>
+      <Flags>OnDeath</Flags>
+      <Effect ID="000A73D7">FlamerCritEffect02</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>0</SkillRequirement>
+      <DamageMult>0</DamageMult>
+      <APCost>0</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Normal</SoundLevel>
+  </Subrecords>
+</Record>

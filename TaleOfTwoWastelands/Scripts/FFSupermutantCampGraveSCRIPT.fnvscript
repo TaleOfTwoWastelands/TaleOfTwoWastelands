@@ -1,0 +1,29 @@
+scn FFSupermutantCampGraveSCRIPT
+
+short Opened
+
+begin OnActivate
+
+	if IsActionRef player
+		if Opened
+			Activate
+		elseif ( player.GetItemCount WeapShovel >= 1  )
+			Activate
+			set Opened to 1
+		else
+			showMessage NoShovelMsg
+		endif
+		
+		if Opened
+			if getisID FFMutantCampGrave01
+				set NQlvl.foundGrave01 to 1
+			elseif getisID FFMutantCampGrave03
+				set NQlvl.foundGrave03 to 1
+				FFMutantCampGrave04REF.enable
+			elseif getisID FFMutantCampGrave04
+				FFSupermutantCamp01Marker.enable
+			endif
+		endif
+	endif
+
+end

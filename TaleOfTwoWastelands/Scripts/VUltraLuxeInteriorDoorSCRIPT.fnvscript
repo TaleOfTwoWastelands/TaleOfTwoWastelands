@@ -1,0 +1,37 @@
+ScriptName VUltraLuxeInteriorDoorSCRIPT
+
+ref rSelf;
+
+BEGIN OnActivate
+		set rSelf to GetSelf;
+
+		if (IsActionRef Player == 1)
+			VMS18WhiteGloveGreeterREF.MoveTo VULGreeterMarkerREF
+			if (VMS18.bHoldoutFrisk)
+				VUltraLuxeFriskingHoldoutTriggerREF.Activate Player 1;
+				set VMS18.bHoldoutFrisk to 0;
+			else
+				VUltraLuxeFriskingTriggerREF.Activate Player 1
+			endif
+		
+			VMS18WhiteGloveGreeterREF.ResetAI
+			if GetQuestRunning VUltraLuxeSecurity == 1
+				StopQuest VUltraLuxeSecurity
+			endif
+		
+			set VMQTops.StoleWeaponsBack to 0
+
+			; The below code activates the door on a slight delay. The delay addresses a bug where if weapons were returned to the companions during a transition,
+			; the weapons would not load in properly after the transition and companions wouldn't be able to use them until they reloaded a save.		
+			set VGenericTimer.rRef to GetSelf;
+			set VGenericTimer.nEvent to 10;
+			set VGenericTimer.fTimer to 0.3;
+			DisablePlayerControls 0 1 1;
+			StartQuest VGenericTimer;
+
+		elseif (IsActionREF rSelf || IsActionRef CraigBooneREF || IsActionRef EDE1REF || IsActionRef EDE2REF || IsActionRef EDE3REF   || IsActionRef VeronicaREF || IsActionRef ArcadeREF || IsActionRef LilyREF || IsActionRef RaulREF || IsActionRef RexREF || IsActionRef RoseOfSharonCassidyREF || IsActionRef CharonRef || IsActionRef ButchRef || IsActionRef CloverRef || IsActionRef JerichoRef || IsActionRef MQ08FawkesRef || IsActionRef StarPaladinCrossRef || IsActionRef DogmeatRef || IsActionRef RL3REF)
+			Activate
+		endif
+	endif
+	
+END

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0602AB93">ShortyScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ShortyScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>592</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAACcBAAAWAA0AAgAJACBzBAAgMCA9PRUADwBzAwAKACBYDhAEAAEAAAAVAAcAcwQAAgAgMRkAAAAWADEAAwAtACBYOxAKAAIAcgIAbvsAAAAgMSA9PSBYOxAKAAIAcgIAbrQAAAAgMSA9PSB8fBYADwABAAsAIFguEAAAIDAgPT2LEAIAAAAZAAAAGQAAABYAEAAJAAwAIHICAHMDACAxID09FgASAAMADgAgcgMAWB4RAAAgMSA9PRYADwABAAsAIFjSEAAAIDAgPT3TEAcAAQBuAQAAABkAAAAXAAIAAwAWAA8AAQALACBY0hAAACAxID090xAHAAEAbgAAAAAZAAAAGQAAABgADwABAAsAIFjSEAAAIDEgPT3TEAcAAQBuAAAAABkAAAARAAAAEAALAA8ADwAAAAEAcgQAFQAHAHMHAAIAIDARAAAAEAALABAAEgAAAAEAcgQAORAKAAIAcgIAbloAAAARAAAAEAALABQAFgAAAAEAcgUAHAABAA8QCgACAAAAcgEAcwMAEQAAABAACAAKABIAAAAAADkQCgACAHICAG6gAAAAEQAAABAACAACAFQAAAAAABYAIAADABwAIFhpEAUAAQByAwAgcgEAWMYRAAAgMSA9PSAmJhUABwBzCQACACAxxREHAAEAbgAAAAANEAIAAAAXAAIAAQANEAIAAAAZAAAAEQAAABAABgAAAC8AAAAWAA0AAgAJACBzCQAgMSA9PRUABwBzCQACACAwxREHAAEAbgEAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="ShortyScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">kitchenStage</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">startingAggression</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">init</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">rescued</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">followingPlayer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">arrivedAtBigTown</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">TeammateSwapped</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06028029">ShortyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E94">MS01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602907E">MS01ShortyToBigTown</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602ABA4">MS01KitchenWaitForDialog</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

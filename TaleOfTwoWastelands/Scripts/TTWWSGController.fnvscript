@@ -1,0 +1,38 @@
+scn TTW_WSGController
+
+float fTimer
+short bDisabled
+
+Begin gamemode
+
+	if bDisabled == 2
+		return
+	endif
+
+	set fTimer to fTimer - GetSecondsPassed
+
+	if fTimer <= 0
+		if bDisabled == 0
+			Disable
+			set bDisabled to 1
+		elseif bDisabled == 1
+			if getstage MS03 >= 225
+				Enable
+				set bDisabled to 2
+			endif
+		endif
+		set fTimer to 5
+	endif
+
+end
+
+Begin OnAdd
+
+	if bDisabled == 1
+
+		removeitem BookSkillSurvival 1 1
+		additem MagazineNVSurvival 1 1
+
+	endif
+
+End

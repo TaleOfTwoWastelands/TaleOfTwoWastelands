@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="070068AD">DLC02ArtyBaseCavern</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC02ArtyBaseCavern</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-194</X>
+        <Y>-266</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>194</X>
+        <Y>266</Y>
+        <Z>332</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Chimera Tank</Name>
+    <Model>
+      <FileName Tag="MODL">DLCAnch\Creatures\Chimera\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88D">SentryBotDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>chimera.nif</Entry>
+      <Entry>fxleftaddon.nif</Entry>
+      <Entry>fxrightaddon.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, NoBloodSpray, NoBloodDecal, NoCombatInWater, AllowPCDialogue, CannotOpenDoors, NotPushable, Invulnerable</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>-500</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="070043F1">DLC02CombatChineseFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <Script Tag="SCRI">
+      <Reference ID="07003E15">dlcAnchCreaturesChimeraSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004485">AmmoMicroFusionCell</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="07003BFB">DLCAnchChimeraLaserCanon</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="07003E21">DLCAnchChimeraLobber</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="070068AE">DLC02ArtyBaseChimeraTravelTo</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07003E19">DLCAnchChimeraPatrol</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="07003E1A">DLCAnchChimeraGuard</Reference>
+      </Package>
+    </Packages>
+    <Animations Tag="KFFZ">
+      <Entry>2hlaim.kf</Entry>
+      <Entry>2hlattackleft.kf</Entry>
+      <Entry>2hlequip.kf</Entry>
+      <Entry>2hlholster.kf</Entry>
+      <Entry>2hlunequip.kf</Entry>
+    </Animations>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>50</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>150</Health>
+      <Damage>0</Damage>
+      <Strength>5</Strength>
+      <Perception>2</Perception>
+      <Endurance>10</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">32</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="07003E14">CSChimera</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0000001D">DefaultBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">15</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">20</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0700347A">AudioTemplateChimera</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="07003E91">DLC02EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,60 @@
+scn DoctorTemplateSCRIPT
+
+short	DoOnce								;Script blocker
+float	Timer									;Timer used for animation control
+
+BEGIN GameMode
+
+	;When set to 1, plays medical animations for eight seconds then restarts conversation with the player
+	if ( GetAV Variable01 == 1 )
+		if ( DoOnce== 0 )
+			disablePlayerControls
+			set Timer to 8
+			set DoOnce to 1
+			resetai
+		endif
+
+		set Timer to ( Timer - GetSecondsPassed )
+
+		if ( Timer <= 6 ) && ( DoOnce == 1 )
+			IMod FadeToBlackISFX
+			set DoOnce to 2
+		endif
+
+		if ( Timer <= 0 ) &&  ( IsImagespaceActive FadeToBlackISFX == 0 )
+			setstage VDoctors 10
+			enablePlayerControls
+			SetAv Variable01 3 
+			resetai
+			Set DoOnce to 0
+		endif
+		
+	endif
+
+	;When set to 1, plays medical animations for eight seconds then restarts conversation with the player
+	if ( GetAV Variable01 == 2 )
+		if ( DoOnce== 0 )
+			disablePlayerControls
+			set Timer to 10
+			set DoOnce to 1
+			resetai
+		endif
+
+		set Timer to ( Timer - GetSecondsPassed )
+
+		if ( Timer <= 6 ) && ( DoOnce == 1 )
+			IMod FadeToBlackISFX
+			set DoOnce to 2
+		endif
+
+		if ( Timer <= 0 ) && ( IsImagespaceActive FadeToBlackISFX == 0 )
+			setstage VDoctors 20
+			enablePlayerControls
+			SetAv Variable01 3 
+			resetai
+			Set DoOnce to 0
+		endif
+		
+	endif
+
+END

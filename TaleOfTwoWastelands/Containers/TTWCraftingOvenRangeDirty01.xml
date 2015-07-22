@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>NavMeshGenerationBoundingBox</Flags>
+  <FormID ID="0C001E0A">TTWCraftingOvenRangeDirty01</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWCraftingOvenRangeDirty01</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-36</X>
+        <Y>-41</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>36</X>
+        <Y>41</Y>
+        <Z>90</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Oven</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Junk\RangeDirty01.NIF</FileName>
+    </Model>
+    <Script Tag="SCRI">
+      <Reference ID="0013E3FB">CraftingCampfireRecipesScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000182B4">OvenFood25</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <OpenSound Tag="SNAM">
+      <Reference ID="0015E24E">DRSOvenRangeOpen</Reference>
+    </OpenSound>
+    <CloseSound Tag="QNAM">
+      <Reference ID="0015E24D">DRSOvenRangeClose</Reference>
+    </CloseSound>
+    <Random_LoopingSound Tag="RNAM">
+      <Reference ID="0015E24C">EMTOvenRange</Reference>
+    </Random_LoopingSound>
+  </Subrecords>
+</Record>

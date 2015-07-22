@@ -1,0 +1,170 @@
+scn DLC04AchievementQuestSCRIPT
+
+short MarkersFound
+
+begin GameMode
+
+	if markersFound < 29 	;right now there are 28 markers found through tmm 1 in point lookout.
+
+
+		if ( DLC04OzyMapMarker.GetMapMarkerVisible == 2 )		;Ozymandias, don't calc for other markers
+			set markersFound to markersFound + 1
+		
+			if ( DLC04SeatubMarker.GetMapMarkerVisible == 2 )	; 6, 7 Wrecked seatub
+				set markersFound to markersFound + 1
+
+				if ( DLC04CoastalGrottoMapMarker.GetMapMarkerVisible == 2 )		;7,5
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04ArkDoveMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04CathedralMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04TruckWreckMarkerREF.GetMapMarkerVisible == 2 )	;2 7
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04TurtledoveMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04MargeMarkerREF.GetMapMarkerVisible == 2 )	 ;0 5
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04TrashHeapMarkerREF.GetMapMarkerVisible == 2 )	; -2 6
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04TrapperShackMarkerREF.GetMapMarkerVisible == 2 )
+					set markersFound to markersFound + 1
+					
+				endif
+
+			endif
+
+			if ( DLC04JetCrashMarker.GetMapMarkerVisible == 2 )		;- 6, 7 Jet Crash
+				set markersFound to markersFound + 1
+
+				if ( DLC04FloodedSinkholeMarkerREF.GetMapMarkerVisible == 2 )	;-4 5
+					set markersFound to markersFound + 1
+					
+				endif
+
+				;if ( DLC04RazedLodgeMarkerREF.GetMapMarkerVisible == 2 )	;-7, 6 removed, map marker is disabled.
+				;	set markersFound to markersFound + 1
+					
+				;endif
+
+				if ( DLC04BogEntranceMarkerREF.GetMapMarkerVisible == 2 )	;-7 5
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04GrowShackMarkerREF.GetMapMarkerVisible == 2 )	;-6 4
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04PlayhouseMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04HerzogMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04HaleyHardwareMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( RitualSiteMarker.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04VelmasMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+			endif
+
+			if ( DLC04DoveMarkerREF.GetMapMarkerVisible == 2 )	;-8, -1 Dove Delta
+				set markersFound to markersFound + 1
+
+				if ( DLC04CalvertMansionMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04MotelMapMarker.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04BoardwalkVendorMapMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04PilgrimLandingMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04DuchessGambitMarkerREF.GetMapMarkerVisible == 2 )
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04OfieMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( MedicalTentMarker.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04BlackhallMarkerREF.GetMapMarkerVisible == 2 )	
+					set markersFound to markersFound + 1
+					
+				endif
+
+				if ( DLC04LighthouseMarkerREF.GetMapMarkerVisible == 2 )
+					set markersFound to markersFound + 1
+					
+				endif
+
+			endif
+		endif
+
+
+		if markersFound < 29		;if the tally is less than 30, reset for the next run through gameMode
+			set markersFound to 0
+		else
+;			addAchievement 68
+;			showWarning "award Achievement"
+		endif
+	endif
+	
+
+
+end

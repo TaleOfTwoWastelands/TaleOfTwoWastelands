@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CONT">
+  <Flags>NavMeshGenerationBoundingBox</Flags>
+  <FormID ID="06002FCA">OvenRangeDirty01DC</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">OvenRangeDirty01DC</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-36</X>
+        <Y>-41</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>36</X>
+        <Y>41</Y>
+        <Z>90</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Oven</Name>
+    <Model>
+      <FileName Tag="MODL">Clutter\Junk\RangeDirty01.NIF</FileName>
+      <TextureFileHash Tag="MODT">+fQKciePIxx5dApyLI8jHGtuFXTeQ2aF7t8MciNgZZ5uXwxyKGBlnmtuFXTeQ2aF898MciNgZZ5zXwxyKGBlnmtuFXTeQ2aF</TextureFileHash>
+    </Model>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="001767A3">OvenLight35</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0C00DFC9">OvenFoodGood25DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <Data Tag="DATA">
+      <Flags>0</Flags>
+      <Weight>0</Weight>
+    </Data>
+    <OpenSound Tag="SNAM">
+      <Reference ID="0015E24E">DRSOvenRangeOpen</Reference>
+    </OpenSound>
+    <CloseSound Tag="QNAM">
+      <Reference ID="0015E24D">DRSOvenRangeClose</Reference>
+    </CloseSound>
+    <Random_LoopingSound Tag="RNAM">
+      <Reference ID="0015E24C">EMTOvenRange</Reference>
+    </Random_LoopingSound>
+  </Subrecords>
+</Record>

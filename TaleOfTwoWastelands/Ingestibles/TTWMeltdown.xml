@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ALCH">
+  <Flags>0</Flags>
+  <FormID ID="0C00DF9B">TTWMeltdown</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWMeltdown</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Meltdown</Name>
+    <Model>
+      <FileName Tag="MODL">clutter\health\AntivenomBark.NIF</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">interface\icons\pipboyimages\items\item_tremble.dds</Large>
+    </Icon>
+    <EquipmentType Tag="ETYP">Chems</EquipmentType>
+    <Weight Tag="DATA">0.5</Weight>
+    <Data Tag="ENIT">
+      <Value>0</Value>
+      <Flags>0</Flags>
+      <WithdrawalEffect ID="00000000">NullReference</WithdrawalEffect>
+      <AddictionChance>0</AddictionChance>
+      <ConsumeSound ID="00000000">NullReference</ConsumeSound>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00033595">DamageHealth</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>10</Magnitude>
+          <Area>0</Area>
+          <Duration>10</Duration>
+          <Type>Self</Type>
+          <ActorValue>Health</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

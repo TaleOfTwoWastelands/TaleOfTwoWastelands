@@ -1,0 +1,253 @@
+scn MS13CollarEffectScript
+
+
+;!!!!!!!!!!!!!!!!------------- the "don't dispel on death" flag in the Magic Effect form it needs to be marked so this script with work properly with the death on the actor ---------------!!!!!!!!!!!!!!!!!!!!!!!!
+
+short arrived
+
+short statsChanged		; set to 1 after Mezzed spell goes away and stats have been changed
+
+; save original stats so we can restore them if collar removed
+short StartingAggression
+Short StartingAssistance 
+Short StartingConfidence 
+Short StartingEnergy 
+Short StartingResponsibility 
+Short StartingMood 
+short StartingIgnoreCrime
+
+float alarmTimer
+
+Begin ScriptEffectStart
+	; get rid of mezzed spell
+	dispel MS13MezzedSpell
+
+	;add to a faction which is friends with the player so that I won't aggro on player even if he has a crime tracking faction that hates the player
+	addToFaction MS13CollarFaction 0
+	set StartingIgnoreCrime to GetIgnoreCrime 
+	ignoreCrime 1
+
+	; make sure running correct package
+	if GetInCell PFallsSlaveHouse == 0
+		AddScriptPackage MS13TravelToParadiseFalls
+	endif
+
+End
+
+Begin ScriptEffectUpdate
+	if statsChanged == 0
+		if HasMagicEffect MS13Mezzed == 0
+			; don't change stats until mezzed effect goes away, to make sure we're looking at REAL stats
+			set statsChanged to 1
+
+			; save stats for VIPs in case they're rescued after arriving in PF
+			if GetIsID Red == 1 && MS13.RedStatsChanged == 0
+				set MS13.RedStatsChanged to 1
+				set MS13.RedAggression to getAv aggression
+				set MS13.RedAssistance to getAv assistance
+				set MS13.RedConfidence to getAv confidence
+			elseif GetIsID Flak == 1 && MS13.FlakStatsChanged == 0
+				set MS13.FlakStatsChanged to 1
+				set MS13.FlakAggression to getAv aggression
+				set MS13.FlakAssistance to getAv assistance
+				set MS13.FlakConfidence to getAv confidence
+			elseif GetIsID SusanLancaster == 1 && MS13.SusanStatsChanged == 0
+				set MS13.SusanStatsChanged to 1
+				set MS13.SusanAggression to getAv aggression
+				set MS13.SusanAssistance to getAv assistance
+				set MS13.SusanConfidence to getAv confidence
+			elseif GetIsID Arkansas == 1 && MS13.ArkansasStatsChanged == 0
+				set MS13.ArkansasStatsChanged to 1
+				set MS13.ArkansasAggression to getAv aggression
+				set MS13.ArkansasAssistance to getAv assistance
+				set MS13.ArkansasConfidence to getAv confidence
+			endif
+
+			set StartingAggression to getAv Aggression
+			set StartingAssistance to getAv Assistance
+			set StartingConfidence to getAv Confidence
+			set StartingEnergy to getAv Energy
+			set StartingResponsibility to getAv Responsibility
+			set StartingMood to getAv Mood 
+
+			;set up AI data
+			setAv Aggression 0
+			setAv Assistance 0
+			setAv Confidence 0
+			setAv Energy 5
+			setAv Responsibility 0
+			setAv Mood 4
+
+		endif
+	endif
+
+	; send assault alarm after exiting dialogue
+	; use actor value so we make sure to only do this once
+	if getav variable09 == 0
+		if menumode == 0
+			set alarmTimer to alarmTimer + ScriptEffectElapsedSeconds
+			if alarmTimer > 2
+				setav variable09 9
+				SendAssaultAlarm
+				stopcombat
+			endif
+		endif
+	endif
+
+	; make sure running correct package
+	if getIsCurrentPackage MS13TravelToParadiseFalls == 0 && getIsCurrentPackage MS13Enslaved == 0
+		AddScriptPackage MS13TravelToParadiseFalls
+	endif
+
+	if arrived == 0
+		if getDead == 1		; this only makes sense because the effect is marked not to be dispelled on death
+			set arrived to -1
+			set MS13Slaves.slaveArrived to -1		;(-1 = died)
+
+			GrouseRef.evp 	;to get him walking to forcegreet the player		
+		elseif getInCell ParadiseFallsExterior == 1 || GetInWorldspace ParadiseFalls == 1
+			;slave arrived on his own because he was a persistent actor, or a non-persistent actor who didn't unload (accompanied by the player)
+			set arrived to 1
+
+			; add to slave faction so slavers react to player attacking
+			addToFaction ParadiseFallsSlaveFaction 0
+
+			;check to see if this is any of the named targets of MS13 and set the proper variable
+			if GetSelf == RedRef 
+				if MS13.RedArrived == 0
+					set MS13.RedArrived to 1
+					set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+					setstage MS13 100
+				endif
+			elseif GetSelf == ArkansasRef
+				if MS13.ArkansasArrived == 0
+					set MS13.ArkansasArrived to 1
+					set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+					setstage MS13 100
+				endif
+			elseif GetSelf == FlakRef
+				if MS13.FlakArrived == 0
+					set MS13.FlakArrived to 1
+					set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+					setstage MS13 100
+				endif
+			elseif GetSelf == SusanLancasterRef
+				if MS13.SusanArrived == 0
+					set MS13.SusanArrived to 1
+					set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+					setstage MS13 100
+				endif
+			else
+				; only for generic slaves
+				set MS13Slaves.slaveArrived to 1	;(1 = he arrived for real)
+				
+				; added by Gribbleshnibit8 - TTW - 8/4/2014
+				IncrementScriptedChallenge TTWChallengeHumanResources
+				
+			endif
+	
+			GrouseRef.evp 	;to get him walking to forcegreet the player			
+
+		endif
+	endif
+
+End
+
+
+Begin ScriptEffectFinish
+	if MS13Slaves.debug == 1
+		ShowWarning "MS13CollarEffect -- ScriptEffectFinish"
+	endif
+
+	;This block will run if the spell is dispelled, which only happens when the NPC unloads (because the spell effect is marked not to dispell on death), of if the player removes the collar from the NPC
+
+     if MS13Slaves.playerRemovedCollar == 1
+		set MS13Slaves.playerRemovedCollar to -1
+
+		; reset stats back to original
+		removeFromFaction MS13CollarFaction
+		RemoveFromFaction ParadiseFallsSlaveFaction
+		RemoveScriptPackage
+
+		ignoreCrime StartingIgnoreCrime
+
+		if GetIsID Red == 1 && MS13.RedStatsChanged == 1
+			set MS13.RedStatsChanged to 0
+			setav aggression MS13.RedAggression
+			setav assistance MS13.RedAssistance
+			setav confidence MS13.RedConfidence
+		elseif GetIsID Flak == 1 && MS13.FlakStatsChanged == 1
+			set MS13.FlakStatsChanged to 0
+			setav aggression MS13.FlakAggression
+			setav assistance MS13.FlakAssistance
+			setav confidence MS13.FlakConfidence
+		elseif GetIsID SusanLancaster == 1 && MS13.SusanStatsChanged == 1
+			set MS13.SusanStatsChanged to 0
+			setav aggression MS13.SusanAggression
+			setav assistance MS13.SusanAssistance
+			setav confidence MS13.SusanConfidence
+		elseif GetIsID Arkansas == 1 && MS13.ArkansasStatsChanged == 1
+			set MS13.ArkansasStatsChanged to 0
+			setav aggression MS13.ArkansasAggression
+			setav assistance MS13.ArkansasAssistance
+			setav confidence MS13.ArkansasConfidence
+		elseif statsChanged == 1
+			setAv Aggression StartingAggression 
+			setAv Assistance StartingAssistance 
+			setAv Confidence StartingConfidence 
+			setAv Energy StartingEnergy 
+			setAv Responsibility StartingResponsibility 
+			setAv Mood StartingMood 
+		endif
+      else
+		 ;assume the NPC unloaded
+
+		;if the slave hasn't arrived yet, we'll fake it as if he did arrive when the player wasn't looking (he's not in the same cell as the player or he wouldn't have unloaded)
+		if arrived == 0 
+			set arrived to 2
+			set MS13Slaves.slaveArrived to 2		;(2 = we faked his arrival)
+			; add to slave faction so slavers react to player attacking
+			addToFaction ParadiseFallsSlaveFaction 0
+
+			if GetSelf == RedRef
+				moveto ParadiseFallsSlaveHouseMARKER
+				set MS13.RedArrived to 1
+				set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+				setstage MS13 100
+			elseif GetSelf == ArkansasRef
+				moveto ParadiseFallsSlaveHouseMARKER
+				set MS13.ArkansasArrived to 1
+				set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+				setstage MS13 100
+			elseif GetSelf == FlakRef
+				moveto ParadiseFallsSlaveHouseMARKER
+				set MS13.FlakArrived to 1
+				set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+				setstage MS13 100
+			elseif GetSelf == SusanLancasterRef
+				moveto ParadiseFallsSlaveHouseMARKER
+				set MS13.SusanArrived to 1
+				set MS13Slaves.slaveArrived to 0		 ;or you'll get generic dialog instead of dialog refering to the target slave
+				setstage MS13 100
+
+			else 
+				;it was someone else
+				;because we are pretending he was sold, we don't want the player finding this unloaded actor again if he loads the cell he is in, so we disable him
+				if MS13Slaves.debug == 1
+					ShowWarning "Slave unloading -- kill/disable and mark as delivered to Paradise Falls"
+				endif
+				KILL			;killing so that dialog assumes the player has been "killed" which makes more sense than people talking about them like they are still in town
+				DISABLE
+				
+				; added by Gribbleshnibit8 - TTW - 8/4/2014
+				IncrementScriptedChallenge TTWChallengeHumanResources
+				
+			endif
+			
+			GrouseRef.evp 	;to get him walking to forcegreet the player			
+
+		endif
+
+	endif
+
+End

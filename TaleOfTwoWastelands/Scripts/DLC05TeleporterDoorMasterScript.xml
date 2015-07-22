@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0B00D2D8">DLC05TeleporterDoorMasterScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05TeleporterDoorMasterScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>56</ReferenceCount>
+        <CompiledSize>3551</CompiledSize>
+        <VariableCount>19</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">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AF4QAAAZAAAAGQAAABYAEAAEAAwAIHIrAHMGACAxID09FgAQAAIADAAgcg4AcwgAIDEgPT0VAAoAcg4AcwgAAgAgMBwADgBeEAAAGQAAABkAAAAWABAABAAMACByKwBzFQAgMSA9PRYAEAACAAwAIHIPAHMBACAxID09FQAKAHIPAHMBAAIAIDAcAA8AXhAAABkAAAAZAAAAFgAQAAQADAAgcisAcxsAIDEgPT0WABAAAgAMACByEABzCQAgMSA9PRUACgByEABzCQACACAwHAAQAF4QAAAZAAAAGQAAABYAEAAEAAwAIHIrAHMhACAxID09FgAQAAIADAAgchEAcwEAIDEgPT0VAAoAchEAcwEAAgAgMBwAEQBeEAAAGQAAABkAAAAWABAABAAMACByKwBzCQAgMSA9PRYAEAACAAwAIHISAHMDACAxID09FQAKAHISAHMDAAIAIDAcABIAXhAAABkAAAAZAAAAFgAQAAQADAAgcisAcwwAIDEgPT0WABAAAgAMACByEwBzAQAgMSA9PRUACgByEwBzAQACACAwHAATAF4QAAAZAAAAGQAAABYAEAAQAAwAIHIrAHMeACAxID09FgASAAQADgAgchQAWCMQAAAgMCA9PRYAEAACAAwAIHIUAHMBACAxID09FQAKAHIUAHMBAAIAIDAcABQAXhAAABkAAAAYABIABAAOACByFQBYIxAAACAwID09FgAQAAIADAAgchUAcwEAIDEgPT0VAAoAchUAcwEAAgAgMBwAFQBeEAAAGQAAABgAEgAEAA4AIHIWAFgjEAAAIDAgPT0WABAAAgAMACByFgBzAQAgMSA9PRUACgByFgBzAQACACAwHAAWAF4QAAAZAAAAGQAAABkAAAAWABAABAAMACByKwBzDwAgMSA9PRYAEAACAAwAIHIXAHMIACAxID09FQAKAHIXAHMIAAIAIDAcABcAXhAAABkAAAAZAAAAFgAUAAEAEAAgWDoQBQABAHIsACA2MCA8HAAYACEQAgAAABcAAgADABYAEAABAAwAIHIsAHMRACAwID09HAAYACEQAgAAABkAAAAZAAAAFgANAAEACQAgRy0AIDAgPT0cABkAIRACAAAAGAANAAEACQAgRy0AIDEgPT0cABoAIRACAAAAGQAAABYAGQABABUAIFg7EAoAAgByLgBuZAAAACAxID09HAAbACEQAgAAABkAAAAWABAAAQAMACByLwBzHQAgMSA9PRwAHAAhEAIAAAAYABAAAQAMACByMABzDQAgMSA9PRwAHAAhEAIAAAAZAAAAFgAQAAsADAAgcjAAcwsAIDAgPT0VAAoAcjAAcwsAAgAgMRYAEgADAA4AIHIdAFgjEAAAIDAgPT0WABIAAQAOACByHQBYLhAAACAwID09HAAdACIQAgAAABkAAAAZAAAAFgASAAMADgAgch4AWCMQAAAgMCA9PRYAEgABAA4AIHIeAFguEAAAIDAgPT0cAB4AIhACAAAAGQAAABkAAAAZAAAAGQAAABYAIAAXABwAIFiIEAUAAQByMQAgMSA9PSBaMgAgMSA9PSB8fBYADQALAAkAIHMKACAwID09FgAQAAQADAAgcjMAcwwAIDIgPT0cAB8AIhACAAAAFQAKAHIpAHMXAAIAIDE5EAoAAgByNABuBQAAABUABwBzCgACACAxGAAQAAQADAAgcikAcwoAIDEgPT0cAB8AIhACAAAAFQAKAHIpAHMXAAIAIDE5EAoAAgByNABuBQAAABUABwBzCgACACAxGQAAABkAAAAWABAAAwAMACByNQBzEgAgMSA9PRYAEAABAAwAIHI2AHMBACAwID09ORAKAAIAcjYAbgEAAAAZAAAAGQAAABYAEAADAAwAIHI1AHMSACAzID09FgAUAAEAEAAgWIgQBQABAHIxACAxID09FQAKAHI1AHMcAAIAIDEZAAAAGQAAABkAAAANEAUAAQByAwAZAAAAGQAAABEAAAAQAAgAGgCOAAAAAAAVAAsAZggABgAgWM0QAAAWAA8AAwALACBmCAAgWiQAID09FgAPAAEACwAgcwYAIDEgfiAhPRwAIADZEQUAAQByNwAZAAAAGAAPAAQACwAgcwYAIDEgfiAhPRYAEgAAAA4AIHIgAFjfEAUAAQByJQAXAAIAAQAcACAA2REFAAEAcjgAGQAAABkAAAARAAAAEAAIABsAWQAAAAAAFQALAGYIAAYAIFjNEAAAFgAPAAEACwAgZggAIFokACA9PRwAIABCEQUAAQByNwAXAAIAAgAcACAAQhEFAAEAcjgAKRELAAEAegAAAAAAAPA/GQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DLC05TeleporterDoorMasterScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">animToPlay</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">state</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">triggerRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">userRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">active</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>16</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">mySoundRef</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">lightState</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">myLightRef</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">16</Reference>
+        <Reference Tag="SCRV">19</Reference>
+        <Reference Tag="SCRV">9</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000987">DLC05SallyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003308">DLC05TercorienRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8EB">ArcadeREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0010D8DF">RexREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602248E">RadioEnclaveREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0608A6DB">MS17RadioRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003304">DLC05PaulsonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000988">DLC05SomahREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B003307">DLC05SamuraiRef</Reference>
+        </Reference>
+        <Reference Tag="SCRV">8</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00CBAD">DLC05TeleporterLight01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D714">DRSDLC05TeleporterIdleLP</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B009921">DLC05TeleporterDoorScripted02</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D2E0">DLC05TeleportSpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B004E65">DLC05MZ3CoreTeleporterMessage</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00BEC9">DLC05TeleportInISFX</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B0032F8">DLC05hubToSewer01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000803">DLC05MZ2</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A98B">DLC05TeleporterToWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8F">MQ09</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009935F">GNRDishDone</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014EA4">MS17</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B000802">DLC05MZ1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00A752">DLC05Post</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007FF2">DLC05SewertoCoreRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B006D5B">DLC05TeleportDoorSewer01toCoreRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B004E1A">DLC05Conversations</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B007D27">DLC05SamuraiScenes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B005C70">DLC05FF01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B006E2B">DLC05CoreScene</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D2E1">DLC05TeleportGlowSpell</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0B00D2DE">DLC05TeleportOutSpell</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

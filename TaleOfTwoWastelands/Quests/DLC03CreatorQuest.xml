@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="09000801">DLC03CreatorQuest</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC03CreatorQuest</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="09003212">DLC03CreatorQuestScript</Reference>
+    </Script>
+    <Name Tag="FULL">DLC03CreatorQuest</Name>
+    <Data Tag="DATA">
+      <Flags>17</Flags>
+      <Priority>0</Priority>
+      <QuestDelay>1</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">10</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>518</CompiledSize>
+                <VariableCount>1</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQASAHMBAA0AIHIBAFjvEQQAAQAFABYADAACAAgAIHMBACA1IDwVAA0AcwEACAAgNSBzAQAgLRwAAQAQEAcAAgAFAHMBABkAAAAVABIAcwEADQAgcgEAWO8RBAABAAYAFgAMAAIACAAgcwEAIDUgPBUADQBzAQAIACA1IHMBACAtHAABABAQBwACAAYAcwEAGQAAABUAEgBzAQANACByAQBY7xEEAAEABwAWAAwAAgAIACBzAQAgNSA8FQANAHMBAAgAIDUgcwEAIC0cAAEAEBAHAAIABwBzAQAZAAAAFQASAHMBAA0AIHIBAFjvEQQAAQAIABYADAACAAgAIHMBACA1IDwVAA0AcwEACAAgNSBzAQAgLRwAAQAQEAcAAgAIAHMBABkAAAAVABIAcwEADQAgcgEAWO8RBAABAAkAFgAMAAIACAAgcwEAIDUgPBUADQBzAQAIACA1IHMBACAtHAABABAQBwACAAkAcwEAGQAAABUAEgBzAQANACByAQBY7xEEAAEACgAWAAwAAgAIACBzAQAgNSA8FQANAHMBAAgAIDUgcwEAIC0cAAEAEBAHAAIACgBzAQAZAAAAFQASAHMBAA0AIHIBAFjvEQQAAQALABYADAACAAgAIHMBACA1IDwVAA0AcwEACAAgNSBzAQAgLRwAAQAQEAcAAgALAHMBABkAAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">; Used by the No Weakness Perk
+
+Short HoldValue
+
+Set HoldValue to Player.GetPermanentActorValue Strength
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Strength HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Perception
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Perception HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Endurance
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Endurance HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Charisma
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Charisma HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Intelligence
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Intelligence HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Agility
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Agility HoldValue
+EndIf
+
+Set HoldValue to Player.GetPermanentActorValue Luck
+If HoldValue &lt; 5
+    Set HoldValue to 5 - HoldValue
+    Player.ModAV Luck HoldValue
+EndIf
+</ScriptSource>
+              <LocalVariables>
+                <Variable>
+                  <Data Tag="SLSD">
+                    <Index>1</Index>
+                    <Flags>IsLongOrShort</Flags>
+                  </Data>
+                  <Name Tag="SCVR">HoldValue</Name>
+                </Variable>
+              </LocalVariables>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">30</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>22</ReferenceCount>
+                <CompiledSize>273</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAH0RBQABAHICABwAAQB9EQUAAQByAwAcAAEAfBEFAAEAcgQAHAABAH0RBQABAHIFABwAAQB9EQUAAQByBgAcAAEAfBEFAAEAcgcAHAABAH0RBQABAHIIABwAAQB9EQUAAQByCQAcAAEAfBEFAAEAcgoAHAABAH0RBQABAHILABwAAQB9EQUAAQByDAAcAAEAfBEFAAEAcg0AHAABAH0RBQABAHIOABwAAQB9EQUAAQByDwAcAAEAfBEFAAEAchAAHAABAH0RBQABAHIRABwAAQB9EQUAAQByEgAcAAEAfBEFAAEAchMAHAABAH0RBQABAHIUABwAAQB9EQUAAQByFQAcAAEAfBEFAAEAchYA</CompiledScript>
+              <ScriptSource Tag="SCTX">; used by the Warmonger perk
+
+Player.RemoveNote SchematicsBottlecapMineNote
+Player.RemoveNote SchematicsBottlecapMineNote10
+Player.AddNote SchematicsBottlecapMineNote20
+
+Player.RemoveNote SchematicsDartGunNote
+Player.RemoveNote SchematicsDartGunNote10
+Player.AddNote SchematicsDartGunNote20
+
+Player.RemoveNote SchematicsDeathclawGauntletNote
+Player.RemoveNote SchematicsDeathclawGauntletNote10
+Player.AddNote SchematicsDeathclawGauntletNote20
+
+Player.RemoveNote SchematicsNukaCocktailNote
+Player.RemoveNote SchematicsNukaCocktailNote10
+Player.AddNote SchematicsNukaCocktailNote20
+
+Player.RemoveNote SchematicsRailwayRifleNote
+Player.RemoveNote SchematicsRailwayRifleNote10
+Player.AddNote SchematicsRailwayRifleNote20
+
+Player.RemoveNote SchematicsRockitLauncherNote
+Player.RemoveNote SchematicsRockitLauncherNote10
+Player.AddNote SchematicsRockitLauncherNote20
+
+Player.RemoveNote SchematicsShishkebabNote
+Player.RemoveNote SchematicsShishkebabNote10
+Player.AddNote SchematicsShishkebabNote20
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BCE">SchematicsBottlecapMineNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33AE">SchematicsBottlecapMineNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33AF">SchematicsBottlecapMineNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BC7">SchematicsDartGunNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B0">SchematicsDartGunNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B1">SchematicsDartGunNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BC8">SchematicsDeathclawGauntletNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B2">SchematicsDeathclawGauntletNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B3">SchematicsDeathclawGauntletNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BC9">SchematicsNukaCocktailNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B4">SchematicsNukaCocktailNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B5">SchematicsNukaCocktailNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BCA">SchematicsRailwayRifleNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B6">SchematicsRailwayRifleNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B7">SchematicsRailwayRifleNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BCB">SchematicsRockitLauncherNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B8">SchematicsRockitLauncherNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33B9">SchematicsRockitLauncherNote20</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00033BCC">SchematicsShishkebabNote</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33BA">SchematicsShishkebabNote10</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="000C33BB">SchematicsShishkebabNote20</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">40</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; formerly used by the Puppies! perk
+; now all that stuff is in the DLC03CreatorQuest script
+; and on Dogmeat's script
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">50</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>39</CompiledSize>
+                <VariableCount>1</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FQAWAHMBABEAIDAgcgEAWA4QBAABABcAIC0cAAEABBIFAAEAcwEA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Perk Karmic Rebalance
+
+Short CurrentValue
+
+Set CurrentValue to 0 - Player.GetAV Karma
+Player.RewardKarma CurrentValue</ScriptSource>
+              <LocalVariables>
+                <Variable>
+                  <Data Tag="SLSD">
+                    <Index>1</Index>
+                    <Flags>IsLongOrShort</Flags>
+                  </Data>
+                  <Name Tag="SCVR">CurrentValue</Name>
+                </Variable>
+              </LocalVariables>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">51</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>15</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG4w+P//</CompiledScript>
+              <ScriptSource Tag="SCTX">; Perk Devil's Highway
+
+Player.RewardKarma -2000</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">52</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>15</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAAQSBwABAG7QBwAA</CompiledScript>
+              <ScriptSource Tag="SCTX">; Perk Escalator to Heaven
+
+Player.RewardKarma 2000</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">60</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>322</CompiledSize>
+                <VariableCount>1</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">FgAVAAEAEQAgcgEAWO8RBAABAAUAIDkgPBwAAQAPEAkAAgAFAG4JAAAAGQAAABYAFQABABEAIHIBAFjvEQQAAQAGACA5IDwcAAEADxAJAAIABgBuCQAAABkAAAAWABUAAQARACByAQBY7xEEAAEABwAgOSA8HAABAA8QCQACAAcAbgkAAAAZAAAAFgAVAAEAEQAgcgEAWO8RBAABAAgAIDkgPBwAAQAPEAkAAgAIAG4JAAAAGQAAABYAFQABABEAIHIBAFjvEQQAAQAJACA5IDwcAAEADxAJAAIACQBuCQAAABkAAAAWABUAAQARACByAQBY7xEEAAEACgAgOSA8HAABAA8QCQACAAoAbgkAAAAZAAAAFgAVAAEAEQAgcgEAWO8RBAABAAsAIDkgPBwAAQAPEAkAAgALAG4JAAAAGQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">if player.getpermav Strength &lt; 9
+player.SetAV Strength 9
+endif
+if player.getpermav Perception &lt; 9
+player.SetAV Perception 9
+endif
+if player.getpermav Endurance &lt; 9
+player.SetAV Endurance 9
+endif
+if player.getpermav Charisma &lt; 9
+player.SetAV Charisma 9
+endif
+if player.getpermav Intelligence &lt; 9
+player.SetAV Intelligence 9
+endif
+if player.getpermav Agility &lt; 9
+player.SetAV Agility 9
+endif
+if player.getpermav Luck &lt; 9
+player.SetAV Luck 9
+endif</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

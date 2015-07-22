@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="000C58EF">MS04CrAnt3Warrior</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS04CrAnt3Warrior</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-236</X>
+        <Y>-269</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>236</X>
+        <Y>269</Y>
+        <Z>320</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Fire Ant Warrior</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\GiantAnt\skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="000B7CC9">FireImmunity</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>fireant.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAj07gxn8vauXXRuDGf39q5ddG4fdJ4eY1/u3wpn7rkhQW5fCmfzuSFBdG4bdJS4Atfz3wpn7rkhQXNfCmfzuSFBdG4bdJS4Atfl3wtzYh4lrWVfC3NnHiWtc3QQdLPhyW3t3wpn7rkhQW1fCmfzuSFBdG4bdJS4Atf04w1tNt+ZonRjDW0735miZXINdDh6OHHu3w9th0/XdG5fD22MT9d0ZXINdDh6OHHz3w9th0/XdHNfD22MT9d0ZXINdDh6OHE=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, CannotOpenDoors, NoKnockdowns</Flags>
+      <Fatigue>180</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>18</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021471">AntFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E269">CreatureHitAnt</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="00085ABE">MS04DeathItemAntSoldier</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="060C31FC">MS04GrayditchSurfaceAnts</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078CC1">AmmoFlamerFuelRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000C58EE">MS04FireAntGuardFlame2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06066906">MS04AntPatrolType00</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06066907">MS04AntPatrolType10</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06066908">MS04AntPatrolType20</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06066909">MS04AntPatrolStayAtCurrent</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedInsect</CreatureType>
+      <Skill>
+        <Combat>75</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>150</Health>
+      <Damage>55</Damage>
+      <Strength>7</Strength>
+      <Perception>6</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>2</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">180</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0014F436">CSFireAntSoldier</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="00014C03">AntBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">45</TurningSpeed>
+    <BaseScale Tag="BNAM">0.5</BaseScale>
+    <FootWeight Tag="WNAM">5</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicBug</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="00027053">AudioTemplateAnt</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="000754AB">AntImpactDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="00080C27">MS04FireAntWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

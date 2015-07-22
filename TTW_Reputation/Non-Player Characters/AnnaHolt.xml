@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="06038DF5">AnnaHolt</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">AnnaHolt</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Anna Holt</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0009070E">DoctorLiLab</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="000ABFEE">RCGenericVoiceFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0D013668">TTWAnnaHoltFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FCB">FemaleAdult14</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="000042C3">CaucasianOld</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="00038E00">AnnaHoltScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000340D7">OutfitProjectPurityDoctor</Item>
+          <Count>1</Count>
+        </Data>
+        <ExtraData Tag="COED">
+          <Owner ID="00000000">NullReference<Unused>0</Unused></Owner>
+          <Condition>0.75</Condition>
+        </ExtraData>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06038805">FoodGeneric100DC</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>20</EnergyLevel>
+      <Responsibility>100</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06038DFF">MQ09AnnaGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0608F015">MQ09AnnaSandbox</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0603533B">MQ05ScientisttoProjectPurityEXT3</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060BAC62">MQ05ScientistHoldOutsidePPurity</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06019CEB">MQ05ScientisttoProjectPurityINT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060A69FB">MQ05AnnaInProjectPurityNoMutants</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060BAC0E">MQ05AnnaInProjectPurityPostMutants</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C81F0">MS08AnnaWaitForArgument</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00053D01">AnnaHoltEat17x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00053D02">AnnaHoltEat6x2</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00053D04">AnnaHoldSleep22x8</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00038DF7">AnnaHoltHomeDefault</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0001567B">Scientist</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>3</Strength>
+      <Perception>6</Perception>
+      <Endurance>3</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>8</Intelligence>
+      <Agility>6</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>32</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>36</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>21</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>36</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00022E4F">FemaleB</Reference>
+      </Type>
+      <Length Tag="LNAM">0.899999976</Length>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>50</Green>
+        <Blue>25</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">6lk4P6RnoL5BhaM+Moj9P3qm9L/QeO8+N1rgP6p8wD+36c4/DgLRv/PPp78cIII/uDMCP+jTAMAgDVtAh00jwBtrsD+E0CbALb0CQKQEbcAUgbI/6GtHQLAiPj7g+Qg/dm6TwFaF0T+MPvS/itwQwGVFoUDLMCFAZyIGwESfa8A7n9ZAV3v+P5e7/r8Ya1C+NA4tP+YY6UDh0dRAIoOYQO7whz8hFhzAR+G2QFolscCopFtAMIwuv6x8WUA+hkTAl8KoQLiLJEA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">7FE4v6P+K7+eqey95OD7PYxHIr8B5Ya/vgKnv6yeDMDQrJs/BHPQv8hyjz92pK6/pKTzP/B7PkDSutO9+kMTwJKiEUC+sLq/R6EEQG7zB8AA+628BkYiQMK5Br5IUT5ABlLTv8GRbD8ObeU+Nx+ev8kEoT+VRDrAR+RpQPqdkz+Wf5u+cuFnwEUghD8ZQf++Po9QPtpavMCC5mbAbYIGQEbYmMAGNOk++sDZP2pHhD4/l29ACoc+P+LPN8A0+PLAxfPhwLL+jb4=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

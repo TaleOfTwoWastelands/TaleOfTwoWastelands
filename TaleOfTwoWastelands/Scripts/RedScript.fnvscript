@@ -1,0 +1,177 @@
+scn RedScript
+
+short rescued				;1 = player rescued her
+short followingPlayer		;1 = following, -1 watiing - set in dialog
+short arrivedAtBigTown	;1 = arrived at Big Town
+
+short reunionStage		;controls the reunion sayTo scene
+short reunionTalking		;1 = Red or Shorty are talking in a little reunion scene
+								;!!! Set to 0 in the infos said in the scene !!!
+
+;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! COPIED FROM DOCTOR TEMPLATE SCRIPT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+short	DoOnce								;Script blocker
+float	Timer									;Timer used for animation control
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Begin GameMode
+	; simulate Big Town being wiped out by mutants
+	if getStageDone MS01 251 == 1 || getStageDone MS01 180 == 1
+		if GetDead == 0
+			kill
+		endif
+	endif
+
+	if MS01.sneak == 1
+		if player.IsSneaking == 1
+			if GetForceSneak == 0
+				SetForceSneak 1	
+			endif
+		else
+			if GetForceSneak == 1
+				SetForceSneak 0
+			endif
+		endif
+	elseif GetForceSneak == 1
+		SetForceSneak 0			
+	
+	endif
+
+
+	;Reunion scene
+	if GetInZone GermPoliceHQZone == 1
+		
+		if getDistance ShortyRef < 256
+
+			if reunionTalking == 0
+				if reunionStage < 2
+				
+					if reunionStage == 0
+						;Red says something to Shorty
+						if RedRef.getDead == 0
+							RedRef.sayTo ShortyRef MS01RedShortyReunion 1
+							set reunionTalking to 1
+						endif
+					elseif reunionStage == 1
+						;Shorty says something to Red
+						if ShortyRef.getDead == 0
+							ShortyRef.sayTo RedRef MS01RedShortyReunion 1
+							set reunionTalking to 1
+						endif	
+					endif
+							
+				set reunionStage to reunionStage + 1
+			
+				endif
+
+			endif
+
+		endif
+	endif
+
+
+
+
+
+;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! COPIED FROM DOCTOR TEMPLATE SCRIPT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	;When set to 1, plays medical animations for eight seconds then restarts conversation with the player
+	if ( GetAV Variable01 == 1 )
+		if ( DoOnce== 0 )
+			disablePlayerControls
+			sayto player MegDocChurchMedicalChatter
+			set Timer to 8
+			set DoOnce to 1
+			if ( GetIsID Sawbones == 0 )
+				PlayIdle LooseDoctorHeal
+			endif
+		endif
+
+		set Timer to ( Timer - GetSecondsPassed )
+
+		if ( Timer <= 6 ) && ( DoOnce == 1 )
+			IMod FadeToBlackISFX
+			set DoOnce to 2
+		endif
+
+		if ( Timer <= 0 ) && ( IsImagespaceActive FadeToBlackISFX == 0 )
+			setstage Doctors 10
+			enablePlayerControls
+			evp
+			SetAv Variable01 3 
+			Set DoOnce to 0
+		endif
+		
+	endif
+
+	;When set to 1, plays medical animations for eight seconds then restarts conversation with the player
+	if ( GetAV Variable01 == 2 )
+		if ( DoOnce== 0 )
+			disablePlayerControls
+			evp
+			set Timer to 8
+			set DoOnce to 1
+			if ( GetIsID Sawbones == 0 )
+				PlayIdle LooseDoctorHeal
+			endif
+		endif
+
+		set Timer to ( Timer - GetSecondsPassed )
+
+		if ( Timer <= 6 ) && ( DoOnce == 1 )
+			IMod FadeToBlackISFX
+			set DoOnce to 2
+		endif
+
+		if ( Timer <= 0 ) && ( IsImagespaceActive FadeToBlackISFX == 0 )
+			setstage Doctors 20
+			enablePlayerControls
+			evp
+			SetAv Variable01 3 
+			Set DoOnce to 0
+		endif
+		
+	endif
+
+;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+End
+
+
+Begin OnPackageStart MS01RedToBigTown
+	set followingPlayer to 0
+End
+
+
+Begin OnPackageDone MS01RedToBigTown
+	setstage MS01 80
+End
+
+Begin OnDeath
+	setstage MS01 150
+
+	;turn off objectives about enslaving her
+	setstage MS13 31
+End
+
+; =======================================
+;added by TTW to get rid of the companion wheel
+;========================================
+
+short TeammateSwapped
+
+begin ONACTIVATE     
+if isactionref player && RedRef.GetPlayerTeammate == 1
+  set TeammateSwapped to 1         
+  SetPlayerTeammate 0         
+  ACTIVATE     
+else         
+  ACTIVATE     
+endif
+END
+
+begin GAMEMODE   
+if teammateswapped == 1
+  set TeammateSwapped to 0     
+  SetPlayerTeammate 1   
+endif
+END

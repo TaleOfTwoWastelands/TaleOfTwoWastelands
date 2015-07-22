@@ -1,0 +1,29 @@
+scn TTWBrainFungusScpt
+
+int State
+
+begin onActivate
+	if State == 0 && GetActionRef == player
+		player.additem TTWBrainFungusItem 3
+		set State to 1
+		playGroup Forward 1
+		setdestroyed 1
+	endif
+end
+
+begin onLoad
+	if State == 0
+		playGroup Backward 1
+	elseif State == 1
+		playGroup Forward 1		
+	endif
+end
+
+begin onReset
+	if State == 1
+		playgroup Backward 1
+		set State to 0
+		setdestroyed 0
+	endif
+end
+

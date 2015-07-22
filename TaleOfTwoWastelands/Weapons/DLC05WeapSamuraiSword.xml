@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="WEAP">
+  <Flags>0</Flags>
+  <FormID ID="0B00083B">DLC05WeapSamuraiSword</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DLC05WeapSamuraiSword</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-3</X>
+        <Y>-8</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>3</X>
+        <Y>38</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Samurai's Sword</Name>
+    <Model>
+      <FileName Tag="MODL">NVDLC05\Weapons\1handmelee\NVDLC05KatanaSheathBGAB.nif</FileName>
+    </Model>
+    <Icon>
+      <Large Tag="ICON">DLC05\Interface\Icons\Weapons_katana.dds</Large>
+    </Icon>
+    <Script Tag="SCRI">
+      <Reference ID="0B00A94F">DLC05SamuraiSwordScript</Reference>
+    </Script>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="05000888">NVDLC05DummyKatana</Reference>
+    </ObjectEffect>
+    <RepairList Tag="REPL">
+      <Reference ID="05000A8C">NVDLC05RepairKatana</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
+    <Sound>
+      <PickUp Tag="YNAM">
+        <Reference ID="000854E0">ITMKnifeUp</Reference>
+      </PickUp>
+      <Drop Tag="ZNAM">
+        <Reference ID="000854DF">ITMKnifeDown</Reference>
+      </Drop>
+      <Melee>
+        <Swing Tag="TNAM">
+          <Reference ID="0005C72B">FXSwingMedium</Reference>
+        </Swing>
+      </Melee>
+      <Equip Tag="NAM9">
+        <Reference ID="0004451D">WPNSwordChineseEquip</Reference>
+      </Equip>
+      <Unequip Tag="NAM8">
+        <Reference ID="0004451E">WPNSwordChineseUnequip</Reference>
+      </Unequip>
+    </Sound>
+    <VATSAttackName Tag="VANM">Unlabored Flawlessness</VATSAttackName>
+    <ImpactDataset Tag="INAM">
+      <Reference ID="00056D0E">SwordImpactDataSet</Reference>
+    </ImpactDataset>
+    <FirstPersonModel Tag="WNAM">
+      <Reference ID="05000975">1stPersonNVDLC05KatanaSheathBGAB</Reference>
+    </FirstPersonModel>
+    <Data Tag="DATA">
+      <Value>2500</Value>
+      <Health>300</Health>
+      <Weight>3</Weight>
+      <BaseDamage>27</BaseDamage>
+      <ClipSize>1</ClipSize>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <AnimationType>_1HandMelee</AnimationType>
+      <AnimationMultiplier>2</AnimationMultiplier>
+      <Reach>1</Reach>
+      <Flags1>0</Flags1>
+      <GripAnimation>255</GripAnimation>
+      <AmmoUse>1</AmmoUse>
+      <ReloadAnimation>ReloadE</ReloadAnimation>
+      <MinSpread>0</MinSpread>
+      <Spread>0</Spread>
+      <Unknown>AACAPw==</Unknown>
+      <SightFOV>0</SightFOV>
+      <Unknown2>0</Unknown2>
+      <Projectile ID="00000000">NullReference</Projectile>
+      <BaseVATSToHitChance>21</BaseVATSToHitChance>
+      <AttackAnimation>Default</AttackAnimation>
+      <ProjectileCount>1</ProjectileCount>
+      <EmbeddedWeaponActorValue>Perception</EmbeddedWeaponActorValue>
+      <Range>
+        <Min>500</Min>
+        <Max>2000</Max>
+      </Range>
+      <LimbKillBehavior>DismemberOnly</LimbKillBehavior>
+      <Flags2>OverrideActionPointCost</Flags2>
+      <AttackAnimationMultiplier>1</AttackAnimationMultiplier>
+      <FireRate>5</FireRate>
+      <ActionPointCost>21</ActionPointCost>
+      <Rumble>
+        <LeftMotorStrength>0</LeftMotorStrength>
+        <RightMotorStrength>0</RightMotorStrength>
+        <Duration>0</Duration>
+        <Pattern>Constant</Pattern>
+        <Wavelength>0</Wavelength>
+      </Rumble>
+      <DamageToWeaponMult>0</DamageToWeaponMult>
+      <AttackShotsPerSecond>4.61539984</AttackShotsPerSecond>
+      <ReloadTime>0</ReloadTime>
+      <JamTime>0</JamTime>
+      <AimArc>0</AimArc>
+      <Skill>MeleeWeapons</Skill>
+      <LimbDamageMult>2</LimbDamageMult>
+      <ResistanceType>None</ResistanceType>
+      <SightUsage>0</SightUsage>
+      <SemiAutomaticFireDelay>
+        <Min>0</Min>
+        <Max>0.0199999996</Max>
+      </SemiAutomaticFireDelay>
+      <Unknown3>0</Unknown3>
+      <Mods>
+        <Mod1>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ReloadAnimation>ReloadA</ReloadAnimation>
+          <ValueB>0</ValueB>
+        </Mod1>
+        <Mod2>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod2>
+        <Mod3>
+          <Effect>None</Effect>
+          <ValueA>0</ValueA>
+          <ValueB>0</ValueB>
+        </Mod3>
+      </Mods>
+      <PowerAttackAnimation>AttackCustom3Power</PowerAttackAnimation>
+      <StrengthRequirement>3</StrengthRequirement>
+      <Unknown4>255</Unknown4>
+      <Unknown5>AAA=</Unknown5>
+      <AmmoRegenRate>0</AmmoRegenRate>
+      <KillImpulse>12</KillImpulse>
+      <ImpulseDistance>0</ImpulseDistance>
+      <SkillRequirement>75</SkillRequirement>
+    </ExtraData>
+    <CriticalHitData Tag="CRDT">
+      <Damage>22</Damage>
+      <ChanceMult>2</ChanceMult>
+      <Flags>0</Flags>
+      <Effect ID="00000000">NullReference</Effect>
+    </CriticalHitData>
+    <VATSSpecialAttack Tag="VATS">
+      <Effect ID="00000000">NullReference</Effect>
+      <SkillRequirement>50</SkillRequirement>
+      <DamageMult>2.5</DamageMult>
+      <APCost>40</APCost>
+      <IsSilent>Yes</IsSilent>
+      <RequiresMod>No</RequiresMod>
+    </VATSSpecialAttack>
+    <SoundLevel Tag="VNAM">Silent</SoundLevel>
+  </Subrecords>
+</Record>

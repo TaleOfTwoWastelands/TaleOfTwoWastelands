@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="QUST">
+  <Flags>0</Flags>
+  <FormID ID="0D001514">TTWCG00</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWCG00</EditorID>
+    <Script Tag="SCRI">
+      <Reference ID="0D001515">TTWCG00Script</Reference>
+    </Script>
+    <Name Tag="FULL">TTW Game Start Menu</Name>
+    <Data Tag="DATA">
+      <Flags>AllowRepeatedConversationTopics, AllowRepeatedStages</Flags>
+      <Priority>100</Priority>
+      <QuestDelay>0.00999999978</QuestDelay>
+    </Data>
+    <Stages>
+      <Stage>
+        <Index Tag="INDX">0</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>5</ReferenceCount>
+                <CompiledSize>55</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <CompiledScript Tag="SCDA">HAABAJ4QBQABAHICABUACgByAwBzCAACACAxFQAKAHIEAHMGAAIAIDE5EAoAAgByBQBuBQAAAA==</CompiledScript>
+              <ScriptSource Tag="SCTX">Player.MoveTo TTWPlayerStartMakerREF
+set VCG00.iDoOnce to 1
+set CG00.iDoOnce to 1
+SetStage TTWCG00 5
+</ScriptSource>
+              <References>
+                <Reference Tag="SCRO">
+                  <Reference ID="00000014">UnfoundReference</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D0C6D26">TTWPlayerStartMakerREF</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="00102037">VCG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0001F388">CG00</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
+                  <Reference ID="0D001514">TTWCG00</Reference>
+                </Reference>
+              </References>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+      <Stage>
+        <Index Tag="INDX">5</Index>
+        <LogEntries>
+          <Entry>
+            <StageFlags Tag="QSDT">0</StageFlags>
+            <Script>
+              <Data Tag="SCHR">
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
+                <VariableCount>0</VariableCount>
+                <Type>Object</Type>
+                <Flags>Enabled</Flags>
+              </Data>
+              <ScriptSource Tag="SCTX">; Done
+</ScriptSource>
+            </Script>
+          </Entry>
+        </LogEntries>
+      </Stage>
+    </Stages>
+  </Subrecords>
+</Record>

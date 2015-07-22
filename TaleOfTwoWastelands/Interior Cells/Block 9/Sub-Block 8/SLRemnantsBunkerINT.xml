@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="001591D5">SLRemnantsBunkerINT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">SLRemnantsBunkerINT</EditorID>
+    <Name Tag="FULL">Remnants' Bunker</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>41</Red>
+          <Green>46</Green>
+          <Blue>65</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>26</Red>
+          <Green>32</Green>
+          <Blue>49</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>214</Red>
+          <Green>234</Green>
+          <Blue>237</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>128</Near>
+        <Far>20000</Far>
+        <ClipDistance>10000</ClipDistance>
+        <Power>1</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>0</XY>
+        <Z>270</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="0008F58B">EnclaveLightingTemplate01</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">DirectionalColor, DirectionalFade</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="00084457">EnclaveImageSpace01</Reference>
+    </ImageSpace>
+    <Owner Tag="XOWN">
+      <Reference ID="001680A8">RemnantsFaction</Reference>
+    </Owner>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0017434F">INTRemnantsHall</Reference>
+    </AcousticSpace>
+  </Subrecords>
+</Record>

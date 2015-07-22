@@ -1,0 +1,53 @@
+scn SchematicsShishkebabItemSCRIPT
+
+short AddOnce
+
+BEGIN OnAdd player
+	
+	if (AddOnce == 0)
+
+		;If the player already has a copy of the schematic, getting another improves the quality of the created item.
+		;Second Improvement
+		if (player.gethasnote SchematicsShishkebabNote10 == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countShishkebabBonus to 1.25
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsShishkebabNote10
+			player.addNote SchematicsShishkebabNote20
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;First Improvement
+		elseif (player.gethasnote SchematicsShishkebabNote == 1)
+
+			;Increment a variable for number of times this schematic has been gotten.
+			set countShishkebabBonus to 1
+
+			;Show message of quality improvement.
+			ShowMessage SchematicsImprovedMsg
+			player.removeNote SchematicsShishkebabNote
+			player.addNote SchematicsShishkebabNote10
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		;Otherwise, just add the note
+		elseif (player.gethasnote SchematicsShishkebabNote20 == 0)
+
+			IncrementScriptedChallenge TTWChallengeSchematics		; Added by Gribbleshnibit8 8/26/2014
+
+			;Add the Schematic Note
+			player.addNote SchematicsShishkebabNote
+			;Remove this item from inventory
+			set AddOnce to 1
+			removeme
+
+		endif
+
+	endif
+
+END

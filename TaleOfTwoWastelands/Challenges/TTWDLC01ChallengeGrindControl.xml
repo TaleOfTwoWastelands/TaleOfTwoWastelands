@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0C018596">TTWDLC01ChallengeGrindControl</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWDLC01ChallengeGrindControl</EditorID>
+    <Name Tag="FULL">Grind Control</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0C0185DE">TTWChallengeGrindControlSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill with the Auto Axe</Description>
+    <Data Tag="DATA">
+      <Type>KillFromAFormList</Type>
+      <Threshold>150</Threshold>
+      <Flags>0</Flags>
+      <Interval>25</Interval>
+      <BodyPart>None</BodyPart>
+      <WeaponActorValue>Aggression</WeaponActorValue>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+    <WeaponList Tag="XNAM">
+      <Reference ID="080073EB">DLC01AutoAxpertList</Reference>
+    </WeaponList>
+  </Subrecords>
+</Record>

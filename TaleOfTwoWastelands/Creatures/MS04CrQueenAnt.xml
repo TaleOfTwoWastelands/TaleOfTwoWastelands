@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="0603181D">MS04CrQueenAnt</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MS04CrQueenAnt</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Marigold Ant Queen</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\QueenAnt\skeleton.nif</FileName>
+    </Model>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>antqueen.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Walks, NoLowLevelProcessing, CannotOpenDoors, NoKnockdowns</Flags>
+      <Fatigue>250</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>17</Level>
+      <CalcMin>0</CalcMin>
+      <CalcMax>0</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseTraits, UseStats, UseActorEffectList, UseAIData, UseModelAnimation, UseInventory</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00021471">AntFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0003181F">MS04AntFriend</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="00086DBA">DeathItemAntQueen100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EED">VoiceDoNotRecordF</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0015E909">VCrTier4FireAntQueen</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="060C20E4">MS04QueenAntScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078CC1">AmmoFlamerFuelRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0015E904">MS04FireAntQueenFlame2HL</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>VeryAggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>AggroRadiusBehavior</AggroRadiusBehavior>
+      <AggroRadius>768</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="060C22A2">MS04QueenAntSanboxLeskoDead</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060C22A1">MS04QueenAntStaysInPlace</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>MutatedInsect</CreatureType>
+      <Skill>
+        <Combat>100</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>450</Health>
+      <Damage>55</Damage>
+      <Strength>9</Strength>
+      <Perception>5</Perception>
+      <Endurance>7</Endurance>
+      <Charisma>6</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>4</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">200</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="0003A445">CSAntQueen</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0002F86F">QueenAntBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">22.5</TurningSpeed>
+    <BaseScale Tag="BNAM">1.10000002</BaseScale>
+    <FootWeight Tag="WNAM">40</FootWeight>
+    <ImpactMaterialType Tag="NAM4">OrganicBug</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="000B037F">AudioTemplateAntQueen</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CHAL">
+  <Flags>0</Flags>
+  <FormID ID="0015EB24">NVChallengeAnimalControl</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVChallengeAnimalControl</EditorID>
+    <Name Tag="FULL">Animal Control</Name>
+    <Script Tag="SCRI">
+      <Reference ID="0015EABB">ChallengeAnimalSCRIPT</Reference>
+    </Script>
+    <Description Tag="DESC">Kill Mutated Animals.
+
+* Brahmin
+* Mirelurk
+* Mole Rat
+* Bighorner
+* Gecko
+* Giant Rat
+* Yao Guai</Description>
+    <Data Tag="DATA">
+      <Type>KillAnyInACategory</Type>
+      <Threshold>50</Threshold>
+      <Flags>Recurring</Flags>
+      <Interval>20</Interval>
+      <BodyPart>None</BodyPart>
+      <CreatureType>MutatedInsect</CreatureType>
+      <WeaponCategory>None</WeaponCategory>
+    </Data>
+  </Subrecords>
+</Record>

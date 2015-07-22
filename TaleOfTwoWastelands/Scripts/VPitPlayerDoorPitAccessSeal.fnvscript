@@ -1,0 +1,99 @@
+scn	VPitPlayerDoorPitAccessSeal
+
+; This script is tied to a trigger volume. It seals the entrance to the The Pit's bowels. This is the "last" safeguard against companions' setRestrained
+; call begin turned back to 0 - it gets turned to 1 when The Thorn's fight master script (in the main trigger volume "code box" at OVWestSewers03) recognizes
+; that Red Lucy has set the proper variables that kick-start a player-fight. Companions set to Waiting, as it happens here when player fights begin,
+; will not return to their location as long as they are on the same cell as the player. They will have to leave through this trigger, then, even if they wait without
+; pause for three days after a player fight has ended. Companions will be unrestrained in all circumstances barring cheats (coc, moveto, etc).
+; - Jorge
+
+
+Begin OnTriggerEnter Player
+
+	If VPitPlayerAccessDoorREF.GetLocked != 1
+		VPitPlayerAccessDoorREF.Activate VMS38RedLucyREF
+		VPitPlayerAccessDoorREF.Lock 255
+		If (VNPCFollowers.nCurrentFollowers >= 1)
+			If (VNPCFollowers.ArcadeHired == 1)
+				If (ArcadeREF.GetInCell OVWestSewers03 == 1)
+					ArcadeREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bBooneHired == 1)
+				If (CraigBooneREF.GetInCell OVWestSewers03 == 1)
+					CraigBooneREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bVeronicaHired == 1)
+				If (VeronicaREF.GetInCell OVWestSewers03 == 1)
+					VeronicaREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.RaulHired == 1)
+				If (RaulREF.GetInCell OVWestSewers03 == 1)
+					RaulREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bEDEHired == 1)
+				If (EDE1REF.GetInCell OVWestSewers03 == 1 || EDE2REF.GetInCell OVWestSewers03 == 1 || EDE3REF.GetInCell OVWestSewers03 == 1)
+				Endif
+			Endif
+			If (VNPCFollowers.RexHired == 1)
+				If (RexREF.GetInCell OVWestSewers03 == 1)
+					RexREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bCassHired == 1)
+				If (RoseofSharonCassidyREF.GetInCell OVWestSewers03 == 1)
+					RoseofSharonCassidyREF.SetRestrained 0;
+				Endif
+			Endif
+			If (VNPCFollowers.bLilyHired == 1)
+				If (LilyREF.GetInCell OVWestSewers03 == 1)
+					LilyREF.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.CharonHired == 1)
+				If (CharonRef.GetInCell OVWestSewers03 == 1)
+					CharonRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.ButchHired == 1)
+				If (ButchRef.GetInCell OVWestSewers03 == 1)
+					ButchRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.CloverHired == 1)
+				If (CloverRef.GetInCell OVWestSewers03 == 1)
+					CloverRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.JerichoHired == 1)
+				If (JerichoRef.GetInCell OVWestSewers03 == 1)
+					JerichoRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.FawkesHired == 1)
+				If (MQ08FawkesRef.GetInCell OVWestSewers03 == 1)
+					MQ08FawkesRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.StarPaladinCrossHired == 1)
+				If (StarPaladinCrossRef.GetInCell OVWestSewers03 == 1)
+					StarPaladinCrossRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.DogmeatHired == 1)
+				If (DogmeatRef.GetInCell OVWestSewers03 == 1)
+					DogmeatRef.SetRestrained 0;
+				Endif
+			Endif
+			If (Followers.RL3Hired == 1)
+				If (RL3REF.GetInCell OVWestSewers03 == 1)
+					RL3REF.SetRestrained 0;
+				Endif
+			Endif
+		Endif
+	Endif
+
+End

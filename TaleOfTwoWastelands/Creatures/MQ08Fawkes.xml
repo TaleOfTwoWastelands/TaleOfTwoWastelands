@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>QuestItem_PersistentReference</Flags>
+  <FormID ID="0003D34E">MQ08Fawkes</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ08Fawkes</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-41</X>
+        <Y>-43</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>41</X>
+        <Y>43</Y>
+        <Z>152</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Fawkes</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\SMSpineBreaker\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00079A3A">MQ08FawkesDR</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>smspinebreakervault.nif</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AQAAAAzy5Q5zrtYA1XJlDnOz1gDVcmUhdM42zL7u3xBzewtMsG5fEHOAC0ywcmUhdM42zL7z3xBzewtMsHNfEHOAC0ywcmUhdM42zL7z9BBzfwqNjnN0EHOECo2OcmUhdM42zL7u3xJzfmro525fEnODaujncmUhdM42zL7z3xJzfmro53NfEnODaujncmUhdM42zL6xsA1t+kwJRjEwDW3/TAlGZXINdDh6OHHu3w9tew6xXW5fD22ADrFdZXINdDh6OHHz3w9tew6xXXNfD22ADrFdZXINdDh6OHH08hBztjoOkHRyEHO7Og6QcmUhdM42zL7u3xJzuO7k9m5fEnO97uT2cmUhdM42zL7z3xJzuO7k9nNfEnO97uT2cmUhdM42zL4=</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Swims, Walks, PCLevelMult, AllowPCDialogue, AllowPickpocket</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1000</Level>
+      <CalcMin>6</CalcMin>
+      <CalcMax>50</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>60</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0005A7D4">MS06DoorFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0006A42A">MQ08FawkesFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="06019FD9">CreatureSuperMutantDC</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="06068A9A">MQ08FawkesScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00015169">Stimpak</Item>
+          <Count>3</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000615A8">Ammo5mmRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000615AF">AmmoElectronChargePackRobot</Item>
+          <Count>50</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="06063FA2">FollowersFawkesSledgehammer</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>65</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0900090B">DLC03MQ11FawkesActivatePanel</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0900090A">DLC03MQ11FawkesCodeWaitForAirlock</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06096E70">FollowersFawkesGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0609427F">FollowersFawkesFiredWaitMuseum</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06094283">FollowersFawkesFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06094281">FollowersFawkesFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06094280">FollowersFawkesFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06097B59">FollowersHireFawkesFightEnclave</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="060B73E6">MQ08FawkesEndVault87</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D9D5">MQ08FawkesReturnsWithGECK</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D9D2">MQ08FawkesGetstheGECk</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D9D4">MQ08FawkesForcegreetsOnArrival01</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D9D1">MQ08FawkesHeadstoGECK</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06046929">MQ08FawkesWaitsOutsideofCell</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="06046930">MQ08FawkesStandsAtWindow</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0602D9D0">MQ08FawkesSandbox</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>SuperMutant</CreatureType>
+      <Skill>
+        <Combat>75</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>500</Health>
+      <Damage>4</Damage>
+      <Strength>9</Strength>
+      <Perception>3</Perception>
+      <Endurance>8</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000269BA">CSSupermutantMelee</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0002026E">SupermutantrBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">3</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0001FF5F">AudioTemplateSuperMutant</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00075A49">SuperMutantHandImpactDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A15E">SupermutantWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

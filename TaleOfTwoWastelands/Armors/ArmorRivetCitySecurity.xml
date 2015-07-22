@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="ARMO">
+  <Flags>0</Flags>
+  <FormID ID="060239CC">ArmorRivetCitySecurity</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ArmorRivetCitySecurity</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-19</X>
+        <Y>-14</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>15</Y>
+        <Z>17</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Rivet City Security Uniform</Name>
+    <ObjectEffect Tag="EITM">
+      <Reference ID="0003D326">EnchClothingVaultSuitSecurity</Reference>
+    </ObjectEffect>
+    <BipedData Tag="BMDT">
+      <Slots>UpperBody</Slots>
+      <Flags>Medium</Flags>
+    </BipedData>
+    <Models>
+      <Biped>
+        <Male>
+          <FileName Tag="MODL">Armor\CombatArmor\M\OutfitM.NIF</FileName>
+          <TextureHashes Tag="MODT">5ewNdeiAU41lbA117YBTjWVsGHTW84Hg7t8PdWE6gDJuXw91ZjqAMmVsGHTW84Hg898PdWE6gDJzXw91ZjqAMmVsGHTW84Hg6/MQdYhA96JrcxB1jUD3omVsGHTW84Hg7fQHbwcx/gptdAdvDDH+CnJvGnRbTFJL7t8JbwDNHjVuXwlvBc0eNXJvGnRbTFJL898JbwDNHjVzXwlvBc0eNXJvGnRbTFJLsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MODS">
+            <Textures>
+              <Texture>
+                <Name>Arms1</Name>
+                <TextureSet ID="000615C1">RivetCitySecurityUniformM</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000615C1">RivetCitySecurityUniformM</TextureSet>
+                <Index>6</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="000615C1">RivetCitySecurityUniformM</TextureSet>
+                <Index>7</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MODD">Torso</FaceGenModelFlags>
+        </Male>
+        <Female>
+          <FileName Tag="MOD3">Armor\CombatArmor\F\OutfitF.nif</FileName>
+          <TextureHashes Tag="MO3T">5ewPdWfDye5lbA91bMPJ7mVsGnTVDM9+7t8RdWAtf/duXxF1ZS1/92VsGnTVDM9+898RdWAtf/dzXxF1ZS1/92VsGnTVDM9+6/MSdUkNtBBrcxJ1Tg20EGVsGnTVDM9+5vQHbwcx/gpmdAdvDDH+CnJvGnRbTFJL7t8Jb/nMHjVuXwlv/sweNXJvGnRbTFJL898Jb/nMHjVzXwlv/sweNXJvGnRbTFJLsbANbfpMCUYxMA1t/0wJRmVyDXQ4ejhx7t8PbXsOsV1uXw9tgA6xXWVyDXQ4ejhx898PbXsOsV1zXw9tgA6xXWVyDXQ4ejhx</TextureHashes>
+          <AlternateTextures Tag="MO3S">
+            <Textures>
+              <Texture>
+                <Name>Arms02</Name>
+                <TextureSet ID="0003E604">RivetCitySecurityUniformF</TextureSet>
+                <Index>4</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0003E604">RivetCitySecurityUniformF</TextureSet>
+                <Index>1</Index>
+              </Texture>
+              <Texture>
+                <Name>UpperBody</Name>
+                <TextureSet ID="0003E604">RivetCitySecurityUniformF</TextureSet>
+                <Index>5</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+          <FaceGenModelFlags Tag="MOSD">Torso</FaceGenModelFlags>
+        </Female>
+      </Biped>
+      <World>
+        <Male>
+          <FileName Tag="MOD2">Armor\CombatArmor\M\GO.NIF</FileName>
+          <TextureHashes Tag="MO2T">7fQHbwcx/gptdAdvDDH+CnJvGnRbTFJL7t8JbwDNHjVuXwlvBc0eNXJvGnRbTFJL898JbwDNHjVzXwlvBc0eNXJvGnRbTFJL</TextureHashes>
+          <AlternateTextures Tag="MO2S">
+            <Textures>
+              <Texture>
+                <Name>CombatArmorGO</Name>
+                <TextureSet ID="000615C1">RivetCitySecurityUniformM</TextureSet>
+                <Index>0</Index>
+              </Texture>
+            </Textures>
+          </AlternateTextures>
+        </Male>
+        <Female>
+          <FileName Tag="MOD4"></FileName>
+        </Female>
+      </World>
+    </Models>
+    <Icon>
+      <Inventory>
+        <Male Tag="ICON">Interface\Icons\PipboyImages\Apparel\appearal_combat_armor.dds</Male>
+      </Inventory>
+      <Message>
+        <Male Tag="MICO">Interface\Icons\PipboyImages_small\Apparel_small\glow_appearal_vault_security_suit.dds</Male>
+      </Message>
+    </Icon>
+    <RepairList Tag="REPL">
+      <Reference ID="00075206">RepairCombatArmor</Reference>
+    </RepairList>
+    <EquipmentType Tag="ETYP">BodyWear</EquipmentType>
+    <PickupSound Tag="YNAM">
+      <Reference ID="0001954D">UIItemsClothingUp</Reference>
+    </PickupSound>
+    <DropSound Tag="ZNAM">
+      <Reference ID="0001954E">UIItemsClothingDown</Reference>
+    </DropSound>
+    <Data Tag="DATA">
+      <Value>5500</Value>
+      <MaxCondition>100</MaxCondition>
+      <Weight>20</Weight>
+    </Data>
+    <ExtraData Tag="DNAM">
+      <DamageResistance>0</DamageResistance>
+      <Flags>0</Flags>
+      <DamageThreshold>11</DamageThreshold>
+      <Unknown>AAAAAA==</Unknown>
+    </ExtraData>
+    <OverridesAnimationSounds Tag="BNAM">No</OverridesAnimationSounds>
+    <AnimationSoundsTemplate Tag="TNAM">
+      <Reference ID="0013D3B6">ArmorHeavyAudioTemplate</Reference>
+    </AnimationSoundsTemplate>
+  </Subrecords>
+</Record>

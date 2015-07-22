@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="00032EB8">TestQASleeper</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TestQASleeper</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Sleeping Guy</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>NoLowLevelProcessing</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>1</Level>
+      <CalcMin>1</CalcMin>
+      <CalcMax>1</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00094EEC">VoiceDoNotRecordM</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004240">Ammo556mm</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004241">Ammo10mm</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004335">WeapLaserPistol</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004485">AmmoMicroFusionCell</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00004485">AmmoMicroFusionCell</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020772">AmmoSmallEnergyCell</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00020799">AmmoFatMans</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000239D4">Raider1ArmorComplete</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029383">AmmoMissile</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00029383">AmmoMissile</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0006B53C">Ammo308</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0007EA27">Ammo22LR</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0008ED03">Ammo9mm</Item>
+          <Count>100</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0600080B">WeapChineseAssaultRifle</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="060239D4">Raider1ArmorCompleteDC</Item>
+          <Count>10</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Cowardly</Confidence>
+      <EnergyLevel>0</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="06032E3A">TestQASleep</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="00000801">VaultDweller</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>10</BaseHealth>
+      <Strength>5</Strength>
+      <Perception>5</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>5</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00014B90">HairDefault</Reference>
+      </Type>
+      <Length Tag="LNAM">0.419999987</Length>
+      <Color Tag="HCLR">
+        <Red>215</Red>
+        <Green>225</Green>
+        <Blue>6</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">fIC2PmBeaT8lIAA9bCMXPxwDqL5Gmfq9tec6P076w7y6Jno/TkVpvjyol7+dILC/D5uOvoT7kj+EtPw+i/SNvXuNDD/8IIY+gA1RP28Cvj4wdQG/IkSXv23mQb9ojW8/7dYYPzwKFr3XorG/X9uJvwcwNL9dOGu9zmkjPmjEW7/YOkK/UOE5v0xfJj6AmzQ/idMSPxtb7L7QmX0+DgzAvlr4GL9/vzG/5J+qPmLZrL4C4g6/a0hOPtJd/D53Ibm+ar8iv1dmZD4=</Symmetric>
+        <Asymmetric Tag="FGGA">oXBVv9Lx7L4kIAI/7Oc0vi7yBb/eBKY/Un51P7d8gD1izWY//e+nPs61xD3iN2C/rA9OP9SUv77iEva+RzWUv+f7pL8r0ru+OJXfvk038L2TrBE/E9C2vpDmCj5OvFW/vlgivKvprD5bwEK/Lbe8P8r7AsDEPdC/</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">sWFDvx9F5z5WRsk+2vyFP2c3MD+xnJu9uM2VvKWXBL9xFyi+ahOovVyx9L5taiO/njszPyCrxz+E0zU/38t3P1EOoD5SZAlAMVlbv+RW4z6kNy8/Ri70PuPVY75S2Yc8j0nsPgROrz9AG/O+Ui4wv3lcrD4DaIq/vFKHPsR0czwGqrK9Y7QiP/Lzszw+Hyo/ScSivh39Fz+mKIu/zp8qvyqtOL/tCYw+DarIPoGwzT/k9Je+GnUYvwV/vT8j09M9+NPqPswcoj4=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

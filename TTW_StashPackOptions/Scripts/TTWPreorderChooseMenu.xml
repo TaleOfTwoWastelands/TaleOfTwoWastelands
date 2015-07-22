@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="02001BFA">TTWPreorderChooseMenu</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWPreorderChooseMenu</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>675</CompiledSize>
+        <VariableCount>9</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAJUCAAAWADMAMgAvACByAQBYQxAFAAEAcgIAIDAgPT0gWCISBQABAHIDACBYIhIFAAEAcgQAIHx8ICYmFgANACIACQAgcwYAIDAgPT0WAA0AAgAJACBzCQAgMCA9PVkQCwABAHIFAAAAAAAAABUABwBzCQACACAxGQAAABUACwBzBQAGACBYHxAAABYADwABAAsAIHMFACAxIH4gPT0eAAAAGAANAAIACQAgcwUAIDAgPT0VAAcAcwEAAgAgMRUABwBzCQACACAwGAANAAIACQAgcwUAIDIgPT0VAAcAcwIAAgAgMRUABwBzCQACACAwGAANAAIACQAgcwUAIDQgPT0VAAcAcwMAAgAgMRUABwBzCQACACAwGAANAAIACQAgcwUAIDYgPT0VAAcAcwcAAgAgMRUABwBzCQACACAwGAANAAIACQAgcwUAIDEgPT0VAAcAcwEAAgAgMBUABwBzCQACACAwGAANAAIACQAgcwUAIDMgPT0VAAcAcwIAAgAgMBUABwBzCQACACAwGAANAAIACQAgcwUAIDUgPT0VAAcAcwMAAgAgMBUABwBzCQACACAwGAANAAIACQAgcwUAIDcgPT0VAAcAcwcAAgAgMBUABwBzCQACACAwGAANAAEACQAgcwUAIDggPT0VAAcAcwYAAgAgMRkAAAAYAA0ADQAJACBzBgAgMSA9PRYADQABAAkAIHMBACAxID09NhAFAAEAcgYAGQAAABYADQABAAkAIHMCACAxID09NhAFAAEAcgcAGQAAABYADQABAAkAIHMDACAxID09NhAFAAEAcggAGQAAABYADQABAAkAIHMHACAxID09NhAFAAEAcgkAGQAAABUABwBzBgACACAyGQAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWPreorderChooseMenu.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bCaravanEnabled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bClassicEnabled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bMercenaryEnabled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">button</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">doOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bTribalEnabled</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">inMenu</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00103DF9">GSDocMitchellHouse</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00104C1C">VCG01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="01014E86">CG04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="02001BE1">TTWPreorderMenu</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00172A1E">VPreorderCaravan</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001674D4">VPreorderClassic</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00172A1D">VPreorderMercenary</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00172A1F">VPreorderTribal</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

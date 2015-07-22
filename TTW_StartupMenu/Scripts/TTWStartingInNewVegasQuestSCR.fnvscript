@@ -1,0 +1,70 @@
+scn TTWStartingInNewVegasQuestSCR
+
+float timer
+float fQuestDelayTime
+short DoOnce
+
+begin gamemode
+
+;===necessary for the timer to function
+set fQuestDelayTime to 0.001
+
+;===if we've done everything already, then stop the script right away.
+if DoOnce == 2
+return
+
+;===if this is the first run of the script, then:
+elseif DoOnce == 0
+
+		;=== Initialize the timer variable at 300 seconds (five minutes) seconds and count down
+         set timer to 300
+
+		;=== Make sure we only do this step once, otherwise the timer gets repeated  
+         set DoOnce to 1
+     endif
+
+;===once the timer variable has been set, check to see if it's counted down to zero, and if so, do stuff
+elseif DoOnce == 1
+
+     if timer > 0
+         set timer to timer - getSecondsPassed        
+
+     else                                                                
+
+		;=== Show a pop-up box about 300 seconds (five minutes) into the game
+		showmessage TTWStartingInNewVegasMsg1
+
+		;=== add the letter from dad
+		addnote TTWStartingInNewVegasLetter
+
+		;=== Fallout 3 main quest stuff
+		;=== Complete the first four CG quests completely
+		CompleteQuest CG00
+		CompleteQuest CG01
+		CompleteQuest CG02
+		CompleteQuest CG03
+
+		;=== Start the CG04 quest just so we can complete it and get the result script
+		StartQuest CG04
+
+		;=== To be extra sure it displays
+		setObjectiveCompleted CG04 80 1 
+
+		;=== This will run all the standard stuff AND complete the quest at the same time
+		SetStage CG04 200 
+
+		;=== Standard "exit the vault" stuff.  Handled by CG04SunBlindDummy normally
+			;=== make sure Springvale eyebot picks up the station
+			SpringvaleEyebotREF.enable
+
+			;=== Disable the "exit the vault" sequence activator since it's now redundant
+			CG04SunBlindDummyREF.Disable
+
+		;===stop the quest so that we can save memory and processor bandwidth
+		stopquest TTWStartingInNewVegasQuest
+
+	endif
+
+endif
+
+end

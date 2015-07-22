@@ -1,0 +1,123 @@
+ScriptName VFreeformMcCarran2InterrogationRoomTriggerSCRIPT
+
+ref rActionREF;
+
+BEGIN OnTriggerEnter player
+	Set VFreeformMcCarran2.bPlayerInInterrogationRoom to 1;
+	VSilusFakeLockerEnablerREF.Enable;
+	if(VFreeformMcCarran2.bAwaitingPlayerEntrance)
+		set VFreeformMcCarran2.bAwaitingPlayerEntrance to 0;
+	endif
+
+	; Removes all Player weapons
+	if (Player.GetActorValue Sneak >= 50)
+		player.RemoveAllTypedItems VMcCarranPlayerLocker2REF 1 0 40 NVImprovedHoldoutWeapons
+	else
+		player.RemoveAllTypedItems VMcCarranPlayerLocker2REF 1 0 40 NVHoldoutWeapons
+	endif
+
+END
+
+BEGIN OnTriggerEnter LieutenantBoydREF
+	if(VFreeformMcCarran2.bPlayerInInterrogationRoom == 0)
+		VFreeformMcCarran2InterrogationDoorREF.Lock 0;		
+	endif
+	set VFreeformMcCarran2.bBoydInInterrogationRoom to 1;
+END
+
+BEGIN OnTriggerEnter CorporalHornsbyREF
+	if(VFreeformMcCarran2.bPlayerInInterrogationRoom)
+		Set VFreeformMcCarran2.bAwaitingPlayerExit to 1;
+	endif
+	
+END
+
+BEGIN OnTriggerEnter CraigBooneREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter LilyREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter RaulREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter VeronicaREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter ArcadeREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter RoseOfSharonCassidyREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter RexREF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter EDE1REF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter EDE2REF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter EDE3REF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter CharonRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter ButchRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter CloverRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter JerichoRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter MQ08FawkesRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter StarPaladinCrossRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter DogmeatRef
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END
+
+BEGIN OnTriggerEnter RL3REF
+	set rActionREF to GetActionREF;
+	rActionREF.MoveTo BoydOutsideDoorREF
+END

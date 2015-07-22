@@ -1,0 +1,337 @@
+scn FortCaesarScript
+
+short Button
+short nPlayerMedicine
+short nPlayerLuck
+short nPlayerLuckBonus
+short nPlayerTotalMedicine
+short bEndGameButton
+short bStartedEndGame
+short bDoOnce
+
+Short bSaveGame;
+Float fSaveTimer;
+Short nSaveEvent;
+
+begin OnHit player
+
+	if (GetStageDone VMQ02 110 == 0)
+		SetEnemy vCaesarsLegionTheFortFaction PlayerFaction
+		SetStage VMQ02 110
+	endif
+
+	if (GetQuestCompleted VMS35 == 0)
+		SetStage VMS35 255
+	endif
+
+end
+
+begin OnStartCombat player
+
+	if (bDoOnce == 0) && (GetStageDone VMQ02 110 == 0)
+		SetEnemy vCaesarsLegionTheFortFaction PlayerFaction
+		SetStage VMQ02 110
+		set bDoOnce to 1
+		EnableFastTravel 1
+	endif
+
+end
+
+begin OnActivate
+
+	if IsActionRef player
+
+		if VFreeformTheFort.bCaesarInComa && (FortCaesarRef.GetDead == 0)
+			
+			if (GetStageDone VMS35 255 == 1) ; Failed state
+				return
+		
+			; Player doesn't have a Doctor's Bag or Surgical Tools
+			elseif (player.GetItemCount NVDoctorBag == 0) && (player.GetItemCount VMS35SurgicalTools == 0)
+				ShowMessage FortCaesarComaNoToolsNoBagMsg
+
+			; Player doesn't have a Doctor's Bag
+			elseif (player.GetItemCount NVDoctorBag == 0) && (player.GetItemCount VMS35SurgicalTools > 0)	
+				ShowMessage FortCaesarComaNoBagMsg
+			; Player doesn't have the Surgical Tools
+
+			elseif (player.GetItemCount NVDoctorBag > 0) && (player.GetItemCount VMS35SurgicalTools == 0)	
+				ShowMessage FortCaesarComaNoToolsMsg
+
+			; Player has both a Doctor's Bag and Surgical Tools
+			else
+				ShowMessage FortCaesarComaMsg
+			endif
+		elseif (FortCaesarRef.GetDead == 0) && (player.IsSneaking) && (GetStageDone VMQ02 7 == 0)
+			FortCaesarRef.StartCombat player
+		else
+			Activate
+		endif
+
+	endif
+
+end 
+
+begin MenuMode 1001
+
+	if bEndGameButton == 0
+		set Button to GetButtonPressed
+	
+		if (Button == 1)	
+				
+				VMS35AutoDocRef.SetDestroyed 1
+				if (player.GetItemCount VMS35AutomaticSurgicalUnit > 0)
+					player.RemoveItem VMS35AutomaticSurgicalUnit 1000
+				endif
+
+				player.RemoveItem VMS35SurgicalTools 1000
+
+				if player.GetAV Medicine >= 75	
+					; Caesar cured through Medical skill.
+					set VMS35.nSurgeryStatus to 1
+					ShowMessage FortCaesarSurgerySuccess
+					set VFreeformTheFort.bCaesarInComa to 0
+					FortCaesarRef.SetRestrained 0
+					FortCaesarRef.IgnoreCrime 0
+					set VStoryEventCaesarCured to 1
+					SetStage VMS35 100
+				elseif player.GetAV Medicine < 75 && player.GetAV Medicine >= 25
+					; Caesar dies.
+					set VMS35.nSurgeryStatus to 2
+					ShowMessage FortCaesarSurgeryDeath
+					set VFreeformTheFort.bCaesarInComa to 0
+					FortCaesarRef.KillActor FortCaesarRef
+					FortLuciusRef.AddScriptPackage FortLuciusConfrontPlayerPackage
+					set VStoryEventCaesarKilled to 2
+					SetObjectiveDisplayed VMS35 15 0
+					SetObjectiveCompleted VMS35 20 1
+					SetObjectiveDisplayed VMS35 25 0
+					SetObjectiveDisplayed VMS35 30 0
+					SetObjectiveDisplayed VMS35 35 0
+					SetObjectiveDisplayed VMS35 40 0
+					SetObjectiveDisplayed VMS35 50 0
+					SetStage VMS35 101
+				else
+					; Caesar dies violently.
+					set VMS35.nSurgeryStatus to 3
+					ShowMessage FortCaesarSurgeryDeath
+					set VFreeformTheFort.bCaesarInComa to 0
+					FortCaesarRef.KillActor FortCaesarRef 1
+					FortLuciusRef.AddScriptPackage FortLuciusConfrontPlayerPackage
+					set VStoryEventCaesarKilled to 2
+					SetObjectiveDisplayed VMS35 15 0
+					SetObjectiveCompleted VMS35 20 1
+					SetObjectiveDisplayed VMS35 25 0
+					SetObjectiveDisplayed VMS35 30 0
+					SetObjectiveDisplayed VMS35 35 0
+					SetObjectiveDisplayed VMS35 40 0
+					SetObjectiveDisplayed VMS35 50 0
+					SetStage VMS35 101
+				endif
+	
+		elseif (Button == 2)
+	
+				VMS35AutoDocRef.SetDestroyed 1
+				if (player.GetItemCount VMS35AutomaticSurgicalUnit > 0)
+					player.RemoveItem VMS35AutomaticSurgicalUnit 1000
+				endif
+			
+				player.RemoveItem VMS35SurgicalTools 1000
+
+				if (GetObjectiveDisplayed VMS35 15 == 1)
+					SetObjectiveDisplayed VMS35 15 0
+				endif
+				SetObjectiveDisplayed VMS35 20 0
+				SetObjectiveCompleted VMS35 25 1
+
+				; Caesar dies deliberately.
+				set VMS35.nSurgeryStatus to 4
+				ShowMessage FortCaesarSurgeryDeath
+				FortCaesarRef.KillActor FortCaesarRef
+				set VFreeformTheFort.bCaesarInComa to 0
+				FortLuciusRef.AddScriptPackage FortLuciusConfrontPlayerPackage
+				SetStage VMS35 101
+				set VStoryEventCaesarKilled to 2
+	
+		elseif (Button == 3)
+	
+				VMS35AutoDocRef.SetDestroyed 1
+				if (player.GetItemCount VMS35AutomaticSurgicalUnit > 0)
+					player.RemoveItem VMS35AutomaticSurgicalUnit 1000
+				endif
+
+				player.RemoveItem VMS35SurgicalTools 1000
+
+				; Player succeeded through sheer luck.
+				set VMS35.nSurgeryStatus to 5
+				ShowMessage FortCaesarSurgerySuccess
+				set VFreeformTheFort.bCaesarInComa to 0
+				FortCaesarRef.SetRestrained 0
+				FortCaesarRef.IgnoreCrime 0
+				set VStoryEventCaesarCured to 1
+				SetStage VMS35 100
+			
+		endif
+	endif
+end
+	
+begin OnDeath
+
+	set VStoryEventCaesarKilled to 1
+	
+	if (VStoryState < 40)
+		Set VStoryState to 40
+	endif
+
+	
+	if (GetObjectiveDisplayed VMQ02 90 == 1)
+		SetObjectiveDisplayed VMQ02 90 0
+	endif
+
+	if (VNPCFollowers.bBooneHired)
+		set VDialogueCraigBoone.nOpenness to VDialogueCraigBoone.nOpenness + 2;
+		CraigBooneREF.SayTo player VDialogueCraigBooneCaesarDead;
+		set VDialogueCraigBoone.bGreetCaesarDead to 1;
+	endif
+
+	; Player killed Caesar before surgery
+	if (VMS35.nSurgeryStatus == 0)
+		SetStage VMQ02 110
+	; Player killed Caesar after curing him
+	elseif (VMS35.nSurgeryStatus == 1) || (VMS35.nSurgeryStatus == 5) || (VMS35.nSurgeryStatus == 7) || (VMS35.nSurgeryStatus == 8)
+		SetStage VMQ02 110
+	endif
+
+	; Caesar's bed and throne are now property of the player. Hail, Courier!
+	FortCaesarThroneRef.SetOwnership
+	CaesarBedRef.SetOwnership
+
+; ---------------------------------------------------------------------------------------	\/ (10_30_10) Added to fix bug 38597 -ETB
+
+	if ( FortCaesarRef.GetItemCount VPlatinumChip > 0 )
+		FortCaesarRef.RemoveItem VPlatinumChip 1000
+
+		if ( player.getitemcount vplatinumchip == 0 )
+			player.additem vplatinumchip 1
+			if ( GetQuestRunning VMQHouse1 )               
+  				SetObjectiveCompleted VMQHouse1 12 1 
+  				SetObjectiveDisplayed VMQHouse1 20 1  
+			endif                                                              	
+		endif
+	endif
+
+; ---------------------------------------------------------------------------------------	/\
+
+end
+
+
+
+BEGIN GameMode
+
+	;This code runs the savegame.
+	If (bSaveGame == 1)
+		If (fSaveTimer > 0)
+			Set fSaveTimer to fSaveTimer - GetSecondsPassed
+		Else
+			If (nSaveEvent == 0)
+	
+				SystemSave;
+				Set fSaveTimer to 1.0;
+				Set nSaveEvent to 1;
+	
+			ElseIf (nSaveEvent == 1)
+	
+				EnablePlayerControls;
+	
+				;Show Message Script
+				ShowMessage VEndGameWarningMsgLegion;
+	
+				Set nSaveEvent to 0;
+				Set bSaveGame to 2;
+			EndIf
+		EndIf
+	EndIf
+
+	if bEndGameButton == 1
+		if ( bStartedEndGame == 0 )
+			set Button to GetButtonPressed
+			if ( Button == 0 )
+				;Reset Dialog Options So Caesar Redoes the "Are you ready" stuff.
+			elseif ( Button == 1 )
+				set bStartedEndGame to 1
+	
+				;Start Legion Stuff
+				Set VHDBattleController.iBattleState to 2
+				VHDLegionLegateCampPreBattleEnableMarker.enable
+
+				player.MoveTo VHDLegateStartMarker
+
+				;Move Companions with the Player
+				if (VNPCFollowers.bBooneHired)
+					CraigBooneREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bCassHired)
+					RoseofSharonCassidyREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif	
+				if (VNPCFollowers.bVeronicaHired)
+					VeronicaREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bLilyHired)
+					LilyREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.RaulHired)
+					RaulREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.ArcadeHired)
+					ArcadeREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (VNPCFollowers.bEDEHired)
+					if EDE1Ref.GetDisabled == 0
+						EDE1Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					elseif EDE2Ref.GetDisabled == 0
+						EDE2Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					elseif EDE3Ref.GetDisabled == 0
+						EDE3Ref.MoveTo VHDLegateCampTPCompanionMarker;
+					endif
+				endif
+				if (VNPCFollowers.RexHired)
+					RexREF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.CharonHired)
+					CharonRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.DogmeatHired)
+					DogmeatRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.ButchHired)
+					ButchRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.CloverHired)
+					CloverRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.JerichoHired)
+					JerichoRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.FawkesHired)
+					MQ08FawkesRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.RL3Hired)
+					RL3REF.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+				if (Followers.StarPaladinCrossHired)
+					StarPaladinCrossRef.MoveTo VHDLegateCampTPCompanionMarker
+				endif
+
+				; Disable fast travel
+				EnableFastTravel 0 0 1
+
+				; Reduce the delay in processing the Legion Hoover Dam script
+				SetQuestDelay VHDLegionBattle 0.5
+
+				AutoSave
+
+
+			endif
+		endif
+	endif
+END

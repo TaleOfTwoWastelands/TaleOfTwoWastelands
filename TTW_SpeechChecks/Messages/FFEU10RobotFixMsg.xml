@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="MESG">
+  <Flags>0</Flags>
+  <FormID ID="0005A235">FFEU10RobotFixMsg</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FFEU10RobotFixMsg</EditorID>
+    <Content Tag="DESC">This robot is stuck in a diagnostic loop. A little maintenance work should fix it.</Content>
+    <Icon Tag="INAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </Icon>
+    <MessageFlags Tag="DNAM">MessageBox</MessageFlags>
+    <Buttons>
+      <Button>
+        <ButtonText Tag="ITXT">Walk away and do nothing.</ButtonText>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Perform a hard reset.</ButtonText>
+      </Button>
+      <Button>
+        <ButtonText Tag="ITXT">Remove critical circuits to disable the robot.</ButtonText>
+      </Button>
+    </Buttons>
+  </Subrecords>
+</Record>

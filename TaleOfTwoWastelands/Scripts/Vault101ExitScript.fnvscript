@@ -1,0 +1,104 @@
+ScriptName Vault101ExitScript
+
+
+short button
+short reactivate		; set to 1 to trigger automatic reactivation
+short saved				; set to 1 first time player activates
+
+short updateDad		; set to 1 when using race menu in order to make sure Dad gets updated to match player
+
+short tempVar 
+
+Begin OnActivate
+	if IsActionRef player == 1
+		; at the end of CG04, the player has one last change to change his character
+		if GetQuestRunning CG04 == 1 && getStageDone CG04 150 == 0
+			player.scaonactor 	; just in case
+			if saved == 0
+				set saved to 1
+				; save the game here
+				forceSave
+				; we can't pop the message box until the next frame so the save can actually happen
+			elseif saved >= 3
+				showMessage CG04VaultExitMessage
+			endif
+		else
+			Activate
+		endif
+	else
+		Activate
+	endif
+End
+
+begin gamemode
+	; update Dad's face after using race menu
+	if updateDad == 2
+		set updateDad to 0
+		; dad matches player's race and face
+		MQDadREF.MatchRace player
+		; match face
+		MQDadREF.MatchFaceGeometry player CGMatchFace
+	endif
+
+	if saved == 1
+		; player has just saved, wait until next frame
+		set saved to 2
+	elseif saved == 2
+		set saved to 3
+		showMessage CG04VaultExitMessage
+	endif
+
+	if reactivate == 1
+		set reactivate to 0
+		activate player 1
+	endif
+		
+	set button to getbuttonpressed
+	if button > -1
+		if button == 5
+			; exit vault
+			setstage CG04 150
+			activate player
+		else
+			if button == 0
+				set tempVar to button
+				GetPlayerName
+			elseif button == 1
+				set updateDad to 1
+				ShowRaceMenu
+			elseif button == 2
+				SetSPECIALPoints 40
+			elseif button == 3
+				player.RemovePerk BuiltToDestroy
+				player.RemovePerk FastShot
+				player.RemovePerk FourEyes
+				player.RemovePerk GoodNatured
+				player.RemovePerk HeavyHanded
+				player.RemovePerk Kamikaze
+				player.RemovePerk LooseCannon
+				player.RemovePerk SmallFrame
+				player.RemovePerk TriggerDiscipline
+				player.RemovePerk WildWasteland
+				Player.RemovePerk NVDLC03TraitClaustrophobia;
+				Player.RemovePerk NVDLC03TraitEarlyBird;
+				Player.RemovePerk NVDLC03TraitHoarder;
+				Player.RemovePerk NVDLC03TraitHotBlooded;
+				Player.RemovePerk NVDLC03TraitLogansLoophole;
+				Player.RemovePerk NVDLC03TraitSkilled;
+				ShowTraitMenu 1
+			elseif button == 4
+				SetTagSkills 3
+			endif
+			set reactivate to 1
+		endif
+	endif
+
+end
+
+begin menumode 1036
+	if updateDad == 1
+		set updateDad to 2
+	endif
+end
+
+

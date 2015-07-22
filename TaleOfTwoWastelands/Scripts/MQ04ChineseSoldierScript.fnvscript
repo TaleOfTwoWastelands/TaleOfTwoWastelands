@@ -1,0 +1,25 @@
+ScriptName MQ04ChineseSoldierScript
+
+;covers enabling of Chinese Soldiers in MQ04
+
+short doonce
+
+Begin OnLoad
+
+	IgnoreCrime 1
+
+End
+
+
+Begin Gamemode
+
+	if ( doonce == 0  )
+		if ( MQ04.Invasion == 1 )
+			If GetDisabled == 1
+				Enable
+			EndIf	
+			set doonce to 1
+		endif
+	endif
+
+End

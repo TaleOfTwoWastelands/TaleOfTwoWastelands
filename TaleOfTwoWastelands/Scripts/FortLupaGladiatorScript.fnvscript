@@ -1,0 +1,59 @@
+scn FortLupaGladiatorScript
+
+begin OnDeath
+
+	FortOthoRef.SetGhost 0
+	set VMS34.ArenaDuelEnabled to 0
+	set VMS34.DefeatedLupa to 1
+	FortArenaGateRef.Unlock
+	FortArenaGateRef.SetOpenState 1
+	AddReputation RepNVCaesarsLegion 1 3
+	SetEnemy TheFortGladiatorFaction PlayerFaction 0 0
+	FortPlayerEquipmentContainerRef.RemoveAllTypedItems player
+	player.RemoveItem WeapNVMacheteGladiator 1000
+	player.RemoveItem ArmorLeatherGladiator 1000
+	ShowMessage FortArenaEquipmentMsg
+
+	if (VNPCFollowers.ArcadeHired)
+		ArcadeRef.Enable
+ 	elseif (VNPCFollowers.bLilyHired)
+		LilyRef.Enable
+	elseif (VNPCFollowers.RaulHired)
+		RaulRef.Enable
+	elseif (VNPCFollowers.bBooneHired)
+		CraigBooneRef.Enable
+	elseif (VNPCFollowers.bVeronicaHired)
+		VeronicaRef.Enable
+	elseif (VNPCFollowers.bCassHired)
+		RoseOfSharonCassidyRef.Enable
+	elseif (Followers.CharonHired)
+		CharonRef.Enable
+	elseif (Followers.StarPaladinCrossHired)
+		StarPaladinCrossRef.Enable
+	elseif (Followers.ButchHired)
+		ButchRef.Enable
+	elseif (Followers.CloverHired)
+		CloverRef.Enable
+	elseif (Followers.JerichoHired)
+		JerichoRef.Enable
+	elseif (Followers.FawkesHired)
+		MQ08FawkesRef.Enable
+	endif
+
+	if (VNPCFollowers.bEDEHired)
+		if VDialogueEDE.iHVUpgrade != 0
+			EDE3Ref.Enable
+		elseif VDialogueEDE.iFolUpgrade != 0
+			EDE2Ref.Enable
+		else
+			EDE1Ref.Enable
+		endif
+	elseif (VNPCFollowers.RexHired)
+		RexRef.Enable
+	elseif (Followers.DogmeatHired)
+		DogmeatRef.Enable
+	elseif (Followers.RL3Hired)
+		RL3REF.Enable
+	endif
+
+end

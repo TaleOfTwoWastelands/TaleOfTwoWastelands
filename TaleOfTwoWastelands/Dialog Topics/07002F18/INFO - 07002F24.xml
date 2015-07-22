@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="07002F24">INFO - 07002F24</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0700766A">DLC02Voices</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="00000000">NullReference</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I'll just take care of all your old gear for you and here are the new ones.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="07002D22">DLC02FieldHQQuartermaster</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="07002F2D">DLC02RequisitionHoloFireTeam</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="07002D0A">DLC02StrikeTeam</Quest>
+          <VariableIndex>6</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>23</ReferenceCount>
+          <CompiledSize>396</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG4BAAAAHAABAFIQCgACAHIEAG4BAAAAHAABAFIQCgACAHIFAG4BAAAAHAABAFIQCgACAHIGAG4IAAAAHAABAFIQCgACAHIHAG4IAAAAHAABAFIQCgACAHIIAG4BAAAAHAABAFIQCgACAHIJAG4BAAAAHAABAFIQCAACAHIKAEcLABwAAQBSEAoAAgByDABuBAAAABwAAQBSEAoAAgByDQBuAQAAABwAAQBSEAoAAgByBQBuAQAAABwAAQBSEAgAAgByDgBHDwAcAAEAUhAKAAIAchAAbgEAAAAcAAEAUhAIAAIAchEARxIAHAABAAIQCgACAHITAG4BAAAAHAABAAIQCgACAHIUAG4BAAAAHAABAAIQCgACAHIGAG4MAAAAHAABAAIQCAACAHIVAEcWABUACgByFwBzCAACACAxFQAKAHIXAHMHAAIAIDAVAAoAchcAcwsAAgAgMBUACgByFwBzCgACACAwFQAKAHIXAHMJAAIAIDAcAAIAIhACAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">Player.RemoveItem DLC02RequisitionHoloFireTeam 1
+Player.RemoveItem DLC02WeapPowerFist 1
+Player.RemoveItem DLC02Weap10mmPistol 1
+Player.RemoveItem DLC02WeapGrenadeFrag 8
+Player.RemoveItem DLC02WeapMineFrag 8
+Player.RemoveItem DLC02WeapMissileLauncher 1
+Player.RemoveItem DLC02Weap10mmSubmachineGun 1
+Player.RemoveItem Ammo10mm DLC02Max10mm
+Player.RemoveItem AmmoMissile 4
+Player.RemoveItem DLC02WeapSniperRifle 1
+Player.RemoveItem DLC02Weap10mmPistol 1
+Player.RemoveItem Ammo308 DLC02Max308Caliber
+Player.RemoveItem DLC02WeapShotgunCombat 1
+Player.RemoveItem ammo20ga DLC02MaxShells
+Player.AddItem DLC02WeapAssaultRifle 1
+Player.AddItem DLC02WeapKnifeCombat 1
+Player.AddItem DLC02WeapGrenadeFrag 12
+Player.AddItem Ammo556mm DLC02Max556mm
+set DLC02StrikeTeam.STHaveFT to 1
+set DLC02StrikeTeam.STHaveReq to 0
+set DLC02StrikeTeam.STHaveHW to 0
+set DLC02StrikeTeam.STHaveSN to 0
+set DLC02StrikeTeam.STHaveCA to 0
+DLC02HeavyLoadoutXMRK.disable</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700CEAA">DLC02HeavyLoadoutXMRK</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07002F2D">DLC02RequisitionHoloFireTeam</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700C6F0">DLC02WeapPowerFist</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F49">DLC02Weap10mmPistol</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F43">DLC02WeapGrenadeFrag</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F45">DLC02WeapMineFrag</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F46">DLC02WeapMissileLauncher</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F72">DLC02Weap10mmSubmachineGun</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00004241">Ammo10mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700CBB3">DLC02Max10mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00029383">AmmoMissile</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F48">DLC02WeapSniperRifle</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0006B53C">Ammo308</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700CBB7">DLC02Max308Caliber</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700C7C2">DLC02WeapShotgunCombat</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000E86F2">Ammo20Ga</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700CBB8">DLC02MaxShells</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F3E">DLC02WeapAssaultRifle</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07003F44">DLC02WeapKnifeCombat</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00004240">Ammo556mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0700CBB4">DLC02Max556mm</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="07002D0A">DLC02StrikeTeam</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>
