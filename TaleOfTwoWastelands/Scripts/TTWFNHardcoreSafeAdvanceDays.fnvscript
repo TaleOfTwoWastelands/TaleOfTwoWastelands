@@ -1,0 +1,84 @@
+scn TTWFNHardcoreSafeAdvanceDays
+
+int daysToPass;
+int monthsToPass;
+int yearsToPass;
+
+int loopCounter;
+
+begin Function {daysToPass, monthsToPass, yearsToPass}
+
+	set yearsToPass to yearsToPass + (monthsToPass/12) + (daysToPass/365)
+	set daysToPass to daysToPass%365
+	set monthsToPass to monthsToPass%12
+
+	set GameYear to GameYear + yearsToPass
+	set yearsToPass to 0
+
+	set GameMonth to GameMonth + monthsToPass
+	set monthsToPass to 0
+
+	if GameMonth > 12
+		set GameYear to GameYear + 1
+		set GameMonth to GameMonth - 12
+	endif
+
+	set GameDay to GameDay + daysToPass
+
+	;Note: this loops twice to ensure that advancing 364 days on December 31st works properly
+	set loopCounter to 0;
+	
+	while (loopCounter < 1)
+		if GameMonth == 1 && GameDay > 31
+			set GameMonth to 2
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 2 && GameDay > 28
+			set GameMonth to 3
+			set GameDay to GameDay - 28
+		endif
+		if GameMonth == 3 && GameDay > 31
+			set GameMonth to 4
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 4 && GameDay > 30
+			set GameMonth to 5
+			set GameDay to GameDay - 30
+		endif
+		if GameMonth == 5 && GameDay > 31
+			set GameMonth to 6
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 6 && GameDay > 30
+			set GameMonth to 7
+			set GameDay to GameDay - 30
+		endif
+		if GameMonth == 7 && GameDay > 31
+			set GameMonth to 8
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 8 && GameDay > 31
+			set GameMonth to 9
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 9 && GameDay > 30
+			set GameMonth to 10
+			set GameDay to GameDay - 30
+		endif
+		if GameMonth == 10 && GameDay > 31
+			set GameMonth to 11
+			set GameDay to GameDay - 31
+		endif
+		if GameMonth == 11 && GameDay > 30
+			set GameMonth to 12
+			set GameDay to GameDay - 30
+		endif
+		if GameMonth == 12 && GameDay > 31
+			set GameMonth to 1
+			set GameYear to GameYear + 1
+			set GameDay to GameDay - 31
+		endif
+		
+		set loopCounter to loopCounter + 1;
+	loop
+end

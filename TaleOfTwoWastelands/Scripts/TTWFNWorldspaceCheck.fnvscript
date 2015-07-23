@@ -1,0 +1,39 @@
+scn TTWFNWorldspaceCheck
+
+int iIndex
+int iCount
+ref rList
+ref rWorld
+ref rMapper
+ 
+int iMapperIndex
+ 
+BEGIN Function {}
+       
+        if (Player.IsInInterior)
+                Return
+        endif
+       
+        set rWorld to Player.GetParentWorldspace
+        set iIndex to 0
+        set iCount to (listGetCount TTWWorldSpacesCheckerList)
+       
+        while(iIndex < iCount)
+               
+                set rList to listGetNthForm TTWWorldSpacesCheckerList iIndex
+                if (listGetFormIndex rList rWorld != -1)
+                        set iMapperIndex to (iIndex + 1)
+                        Break
+                endif
+                let iIndex += 1
+               
+        loop
+       
+        if (IsFormValid rList)
+                ; Get the mapper quest from the returned List and run the location setter on it
+                set rMapper to ListGetNthForm rList 0
+                set TTWWorldLocation to 0
+                Call rMapper iMapperIndex
+        endif
+       
+END

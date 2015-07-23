@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01C67F">TTWFNHardcoreSafeAdvanceDays</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFNHardcoreSafeAdvanceDays</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>3</ReferenceCount>
+        <CompiledSize>1057</CompiledSize>
+        <VariableCount>4</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAAEgANAAcEAAABAwEAAQIAAQMAAQAVACAAcwMAGwAgcwMAIHMCACAxMiAvICsgcwEAIDM2NSAvICsVAA8AcwEACgAgcwEAIDM2NSAlFQAOAHMCAAkAIHMCACAxMiAlFQAPAEcBAAoAIEcBACBzAwAgKxUABwBzAwACACAwFQAPAEcCAAoAIEcCACBzAgAgKxUABwBzAgACACAwFgANAAIACQAgRwIAIDEyID4VAA0ARwEACAAgRwEAIDEgKxUADgBHAgAJACBHAgAgMTIgLRkAAAAVAA8ARwMACgAgRwMAIHMBACArFQAHAHMEAAIAIDA7FRAAHQQAAAELAFYBAAAEAEIBBxYAGQACABUAIEcCACAxID09IEcDACAzMSA+ICYmFQAHAEcCAAIAIDIVAA4ARwMACQAgRwMAIDMxIC0ZAAAAFgAZAAIAFQAgRwIAIDIgPT0gRwMAIDI4ID4gJiYVAAcARwIAAgAgMxUADgBHAwAJACBHAwAgMjggLRkAAAAWABkAAgAVACBHAgAgMyA9PSBHAwAgMzEgPiAmJhUABwBHAgACACA0FQAOAEcDAAkAIEcDACAzMSAtGQAAABYAGQACABUAIEcCACA0ID09IEcDACAzMCA+ICYmFQAHAEcCAAIAIDUVAA4ARwMACQAgRwMAIDMwIC0ZAAAAFgAZAAIAFQAgRwIAIDUgPT0gRwMAIDMxID4gJiYVAAcARwIAAgAgNhUADgBHAwAJACBHAwAgMzEgLRkAAAAWABkAAgAVACBHAgAgNiA9PSBHAwAgMzAgPiAmJhUABwBHAgACACA3FQAOAEcDAAkAIEcDACAzMCAtGQAAABYAGQACABUAIEcCACA3ID09IEcDACAzMSA+ICYmFQAHAEcCAAIAIDgVAA4ARwMACQAgRwMAIDMxIC0ZAAAAFgAZAAIAFQAgRwIAIDggPT0gRwMAIDMxID4gJiYVAAcARwIAAgAgORUADgBHAwAJACBHAwAgMzEgLRkAAAAWABkAAgAVACBHAgAgOSA9PSBHAwAgMzAgPiAmJhUACABHAgADACAxMBUADgBHAwAJACBHAwAgMzAgLRkAAAAWABoAAgAWACBHAgAgMTAgPT0gRwMAIDMxID4gJiYVAAgARwIAAwAgMTEVAA4ARwMACQAgRwMAIDMxIC0ZAAAAFgAaAAIAFgAgRwIAIDExID09IEcDACAzMCA+ICYmFQAIAEcCAAMAIDEyFQAOAEcDAAkAIEcDACAzMCAtGQAAABYAGgADABYAIEcCACAxMiA9PSBHAwAgMzEgPiAmJhUABwBHAgACACAxFQANAEcBAAgAIEcBACAxICsVAA4ARwMACQAgRwMAIDMxIC0ZAAAAFQANAHMEAAgAIHMEACAxICs8FQAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWFNHardcoreSafeAdvanceDays.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">daysToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">monthsToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">yearsToPass</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">loopCounter</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000035">GameYear</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000036">GameMonth</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000037">GameDay</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

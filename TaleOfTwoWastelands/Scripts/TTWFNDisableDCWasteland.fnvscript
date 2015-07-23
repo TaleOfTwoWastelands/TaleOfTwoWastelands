@@ -1,0 +1,18 @@
+scn TTWFNDisableDCWasteland
+
+begin Function { }
+
+	set bInDCWasteland to 0
+
+	RadioGalaxyNewsRef01.Disable
+	RadioGalaxyNewsRef02.Disable
+	MS16Vault101ExternalRadioREF.Disable
+	RadioEnclaveRef.Disable
+	MS17RadioRef.Disable
+	DLC01RadioStationREF.Disable
+	DLC02OutcastRadioSignalRef.Disable
+	DLC05AlienRadioBeaconREF.Disable
+
+	PipBoyRadioOff
+
+end

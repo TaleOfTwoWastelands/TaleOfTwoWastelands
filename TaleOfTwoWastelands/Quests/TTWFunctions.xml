@@ -23,53 +23,17 @@
             <LogEntry Tag="CNAM">Disable DC Wasteland</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>9</ReferenceCount>
-                <CompiledSize>95</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQAHAEcJAAIAIDAcAAEAIhACAAAAHAACACIQAgAAABwAAwAiEAIAAAAcAAQAIhACAAAAHAAFACIQAgAAABwABgAiEAIAAAAcAAcAIhACAAAAHAAIACIQAgAAACQSAAA=</CompiledScript>
-              <ScriptSource Tag="SCTX">;Disable DC
-set bInDCWasteland to 0
-
-RadioGalaxyNewsRef01.Disable
-RadioGalaxyNewsRef02.Disable
-MS16Vault101ExternalRadioREF.Disable
-RadioEnclaveRef.Disable
-MS17RadioRef.Disable
-DLC01RadioStationREF.Disable
-DLC02OutcastRadioSignalRef.Disable
-DLC05AlienRadioBeaconREF.Disable
-
-PipBoyRadioOff</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNDisableDCWasteland</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602248E">RadioEnclaveREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0608A6DB">MS17RadioRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="08001657">DLC01RadioStationREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="070013FE">DLC02OutcastRadioSignalREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0B003F1F">DLC05AlienRadioBeaconREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C001E0F">bInDCWasteland</Reference>
+                  <Reference ID="0C01C677">TTWFNDisableDCWasteland</Reference>
                 </Reference>
               </References>
             </Script>
@@ -84,100 +48,17 @@ PipBoyRadioOff</ScriptSource>
             <LogEntry Tag="CNAM">Enable DC Wasteland</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>17</ReferenceCount>
-                <CompiledSize>370</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQAHAEcJAAIAIDEWABQAAQAQACBYOhAFAAEAcgoAIDYwIDwcAAEAIRACAAAAGAAQAAEADAAgcgoAcxEAIDAgPT0cAAEAIRACAAAAGQAAABYADQABAAkAIEcLACAwID09HAACACEQAgAAABgADQABAAkAIEcLACAxID09HAADACEQAgAAABkAAAAWABkAAQAVACBYOxAKAAIAcgwAbmQAAAAgMSA9PRwABAAhEAIAAAAZAAAAFgAxAAEALQAgWDsQCgACAHINAG7IAAAAIDAgPT0gWDsQCgACAHIOAG7IAAAAIDEgPT0gJiYcAAUAIRACAAAAGQAAABYAFAABABAAIFg6EAUAAQByDwAgNTAgPBwABgAhEAIAAAAZAAAAFgAZAAEAFQAgWKQRCgACAHIQAG4PAAAAIDAgPT0cAAcAIRACAAAAGQAAABYAFAABABAAIFg4EAUAAQByEQAgMCA9PRwACAAhEAIAAAAZAAAAJBIAAA==</CompiledScript>
-              <ScriptSource Tag="SCTX">;Enable DC
-set bInDCWasteland to 1
-
-if ( GetStage MQ09 &lt; 60 )
-	RadioEnclaveRef.Enable
-elseif ( MQ09.RRDestroy == 0 )
-	RadioEnclaveRef.Enable
-endif
-
-if ( GNRDishDone == 0 )
-	RadioGalaxyNewsRef01.Enable
-elseif ( GNRDishDone == 1 )
-	RadioGalaxyNewsRef02.Enable
-endif
-
-if ( GetStageDone MS17 100 == 1 )
-	MS17RadioRef.Enable
-endif
-
-if ( GetStageDone MS16 200 == 0 &amp;&amp; GetStageDone MQ05 200 == 1 )
-	MS16Vault101ExternalRadioREF.Enable
-endif
-
-if ( GetStage DLC01Quest01 &lt; 50 )
-	DLC01RadioStationREF.Enable
-endif
-
-if ( GetObjectiveCompleted DLC02OA1 15 == 0 )
-	DLC02OutcastRadioSignalRef.Enable
-endif
-
-if ( GetQuestRunning DLC05Post == 0 )
-	DLC05AlienRadioBeaconREF.Enable
-endif
-
-PipBoyRadioOff</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNEnableDCWasteland</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="0602248E">RadioEnclaveREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06022488">RadioGalaxyNewsRef01</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06099360">RadioGalaxyNewsRef02</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0608A6DB">MS17RadioRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06083512">MS16Vault101ExternalRadioREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="08001657">DLC01RadioStationREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="070013FE">DLC02OutcastRadioSignalREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0B003F1F">DLC05AlienRadioBeaconREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C001E0F">bInDCWasteland</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06014E8F">MQ09</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0009935F">GNRDishDone</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06014EA4">MS17</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06014EA3">MS16</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06014E8B">MQ05</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0800108C">DLC01Quest01</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="070009BE">DLC02OA1</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0B00A752">DLC05Post</Reference>
+                  <Reference ID="0C01C678">TTWFNEnableDCWasteland</Reference>
                 </Reference>
               </References>
             </Script>
@@ -192,45 +73,17 @@ PipBoyRadioOff</ScriptSource>
             <LogEntry Tag="CNAM">Disable NV Wasteland</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>7</ReferenceCount>
-                <CompiledSize>75</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQAHAEcHAAIAIDAcAAEAIhACAAAAHAACACIQAgAAABwAAwAiEAIAAAAcAAQAIhACAAAAHAAFACIQAgAAABwABgAiEAIAAAAkEgAA</CompiledScript>
-              <ScriptSource Tag="SCTX">;Disable Mojave
-set bInNVWasteland to 0
-
-RNVTARef.Disable;
-RadioBlackMountainTAREF.Disable;
-TTWvCountryRadioRef.Disable;
-NVDLC01RadioStationRef.Disable;
-NVDLC02JedRadioTAREF.Disable;
-NVDLC03RadioREF.Disable;
-
-PipBoyRadioOff</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNDisableNVWasteland</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="0014DF03">RNVTARef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6188">RadioBlackMountainTAREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0016B74C">REFR - 0016B74C</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="010062B4">NVDLC01RadioStationRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0200E74A">NVDLC02JedRadioTAREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="03013654">NVDLC03RadioREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+                  <Reference ID="0C01C67B">TTWFNDisableNVWasteland</Reference>
                 </Reference>
               </References>
             </Script>
@@ -245,52 +98,17 @@ PipBoyRadioOff</ScriptSource>
             <LogEntry Tag="CNAM">Enable NV Wasteland</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>8</ReferenceCount>
-                <CompiledSize>103</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQAHAEcHAAIAIDEcAAEAIRACAAAAHAACACEQAgAAABwAAwAhEAIAAAAcAAQAIRACAAAAFgAUAAEAEAAgWCISBQABAHIIACAwID09HAAFACIQAgAAABkAAAAcAAYAIRACAAAAJBIAAA==</CompiledScript>
-              <ScriptSource Tag="SCTX">;Enable Mojave
-set bInNVWasteland to 1
-
-RNVTARef.Enable;
-RadioBlackMountainTAREF.Enable;
-TTWvCountryRadioRef.Enable;
-NVDLC01RadioStationRef.Enable;
-
-if GetQuestCompleted NVDLC02MQ00 == 0
-	NVDLC02JedRadioTAREF.Disable;
-endif
-
-NVDLC03RadioREF.Enable;
-
-PipBoyRadioOff</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNEnableNVWasteland</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="0014DF03">RNVTARef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6188">RadioBlackMountainTAREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0016B74C">REFR - 0016B74C</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="010062B4">NVDLC01RadioStationRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0200E74A">NVDLC02JedRadioTAREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="03013654">NVDLC03RadioREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C00DFAA">bInNVWasteland</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="02008891">NVDLC02MQ00</Reference>
+                  <Reference ID="0C01C67C">TTWFNEnableNVWasteland</Reference>
                 </Reference>
               </References>
             </Script>
@@ -305,609 +123,17 @@ PipBoyRadioOff</ScriptSource>
             <LogEntry Tag="CNAM">Fire all followers</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>78</ReferenceCount>
-                <CompiledSize>3811</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FgAQAAkADAAgchQAcxQAIDEgPT0VAAoAchQAcxQAAgAgMBUACgByFABzFQACACAxFQAKAHIBAHMIAAIAIDAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAchUAHAABAF4QAABZEAsAAQByFgAAAAAAAAAcAAEAnhAFAAEAchcAFQAKAHIUAGYbAAIAIDAZAAAAFgAQABAADAAgchQAcw4AIDEgPT0VAAoAchgAcy8AAgAgMBUACgByFABzDgACACAwFQAKAHIUAHMPAAIAIDEVAAoAcgIAcwsAAgAgMBUACgByAgBzCAACACAxFQAKAHICAHMKAAIAIDAVAAoAcgIAcwkAAgAgMBwAAgCxEAUAAQByGQAVAAoAcgIAcwYAAgAgMRUACgByAgBzBwACACAwHAACAMURBwABAG4AAAAAHAACAIARBQABAHIVABwAAgBeEAAAWRALAAEAchoAAAAAAAAAHAACAJ4QBQABAHIbABUACgByFABmGQACACAwGQAAABYAEAARAAwAIHIUAHMCACAxID09FQAKAHIYAHMvAAIAIDAVAAoAchQAcwIAAgAgMBUACgByFABzAwACACAxFQAKAHIDAHMPAAIAIDAVAAoAcgMAcwsAAgAgMRUACgByAwBzDQACACAwFQAKAHIDAHMMAAIAIDAcAAMAsRAFAAEAchkAFQAKAHIDAHMJAAIAIDEVAAoAcgMAcwoAAgAgMBwAAwCJEAoAAgByHABu/////xwAAwCAEQUAAQByFQAcAAMAxREHAAEAbgAAAAAcAAMAXhAAAFkQCwABAHIdAAAAAAAAABwAAwCeEAUAAQByHgAVAAoAchQAZhkAAgAgMBkAAAAWABAAEAAMACByFABzEgAgMSA9PRUACgByGABzLwACACAwFQAKAHIUAHMSAAIAIDAVAAoAchQAcxMAAgAgMRUACgByBABzCAACACAwFQAKAHIEAHMFAAIAIDEVAAoAcgQAcwcAAgAgMBUACgByBABzBgACACAwHAAEALEQBQABAHIZABUACgByBABzAwACACAxFQAKAHIEAHMEAAIAIDAcAAQAxREHAAEAbgAAAAAcAAQAgBEFAAEAchUAHAAEAF4QAABZEAsAAQByHwAAAAAAAAAcAAQAnhAFAAEAciAAFQAKAHIUAGYZAAIAIDAZAAAAFgAQABEADAAgchQAcwYAIDEgPT0VAAoAchgAcy8AAgAgMBUACgByFABzBgACACAwFQAKAHIUAHMHAAIAIDEVAAoAcgUAcwkAAgAgMBUACgByBQBzBgACACAxFQAKAHIFAHMIAAIAIDAVAAoAcgUAcwcAAgAgMBwABQCxEAUAAQByGQAVAAoAcgUAcwQAAgAgMRUACgByBQBzBQACACAwHAAFAMURBwABAG4AAAAAHAAFAIkQCgACAHIcAG7/////HAAFAIARBQABAHIVABwABQBeEAAAWRALAAEAciEAAAAAAAAAHAAFAJ4QBQABAHIiABUACgByFABmGQACACAwGQAAABYAEAAQAAwAIHIUAHMIACAxID09FQAKAHIYAHMvAAIAIDAVAAoAchQAcwgAAgAgMBUACgByFABzCQACACAxFQAKAHIGAHMIAAIAIDAVAAoAcgYAcwUAAgAgMRUACgByBgBzBwACACAwFQAKAHIGAHMGAAIAIDAcAAYAsRAFAAEAchkAFQAKAHIGAHMDAAIAIDEVAAoAcgYAcwQAAgAgMBwABgDFEQcAAQBuAAAAABwABgCAEQUAAQByFQAcAAYAXhAAAFkQCwABAHIjAAAAAAAAABwABgCeEAUAAQByJAAVAAoAchQAZhkAAgAgMBkAAAAWABAADwAMACByFABzFgAgMSA9PRUACgByFABzFgACACAwFQAKAHIUAHMXAAIAIDEVAAoAcgcAcwgAAgAgMBUACgByBwBzBQACACAxFQAKAHIHAHMHAAIAIDAVAAoAcgcAcwYAAgAgMBwABwCxEAUAAQByGQAVAAoAcgcAcwMAAgAgMRUACgByBwBzBAACACAwHAAHAMURBwABAG4AAAAAHAAHAIARBQABAHIVABwABwBeEAAAWRALAAEAciUAAAAAAAAAHAAHAJ4QBQABAHImABUACgByFABmGQACACAwGQAAABYAEAAQAAwAIHIUAHMKACAxID09FQAKAHIYAHMvAAIAIDAVAAoAchQAcwoAAgAgMBUACgByFABzCwACACAxFQAKAHIIAHMIAAIAIDAVAAoAcggAcwUAAgAgMRUACgByCABzBwACACAwFQAKAHIIAHMGAAIAIDAcAAgAsRAFAAEAcicAFQAKAHIIAHMDAAIAIDEVAAoAcggAcwQAAgAgMBwACADFEQcAAQBuAAAAABwACACAEQUAAQByFQAcAAgAXhAAAFkQCwABAHIoAAAAAAAAABwACACeEAUAAQByKQAVAAoAchQAZhkAAgAgMBkAAAAWABAADgAMACByGABzBgAgMSA9PRUACgByGABzLwACACAwHAAJAMURBwABAG4AAAAAHAAJAIARBQABAHIVABwACQAPEAkAAgA5AG4AAAAAHAAJAKgRBQABAHIqABUACgByCQBzCAACACAwFQAKAHIYAHMGAAIAIDAVAAoAchgAcwcAAgAgMRUACgByGABzMQACACAwHAAJAJ4QBQABAHIrABwACgCAEQUAAQByLAAcAAoAqBEFAAEAci0AWRALAAEAci4AAAAAAAAAWRALAAEAci8AAAAAAAAAGQAAABYAEAANAAwAIHIYAHMMACAxID09FQAKAHIYAHMvAAIAIDAcAAsAxREHAAEAbgAAAAAcAAsAgBEFAAEAchUAHAALAA8QCQACADkAbgAAAAAcAAsAqBEFAAEAcioAFQAKAHILAHMBAAIAIDAVAAoAchgAcwwAAgAgMBUACgByGABzDgACACAxFQAKAHIYAHM4AAIAIDAcAAoAqBEFAAEAcjAAWRALAAEAcjEAAAAAAAAAWRALAAEAcjIAAAAAAAAAHAALAJ4QBQABAHIzABkAAAAWABAADgAMACByGABzFQAgMSA9PRUACgByGABzLwACACAwHAAMAMURBwABAG4AAAAAHAAMAIARBQABAHIVABwADAAPEAkAAgA5AG4AAAAAHAAMAKgRBQABAHIqABUACgByDABzAQACACAwFQAKAHIYAHMVAAIAIDAVAAoAchgAcxYAAgAgMRUACgByGABzMgACACAwHAAKAKgRBQABAHI0AFkQCwABAHI1AAAAAAAAAFkQCwABAHI2AAAAAAAAABwADACeEAUAAQByNwA3EAUAAQByOAAZAAAAFgAQAA4ADAAgchgAcyEAIDEgPT0VAAoAchgAcy8AAgAgMBwADQDFEQcAAQBuAAAAABwADQCAEQUAAQByFQAcAA0ADxAJAAIAOQBuAAAAABwADQCoEQUAAQByKgAVAAoAcg0AcwEAAgAgMBUACgByGABzIQACACAwFQAKAHIYAHMiAAIAIDEVAAoAchgAczUAAgAgMBwADQCeEAUAAQByOQAcAAoAqBEFAAEAcjoAWRALAAEAcjsAAAAAAAAAWRALAAEAcjwAAAAAAAAANxAFAAEAcj0AGQAAABYAEAANAAwAIHIYAHMbACAxID09FQAKAHIYAHMvAAIAIDAcAA4AxREHAAEAbgAAAAAcAA4AgBEFAAEAchUAHAAOAA8QCQACADkAbgAAAAAcAA4AqBEFAAEAcioAFQAKAHIOAHMJAAIAIDAVAAoAchgAcxsAAgAgMBUACgByGABzHAACACAxFQAKAHIYAHM0AAIAIDAcAAoAqBEFAAEAcj4AWRALAAEAcj8AAAAAAAAAWRALAAEAckAAAAAAAAAAHAAOAJ4QBQABAHJBABkAAAAWABAADgAMACByGABzCQAgMSA9PRUACgByGABzLwACACAwHAAPAMURBwABAG4AAAAAHAAPAIARBQABAHIVABwADwAPEAkAAgA5AG4AAAAAHAAPAKgRBQABAHIqABUACgByDwBzAwACACAwFQAKAHIYAHMJAAIAIDAVAAoAchgAcwsAAgAgMRUACgByGABzNwACACAwHAAKAKgRBQABAHJCAFkQCwABAHJDAAAAAAAAAFkQCwABAHJEAAAAAAAAAFUQCgACAHJFAG4BAAAAHAAPAJ4QBQABAHJGABkAAAAWABAADQAMACByGABzDwAgMSA9PRUACgByGABzMAACACAwHAAQAMURBwABAG4AAAAAHAAQAIARBQABAHIVABwAEAAPEAkAAgA5AG4AAAAAHAAQAKgRBQABAHIqABUACgByEABzCAACACAwFQAKAHIYAHMPAAIAIDAVAAoAchgAcxEAAgAgMRUACgByGABzOQACACAwHAAKAKgRBQABAHJHAFkQCwABAHJIAAAAAAAAAFkQCwABAHJJAAAAAAAAABwAEACeEAUAAQBySgAZAAAAFgAQABwADAAgchgAcx4AIDEgPT0VAAoAchgAczAAAgAgMBwAEQDFEQcAAQBuAAAAABwAEQCAEQUAAQByFQAcABEADxAJAAIAOQBuAAAAABwAEQCoEQUAAQByKgAcABIAxREHAAEAbgAAAAAcABIAgBEFAAEAchUAHAASAA8QCQACADkAbgAAAAAcABIAqBEFAAEAcioAHAATAMURBwABAG4AAAAAHAATAIARBQABAHIVABwAEwAPEAkAAgA5AG4AAAAAHAATAKgRBQABAHIqABUACgByEQBzAQACACAwFQAKAHISAHMBAAIAIDAVAAoAchMAcwEAAgAgMBUACgByGABzHgACACAwFQAKAHIYAHMfAAIAIDEVAAoAchgAczYAAgAgMBwAEQAPEAkAAgAAAG4AAAAAHAASAA8QCQACAAAAbgAAAAAcABMADxAJAAIAAABuAAAAABwACgCoEQUAAQBySwBZEAsAAQByTAAAAAAAAABZEAsAAQByTQAAAAAAAAAcABEAnhAFAAEAck4AHAASAJ4QBQABAHJOABwAEwCeEAUAAQByTgAZAAAAFQAKAHIYAHMSAAIAIDAVAAoAchgAcxMAAgAgMA==</CompiledScript>
-              <ScriptSource Tag="SCTX">;Fire all followers
-if ( Followers.DogmeatHired == 1 )
-		set Followers.DogmeatHired to 0
-		set Followers.DogmeatFired to 1
-		set DogmeatREF.Waiting to 0
-		DogmeatREF.SetPlayerTeammate 0
-		DogmeatREF.RemoveFromFaction FollowerFaction
-		DogmeatREF.evp
-
-		ShowMessage FollowerMessageLeaveDogmeat
-		DogmeatREF.MoveTo EvacuationMarker
-		set Followers.DogmeatWaitingLeaveDay to 0
-endif
-
-
-if ( Followers.ButchHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.ButchHired to 0
-	set Followers.ButchFired to 1
-	set ButchREF.Waiting to 0
-	set ButchREF.IsFollowingDefault to 1
-	set ButchREF.IsFollowingLong to 0
-	set ButchREF.IsFollowingShort to 0
-	ButchREF.SetCombatStyle FollowersCombatStyleRanged
-	set ButchREF.CombatStyleRanged to 1
-	set ButchREF.CombatStyleMelee to 0
-	ButchREF.SetPlayerTeammate 0
-	ButchREF.RemoveFromFaction FollowerFaction
-	ButchREF.evp
-
-	ShowMessage FollowerMessageLeaveButch
-	ButchREF.MoveTo MuddyRudderMarker
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.CharonHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.CharonHired to 0
-	set Followers.CharonFired to 1
-	set CharonREF.Waiting to 0
-	set CharonREF.IsFollowingDefault to 1
-	set CharonREF.IsFollowingLong to 0
-	set CharonREF.IsFollowingShort to 0
-	CharonREF.SetCombatStyle FollowersCombatStyleRanged
-	set CharonREF.CombatStyleRanged to 1
-	set CharonREF.CombatStyleMelee to 0
-	CharonREF.SetFactionRank TeammateFaction -1
-	CharonREF.RemoveFromFaction FollowerFaction
-	CharonREF.SetPlayerTeammate 0
-	CharonREF.evp
-
-	ShowMessage FollowerMessageLeaveCharon
-	CharonREF.MoveTo UnderworldNinthCircleMARKER
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.CloverHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.CloverHired to 0
-	set Followers.CloverFired to 1
-	set CloverREF.Waiting to 0
-	set CloverREF.IsFollowingDefault to 1
-	set CloverREF.IsFollowingLong to 0
-	set CloverREF.IsFollowingShort to 0
-	CloverREF.SetCombatStyle FollowersCombatStyleRanged
-	set CloverREF.CombatStyleRanged to 1
-	set CloverREF.CombatStyleMelee to 0
-	CloverREF.SetPlayerTeammate 0
-	CloverREF.RemoveFromFaction FollowerFaction
-	CloverREF.evp
-
-	ShowMessage FollowerMessageLeaveClover
-	CloverREF.MoveTo ParadiseFallsEulogysPadMARKER
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.JerichoHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.JerichoHired to 0
-	set Followers.JerichoFired to 1
-	set JerichoREF.Waiting to 0
-	set JerichoREF.IsFollowingDefault to 1
-	set JerichoREF.IsFollowingLong to 0
-	set JerichoREF.IsFollowingShort to 0
-	JerichoREF.SetCombatStyle FollowersCombatStyleRanged
-	set JerichoREF.CombatStyleRanged to 1
-	set JerichoREF.CombatStyleMelee to 0
-	JerichoREF.SetPlayerTeammate 0
-	JerichoREF.SetFactionRank TeammateFaction -1
-	JerichoREF.RemoveFromFaction FollowerFaction
-	JerichoREF.evp
-
-	ShowMessage FollowerMessageLeaveJericho
-	JerichoREF.MoveTo MegatonOutsideMarker
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.FawkesHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.FawkesHired to 0
-	set Followers.FawkesFired to 1
-	set MQ08FawkesREF.Waiting to 0
-	set MQ08FawkesREF.IsFollowingDefault to 1
-	set MQ08FawkesREF.IsFollowingLong to 0
-	set MQ08FawkesREF.IsFollowingShort to 0
-	MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
-	set MQ08FawkesREF.CombatStyleRanged to 1
-	set MQ08FawkesREF.CombatStyleMelee to 0
-	MQ08FawkesREF.SetPlayerTeammate 0
-	MQ08FawkesREF.RemoveFromFaction FollowerFaction
-	MQ08FawkesREF.evp
-
-	ShowMessage FollowerMessageLeaveFawkes
-	MQ08FawkesREF.MoveTo FawkesMuseumWaitMarker
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.RL3Hired == 1 ) 
-	set Followers.RL3Hired to 0
-	set Followers.RL3Fired to 1
-	set RL3REF.Waiting to 0
-	set RL3REF.IsFollowingDefault to 1
-	set RL3REF.IsFollowingLong to 0
-	set RL3REF.IsFollowingShort to 0
-	RL3REF.SetCombatStyle FollowersCombatStyleRanged
-	set RL3REF.CombatStyleRanged to 1
-	set RL3REF.CombatStyleMelee to 0
-	RL3REF.SetPlayerTeammate 0
-	RL3REF.RemoveFromFaction FollowerFaction
-	RL3REF.evp
-
-	ShowMessage FollowerMessageLeaveRL3
-	RL3REF.MoveTo CCBazaarMarker
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-if ( Followers.StarPaladinCrossHired == 1 ) 
-	Set VNPCFollowers.bHumanoidInParty to 0;
-	set Followers.StarPaladinCrossHired to 0
-	set Followers.StarPaladinCrossFired to 1
-	set StarPaladinCrossREF.Waiting to 0
-	set StarPaladinCrossREF.IsFollowingDefault to 1
-	set StarPaladinCrossREF.IsFollowingLong to 0
-	set StarPaladinCrossREF.IsFollowingShort to 0
-	StarPaladinCrossREF.SetCombatStyle FollowersCombatStyleMelee
-	set StarPaladinCrossREF.CombatStyleRanged to 1
-	set StarPaladinCrossREF.CombatStyleMelee to 0
-	StarPaladinCrossREF.SetPlayerTeammate 0
-	StarPaladinCrossREF.RemoveFromFaction FollowerFaction
-	StarPaladinCrossREF.evp
-
-	ShowMessage FollowerMessageLeaveStarPaladinCross
-	StarPaladinCrossREF.MoveTo CitScribeMarker04
-	set Followers.FollowerWaitingLeaveDay to 0
-endif
-
-If (VNPCFollowers.bBooneHired == 1)
-
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	CraigBooneREF.SetPlayerTeammate 0;
-	CraigBooneREF.RemoveFromFaction FollowerFaction;
-	CraigBooneREF.SetActorValue Assistance 0;
-	CraigBooneREF.RemovePerk CompanionSuite;
-
-	Set CraigBooneREF.Waiting to 0;
-	Set VNPCFollowers.bBooneHired to 0;
-	Set VNPCFollowers.bBooneFired to 1;
-	Set VNPCFollowers.bBooneL38 to 0;
-
-	CraigBooneREF.MoveTo BooneHomeMarkerREF;
-
-	; Remove Player from Boone's faction so Legion isn't automatically hostile.
-	Player.RemoveFromFaction VBooneFaction;
-
-	Player.RemovePerk Spotting;
-	ShowMessage FollowerMessagePerkBooneRemove;
-	ShowMessage FollowerMessageLeaveBoone;
-	
-EndIf
-	
-If (VNPCFollowers.ArcadeHired == 1)
-	
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	ArcadeREF.SetPlayerTeammate 0;
-	ArcadeREF.RemoveFromFaction FollowerFaction;
-	ArcadeREF.SetActorValue Assistance 0;
-	ArcadeREF.RemovePerk CompanionSuite;
-
-	Set ArcadeREF.Waiting to 0;
-	Set VNPCFollowers.ArcadeHired to 0;
-	Set VNPCFollowers.ArcadeFired to 1;
-	Set VNPCFollowers.bArcadeL38 to 0;
-
-	Player.RemovePerk BetterHealing;
-	ShowMessage FollowerMessagePerkArcadeRemove;
-	ShowMessage FollowerMessageLeaveArcade;
-
-	ArcadeREF.MoveTo ArcadeHomeMarker;
-	
-EndIf
-	
-If (VNPCFollowers.bCassHired == 1)
-
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	RoseofSharonCassidyREF.SetPlayerTeammate 0;
-	RoseofSharonCassidyREF.RemoveFromFaction FollowerFaction;
-	RoseofSharonCassidyREF.SetActorValue Assistance 0;
-	RoseofSharonCassidyREF.RemovePerk CompanionSuite;
-
-	Set RoseofSharonCassidyREF.Waiting to 0;
-	Set VNPCFollowers.bCassHired to 0;
-	Set VNPCFollowers.bCassFired to 1;
-	Set VNPCFollowers.bCassL38 to 0;
-
-	Player.RemovePerk WhiskeyRose;
-	ShowMessage FollowerMessagePerkCassRemove;
-	ShowMessage FollowerMessageLeaveCass;
-
-	RoseofSharonCassidyREF.MoveTo CassHomeMarkerREF;
-
-	StopQuest vCassTimer;
-	
-EndIf
-	
-If (VNPCFollowers.bLilyHired == 1)
-
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	LilyREF.SetPlayerTeammate 0;
-	LilyREF.RemoveFromFaction FollowerFaction;
-	LilyREF.SetActorValue Assistance 0;
-	LilyREF.RemovePerk CompanionSuite;
-
-	Set LilyREF.Waiting to 0;
-	Set VNPCFollowers.bLilyHired to 0;
-	Set VNPCFollowers.bLilyFired to 1;
-	Set VNPCFollowers.bLilyL38 to 0;
-
-	LilyREF.MoveTo LilyJacobstownMarker;	
-
-	Player.RemovePerk StealthGirl;
-	ShowMessage FollowerMessagePerkLilyRemove;
-	ShowMessage FollowerMessageLeaveLily;
-
-	StopQuest LilysMedicineTimer;
-	
-EndIf
-	
-If (VNPCFollowers.bVeronicaHired == 1)
-
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	VeronicaREF.SetPlayerTeammate 0;
-	VeronicaREF.RemoveFromFaction FollowerFaction;
-	VeronicaREF.SetActorValue Assistance 0;
-	VeronicaREF.RemovePerk CompanionSuite;
-
-	Set VeronicaREF.Waiting to 0;
-	Set VNPCFollowers.bVeronicaHired to 0;
-	Set VNPCFollowers.bVeronicaFired to 1;
-	Set VNPCFollowers.bVeronicaL38 to 0;
-
-	Player.RemovePerk ScribeAssistant;
-	ShowMessage FollowerMessagePerkVeronicaRemove;
-	ShowMessage FollowerMessageLeaveVeronica;
-
-	VeronicaREF.MoveTo VeronicaHomeMarkerREF;
-	
-EndIf
-	
-If (VNPCFollowers.RaulHired == 1)
-
-	Set VNPCFollowers.bHumanoidInParty to 0;
-
-	RaulREF.SetPlayerTeammate 0;
-	RaulREF.RemoveFromFaction FollowerFaction;
-	RaulREF.SetActorValue Assistance 0;
-	RaulREF.RemovePerk CompanionSuite;
-
-	Set RaulREF.Waiting to 0;
-	Set VNPCFollowers.RaulHired to 0;
-	Set VNPCFollowers.RaulFired to 1;
-	Set VNPCFollowers.bRaulL38 to 0;
-
-	Player.RemovePerk RegularMaintenance;
-	ShowMessage FollowerMessagePerkRaulRemove;
-	ShowMessage FollowerMessageLeaveRaul;
-
-	ShowMap RaulsShackMarkerREF 1;
-	RaulREF.MoveTo RaulHomeMarker;
-
-EndIf
-
-; Fire Rex or ED-E
-If (VNPCFollowers.RexHired == 1)
-
-	Set VNPCFollowers.bCritterInParty to 0;
-
-	RexREF.SetPlayerTeammate 0;
-	RexREF.RemoveFromFaction FollowerFaction;
-	RexREF.SetActorValue Assistance 0;
-	RexREF.RemovePerk CompanionSuite;
-
-	Set RexREF.Waiting to 0;
-	Set VNPCFollowers.RexHired to 0;
-	Set VNPCFollowers.RexFired to 1;
-	Set VNPCFollowers.bRexL38 to 0;
-
-	Player.RemovePerk SearchAndMark;
-	ShowMessage FollowerMessagePerkRexRemove;
-	ShowMessage FollowerMessageLeaveRex;
-
-	RexREF.MoveTo RexHomeMarker;
-	
-EndIf
-	
-If (VNPCFollowers.bEDEHired == 1)
-
-	Set VNPCFollowers.bCritterInParty to 0;
-
-	EDE1REF.SetPlayerTeammate 0;
-	EDE1REF.RemoveFromFaction FollowerFaction;
-	EDE1REF.SetActorValue Assistance 0;
-	EDE1REF.RemovePerk CompanionSuite;
-
-	EDE2REF.SetPlayerTeammate 0;
-	EDE2REF.RemoveFromFaction FollowerFaction;
-	EDE2REF.SetActorValue Assistance 0;
-	EDE2REF.RemovePerk CompanionSuite;
-
-	EDE3REF.SetPlayerTeammate 0;
-	EDE3REF.RemoveFromFaction FollowerFaction;
-	EDE3REF.SetActorValue Assistance 0;
-	EDE3REF.RemovePerk CompanionSuite;
-
-	Set EDE1REF.Waiting to 0;
-	Set EDE2REF.Waiting to 0;
-	Set EDE3REF.Waiting to 0;
-	Set VNPCFollowers.bEDEHired to 0;
-	Set VNPCFollowers.bEDEFired to 1;
-	Set VNPCFollowers.bEDEL38 to 0;
-
-	; Reset ED-E's aggresion in case he got frenzied.
-	EDE1REF.SetActorValue Aggression 0;
-	EDE2REF.SetActorValue Aggression 0;
-	EDE3REF.SetActorValue Aggression 0;
-
-	Player.RemovePerk EnhancedSensors;
-	ShowMessage FollowerMessagePerkEDERemove;
-	ShowMessage FollowerMessageLeaveEDE;
-
-	EDE1REF.MoveTo EDEHomeMarker;
-	EDE2Ref.MoveTo EDEHomeMarker;
-	EDE3Ref.MoveTo EDEHomeMarker;
-
-EndIf
-
-Set VNPCFollowers.bPlayerHasFollower to 0;
-Set VNPCFollowers.nCurrentFollowers to 0;</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNFireAllFollowers</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="0606A775">DogmeatREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602A4E8">ButchRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602B8E1">CharonRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060384D8">CloverREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06003B5D">JerichoRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06094285">RL3REF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06062735">StarPaladinCrossREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00096BCE">CraigBooneREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00000014">UnfoundReference</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010D8EB">ArcadeREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0013D830">LilyRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E32A9">VeronicaREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6105">RaulREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010D8DF">RexREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732D1">EDE1Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732D0">EDE2Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732CF">EDE3Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000371D1">Followers</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00037136">FollowerFaction</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A5402">FollowerMessageLeaveDogmeat</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060309D6">EvacuationMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000B16D0">VNPCFollowers</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A53FA">FollowerMessageLeaveButch</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0601EAB3">MuddyRudderMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00046312">TeammateFaction</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A53F8">FollowerMessageLeaveCharon</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0603073A">UnderworldNinthCircleMARKER</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A53F9">FollowerMessageLeaveClover</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060371A2">ParadiseFallsEulogysPadMARKER</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A54A1">FollowerMessageLeaveJericho</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06020223">MegatonOutsideMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A54AB">FollowerMessageLeaveFawkes</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0606415F">FawkesMuseumWaitMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A54FD">FollowerMessageLeaveRL3</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06059413">CCBazaarMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060A53F7">FollowerMessageLeaveStarPaladinCross</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06019324">CitScribeMarker04</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C571">CompanionSuite</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000CAEB6">BooneHomeMarkerREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000B160C">VBooneFaction</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C60C">Spotting</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C61E">FollowerMessagePerkBooneRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000B1607">FollowerMessageLeaveBoone</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C60B">BetterHealing</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C61D">FollowerMessagePerkArcadeRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010EB40">FollowerMessageLeaveArcade</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010EB41">ArcadeHomeMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C60D">WhiskeyRose</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C61F">FollowerMessagePerkCassRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00171C39">FollowerMessageLeaveCass</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00171C43">CassHomeMarkerREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00161F07">VCassTimer</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0014B08C">LilyJacobstownMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C60F">StealthGirl</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C621">FollowerMessagePerkLilyRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00171C40">FollowerMessageLeaveLily</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00160267">Lilysmedicinetimer</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C613">ScribeAssistant</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C625">FollowerMessagePerkVeronicaRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0016A221">FollowerMessageLeaveVeronica</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E683A">VeronicaHomeMarkerREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C610">RegularMaintenance</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C622">FollowerMessagePerkRaulRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6CBF">FollowerMessageLeaveRaul</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015A6A4">RaulsShackMarkerREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6CBB">RaulHomeMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C611">SearchAndMark</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C623">FollowerMessagePerkRexRemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00116E18">FollowerMessageLeaveRex</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00116E00">RexHomeMarker</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C60E">EnhancedSensors</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0015C620">FollowerMessagePerkEDERemove</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001710BF">FollowerMessageLeaveEDE</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000A23D1">EDEHomeMarker</Reference>
+                  <Reference ID="0C01C67D">TTWFNFireAllFollowers</Reference>
                 </Reference>
               </References>
             </Script>
@@ -922,152 +148,17 @@ Set VNPCFollowers.nCurrentFollowers to 0;</ScriptSource>
             <LogEntry Tag="CNAM">Set all followers to wait</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>22</ReferenceCount>
-                <CompiledSize>744</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQASAHITAGYUAAoAIEcUACBHFQAgKxUAEgByFgBmGQAKACBHFAAgRxUAICsWAAsAAgAHACByEwBzBgAVAAoAcgEAcwgAAgAgMRwAAQBeEAAAGQAAABYACwACAAcAIHITAHMVABUACgByAgBzAQACACAxHAACAF4QAAAZAAAAFgALAAIABwAgchMAcxsAFQAKAHIDAHMJAAIAIDEcAAMAXhAAABkAAAAWAAsAAgAHACByEwBzIQAVAAoAcgQAcwEAAgAgMRwABABeEAAAGQAAABYACwACAAcAIHITAHMJABUACgByBQBzAwACACAxHAAFAF4QAAAZAAAAFgALAAIABwAgchMAcwwAFQAKAHIGAHMBAAIAIDEcAAYAXhAAABkAAAAWAAsAAgAHACByFgBzAgAVAAoAcgcAcw8AAgAgMRwABwBeEAAAGQAAABYACwACAAcAIHIWAHMOABUACgByCABzCwACACAxHAAIAF4QAAAZAAAAFgALAAIABwAgchYAcxIAFQAKAHIJAHMIAAIAIDEcAAkAXhAAABkAAAAWAAsAAgAHACByFgBzBgAVAAoAcgoAcwkAAgAgMRwACgBeEAAAGQAAABYACwACAAcAIHIWAHMIABUACgByCwBzCAACACAxHAALAF4QAAAZAAAAFgALAAIABwAgchYAcwoAFQAKAHIMAHMIAAIAIDEcAAwAXhAAABkAAAAWAAsABgAHACByEwBzHgAVAAoAcg0AcwEAAgAgMRUACgByDgBzAQACACAxFQAKAHIPAHMBAAIAIDEcAA0AXhAAABwADgBeEAAAHAAPAF4QAAAZAAAAFgALAAIABwAgchMAcw8AFQAKAHIQAHMIAAIAIDEcABAAXhAAABkAAAAWAAsAAgAHACByFgBzFAAVAAoAchEAcwgAAgAgMRwAEQBeEAAAGQAAABYACwACAAcAIHIWAHMWABUACgByEgBzCAACACAxHAASAF4QAAAZAAAA</CompiledScript>
-              <ScriptSource Tag="SCTX">;All followers wait
-set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
-set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
-
-if (VNPCFollowers.bBooneHired)
-	set CraigBooneREF.Waiting to 1;
-	CraigBooneREF.evp
-endif
-if (VNPCFollowers.bCassHired)
-	set RoseofSharonCassidyREF.Waiting to 1;
-	RoseofSharonCassidyREF.evp
-endif
-if (VNPCFollowers.bVeronicaHired)
-	set VeronicaREF.Waiting to 1;
-	VeronicaREF.evp
-endif
-if (VNPCFollowers.bLilyHired)
-	set LilyREF.Waiting to 1;
-	LilyREF.evp
-endif
-if (VNPCFollowers.RaulHired)
-	set RaulREF.Waiting to 1;
-	RaulREF.evp
-endif
-if (VNPCFollowers.ArcadeHired)
-	set ArcadeREF.Waiting to 1
-	ArcadeREF.evp
-endif
-if (Followers.CharonHired)
-	set CharonRef.Waiting to 1;
-	CharonRef.evp
-endif
-if (Followers.ButchHired)
-	set ButchRef.Waiting to 1;
-	ButchRef.evp
-endif
-if (Followers.CloverHired)
-	set CloverRef.Waiting to 1;
-	CloverRef.evp
-endif
-if (Followers.JerichoHired)
-	set JerichoRef.Waiting to 1;
-	JerichoRef.evp
-endif
-if (Followers.FawkesHired)
-	set MQ08FawkesRef.Waiting to 1;
-	MQ08FawkesRef.evp
-endif
-if (Followers.StarPaladinCrossHired)
-	set StarPaladinCrossRef.Waiting to 1;
-	StarPaladinCrossRef.evp
-endif
-
-if (VNPCFollowers.bEDEHired)
-	set EDE1REF.Waiting to 1;
-	set EDE2REF.Waiting to 1;
-	set EDE3REF.Waiting to 1;
-	EDE1REF.evp
-	EDE2REF.evp
-	EDE3REF.evp
-endif
-if (VNPCFollowers.RexHired)
-	set RexREF.Waiting to 1;
-	RexREF.evp
-endif
-if (Followers.DogmeatHired)
-	set DogmeatRef.Waiting to 1;
-	DogmeatRef.evp
-endif
-if (Followers.RL3Hired)
-	set RL3REF.Waiting to 1;
-	RL3REF.evp
-endif</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNWaitAllFollowers</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="00096BCE">CraigBooneREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E32A9">VeronicaREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0013D830">LilyRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000E6105">RaulREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010D8EB">ArcadeREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602B8E1">CharonRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602A4E8">ButchRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="060384D8">CloverREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06003B5D">JerichoRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06062735">StarPaladinCrossREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732D1">EDE1Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732D0">EDE2Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="001732CF">EDE3Ref</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0010D8DF">RexREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0606A775">DogmeatREF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="06094285">RL3REF</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000B16D0">VNPCFollowers</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00000039">GameDaysPassed</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000A53F5">FollowerWaitTime</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="000371D1">Followers</Reference>
+                  <Reference ID="0C01C67E">TTWFNWaitAllFollowers</Reference>
                 </Reference>
               </References>
             </Script>
@@ -1082,147 +173,24 @@ endif</ScriptSource>
             <LogEntry Tag="CNAM">Pass game time</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>4</ReferenceCount>
-                <CompiledSize>1795</CompiledSize>
+                <ReferenceCount>2</ReferenceCount>
+                <CompiledSize>77</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FQAsAHIBAHMDACQAIHIBAHMDACByAQBzAgAgMTIgLyArIHIBAHMBACAzNjUgLyArFQAVAHIBAHMBAA0AIHIBAHMBACAzNjUgJRUAFAByAQBzAgAMACByAQBzAgAgMTIgJRUAEgBHAgANACBHAgAgcgEAcwMAICsVAAoAcgEAcwMAAgAgMBUAEgBHAwANACBHAwAgcgEAcwIAICsVAAoAcgEAcwIAAgAgMBYADQACAAkAIEcDACAxMiA+FQANAEcCAAgAIEcCACAxICsVAA4ARwMACQAgRwMAIDEyIC0ZAAAAFQASAEcEAA0AIEcEACByAQBzAQAgKxYAGQACABUAIEcDACAxID09IEcEACAzMSA+ICYmFQAHAEcDAAIAIDIVAA4ARwQACQAgRwQAIDMxIC0ZAAAAFgAZAAIAFQAgRwMAIDIgPT0gRwQAIDI4ID4gJiYVAAcARwMAAgAgMxUADgBHBAAJACBHBAAgMjggLRkAAAAWABkAAgAVACBHAwAgMyA9PSBHBAAgMzEgPiAmJhUABwBHAwACACA0FQAOAEcEAAkAIEcEACAzMSAtGQAAABYAGQACABUAIEcDACA0ID09IEcEACAzMCA+ICYmFQAHAEcDAAIAIDUVAA4ARwQACQAgRwQAIDMwIC0ZAAAAFgAZAAIAFQAgRwMAIDUgPT0gRwQAIDMxID4gJiYVAAcARwMAAgAgNhUADgBHBAAJACBHBAAgMzEgLRkAAAAWABkAAgAVACBHAwAgNiA9PSBHBAAgMzAgPiAmJhUABwBHAwACACA3FQAOAEcEAAkAIEcEACAzMCAtGQAAABYAGQACABUAIEcDACA3ID09IEcEACAzMSA+ICYmFQAHAEcDAAIAIDgVAA4ARwQACQAgRwQAIDMxIC0ZAAAAFgAZAAIAFQAgRwMAIDggPT0gRwQAIDMxID4gJiYVAAcARwMAAgAgORUADgBHBAAJACBHBAAgMzEgLRkAAAAWABkAAgAVACBHAwAgOSA9PSBHBAAgMzAgPiAmJhUACABHAwADACAxMBUADgBHBAAJACBHBAAgMzAgLRkAAAAWABoAAgAWACBHAwAgMTAgPT0gRwQAIDMxID4gJiYVAAgARwMAAwAgMTEVAA4ARwQACQAgRwQAIDMxIC0ZAAAAFgAaAAIAFgAgRwMAIDExID09IEcEACAzMCA+ICYmFQAIAEcDAAMAIDEyFQAOAEcEAAkAIEcEACAzMCAtGQAAABYAGgADABYAIEcDACAxMiA9PSBHBAAgMzEgPiAmJhUABwBHAwACACAxFQANAEcCAAgAIEcCACAxICsVAA4ARwQACQAgRwQAIDMxIC0ZAAAAFgAZAAIAFQAgRwMAIDEgPT0gRwQAIDMxID4gJiYVAAcARwMAAgAgMhUADgBHBAAJACBHBAAgMzEgLRkAAAAWABkAAgAVACBHAwAgMiA9PSBHBAAgMjggPiAmJhUABwBHAwACACAzFQAOAEcEAAkAIEcEACAyOCAtGQAAABYAGQACABUAIEcDACAzID09IEcEACAzMSA+ICYmFQAHAEcDAAIAIDQVAA4ARwQACQAgRwQAIDMxIC0ZAAAAFgAZAAIAFQAgRwMAIDQgPT0gRwQAIDMwID4gJiYVAAcARwMAAgAgNRUADgBHBAAJACBHBAAgMzAgLRkAAAAWABkAAgAVACBHAwAgNSA9PSBHBAAgMzEgPiAmJhUABwBHAwACACA2FQAOAEcEAAkAIEcEACAzMSAtGQAAABYAGQACABUAIEcDACA2ID09IEcEACAzMCA+ICYmFQAHAEcDAAIAIDcVAA4ARwQACQAgRwQAIDMwIC0ZAAAAFgAZAAIAFQAgRwMAIDcgPT0gRwQAIDMxID4gJiYVAAcARwMAAgAgOBUADgBHBAAJACBHBAAgMzEgLRkAAAAWABkAAgAVACBHAwAgOCA9PSBHBAAgMzEgPiAmJhUABwBHAwACACA5FQAOAEcEAAkAIEcEACAzMSAtGQAAABYAGQACABUAIEcDACA5ID09IEcEACAzMCA+ICYmFQAIAEcDAAMAIDEwFQAOAEcEAAkAIEcEACAzMCAtGQAAABYAGgACABYAIEcDACAxMCA9PSBHBAAgMzEgPiAmJhUACABHAwADACAxMRUADgBHBAAJACBHBAAgMzEgLRkAAAAWABoAAgAWACBHAwAgMTEgPT0gRwQAIDMwID4gJiYVAAgARwMAAwAgMTIVAA4ARwQACQAgRwQAIDMwIC0ZAAAAFgAaAAMAFgAgRwMAIDEyID09IEcEACAzMSA+ICYmFQAHAEcDAAIAIDEVAA0ARwIACAAgRwIAIDEgKxUADgBHBAAJACBHBAAgMzEgLRkAAAAVAAoAcgEAcwEAAgAgMA==</CompiledScript>
-              <ScriptSource Tag="SCTX">;Advance game date based on iDaysToPass, TTWFunctions.iMonthsToPass, TTWFunctions.iYearsToPass
+              <CompiledScript Tag="SCDA">RRUfAAEFAFIBAAMIAFYBAgABAAgAVgECAAIACABWAQIAAwAVAAoAcgIAcwEAAgAgMBUACgByAgBzAgACACAwFQAKAHICAHMDAAIAIDA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNHardcoreSafeAdvanceDays TTWFunctions.iDaysToPass TTWFunctions.iMonthsToPass TTWFunctions.iYearsToPass
 
-set TTWFunctions.iYearsToPass to TTWFunctions.iYearsToPass + (TTWFunctions.iMonthsToPass/12) + (TTWFunctions.iDaysToPass/365)
-set TTWFunctions.iDaysToPass to TTWFunctions.iDaysToPass%365
-set TTWFunctions.iMonthsToPass to TTWFunctions.iMonthsToPass%12
-
-set GameYear to GameYear + TTWFunctions.iYearsToPass
-set TTWFunctions.iYearsToPass to 0
-
-set GameMonth to GameMonth + TTWFunctions.iMonthsToPass
+set TTWFunctions.iDaysToPass to 0
 set TTWFunctions.iMonthsToPass to 0
-
-if GameMonth &gt; 12
-	set GameYear to GameYear + 1
-	set GameMonth to GameMonth - 12
-endif
-
-set GameDay to GameDay + TTWFunctions.iDaysToPass
-
-;Note: because we don't have loops this section INTENTIONALLY cycles the months TWICE,
-;to ensure that advancing 364 days on December 31st works properly
-
-if GameMonth == 1 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 2
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 2 &amp;&amp; GameDay &gt; 28
-	set GameMonth to 3
-	set GameDay to GameDay - 28
-endif
-if GameMonth == 3 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 4
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 4 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 5
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 5 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 6
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 6 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 7
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 7 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 8
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 8 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 9
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 9 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 10
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 10 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 11
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 11 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 12
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 12 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 1
-	set GameYear to GameYear + 1
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 1 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 2
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 2 &amp;&amp; GameDay &gt; 28
-	set GameMonth to 3
-	set GameDay to GameDay - 28
-endif
-if GameMonth == 3 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 4
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 4 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 5
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 5 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 6
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 6 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 7
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 7 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 8
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 8 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 9
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 9 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 10
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 10 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 11
-	set GameDay to GameDay - 31
-endif
-if GameMonth == 11 &amp;&amp; GameDay &gt; 30
-	set GameMonth to 12
-	set GameDay to GameDay - 30
-endif
-if GameMonth == 12 &amp;&amp; GameDay &gt; 31
-	set GameMonth to 1
-	set GameYear to GameYear + 1
-	set GameDay to GameDay - 31
-endif
-
-set TTWFunctions.iDaysToPass to 0</ScriptSource>
+set TTWFunctions.iYearsToPass to 0</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
+                  <Reference ID="0C01C67F">TTWFNHardcoreSafeAdvanceDays</Reference>
+                </Reference>
+                <Reference Tag="SCRO">
                   <Reference ID="0C00DFAB">TTWFunctions</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00000035">GameYear</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00000036">GameMonth</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="00000037">GameDay</Reference>
                 </Reference>
               </References>
             </Script>
@@ -1237,101 +205,17 @@ set TTWFunctions.iDaysToPass to 0</ScriptSource>
             <LogEntry Tag="CNAM">Initiate a worldspace check</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>7</ReferenceCount>
-                <CompiledSize>313</CompiledSize>
+                <ReferenceCount>1</ReferenceCount>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>5</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FgANAAEACQAgcgQAWCwRAAAeAAAAGQAAABUADgBmBQAJACByBABYbhQAABUABwBzAwACACAwFQAQAHMEAAsAIFg/FAUAAQByBQCeFAcAAQBuAQAAABYADgAIAAoAIHMDACBzBAAgPBUAEwBmAQAOACBYQBQIAAIAcgUAcwMAFgAZAAMAFQAgWEEUCAACAHIBAHICACAxIH4gIT0VABAAcgYAcwQACAAgcwMAIDEgKxUADAByBgBmBQAEACBmAQAVAAkAcwMABAAgcwQAGQAAABUADQBzAwAIACBzAwAgMSArnxQHAAEAbgEAAAAZAAAAFgAPAAMACwAgWLoUBQABAHIBABUAFQBmAgAQACBYQBQKAAIAcgEAbgAAAAAVAAcARwcAAgAgMDkQCgACAHIDAG78AAAAGQAAAA==</CompiledScript>
-              <ScriptSource Tag="SCTX">; Run a worldspace check
-
-; Local Vars
-int iIdx
-int iCnt
-ref rLst
-ref rWrld
-ref rMap
-
-if (Player.IsInInterior)
-	Return
-endif
-
-set rWrld to Player.GetParentWorldspace
-
-set iIdx to 0
-set iCnt to (listGetCount TTWWorldSpacesCheckerList)
-label 1
-if (iIdx &lt; iCnt)
-	set rLst to listGetNthForm TTWWorldSpacesCheckerList iIdx
-	if (listGetFormIndex rLst rWrld != -1)
-		set TTWFunctions.iIndex to (iIdx + 1)
-		set TTWFunctions.rWorldList to rLst
-		set iIdx to iCnt
-	endif
-	set iIdx to iIdx + 1
-	goto 1
-endif
-	
-if (IsFormValid rLst)
-	; Get the mapper quest from the returned List and run the location setter on it
-	set rMap to ListGetNthForm rLst 0
-	set TTWWorldLocation to 0
-	SetStage rMap 252
-endif
-</ScriptSource>
-              <LocalVariables>
-                <Variable>
-                  <Data Tag="SLSD">
-                    <Index>1</Index>
-                    <Flags>0</Flags>
-                  </Data>
-                  <Name Tag="SCVR">rLst</Name>
-                </Variable>
-                <Variable>
-                  <Data Tag="SLSD">
-                    <Index>2</Index>
-                    <Flags>0</Flags>
-                  </Data>
-                  <Name Tag="SCVR">rMap</Name>
-                </Variable>
-                <Variable>
-                  <Data Tag="SLSD">
-                    <Index>3</Index>
-                    <Flags>IsLongOrShort</Flags>
-                  </Data>
-                  <Name Tag="SCVR">iIdx</Name>
-                </Variable>
-                <Variable>
-                  <Data Tag="SLSD">
-                    <Index>4</Index>
-                    <Flags>IsLongOrShort</Flags>
-                  </Data>
-                  <Name Tag="SCVR">iCnt</Name>
-                </Variable>
-                <Variable>
-                  <Data Tag="SLSD">
-                    <Index>5</Index>
-                    <Flags>0</Flags>
-                  </Data>
-                  <Name Tag="SCVR">rWrld</Name>
-                </Variable>
-              </LocalVariables>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNWorldspaceCheck</ScriptSource>
               <References>
-                <Reference Tag="SCRV">1</Reference>
-                <Reference Tag="SCRV">5</Reference>
-                <Reference Tag="SCRV">2</Reference>
                 <Reference Tag="SCRO">
-                  <Reference ID="00000014">UnfoundReference</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C010F9A">TTWWorldSpacesCheckerList</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C00DFAB">TTWFunctions</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+                  <Reference ID="0C01C680">TTWFNWorldspaceCheck</Reference>
                 </Reference>
               </References>
             </Script>
@@ -1343,50 +227,16 @@ endif
         <LogEntries>
           <Entry>
             <StageFlags Tag="QSDT">0</StageFlags>
-            <LogEntry Tag="CNAM">Worldspace location set</LogEntry>
+            <LogEntry Tag="CNAM">This literally does nothing anymore, just left to make sure shit doesn't crash if referencing it</LogEntry>
             <Script>
               <Data Tag="SCHR">
-                <ReferenceCount>2</ReferenceCount>
-                <CompiledSize>501</CompiledSize>
+                <ReferenceCount>0</ReferenceCount>
+                <CompiledSize>0</CompiledSize>
                 <VariableCount>0</VariableCount>
-                <Type>Object</Type>
+                <Type>Quest</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">FgAQAAEADAAgcgEAcwQAIDEgPT0VABUARwIAEAAgWNAUCgACAEcCAG4BAAAAGAAQAAEADAAgcgEAcwQAIDIgPT0VABUARwIAEAAgWNAUCgACAEcCAG4CAAAAGAAQAAEADAAgcgEAcwQAIDMgPT0VABUARwIAEAAgWNAUCgACAEcCAG4EAAAAGAAQAAEADAAgcgEAcwQAIDQgPT0VABUARwIAEAAgWNAUCgACAEcCAG4IAAAAGAAQAAEADAAgcgEAcwQAIDUgPT0VABUARwIAEAAgWNAUCgACAEcCAG4QAAAAGAAQAAEADAAgcgEAcwQAIDYgPT0VABUARwIAEAAgWNAUCgACAEcCAG4gAAAAGAAQAAEADAAgcgEAcwQAIDcgPT0VABUARwIAEAAgWNAUCgACAEcCAG4AAgAAGAAQAAEADAAgcgEAcwQAIDggPT0VABUARwIAEAAgWNAUCgACAEcCAG4ABAAAGAAQAAEADAAgcgEAcwQAIDkgPT0VABUARwIAEAAgWNAUCgACAEcCAG4ACAAAGAARAAEADQAgcgEAcwQAIDEwID09FQAVAEcCABAAIFjQFAoAAgBHAgBuABAAABgAEQABAA0AIHIBAHMEACAxMSA9PRUAFQBHAgAQACBY0BQKAAIARwIAbgAgAAAZAAAA</CompiledScript>
-              <ScriptSource Tag="SCTX">; FALLOUT 3 WORLDS ==============================================================================================================================
-if (TTWFunctions.iIndex == 1)			; General Wasteland and encompassed spaces
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 1
-elseif (TTWFunctions.iIndex == 2)		; Downtown DC areas
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 2
-elseif (TTWFunctions.iIndex == 3)		; The Pitt
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 4
-elseif (TTWFunctions.iIndex == 4)		; Anchorage
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 8
-elseif (TTWFunctions.iIndex == 5)		; Broken Steel
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 16
-elseif (TTWFunctions.iIndex == 6)		; Point Lookout
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 32
-
-; FALLOUT NV WORLDS	=================================================================================================================================
-elseif (TTWFunctions.iIndex == 7)		; Fallout New Vegas
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 512
-elseif (TTWFunctions.iIndex == 8)		; Dead Money
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 1024
-elseif (TTWFunctions.iIndex == 9)		; Honest Hearts
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 2048
-elseif (TTWFunctions.iIndex == 10)		; Old World Blues
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 4096
-elseif (TTWFunctions.iIndex == 11)		; Lonesome Road
-	set TTWWorldLocation to LogicalOr TTWWorldLocation 8192
-endif</ScriptSource>
-              <References>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C00DFAB">TTWFunctions</Reference>
-                </Reference>
-                <Reference Tag="SCRO">
-                  <Reference ID="0C010FAA">TTWWorldLocation</Reference>
-                </Reference>
-              </References>
+              <ScriptSource Tag="SCTX">;literally do nothing</ScriptSource>
             </Script>
           </Entry>
         </LogEntries>
@@ -1400,49 +250,16 @@ endif</ScriptSource>
             <Script>
               <Data Tag="SCHR">
                 <ReferenceCount>1</ReferenceCount>
-                <CompiledSize>865</CompiledSize>
+                <CompiledSize>11</CompiledSize>
                 <VariableCount>0</VariableCount>
                 <Type>Object</Type>
                 <Flags>Enabled</Flags>
               </Data>
-              <CompiledScript Tag="SCDA">oBQ3AAEAMwAKPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT2gFCMAAgAcAEN1cnJlbnQgbG9jYXRpb24gdmFsdWUgaXMgJWdHAQAWABQAAQAQACBYzxQKAAIARwEAbgEAAACgFBUAAQARAEluIERDIG9yIGVudmlyb25zGAAUAAEAEAAgWM8UCgACAEcBAG4CAAAAoBQSAAEADgBJbiBEb3dudG93biBEQxgAFAABABAAIFjPFAoAAgBHAQBuBAAAAKAUDwABAAsASW4gVGhlIFBpdHQYABQAAQAQACBYzxQKAAIARwEAbggAAACgFBAAAQAMAEluIEFuY2hvcmFnZRgAFAABABAAIFjPFAoAAgBHAQBuEAAAAKAUEwABAA8ASW4gQnJva2VuIFN0ZWVsGAAUAAEAEAAgWM8UCgACAEcBAG4gAAAAoBQUAAEAEABJbiBQb2ludCBMb29rb3V0GAAUAAEAEAAgWM8UCgACAEcBAG4AAgAAoBQcAAEAGABJbiBOZXcgVmVnYXMgb3IgZW52aXJvbnMYABQAAQAQACBYzxQKAAIARwEAbgAEAACgFBEAAQANAEluIERlYWQgTW9uZXkYABQAAQAQACBYzxQKAAIARwEAbgAIAACgFBQAAQAQAEluIEhvbmVzdCBIZWFydHMYABQAAQAQACBYzxQKAAIARwEAbgAQAACgFBYAAQASAEluIE9sZCBXb3JsZCBCbHVlcxgAFAABABAAIFjPFAoAAgBHAQBuACAAAKAUFAABABAASW4gTG9uZXNvbWUgUm9hZBkAAACgFB0AAQAZAC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS2gFCwAAQAoAE5vdyB0ZXN0aW5nIHZhcmlvdXMgZHVhbCBsb2NhdGlvbmFsaXRpZXMWABQAAQAQACBYzxQKAAIARwEAbj0AAACgFBcAAQATAEluIEZhbGxvdXQgMyBXb3JsZHMYABQAAQAQACBYzxQKAAIARwEAbgMAAACgFBgAAQAUAEluIENhcGl0YWwgV2FzdGVsYW5kGAAUAAEAEAAgWM8UCgACAEcBAG4APgAAoBQXAAEAEwBJbiBOZXcgVmVnYXMgV29ybGRzGQAAAA==</CompiledScript>
-              <ScriptSource Tag="SCTX">printc "%r=================================================="
-printc "Current location value is %g" TTWWorldLocation
-if (LogicalAnd TTWWorldLocation 1)
-	printc "In DC or environs"
-elseif  (LogicalAnd TTWWorldLocation 2)
-	printc "In Downtown DC"
-elseif  (LogicalAnd TTWWorldLocation 4)
-	printc "In The Pitt"
-elseif  (LogicalAnd TTWWorldLocation 8)
-	printc "In Anchorage"
-elseif  (LogicalAnd TTWWorldLocation 16)
-	printc "In Broken Steel"
-elseif  (LogicalAnd TTWWorldLocation 32)
-	printc "In Point Lookout"
-elseif  (LogicalAnd TTWWorldLocation 512)
-	printc "In New Vegas or environs"
-elseif  (LogicalAnd TTWWorldLocation 1024)
-	printc "In Dead Money"
-elseif  (LogicalAnd TTWWorldLocation 2048)
-	printc "In Honest Hearts"
-elseif  (LogicalAnd TTWWorldLocation 4096)
-	printc "In Old World Blues"
-elseif  (LogicalAnd TTWWorldLocation 8192)
-	printc "In Lonesome Road"
-endif
-printc "-------------------------"
-printc "Now testing various dual locationalities"
-if (LogicalAnd TTWWorldLocation 61)
-	printc "In Fallout 3 Worlds"
-elseif (LogicalAnd TTWWorldLocation 3)
-	printc "In Capital Wasteland"
-elseif (LogicalAnd TTWWorldLocation 15872)
-	printc "In New Vegas Worlds"
-endif</ScriptSource>
+              <CompiledScript Tag="SCDA">RRUHAAEFAFIBAAA=</CompiledScript>
+              <ScriptSource Tag="SCTX">call TTWFNPrintWorldspaceData</ScriptSource>
               <References>
                 <Reference Tag="SCRO">
-                  <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+                  <Reference ID="0C01C683">TTWFNPrintWorldspaceData</Reference>
                 </Reference>
               </References>
             </Script>
@@ -1454,13 +271,13 @@ endif</ScriptSource>
         <LogEntries>
           <Entry>
             <StageFlags Tag="QSDT">0</StageFlags>
-            <LogEntry Tag="CNAM">NVSE check</LogEntry>
+            <LogEntry Tag="CNAM">Check for NVSE</LogEntry>
             <Script>
               <Data Tag="SCHR">
                 <ReferenceCount>3</ReferenceCount>
                 <CompiledSize>71</CompiledSize>
                 <VariableCount>0</VariableCount>
-                <Type>Object</Type>
+                <Type>Quest</Type>
                 <Flags>Enabled</Flags>
               </Data>
               <CompiledScript Tag="SCDA">FQAHAEcBAAIAIDAVAAcARwIAAgAgMBUADwBHAQAKACBYABQAACAwID4VAAsARwIABgAgWAAUAAAVAAsARwMABgAgWAIUAAA=</CompiledScript>

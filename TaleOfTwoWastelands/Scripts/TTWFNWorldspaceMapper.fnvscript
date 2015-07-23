@@ -1,0 +1,34 @@
+scn TTWFNWorldspaceMapper
+ 
+int iMapperIndex
+ 
+BEGIN Function {iMapperIndex}
+ 
+        ; FALLOUT 3 WORLDS ==============================================================================================================================
+        if (iMapperIndex == 1)                  ; General Wasteland and encompassed spaces
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 1
+        elseif (iMapperIndex == 2)              ; Downtown DC areas
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 2
+        elseif (iMapperIndex == 3)              ; The Pitt
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 4
+        elseif (iMapperIndex == 4)              ; Anchorage
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 8
+        elseif (iMapperIndex == 5)              ; Broken Steel
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 16
+        elseif (iMapperIndex == 6)              ; Point Lookout
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 32
+ 
+        ; FALLOUT NV WORLDS     =================================================================================================================================
+        elseif (iMapperIndex == 7)              ; Fallout New Vegas
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 512
+        elseif (iMapperIndex == 8)              ; Dead Money
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 1024
+        elseif (iMapperIndex == 9)              ; Honest Hearts
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 2048
+        elseif (iMapperIndex == 10)             ; Old World Blues
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 4096
+        elseif (iMapperIndex == 11)             ; Lonesome Road
+                set TTWWorldLocation to LogicalOr TTWWorldLocation 8192
+        endif
+       
+END

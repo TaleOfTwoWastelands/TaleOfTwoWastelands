@@ -1,0 +1,41 @@
+scn TTWFNEnableDCWasteland
+
+begin Function { }
+
+	set bInDCWasteland to 1
+
+	if ( GetStage MQ09 < 60 )
+		RadioEnclaveRef.Enable
+	elseif ( MQ09.RRDestroy == 0 )
+		RadioEnclaveRef.Enable
+	endif
+
+	if ( GNRDishDone == 0 )
+		RadioGalaxyNewsRef01.Enable
+	elseif ( GNRDishDone == 1 )
+		RadioGalaxyNewsRef02.Enable
+	endif
+
+	if ( GetStageDone MS17 100 == 1 )
+		MS17RadioRef.Enable
+	endif
+
+	if ( GetStageDone MS16 200 == 0 && GetStageDone MQ05 200 == 1 )
+		MS16Vault101ExternalRadioREF.Enable
+	endif
+
+	if ( GetStage DLC01Quest01 < 50 )
+		DLC01RadioStationREF.Enable
+	endif
+
+	if ( GetObjectiveCompleted DLC02OA1 15 == 0 )
+		DLC02OutcastRadioSignalRef.Enable
+	endif
+
+	if ( GetQuestRunning DLC05Post == 0 )
+		DLC05AlienRadioBeaconREF.Enable
+	endif
+
+	PipBoyRadioOff
+
+end

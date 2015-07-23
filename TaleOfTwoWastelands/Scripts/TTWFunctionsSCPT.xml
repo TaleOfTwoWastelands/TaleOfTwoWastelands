@@ -9,12 +9,12 @@
     <Data>
       <Data Tag="SCHR">
         <ReferenceCount>9</ReferenceCount>
-        <CompiledSize>322</CompiledSize>
+        <CompiledSize>169</CompiledSize>
         <VariableCount>5</VariableCount>
         <Type>Quest</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">HQAAABAABgAAADQBAAA5EAoAAgByAgBu+gAAABYACAAIAAQAIEcDABYAIAACABwAIFjPFAoAAgBHBABuAwAAACBHBQAgMCA9PSAmJjkQCgACAHICAG4CAAAAORAKAAIAcgIAbgEAAAAZAAAAFgAgAAIAHAAgWM8UCgACAEcEAG4AAgAAIEcGACAwID09ICYmORAKAAIAcgIAbgAAAAA5EAoAAgByAgBuAwAAABkAAAAXAAIACAAWAB4AAgAaACByBwBYNhEFAAEAcggAIEcFACAwID09ICYmORAKAAIAcgIAbgIAAAA5EAoAAgByAgBuAQAAABkAAAAWAB4AAgAaACByBwBYNhEFAAEAcgkAIEcGACAwID09ICYmORAKAAIAcgIAbgAAAAA5EAoAAgByAgBuAwAAABkAAAAZAAAAEQAAAA==</CompiledScript>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAJsAAABFFQcAAQUAUgEAABYACAAIAAQAIEcCABYAIAACABwAIFjPFAoAAgBHAwBuAwAAACBHBAAgMCA9PSAmJkUVBwABBQBSBQAARRUHAAEFAFIGAAAZAAAAFgAgAAIAHAAgWM8UCgACAEcDAG4AAgAAIEcHACAwID09ICYmRRUHAAEFAFIIAABFFQcAAQUAUgkAABkAAAAZAAAAEQAAAA==</CompiledScript>
       <ScriptSource Tag="SCTX" External="TTWFunctionsSCPT.fnvscript" />
       <LocalVariables>
         <Variable>
@@ -38,25 +38,10 @@
           </Data>
           <Name Tag="SCVR">iYearsToPass</Name>
         </Variable>
-        <Variable>
-          <Data Tag="SLSD">
-            <Index>4</Index>
-            <Flags>IsLongOrShort</Flags>
-          </Data>
-          <Name Tag="SCVR">iIndex</Name>
-        </Variable>
-        <Variable>
-          <Data Tag="SLSD">
-            <Index>5</Index>
-            <Flags>0</Flags>
-          </Data>
-          <Name Tag="SCVR">rWorldList</Name>
-        </Variable>
       </LocalVariables>
       <References>
-        <Reference Tag="SCRV">5</Reference>
         <Reference Tag="SCRO">
-          <Reference ID="0C00DFAB">TTWFunctions</Reference>
+          <Reference ID="0C01C680">TTWFNWorldspaceCheck</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="0C010FA6">TTWHasNVSE</Reference>
@@ -68,16 +53,19 @@
           <Reference ID="0C001E0F">bInDCWasteland</Reference>
         </Reference>
         <Reference Tag="SCRO">
+          <Reference ID="0C01C67B">TTWFNDisableNVWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C678">TTWFNEnableDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
           <Reference ID="0C00DFAA">bInNVWasteland</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="00000014">UnfoundReference</Reference>
+          <Reference ID="0C01C677">TTWFNDisableDCWasteland</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="0607EA1F">Wasteland</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000DA726">WastelandNV</Reference>
+          <Reference ID="0C01C67C">TTWFNEnableNVWasteland</Reference>
         </Reference>
       </References>
     </Data>

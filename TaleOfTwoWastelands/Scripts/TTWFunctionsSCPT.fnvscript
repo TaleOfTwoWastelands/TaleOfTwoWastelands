@@ -5,32 +5,19 @@ short iDaysToPass
 short iMonthsToPass
 short iYearsToPass
 
-; World Location
-int iIndex
-ref rWorldList
-
 BEGIN GameMode
 
 	; Run a worldspace check
-	SetStage TTWFunctions 250
+	call TTWFNWorldspaceCheck
 
 	if (TTWHasNVSE)
 		if (LogicalAnd TTWWorldLocation 3) && (bInDCWasteland == 0)
-			SetStage TTWFunctions 2
-			SetStage TTWFunctions 1
+			call TTWFNDisableNVWasteland
+			call TTWFNEnableDCWasteland
 		endif
 		if (LogicalAnd TTWWorldLocation 512) && (bInNVWasteland == 0)
-			SetStage TTWFunctions 0
-			SetStage TTWFunctions 3
-		endif
-	else
-		if (Player.GetInWorldspace Wasteland) && (bInDCWasteland == 0)
-			SetStage TTWFunctions 2
-			SetStage TTWFunctions 1
-		endif
-		if (Player.GetInWorldspace WastelandNV) && (bInNVWasteland == 0)
-			SetStage TTWFunctions 0
-			SetStage TTWFunctions 3
+			call TTWFNDisableDCWasteland
+			call TTWFNEnableNVWasteland
 		endif
 	endif
 END

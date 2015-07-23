@@ -1,0 +1,40 @@
+scn TTWFNPrintWorldspaceData
+
+begin Function { }
+
+	printc "%r=================================================="
+	printc "Current location value is %g" TTWWorldLocation
+	if (LogicalAnd TTWWorldLocation 1)
+		printc "In DC or environs"
+	elseif  (LogicalAnd TTWWorldLocation 2)
+		printc "In Downtown DC"
+	elseif  (LogicalAnd TTWWorldLocation 4)
+		printc "In The Pitt"
+	elseif  (LogicalAnd TTWWorldLocation 8)
+		printc "In Anchorage"
+	elseif  (LogicalAnd TTWWorldLocation 16)
+		printc "In Broken Steel"
+	elseif  (LogicalAnd TTWWorldLocation 32)
+		printc "In Point Lookout"
+	elseif  (LogicalAnd TTWWorldLocation 512)
+		printc "In New Vegas or environs"
+	elseif  (LogicalAnd TTWWorldLocation 1024)
+		printc "In Dead Money"
+	elseif  (LogicalAnd TTWWorldLocation 2048)
+		printc "In Honest Hearts"
+	elseif  (LogicalAnd TTWWorldLocation 4096)
+		printc "In Old World Blues"
+	elseif  (LogicalAnd TTWWorldLocation 8192)
+		printc "In Lonesome Road"
+	endif
+	printc "-------------------------"
+	printc "Now testing various dual locationalities"
+	if (LogicalAnd TTWWorldLocation 61)
+		printc "In Fallout 3 Worlds"
+	elseif (LogicalAnd TTWWorldLocation 3)
+		printc "In Capital Wasteland"
+	elseif (LogicalAnd TTWWorldLocation 15872)
+		printc "In New Vegas Worlds"
+	endif
+
+end

@@ -1,0 +1,20 @@
+scn TTWFNEnableNVWasteland
+
+begin Function { }
+
+	set bInNVWasteland to 1
+
+	RNVTARef.Enable;
+	RadioBlackMountainTAREF.Enable;
+	TTWvCountryRadioRef.Enable;
+	NVDLC01RadioStationRef.Enable;
+
+	if GetQuestCompleted NVDLC02MQ00 == 0
+		NVDLC02JedRadioTAREF.Disable;
+	endif
+
+	NVDLC03RadioREF.Enable;
+
+	PipBoyRadioOff
+
+end

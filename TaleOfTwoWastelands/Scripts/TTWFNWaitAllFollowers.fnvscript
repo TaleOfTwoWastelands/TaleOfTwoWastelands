@@ -1,0 +1,78 @@
+scn TTNFNWaitAllFollowers
+
+begin Function { }
+
+	set VNPCFollowers.fFollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+	set Followers.FollowerWaitingLeaveDay to  (GameDaysPassed + FollowerWaitTime)
+
+	if (VNPCFollowers.bBooneHired)
+		set CraigBooneREF.Waiting to 1;
+		CraigBooneREF.evp
+	endif
+	if (VNPCFollowers.bCassHired)
+		set RoseofSharonCassidyREF.Waiting to 1;
+		RoseofSharonCassidyREF.evp
+	endif
+	if (VNPCFollowers.bVeronicaHired)
+		set VeronicaREF.Waiting to 1;
+		VeronicaREF.evp
+	endif
+	if (VNPCFollowers.bLilyHired)
+		set LilyREF.Waiting to 1;
+		LilyREF.evp
+	endif
+	if (VNPCFollowers.RaulHired)
+		set RaulREF.Waiting to 1;
+		RaulREF.evp
+	endif
+	if (VNPCFollowers.ArcadeHired)
+		set ArcadeREF.Waiting to 1
+		ArcadeREF.evp
+	endif
+	if (Followers.CharonHired)
+		set CharonRef.Waiting to 1;
+		CharonRef.evp
+	endif
+	if (Followers.ButchHired)
+		set ButchRef.Waiting to 1;
+		ButchRef.evp
+	endif
+	if (Followers.CloverHired)
+		set CloverRef.Waiting to 1;
+		CloverRef.evp
+	endif
+	if (Followers.JerichoHired)
+		set JerichoRef.Waiting to 1;
+		JerichoRef.evp
+	endif
+	if (Followers.FawkesHired)
+		set MQ08FawkesRef.Waiting to 1;
+		MQ08FawkesRef.evp
+	endif
+	if (Followers.StarPaladinCrossHired)
+		set StarPaladinCrossRef.Waiting to 1;
+		StarPaladinCrossRef.evp
+	endif
+
+	if (VNPCFollowers.bEDEHired)
+		set EDE1REF.Waiting to 1;
+		set EDE2REF.Waiting to 1;
+		set EDE3REF.Waiting to 1;
+		EDE1REF.evp
+		EDE2REF.evp
+		EDE3REF.evp
+	endif
+	if (VNPCFollowers.RexHired)
+		set RexREF.Waiting to 1;
+		RexREF.evp
+	endif
+	if (Followers.DogmeatHired)
+		set DogmeatRef.Waiting to 1;
+		DogmeatRef.evp
+	endif
+	if (Followers.RL3Hired)
+		set RL3REF.Waiting to 1;
+		RL3REF.evp
+	endif
+
+end

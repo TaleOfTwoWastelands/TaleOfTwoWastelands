@@ -64,20 +64,18 @@ BEGIN GameMode
 			EnablePlayerControls
 			if bInDCWasteland == 0
 				player.MoveTo TTWDCTrainEngineXMarker
-				SetStage TTWFunctions 1 ;Turn on DC... stuff
-				SetStage TTWFunctions 2 ;Turn off Mojave... stuff
+				call TTWFNEnableDCWasteland ;Turn on DC... stuff
+				call TTWFNDisableNVWasteland ;Turn off Mojave... stuff
 				set TTWWorldLocation to 1
-				set TTWFunctions.iDaysToPass to 14
-				SetStage TTWFunctions 20
+				call TTWFNHardcoreSafeAdvanceDays 14 0 0
 				player.removeitem TTWTrainTicket01 1
 			else
-				SetStage TTWFunctions 0 ;Turn off DC... stuff
-				SetStage TTWFunctions 3 ;Turn on Mojave... stuff
+				call TTWFNDisableDCWasteland ;Turn off DC... stuff
+				call TTWFNEnableNVWasteland ;Turn on Mojave... stuff
 				set TTWWorldLocation to 512
 				if GetStageDone VCG00 0
 					player.MoveTo TTWNVTrainEngineXMarker
-					set TTWFunctions.iDaysToPass to 14
-					SetStage TTWFunctions 20
+					call TTWFNHardcoreSafeAdvanceDays 14 0 0
 				else
 					player.resethealth
 					player.removeitem TTWTrainTicket02 1

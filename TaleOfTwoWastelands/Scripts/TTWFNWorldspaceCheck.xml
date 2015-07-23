@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01C680">TTWFNWorldspaceCheck</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFNWorldspaceCheck</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>297</CompiledSize>
+        <VariableCount>6</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACQANABgBAAABAAAWAA0AAQAJACByBABYLBEAAB4AAAAZAAAAFQAOAGYEAAkAIHIEAFhuFAAAFQAHAHMBAAIAIDAVABAAcwIACwAgWD8UBQABAHIFADsVFADUAAAAAQ8AVgEAAAEAVgEAAAIABxUAEwBmAwAOACBYQBQIAAIAcgUAcwEAFgAZAAIAFQAgWEEUCAACAHIBAHICACAxIH4gIT0VAA0AcwYACAAgcwEAIDEgKz8VAAAZAAAAORUMAAELAFYBAAABAEIBHDwVAAAWAA8AAwALACBYuhQFAAEAcgEAFQAVAGYFABAAIFhAFAoAAgByAQBuAAAAABUABwBHBgACACAwRRUSAAEIAFYEAAAFAAEIAFYBAAAGABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWFNWorldspaceCheck.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iIndex</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iCount</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rList</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rWorld</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rMapper</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">iMapperIndex</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRV">4</Reference>
+        <Reference Tag="SCRV">5</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010F9A">TTWWorldSpacesCheckerList</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C010FAA">TTWWorldLocation</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

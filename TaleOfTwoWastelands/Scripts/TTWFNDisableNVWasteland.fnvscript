@@ -1,0 +1,16 @@
+scn TTWFNDisableNVWasteland
+
+begin Function { }
+
+	set bInNVWasteland to 0
+
+	RNVTARef.Disable;
+	RadioBlackMountainTAREF.Disable;
+	TTWvCountryRadioRef.Disable;
+	NVDLC01RadioStationRef.Disable;
+	NVDLC02JedRadioTAREF.Disable;
+	NVDLC03RadioREF.Disable;
+
+	PipBoyRadioOff
+
+end
