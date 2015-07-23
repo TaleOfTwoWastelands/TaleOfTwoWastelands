@@ -8,7 +8,7 @@ short iYearsToPass
 BEGIN GameMode
 
 	; Run a worldspace check
-	call TTWFNWorldspaceCheck
+	;call TTWFNWorldspaceCheck
 
 	if (TTWHasNVSE)
 		if (LogicalAnd TTWWorldLocation 3) && (bInDCWasteland == 0)
