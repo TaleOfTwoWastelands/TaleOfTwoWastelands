@@ -11,7 +11,7 @@ if IsActionRef player == 1
 	if ( DoOnce == 0 )
 		if BobbleHeadOverhaul
 			player.addperk TTWBobbleheadPerkSneak
-			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qThe safest distance between two points is a shadowy line.%q %r Your sneak attack criticals now do 50%% more damage."
+			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qThe safest distance between two points is a shadowy line.%q %r Your sneak attack criticals now do 20%% more damage."
 		else
 			Player.ModAv Sneak 10																			;Mod the perm. pool so it sticks
 			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qThe safest distance between two points is a shadowy line.%q %r Your Sneak skill has been permanently increased by 10 points."

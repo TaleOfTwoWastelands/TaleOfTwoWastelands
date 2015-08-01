@@ -23,12 +23,10 @@ begin GameMode
 			set iMaster to GetModIndex "The Mod Configuration Menu.esp"
 			set rList to BuildRef iMaster 2790
 			ListAddForm rList TTWMCMItem
+			SetStage TTWMCMQUST 0	; initialize the values on restart -RB
 		endif
 	endif
-	
-	;I'm putting Gamemode stuff from all the seperate quests here to avoid 1000 enabled quests. --TJ
-	SetStage TTWMCMQUST 0
-	
+		
 end
 begin MenuMode 1013
 	if IsModLoaded "The Mod Configuration Menu.esp"
@@ -61,6 +59,8 @@ begin MenuMode 1013
 
 		if GetMCMFloat 0 0 "_Reset"			;1 - RESET
 			SetMCMFloat 0 0 "_Reset" 0
+
+		;I'm putting Gamemode stuff from all the seperate quests here to avoid 1000 enabled quests. --TJ
 			
 ;More Logo Code
 			if activeSubmenu == 0

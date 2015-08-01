@@ -11,7 +11,7 @@ if IsActionRef player == 1
 	if ( DoOnce == 0 )
 		if BobbleHeadOverhaul
 			player.addperk TTWBobbleheadPerkPerception
-			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qOnly through observation will you perceive weakness.%q %r You are now 15%% more accurate when using VATS."
+			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qOnly through observation will you perceive weakness.%q %r You are now 10%% more accurate when using guns and energy weapons."
 		else
 			MessageBoxEx "You've found a Vault-Tec Limited Edition Bobblehead! %r The inscription on the base reads %qOnly through observation will you perceive weakness.%q %r Your Perception has been permanently increased by 1."
 			if ( Player.GetPermanentActorValue Perception < 10 )

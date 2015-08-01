@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="000630E5">BobbleStrength</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">BobbleStrength</EditorID>
+    <Name Tag="FULL">Strength Boost</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031023">IncreaseCarryWeight</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>25</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>CarryWeight</ActorValue>
+        </EffectData>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>
