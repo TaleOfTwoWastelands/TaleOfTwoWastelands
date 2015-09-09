@@ -1,0 +1,328 @@
+SCN FollowersQuestSCRIPT
+
+short	PlayerHasFollower
+float	FollowerWaitingLeaveDay
+float	DogmeatWaitingLeaveDay
+
+
+;***Charon Variables***
+short	PlayerOwnsContract 			;Set by buying the contract from Ahzrukhal or by killing him.
+short	CharonHired					;Set to 1 when the player hires Charon after obtaining his contract.
+short	CharonFired						;Player has dismissed Charon
+
+;***Fawkes Variables***
+short	FawkesHired
+short	FawkesFired
+
+;***Jericho Variables***
+short	JerichoConvince
+short	JerichoHired
+short	JerichoFired
+
+;***Star Paladin Cross Variables***
+short	CrossDismissedPlayer
+short	StarPaladinCrossHasBeenHired
+short	StarPaladinCrossHired
+short	StarPaladinCrossFired
+
+;***Butch Variables***
+short ButchHired
+short ButchFired
+
+;***RL3 Variables***
+short RL3Hired
+short RL3Fired
+
+;***Clover Variables***
+short CloverHired
+short CloverFired
+
+;***Dogmeat Variables***
+short DogmeatHired
+short DogmeatFired
+
+;TTW Lucky 38 fire option
+short	bCharonL38
+short	bFawkesL38
+short	bJerichoL38
+short	bStarPaladinCrossL38
+short bButchL38
+short bRL3L38
+short bCloverL38
+short bDogmeatL38
+
+BEGIN GameMode
+
+	if ( DogmeatHired == 1 )
+		if ( DogmeatREF.Waiting == 1 ) && ( DogmeatREF.GetInCell MegatonPlayerHouse == 0 )  && ( DogmeatREF.GetInCell Tenpenny03Player == 0 ) 
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( DogmeatREF.GetInSameCell Player == 0  )
+					set Followers.DogmeatHired to 0
+					set Followers.DogmeatFired to 1
+					set Followers.bDogmeatL38 to 0
+					set DogmeatREF.Waiting to 0
+					DogmeatREF.SetPlayerTeammate 0
+					DogmeatREF.RemoveFromFaction FollowerFaction
+					DogmeatREF.evp
+
+						player.RemovePerk TTWFollowerPerkDogmeat
+						showmessage TTWFollowerMessagePerkDogmeatRemove
+						if ( bInDCWasteland )
+							If Player.HasPerk DLC03Puppies == 1
+								ShowMessage DLC03FollowerMessageLeavePuppy
+							Else
+								ShowMessage FollowerMessageLeaveDogmeat
+							EndIf
+							DogmeatREF.MoveTo EvacuationMarker
+						elseif ( bInNVWasteland )
+							If Player.HasPerk DLC03Puppies == 1
+								ShowMessage TTWDLC03FollowerMessageLeavePuppyNV
+							Else
+								ShowMessage TTWFollowerMessageLeaveDogmeatNV
+							EndIf
+							DogmeatREF.MoveTo TTWHomeMarkerDogmeatNV
+						endif
+
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+	endif
+
+	if ( PlayerHasFollower == 1 )
+		if ( ButchREF.Waiting == 1 ) && ( ButchREF.GetInCell MegatonPlayerHouse == 0 )  && ( ButchREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( ButchREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.ButchHired to 0
+					set Followers.ButchFired to 1
+					set Followers.bButchL38 to 0
+					set ButchREF.Waiting to 0
+					set ButchREF.IsFollowingDefault to 1
+					set ButchREF.IsFollowingLong to 0
+					set ButchREF.IsFollowingShort to 0
+					ButchREF.SetCombatStyle FollowersCombatStyleRanged
+					set ButchREF.CombatStyleRanged to 1
+					set ButchREF.CombatStyleMelee to 0
+					ButchREF.SetPlayerTeammate 0
+					ButchREF.RemoveFromFaction FollowerFaction
+					ButchREF.evp
+					
+					player.RemovePerk TTWFollowerPerkButch
+					showmessage TTWFollowerMessagePerkButchRemove
+					if ( bInDCWasteland )
+						showmessage FollowerMessageLeaveButch
+						ButchREF.MoveTo MuddyRudderMarker
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveButchNV
+						ButchREF.MoveTo TTWHomeMarkerButchNV
+					endif
+
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+	if ( CharonREF.Waiting == 1 ) && ( CharonREF.GetInCell MegatonPlayerHouse == 0 )  && ( CharonREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( CharonREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.CharonHired to 0
+					set Followers.CharonFired to 1
+					set Followers.bCharonL38 to 0
+					set CharonREF.Waiting to 0
+					set CharonREF.IsFollowingDefault to 1
+					set CharonREF.IsFollowingLong to 0
+					set CharonREF.IsFollowingShort to 0
+					CharonREF.SetCombatStyle FollowersCombatStyleRanged
+					set CharonREF.CombatStyleRanged to 1
+					set CharonREF.CombatStyleMelee to 0
+					CharonREF.SetFactionRank TeammateFaction -1
+					CharonREF.RemoveFromFaction FollowerFaction
+					CharonREF.SetPlayerTeammate 0
+					CharonREF.evp
+
+					player.RemovePerk TTWFollowerPerkCharon
+					showmessage TTWFollowerMessagePerkCharonRemove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveCharon
+						CharonREF.MoveTo UnderworldNinthCircleMARKER
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveCharonNV
+						CharonREF.MoveTo TTWHomeMarkerCharonNV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		if ( CloverREF.Waiting == 1 ) && ( CloverREF.GetInCell MegatonPlayerHouse == 0 )  && ( CloverREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( CloverREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.CloverHired to 0
+					set Followers.CloverFired to 1
+					set Followers.bCloverL38 to 0
+					set CloverREF.Waiting to 0
+					set CloverREF.IsFollowingDefault to 1
+					set CloverREF.IsFollowingLong to 0
+					set CloverREF.IsFollowingShort to 0
+					CloverREF.SetCombatStyle FollowersCombatStyleRanged
+					set CloverREF.CombatStyleRanged to 1
+					set CloverREF.CombatStyleMelee to 0
+					CloverREF.SetPlayerTeammate 0
+					CloverREF.RemoveFromFaction FollowerFaction
+					CloverREF.evp
+					
+					player.RemovePerk TTWFollowerPerkClover
+					showmessage TTWFollowerMessagePerkCloverRemove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveClover
+						CloverREF.MoveTo ParadiseFallsEulogysPadMARKER
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveCloverNV
+						CloverREF.MoveTo TTWHomeMarkerCloverNV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		if ( JerichoREF.Waiting == 1 ) && ( JerichoREF.GetInCell MegatonPlayerHouse == 0 )  && ( JerichoREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( JerichoREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.JerichoHired to 0
+					set Followers.JerichoFired to 1
+					set Followers.bJerichoL38 to 0
+					set JerichoREF.Waiting to 0
+					set JerichoREF.IsFollowingDefault to 1
+					set JerichoREF.IsFollowingLong to 0
+					set JerichoREF.IsFollowingShort to 0
+					JerichoREF.SetCombatStyle FollowersCombatStyleRanged
+					set JerichoREF.CombatStyleRanged to 1
+					set JerichoREF.CombatStyleMelee to 0
+					JerichoREF.SetPlayerTeammate 0
+					JerichoREF.SetFactionRank TeammateFaction -1
+					JerichoREF.RemoveFromFaction FollowerFaction
+					JerichoREF.evp
+
+					player.RemovePerk TTWFollowerPerkJericho
+					showmessage TTWFollowerMessagePerkJerichoRemove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveJericho
+						JerichoREF.MoveTo MegatonOutsideMarker
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveJerichoNV
+						JerichoREF.MoveTo TTWHomeMarkerJerichoNV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		if ( MQ08FawkesREF.Waiting == 1 ) && ( MQ08FawkesREF.GetInCell MegatonPlayerHouse == 0 )  && ( MQ08FawkesREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( MQ08FawkesREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.FawkesHired to 0
+					set Followers.FawkesFired to 1
+					set Followers.bFawkesL38 to 0
+					set MQ08FawkesREF.Waiting to 0
+					set MQ08FawkesREF.IsFollowingDefault to 1
+					set MQ08FawkesREF.IsFollowingLong to 0
+					set MQ08FawkesREF.IsFollowingShort to 0
+					MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
+					set MQ08FawkesREF.CombatStyleRanged to 1
+					set MQ08FawkesREF.CombatStyleMelee to 0
+					MQ08FawkesREF.SetPlayerTeammate 0
+					MQ08FawkesREF.RemoveFromFaction FollowerFaction
+					MQ08FawkesREF.evp
+
+					player.RemovePerk TTWFollowerPerkFawkes
+					showmessage TTWFollowerMessagePerkFawkesRemove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveFawkes
+						MQ08FawkesREF.MoveTo FawkesMuseumWaitMarker
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveFawkesNV
+						MQ08FawkesREF.MoveTo TTWHomeMarkerFawkesNV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		if ( RL3REF.Waiting == 1 ) && ( RL3REF.GetInCell MegatonPlayerHouse == 0 )  && ( RL3REF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( RL3REF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.RL3Hired to 0
+					set Followers.RL3Fired to 1
+					set Followers.bRL3L38 to 0
+					set RL3REF.Waiting to 0
+					set RL3REF.IsFollowingDefault to 1
+					set RL3REF.IsFollowingLong to 0
+					set RL3REF.IsFollowingShort to 0
+					RL3REF.SetCombatStyle FollowersCombatStyleRanged
+					set RL3REF.CombatStyleRanged to 1
+					set RL3REF.CombatStyleMelee to 0
+					RL3REF.SetPlayerTeammate 0
+					RL3REF.RemoveFromFaction FollowerFaction
+					RL3REF.evp
+
+					player.RemovePerk TTWFollowerPerkRL3
+					showmessage TTWFollowerMessagePerkRL3Remove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveRL3
+						RL3REF.MoveTo CCBazaarMarker
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveRL3NV
+						RL3REF.MoveTo TTWHomeMarkerRL3NV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		if ( StarPaladinCrossREF.Waiting == 1 ) && ( StarPaladinCrossREF.GetInCell MegatonPlayerHouse == 0 )  && ( StarPaladinCrossREF.GetInCell Tenpenny03Player == 0 )
+			if ( FollowerWaitingLeaveDay <= GameDaysPassed )
+				if ( StarPaladinCrossREF.GetInSameCell Player == 0  )
+					set Followers.PlayerHasFollower to 0
+					set Followers.StarPaladinCrossHired to 0
+					set Followers.StarPaladinCrossFired to 1
+					set Followers.bStarPaladinCrossL38 to 0
+					set StarPaladinCrossREF.Waiting to 0
+					set StarPaladinCrossREF.IsFollowingDefault to 1
+					set StarPaladinCrossREF.IsFollowingLong to 0
+					set StarPaladinCrossREF.IsFollowingShort to 0
+					StarPaladinCrossREF.SetCombatStyle FollowersCombatStyleMelee
+					set StarPaladinCrossREF.CombatStyleRanged to 1
+					set StarPaladinCrossREF.CombatStyleMelee to 0
+					StarPaladinCrossREF.SetPlayerTeammate 0
+					StarPaladinCrossREF.RemoveFromFaction FollowerFaction
+					StarPaladinCrossREF.evp
+
+					player.RemovePerk TTWFollowerPerkStarPaladinCross
+					showmessage TTWFollowerMessagePerkStarPaladinCrossRemove
+					if ( bInDCWasteland )
+						ShowMessage FollowerMessageLeaveStarPaladinCross
+						StarPaladinCrossREF.MoveTo CitScribeMarker04
+					elseif ( bInNVWasteland )
+						showmessage TTWFollowerMessageLeaveStarPaladinCrossNV
+						StarPaladinCrossREF.MoveTo TTWHomeMarkerStarPaladinCrossNV
+					endif
+	
+					set FollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+	endif
+
+END

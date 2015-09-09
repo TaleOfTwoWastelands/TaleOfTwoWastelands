@@ -1,0 +1,89 @@
+scn RL3SCRIPT
+
+;Follower Variables
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+
+;Variables for DLC03
+
+short DLC03RL3AirlockGo
+short DLC03MQ11RL3PanelAnimate
+
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+
+BEGIN OnHit player
+	if FFER54NPC1REF.fightPlayer == 0
+		set FFER54NPC1REF.fightPlayer to 1
+	endif
+END
+
+BEGIN OnStartCombat Player
+	if FFER54NPC1REF.fightPlayer == 0
+		set FFER54NPC1REF.fightPlayer to 1
+	endif
+END
+
+BEGIN gamemode
+	if FFER54NPC1REF.fightPlayer == 0
+		if isCombatTarget player == 1
+			set FFER54NPC1REF.fightPlayer to 1
+		endif
+	elseif FFER54NPC1REF.fightPlayer == 1
+		set FFER54NPC1REF.fightPlayer to 2
+		FFER54NPC1REF.modav DamageResist -85
+		setEssential RL3Follower 0
+	endif
+
+;DLC03 MQ11 Scripting
+
+	if ( GetStage MQ11 >= 60 )
+		if ( DLC03RL3AirlockGo == 0 )
+			if ( GetDistance MQ11AirlockWaitMarker <= 150 )
+				Set DLC03RL3AirlockGo to 1
+				RL3REF.EVP
+			endif
+		endif
+	endif
+
+	if ( DLC03MQ11RL3PanelAnimate == 1 )
+		if ( IsIdlePlaying == 0 )
+			Set DLC03MQ11RL3PanelAnimate to 2
+			set PPurityKeyPadEnterRef.PanelActivated to 2
+		endif
+	endif
+
+
+END
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END
+
+BEGIN OnDeath
+
+	if ( Followers.RL3Hired == 1  )
+		set Followers.PlayerHasFollower to 0
+		set Followers.RL3Hired to 0
+		ShowMessage FollowerMessageDeadRL3
+		player.RemovePerk TTWFollowerPerkRL3
+		showmessage TTWFollowerMessagePerkRL3Remove
+	endif
+
+END

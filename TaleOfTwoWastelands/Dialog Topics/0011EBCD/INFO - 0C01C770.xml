@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0C01C770">INFO - 0C01C770</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="0C01C76F">INFO - 0C01C76F</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">They shall know the power of my steel!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="06062735">StarPaladinCrossREF</Quest>
+          <VariableIndex>10</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156E5">StarPaladinCross</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707C">FollowersTacticsCombatEND</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707D">FollowersTacticsCombatGOODBYE</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>22</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHMKAAIAIDEcAAEAXhAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">set StarPaladinCrossREF.FollowerSwitchAggressive to 1
+StarPaladinCrossREF.evp</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

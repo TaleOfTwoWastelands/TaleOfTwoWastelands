@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="06096B89">INFO - 06096B89</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -132,12 +129,19 @@
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>15</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">ShowMessage FollowerMessageOneFollower</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0007FE0B">FollowerMessageOneFollower</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">Care to join me, Fawkes? I would appreciate your assistance.</Prompt>

@@ -1,0 +1,581 @@
+ScriptName VNPCFollowersQuestSCRIPT 
+
+short bAchievement1	; Ol' Buddy Ol' Pal - recruit 1 companion. ID: 4
+short bAchievement2; The Whole Gang's Here - recruit all companions. ID: 5.
+
+short bSuiteAvailable; (8_26_10) Added to allow the Companions to be "Fired" to the Lucky 38 if Mr. House was never talked to. -ETB
+; (10_1_10) Adding comment to force esp to be rebuilt/added to post-release esms. -ETB
+
+;***Boone Variables***
+short bBooneHired;		Boone is currently a follower
+short bBooneFired;		Boone was told to go back home
+short bBooneAvailable;  Boone has offered his services
+short bBooneLeaveDisable;
+short bBooneQuit;
+short bBooneL38;
+short bBooneDead
+
+short bCassHired;
+short bCassFired;
+short bCassAvailable;
+short bCassLeaveDisable;
+short bCassDead; 		Check to see if she's dead (needed for Jean-Baptiste, Freeside).
+short bCassL38;
+
+short bVeronicaHired;
+short bVeronicaFired;
+short bVeronicaAvailable;
+short bVeronicaLeaveDisable;
+short bVeronicaQuit;
+short bVeronicaL38;
+short bVeronicaDead
+
+short bLilyHired;
+short bLilyFired;
+short bLilyAvailable;
+short bLilyL38;
+short bLilyDead;
+short bLilyHiredOnce;
+
+short bEDEHired;
+short bEDEFired;
+short bEDEAvailable;
+short bEDEL38;
+short bEDEDead
+
+; Humanoid in party - Only one humanoid companion can be in the party at any given time.
+short bHumanoidInParty
+
+; Critter in party - Only one critter can be in the party at any given time.
+short bCritterInParty;
+
+; Raul variables
+int RaulHired			; 0 = Not in party, 1 = In party
+int RaulAvailable		; 0 = Raul cannot be hired, 1 = Raul can be hired
+int RaulFired			; 0 = Raul has not been fired, 1 = Raul fired
+short bRaulL38;
+short bRaulDead
+
+; Arcade variables
+int ArcadeHired			; 0 = Not in party, 1 = In party
+int ArcadeAvailable	; 0 = Arcade cannot be hired, 1 = Arcade can be hired
+int ArcadeFired			; 0 = Arcade was told to go home
+short ArcadeLeaveDisable;
+short bArcadeL38;
+short bArcadeDead
+
+; Rex variables
+int RexHired			; 0 = Not in party, 1 = In party
+int RexAvailable		; 0 = Rex cannot be hired, 1 = Rex can be hired
+int RexFired				; 0 = Rex has not been fired, 1 = Rex was fired
+short bRexL38;
+short bRexDead
+
+short nRecruited;
+
+short	bPlayerHasFollower;
+short nCurrentFollowers;
+float	fFollowerWaitingLeaveDay;
+float   fCurrentDay
+
+short bWeaponCheck		; 1 = Player has set foot in an area where his weapons may be confiscated.
+
+Short bFixedEde; 			; Variable to track fixing Ed-E
+
+BEGIN GameMode
+
+	; Reset Ed-E to prevent him from being permanently destroyed.
+	If ((bFixedEde == 0) && (Player.IsHardcore == 0))
+		Set bFixedEde to 1;
+
+		If (VDialogueEde.iHVUpgrade > 0) && (EDE3REF.GetDestroyed == 1)
+			EDE3REF.Enable;
+			EDE3REF.ClearDestruction;	
+			EDE3REF.Resurrect;
+		ElseIf (VDialogueEde.iFolUpgrade > 0) && (EDE2REF.GetDestroyed == 1)
+			EDE2REF.Enable;
+			EDE2REF.ClearDestruction;
+			EDE2REF.Resurrect;
+		EndIf
+
+	EndIf
+
+	; JSH 02.04.11 - Remove player from Boone's faction if Boone is fired but player is still in faction for some reason.
+	If ( Player.GetInFaction VBooneFaction ) && ( bBooneHired == 0 )
+		Player.RemoveFromFaction VBooneFaction;
+	EndIf
+
+	; JSH 02.04.11 - Address 360 issue if ED-E is frenzied when fired at the start of Dead Money.
+	If ( EDE1REF.IsInCombat == 0 ) && ( EDE1REF.GetActorValue Aggression == 3 )
+		EDE1REF.SetActorValue Aggression 0;
+	EndIf
+
+	If ( EDE2REF.IsInCombat == 0 ) && ( EDE2REF.GetActorValue Aggression == 3 )
+		EDE2REF.SetActorValue Aggression 0;
+	EndIf
+
+	If ( EDE3REF.IsInCombat == 0 ) && ( EDE3REF.GetActorValue Aggression == 3 )
+		EDE3REF.SetActorValue Aggression 0;
+	EndIf
+	;
+
+	; JSH 11.15.10 - Cleanup script if the player somehow acquires a companion's weapon and/or ammo.
+	if (Player.GetItemCount NVCompanionWeapons > 0)
+		Player.RemoveItem NVCompanionWeapons 100 1;
+		Player.RemoveItem AmmoCompanion 100 1;
+	endif
+
+	; JSH 11.15.10 - Restore a companion's weapons if they somehow lose them and they're not confiscated.
+	if (vDialogueTops.PlayerFrisked == 0) && (VMS18.bPlayerFrisked == 0) && (vDialogueGomorrah.iInGomorrah == 0) && (GetQuestRunning FortEquipmentConfiscationQuest == 0) && (bWeaponCheck == 1)
+
+		if (CraigBooneREF.GetItemCount NVBooneWeapons < 2)
+			CraigBooneREF.AddItem NVBooneWeapons 1;
+			CraigBooneREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (ArcadeREF.GetItemCount NVArcadeWeapons < 2)
+			ArcadeREF.AddItem NVArcadeWeapons 1;
+			ArcadeREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (LilyREF.GetItemCount NVLilyWeapons < 2)
+			LilyREF.AddItem NVLilyWeapons 1;
+			LilyREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (VeronicaREF.GetItemCount NVVeronicaWeapons < 2)
+			VeronicaREF.AddItem NVVeronicaWeapons 1;
+			VeronicaREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (RoseofSharonCassidyREF.GetItemCount NVCassWeapons < 2)
+			RoseofSharonCassidyREF.AddItem NVCassWeapons 1;
+			RoseofSharonCassidyREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (RaulREF.GetItemCount NVRaulWeapons < 2)
+			RaulREF.AddItem NVRaulWeapons 1;
+			RaulREF.AddItem AmmoCompanion 1;
+		endif
+
+		if (EDE1REF.GetItemCount EDEZapGun == 0)
+			EDE1REF.AddItem EDEZapGun 1;
+			EDE1REF.AddItem AmmoSmallEnergyCellRobot 1;
+		endif
+
+		if (EDE3REF.GetItemCount EDEZapGun == 0)
+			EDE3REF.AddItem EDEZapGun 1;
+			EDE3REF.AddItem AmmoSmallEnergyCellRobot 1;
+		endif
+
+		if (EDE2REF.GetItemCount EDEZapGunUpgrade == 0)
+			EDE2REF.AddItem EDEZapGunUpgrade 1;
+			EDE2REF.AddItem AmmoSmallEnergyCellRobot 1;
+		endif
+
+		set bWeaponCheck to 0
+
+	elseif (bWeaponCheck == 0)
+
+		set bWeaponCheck  to 1;
+
+	endif
+
+
+	if ( bPlayerHasFollower == 1 )
+
+		; Boone
+		if ( CraigBooneREF.Waiting == 1 )
+			if ( fFollowerWaitingLeaveDay <= GameDaysPassed && GameDaysPassed > 0)
+				if ( CraigBooneREF.GetInSameCell Player == 0  && bBooneLeaveDisable == 0 && VMS18FreezerTriggerREF.bBooneInFreezer == 0)
+					set VNPCFollowers.bBooneHired to 0
+					set VNPCFollowers.bBooneFired to 1
+					set VNPCFollowers.bBooneL38 to 0
+					set VNPCFollowers.bHumanoidInParty to 0;
+					set CraigBooneREF.Waiting to 0
+					CraigBooneREF.SetPlayerTeammate 0
+					CraigBooneREF.removeperk CompanionSuite
+					player.removeperk Spotting
+					Player.RemoveFromFaction VBooneFaction;
+					CraigBooneREF.RemoveFromFaction FollowerFaction
+					CraigBooneREF.SetAV Assistance 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+					if VNPCFollowers.nCurrentFollowers == 0
+					     set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					showmessage FollowerMessagePerkBooneRemove
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveBoone
+						CraigBooneREF.MoveTo BooneHomeMarkerREF
+					elseif ( bInDCWasteland )
+						if GetStage MS06Fin >= 10
+							showmessage TTWFollowerMessageLeaveBooneDCMemorial
+							CraigBooneREF.MoveTo TTWHomeMarkerBooneDCMemorial
+						else
+							showmessage TTWFollowerMessageLeaveBooneDCTemple
+							CraigBooneREF.MoveTo TTWHomeMarkerBooneDCTemple
+						endif
+					endif
+					
+					CraigBooneREF.ResetAI
+					set fFollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+		
+		;ED-E
+		if EDE1REF.Waiting == 1 && EDE1Ref.GetDisabled == 0
+			if (fFollowerWaitingLeaveDay <= GameDaysPassed && GameDaysPassed > 0)
+				if (EDE1REF.GetInSameCell Player == 0)
+					set VNPCFollowers.bEDEHired to 0
+					set VNPCFollowers.bEDEFired to 1
+					set VNPCFollowers.bCritterInParty to 0
+					set vNPCFollowers.bEDEL38 to 0																				; (8_16_10) Added to fix missing commands. -ETB
+					set fFollowerWaitingLeaveDay to 0																			; <<<
+					EDE1REF.SetPlayerTeammate 0
+					EDE1REF.removeperk CompanionSuite
+					player.removeperk EnhancedSensors
+					EDE1REF.RemoveFromFaction FollowerFaction
+					EDE1REF.SetAV Assistance 0
+					set EDE1REF.Waiting to 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+					if (VNPCFollowers.nCurrentFollowers == 0)
+     					set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					ShowMessage FollowerMessagePerkEDERemove;
+						
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveEDE;
+						EDE1REF.MoveTo EDEHomeMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveEDEDC
+						EDE1REF.MoveTo TTWHomeMarkerEDEDC
+					endif
+					
+					EDE1Ref.ResetAI
+				endif
+			endif
+		endif
+		if EDE2Ref.Waiting == 1 && EDE2Ref.GetDisabled == 0
+			if (fFollowerWaitingLeaveDay <= GameDaysPassed && GameDaysPassed > 0)
+				if (EDE2Ref.GetInSameCell Player == 0)
+					set VNPCFollowers.bEDEHired to 0
+					set VNPCFollowers.bEDEFired to 1
+					set VNPCFollowers.bCritterInParty to 0
+					set vNPCFollowers.bEDEL38 to 0																				; (8_16_10) Added to fix missing commands. -ETB
+					set fFollowerWaitingLeaveDay to 0																			; <<<
+					EDE2Ref.SetPlayerTeammate 0
+					EDE2Ref.removeperk CompanionSuite
+					player.removeperk EnhancedSensors
+					EDE2Ref.RemoveFromFaction FollowerFaction
+					EDE2Ref.SetAV Assistance 0
+					set EDE2Ref.Waiting to 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+					if (VNPCFollowers.nCurrentFollowers == 0)
+     					set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					ShowMessage FollowerMessagePerkEDERemove;
+						
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveEDE;
+						EDE2REF.MoveTo EDEHomeMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveEDEDC
+						EDE2REF.MoveTo TTWHomeMarkerEDEDC
+					endif
+					
+					EDE2Ref.ResetAI
+				endif
+			endif
+		endif
+		if EDE3Ref.Waiting == 1 && EDE3Ref.GetDisabled == 0
+			if (fFollowerWaitingLeaveDay <= GameDaysPassed && GameDaysPassed > 0)
+				if (EDE3Ref.GetInSameCell Player == 0)
+					set VNPCFollowers.bEDEHired to 0
+					set VNPCFollowers.bEDEFired to 1
+					set VNPCFollowers.bCritterInParty to 0
+					set vNPCFollowers.bEDEL38 to 0																				; (8_16_10) Added to fix missing commands. -ETB
+					set fFollowerWaitingLeaveDay to 0																			; <<<
+					EDE3Ref.SetPlayerTeammate 0
+					EDE3Ref.removeperk CompanionSuite
+					player.removeperk EnhancedSensors
+					EDE3Ref.RemoveFromFaction FollowerFaction
+					EDE3Ref.SetAV Assistance 0
+					set EDE3Ref.Waiting to 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+					if (VNPCFollowers.nCurrentFollowers == 0)
+     					set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					ShowMessage FollowerMessagePerkEDERemove;
+						
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveEDE;
+						EDE3REF.MoveTo EDEHomeMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveEDEDC
+						EDE3REF.MoveTo TTWHomeMarkerEDEDC
+					endif
+					
+					EDE3Ref.ResetAI
+				endif
+			endif
+		endif
+
+		; Veronica
+		if VeronicaREF.Waiting == 1
+			if (fFollowerWaitingLeaveDay <= GameDaysPassed)
+				if (VeronicaREF.GetInSameCell Player == 0 && VMS18FreezerTriggerREF.bVeronicaInFreezer == 0)
+					set VeronicaREF.Waiting to 0																					; (8_14_10) Added missing "wait to 0" to fix looping message bug. -ETB
+					set VNPCFollowers.bVeronicaHired to 0
+					set VNPCFollowers.bVeronicaFired to 1
+					set VNPCFollowers.bHumanoidInParty to 0
+					VeronicaREF.SetPlayerTeammate 0
+					VeronicaREF.removeperk CompanionSuite
+					player.removeperk ScribeAssistant
+					VeronicaRef.RemoveFromFaction FollowerFaction
+					VeronicaRef.SetAV Assistance 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+					if (VNPCFollowers.nCurrentFollowers == 0)
+     					set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+
+					ShowMessage FollowerMessagePerkVeronicaRemove;
+					
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveVeronica;
+						VeronicaREF.MoveTo VeronicaHomeMarkerREF;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveVeronicaDC
+						VeronicaREF.MoveTo TTWHomeMarkerVeronicaDC
+					endif
+	
+					VeronicaREF.ResetAI
+
+					; When Veronica leaves, if you haven't yet started the Brotherhood quest, stop being allies with the Brotherhood
+					if GetStage VMS55 == 0																							; (8_16_10) Added to fix missing commands. -ETB
+    	 						SetEnemy BrotherhoodSteelFaction PlayerFaction												; <<<
+					endif																													; <<<
+					set bVeronicaL38 to 0																							; <<<
+					set fFollowerWaitingLeaveDay to 0																			; <<<
+				endif
+			endif
+		endif
+
+		; Cass
+		if RoseofSharonCassidyREF.Waiting == 1
+			if (fFollowerWaitingLeaveDay <= GameDaysPassed)
+				if (RoseofSharonCassidyREF.GetInSameCell Player == 0 && VMS18FreezerTriggerREF.bCassInFreezer == 0)
+					set RoseofSharonCassidyREF.Waiting to 0																	; (8_14_10) Added missing "wait to 0" to fix looping message bug. -ETB
+					set VNPCFollowers.bCassHired to 0
+					set VNPCFollowers.bCassFired to 1
+					set VNPCFollowers.bHumanoidInParty to 0
+					RoseofSharonCassidyREF.SetPlayerTeammate 0
+					RoseofSharonCassidyREF.removeperk CompanionSuite
+					player.removeperk WhiskeyRose
+					RoseofSharonCassidyREF.RemoveFromFaction FollowerFaction
+					RoseofSharonCassidyREF.SetAV Assistance 0
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+					if (VNPCFollowers.nCurrentFollowers == 0)
+     					set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					ShowMessage FollowerMessagePerkCassRemove;
+
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveCass;
+						RoseofSharonCassidyREF.MoveTo CassHomeMarkerREF;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveCassDC
+						RoseofSharonCassidyREF.MoveTo TTWHomeMarkerCassDC
+					endif
+	
+					RoseofSharonCassidyREF.ResetAI
+					set bCassL38 to 0																; (8_16_10) Added to fix missing commands. -ETB
+					stopquest vCassTimer														; <<<
+					set fFollowerWaitingLeaveDay to 0										; <<<
+				endif
+			endif
+		endif
+
+
+		; Raul
+		if RaulREF.Waiting == 1
+			if fFollowerWaitingLeaveDay <= GameDaysPassed
+				if RaulREF.GetInSameCell Player == 0
+					set RaulHired to 0
+					set RaulFired to 1
+					set RaulREF.Waiting to 0
+					RaulREF.SetPlayerTeammate 0											; (8_16_10) Removed comment (was commented-out). -ETB
+					RaulREF.RemoveFromFaction FollowerFaction
+					RaulREF.SetAV Assistance 0
+					RaulREF.evp
+					set bHumanoidInParty to 0													; (8_16_10) Added to fix missing commands. -ETB
+					set bRaulL38 to 0																; <<<
+					set nCurrentFollowers to ( nCurrentFollowers - 1 )						; <<<
+					RaulREF.removeperk CompanionSuite									; <<<
+					ShowMap RaulsShackMarkerREF 1										; <<<
+
+					if VDialogueRaul.RaulUpgrade != 1
+							player.removeperk RegularMaintenance
+							showmessage FollowerMessagePerkRaulRemove
+					elseif VDialogueRaul.RaulUpgrade == 1
+							Player.RemovePerk FullMaintenance
+							showmessage FollowerMessagePerkRaulRemoveUpgrade
+					endif
+
+									
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveRaul;
+						RaulREF.MoveTo RaulHomeMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveRaulDC
+						RaulREF.MoveTo TTWHomeMarkerRaulDC
+					endif
+
+					if nCurrentFollowers == 0													; (8_16_10) Added to fix missing commands. -ETB
+     					set bPlayerHasFollower to 0											; <<<
+					endif																				; <<<							
+
+					set fFollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		; Lily
+		if LilyREF.Waiting == 1
+			if fFollowerWaitingLeaveDay <= GameDaysPassed
+				if LilyREF.GetInSameCell Player == 0
+					set bLilyHired to 0
+					set bLilyFired to 1
+					set LilyREF.Waiting to 0
+					LilyREF.SetPlayerTeammate 0												; (8_16_10) Removed comment (was commented-out). -ETB
+					set bHumanoidInParty to 0													; (8_16_10) Added to fix missing commands. -ETB
+					set nCurrentFollowers to ( nCurrentFollowers - 1 )						; <<<
+					set bLilyL38 to 0																; <<<
+
+					LilyREF.RemoveFromFaction FollowerFaction
+					LilyREF.SetAV Assistance 0
+					LilyREF.evp
+					player.removeperk StealthGirl
+					LilyREF.removeperk CompanionSuite									; (8_16_10) Added to fix missing commands. -ETB
+					showmessage FollowerMessagePerkLilyRemove
+
+					if nCurrentFollowers == 0													; (8_16_10) Added to fix missing commands. -ETB
+     					set bPlayerHasFollower to 0											; <<<
+					endif																				; <<<		
+						
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveLily;
+						LilyREF.MoveTo LilyJacobstownMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveLilyDC
+						LilyREF.MoveTo TTWHomeMarkerLilyDC
+					endif
+
+					StopQuest LilysMedicineTimer												; (8_16_10) Added to fix missing commands. -ETB
+					set fFollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		; Arcade
+		if ( ArcadeREF.Waiting == 1 )
+			if fFollowerWaitingLeaveDay <= GameDaysPassed
+				if ( ArcadeREF.GetInSameCell Player == 0  && ArcadeLeaveDisable == 0 && VMS18FreezerTriggerREF.bArcadeInFreezer == 0)
+					set VNPCFollowers.ArcadeHired to 0
+					set VNPCFollowers.ArcadeFired to 1
+					set VNPCFollowers.bArcadeL38 to 0
+					set VNPCFollowers.bHumanoidInParty to 0;
+					set ArcadeREF.Waiting to 0
+					ArcadeREF.SetPlayerTeammate 0
+					ArcadeREF.removeperk CompanionSuite
+					ArcadeREF.RemoveFromFaction FollowerFaction
+					ArcadeREF.SetAV Assistance 0
+					player.removeperk BetterHealing
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+					if VNPCFollowers.nCurrentFollowers == 0
+					     set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+					
+					ShowMessage FollowerMessagePerkArcadeRemove;
+					
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveArcade
+						ArcadeREF.MoveTo ArcadeHomeMarker
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveArcadeDC
+						ArcadeREF.MoveTo TTWHomeMarkerArcadeDC
+					endif
+					
+					ArcadeREF.ResetAI
+					set fFollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+		; Rex
+		if RexREF.Waiting == 1
+
+			set fCurrentDay to GameDaysPassed
+
+			if (fFollowerWaitingLeaveDay <= fCurrentDay)
+				if RexREF.GetInSameCell Player == 0
+					set RexHired to 0
+					set RexFired to 1
+					set VNPCFollowers.bRexL38 to 0
+					set RexREF.Waiting to 0
+					RexREF.RemoveFromFaction FollowerFaction
+					RexREF.SetAV Assistance 0
+					RexREF.SetPlayerTeammate 0
+					set VNPCFollowers.bCritterInParty to 0
+					RexREF.evp
+
+					RexRef.removeperk CompanionSuite
+					player.removeperk SearchAndMark
+
+					ShowMessage FollowerMessagePerkRexRemove
+
+					if ( bInNVWasteland )
+						ShowMessage FollowerMessageLeaveRex;
+						RexREF.MoveTo RexHomeMarker;
+					elseif ( bInDCWasteland )
+						showmessage TTWFollowerMessageLeaveRexDC
+						RexREF.MoveTo TTWHomeMarkerRexDC
+					endif
+
+					set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+					if VNPCFollowers.nCurrentFollowers == 0
+					     set VNPCFollowers.bPlayerHasFollower to 0
+					endif
+
+					set fFollowerWaitingLeaveDay to 0
+				endif
+			endif
+		endif
+
+	
+
+	endif
+
+	; Achievement Scripting
+	if (bAchievement1 == 0)
+		if (nRecruited > 0)
+			set bAchievement1 to 1;
+			AddAchievement 4
+		endif
+	elseif (bAchievement2 == 0)
+		if(nRecruited >= 8)
+			set bAchievement2 to 1;
+			AddAchievement 5
+		endif
+	endif
+
+END

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>0</Flags>
+  <FormID ID="06094B97">INFO - 06094B97</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000943EB">FollowersHireRL3</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">General Atomics International programmed him to be a perfect soldier, and his simulated personality is designed to follow strict codes of conduct.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">It's just that some of those codes were a little less-defined than others. So he won't travel with anyone he considers "too extreme."</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>10</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">And sadly, his version of "too extreme" seems to cover both sides of the coin - slavers and saints alike. Sorry, pal.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06036F86">FFER54NPC1</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">A picky robot? How does that work?</Prompt>
+  </Subrecords>
+</Record>

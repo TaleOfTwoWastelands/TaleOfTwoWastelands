@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="001579DA">INFO - 001579DA</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00159B30">NPCRobotEdEGoodbyeHappy</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">{Confirmation Beep}&lt;Makes beeping sounds&gt;</ResponseText>
+        <ScriptNotes Tag="NAM2">Do not record.</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>72</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>30</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsVoiceType</Type>
+          <VoiceType ID="0014F3F4">RobotEDE</VoiceType>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>10</ReferenceCount>
+        <CompiledSize>261</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHICAHMBAAIAIDAVAAoAcgMAcwEAAgAgMBUACgByBABzAQACACAwFQAKAHIFAHMeAAIAIDAVAAoAcgUAcx8AAgAgMRUACgByBQBzMAACACAwxREHAAEAbgAAAACAEQUAAQByBgAPEAkAAgA5AG4AAAAAFQATAHIFAHMTAAsAIHIFAHMTACAxIC0WABAAAQAMACByBQBzEwAgMCA9PRUACgByBQBzEgACACAwGQAAAKgRBQABAHIHABwAAQCoEQUAAQByCABZEAsAAQByCQAAAAAAAABZEAsAAQByCgAAAAAAAAAPEAkAAgAAAG4AAAAA+hEAABUACgByBQBzNgACACAx</CompiledScript>
+      <ScriptSource Tag="SCTX">set EDE1REF.Waiting to 0;
+set EDE2REF.Waiting to 0;
+set EDE3REF.Waiting to 0;
+set VNPCFollowers.bEDEHired to 0
+set VNPCFollowers.bEDEFired to 1
+set VNPCFollowers.bCritterInParty to 0
+SetPlayerTeammate 0
+RemoveFromFaction FollowerFaction
+SetAV Assistance 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+removeperk CompanionSuite
+player.removeperk EnhancedSensors
+showmessage FollowerMessagePerkEDERemove
+showmessage FollowerMessageLeaveEDE38
+setAV Aggression 0
+ResetAI
+set vNPCFollowers.bEDEL38 to 1</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D1">EDE1Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732D0">EDE2Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="001732CF">EDE3Ref</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60E">EnhancedSensors</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C620">FollowerMessagePerkEDERemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00171C3D">FollowerMessageLeaveEDE38</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>39</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAE8SBQABAHIEABwAAgBPEgUAAQByBAAcAAMATxIFAAEAcgQA</CompiledScript>
+        <ScriptSource Tag="SCTX">; (10_1_10) Adding comment to force esp to be rebuilt/added to post-release esms. -ETB
+
+; JSH 11.05.10 - Teleport all the ED-Es to Lucky 38 suite.
+EDE1REF.MoveToMarkerWithFade L38SuiteCompanionMarker01REF
+EDE2REF.MoveToMarkerWithFade L38SuiteCompanionMarker01REF
+EDE3REF.MoveToMarkerWithFade L38SuiteCompanionMarker01REF</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="001732D1">EDE1Ref</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="001732D0">EDE2Ref</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="001732CF">EDE3Ref</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015672F">L38SuiteCompanionMarker01REF</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">&lt;Companion Protocol::Return Base&gt;</Prompt>
+  </Subrecords>
+</Record>

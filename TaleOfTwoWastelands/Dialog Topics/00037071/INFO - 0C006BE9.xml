@@ -73,9 +73,9 @@
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDEVABIAcgIAZhsACgAgRwMAIEcEACArHAABAF4QAAA=</CompiledScript>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDEVABIAcgIAZhkACgAgRwMAIEcEACArHAABAF4QAAA=</CompiledScript>
       <ScriptSource Tag="SCTX">set DogmeatREF.Waiting to 1
-set Followers.DogmeatWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+set Followers.FollowerWaitingLeaveDay  to ( GameDaysPassed + FollowerWaitTime )
 DogmeatREF.evp</ScriptSource>
       <References>
         <Reference Tag="SCRO">

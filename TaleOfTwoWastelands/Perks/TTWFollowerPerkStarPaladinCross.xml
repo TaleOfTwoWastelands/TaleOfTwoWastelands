@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C01C730">TTWFollowerPerkStarPaladinCross</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerPerkStarPaladinCross</EditorID>
+    <Name Tag="FULL">Second Skin</Name>
+    <Description Tag="DESC">Star Paladin Cross is a seasoned veteran of power armor use and can show you how to deal with the idiosyncrasies of power armor. While Star Paladin Cross is in your party, you have +1 Agility and +30 carry weight when you are wearing Power Armor.</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0C01C73B">TTWFollowerCrossAbility</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

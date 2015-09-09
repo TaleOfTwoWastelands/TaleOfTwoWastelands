@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="0607FC4B">INFO - 0607FC4B</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -94,56 +91,50 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>7</ReferenceCount>
-        <CompiledSize>288</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>228</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMIAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAKAHIEAHMIAAIAIDEVAAoAcgQAcwkAAgAgMBUACgByAQBzAQACACAxFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwHAABALEQBQABAHIFABUACgByAQBzAwACACAxFQAKAHIBAHMEAAIAIDAcAAEAxREHAAEAbgEAAAAcAAEAiRAKAAIAcgYAbgEAAAAcAAEAfxEKAAIAcgcAbgEAAAD6EQAA</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-MQ08FawkesREF.AddPerk CompanionSuite
-Set MQ08FawkesREF.Waiting to 0
+      <CompiledScript Tag="SCDA">HAABAKsQBwABAG4BAAAAHAABAMURBwABAG4BAAAAHAABAFERBwABAG4BAAAAHAABAHYRBQABAHICABwAAQB/EQoAAgByAwBuAQAAABwAAQB/EQoAAgByBABuAQAAABUACgByAQBzCAACACAwFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBUACgByAQBzAQACACAxFQAKAHIFAHMIAAIAIDEVAAoAcgUAcwkAAgAgMBwAAQBeEAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">
 MQ08FawkesREF.IgnoreCrime 1
+MQ08FawkesREF.SetPlayerTeammate 1
 MQ08FawkesREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+MQ08FawkesREF.AddPerk CompanionSuite
+MQ08FawkesREF.AddToFaction FollowerFaction 1
+MQ08FawkesREF.AddToFaction TeammateFaction 1
 
-set Followers.FawkesHired to 1
-set Followers.FawkesFired to 0
-set MQ08FawkesREF.HasBeenHired to 1
+set MQ08FawkesREF.Waiting to 0
 set MQ08FawkesREF.IsFollowingDefault to 1
 set MQ08FawkesREF.IsFollowingLong to 0
 set MQ08FawkesREF.IsFollowingShort to 0
-MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
 set MQ08FawkesREF.CombatStyleRanged to 1
 set MQ08FawkesREF.CombatStyleMelee to 0
-MQ08FawkesREF.SetPlayerTeammate 1
-MQ08FawkesREF.SetFactionRank TeammateFaction 1
-MQ08FawkesREF.AddToFaction FollowerFaction 1
 
-ResetAI</ScriptSource>
+set MQ08FawkesREF.HasBeenHired to 1
+set Followers.FawkesHired to 1
+set Followers.FawkesFired to 0
+
+MQ08FawkesREF.evp
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="00037136">FollowerFaction</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -151,12 +142,35 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>79</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKw==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkFawkes
+showmessage TTWFollowerMessagePerkFawkesAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C72F">TTWFollowerPerkFawkes</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C703">TTWFollowerMessagePerkFawkesAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">Care to join me, Fawkes? I would appreciate your assistance.</Prompt>

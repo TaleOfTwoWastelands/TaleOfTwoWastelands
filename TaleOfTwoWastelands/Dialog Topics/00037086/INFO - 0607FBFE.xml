@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="060371D2">FollowersHireCharon</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="00000000">NullReference</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -100,26 +97,32 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>7</ReferenceCount>
-        <CompiledSize>185</CompiledSize>
+        <ReferenceCount>10</ReferenceCount>
+        <CompiledSize>278</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">WRALAAEAcgIAAAAAAAAAFQAKAHIDAHMCAAIAIDAVAAoAcgMAcwMAAgAgMRUACgByAQBzCwACACAxFQAKAHIBAHMNAAIAIDAVAAoAcgEAcwwAAgAgMBwAAQCxEAUAAQByBAAVAAoAcgEAcwkAAgAgMRUACgByAQBzCgACACAwHAABAIkQCgACAHIFAG7/////HAABAIARBQABAHIGABwAAQDFEQcAAQBuAAAAAF4QAAA3EAUAAQByBwA=</CompiledScript>
+      <CompiledScript Tag="SCDA">WRALAAEAcgIAAAAAAAAAHAABAFIQCgACAHIDAG7nAwAAHAABAAIQCgACAHIEAG4BAAAAFQAKAHIFAHMCAAIAIDAVAAoAcgUAcwMAAgAgMRUACgByBQBzHQACACAwFQAKAHIBAHMPAAIAIDAVAAoAcgEAcwsAAgAgMRUACgByAQBzDQACACAwFQAKAHIBAHMMAAIAIDAcAAEAsRAFAAEAcgYAFQAKAHIBAHMJAAIAIDEVAAoAcgEAcwoAAgAgMBwAAQCoEQUAAQByBwAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcggAHAABAIARBQABAHIJABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA3EAUAAQByCgA=</CompiledScript>
       <ScriptSource Tag="SCTX">ShowMessage FollowerMessageOneFollower
+CharonREF.removeitem FollowersCharonShotgunScene 999
+CharonREF.additem FollowersCharonShotgun 1
 set Followers.CharonHired to 0
 set Followers.CharonFired to 1
+set Followers.bCharonL38 to 0
+set CharonREF.Waiting to 0
 set CharonREF.IsFollowingDefault to 1
 set CharonREF.IsFollowingLong to 0
 set CharonREF.IsFollowingShort to 0
 CharonREF.SetCombatStyle FollowersCombatStyleRanged
 set CharonREF.CombatStyleRanged to 1
 set CharonREF.CombatStyleMelee to 0
-CharonREF.SetFactionRank TeammateFaction -1
-CharonREF.RemoveFromFaction FollowerFaction
+CharonREF.RemovePerk CompanionSuite
 CharonREF.SetPlayerTeammate 0
-evp
+CharonREF.RemoveFromFaction TeammateFaction
+CharonREF.RemoveFromFaction FollowerFaction
+CharonREF.SetAV Assistance 0
+CharonREF.evp
 StopQuest FollowersHireCharon</ScriptSource>
       <References>
         <Reference Tag="SCRO">
@@ -129,10 +132,19 @@ StopQuest FollowersHireCharon</ScriptSource>
           <Reference ID="0007FE0B">FollowerMessageOneFollower</Reference>
         </Reference>
         <Reference Tag="SCRO">
+          <Reference ID="0603713D">FollowersCharonShotgunScene</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060372B8">FollowersCharonShotgun</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
           <Reference ID="000371D1">Followers</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>

@@ -27,7 +27,7 @@
       <Large Tag="ICON">interface\icons\pipboyimages\weapons\weapons_lever_action_shotgun.dds</Large>
     </Icon>
     <Ammo Tag="NAM0">
-      <Reference ID="0604C5F9">AmmoShotgunShellRobot</Reference>
+      <Reference ID="00176E54">AmmoCompanion</Reference>
     </Ammo>
     <RepairList Tag="REPL">
       <Reference ID="001209D2">RepairNVLeverActionShotgun</Reference>
@@ -66,7 +66,7 @@
       </Unequip>
     </Sound>
     <ShellCasingModel>
-      <FileName Tag="MOD2">weapons\1handpistol\shotgunshell.nif</FileName>
+      <FileName Tag="MOD2">Projectiles\ShotgunShellCasing.NIF</FileName>
       <TextureFileHash Tag="MO2T">5+4SYUWGOfZnbhJhSoY59mNpH3QlqaGP7t8UYb5hgSxuXxRhw2GBLGNpH3QlqaGP898UYb5hgSxzXxRhw2GBLGNpH3QlqaGP</TextureFileHash>
     </ShellCasingModel>
     <ImpactDataset Tag="INAM">
@@ -92,7 +92,7 @@
       <ReloadAnimation>ReloadX</ReloadAnimation>
       <MinSpread>1.89999998</MinSpread>
       <Spread>0</Spread>
-      <Unknown>AACAQA==</Unknown>
+      <Unknown>AACAPw==</Unknown>
       <SightFOV>60</SightFOV>
       <Unknown2>0</Unknown2>
       <Projectile ID="0003BF07">BuckshotProjectile</Projectile>
@@ -108,11 +108,11 @@
       <Flags2>0</Flags2>
       <AttackAnimationMultiplier>1.14999998</AttackAnimationMultiplier>
       <FireRate>5</FireRate>
-      <ActionPointCost>0</ActionPointCost>
+      <ActionPointCost>25</ActionPointCost>
       <Rumble>
-        <LeftMotorStrength>0</LeftMotorStrength>
-        <RightMotorStrength>0</RightMotorStrength>
-        <Duration>0</Duration>
+        <LeftMotorStrength>0.699999988</LeftMotorStrength>
+        <RightMotorStrength>0.699999988</RightMotorStrength>
+        <Duration>0.330000013</Duration>
         <Pattern>Constant</Pattern>
         <Wavelength>0</Wavelength>
       </Rumble>

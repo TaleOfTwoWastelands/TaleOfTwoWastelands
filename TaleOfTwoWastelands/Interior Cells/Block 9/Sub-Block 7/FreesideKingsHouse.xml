@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="0010E03B">FreesideKingsHouse</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FreesideKingsHouse</EditorID>
+    <Name Tag="FULL">King's School of Impersonation</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>47</Red>
+          <Green>55</Green>
+          <Blue>72</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>54</Red>
+          <Green>53</Green>
+          <Blue>37</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>30</Red>
+          <Green>33</Green>
+          <Blue>36</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>64</Near>
+        <Far>6500</Far>
+        <ClipDistance>6600</ClipDistance>
+        <Power>0.600000024</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>130</XY>
+        <Z>295</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00027A87">UtilityDefaultTemplate</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">FogNear, FogFar, FogPower</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="00030626">UnderworldImageSpace</Reference>
+    </ImageSpace>
+    <EncounterZone Tag="XEZN">
+      <Reference ID="00035AAD">UnderworldZone</Reference>
+    </EncounterZone>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="0016B443">INTTopsRooms</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="00090906">DefaultPublic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

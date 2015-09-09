@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="060BD047">INFO - 060BD047</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -61,6 +58,21 @@
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C001E0F">bInDCWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
@@ -75,13 +87,13 @@
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>7</ReferenceCount>
-          <CompiledSize>275</CompiledSize>
+          <ReferenceCount>15</ReferenceCount>
+          <CompiledSize>374</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
-        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDAcAAEAqBEFAAEAcgMADxAJAAIAOQBuAAAAABUACgByBABzCgACACAwFQAKAHIEAHMLAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzBQACACAxFQAKAHIBAHMHAAIAIDAVAAoAcgEAcwYAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwMAAgAgMBUACgByAQBzBAACACAxHAABAMURBwABAG4AAAAAHAABAIARBQABAHIGABUAEwByAgBzEwALACByAgBzEwAgMSAtFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEA+hEAABwAAQBPEgUAAQByBwA=</CompiledScript>
+        <CompiledScript Tag="SCDA">FQAKAHIDAHMvAAIAIDAcAAEAqBEFAAEAcgQADxAJAAIAOQBuAAAAABUACgByBQBzCgACACAwFQAKAHIFAHMLAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzBQACACAxFQAKAHIBAHMHAAIAIDAVAAoAcgEAcwYAAgAgMBwAAQCxEAUAAQByBgAVAAoAcgEAcwMAAgAgMBUACgByAQBzBAACACAxHAABAMURBwABAG4AAAAAHAABAIARBQABAHIHABUAEwByAwBzEwALACByAwBzEwAgMSAtFgAQAAEADAAgcgMAcxMAIDAgPT0VAAoAcgMAcxIAAgAgMBkAAAAcAAEA+hEAABwAAgCoEQUAAQByCABZEAsAAQByCQAAAAAAAAAWAAgAAgAEACBHCgBZEAsAAQByCwAAAAAAAAAcAAEAnhAFAAEAcgwAGAAIAAIABAAgRw0AWRALAAEAcg4AAAAAAAAAHAABAJ4QBQABAHIPABkAAAA=</CompiledScript>
         <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 0;
 StarPaladinCrossREF.removeperk CompanionSuite
 SetAV Assistance 0
@@ -103,10 +115,21 @@ if VNPCFollowers.nCurrentFollowers == 0
      set VNPCFollowers.bPlayerHasFollower to 0
 endif
 StarPaladinCrossREF.ResetAI
-StarPaladinCrossREF.MoveToMarkerWithFade CitadelLabWestMarker</ScriptSource>
+	player.RemovePerk TTWFollowerPerkStarPaladinCross
+	showmessage TTWFollowerMessagePerkStarPaladinCrossRemove
+	if ( bInDCWasteland )
+		ShowMessage FollowerMessageLeaveStarPaladinCross
+		StarPaladinCrossREF.MoveTo CitScribeMarker04
+	elseif ( bInNVWasteland )
+		showmessage TTWFollowerMessageLeaveStarPaladinCrossNV
+		StarPaladinCrossREF.MoveTo TTWHomeMarkerStarPaladinCrossNV
+	endif</ScriptSource>
         <References>
           <Reference Tag="SCRO">
             <Reference ID="06062735">StarPaladinCrossREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
           </Reference>
           <Reference Tag="SCRO">
             <Reference ID="000B16D0">VNPCFollowers</Reference>
@@ -124,7 +147,28 @@ StarPaladinCrossREF.MoveToMarkerWithFade CitadelLabWestMarker</ScriptSource>
             <Reference ID="00037136">FollowerFaction</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="06025FD4">CitadelLabWestMARKER</Reference>
+            <Reference ID="0C01C730">TTWFollowerPerkStarPaladinCross</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FE">TTWFollowerMessagePerkStarPaladinCrossRemove</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060A53F7">FollowerMessageLeaveStarPaladinCross</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06019324">CitScribeMarker04</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F4">TTWFollowerMessageLeaveStarPaladinCrossNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6DE">TTWHomeMarkerStarPaladinCrossNV</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="00118E71">Rex</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Rex</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-29</X>
+        <Y>-62</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>29</X>
+        <Y>62</Y>
+        <Z>70</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Rex</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Dog\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00118E7A">RexDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackEffect Tag="EITM">
+        <Reference ID="00118E7B">RexBiteKnockdownSpell</Reference>
+      </AttackEffect>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>eyessetyellow.nif</Entry>
+      <Entry>rex.NIF</Entry>
+      <Entry>Rex_SkullCap.NIF</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Swims, Walks, PCLevelMult, AllowPCDialogue, TiltFrontBack</Flags>
+      <Fatigue>200</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>8</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0007E26A">CreatureHitDog</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00111484">KingsFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0011EB46">RexFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0003A58B">DeathItemDog100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0014F3EA">RobotUniqueRex</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="0010C766">RexSCRIPT</Reference>
+    </Script>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="001176BC">VFSRexWaitingPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C713">TTWFollowersPackageRexFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001176BB">FollowersRexGoingHomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00174081">FollowersRexL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001176BA">FollowersRexFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001176B9">FollowersRexFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001176BD">FollowersRexFollowPlayerDEFAULT</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Animal</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>22</Health>
+      <Damage>30</Damage>
+      <Strength>6</Strength>
+      <Perception>8</Perception>
+      <Endurance>8</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>2</Intelligence>
+      <Agility>8</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">48</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0017626D">RexBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">90</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">1</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0016572D">AudioTemplateDogRex</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="0007E640">BiteDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="00118F1B">RexWeaponList</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C01C734">TTWFollowerPerkCharon</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerPerkCharon</EditorID>
+    <Name Tag="FULL">The Contract</Name>
+    <Description Tag="DESC">Charon is absolutely loyal to the holder of his contract, putting himself in harm's way to keep them safe. Unfortuantely for him, his contract holder lives a dangerous adventurous life... For each 10% health you are below maximum, you gain 1 DT.</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0C01C739">TTWFollowerCharonAbility</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

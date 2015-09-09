@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0C01C737">TTWFollowerButchPerkQuestScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerButchPerkQuestScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>7</ReferenceCount>
+        <CompiledSize>926</CompiledSize>
+        <VariableCount>4</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAMIBAAAWABIAHQAOACByBABYwREFAAEAcgUAFgAXAAEAEwAgcgEAWMERBQABAHIFACAwID09HAABAHYRBQABAHIFABkAAAAVABUAZgMAEAAgcgQAWEkUBwABAG4FAAAAFQAVAGYEABAAIHIBAFhJFAcAAQBuBQAAABYADwAFAAsAIGYDACBmBAAgJiYWAA8AAQALACBmAwAgZgQAID09FQAHAHMCAAIAIDEXAAIAAQAVAAcAcwIAAgAgMBkAAAAXAAIAAQAVAAcAcwIAAgAgMBkAAAAVABUAZgMAEAAgcgQAWEkUBwABAG4CAAAAFQAVAGYEABAAIHIBAFhJFAcAAQBuAgAAABYADwAJAAsAIGYDACBmBAAgJiYWAB0AAQAZACBmAwAgWgYAID09IGYEACBaBgAgPT0gJiYVAAcAcwEAAgAgMhgAHQABABkAIGYDACBaBgAgPT0gZgQAIFoHACA9PSAmJhUABwBzAQACACAyGAAPAAEACwAgZgMAIGYEACA9PRUABwBzAQACACAxFwACAAEAFQAHAHMBAAIAIDAZAAAAFwACAAEAFQAHAHMBAAIAIDAZAAAAFwACAAAAGQAAABEAAAAQAAgAAQDCAQAAAAAWABIAHQAOACByBABYwREFAAEAcgUAFgAXAAEAEwAgcgEAWMERBQABAHIFACAwID09HAABAHYRBQABAHIFABkAAAAVABUAZgMAEAAgcgQAWEkUBwABAG4FAAAAFQAVAGYEABAAIHIBAFhJFAcAAQBuBQAAABYADwAFAAsAIGYDACBmBAAgJiYWAA8AAQALACBmAwAgZgQAID09FQAHAHMCAAIAIDEXAAIAAQAVAAcAcwIAAgAgMBkAAAAXAAIAAQAVAAcAcwIAAgAgMBkAAAAVABUAZgMAEAAgcgQAWEkUBwABAG4CAAAAFQAVAGYEABAAIHIBAFhJFAcAAQBuAgAAABYADwAJAAsAIGYDACBmBAAgJiYWAB0AAQAZACBmAwAgWgYAID09IGYEACBaBgAgPT0gJiYVAAcAcwEAAgAgMhgAHQABABkAIGYDACBaBgAgPT0gZgQAIFoHACA9PSAmJhUABwBzAQACACAyGAAPAAEACwAgZgMAIGYEACA9PRUABwBzAQACACAxFwACAAEAFQAHAHMBAAIAIDAZAAAAFwACAAEAFQAHAHMBAAIAIDAZAAAAFwACAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="TTWFollowerButchPerkQuestScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bSameArmor</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bSameWeapon</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rTemp1</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">rTemp2</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRV">3</Reference>
+        <Reference Tag="SCRV">4</Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C731">TTWFollowerPerkButch</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0002042E">OutfitTunnelSnake01</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06061D98">FollwerOutfitButch</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

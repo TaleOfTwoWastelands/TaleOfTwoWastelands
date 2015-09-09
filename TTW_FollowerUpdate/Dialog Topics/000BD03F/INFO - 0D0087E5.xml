@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0D0087E5">INFO - 0D0087E5</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="000E6C97">INFO - 000E6C97</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">That's why you're the boss. You always make the right decisions. I'll just head home. Home to my lonely, abandoned shack in the middle of nowhere.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C001E0F">bInDCWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="000E60EF">RaulTejada</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>9</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>12</ReferenceCount>
+        <CompiledSize>317</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">WRALAAEAcgMAAAAAAAAADxAJAAIAOQBuAAAAABUACgByAQBzAwACACAwFQAKAHIEAHMJAAIAIDAVAAoAcgQAcwsAAgAgMRUACgByBABzNwACACAwFQAKAHIEAHMvAAIAIDAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAFQATAHIEAHMTAAsAIHIEAHMTACAxIC0cAAEAqBEFAAEAcgYAFgAQAAIADAAgcgcAcwIAIDEgIT0cAAIAqBEFAAEAcggAWRALAAEAcgkAAAAAAAAAGAAQAAIADAAgcgcAcwIAIDEgPT0cAAIAqBEFAAEAcgoAWRALAAEAcgsAAAAAAAAAGQAAABYAEAABAAwAIHIEAHMTACAwID09FQAKAHIEAHMSAAIAIDAZAAAAVRAFAAEAcgwAHAABAPoRAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">; -------------------------------------------------------------------------\/ (8_15_10) Added to fix missing commands. -ETB
+
+showmessage FollowerMessageLeaveRaul
+SetAV Assistance 0
+
+; -------------------------------------------------------------------------/\
+
+set RaulREF.Waiting to 0
+set VNPCFollowers.RaulHired to 0
+set VNPCFollowers.RaulFired to 1
+set VNPCFollowers.bRaulL38 to 0
+Set VNPCFollowers.bHumanoidInParty to 0
+RaulREF.SetPlayerTeammate 0
+RaulREF.RemoveFromFaction FollowerFaction
+set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers - 1
+RaulREF.removeperk CompanionSuite
+
+if VDialogueRaul.RaulUpgrade != 1
+player.removeperk RegularMaintenance
+showmessage FollowerMessagePerkRaulRemove
+elseif VDialogueRaul.RaulUpgrade == 1
+Player.RemovePerk FullMaintenance
+showmessage FollowerMessagePerkRaulRemoveUpgrade
+endif
+
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+ShowMap RaulsShackMarkerREF
+RaulREF.ResetAI</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6105">RaulREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E6CBF">FollowerMessageLeaveRaul</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000E61A5">VDialogueRaul</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C610">RegularMaintenance</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C622">FollowerMessagePerkRaulRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015D2BC">FullMaintenance</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015D973">FollowerMessagePerkRaulRemoveUpgrade</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015A6A4">RaulsShackMarkerREF</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>84</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FgAIAAIABAAgRwIAWRALAAEAcgMAAAAAAAAAHAABAE8SBQABAHIEABgACAACAAQAIEcFAFkQCwABAHIGAAAAAAAAABwAAQBPEgUAAQByBwAZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">; JSH 11.05.10 - Teleport Raul to his shack.
+	if ( bInNVWasteland )
+		ShowMessage FollowerMessageLeaveRaul;
+		RaulREF.MoveToMarkerWithFade RaulsHouseXMarkerREF
+	elseif ( bInDCWasteland )
+		showmessage TTWFollowerMessageLeaveRaulDC
+		RaulREF.MoveToMarkerWithFade TTWHomeMarkerRaulDC
+	endif</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="000E6105">RaulREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000E6CBF">FollowerMessageLeaveRaul</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015A6A5">RaulsHouseXMarkerREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F0">TTWFollowerMessageLeaveRaulDC</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6DA">TTWHomeMarkerRaulDC</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I think it's for the best.</Prompt>
+  </Subrecords>
+</Record>

@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="060943EE">FollowersHireFawkes</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="00000000">NullReference</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -73,52 +70,70 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>0</ReferenceCount>
-        <CompiledSize>0</CompiledSize>
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>218</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-    </BeginScript>
-    <EndScript>
-      <EndScriptMarker Tag="NEXT" />
-      <EmbeddedScript>
-        <Data Tag="SCHR">
-          <ReferenceCount>5</ReferenceCount>
-          <CompiledSize>168</CompiledSize>
-          <VariableCount>0</VariableCount>
-          <Type>Object</Type>
-          <Flags>Enabled</Flags>
-        </Data>
-        <CompiledScript Tag="SCDA">FQAMAHICAHMBAAQAIDEgfhUACgByAwBzCAACACAwFQAKAHIDAHMJAAIAIDEVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgQAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQDFEQcAAQBuAAAAABwAAQCAEQUAAQByBQA3EAUAAQByAgBeEAAA</CompiledScript>
-        <ScriptSource Tag="SCTX">set FollowersHireFawkes.FawkesWaitRREntrance to -1
+      <CompiledScript Tag="SCDA">FQAKAHICAHMIAAIAIDAVAAoAcgIAcwkAAgAgMRUACgByAgBzHgACACAwFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgMAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQCoEQUAAQByBAAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAHAABAIARBQABAHIGABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
 set Followers.FawkesHired to 0
 set Followers.FawkesFired to 1
+set Followers.bFawkesL38 to 0
+set MQ08FawkesREF.Waiting to 0
 set MQ08FawkesREF.IsFollowingDefault to 1
 set MQ08FawkesREF.IsFollowingLong to 0
 set MQ08FawkesREF.IsFollowingShort to 0
 MQ08FawkesREF.SetCombatStyle FollowersCombatStyleRanged
 set MQ08FawkesREF.CombatStyleRanged to 1
 set MQ08FawkesREF.CombatStyleMelee to 0
+MQ08FawkesREF.RemovePerk CompanionSuite
 MQ08FawkesREF.SetPlayerTeammate 0
 MQ08FawkesREF.RemoveFromFaction FollowerFaction
+MQ08FawkesREF.RemoveFromFaction TeamMateFaction
+MQ08FawkesREF.SetAV Assistance 0
+MQ08FawkesREF.evp
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>25</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAMAHIBAHMBAAQAIDEgfjcQBQABAHIBAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+set FollowersHireFawkes.FawkesWaitRREntrance to -1
 StopQuest FollowersHireFawkes
-evp</ScriptSource>
+</ScriptSource>
         <References>
           <Reference Tag="SCRO">
-            <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
             <Reference ID="060943EE">FollowersHireFawkes</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="000371D1">Followers</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="00037136">FollowerFaction</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

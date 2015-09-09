@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="060BD048">INFO - 060BD048</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -64,62 +61,150 @@
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C001E0F">bInDCWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>0</ReferenceCount>
-        <CompiledSize>0</CompiledSize>
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>218</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
+      <CompiledScript Tag="SCDA">FQAKAHICAHMUAAIAIDAVAAoAcgIAcxUAAgAgMRUACgByAgBzJAACACAwFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgMAFQAKAHIBAHMDAAIAIDAVAAoAcgEAcwQAAgAgMRwAAQCoEQUAAQByBAAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAHAABAIARBQABAHIGABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
+set Followers.DogmeatHired to 0
+set Followers.DogmeatFired to 1
+set Followers.bDogmeatL38 to 0
+set DogmeatREF.Waiting to 0
+set DogmeatREF.IsFollowingDefault to 1
+set DogmeatREF.IsFollowingLong to 0
+set DogmeatREF.IsFollowingShort to 0
+DogmeatREF.SetCombatStyle FollowersCombatStyleMelee
+set DogmeatREF.CombatStyleRanged to 0
+set DogmeatREF.CombatStyleMelee to 1
+DogmeatREF.removeperk CompanionSuite
+DogmeatREF.SetPlayerTeammate 0
+DogmeatREF.RemoveFromFaction FollowerFaction
+DogmeatREF.RemoveFromFaction TeammateFaction
+DogmeatREF.SetAV Assistance 0
+
+DogmeatREF.evp
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+      </References>
     </BeginScript>
     <EndScript>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>6</ReferenceCount>
-          <CompiledSize>210</CompiledSize>
+          <ReferenceCount>14</ReferenceCount>
+          <CompiledSize>291</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
-        <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDAVAAoAcgIAczAAAgAgMBUAEwByAgBzEwALACByAgBzEwAgMSAtHAABAKgRBQABAHIDABwAAQAPEAkAAgA5AG4AAAAAFQAKAHIEAHMUAAIAIDAVAAoAcgQAcxUAAgAgMRUACgByAQBzCAACACAwHAABAMURBwABAG4AAAAAHAABAIARBQABAHIFABwAAQD6EQAAFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEATxIFAAEAcgYA</CompiledScript>
-        <ScriptSource Tag="SCTX">set DogmeatREF.Waiting to 0
+        <CompiledScript Tag="SCDA">HAABAKgRBQABAHIDAFkQCwABAHIEAAAAAAAAABYACAAGAAQAIEcFABYAFwABABMAIHIBAFjBEQUAAQByBgAgMSA9PVkQCwABAHIHAAAAAAAAABcAAgABAFkQCwABAHIIAAAAAAAAABkAAAAcAAIAnhAFAAEAcgkAGAAIAAYABAAgRwoAFgAXAAEAEwAgcgEAWMERBQABAHIGACAxID09WRALAAEAcgsAAAAAAAAAFwACAAEAWRALAAEAcgwAAAAAAAAAGQAAABwAAgCeEAUAAQByDQAZAAAAFQAKAHIOAHMwAAIAIDAVABMAcg4AcxMACwAgcg4AcxMAIDEgLRYAEAABAAwAIHIOAHMTACAwID09FQAKAHIOAHMSAAIAIDAZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.RemovePerk TTWFollowerPerkDogmeat
+showmessage TTWFollowerMessagePerkDogmeatRemove
+
+if ( bInDCWasteland )
+	if Player.HasPerk DLC03Puppies == 1
+		ShowMessage DLC03FollowerMessageLeavePuppy
+	else
+		ShowMessage FollowerMessageLeaveDogmeat
+	endIf
+	DogmeatREF.MoveTo EvacuationMarker
+elseif ( bInNVWasteland )
+	if Player.HasPerk DLC03Puppies == 1
+		ShowMessage TTWDLC03FollowerMessageLeavePuppyNV
+	else
+		ShowMessage TTWFollowerMessageLeaveDogmeatNV
+	endIf
+	DogmeatREF.MoveTo TTWHomeMarkerDogmeatNV
+endif
+
 set VNPCFollowers.bCritterInParty to 0
 set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
-DogmeatREF.removeperk CompanionSuite
-DogmeatREF.SetAV Assistance 0
-
-set Followers.DogmeatHired to 0
-set Followers.DogmeatFired to 1
-set DogmeatREF.Waiting to 0
-DogmeatREF.SetPlayerTeammate 0
-DogmeatREF.RemoveFromFaction FollowerFaction
-
-DogmeatREF.ResetAI
 if VNPCFollowers.nCurrentFollowers == 0
      set VNPCFollowers.bPlayerHasFollower to 0
 endif
-DogmeatREF.MoveToMarkerWithFade EvacuationMarker</ScriptSource>
+</ScriptSource>
         <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
           <Reference Tag="SCRO">
             <Reference ID="0606A775">DogmeatREF</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000B16D0">VNPCFollowers</Reference>
+            <Reference ID="0C01C72D">TTWFollowerPerkDogmeat</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="0015C571">CompanionSuite</Reference>
+            <Reference ID="0C01C6F8">TTWFollowerMessagePerkDogmeatRemove</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000371D1">Followers</Reference>
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="00037136">FollowerFaction</Reference>
+            <Reference ID="09003211">DLC03Puppies</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0900999B">DLC03FollowerMessageLeavePuppy</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060A5402">FollowerMessageLeaveDogmeat</Reference>
           </Reference>
           <Reference Tag="SCRO">
             <Reference ID="060309D6">EvacuationMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C709">TTWDLC03FollowerMessageLeavePuppyNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6E8">TTWFollowerMessageLeaveDogmeatNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6DC">TTWHomeMarkerDogmeatNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

@@ -1,0 +1,90 @@
+scn TTWFollowerButchPerkQuestScript
+
+short bSameArmor
+short bSameWeapon
+ref rTemp1
+ref rTemp2
+
+BEGIN GAMEMODE
+	if player.HasPerk TTWFollowerPerkButch
+		if ButchRef.HasPerk TTWFollowerPerkButch == 0
+			ButchRef.AddPerk TTWFollowerPerkButch
+		endif
+		set rTemp1 to player.GetEquippedObject 5 
+		set rTemp2 to ButchRef.GetEquippedObject 5
+		if rTemp1 && rTemp2
+			;dbprintc "player and butch weapons valid"
+			if rTemp1 == rTemp2
+				;dbprintc "player and butch weapons same"
+				set bSameWeapon to 1
+			else 
+				set bSameWeapon to 0
+			endif
+		else
+			set bSameWeapon to 0
+		endif
+
+		set rTemp1 to player.GetEquippedObject 2 
+		set rTemp2 to ButchRef.GetEquippedObject 2
+		if rTemp1 && rTemp2
+			;dbprintc "player and butch armors valid"
+			if rTemp1 == OutfitTunnelSnake01 && rTemp2 == OutfitTunnelSnake01
+				set bSameArmor to 2
+			elseif rTemp1 == OutfitTunnelSnake01 && rTemp2 == FollwerOutfitButch
+				set bSameArmor to 2
+			elseif rTemp1 == rTemp2
+				;dbprintc "player and butch armors same"
+				set bSameArmor to 1
+			else
+				set bSameArmor to 0
+			endif
+		else
+			set bSameArmor to 0
+		endif
+	else
+		;StopQuest TTWFollowerButchPerkQuest
+		;dbprintc "player doesn't have butch perk"
+	endif
+END
+
+BEGIN MENUMODE
+	if player.HasPerk TTWFollowerPerkButch
+		if ButchRef.HasPerk TTWFollowerPerkButch == 0
+			ButchRef.AddPerk TTWFollowerPerkButch
+		endif
+		set rTemp1 to player.GetEquippedObject 5 
+		set rTemp2 to ButchRef.GetEquippedObject 5
+		if rTemp1 && rTemp2
+			;dbprintc "player and butch weapons valid"
+			if rTemp1 == rTemp2
+				;dbprintc "player and butch weapons same"
+				set bSameWeapon to 1
+			else 
+				set bSameWeapon to 0
+			endif
+		else
+			set bSameWeapon to 0
+		endif
+
+		set rTemp1 to player.GetEquippedObject 2 
+		set rTemp2 to ButchRef.GetEquippedObject 2
+		if rTemp1 && rTemp2
+			;dbprintc "player and butch armors valid"
+			if rTemp1 == OutfitTunnelSnake01 && rTemp2 == OutfitTunnelSnake01
+				set bSameArmor to 2
+			elseif rTemp1 == OutfitTunnelSnake01 && rTemp2 == FollwerOutfitButch
+				set bSameArmor to 2
+			elseif rTemp1 == rTemp2
+				;dbprintc "player and butch armors same"
+				set bSameArmor to 1
+			else
+				set bSameArmor to 0
+			endif
+		else
+			set bSameArmor to 0
+		endif
+	else
+		;StopQuest TTWFollowerButchPerkQuest
+		;dbprintc "player doesn't have butch perk"
+	endif
+END

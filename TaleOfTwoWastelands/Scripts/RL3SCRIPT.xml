@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0609426F">RL3SCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RL3SCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>11</ReferenceCount>
+        <CompiledSize>685</CompiledSize>
+        <VariableCount>13</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAIACoAAAABAHIDABYAEAABAAwAIHIBAHMBACAwID09FQAKAHIBAHMBAAIAIDEZAAAAEQAAABAACwAZACoAAAABAHIDABYAEAABAAwAIHIBAHMBACAwID09FQAKAHIBAHMBAAIAIDEZAAAAEQAAABAABgAAAC8BAAAWABAAAwAMACByAQBzAQAgMCA9PRYAFAABABAAIFgDEgUAAQByAwAgMSA9PRUACgByAQBzAQACACAxGQAAABgAEAADAAwAIHIBAHMBACAxID09FQAKAHIBAHMBAAIAIDIcAAEAEBAJAAIAEgBuq////wMQCgACAHIEAG4AAAAAGQAAABYAFQAGABEAIFg6EAUAAQByBQAgNjAgPj0WAA0ABAAJACBzCwAgMCA9PRYAFgACABIAIFgBEAUAAQByBgAgMTUwIDw9FQAHAHMLAAIAIDEcAAIAXhAAABkAAAAZAAAAGQAAABYADQAEAAkAIHMMACAxID09FgAPAAIACwAgWHAQAAAgMCA9PRUABwBzDAACACAyFQAKAHIHAHMBAAIAIDIZAAAAGQAAABEAAAAQAAYADACFAAAAFgAPAAcACwAgWMYRAAAgMSA9PVARAACCEQ0AAgAZAHoAAAAAAABZQIIRDQACABoAegAAAAAAAFlAghENAAIAGwB6AAAAAAAAWUCCEQ0AAgAdAHoAAAAAAABZQIIRDQACABwAegAAAAAAAFlAghENAAIAHgB6AAAAAAAAWUAZAAAAEQAAABAACAAKAGMAAAAAABYAEAAFAAwAIHIIAHMWACAxID09FQAKAHIIAHMYAAIAIDAVAAoAcggAcxYAAgAgMFkQCwABAHIJAAAAAAAAABwAAwCoEQUAAQByCgBZEAsAAQByCwAAAAAAAAAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="RL3SCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WeaponOut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleRanged</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleMelee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingDefault</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingShort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingLong</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC03RL3AirlockGo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DLC03MQ11RL3PanelAnimate</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerSwitchAggressive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06036F8D">FFER54NPC1REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009426E">RL3Follower</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E91">MQ11</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060B16D9">MQ11AirlockWaitMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A6ADE">PPurityKeypadEnterRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007252F">FollowerMessageDeadRL3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72E">TTWFollowerPerkRL3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6FA">TTWFollowerMessagePerkRL3Remove</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

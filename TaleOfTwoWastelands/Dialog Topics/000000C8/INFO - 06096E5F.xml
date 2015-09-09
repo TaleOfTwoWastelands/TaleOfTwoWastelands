@@ -91,62 +91,53 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>8</ReferenceCount>
-        <CompiledSize>323</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>236</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMIAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArHAABAJgQAAAVAAoAcgQAcxIAAgAgMRUACgByBABzEwACACAwFQAKAHIBAHMBAAIAIDEVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgUAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQDFEQcAAQBuAQAAABwAAQB/EQoAAgByBgBuAQAAABwAAQCJEAoAAgByBgBuAQAAABwAAQB/EQoAAgByBwBuAQAAADcQBQABAHIIAPoRAAA=</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-CloverREF.AddPerk CompanionSuite
-Set CloverREF.Waiting to 0
-CloverREF.IgnoreCrime 1
-CloverREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
-
+      <CompiledScript Tag="SCDA">HAABAJgQAAAcAAEAqxAHAAEAbgEAAAAcAAEAxREHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAcAAEAdhEFAAEAcgIAHAABAH8RCgACAHIDAG4BAAAAHAABAH8RCgACAHIEAG4BAAAAFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAVAAoAcgEAcwMAAgAgMRUACgByAQBzBAACACAwFQAKAHIBAHMBAAIAIDEVAAoAcgUAcxIAAgAgMRUACgByBQBzEwACACAwHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
 CloverREF.RemoveScriptPackage FollowersCloverGreetPlayer
-set Followers.CloverHired to 1
-set Followers.CloverFired to 0
-set CloverREF.HasBeenHired to 1
+
+CloverREF.IgnoreCrime 1
+CloverREF.SetPlayerTeammate 1
+CloverREF.SetIgnoreFriendlyHits 1
+CloverREF.AddPerk CompanionSuite
+CloverREF.AddToFaction FollowerFaction 1
+CloverREF.AddToFaction TeammateFaction 1
+
+Set CloverREF.Waiting to 0
 set CloverREF.IsFollowingDefault to 1
 set CloverREF.IsFollowingLong to 0
 set CloverREF.IsFollowingShort to 0
-CloverREF.SetCombatStyle FollowersCombatStyleRanged
 set CloverREF.CombatStyleRanged to 1
 set CloverREF.CombatStyleMelee to 0
-CloverREF.SetPlayerTeammate 1
-CloverREF.AddToFaction TeammateFaction 1
-CloverREF.SetFactionRank TeammateFaction 1
-CloverREF.AddToFaction FollowerFaction 1
-StopQuest FollowersHireClover
 
-ResetAI</ScriptSource>
+set CloverREF.HasBeenHired to 1
+set Followers.CloverHired to 1
+set Followers.CloverFired to 0
+
+CloverREF.evp
+
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="060384D8">CloverREF</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="060943EC">FollowersHireClover</Reference>
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -154,12 +145,39 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>88</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKzcQBQABAHIFAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkClover
+showmessage TTWFollowerMessagePerkCloverAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+StopQuest FollowersHireClover</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C732">TTWFollowerPerkClover</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FF">TTWFollowerMessagePerkCloverAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060943EC">FollowersHireClover</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
   </Subrecords>

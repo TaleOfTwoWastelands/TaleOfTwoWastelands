@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="0C01C738">TTWFollowerCloverAbility</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerCloverAbility</EditorID>
+    <Name Tag="FULL">Get Lucky</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00015162">IncreaseLuck</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Luck</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>HasPerk</Type>
+              <Perk ID="00061822">WellRestedPerk</Perk>
+              <Rank>0</Rank>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

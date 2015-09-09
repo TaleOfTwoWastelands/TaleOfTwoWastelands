@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="09006269">INFO - 07006269</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -101,6 +98,21 @@
           <UnusedArg2>AAAAAA==</UnusedArg2>
         </Function>
         <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C01C6D4">TTWIgnoreKarmaFollowers</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
     </Conditions>

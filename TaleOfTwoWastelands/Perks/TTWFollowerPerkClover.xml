@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C01C732">TTWFollowerPerkClover</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerPerkClover</EditorID>
+    <Name Tag="FULL">Get Lucky</Name>
+    <Description Tag="DESC">Eulogy was right about her. When you have had a hard day on the road and are ready to call it a night she will make sure you wake up with a grin. With Clover in your party, the Well Rested bonus will grant you get an additional 15% experience boost and +1 Luck.</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0C01C738">TTWFollowerCloverAbility</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>AdjustExperiencePoints</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>1</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>HasPerk</Type>
+                  <Perk ID="00061822">WellRestedPerk</Perk>
+                  <Rank>0</Rank>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">1.14999998</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

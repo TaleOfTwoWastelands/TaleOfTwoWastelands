@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>0</Flags>
+  <FormID ID="060943E8">INFO - 060943E8</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000943EB">FollowersHireRL3</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>5</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">To tell the truth, it is a little trouble. But he can't help the way he got built.</ResponseText>
+        <ScriptNotes Tag="NAM2">A lot of the Mister Gutsy models had... issues</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">General Atomics programmed the Mister Gutsy to be a good soldier, but their definitions were a bit vague. So a lot of units had... issues.  </ResponseText>
+        <ScriptNotes Tag="NAM2">General Atomics programmed him to be a good soldier, but some of their definitions were a little vague. </ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>3</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">So we got a gung-ho, robotic soldier that's picky about the company he keeps. But he seems to like you, so it'll be fine.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06036F86">FFER54NPC1</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="000943E3">FollowerRK5Purchase3A</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000943E2">FollowerRK5Purchase3B</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">"Simulated personality"? Sounds like trouble.</Prompt>
+  </Subrecords>
+</Record>

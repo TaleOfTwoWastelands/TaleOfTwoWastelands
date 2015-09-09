@@ -1,0 +1,95 @@
+SCN CharonSCRIPT
+
+short 	CharonKillAhzrukhalSceneStart
+short	CharonKillAhzrukhalSceneKill
+short	CharonKillAhzrukhalSceneTalkToPlayer
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+short	DoOnce
+
+short DLC03MQ11CharonAirlockGo
+short DLC03MQ11CharonPanelAnimate
+
+float	Timer
+
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+BEGIN OnDeath
+
+	set DialogueUnderworld.CharonDead to 1
+
+END
+
+BEGIN OnActivate
+
+	if ( CharonKillAhzrukhalSceneStart != 1 ) && ( CharonKillAhzrukhalSceneKill != 1 )
+		activate
+	endif
+
+END
+
+BEGIN Gamemode
+
+;DLC03 MQ11 Scripting
+
+	if ( GetStage MQ11 >= 60 )
+		if ( DLC03MQ11CharonAirlockGo == 0 )
+			if ( GetDistance MQ11AirlockWaitMarker <= 150 )
+				Set DLC03MQ11CharonAirlockGo to 1
+				CharonREF.EVP
+			endif
+		endif
+	endif
+
+	if ( DLC03MQ11CharonPanelAnimate == 1 )
+		if ( IsIdlePlaying == 0 )
+			Set DLC03MQ11CharonPanelAnimate to 2
+			set PPurityKeyPadEnterRef.PanelActivated to 2
+		endif
+	endif
+
+
+	if DoOnce
+	else
+		if (AhzrukhalRef.GetDead == 1 && CharonREF.getitemcount FollowersCharonShotgunScene >= 1)
+			CharonREF.removeitem FollowersCharonShotgunScene 999
+			CharonREF.additem FollowersCharonShotgun 1
+		endif
+	endif
+END
+
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END
+
+BEGIN OnDeath
+
+		set CharonKillAhzrukhalSceneKill to 0
+		set CharonKillAhzrukhalSceneStart  to 0
+
+		if ( Followers.CharonHired == 1  )
+			set Followers.PlayerHasFollower to 0
+			set Followers.CharonHired to 0
+			ShowMessage FollowerMessageDeadCharon
+			player.RemovePerk TTWFollowerPerkCharon
+			showmessage TTWFollowerMessagePerkCharonRemove
+		endif
+
+END

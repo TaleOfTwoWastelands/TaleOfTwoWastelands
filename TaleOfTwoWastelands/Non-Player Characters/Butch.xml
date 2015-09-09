@@ -26,9 +26,9 @@
       <Flags>AutoCalcStats, PCLevelMult</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>1</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>100</SpeedMultiplier>
       <Karma>500</Karma>
       <DispositionBase>20</DispositionBase>
@@ -87,6 +87,12 @@
       </Item>
       <Item>
         <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>12</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
           <Item ID="06061D98">FollwerOutfitButch</Item>
           <Count>1</Count>
         </Data>
@@ -126,6 +132,12 @@
       <AggroRadius>0</AggroRadius>
     </AIData>
     <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0C01C71E">TTWFollowersPackageButchL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C70E">TTWFollowersPackageButchFiredNV</Reference>
+      </Package>
       <Package Tag="PKID">
         <Reference ID="00094269">FollowersButchFiredWaitRCBar</Reference>
       </Package>

@@ -1,0 +1,58 @@
+scn JerichoSCRIPT
+
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+short	DoOnce
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+BEGIN GameMode
+
+	;***DEMO***
+	;When player gets close, send Jericho to talk to Jenny
+	if ( DoOnce == 0 )
+		if ( GetDistance Player <= 1400 )
+			set DoOnce to 1
+			evp
+		endif
+	endif
+END
+
+
+BEGIN OnDeath
+
+	set DialogueMegaton.JerichoDead to 1
+
+END
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END
+
+BEGIN OnDeath
+
+		if ( Followers.JerichoHired == 1  )
+			set Followers.PlayerHasFollower to 0
+			set Followers.JerichoHired to 0
+			ShowMessage FollowerMessageDeadJericho
+			player.RemovePerk TTWFollowerPerkJericho
+			showmessage TTWFollowerMessagePerkJerichoRemove
+		endif
+
+
+END

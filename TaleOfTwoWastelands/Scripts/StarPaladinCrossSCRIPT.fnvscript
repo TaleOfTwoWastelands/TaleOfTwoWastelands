@@ -1,0 +1,39 @@
+scn StarPaladinCrossSCRIPT
+
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+short	DoOnce
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END
+
+BEGIN OnDeath
+
+		if ( Followers.StarPaladinCrossHired == 1  )
+			set Followers.PlayerHasFollower to 0
+			set Followers.StarPaladinCrossHired to 0
+			ShowMessage FollowerMessageDeadStarPaladinCross
+			player.RemovePerk TTWFollowerPerkStarPaladinCross
+			showmessage TTWFollowerMessagePerkStarPaladinCrossRemove
+		endif
+
+
+END

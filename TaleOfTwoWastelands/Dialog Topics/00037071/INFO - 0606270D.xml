@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0606270D">INFO - 0606270D</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I shall reflect on the battles past and the battles to come until your return.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000371D1">Followers</Quest>
+          <VariableIndex>10</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="060156E5">StarPaladinCross</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>4</ReferenceCount>
+        <CompiledSize>44</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDEVABIAcgIAZhkACgAgRwMAIEcEACArHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">set StarPaladinCrossREF.Waiting to 1
+set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+StarPaladinCrossREF.evp</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53F5">FollowerWaitTime</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

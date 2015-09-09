@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="0609426D">FollowersHireButch</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="06096B9E">INFO - 06096B9E</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -87,13 +84,19 @@
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>15</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
-        <ScriptSource Tag="SCTX">;ShowMessage FollowerMessageOneFollower</ScriptSource>
+        <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">ShowMessage FollowerMessageOneFollower</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0007FE0B">FollowerMessageOneFollower</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">Come along with me, and we'll make an awesome gang.</Prompt>

@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="0609426D">FollowersHireButch</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="06096B9F">INFO - 06096B9F</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -61,63 +58,59 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>9</ReferenceCount>
-        <CompiledSize>301</CompiledSize>
+        <ReferenceCount>7</ReferenceCount>
+        <CompiledSize>264</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMLAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArHAABAAIQCgACAHIEAG4BAAAAHAABAAIQCgACAHIFAG5kAAAAFQAKAHIGAHMOAAIAIDEVAAoAcgEAcwQAAgAgMRUACgByAQBzCAACACAxFQAKAHIBAHMKAAIAIDAVAAoAcgEAcwkAAgAgMBwAAQCxEAUAAQByBwAVAAoAcgEAcwYAAgAgMRUACgByAQBzBwACACAwHAABAMURBwABAG4BAAAAHAABAH8RCgACAHIIAG4BAAAANxAFAAEAcgkA+hEAAA==</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-ButchREF.AddPerk CompanionSuite
-Set ButchREF.Waiting to 0
-ButchREF.IgnoreCrime 1
-ButchREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
-
+      <CompiledScript Tag="SCDA">HAABAAIQCgACAHICAG4BAAAAHAABAAIQCgACAHIDAG4BAAAAHAABAKsQBwABAG4BAAAAHAABAMURBwABAG4BAAAAHAABAFERBwABAG4BAAAAHAABAHYRBQABAHIEABwAAQB/EQoAAgByBQBuAQAAABwAAQB/EQoAAgByBgBuAQAAABUACgByAQBzCwACACAwFQAKAHIBAHMIAAIAIDEVAAoAcgEAcwoAAgAgMBUACgByAQBzCQACACAwFQAKAHIBAHMGAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBAACACAxFQAKAHIHAHMOAAIAIDEVAAoAcgcAcw8AAgAgMBwAAQBeEAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">
 ButchREF.Additem FollowersButch10mmPistol 1
-ButchREF.Additem Ammo10mm 100
-set Followers.ButchHired to 1
-set ButchREF.HasBeenHired to 1
+ButchREF.Additem AmmoCompanion 12
+
+ButchREF.IgnoreCrime 1
+ButchREF.SetPlayerTeammate 1
+ButchREF.SetIgnoreFriendlyHits 1
+ButchREF.AddPerk CompanionSuite
+ButchREF.AddToFaction FollowerFaction 1
+ButchREF.AddToFaction TeammateFaction 1
+
+set ButchREF.Waiting to 0
 set ButchREF.IsFollowingDefault to 1
 set ButchREF.IsFollowingLong to 0
 set ButchREF.IsFollowingShort to 0
-ButchREF.SetCombatStyle FollowersCombatStyleRanged
 set ButchREF.CombatStyleRanged to 1
 set ButchREF.CombatStyleMelee to 0
-ButchREF.SetPlayerTeammate 1
-ButchREF.AddToFaction TeammateFaction 1
-StopQuest FollowersHireButch
 
-ResetAI</ScriptSource>
+set ButchREF.HasBeenHired to 1
+set Followers.ButchHired to 1
+set Followers.ButchFired to 0
+
+ButchREF.evp
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="0602A4E8">ButchRef</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
+          <Reference ID="0601A334">FollowersButch10mmPistol</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00176E54">AmmoCompanion</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="0601A334">FollowersButch10mmPistol</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="00004241">Ammo10mm</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="0609426D">FollowersHireButch</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -125,12 +118,40 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>88</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKzcQBQABAHIFAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.addperk TTWFollowerPerkButch
+showmessage TTWFollowerMessagePerkButchAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+StopQuest FollowersHireButch
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C731">TTWFollowerPerkButch</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FB">TTWFollowerMessagePerkButchAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0609426D">FollowersHireButch</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">Come along with me, and we'll make an awesome gang.</Prompt>

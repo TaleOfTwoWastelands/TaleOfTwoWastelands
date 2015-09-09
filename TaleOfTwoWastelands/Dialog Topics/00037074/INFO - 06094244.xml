@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06094244">INFO - 06094244</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Anger</Emotion>
+          <EmotionValue>20</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I get any farther, I might as well be back in the bar. And that's sounding like a better idea all the time, trust me.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="0602A4E8">ButchRef</Quest>
+          <VariableIndex>10</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06027F65">Butch</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="00037076">FollowersTacticsDistanceEND</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00037075">FollowersTacticsDistanceGOODBYE</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>1</ReferenceCount>
+        <CompiledSize>50</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHMKAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzCQACACAwHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">set ButchREF.IsFollowingLong to 1
+set ButchREF.IsFollowingDefault to 0
+set ButchREF.IsFollowingShort to 0
+ButchREF.evp</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Keep hanging back.</Prompt>
+  </Subrecords>
+</Record>

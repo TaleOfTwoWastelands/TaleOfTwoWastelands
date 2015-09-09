@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="060371D2">FollowersHireCharon</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="00000000">NullReference</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -66,10 +63,10 @@
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
-        <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDEcAAEAAhAKAAIAcgMAbgEAAAAcAAEAAhAKAAIAcgQAbgwAAAAcAAEA7hAKAAIAcgMAbgEAAAAcAAEAXhAAABwAAgBeEAAA</CompiledScript>
+        <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDEcAAEAAhAKAAIAcgMAbgEAAAAcAAEAAhAKAAIAcgQAbgEAAAAcAAEA7hAKAAIAcgMAbgEAAAAcAAEAXhAAABwAAgBeEAAA</CompiledScript>
         <ScriptSource Tag="SCTX">set CharonREF.CharonKillAhzrukhalSceneStart to 1
 CharonREF.Additem FollowersCharonShotgunScene 1
-CharonREF.Additem ammo20ga 12
+CharonREF.Additem AmmoCompanion 1
 CharonREF.EquipItem FollowersCharonShotgunScene 1
 CharonREF.evp
 AhzrukhalREF.evp</ScriptSource>
@@ -84,7 +81,7 @@ AhzrukhalREF.evp</ScriptSource>
             <Reference ID="0603713D">FollowersCharonShotgunScene</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000E86F2">Ammo20Ga</Reference>
+            <Reference ID="00176E54">AmmoCompanion</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

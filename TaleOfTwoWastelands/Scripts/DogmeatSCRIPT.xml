@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="000931F6">DogmeatSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">DogmeatSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>431</CompiledSize>
+        <VariableCount>14</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACwAZAEoAAAABAHICABUACgByAwBzFAACACAwFQAKAHIDAHMVAAIAIDEVAAoAcgEAcwgAAgAgMBwAAQDFEQcAAQBuAAAAABwAAQCAEQUAAQByBAARAAAAEAAGAAwAhQAAABYADwAHAAsAIFjGEQAAIDEgPT1QEQAAghENAAIAGQB6AAAAAAAAWUCCEQ0AAgAaAHoAAAAAAABZQIIRDQACABsAegAAAAAAAFlAghENAAIAHQB6AAAAAAAAWUCCEQ0AAgAcAHoAAAAAAABZQIIRDQACAB4AegAAAAAAAFlAGQAAABEAAAAQAAgACgC3AAAAAAAWAB8ABwAbACByAwBzFAAgMSA9PSByAwBzFQAgMSA9PSB8fBUACgByAwBzGAACACAwFQAKAHIDAHMUAAIAIDAWABAAAQAMACByBQBzDAAgMSA9PVkQCwABAHIGAAAAAAAAABcAAgABAFkQCwABAHIHAAAAAAAAABkAAAAZAAAAFgAQAAIADAAgcgMAcxQAIDEgPT0cAAIAqBEFAAEAcggAWRALAAEAcgkAAAAAAAAAGQAAABEAAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX" External="DogmeatSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WeaponOut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleRanged</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleMelee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingDefault</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingShort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingLong</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Find</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FindAmmo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FindChems</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FindWeapons</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FindFood</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerSwitchAggressive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09000801">DLC03CreatorQuest</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0900999A">DLC03FollowerMessageDeadPuppy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000A53FB">FollowerMessageDeadDogmeat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72D">TTWFollowerPerkDogmeat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6F8">TTWFollowerMessagePerkDogmeatRemove</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

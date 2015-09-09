@@ -39,51 +39,6 @@
           <Flags>0</Flags>
           <Operator>EqualTo</Operator>
           <Unused>AAAA</Unused>
-          <ComparisonValue>0</ComparisonValue>
-        </Comparison>
-        <Function>
-          <Type>GetQuestVariable</Type>
-          <Quest ID="000371D1">Followers</Quest>
-          <VariableIndex>22</VariableIndex>
-        </Function>
-        <RunOn>Subject</RunOn>
-        <RunOnReference ID="00000000">NullReference</RunOnReference>
-      </Condition>
-      <Condition Tag="CTDA">
-        <Comparison>
-          <Flags>0</Flags>
-          <Operator>EqualTo</Operator>
-          <Unused>AAAA</Unused>
-          <ComparisonValue>0</ComparisonValue>
-        </Comparison>
-        <Function>
-          <Type>GetQuestVariable</Type>
-          <Quest ID="000B16D0">VNPCFollowers</Quest>
-          <VariableIndex>30</VariableIndex>
-        </Function>
-        <RunOn>Subject</RunOn>
-        <RunOnReference ID="00000000">NullReference</RunOnReference>
-      </Condition>
-      <Condition Tag="CTDA">
-        <Comparison>
-          <Flags>0</Flags>
-          <Operator>EqualTo</Operator>
-          <Unused>AAAA</Unused>
-          <ComparisonValue>0</ComparisonValue>
-        </Comparison>
-        <Function>
-          <Type>GetQuestVariable</Type>
-          <Quest ID="000B16D0">VNPCFollowers</Quest>
-          <VariableIndex>15</VariableIndex>
-        </Function>
-        <RunOn>Subject</RunOn>
-        <RunOnReference ID="00000000">NullReference</RunOnReference>
-      </Condition>
-      <Condition Tag="CTDA">
-        <Comparison>
-          <Flags>0</Flags>
-          <Operator>EqualTo</Operator>
-          <Unused>AAAA</Unused>
           <ComparisonValue>1</ComparisonValue>
         </Comparison>
         <Function>
@@ -94,61 +49,74 @@
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>0</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>48</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>8</ReferenceCount>
-        <CompiledSize>283</CompiledSize>
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>242</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDAcAAEAUREHAAEAbgEAAAAcAAEAqxAHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAKAHICAHMwAAIAIDEcAAEAdhEFAAEAcgMAAxAKAAIAcgQAbgAAAAA3EAUAAQByBQAVAAoAcgYAcxQAAgAgMRUACgByAQBzAQACACAxFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwHAABALEQBQABAHIHABUACgByAQBzAwACACAwFQAKAHIBAHMEAAIAIDEcAAEAxREHAAEAbgEAAAAcAAEAfxEKAAIAcggAbgEAAAAcAAEAXhAAAA==</CompiledScript>
-      <ScriptSource Tag="SCTX">Set DogmeatREF.Waiting to 0
-DogmeatREF.SetIgnoreFriendlyHits 1
-DogmeatREF.IgnoreCrime 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers + 1
-set VNPCFollowers.bCritterInParty to 1
-DogmeatREF.addperk CompanionSuite
-
+      <CompiledScript Tag="SCDA">AxAKAAIAcgIAbgAAAAAcAAEAqxAHAAEAbgEAAAAcAAEAxREHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAcAAEAdhEFAAEAcgMAHAABAH8RCgACAHIEAG4BAAAAHAABAH8RCgACAHIFAG4BAAAAFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAVAAoAcgEAcwMAAgAgMBUACgByAQBzBAACACAxFQAKAHIBAHMBAAIAIDEVAAoAcgYAcxQAAgAgMRUACgByBgBzFQACACAwHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
 setEssential FFEU255Dogmeat 0
-StopQuest FollowersHireDogmeat
-set Followers.DogmeatHired to 1
-set DogmeatREF.HasBeenHired to 1
+
+DogmeatREF.IgnoreCrime 1
+DogmeatREF.SetPlayerTeammate 1
+DogmeatREF.SetIgnoreFriendlyHits 1
+DogmeatREF.addperk CompanionSuite
+DogmeatREF.AddToFaction FollowerFaction 1
+DogmeatREF.AddToFaction TeammateFaction 1
+
+Set DogmeatREF.Waiting to 0
 set DogmeatREF.IsFollowingDefault to 1
 set DogmeatREF.IsFollowingLong to 0
 set DogmeatREF.IsFollowingShort to 0
-DogmeatREF.SetCombatStyle FollowersCombatStyleMelee
 set DogmeatREF.CombatStyleRanged to 0
 set DogmeatREF.CombatStyleMelee to 1
-DogmeatREF.SetPlayerTeammate 1
-DogmeatREF.AddToFaction TeammateFaction 1
-DogmeatREF.evp</ScriptSource>
+
+set DogmeatREF.HasBeenHired to 1
+set Followers.DogmeatHired to 1
+set Followers.DogmeatFired to 0
+
+DogmeatREF.evp
+
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="0606A775">DogmeatREF</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
+          <Reference ID="0606A772">FFEU255Dogmeat</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="0606A772">FFEU255Dogmeat</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="060943ED">FollowersHireDogmeat</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -156,12 +124,40 @@ DogmeatREF.evp</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>88</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzEgACACAxFQATAHIEAHMTAAsAIHIEAHMTACAxICsVAAoAcgQAczAAAgAgMTcQBQABAHIFAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkDogmeat
+showmessage TTWFollowerMessagePerkDogmeatAdd
+
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers + 1
+set VNPCFollowers.bCritterInParty to 1
+
+StopQuest FollowersHireDogmeat
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C72D">TTWFollowerPerkDogmeat</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F7">TTWFollowerMessagePerkDogmeatAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060943ED">FollowersHireDogmeat</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
   </Subrecords>

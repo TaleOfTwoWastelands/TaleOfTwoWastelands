@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0607FC11">INFO - 0607FC11</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="0602FA33">FollowersHireJericho</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">No offense. You seem okay, kid. But your friend there, well... I'm used to working in smaller groups.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Come back when you're alone and maybe we can work something out.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>Lessthan</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>47</VariableIndex>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>2</ReferenceCount>
+          <CompiledSize>29</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FQAKAHIBAHMHAAIAIDFZEAsAAQByAgAAAAAAAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">set FollowersHireJericho.JerichoMadeOffer to 1
+ShowMessage FollowerMessageOneFollower</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0602FA33">FollowersHireJericho</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0007FE0B">FollowerMessageOneFollower</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

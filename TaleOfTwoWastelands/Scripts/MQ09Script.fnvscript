@@ -123,319 +123,116 @@ Begin GameMode
 ;In MQ09, move the Followes back home and Set their Fatigue back
 
 	if ( MoveFollower == 1 )
-
+	;TTW: Fire all followers
+	call TTWFNFireAllFollowers
+	
 	if ( MQ08Trigger.ButchCheck == 2 )
 		ButchRef.RestoreAV Fatigue 10000
-		set Followers.ButchHired to 0
-		set Followers.ButchFired to 1
-		set ButchREF.IsFollowingDefault to 1
-		set ButchREF.IsFollowingLong to 0
-		set ButchREF.IsFollowingShort to 0
-		ButchREF.SetCombatStyle FollowersCombatStyleRanged
-		set ButchREF.CombatStyleRanged to 1
-		set ButchREF.CombatStyleMelee to 0
-		ButchREF.SetPlayerTeammate 0
-		ButchREF.RemoveFromFaction FollowerFaction
 		ButchRef.SetAV Fatigue MQ08Trigger.ButchFTG
-		ButchRef.Moveto BelleBonnyRef
 		ButchRef.Evp
 		Set MQ08Trigger.ButchCheck to 3
 	endif
 
 	if ( MQ08Trigger.CharonCheck == 2 )
 		CharonRef.RestoreAV Fatigue 10000
-		set Followers.CharonHired to 0
-		set Followers.CharonFired to 1
-		set CharonREF.IsFollowingDefault to 1
-		set CharonREF.IsFollowingLong to 0
-		set CharonREF.IsFollowingShort to 0
-		CharonREF.SetCombatStyle FollowersCombatStyleRanged
-		set CharonREF.CombatStyleRanged to 1
-		set CharonREF.CombatStyleMelee to 0
-		CharonREF.SetPlayerTeammate 0
-		CharonREF.RemoveFromFaction FollowerFaction
 		CharonRef.SetAV Fatigue MQ08Trigger.CharonFTG
-		CharonRef.Moveto MQ09CharonReturnMarker
 		CharonRef.Evp
 		Set MQ08Trigger.CharonCheck to 3
 	endif
 
 	if ( MQ08Trigger.JerichoCheck == 2 )
 		JerichoRef.RestoreAV Fatigue 10000
-		set Followers.JerichoHired to 0
-		set Followers.JerichoFired to 1
-		set JerichoREF.IsFollowingDefault to 1
-		set JerichoREF.IsFollowingLong to 0
-		set JerichoREF.IsFollowingShort to 0
-		JerichoREF.SetCombatStyle FollowersCombatStyleRanged
-		set JerichoREF.CombatStyleRanged to 1
-		set JerichoREF.CombatStyleMelee to 0
-		JerichoREF.SetPlayerTeammate 0
-		JerichoREF.RemoveFromFaction FollowerFaction
 		JerichoRef.SetAV Fatigue MQ08Trigger.JerichoFTG
-		JerichoRef.Moveto MQ09JerichoReturnMarker
 		JerichoRef.Evp
 		Set MQ08Trigger.JerichoCheck to 3
 	endif
 
 	if ( MQ08Trigger.PaladinCheck == 2 )
 		StarPaladinCrossREF.RestoreAV Fatigue 10000
-		set Followers.StarPaladinCrossHired to 0
-		set Followers.StarPaladinCrossFired to 1
-		set StarPaladinCrossREF.IsFollowingDefault to 1
-		set StarPaladinCrossREF.IsFollowingLong to 0
-		set StarPaladinCrossREF.IsFollowingShort to 0
-		StarPaladinCrossREF.SetCombatStyle FollowersCombatStyleRanged
-		set StarPaladinCrossREF.CombatStyleRanged to 1
-		set StarPaladinCrossREF.CombatStyleMelee to 0
-		StarPaladinCrossREF.SetPlayerTeammate 0
-		StarPaladinCrossREF.RemoveFromFaction FollowerFaction
 		StarPaladinCrossRef.SetAV Fatigue MQ08Trigger.PaladinFTG
-		StarPaladinCrossRef.Moveto MQ09StarPaladinCrossReturnMarker
 		StarPaladinCrossRef.Evp
 		Set MQ08Trigger.PaladinCheck to 3
 	endif
 
 	if ( MQ08Trigger.RL3Check == 2 )
 		RL3Ref.RestoreAV Fatigue 10000
-		set Followers.RL3Hired to 0
-		set Followers.RL3Fired to 1
-		set RL3REF.IsFollowingDefault to 1
-		set RL3REF.IsFollowingLong to 0
-		set RL3REF.IsFollowingShort to 0
-		RL3REF.SetCombatStyle FollowersCombatStyleRanged
-		set RL3REF.CombatStyleRanged to 1
-		set RL3REF.CombatStyleMelee to 0
-		RL3REF.SetPlayerTeammate 0
-		RL3REF.RemoveFromFaction FollowerFaction
 		RL3Ref.SetAV Fatigue MQ08Trigger.RL3FTG
-		RL3Ref.Moveto MQ09StarPaladinCrossReturnMarker
 		RL3Ref.Evp
 		Set MQ08Trigger.RL3Check to 3
 	endif
 
 	if ( MQ08Trigger.CloverCheck == 2 )
 		CloverRef.RestoreAV Fatigue 10000
-		set Followers.CloverHired to 0
-		set Followers.CloverFired to 1
-		set CloverREF.IsFollowingDefault to 1
-		set CloverREF.IsFollowingLong to 0
-		set CloverREF.IsFollowingShort to 0
-		CloverREF.SetCombatStyle FollowersCombatStyleRanged
-		set CloverREF.CombatStyleRanged to 1
-		set CloverREF.CombatStyleMelee to 0
-		CloverREF.SetPlayerTeammate 0
-		CloverREF.RemoveFromFaction FollowerFaction
 		CloverRef.SetAV Fatigue MQ08Trigger.CloverFTG
-		CloverRef.Moveto MQ09CloverReturnMarker
 		CloverRef.Evp
 		Set MQ08Trigger.CloverCheck to 3
 	endif
 
 	if ( MQ08Trigger.DogmeatCheck == 2 )
 		DogmeatRef.RestoreAV Fatigue 10000
-		set Followers.DogmeatHired to 0
-		set Followers.DogmeatFired to 1
-		DogmeatREF.SetPlayerTeammate 0
-		DogmeatREF.RemoveFromFaction FollowerFaction
 		DogmeatRef.SetAV Fatigue MQ08Trigger.DogmeatFTG
-		DogmeatRef.Moveto EvacuationMarker
 		DogmeatRef.Evp
 		Set MQ08Trigger.DogmeatCheck to 3
 	endif
 
 	if ( MQ08Trigger.CraigBooneCheck == 2 )
-		CraigBooneREF.RestoreAV Fatigue 10000
-	
-			CraigBooneREF.SetPlayerTeammate 0;
-			CraigBooneREF.RemoveFromFaction FollowerFaction;
-			CraigBooneREF.SetActorValue Assistance 0;
-			CraigBooneREF.RemovePerk CompanionSuite;
-	
-			Set CraigBooneREF.Waiting to 0;
-			Set VNPCFollowers.bBooneHired to 0;
-			Set VNPCFollowers.bBooneFired to 1;
-			Set VNPCFollowers.bBooneL38 to 0;
-			Player.RemoveFromFaction VBooneFaction;
-	
-			Player.RemovePerk Spotting;
-			
+		CraigBooneREF.RestoreAV Fatigue 10000			
 		CraigBooneREF.SetAV Fatigue MQ08Trigger.CraigBooneFTG
-		CraigBooneREF.Moveto EvacuationMarker
 		CraigBooneREF.Evp
 		Set MQ08Trigger.CraigBooneCheck to 3
 	endif
 
 	if ( MQ08Trigger.ArcadeCheck == 2 )
-		ArcadeREF.RestoreAV Fatigue 10000
-	
-			ArcadeREF.SetPlayerTeammate 0;
-			ArcadeREF.RemoveFromFaction FollowerFaction;
-			ArcadeREF.SetActorValue Assistance 0;
-			ArcadeREF.RemovePerk CompanionSuite;
-	
-			Set ArcadeREF.Waiting to 0;
-			Set VNPCFollowers.ArcadeHired to 0;
-			Set VNPCFollowers.ArcadeFired to 1;
-			Set VNPCFollowers.bArcadeL38 to 0;
-	
-			Player.RemovePerk BetterHealing;
-			
+		ArcadeREF.RestoreAV Fatigue 10000			
 		ArcadeREF.SetAV Fatigue MQ08Trigger.ArcadeFTG
-		ArcadeREF.Moveto EvacuationMarker
 		ArcadeREF.Evp
 		Set MQ08Trigger.ArcadeCheck to 3
 	endif
 
 	if ( MQ08Trigger.RoseofSharonCassidyCheck == 2 )
-		RoseofSharonCassidyREF.RestoreAV Fatigue 10000
-	
-			RoseofSharonCassidyREF.SetPlayerTeammate 0;
-			RoseofSharonCassidyREF.RemoveFromFaction FollowerFaction;
-			RoseofSharonCassidyREF.SetActorValue Assistance 0;
-			RoseofSharonCassidyREF.RemovePerk CompanionSuite;
-	
-			Set RoseofSharonCassidyREF.Waiting to 0;
-			Set VNPCFollowers.bCassHired to 0;
-			Set VNPCFollowers.bCassFired to 1;
-			Set VNPCFollowers.bCassL38 to 0;
-	
-			Player.RemovePerk WhiskeyRose;
-	
-			StopQuest vCassTimer;
-			
+		RoseofSharonCassidyREF.RestoreAV Fatigue 10000			
 		RoseofSharonCassidyREF.SetAV Fatigue MQ08Trigger.RoseofSharonCassidyFTG
-		RoseofSharonCassidyREF.Moveto EvacuationMarker
 		RoseofSharonCassidyREF.Evp
 		Set MQ08Trigger.RoseofSharonCassidyCheck to 3
 	endif
 
 	if ( MQ08Trigger.LilyCheck == 2 )
-		LilyREF.RestoreAV Fatigue 10000
-	
-			LilyREF.SetPlayerTeammate 0;
-			LilyREF.RemoveFromFaction FollowerFaction;
-			LilyREF.SetActorValue Assistance 0;
-			LilyREF.RemovePerk CompanionSuite;
-		
-			Set LilyREF.Waiting to 0;
-			Set VNPCFollowers.bLilyHired to 0;
-			Set VNPCFollowers.bLilyFired to 1;
-			Set VNPCFollowers.bLilyL38 to 0;	
-	
-			Player.RemovePerk StealthGirl;
-	
-			StopQuest LilysMedicineTimer;
-	
+		LilyREF.RestoreAV Fatigue 10000	
 		LilyREF.SetAV Fatigue MQ08Trigger.LilyFTG
-		LilyREF.Moveto EvacuationMarker
 		LilyREF.Evp
 		Set MQ08Trigger.LilyCheck to 3
 	endif
 
 	if ( MQ08Trigger.VeronicaCheck == 2 )
-		VeronicaREF.RestoreAV Fatigue 10000
-	
-			VeronicaREF.SetPlayerTeammate 0;
-			VeronicaREF.RemoveFromFaction FollowerFaction;
-			VeronicaREF.SetActorValue Assistance 0;
-			VeronicaREF.RemovePerk CompanionSuite;
-	
-			Set VeronicaREF.Waiting to 0;
-			Set VNPCFollowers.bVeronicaHired to 0;
-			Set VNPCFollowers.bVeronicaFired to 1;
-			Set VNPCFollowers.bVeronicaL38 to 0;
-	
-			Player.RemovePerk ScribeAssistant;
-			
+		VeronicaREF.RestoreAV Fatigue 10000			
 		VeronicaREF.SetAV Fatigue MQ08Trigger.VeronicaFTG
-		VeronicaREF.Moveto EvacuationMarker
 		VeronicaREF.Evp
 		Set MQ08Trigger.VeronicaCheck to 3
 	endif
 
 	if ( MQ08Trigger.RaulCheck == 2 )
-		RaulREF.RestoreAV Fatigue 10000
-	
-			RaulREF.SetPlayerTeammate 0;
-			RaulREF.RemoveFromFaction FollowerFaction;
-			RaulREF.SetActorValue Assistance 0;
-			RaulREF.RemovePerk CompanionSuite;
-	
-			Set RaulREF.Waiting to 0;
-			Set VNPCFollowers.RaulHired to 0;
-			Set VNPCFollowers.RaulFired to 1;
-			Set VNPCFollowers.bRaulL38 to 0;
-	
-			Player.RemovePerk RegularMaintenance;
-			
+		RaulREF.RestoreAV Fatigue 10000			
 		RaulREF.SetAV Fatigue MQ08Trigger.RaulFTG
-		RaulREF.Moveto EvacuationMarker
 		RaulREF.Evp
 		Set MQ08Trigger.RaulCheck to 3
 	endif
 
 	if ( MQ08Trigger.RexCheck == 2 )
-		RexREF.RestoreAV Fatigue 10000
-	
-			RexREF.SetPlayerTeammate 0;
-			RexREF.RemoveFromFaction FollowerFaction;
-			RexREF.SetActorValue Assistance 0;
-			RexREF.RemovePerk CompanionSuite;
-	
-			Set RexREF.Waiting to 0;
-			Set VNPCFollowers.RexHired to 0;
-			Set VNPCFollowers.RexFired to 1;
-			Set VNPCFollowers.bRexL38 to 0;
-	
-			Player.RemovePerk SearchAndMark;
-			
+		RexREF.RestoreAV Fatigue 10000			
 		RexREF.SetAV Fatigue MQ08Trigger.RexFTG
-		RexREF.Moveto EvacuationMarker
 		RexREF.Evp
 		Set MQ08Trigger.RexCheck to 3
 	endif
 
 	if ( MQ08Trigger.EDECheck == 2 )
-		DogmeatRef.RestoreAV Fatigue 10000
-	
-			EDE1REF.SetPlayerTeammate 0;
-			EDE1REF.RemoveFromFaction FollowerFaction;
-			EDE1REF.SetActorValue Assistance 0;
-			EDE1REF.RemovePerk CompanionSuite;
-	
-			EDE2REF.SetPlayerTeammate 0;
-			EDE2REF.RemoveFromFaction FollowerFaction;
-			EDE2REF.SetActorValue Assistance 0;
-			EDE2REF.RemovePerk CompanionSuite;
-	
-			EDE3REF.SetPlayerTeammate 0;
-			EDE3REF.RemoveFromFaction FollowerFaction;
-			EDE3REF.SetActorValue Assistance 0;
-			EDE3REF.RemovePerk CompanionSuite;
-	
-			Set EDE1REF.Waiting to 0;
-			Set EDE2REF.Waiting to 0;
-			Set EDE3REF.Waiting to 0;
-			Set VNPCFollowers.bEDEHired to 0;
-			Set VNPCFollowers.bEDEFired to 1;
-			Set VNPCFollowers.bEDEL38 to 0;
-	
-			; Reset ED-E's aggresion in case he got frenzied.
-			EDE1REF.SetActorValue Aggression 0;
-			EDE2REF.SetActorValue Aggression 0;
-			EDE3REF.SetActorValue Aggression 0;
-		
-			Player.RemovePerk EnhancedSensors;
-			
+		EDE1REF.RestoreAV Fatigue 10000
+		EDE2REF.RestoreAV Fatigue 10000
+		EDE3REF.RestoreAV Fatigue 10000			
 			EDE1REF.SetAV Fatigue MQ08Trigger.EDEFTG
-			EDE1REF.Moveto EvacuationMarker
 			EDE1REF.Evp
 			EDE2REF.SetAV Fatigue MQ08Trigger.EDEFTG
-			EDE2REF.Moveto EvacuationMarker
 			EDE2REF.Evp
 			EDE3REF.SetAV Fatigue MQ08Trigger.EDEFTG
-			EDE3REF.Moveto EvacuationMarker
 			EDE3REF.Evp
 			Set MQ08Trigger.EDECheck to 3
 		endif

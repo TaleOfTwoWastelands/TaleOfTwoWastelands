@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>0</Flags>
+  <FormID ID="06096B8C">INFO - 06096B8C</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">In what way?</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0003D34E">MQ08Fawkes</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707B">FollowersTacticsCombatMelee</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707A">FollowersTacticsCombatRanged</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0011EBCD">FollowersTacticsCombatAggressive</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0011EBCC">FollowersTacticsCombatPassive</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707C">FollowersTacticsCombatEND</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="0003707D">FollowersTacticsCombatGOODBYE</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+  </Subrecords>
+</Record>

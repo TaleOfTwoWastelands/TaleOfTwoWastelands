@@ -1,0 +1,63 @@
+scn DogmeatSCRIPT
+
+;Follower Variables
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+
+;Dogmeat Variables
+short Find ;0 = not finding, 1 = searching, 2 = found and should now return
+short FindAmmo
+short FindChems
+short FindWeapons
+short FindFood
+
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+BEGIN OnStartCombat Player
+
+	set Followers.DogmeatHired to 0
+	set Followers.DogmeatFired to 1
+	set DogmeatREF.Waiting to 0
+	DogmeatREF.SetPlayerTeammate 0
+	DogmeatREF.RemoveFromFaction FollowerFaction
+
+END
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END
+
+BEGIN OnDeath
+
+		if ( Followers.DogmeatHired == 1 || Followers.DogmeatFired == 1 )
+			set Followers.PlayerHasFollower to 0
+			set Followers.DogmeatHired to 0
+			If DLC03CreatorQuest.PuppiesActive == 1
+				ShowMessage DLC03FollowerMessageDeadPuppy
+			Else
+				ShowMessage FollowerMessageDeadDogmeat
+			EndIf
+		endif
+		if (Followers.DogmeatHired == 1)
+			player.RemovePerk TTWFollowerPerkDogmeat
+			showmessage TTWFollowerMessagePerkDogmeatRemove
+		endif
+
+
+END

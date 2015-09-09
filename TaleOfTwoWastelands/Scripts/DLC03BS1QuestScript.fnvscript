@@ -82,7 +82,7 @@ Begin GameMode
 
 			if ( DogmeatRef.Waiting == 0 )
 				Set DogmeatRef.Waiting to 1
-				set Followers.DogmeatWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
+				set Followers.FollowerWaitingLeaveDay to ( GameDaysPassed + FollowerWaitTime )
 				DogmeatRef.Moveto DLC03FollowerStartWaitMarkerREF
 				DogmeatRef.EVP
 			endif

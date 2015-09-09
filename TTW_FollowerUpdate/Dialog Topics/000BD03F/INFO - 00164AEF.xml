@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="00164AEF">INFO - 00164AEF</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">All right. Guess I'll be around Novac for a while longer, until I figure out what I want to do with myself. See you around.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>6</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00092BD2">CraigBoone</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>245</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">WRALAAEAcgMAAAAAAAAAFQAKAHIBAHMIAAIAIDAVAAoAcgQAcwYAAgAgMBUACgByBABzBwACACAxFQAKAHIEAHMxAAIAIDAVAAoAcgQAcy8AAgAgMBwAAQDFEQcAAQBuAAAAABwAAQCoEQUAAQByBQAcAAIAqBEFAAEAcgYAWRALAAEAcgcAAAAAAAAAHAACAIARBQABAHIIAIARBQABAHIJAA8QCQACADkAbgAAAAAVABMAcgQAcxMACwAgcgQAcxMAIDEgLRYAEAABAAwAIHIEAHMTACAwID09FQAKAHIEAHMSAAIAIDAZAAAAHAABAPoRAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">; -------------------------------------------------------------------------\/ (8_15_10) Added to fix missing commands. -ETB
+
+showmessage FollowerMessageLeaveBoone
+
+; -------------------------------------------------------------------------/\
+
+set CraigBooneREF.Waiting to 0
+set VNPCFollowers.bBooneHired to 0
+set VNPCFollowers.bBooneFired to 1
+set VNPCFollowers.bBooneL38 to 0
+set VNPCFollowers.bHumanoidInParty to 0;
+CraigBooneREF.SetPlayerTeammate 0
+CraigBooneREF.removeperk CompanionSuite
+player.removeperk Spotting
+showmessage FollowerMessagePerkBooneRemove
+Player.RemoveFromFaction VBooneFaction;
+RemoveFromFaction FollowerFaction
+SetAV Assistance 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+CraigBooneREF.ResetAI</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00096BCE">CraigBooneREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B1607">FollowerMessageLeaveBoone</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60C">Spotting</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C61E">FollowerMessagePerkBooneRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B160C">VBooneFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>11</ReferenceCount>
+          <CompiledSize>213</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FgAsAAEAKAAgWKURCgACAHICAG4yAAAAIFikEQoAAgByAgBuMgAAACAwID09ICYmORAKAAIAcgIAblAAAAAZAAAAFgAIAAIABAAgRwMAWRALAAEAcgQAAAAAAAAAHAABAE8SBQABAHIFABgACAAHAAQAIEcGABYAFQACABEAIFg6EAUAAQByBwAgMTAgPj1ZEAsAAQByCAAAAAAAAAAcAAEATxIFAAEAcgkAFwACAAIAWRALAAEAcgoAAAAAAAAAHAABAE8SBQABAHILABkAAAAZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">if (GetObjectiveDisplayed VMS39 50 &amp;&amp; GetObjectiveCompleted VMS39 50 == 0)
+     SetStage vms39 80
+endif
+
+; JSH 11.05.10 - Teleport Boone to his room in Novac
+	if ( bInNVWasteland )
+		ShowMessage FollowerMessageLeaveBoone
+		CraigBooneREF.MoveToMarkerWithFade BooneHomeMarkerREF
+	elseif ( bInDCWasteland )
+		if GetStage MS06Fin &gt;= 10
+			showmessage TTWFollowerMessageLeaveBooneDCMemorial
+			CraigBooneREF.MoveToMarkerWithFade TTWHomeMarkerBooneDCMemorial
+		else
+			showmessage TTWFollowerMessageLeaveBooneDCTemple
+			CraigBooneREF.MoveToMarkerWithFade TTWHomeMarkerBooneDCTemple
+		endif
+	endif</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00096BCE">CraigBooneREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="001349A7">VMS39</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B1607">FollowerMessageLeaveBoone</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000CAEB6">BooneHomeMarkerREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060284F0">MS06Fin</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C708">TTWFollowerMessageLeaveBooneDCMemorial</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C729">TTWHomeMarkerBooneDCMemorial</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6E1">TTWFollowerMessageLeaveBooneDCTemple</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C72A">TTWHomeMarkerBooneDCTemple</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">Yeah, that's what I think. You should head back home.</Prompt>
+  </Subrecords>
+</Record>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>0</Flags>
+  <FormID ID="0013D834">Lily</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Lily</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-41</X>
+        <Y>-43</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>41</X>
+        <Y>43</Y>
+        <Z>152</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Lily</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\SMSpineBreaker\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B895">SuperMutantDT</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>NV_Lily.NIF</Entry>
+      <Entry>NV_SM_boots.NIF</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Swims, Walks, PCLevelMult, AllowPCDialogue, AllowPickpocket</Flags>
+      <Fatigue>250</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>10</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>70</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>UseActorEffectList</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0013F714">JacobstownNightkinFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0007189D">DeathItemSupermutant100</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0014F3E9">CreatureUniqueLily</Reference>
+    </VoiceType>
+    <Template Tag="TPLT">
+      <Reference ID="0003A147">CrSuperMutant1MeleeA</Reference>
+    </Template>
+    <Script Tag="SCRI">
+      <Reference ID="0013EF95">LilyScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00105CF5">WeapNVLilySword</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00174093">WeapNVAssaultCarbineLily</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0013F709">LilyTravelToDoctorHenryPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00161900">LilyTabithaBark</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001674CF">FollowersLilyL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C722">TTWFollowersPackageLilyFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013EF93">FollowersLilyFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013EF94">FollowersLilyGoingHomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013EF92">FollowersLilyFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013EF91">FollowersLilyFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013D842">DefaultLilyPackage</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>SuperMutant</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>24</Health>
+      <Damage>20</Damage>
+      <Strength>9</Strength>
+      <Perception>3</Perception>
+      <Endurance>8</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>10</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0002026E">SupermutantrBodyPartData</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">75</TurningSpeed>
+    <BaseScale Tag="BNAM">0.899999976</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0001FF5F">AudioTemplateSuperMutant</Reference>
+    </SoundTemplate>
+    <ImpactDataset Tag="CNAM">
+      <Reference ID="00075A49">SuperMutantHandImpactDataSet</Reference>
+    </ImpactDataset>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A15E">SupermutantWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

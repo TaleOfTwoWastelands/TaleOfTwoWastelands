@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C01C72D">TTWFollowerPerkDogmeat</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerPerkDogmeat</EditorID>
+    <Name Tag="FULL">Man's Best Friend</Name>
+    <Description Tag="DESC">Dogmeat is man's best friend, and he knows how to coordinate and run interference. While he is in your party, you will deal +25% damage to knocked down targets. In addition, you can ask Dogmeat to 'mark' his territory, setting a fast-travel marker to that spot.</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>CalculateWeaponDamage</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">Target</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>NotEqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>0</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetKnockedState</Type>
+                  <UnusedArg1>AAAAAA==</UnusedArg1>
+                  <UnusedArg2>AAAAAA==</UnusedArg2>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">1.25</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

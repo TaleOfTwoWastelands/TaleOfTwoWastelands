@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>QuestItem_PersistentReference, Compressed</Flags>
+  <FormID ID="00092BD2">CraigBoone</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">CraigBoone</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Boone</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000B160C">VBooneFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="000FD983">MaleUniqueCraigBoone</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="000B160B">BooneSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005C99F">GlassesShades</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000A3045">OutfitMerc05</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000CCEBF">HatNCR1stReconBeret</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000CE549">WeapBooneSniperRifle</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>12</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E59">WeapNVMacheteBoone</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0016895E">FollowersBooneTravelToBitterSprings</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00137A17">FollowersBooneBSArrive</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001385A4">FollowersBooneForceGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00137A18">FollowersBooneBSQuestInit</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001376DF">FollowersBooneBSPostAttackDialogue</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0016895B">FollowersBooneL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B16D1">FollowersBooneFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B160A">FollowersBooneFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000B1609">FollowersBooneFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C723">TTWFollowersPackageBooneFiredDCMemorial</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C718">TTWFollowersPackageBooneFiredDCTemple</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000CD216">NovacBooneWaitInNest</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000CB118">NovacBoonePatrolToHome</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000CB136">NovacBoonePatrolToNest</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000CAFC7">NovacDefaultSandboxBoone</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0007DFAA">SuperSniper</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>190</BaseHealth>
+      <Strength>7</Strength>
+      <Perception>7</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>1</Charisma>
+      <Intelligence>3</Intelligence>
+      <Agility>7</Agility>
+      <Luck>6</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>7</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>11</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>7</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>15</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="0002BFDB">HairBase</Reference>
+      </Type>
+      <Length Tag="LNAM">0</Length>
+      <Color Tag="HCLR">
+        <Red>116</Red>
+        <Green>103</Green>
+        <Blue>95</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004252">EyeGreen</Reference>
+    </Eyes>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">MuG9P+XgLUA2KTu/lUscP0yKTcAj17O+nPhrvjiTPL85xBTAkF63PyCYuz9pHVvA3mubPnB0079RcgHADxGOvjoM1z9YmipAwZsywIZEYkAb/9HAK7dBwIQnw79kRh2/4KIvv97nJEDCfNI/klR1wIHnRECmcwPAk/E7QMyoUUDkWJ1A2H6iwM8t4kCN4NtAPquTP26DH0Adav6/0QzJwOBTccAA1ZvAh6+JQNz9kcCG5qpAdSACQVRR2r/I15I/yuRQQB6RN8A=</Symmetric>
+        <Asymmetric Tag="FGGA">nCWwPjoaML83ZQo+fD5HPhojUz/bVDc/2PdRPXVwTD7Ewzq+7+8xv5cWvD7Mio2+6YG9vsliHb9rrjy9FdOMvxozuj7V0lQ/SinMvP9XRL6WJbW+nDv+vmpAQb/oWeS+m1s1PbDsIr5DuYS+K8dpPgoesr6safK9</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">BGmdv4RNtD7sPcq+KHaPP/AIpL2gSb89R33EPixMUT0gjJu9hDGaPVvcjz6dqSK/KkIGPmjW0r0gttk+dDlvvkwxfj5ybeY+ACZZvcAcPT4oR+G+zATzPhrd+70QXbY9wCCCvoCjs7wcC969oBoSPu7HaD5gPvS9mBYavlapYr7Wpgw+4DAkPuC/sb3tuGQ+Ja0NPoDOx70m0xW+p1stPpWewr4E8JY9xKeUvejZ0L0o9jE+VDQfvlBhz72wXPo8PMKiPaDSYD0=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

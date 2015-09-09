@@ -26,9 +26,9 @@
       <Flags>Female, AutoCalcStats, PCLevelMult</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>1</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>100</SpeedMultiplier>
       <Karma>-500</Karma>
       <DispositionBase>35</DispositionBase>
@@ -80,8 +80,8 @@
       </Item>
       <Item>
         <Data Tag="CNTO">
-          <Item ID="0604C5F9">AmmoShotgunShellRobot</Item>
-          <Count>1</Count>
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>2</Count>
         </Data>
       </Item>
       <Item>
@@ -129,6 +129,12 @@
         <Reference ID="000B8D4D">ParadiseFallsCloverBalconyINTRO</Reference>
       </Package>
       <Package Tag="PKID">
+        <Reference ID="0C01C71F">TTWFollowersPackageCloverL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C70B">TTWFollowersPackageCloverFiredNV</Reference>
+      </Package>
+      <Package Tag="PKID">
         <Reference ID="00094275">FollowersCloverFiredWaitPFalls</Reference>
       </Package>
       <Package Tag="PKID">
@@ -157,7 +163,7 @@
       <Reference ID="0001567D">Slaver</Reference>
     </Class>
     <Data Tag="DATA">
-      <BaseHealth>225</BaseHealth>
+      <BaseHealth>190</BaseHealth>
       <Strength>6</Strength>
       <Perception>4</Perception>
       <Endurance>4</Endurance>

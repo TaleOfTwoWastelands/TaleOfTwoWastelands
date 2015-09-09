@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="06068A9A">MQ08FawkesScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">MQ08FawkesScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>12</ReferenceCount>
+        <CompiledSize>595</CompiledSize>
+        <VariableCount>14</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAACAAKALUAAAAAAFkQCwABAHIDAAAAAAAAABYAFAABABAAIFiZEQUAAQByAQAgMSA9PQQSBwABAG6c////GQAAABYAFAAHABAAIFg4EAUAAQByBAAgMCA9PRYAEAAFAAwAIHIFAHMIACAxID09FQAKAHIFAHMYAAIAIDAVAAoAcgUAcwgAAgAgMFkQCwABAHIGAAAAAAAAABwAAQCoEQUAAQByBwBZEAsAAQByCAAAAAAAAAAZAAAAGQAAABEAAAAQAAYAAAD1AAAAFgANAAUACQAgcwoAIDAgPT0WABAAAwAMACByCQBzAgAgMyA+PRcQAAAVAAcAcwsAAgAgMRUACQBzCgAEACAxIH4ZAAAAGQAAABYAFQAGABEAIFg6EAUAAQByCgAgNjAgPj0WAA0ABAAJACBzDAAgMCA9PRYAFgACABIAIFgBEAUAAQByCwAgMTUwIDw9FQAHAHMMAAIAIDEcAAIAXhAAABkAAAAZAAAAGQAAABYADQAEAAkAIHMNACAxID09FgAPAAIACwAgWHAQAAAgMCA9PRUABwBzDQACACAyFQAKAHIMAHMBAAIAIDIZAAAAGQAAABEAAAAQAAYADACFAAAAFgAPAAcACwAgWMYRAAAgMSA9PVARAACCEQ0AAgAZAHoAAAAAAABZQIIRDQACABoAegAAAAAAAFlAghENAAIAGwB6AAAAAAAAWUCCEQ0AAgAdAHoAAAAAAABZQIIRDQACABwAegAAAAAAAFlAghENAAIAHgB6AAAAAAAAWUAZAAAAEQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX" External="MQ08FawkesScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WeaponOut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleRanged</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleMelee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingDefault</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingShort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingLong</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Rescued</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">GreetPlayer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FawkesAirlockGo</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">MQ11FawkesPanelAnimate</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerSwitchAggressive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00068A9B">MQ08FawkesDead</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E8E">MQ08</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007252D">FollowerMessageDeadFawkes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72F">TTWFollowerPerkFawkes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C704">TTWFollowerMessagePerkFawkesRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060943EE">FollowersHireFawkes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06014E91">MQ11</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060B16D9">MQ11AirlockWaitMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A6ADE">PPurityKeypadEnterRef</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

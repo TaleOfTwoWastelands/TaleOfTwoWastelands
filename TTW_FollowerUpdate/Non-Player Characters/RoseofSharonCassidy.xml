@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="00133FDD">RoseofSharonCassidy</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RoseofSharonCassidy</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Cass</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="000A46E7">NCRFactionNV</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="0017622E">CassFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0014F3F0">FemaleUniqueCass</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="0013408C">RoseofSharonCassidyScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0000000F">Caps001</Item>
+          <Count>13</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0005B6CE">WhiskeyBottle01Empty01</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="001350EF">OutfitCass</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0015EF8B">CassHat</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>15</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E55">WeapNVCaravanShotgunCass</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E56">WeapKnifeCombatCass</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Aggressive</Aggression>
+      <Confidence>Brave</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAlliesAndFriends</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="00174982">FollowersCassLeaveForeverPackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00171C42">FollowersCassL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001745E1">FollowersCassDrinkHomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C716">TTWFollowersPackageCassFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013408D">FollowersCassGoingHomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013408E">FollowersCassFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0013408F">FollowersCassFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00134090">FollowersCassFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001745E0">FollowersCassDrinkHomeFirstPackage</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0017657A">CassClass</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>175</BaseHealth>
+      <Strength>7</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>4</Charisma>
+      <Intelligence>4</Intelligence>
+      <Agility>6</Agility>
+      <Luck>4</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>49</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>47</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>47</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>12</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00032D37">HairBun</Reference>
+      </Type>
+      <Length Tag="LNAM">0.200000003</Length>
+      <Color Tag="HCLR">
+        <Red>68</Red>
+        <Green>29</Green>
+        <Blue>15</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004253">EyeBlue</Reference>
+    </Eyes>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">Rl9HPgBNTz4W3fq+Mk/bP4jtVD88ofG+LHrjPppezj4Ppg1ADq/WvlxVkz62gxC/EAJZP7CKmz4s91c/OuL3v3R14j+Q7s2+mElzvj915r8QWYLAMMJ/vpi/vb8gkVi+MnAZwLI6Ej+ZG4O/2VzNvwxvwD+4Lx7ALLN8v0CaLz7GBoPA3+qLP4hqSsAgsgTAMQStP/R/tD84Zu+/mMQYPzrnBcBkOmNA4sgJQPD1Kj8U8pRA4eLHvtZcGsAsFx+/8iHWv76nBEE=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">gSE0v1TgCr96Y1g/II9RvcD1Qr3pfRE/WJRPPQ5JT7/1+pw//BtuvpRK4D+AIba/vFiqPgBCs7r0n6E/usKcvxBCEr4cHFq/a8NNP0xNbz9SYnA+X56bP71tKb95HlQ/fjQ/v6FThj5m95C/YKWfvThOf74EvPo9Xs2lPsyzFz+Sd7O/Gk3CvmzGez+E/5S/SDravoECi78u3om+aCS8PsgDAsB086g/LNP3v4wPR79mfse/4FP1vTN9er8Eqw2/mpavvhJaHL8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

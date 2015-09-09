@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="0007FC98">INFO - 0007FC98</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -78,7 +75,7 @@
       </Condition>
       <Condition Tag="CTDA">
         <Comparison>
-          <Flags>Or</Flags>
+          <Flags>0</Flags>
           <Operator>EqualTo</Operator>
           <Unused>AAAA</Unused>
           <ComparisonValue>1</ComparisonValue>
@@ -86,37 +83,7 @@
         <Function>
           <Type>GetQuestVariable</Type>
           <Quest ID="000B16D0">VNPCFollowers</Quest>
-          <VariableIndex>30</VariableIndex>
-        </Function>
-        <RunOn>Subject</RunOn>
-        <RunOnReference ID="00000000">NullReference</RunOnReference>
-      </Condition>
-      <Condition Tag="CTDA">
-        <Comparison>
-          <Flags>Or</Flags>
-          <Operator>EqualTo</Operator>
-          <Unused>AAAA</Unused>
-          <ComparisonValue>1</ComparisonValue>
-        </Comparison>
-        <Function>
-          <Type>GetQuestVariable</Type>
-          <Quest ID="000B16D0">VNPCFollowers</Quest>
-          <VariableIndex>15</VariableIndex>
-        </Function>
-        <RunOn>Subject</RunOn>
-        <RunOnReference ID="00000000">NullReference</RunOnReference>
-      </Condition>
-      <Condition Tag="CTDA">
-        <Comparison>
-          <Flags>Or</Flags>
-          <Operator>EqualTo</Operator>
-          <Unused>AAAA</Unused>
-          <ComparisonValue>1</ComparisonValue>
-        </Comparison>
-        <Function>
-          <Type>GetQuestVariable</Type>
-          <Quest ID="000371D1">Followers</Quest>
-          <VariableIndex>20</VariableIndex>
+          <VariableIndex>48</VariableIndex>
         </Function>
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>

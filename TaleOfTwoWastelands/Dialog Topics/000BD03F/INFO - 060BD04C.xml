@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="00000000">NullReference</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -61,33 +58,35 @@
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C001E0F">bInDCWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>0</ReferenceCount>
-        <CompiledSize>0</CompiledSize>
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>218</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-    </BeginScript>
-    <EndScript>
-      <EndScriptMarker Tag="NEXT" />
-      <EmbeddedScript>
-        <Data Tag="SCHR">
-          <ReferenceCount>7</ReferenceCount>
-          <CompiledSize>275</CompiledSize>
-          <VariableCount>0</VariableCount>
-          <Type>Object</Type>
-          <Flags>Enabled</Flags>
-        </Data>
-        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDAcAAEAqBEFAAEAcgMADxAJAAIAOQBuAAAAABUACgByBABzDgACACAwFQAKAHIEAHMPAAIAIDEVAAoAcgEAcwsAAgAgMBUACgByAQBzCAACACAxFQAKAHIBAHMKAAIAIDAVAAoAcgEAcwkAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwYAAgAgMRUACgByAQBzBwACACAwHAABAMURBwABAG4AAAAAHAABAIARBQABAHIGABUAEwByAgBzEwALACByAgBzEwAgMSAtFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEA+hEAABwAAQBPEgUAAQByBwA=</CompiledScript>
-        <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 0;
-ButchREF.removeperk CompanionSuite
-SetAV Assistance 0
-
+      <CompiledScript Tag="SCDA">FQAKAHICAHMOAAIAIDAVAAoAcgIAcw8AAgAgMRUACgByAgBzIQACACAwFQAKAHIBAHMLAAIAIDAVAAoAcgEAcwgAAgAgMRUACgByAQBzCgACACAwFQAKAHIBAHMJAAIAIDAcAAEAsRAFAAEAcgMAFQAKAHIBAHMGAAIAIDEVAAoAcgEAcwcAAgAgMBwAAQCoEQUAAQByBAAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAHAABAIARBQABAHIGABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
 set Followers.ButchHired to 0
 set Followers.ButchFired to 1
+set Followers.bButchL38 to 0
 set ButchREF.Waiting to 0
 set ButchREF.IsFollowingDefault to 1
 set ButchREF.IsFollowingLong to 0
@@ -95,36 +94,82 @@ set ButchREF.IsFollowingShort to 0
 ButchREF.SetCombatStyle FollowersCombatStyleRanged
 set ButchREF.CombatStyleRanged to 1
 set ButchREF.CombatStyleMelee to 0
+ButchREF.removeperk CompanionSuite
 ButchREF.SetPlayerTeammate 0
 ButchREF.RemoveFromFaction FollowerFaction
+ButchREF.RemoveFromFaction TeammateFaction
+ButchREF.SetAV Assistance 0
 
+ButchREF.evp
+
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>131</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAKgRBQABAHIDAFkQCwABAHIEAAAAAAAAAFkQCwABAHIFAAAAAAAAABwAAgCeEAUAAQByBgAVAAoAcgcAcy8AAgAgMBUAEwByBwBzEwALACByBwBzEwAgMSAtFgAQAAEADAAgcgcAcxMAIDAgPT0VAAoAcgcAcxIAAgAgMBkAAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.RemovePerk TTWFollowerPerkButch
+showmessage TTWFollowerMessagePerkButchRemove
+
+showmessage FollowerMessageLeaveButch
+ButchREF.MoveTo MuddyRudderMarker
+
+set VNPCFollowers.bHumanoidInParty to 0
 set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
 if VNPCFollowers.nCurrentFollowers == 0
      set VNPCFollowers.bPlayerHasFollower to 0
 endif
-ButchREF.ResetAI
-ButchREF.MoveToMarkerWithFade BelleBonnyRef</ScriptSource>
+
+</ScriptSource>
         <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
           <Reference Tag="SCRO">
             <Reference ID="0602A4E8">ButchRef</Reference>
           </Reference>
           <Reference Tag="SCRO">
+            <Reference ID="0C01C731">TTWFollowerPerkButch</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FC">TTWFollowerMessagePerkButchRemove</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060A53FA">FollowerMessageLeaveButch</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0601EAB3">MuddyRudderMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
             <Reference ID="000B16D0">VNPCFollowers</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="0015C571">CompanionSuite</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="000371D1">Followers</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="00037136">FollowerFaction</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="0601E75B">BelleBonnyRef</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

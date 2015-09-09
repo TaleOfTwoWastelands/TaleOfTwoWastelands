@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="060BD04A">INFO - 060BD04A</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -61,33 +58,35 @@
         <RunOn>Subject</RunOn>
         <RunOnReference ID="00000000">NullReference</RunOnReference>
       </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C001E0F">bInDCWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>0</ReferenceCount>
-        <CompiledSize>0</CompiledSize>
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>218</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-    </BeginScript>
-    <EndScript>
-      <EndScriptMarker Tag="NEXT" />
-      <EmbeddedScript>
-        <Data Tag="SCHR">
-          <ReferenceCount>8</ReferenceCount>
-          <CompiledSize>293</CompiledSize>
-          <VariableCount>0</VariableCount>
-          <Type>Object</Type>
-          <Flags>Enabled</Flags>
-        </Data>
-        <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDAcAAEAqBEFAAEAcgMADxAJAAIAOQBuAAAAABUACgByBABzBgACACAwFQAKAHIEAHMHAAIAIDEVAAoAcgEAcwkAAgAgMBUACgByAQBzBgACACAxFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwcAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwQAAgAgMRUACgByAQBzBQACACAwHAABAMURBwABAG4AAAAAHAABAIkQCgACAHIGAG7/////HAABAIARBQABAHIHABUAEwByAgBzEwALACByAgBzEwAgMSAtFgAQAAEADAAgcgIAcxMAIDAgPT0VAAoAcgIAcxIAAgAgMBkAAAAcAAEA+hEAABwAAQBPEgUAAQByCAA=</CompiledScript>
-        <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 0;
-JerichoREF.removeperk CompanionSuite
-SetAV Assistance 0
-
+      <CompiledScript Tag="SCDA">FQAKAHICAHMGAAIAIDAVAAoAcgIAcwcAAgAgMRUACgByAgBzHwACACAwFQAKAHIBAHMJAAIAIDAVAAoAcgEAcwYAAgAgMRUACgByAQBzCAACACAwFQAKAHIBAHMHAAIAIDAcAAEAsRAFAAEAcgMAFQAKAHIBAHMEAAIAIDEVAAoAcgEAcwUAAgAgMBwAAQCoEQUAAQByBAAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAHAABAIARBQABAHIGABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
 set Followers.JerichoHired to 0
 set Followers.JerichoFired to 1
+set Followers.bJerichoL38 to 0
 set JerichoREF.Waiting to 0
 set JerichoREF.IsFollowingDefault to 1
 set JerichoREF.IsFollowingLong to 0
@@ -95,40 +94,98 @@ set JerichoREF.IsFollowingShort to 0
 JerichoREF.SetCombatStyle FollowersCombatStyleRanged
 set JerichoREF.CombatStyleRanged to 1
 set JerichoREF.CombatStyleMelee to 0
+JerichoREF.removeperk CompanionSuite
 JerichoREF.SetPlayerTeammate 0
-JerichoREF.SetFactionRank TeammateFaction -1
 JerichoREF.RemoveFromFaction FollowerFaction
+JerichoREF.RemoveFromFaction TeammateFaction
+JerichoREF.SetAV Assistance 0
 
+JerichoREF.evp
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>11</ReferenceCount>
+          <CompiledSize>187</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAKgRBQABAHIDAFkQCwABAHIEAAAAAAAAABYACAACAAQAIEcFAFkQCwABAHIGAAAAAAAAABwAAgCeEAUAAQByBwAYAAgAAgAEACBHCABZEAsAAQByCQAAAAAAAAAcAAIAnhAFAAEAcgoAGQAAABUACgByCwBzLwACACAwFQATAHILAHMTAAsAIHILAHMTACAxIC0WABAAAQAMACByCwBzEwAgMCA9PRUACgByCwBzEgACACAwGQAAAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.RemovePerk TTWFollowerPerkJericho
+showmessage TTWFollowerMessagePerkJerichoRemove
+
+if ( bInDCWasteland )
+	ShowMessage FollowerMessageLeaveJericho
+	JerichoREF.MoveTo MQ09JerichoReturnMarker
+elseif ( bInNVWasteland )
+	showmessage TTWFollowerMessageLeaveJerichoNV
+	JerichoREF.MoveTo TTWHomeMarkerJerichoNV
+endif
+
+set VNPCFollowers.bHumanoidInParty to 0
 set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
 if VNPCFollowers.nCurrentFollowers == 0
      set VNPCFollowers.bPlayerHasFollower to 0
 endif
-JerichoREF.ResetAI
-JerichoREF.MoveToMarkerWithFade MQ09JerichoReturnMarker</ScriptSource>
+
+</ScriptSource>
         <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
           <Reference Tag="SCRO">
             <Reference ID="06003B5D">JerichoRef</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000B16D0">VNPCFollowers</Reference>
+            <Reference ID="0C01C733">TTWFollowerPerkJericho</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="0015C571">CompanionSuite</Reference>
+            <Reference ID="0C01C702">TTWFollowerMessagePerkJerichoRemove</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000371D1">Followers</Reference>
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
           </Reference>
           <Reference Tag="SCRO">
-            <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="00046312">TeammateFaction</Reference>
-          </Reference>
-          <Reference Tag="SCRO">
-            <Reference ID="00037136">FollowerFaction</Reference>
+            <Reference ID="060A54A1">FollowerMessageLeaveJericho</Reference>
           </Reference>
           <Reference Tag="SCRO">
             <Reference ID="0602EC6E">MQ09JerichoReturnMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6ED">TTWFollowerMessageLeaveJerichoNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6D8">TTWHomeMarkerJerichoNV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
           </Reference>
         </References>
       </EmbeddedScript>

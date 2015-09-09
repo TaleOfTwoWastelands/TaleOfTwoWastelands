@@ -48,13 +48,13 @@
       <Flags>Essential, Flies, Walks, PCLevelMult, AllowPCDialogue</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>9</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>110</SpeedMultiplier>
       <Karma>0</Karma>
       <DispositionBase>35</DispositionBase>
-      <TemplateFlags>UseModelAnimation</TemplateFlags>
+      <TemplateFlags>UseTraits, UseModelAnimation</TemplateFlags>
     </BaseStats>
     <Factions>
       <Faction Tag="SNAM">
@@ -129,6 +129,12 @@
         <Reference ID="0900101B">DLC03MQ11RL3CodeWaitForAirlock</Reference>
       </Package>
       <Package Tag="PKID">
+        <Reference ID="0C01C71B">TTWFollowersPackageRL3L38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C711">TTWFollowersPackageRL3FiredNV</Reference>
+      </Package>
+      <Package Tag="PKID">
         <Reference ID="00094270">FollowersRL3FiredWaitCanterbury</Reference>
       </Package>
       <Package Tag="PKID">
@@ -170,7 +176,7 @@
         <Magic>50</Magic>
         <Stealth>50</Stealth>
       </Skill>
-      <Health>350</Health>
+      <Health>24</Health>
       <Damage>23</Damage>
       <Strength>5</Strength>
       <Perception>6</Perception>

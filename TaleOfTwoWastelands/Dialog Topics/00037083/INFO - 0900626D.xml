@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>0</Flags>
+  <FormID ID="0900626D">INFO - 0700626D</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060BD072">INFO - 060BD072</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Sad</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="06051235">VOCDogmeatLetsGoN00096BA21</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">&lt;aroo?&gt;</ResponseText>
+        <ScriptNotes Tag="NAM2">The dog is confused.</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+        <SpeakerAnimation Tag="SNAM">
+          <Reference ID="000AA493">LooseDogAroo</Reference>
+        </SpeakerAnimation>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000371D1">Followers</Quest>
+          <VariableIndex>20</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0606A772">FFEU255Dogmeat</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <Choices>
+      <Choice Tag="TCLT">
+        <Reference ID="000BD03F">FollowersFiredYes</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="00156BFC">FollowersFiredYesSuite</Reference>
+      </Choice>
+      <Choice Tag="TCLT">
+        <Reference ID="000BD03E">FollowersFiredNo</Reference>
+      </Choice>
+    </Choices>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>0</ReferenceCount>
+        <CompiledSize>0</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>0</ReferenceCount>
+          <CompiledSize>0</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">It's too dangerous here, Dogmeat. Go wait for me at Vault 101.</Prompt>
+  </Subrecords>
+</Record>

@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="00037138">FollowersQuestSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">FollowersQuestSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>70</ReferenceCount>
+        <CompiledSize>3575</CompiledSize>
+        <VariableCount>45</VariableCount>
+        <Type>Quest</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">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</CompiledScript>
+      <ScriptSource Tag="SCTX" External="FollowersQuestSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerOwnsContract</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CharonHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CharonFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">JerichoConvince</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">JerichoHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">JerichoFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FawkesHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FawkesFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">StarPaladinCrossHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">StarPaladinCrossFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>12</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">StarPaladinCrossHasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CrossDismissedPlayer</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>14</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>15</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">ButchFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>18</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CloverHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>19</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CloverFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>20</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DogmeatHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>21</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DogmeatFired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>22</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RL3Hired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>23</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">RL3Fired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>24</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">PlayerHasFollower</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>25</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerWaitingLeaveDay</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>27</Index>
+            <Flags>0</Flags>
+          </Data>
+          <Name Tag="SCVR">DogmeatWaitingLeaveDay</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>29</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bCharonL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>30</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bFawkesL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>31</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bJerichoL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>32</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bStarPaladinCrossL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>33</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bButchL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>35</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bCloverL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>36</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bDogmeatL38</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>37</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">bRL3L38</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0606A775">DogmeatREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602A4E8">ButchRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602B8E1">CharonRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060384D8">CloverREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B5D">JerichoRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0602D9CF">MQ08FawkesRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06062735">StarPaladinCrossREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000151E3">MegatonPlayerHouse</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060170E7">Tenpenny03Player</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000039">GameDaysPassed</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72D">TTWFollowerPerkDogmeat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6F8">TTWFollowerMessagePerkDogmeatRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C001E0F">bInDCWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="09003211">DLC03Puppies</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0900999B">DLC03FollowerMessageLeavePuppy</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A5402">FollowerMessageLeaveDogmeat</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060309D6">EvacuationMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C709">TTWDLC03FollowerMessageLeavePuppyNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6E8">TTWFollowerMessageLeaveDogmeatNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6DC">TTWHomeMarkerDogmeatNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C731">TTWFollowerPerkButch</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6FC">TTWFollowerMessagePerkButchRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A53FA">FollowerMessageLeaveButch</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0601EAB3">MuddyRudderMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6E2">TTWFollowerMessageLeaveButchNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6DF">TTWHomeMarkerButchNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C734">TTWFollowerPerkCharon</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C706">TTWFollowerMessagePerkCharonRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A53F8">FollowerMessageLeaveCharon</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0603073A">UnderworldNinthCircleMARKER</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C707">TTWFollowerMessageLeaveCharonNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6DD">TTWHomeMarkerCharonNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C732">TTWFollowerPerkClover</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C700">TTWFollowerMessagePerkCloverRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A53F9">FollowerMessageLeaveClover</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060371A2">ParadiseFallsEulogysPadMARKER</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6E6">TTWFollowerMessageLeaveCloverNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6D7">TTWHomeMarkerCloverNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C733">TTWFollowerPerkJericho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C702">TTWFollowerMessagePerkJerichoRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A54A1">FollowerMessageLeaveJericho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06020223">MegatonOutsideMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6ED">TTWFollowerMessageLeaveJerichoNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6D8">TTWHomeMarkerJerichoNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72F">TTWFollowerPerkFawkes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C704">TTWFollowerMessagePerkFawkesRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A54AB">FollowerMessageLeaveFawkes</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0606415F">FawkesMuseumWaitMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6EB">TTWFollowerMessageLeaveFawkesNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6DB">TTWHomeMarkerFawkesNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C72E">TTWFollowerPerkRL3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6FA">TTWFollowerMessagePerkRL3Remove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A54FD">FollowerMessageLeaveRL3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06059413">CCBazaarMarker</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6F2">TTWFollowerMessageLeaveRL3NV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6D6">TTWHomeMarkerRL3NV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C730">TTWFollowerPerkStarPaladinCross</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6FE">TTWFollowerMessagePerkStarPaladinCrossRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="060A53F7">FollowerMessageLeaveStarPaladinCross</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06019324">CitScribeMarker04</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6F4">TTWFollowerMessageLeaveStarPaladinCrossNV</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6DE">TTWHomeMarkerStarPaladinCrossNV</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

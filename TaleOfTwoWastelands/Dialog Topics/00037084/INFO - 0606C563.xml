@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="06040827">INFO - 06040827</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -94,56 +91,49 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>7</ReferenceCount>
-        <CompiledSize>288</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>228</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMJAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAKAHIEAHMGAAIAIDEVAAoAcgQAcwcAAgAgMBUACgByAQBzAgACACAxFQAKAHIBAHMGAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzBwACACAwHAABALEQBQABAHIFABUACgByAQBzBAACACAxFQAKAHIBAHMFAAIAIDAcAAEAxREHAAEAbgEAAAAcAAEAiRAKAAIAcgYAbgEAAAAcAAEAfxEKAAIAcgcAbgEAAAD6EQAA</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-JerichoREF.AddPerk CompanionSuite
-Set JerichoREF.Waiting to 0
+      <CompiledScript Tag="SCDA">HAABAKsQBwABAG4BAAAAHAABAMURBwABAG4BAAAAHAABAFERBwABAG4BAAAAHAABAHYRBQABAHICABwAAQB/EQoAAgByAwBuAQAAABwAAQB/EQoAAgByBABuAQAAABUACgByAQBzCQACACAwFQAKAHIBAHMGAAIAIDEVAAoAcgEAcwgAAgAgMBUACgByAQBzBwACACAwFQAKAHIBAHMEAAIAIDEVAAoAcgEAcwUAAgAgMBUACgByAQBzAgACACAxFQAKAHIFAHMGAAIAIDEVAAoAcgUAcwcAAgAgMBwAAQBeEAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">
 JerichoREF.IgnoreCrime 1
+JerichoREF.SetPlayerTeammate 1
 JerichoREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+JerichoREF.AddPerk CompanionSuite
+JerichoREF.AddToFaction FollowerFaction 1
+JerichoREF.AddToFaction TeammateFaction 1
 
-set Followers.JerichoHired to 1
-set Followers.JerichoFired to 0
-set JerichoREF.HasBeenHired to 1
+set JerichoREF.Waiting to 0
 set JerichoREF.IsFollowingDefault to 1
 set JerichoREF.IsFollowingLong to 0
 set JerichoREF.IsFollowingShort to 0
-JerichoREF.SetCombatStyle FollowersCombatStyleRanged
 set JerichoREF.CombatStyleRanged to 1
 set JerichoREF.CombatStyleMelee to 0
-JerichoREF.SetPlayerTeammate 1
-JerichoREF.SetFactionRank TeammateFaction 1
-JerichoREF.AddToFaction FollowerFaction 1
 
-ResetAI</ScriptSource>
+set JerichoREF.HasBeenHired to 1
+set Followers.JerichoHired to 1
+set Followers.JerichoFired to 0
+
+JerichoREF.evp
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="06003B5D">JerichoRef</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="00037136">FollowerFaction</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -151,12 +141,36 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>79</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKw==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkJericho
+showmessage TTWFollowerMessagePerkJerichoAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C733">TTWFollowerPerkJericho</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C701">TTWFollowerMessagePerkJerichoAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">Let's get back out there, Jericho.</Prompt>

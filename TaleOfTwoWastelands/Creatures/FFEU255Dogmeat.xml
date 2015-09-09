@@ -31,12 +31,12 @@
     </Models>
     <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
     <BaseStats Tag="ACBS">
-      <Flags>Essential, Swims, Walks, PCLevelMult, AllowPCDialogue, TiltFrontBack, AllowPickpocket</Flags>
-      <Fatigue>50</Fatigue>
+      <Flags>Essential, Swims, Walks, PCLevelMult, AllowPCDialogue, TiltFrontBack</Flags>
+      <Fatigue>200</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>5</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>100</SpeedMultiplier>
       <Karma>0</Karma>
       <DispositionBase>35</DispositionBase>
@@ -110,10 +110,19 @@
         <Reference ID="0009E8F0">FollowersDogmeatFindWEAPON</Reference>
       </Package>
       <Package Tag="PKID">
+        <Reference ID="0C01C71A">TTWFollowersPackageDogmeatL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C712">TTWFollowersPackageDogmeatFiredNV</Reference>
+      </Package>
+      <Package Tag="PKID">
         <Reference ID="0009427A">FollowersDogmeatFiredWaitV101</Reference>
       </Package>
       <Package Tag="PKID">
         <Reference ID="0609427E">FollowersDogmeatFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C724">TTWFollowersPackageDogmeatFollowPlayerLONG</Reference>
       </Package>
       <Package Tag="PKID">
         <Reference ID="0009427B">FollowersDogmeatFollowPlayerDEFAULT</Reference>
@@ -132,7 +141,7 @@
         <Magic>50</Magic>
         <Stealth>50</Stealth>
       </Skill>
-      <Health>500</Health>
+      <Health>18</Health>
       <Damage>5</Damage>
       <Strength>7</Strength>
       <Perception>8</Perception>

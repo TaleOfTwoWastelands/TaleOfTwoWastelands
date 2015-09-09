@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0015C88E">INFO - 0015C88E</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, Random</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Fear</Emotion>
+          <EmotionValue>10</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">{Wary, doesn't like 38}All right... don't be long. {Under her breath}Robots there give me the creeps.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>21</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>72</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="00133FDD">RoseofSharonCassidy</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>241</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHIBAHMBAAIAIDAVAAoAcgMAcxUAAgAgMBUACgByAwBzFgACACAxFQAKAHIDAHMyAAIAIDEVAAoAcgMAcy8AAgAgMBwAAQDFEQcAAQBuAAAAAIARBQABAHIEAA8QCQACADkAbgAAAAAVABMAcgMAcxMACwAgcgMAcxMAIDEgLRwAAQCoEQUAAQByBQAcAAIAqBEFAAEAcgYAWRALAAEAcgcAAAAAAAAAWRALAAEAcggAAAAAAAAAHAABAPoRAAAWABAAAQAMACByAwBzEwAgMCA9PRUACgByAwBzEgACACAwGQAAADcQBQABAHIJAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">set RoseofSharonCassidyREF.Waiting to 0
+set VNPCFollowers.bCassHired to 0
+set VNPCFollowers.bCassFired to 1
+set VNPCFollowers.bCassL38 to 1
+Set VNPCFollowers.bHumanoidInParty to 0
+RoseofSharonCassidyREF.SetPlayerTeammate 0
+RemoveFromFaction FollowerFaction
+SetAV Assistance 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+RoseofSharonCassidyREF.removeperk CompanionSuite
+player.removeperk WhiskeyRose
+ShowMessage FollowerMessageLeaveCass38
+showmessage FollowerMessagePerkCassRemove
+RoseofSharonCassidyREF.ResetAI
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+stopquest vCassTimer</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60D">WhiskeyRose</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00171C3A">FollowerMessageLeaveCass38</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C61F">FollowerMessagePerkCassRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00161F07">VCassTimer</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>2</ReferenceCount>
+          <CompiledSize>13</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAE8SBQABAHICAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">; (10_1_10) Adding comment to force esp to be rebuilt/added to post-release esms. -ETB
+
+; JSH 11.05.10 - Teleport Cass to Lucky 38 suite.
+RoseofSharonCassidyREF.MoveToMarkerWithFade L38SuiteCompanionMarker01REF</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00135F19">RoseofSharonCassidyREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015672F">L38SuiteCompanionMarker01REF</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="00133FDD">RoseofSharonCassidy</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CREA">
+  <Flags>CantWait_PlatformSpecificTexture_Dead</Flags>
+  <FormID ID="001694E2">NVCompanionEdEUpgradeWeapons</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NVCompanionEdEUpgradeWeapons</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-26</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>26</Y>
+        <Z>159</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">ED-E</Name>
+    <Model>
+      <FileName Tag="MODL">Creatures\Eyebot\Skeleton.nif</FileName>
+    </Model>
+    <ActorEffects>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="00060C16">RadImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0007D4F3">PoisonImmunity</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0012B88E">ProtectronDT</Reference>
+      </ActorEffect>
+      <ActorEffect Tag="SPLO">
+        <Reference ID="0015F8DA">EDERadioBroadcast</Reference>
+      </ActorEffect>
+    </ActorEffects>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Models Tag="NIFZ">
+      <Entry>brain.nif</Entry>
+      <Entry>eyebot_EdB.NIF</Entry>
+    </Models>
+    <TextureHashes Tag="NIFT">AAAAAA==</TextureHashes>
+    <BaseStats Tag="ACBS">
+      <Flags>Swims, Flies, Walks, PCLevelMult, AllowPCDialogue, AllowPickpocket</Flags>
+      <Fatigue>200</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>10</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="00025C70">EyebotFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="00037136">FollowerFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <DeathItem Tag="INAM">
+      <Reference ID="0009C95A">DeathItemEyebot75</Reference>
+    </DeathItem>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0014F3F4">RobotEDE</Reference>
+    </VoiceType>
+    <Script Tag="SCRI">
+      <Reference ID="00151D03">EDEScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00078CC2">AmmoSmallEnergyCellRobot</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="001694DF">EDEZapGunUpgrade</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>100</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsAllies</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0016041A">EDEQuestCompleteDialogue</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001572E9">FollowersEDEFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001572EA">FollowersEDEFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001572EB">FollowersEDEFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="00168970">EDESuiteSandbox</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C714">TTWFollowersPackageEDEFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001734F4">EDEDefaultSandbox</Reference>
+      </Package>
+    </Packages>
+    <Data Tag="DATA">
+      <CreatureType>Robot</CreatureType>
+      <Skill>
+        <Combat>60</Combat>
+        <Magic>50</Magic>
+        <Stealth>50</Stealth>
+      </Skill>
+      <Health>18</Health>
+      <Damage>23</Damage>
+      <Strength>6</Strength>
+      <Perception>10</Perception>
+      <Endurance>5</Endurance>
+      <Charisma>5</Charisma>
+      <Intelligence>5</Intelligence>
+      <Agility>7</Agility>
+      <Luck>9</Luck>
+    </Data>
+    <AttackReach Tag="RNAM">96</AttackReach>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="001694E9">CSEDE</Reference>
+    </CombatStyle>
+    <BodyPartData Tag="PNAM">
+      <Reference ID="0002F870">EyebotBodypartdata</Reference>
+    </BodyPartData>
+    <TurningSpeed Tag="TNAM">150</TurningSpeed>
+    <BaseScale Tag="BNAM">1</BaseScale>
+    <FootWeight Tag="WNAM">15</FootWeight>
+    <ImpactMaterialType Tag="NAM4">Metal</ImpactMaterialType>
+    <SoundLevel Tag="NAM5">Normal</SoundLevel>
+    <SoundTemplate Tag="CSCR">
+      <Reference ID="0005CF6E">AudioTemplateRobotEyebot</Reference>
+    </SoundTemplate>
+    <MeleeWeaponList Tag="LNAM">
+      <Reference ID="0003A3F1">EmbeddedWeapons</Reference>
+    </MeleeWeaponList>
+  </Subrecords>
+</Record>

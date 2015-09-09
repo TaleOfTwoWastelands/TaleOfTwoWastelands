@@ -64,55 +64,52 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>7</ReferenceCount>
-        <CompiledSize>273</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>236</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHIBAHMIAAIAIDAcAAEAUREHAAEAbgEAAAAcAAEAqxAHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAKAHICAHMwAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIEAHMWAAIAIDEVAAoAcgEAcwEAAgAgMRUACgByAQBzBQACACAxFQAKAHIBAHMHAAIAIDAVAAoAcgEAcwYAAgAgMBwAAQCxEAUAAQByBQAVAAoAcgEAcwMAAgAgMRUACgByAQBzBAACACAwHAABAMURBwABAG4BAAAAHAABAH8RCgACAHIGAG4BAAAAmBAAABwAAQBeEAAANxAFAAEAcgcA</CompiledScript>
-      <ScriptSource Tag="SCTX">Set RL3REF.Waiting to 0
-RL3REF.SetIgnoreFriendlyHits 1
-RL3REF.IgnoreCrime 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers + 1
-set VNPCFollowers.bCritterInParty to 1
-RL3REF.addperk CompanionSuite
+      <CompiledScript Tag="SCDA">HAABAJgQAAAcAAEAqxAHAAEAbgEAAAAcAAEAxREHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAcAAEAdhEFAAEAcgIAHAABAH8RCgACAHIDAG4BAAAAHAABAH8RCgACAHIEAG4BAAAAFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAVAAoAcgEAcwMAAgAgMRUACgByAQBzBAACACAwFQAKAHIBAHMBAAIAIDEVAAoAcgUAcxYAAgAgMRUACgByBQBzFwACACAwHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">RL3REF.RemoveScriptPackage
 
-set Followers.RL3Hired to 1
-set RL3REF.HasBeenHired to 1
+RL3REF.IgnoreCrime 1
+RL3REF.SetPlayerTeammate 1
+RL3REF.SetIgnoreFriendlyHits 1
+RL3REF.addperk CompanionSuite
+RL3REF.AddToFaction FollowerFaction 1
+RL3REF.AddToFaction TeammateFaction 1
+
+set RL3REF.Waiting to 0
 set RL3REF.IsFollowingDefault to 1
 set RL3REF.IsFollowingLong to 0
 set RL3REF.IsFollowingShort to 0
-RL3REF.SetCombatStyle FollowersCombatStyleRanged
 set RL3REF.CombatStyleRanged to 1
 set RL3REF.CombatStyleMelee to 0
-RL3REF.SetPlayerTeammate 1
-RL3REF.AddToFaction TeammateFaction 1
-RemoveScriptPackage
+
+set RL3REF.HasBeenHired to 1
+set Followers.RL3Hired to 1
+set Followers.RL3Fired to 0
+
 RL3REF.evp
-StopQuest FollowersHireRL3</ScriptSource>
+
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="06094285">RL3REF</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000943EB">FollowersHireRL3</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -120,12 +117,40 @@ StopQuest FollowersHireRL3</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>88</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzMAACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKzcQBQABAHIFAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkRL3
+showmessage TTWFollowerMessagePerkRL3Add
+
+set VNPCFollowers.bCritterInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to VNPCFollowers.nCurrentFollowers + 1
+
+StopQuest FollowersHireRL3
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C72E">TTWFollowerPerkRL3</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F9">TTWFollowerMessagePerkRL3Add</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000943EB">FollowersHireRL3</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
   </Subrecords>

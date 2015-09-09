@@ -1,0 +1,91 @@
+scn MQ08FawkesScript
+
+short	DoOnce
+
+;Follower Variables
+short	GreetPlayer
+short 	HasBeenHired
+short	WeaponOut
+short	CombatStyleRanged
+short	CombatStyleMelee
+short	IsFollowingDefault
+short	IsFollowingShort
+short	IsFollowingLong
+short	Waiting
+
+;Variable for rescuing Fawkes
+short Rescued
+
+;Variables for DLC03
+
+short FawkesAirlockGo
+short MQ11FawkesPanelAnimate
+
+short FollowerSwitchAggressive			; 0 = Passive (wait for player), 1 = Aggressive (attack when see enemy)
+
+;This is a handler for MQ08 if Fawkes dies
+
+BEGIN OnDeath
+
+	Showmessage MQ08FawkesDead
+
+	if ( IsKiller Player == 1 )
+		RewardKarma -100
+	endif
+
+	if ( GetQuestRunning MQ08 == 0 )
+		if ( Followers.FawkesHired == 1  )
+			set Followers.PlayerHasFollower to 0
+			set Followers.FawkesHired to 0
+			ShowMessage FollowerMessageDeadFawkes
+			player.RemovePerk TTWFollowerPerkFawkes
+			showmessage TTWFollowerMessagePerkFawkesRemove
+		endif
+	endif
+
+END
+
+BEGIN GameMode
+
+	if ( DoOnce == 0 )
+		if ( FollowersHireFawkes.EnclaveSoldierDown >= 3 )
+			StopCombat
+			set GreetPlayer to 1
+			set DoOnce to -1
+		endif
+	endif
+
+;DLC03 MQ11 Scripting
+
+	if ( GetStage MQ11 >= 60 )
+		if ( FawkesAirlockGo == 0 )
+			if ( GetDistance MQ11AirlockWaitMarker <= 150 )
+				Set FawkesAirlockGo to 1
+				MQ08FawkesREF.EVP
+			endif
+		endif
+	endif
+
+	if ( MQ11FawkesPanelAnimate == 1 )
+		if ( IsIdlePlaying == 0 )
+			Set MQ11FawkesPanelAnimate to 2
+			set PPurityKeyPadEnterRef.PanelActivated to 2
+		endif
+	endif
+	
+
+END
+
+BEGIN OnCombatEND
+
+	if ( GetPlayerTeammate == 1 )
+		resethealth
+		restoreav perceptioncondition 100
+		restoreav endurancecondition 100
+		restoreav leftattackcondition 100
+		restoreav leftmobilitycondition 100
+		restoreav rightattackcondition 100
+		restoreav rightmobilitycondition 100
+	endif
+
+END

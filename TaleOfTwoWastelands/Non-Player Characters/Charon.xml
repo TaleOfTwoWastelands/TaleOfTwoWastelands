@@ -26,9 +26,9 @@
       <Flags>AutoCalcStats, PCLevelMult</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>5</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>100</SpeedMultiplier>
       <Karma>0</Karma>
       <DispositionBase>35</DispositionBase>
@@ -74,14 +74,8 @@
     <Contents>
       <Item>
         <Data Tag="CNTO">
-          <Item ID="000E86F2">Ammo20Ga</Item>
-          <Count>20</Count>
-        </Data>
-      </Item>
-      <Item>
-        <Data Tag="CNTO">
           <Item ID="00176E54">AmmoCompanion</Item>
-          <Count>12</Count>
+          <Count>5</Count>
         </Data>
       </Item>
       <Item>
@@ -130,6 +124,12 @@
       </Package>
       <Package Tag="PKID">
         <Reference ID="09000B00">DLC03MQ11CharonCodeWaitForAirlock</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C721">TTWFollowersPackageCharonL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C70C">TTWFollowersPackageCharonFiredNV</Reference>
       </Package>
       <Package Tag="PKID">
         <Reference ID="000371E1">FollowersCharonFiredWaitNinthCircle</Reference>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="CELL">
+  <Flags>0</Flags>
+  <FormID ID="000ED19F">NewVegasMedicalClinicInterior</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">NewVegasMedicalClinicInterior</EditorID>
+    <Name Tag="FULL">New Vegas Medical Clinic</Name>
+    <CellFlags Tag="DATA">IsInteriorCell, PublicPlace</CellFlags>
+    <Lighting Tag="XCLL">
+      <Color>
+        <Ambient>
+          <Red>48</Red>
+          <Green>63</Green>
+          <Blue>62</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Ambient>
+        <Directional>
+          <Red>64</Red>
+          <Green>62</Green>
+          <Blue>47</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Directional>
+      </Color>
+      <Fog>
+        <Color>
+          <Red>36</Red>
+          <Green>35</Green>
+          <Blue>28</Blue>
+          <Alpha_Unused>0</Alpha_Unused>
+        </Color>
+        <Near>64</Near>
+        <Far>1600</Far>
+        <ClipDistance>1700</ClipDistance>
+        <Power>1</Power>
+      </Fog>
+      <DirectionalRotation>
+        <XY>130</XY>
+        <Z>270</Z>
+      </DirectionalRotation>
+      <DirectionalFade>1</DirectionalFade>
+    </Lighting>
+    <LightTemplate Tag="LTMP">
+      <Reference ID="00000000">NullReference</Reference>
+    </LightTemplate>
+    <LightTemplateInherit Tag="LNAM">AmbientColor, DirectionalColor, FogNear</LightTemplateInherit>
+    <WaterHeight Tag="XCLW">-2147483650</WaterHeight>
+    <WaterNoiseTexture Tag="XNAM"></WaterNoiseTexture>
+    <ImageSpace Tag="XCIM">
+      <Reference ID="0001507A">ShackInterior01</Reference>
+    </ImageSpace>
+    <Owner Tag="XOWN">
+      <Reference ID="000EC7A3">DoctorUsanagi</Reference>
+    </Owner>
+    <AcousticSpace Tag="XCAS">
+      <Reference ID="001405B7">INTOfficeBuilding</Reference>
+    </AcousticSpace>
+    <MusicType Tag="XCMO">
+      <Reference ID="0008A6D4">1NoMusic</Reference>
+    </MusicType>
+  </Subrecords>
+</Record>

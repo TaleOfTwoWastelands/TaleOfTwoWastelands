@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0015ED68">INFO - 0015ED68</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Nice children shouldn't stay in places like that, dearie! That's the sort of place Leo likes! But if you insist....</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>72</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>33</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0013D834">Lily</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>9</ReferenceCount>
+        <CompiledSize>274</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">DxAJAAIAOQBuAAAAABUACgByAQBzAQACACAwFQAKAHIDAHMhAAIAIDAVAAoAcgMAcyIAAgAgMRUACgByAwBzNQACACAxFQAKAHIDAHMvAAIAIDAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgQAFQATAHIDAHMTAAsAIHIDAHMTACAxIC0WABAAAQAMACByBQBzAgAgMCA9PRUACgByBQBzAgACACAxGQAAABwAAQCoEQUAAQByBgAcAAIAqBEFAAEAcgcAWRALAAEAcggAAAAAAAAAWRALAAEAcgkAAAAAAAAAFgAQAAEADAAgcgMAcxMAIDAgPT0VAAoAcgMAcxIAAgAgMBkAAAAcAAEA+hEAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">; -------------------------------------------------------------------------\/ (8_15_10) Added to fix missing commands. -ETB
+
+SetAV Assistance 0
+
+; -------------------------------------------------------------------------/\
+
+set LilyREF.Waiting to 0
+set VNPCFollowers.bLilyHired to 0
+set VNPCFollowers.bLilyFired to 1
+set VNPCFollowers.bLilyL38 to 1
+Set VNPCFollowers.bHumanoidInParty to 0
+LilyREF.SetPlayerTeammate 0
+LilyRef.RemoveFromFaction FollowerFaction
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+
+if VDialogueLily.bLeo == 0
+     set VDialogueLily.bLeo to 1
+endif
+
+LilyREF.removeperk CompanionSuite
+player.removeperk StealthGirl
+showmessage FollowerMessagePerkLilyRemove
+showmessage FollowerMessageLeaveLily38
+
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+
+LilyREF.ResetAI</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="0013D830">LilyRef</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0013E510">vDialogueLily</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C60F">StealthGirl</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C621">FollowerMessagePerkLilyRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00171C41">FollowerMessageLeaveLily38</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>2</ReferenceCount>
+          <CompiledSize>13</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAE8SBQABAHICAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">; (10_1_10) Adding comment to force esp to be rebuilt/added to post-release esms. -ETB
+
+; JSH 11.05.10 - Teleport Lily to Lucky 38 suite.
+LilyREF.MoveToMarkerWithFade L38SuiteCompanionMarker01REF</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0013D830">LilyRef</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0015672F">L38SuiteCompanionMarker01REF</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Speaker Tag="ANAM">
+      <Reference ID="0013D834">Lily</Reference>
+    </Speaker>
+  </Subrecords>
+</Record>

@@ -26,9 +26,9 @@
       <Flags>Female, AutoCalcStats, PCLevelMult</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>5</CalcMin>
-      <CalcMax>50</CalcMax>
+      <CalcMax>40</CalcMax>
       <SpeedMultiplier>100</SpeedMultiplier>
       <Karma>500</Karma>
       <DispositionBase>35</DispositionBase>
@@ -74,8 +74,8 @@
     <Contents>
       <Item>
         <Data Tag="CNTO">
-          <Item ID="00078CC2">AmmoSmallEnergyCellRobot</Item>
-          <Count>50</Count>
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>30</Count>
         </Data>
       </Item>
       <Item>
@@ -120,6 +120,12 @@
     </AIData>
     <Packages>
       <Package Tag="PKID">
+        <Reference ID="0C01C71D">TTWFollowersPackageStarPaladinCrossL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C70F">TTWFollowersPackageStarPaladinCrossFiredNV</Reference>
+      </Package>
+      <Package Tag="PKID">
         <Reference ID="00062739">FollowersStarPaladinCrossFiredWaitCitadelLab</Reference>
       </Package>
       <Package Tag="PKID">
@@ -145,7 +151,7 @@
       <Reference ID="06015673">BrotherhoodSoldierDC</Reference>
     </Class>
     <Data Tag="DATA">
-      <BaseHealth>400</BaseHealth>
+      <BaseHealth>250</BaseHealth>
       <Strength>5</Strength>
       <Perception>7</Perception>
       <Endurance>6</Endurance>

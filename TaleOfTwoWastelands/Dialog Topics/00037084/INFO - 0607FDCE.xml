@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="000371D1">Followers</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="06054E60">INFO - 06054E60</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -79,56 +76,50 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>7</ReferenceCount>
-        <CompiledSize>288</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>228</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHICAHMvAAIAIDEcAAEAdhEFAAEAcgMAFQAKAHIBAHMIAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgIAcxIAAgAgMRUAEwByAgBzEwALACByAgBzEwAgMSArFQAKAHIEAHMKAAIAIDEVAAoAcgQAcwsAAgAgMBUACgByAQBzAQACACAxFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwHAABALEQBQABAHIFABUACgByAQBzAwACACAwFQAKAHIBAHMEAAIAIDEcAAEAxREHAAEAbgEAAAAcAAEAiRAKAAIAcgYAbgEAAAAcAAEAfxEKAAIAcgcAbgEAAAD6EQAA</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-StarPaladinCrossREF.AddPerk CompanionSuite
-Set StarPaladinCrossREF.Waiting to 0
+      <CompiledScript Tag="SCDA">HAABAKsQBwABAG4BAAAAHAABAMURBwABAG4BAAAAHAABAFERBwABAG4BAAAAHAABAHYRBQABAHICABwAAQB/EQoAAgByAwBuAQAAABwAAQB/EQoAAgByBABuAQAAABUACgByAQBzCAACACAwFQAKAHIBAHMFAAIAIDEVAAoAcgEAcwcAAgAgMBUACgByAQBzBgACACAwFQAKAHIBAHMDAAIAIDAVAAoAcgEAcwQAAgAgMRUACgByAQBzAQACACAxFQAKAHIFAHMKAAIAIDEVAAoAcgUAcwsAAgAgMBwAAQBeEAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">
 StarPaladinCrossREF.IgnoreCrime 1
+StarPaladinCrossREF.SetPlayerTeammate 1
 StarPaladinCrossREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+StarPaladinCrossREF.AddPerk CompanionSuite
+StarPaladinCrossREF.AddToFaction FollowerFaction 1
+StarPaladinCrossREF.AddToFaction TeammateFaction 1
 
-set Followers.StarPaladinCrossHired to 1
-set Followers.StarPaladinCrossFired to 0
-set StarPaladinCrossREF.HasBeenHired to 1
+set StarPaladinCrossREF.Waiting to 0
 set StarPaladinCrossREF.IsFollowingDefault to 1
 set StarPaladinCrossREF.IsFollowingLong to 0
 set StarPaladinCrossREF.IsFollowingShort to 0
-StarPaladinCrossREF.SetCombatStyle FollowersCombatStyleRanged
 set StarPaladinCrossREF.CombatStyleRanged to 0
 set StarPaladinCrossREF.CombatStyleMelee to 1
-StarPaladinCrossREF.SetPlayerTeammate 1
-StarPaladinCrossREF.SetFactionRank TeammateFaction 1
-StarPaladinCrossREF.AddToFaction FollowerFaction 1
 
-ResetAI</ScriptSource>
+set StarPaladinCrossREF.HasBeenHired to 1
+set Followers.StarPaladinCrossHired to 1
+set Followers.StarPaladinCrossFired to 0
+
+StarPaladinCrossREF.evp
+
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
           <Reference ID="06062735">StarPaladinCrossREF</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="00037136">FollowerFaction</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -136,12 +127,35 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>4</ReferenceCount>
+          <CompiledSize>79</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKw==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.AddPerk TTWFollowerPerkStarPaladinCross
+showmessage TTWFollowerMessagePerkStarPaladinCrossAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C730">TTWFollowerPerkStarPaladinCross</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FD">TTWFollowerMessagePerkStarPaladinCrossAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">I would like your assistance once again, Paladin Cross.</Prompt>

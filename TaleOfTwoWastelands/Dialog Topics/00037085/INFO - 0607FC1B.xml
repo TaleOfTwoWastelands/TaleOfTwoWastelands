@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="060371D2">FollowersHireCharon</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="0602FEE0">INFO - 0602FEE0</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -49,64 +46,49 @@
     </Conditions>
     <BeginScript>
       <Data Tag="SCHR">
-        <ReferenceCount>9</ReferenceCount>
-        <CompiledSize>315</CompiledSize>
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>228</CompiledSize>
         <VariableCount>0</VariableCount>
         <Type>Object</Type>
         <Flags>Enabled</Flags>
       </Data>
-      <CompiledScript Tag="SCDA">FQAKAHIDAHMvAAIAIDEcAAEAdhEFAAEAcgQAFQAKAHIBAHMLAAIAIDAcAAEAqxAHAAEAbgEAAAAcAAEAUREHAAEAbgEAAAAVAAoAcgMAcxIAAgAgMRUAEwByAwBzEwALACByAwBzEwAgMSArFQAKAHIFAHMCAAIAIDEVAAoAcgUAcwMAAgAgMBUACgByAgBzBwACACAxFQAKAHICAHMLAAIAIDEVAAoAcgIAcw0AAgAgMBUACgByAgBzDAACACAwHAACALEQBQABAHIGABUACgByAgBzCQACACAxFQAKAHICAHMKAAIAIDAcAAIAxREHAAEAbgEAAAAcAAIAfxEKAAIAcgcAbgEAAAAcAAEAiRAKAAIAcgcAbgEAAAAcAAEAfxEKAAIAcggAbgEAAAA3EAUAAQByCQD6EQAA</CompiledScript>
-      <ScriptSource Tag="SCTX">set VNPCFollowers.bHumanoidInParty to 1;
-ButchREF.AddPerk CompanionSuite
-Set ButchREF.Waiting to 0
-ButchREF.IgnoreCrime 1
-ButchREF.SetIgnoreFriendlyHits 1
-set VNPCFollowers.bPlayerHasFollower to 1
-set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+      <CompiledScript Tag="SCDA">HAABAKsQBwABAG4BAAAAHAABAMURBwABAG4BAAAAHAABAFERBwABAG4BAAAAHAABAHYRBQABAHICABwAAQB/EQoAAgByAwBuAQAAABwAAQB/EQoAAgByBABuAQAAABUACgByAQBzDwACACAwFQAKAHIBAHMLAAIAIDEVAAoAcgEAcw0AAgAgMBUACgByAQBzDAACACAwFQAKAHIBAHMJAAIAIDEVAAoAcgEAcwoAAgAgMBUACgByAQBzBwACACAxFQAKAHIFAHMCAAIAIDEVAAoAcgUAcwMAAgAgMBwAAQBeEAAA</CompiledScript>
+      <ScriptSource Tag="SCTX">
+CharonREF.IgnoreCrime 1
+CharonREF.SetPlayerTeammate 1
+CharonREF.SetIgnoreFriendlyHits 1
+CharonREF.AddPerk CompanionSuite
+CharonREF.AddToFaction FollowerFaction 1
+CharonREF.AddToFaction TeammateFaction 1
 
-set Followers.CharonHired to 1
-set Followers.CharonFired to 0
-set CharonREF.HasBeenHired to 1
+set CharonREF.Waiting to 0
 set CharonREF.IsFollowingDefault to 1
 set CharonREF.IsFollowingLong to 0
 set CharonREF.IsFollowingShort to 0
-CharonREF.SetCombatStyle FollowersCombatStyleRanged
 set CharonREF.CombatStyleRanged to 1
 set CharonREF.CombatStyleMelee to 0
-CharonREF.SetPlayerTeammate 1
-CharonREF.AddToFaction TeammateFaction 1
-ButchREF.SetFactionRank TeammateFaction 1
-ButchREF.AddToFaction FollowerFaction 1
-StopQuest FollowersHireCharon
 
-ResetAI</ScriptSource>
+set CharonREF.HasBeenHired to 1
+set Followers.CharonHired to 1
+set Followers.CharonFired to 0
+
+CharonREF.evp
+</ScriptSource>
       <References>
         <Reference Tag="SCRO">
-          <Reference ID="0602A4E8">ButchRef</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
           <Reference ID="0602B8E1">CharonRef</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000B16D0">VNPCFollowers</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="0015C571">CompanionSuite</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="000371D1">Followers</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+          <Reference ID="00037136">FollowerFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
           <Reference ID="00046312">TeammateFaction</Reference>
         </Reference>
         <Reference Tag="SCRO">
-          <Reference ID="00037136">FollowerFaction</Reference>
-        </Reference>
-        <Reference Tag="SCRO">
-          <Reference ID="060371D2">FollowersHireCharon</Reference>
+          <Reference ID="000371D1">Followers</Reference>
         </Reference>
       </References>
     </BeginScript>
@@ -114,12 +96,42 @@ ResetAI</ScriptSource>
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>5</ReferenceCount>
+          <CompiledSize>88</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">HAABAHYRBQABAHICAFkQCwABAHIDAAAAAAAAABUACgByBABzLwACACAxFQAKAHIEAHMSAAIAIDEVABMAcgQAcxMACwAgcgQAcxMAIDEgKzcQBQABAHIFAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.addperk TTWFollowerPerkCharon
+showmessage TTWFollowerMessagePerkCharonAdd
+
+set VNPCFollowers.bHumanoidInParty to 1
+set VNPCFollowers.bPlayerHasFollower to 1
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers + 1)
+
+StopQuest FollowersHireCharon
+
+
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C734">TTWFollowerPerkCharon</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C705">TTWFollowerMessagePerkCharonAdd</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060371D2">FollowersHireCharon</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
   </Subrecords>

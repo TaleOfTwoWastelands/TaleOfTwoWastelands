@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="0C01C739">TTWFollowerCharonAbility</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerCharonAbility</EditorID>
+    <Name Tag="FULL">The Contract</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.899999976</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.800000012</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.699999988</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.600000024</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.5</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.400000006</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.300000012</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.200000003</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="001630EF">IncreaseDamageThreshold</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Damage</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>LessThanOrEqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>0.100000001</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetHealthPercentage</Type>
+              <UnusedArg1>AAAAAA==</UnusedArg1>
+              <UnusedArg2>AAAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

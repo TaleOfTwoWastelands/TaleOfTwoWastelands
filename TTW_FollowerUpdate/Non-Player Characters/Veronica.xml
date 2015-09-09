@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="000E32AA">Veronica</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">Veronica</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Veronica</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>Female, AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>5</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="0014B03E">BrotherhoodSteelAllyFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="0014F3F1">FemaleUniqueVeronica</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00000019">Caucasian</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="001476AC">VeronicaSCRIPT</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000E6062">188GeneralStoremisc</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0014823E">OutfitVeronicaRobes</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="0016A26F">OutfitVeronicaHood</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>24</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E5A">WeapPowerFistVeronica</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E5B">Weap10mmPistolVeronica</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Foolhardy</Confidence>
+      <EnergyLevel>10</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0015B6D8">FollowersVeronicaForceGreetIntercom</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0014B050">FollowersVeronicaConfrontElder</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0014B051">FollowersVeronicaForceGreet</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0014779F">FollowersVeronicaForceReact</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0016740E">FollowersVeronicaForceDressReact</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0016895C">FollowersVeronicaL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001476AE">FollowersVeronicaFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001476AF">FollowersVeronicaFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001476AB">FollowersVeronicaFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C715">TTWFollowersPackageVeronicaFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0012943C">DefaultStayAtEditorLocationWeaponUnequipped</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="001476AA">VeronicaClass</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>190</BaseHealth>
+      <Strength>7</Strength>
+      <Perception>5</Perception>
+      <Endurance>6</Endurance>
+      <Charisma>3</Charisma>
+      <Intelligence>6</Intelligence>
+      <Agility>7</Agility>
+      <Luck>3</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>5</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>46</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>14</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>18</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>10</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>16</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>48</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B6DE4">EyebrowF</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Type Tag="HNAM">
+        <Reference ID="00022E4F">FemaleB</Reference>
+      </Type>
+      <Length Tag="LNAM">0.454400003</Length>
+      <Color Tag="HCLR">
+        <Red>24</Red>
+        <Green>16</Green>
+        <Blue>7</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <Eyes Tag="ENAM">
+      <Reference ID="00004256">EyeDarkBrown</Reference>
+    </Eyes>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">vfk5PxNCxj8AF326NwxxP+qccr6G790+aVgWQEisAb9gJnA98v2KvpDKtD60/R++QOQjvdnIVb8mc5C9kIEmwKppzEC2tD7Ap0SSPiuIp74gdgzAu5nqPxvcNT+mOSW/g4ufwDezLcDbMcHA2CrDvlHeB79F/Lw/htwGP2IKWT++WC9Ay2VxwHmu6b9g9WXA4sNjP4DdL0AjKIXAWZmOQHDrVb8fCPE/pR0OQIBp5EBjbXVA9M8TQFviiEAIGhM+fyS7wKhnhkA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">bBKRvjr8Cr8ZORw/KHvyPrDnDD67LJA/LvV9vhO51b/z8vk+OPvuvbhEDj0Yvu2+1ePWvibjKT+QWOE/pHywv+YgJT9nzIO/e+qwP14+IT4sDEg/HIxOP1jLFT+2ScI+Vx+Mv5icK75xJci/FNTPPunPBkAWgws/HgFXP+qbS79Rqfe/nLCdviWJCMCvs0vAytoevyCUVb39KFNA4h3sPvdilr+szYo/SKWdwH6zFMCEHdm/GgoWwMlmgr+6KQJAifHWP1GbQkA=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

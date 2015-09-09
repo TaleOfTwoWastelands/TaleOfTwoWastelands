@@ -41,10 +41,10 @@
       <Flags>Swims, Walks, PCLevelMult, AllowPCDialogue, AllowPickpocket</Flags>
       <Fatigue>50</Fatigue>
       <BarterGold>0</BarterGold>
-      <Level>1000</Level>
+      <Level>750</Level>
       <CalcMin>6</CalcMin>
-      <CalcMax>50</CalcMax>
-      <SpeedMultiplier>100</SpeedMultiplier>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>70</SpeedMultiplier>
       <Karma>0</Karma>
       <DispositionBase>60</DispositionBase>
       <TemplateFlags>0</TemplateFlags>
@@ -78,14 +78,8 @@
       </Item>
       <Item>
         <Data Tag="CNTO">
-          <Item ID="000615A8">Ammo5mmRobot</Item>
-          <Count>1</Count>
-        </Data>
-      </Item>
-      <Item>
-        <Data Tag="CNTO">
-          <Item ID="000615AF">AmmoElectronChargePackRobot</Item>
-          <Count>50</Count>
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>60</Count>
         </Data>
       </Item>
       <Item>
@@ -98,7 +92,7 @@
     <AIData Tag="AIDT">
       <Aggression>Aggressive</Aggression>
       <Confidence>Foolhardy</Confidence>
-      <EnergyLevel>65</EnergyLevel>
+      <EnergyLevel>100</EnergyLevel>
       <Responsibility>50</Responsibility>
       <Mood>Neutral</Mood>
       <Services>0</Services>
@@ -117,6 +111,12 @@
       </Package>
       <Package Tag="PKID">
         <Reference ID="06096E70">FollowersFawkesGreetPlayer</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C71C">TTWFollowersPackageFawkesL38</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C710">TTWFollowersPackageFawkesFiredNV</Reference>
       </Package>
       <Package Tag="PKID">
         <Reference ID="0609427F">FollowersFawkesFiredWaitMuseum</Reference>
@@ -165,7 +165,7 @@
         <Magic>50</Magic>
         <Stealth>50</Stealth>
       </Skill>
-      <Health>500</Health>
+      <Health>30</Health>
       <Damage>4</Damage>
       <Strength>9</Strength>
       <Perception>3</Perception>
@@ -177,14 +177,14 @@
     </Data>
     <AttackReach Tag="RNAM">96</AttackReach>
     <CombatStyle Tag="ZNAM">
-      <Reference ID="000269BA">CSSupermutantMelee</Reference>
+      <Reference ID="00033DE3">FollowersCombatStyleMelee</Reference>
     </CombatStyle>
     <BodyPartData Tag="PNAM">
       <Reference ID="0002026E">SupermutantrBodyPartData</Reference>
     </BodyPartData>
     <TurningSpeed Tag="TNAM">75</TurningSpeed>
     <BaseScale Tag="BNAM">1</BaseScale>
-    <FootWeight Tag="WNAM">3</FootWeight>
+    <FootWeight Tag="WNAM">15</FootWeight>
     <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
     <SoundLevel Tag="NAM5">Normal</SoundLevel>
     <SoundTemplate Tag="CSCR">

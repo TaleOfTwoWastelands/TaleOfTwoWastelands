@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="00036BB3">ButchScript</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">ButchScript</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>5</ReferenceCount>
+        <CompiledSize>258</CompiledSize>
+        <VariableCount>13</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAMAIUAAAAWAA8ABwALACBYxhEAACAxID09UBEAAIIRDQACABkAegAAAAAAAFlAghENAAIAGgB6AAAAAAAAWUCCEQ0AAgAbAHoAAAAAAABZQIIRDQACAB0AegAAAAAAAFlAghENAAIAHAB6AAAAAAAAWUCCEQ0AAgAeAHoAAAAAAABZQBkAAAARAAAAEAAIAAoAYwAAAAAAFgAQAAUADAAgcgIAcw4AIDEgPT0VAAoAcgIAcxgAAgAgMBUACgByAgBzDgACACAwWRALAAEAcgMAAAAAAAAAHAABAKgRBQABAHIEAFkQCwABAHIFAAAAAAAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="ButchScript.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WeaponOut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleRanged</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleMelee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingDefault</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingShort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingLong</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>11</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>13</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerSwitchAggressive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00072524">FollowerMessageDeadButch</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C731">TTWFollowerPerkButch</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C6FC">TTWFollowerMessagePerkButchRemove</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

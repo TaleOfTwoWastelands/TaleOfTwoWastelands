@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="NPC_">
+  <Flags>Compressed</Flags>
+  <FormID ID="000E60EF">RaulTejada</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">RaulTejada</EditorID>
+    <ObjectBounds Tag="OBND">
+      <Point1>
+        <X>-23</X>
+        <Y>-17</Y>
+        <Z>0</Z>
+      </Point1>
+      <Point2>
+        <X>23</X>
+        <Y>17</Y>
+        <Z>132</Z>
+      </Point2>
+    </ObjectBounds>
+    <Name Tag="FULL">Raul</Name>
+    <Model>
+      <FileName Tag="MODL">Characters\_Male\Skeleton.NIF</FileName>
+    </Model>
+    <BaseStats Tag="ACBS">
+      <Flags>AutoCalcStats, PCLevelMult</Flags>
+      <Fatigue>50</Fatigue>
+      <BarterGold>0</BarterGold>
+      <Level>750</Level>
+      <CalcMin>14</CalcMin>
+      <CalcMax>40</CalcMax>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <Karma>0</Karma>
+      <DispositionBase>35</DispositionBase>
+      <TemplateFlags>0</TemplateFlags>
+    </BaseStats>
+    <Factions>
+      <Faction Tag="SNAM">
+        <Faction ID="001736FF">DontTazeMeBroFaction</Faction>
+        <Rank>0</Rank>
+      </Faction>
+    </Factions>
+    <VoiceType Tag="VTCK">
+      <Reference ID="00148136">GhoulUniqueRaul</Reference>
+    </VoiceType>
+    <Race Tag="RNAM">
+      <Reference ID="00003B3E">Ghoul</Reference>
+    </Race>
+    <Unarmed>
+      <AttackAnimation Tag="EAMT">255</AttackAnimation>
+    </Unarmed>
+    <Script Tag="SCRI">
+      <Reference ID="000E64E6">RaulScript</Reference>
+    </Script>
+    <Contents>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="000FD561">OutfitNVJumpsuitRaulPetroChico</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E54">AmmoCompanion</Item>
+          <Count>12</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E57">WeapNV44RevolverRaul</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+      <Item>
+        <Data Tag="CNTO">
+          <Item ID="00176E58">WeapLeadPipeRaul</Item>
+          <Count>1</Count>
+        </Data>
+      </Item>
+    </Contents>
+    <AIData Tag="AIDT">
+      <Aggression>Unaggressive</Aggression>
+      <Confidence>Average</Confidence>
+      <EnergyLevel>50</EnergyLevel>
+      <Responsibility>50</Responsibility>
+      <Mood>Neutral</Mood>
+      <Services>0</Services>
+      <Teaches>Barter</Teaches>
+      <MaxTrainingLevel>0</MaxTrainingLevel>
+      <Assistance>HelpsNobody</Assistance>
+      <AggroRadiusBehavior>0</AggroRadiusBehavior>
+      <AggroRadius>0</AggroRadius>
+    </AIData>
+    <Packages>
+      <Package Tag="PKID">
+        <Reference ID="0015E53B">RaulHooverBark</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015E53C">RaulTabithaBark</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015D84D">RaulTalkAboutSterling</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0015D84C">RaulTalkAboutLoyal</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000E6CBD">FollowersRaulFollowPlayerLONG</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000E6527">FollowersRaulFollowPlayerDEFAULT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000E6CBE">FollowersRaulFollowPlayerWAIT</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="001674CE">FollowersRaulL38Package</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="0C01C717">TTWFollowersPackageRaulFiredDC</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000E6CBC">FollowersRaulGoingHomePackage</Reference>
+      </Package>
+      <Package Tag="PKID">
+        <Reference ID="000AD6C6">BMRaulSitPackage</Reference>
+      </Package>
+    </Packages>
+    <Class Tag="CNAM">
+      <Reference ID="0015D49A">RaulClass</Reference>
+    </Class>
+    <Data Tag="DATA">
+      <BaseHealth>200</BaseHealth>
+      <Strength>6</Strength>
+      <Perception>6</Perception>
+      <Endurance>4</Endurance>
+      <Charisma>2</Charisma>
+      <Intelligence>7</Intelligence>
+      <Agility>8</Agility>
+      <Luck>5</Luck>
+    </Data>
+    <Skills Tag="DNAM">
+      <Barter>
+        <Value>9</Value>
+        <Offset>0</Offset>
+      </Barter>
+      <BigGuns>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </BigGuns>
+      <EnergyWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </EnergyWeapons>
+      <Explosives>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Explosives>
+      <Lockpick>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </Lockpick>
+      <Medicine>
+        <Value>19</Value>
+        <Offset>0</Offset>
+      </Medicine>
+      <MeleeWeapons>
+        <Value>17</Value>
+        <Offset>0</Offset>
+      </MeleeWeapons>
+      <Repair>
+        <Value>90</Value>
+        <Offset>0</Offset>
+      </Repair>
+      <Science>
+        <Value>90</Value>
+        <Offset>0</Offset>
+      </Science>
+      <Guns>
+        <Value>92</Value>
+        <Offset>0</Offset>
+      </Guns>
+      <Sneak>
+        <Value>21</Value>
+        <Offset>0</Offset>
+      </Sneak>
+      <Speech>
+        <Value>9</Value>
+        <Offset>0</Offset>
+      </Speech>
+      <Survival>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Survival>
+      <Unarmed>
+        <Value>13</Value>
+        <Offset>0</Offset>
+      </Unarmed>
+    </Skills>
+    <HeadParts>
+      <HeadPart Tag="PNAM">
+        <Reference ID="0009F921">BeardMustacheThin</Reference>
+      </HeadPart>
+      <HeadPart Tag="PNAM">
+        <Reference ID="000B5BEA">EyebrowM</Reference>
+      </HeadPart>
+    </HeadParts>
+    <Hair>
+      <Color Tag="HCLR">
+        <Red>75</Red>
+        <Green>50</Green>
+        <Blue>25</Blue>
+        <Alpha_Unused>0</Alpha_Unused>
+      </Color>
+    </Hair>
+    <CombatStyle Tag="ZNAM">
+      <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+    </CombatStyle>
+    <ImpactMaterialType Tag="NAM4">Organic</ImpactMaterialType>
+    <FaceGen>
+      <Geometry>
+        <Symmetric Tag="FGGS">AYzEP5tiDD5E5gO92PvYvhjHir5GPYE+gLUPQGgk0799XyrAP3ekv7q82L4zXOW/z/xJwHXwJD9DRZs/ykA1P+yvqEDHg62/V4YlvxiJJr9rbpE/eO5XwIKqhsBKerA/BA2WwPq/pECgOx9AP3j3Pz13wMBMGXdAej7IPzJ6QT+FZ/nArniHwGOPE0EmfBa/FPoHP4Fh0r9O+hU/YPQHwP3TdkCFU+o/n+mEQHNm40De/E4/utrBQIp+E0BcaMc/bscYQMdpsUA=</Symmetric>
+        <Asymmetric Tag="FGGA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Asymmetric>
+      </Geometry>
+      <Texture Tag="FGTS">rIGOPuy1ej+K/j3ApjVzveA6Kb8oGdy9GsZaPwjJAT+Z+Uq/GWSdPiBwPLzI+HC+CX6fPkyYw768BhA+VPAHvxgFB79wVS4+PFCwv+d3Jb4yQQa/EE7bP6M+/D3OpgE/Z3/svoSiG7/ZflW/mDWBvxgNAD4LUjG/9trgvk5A/j5HG14/Hp05P1QpBz8exoq/P0wZPwbsS7/ejfy/oIuYPuEXBj/02AC/0wNzP8Xfpj80ySg/Pmudv6yFLD36vRC/kKL/vkITer8=</Texture>
+    </FaceGen>
+    <Unknown Tag="NAM5">255</Unknown>
+    <Height Tag="NAM6">0</Height>
+    <Weight Tag="NAM7">0</Weight>
+  </Subrecords>
+</Record>

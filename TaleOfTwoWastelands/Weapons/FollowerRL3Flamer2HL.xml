@@ -18,14 +18,14 @@
         <Z>0</Z>
       </Point2>
     </ObjectBounds>
-    <Name Tag="FULL">Flamer</Name>
+    <Name Tag="FULL">Sergeant RL-3's Flamer</Name>
     <ObjectEffect Tag="EITM">
       <Reference ID="00044B30">EnchFlamerEffect</Reference>
     </ObjectEffect>
     <Ammo Tag="NAM0">
-      <Reference ID="00078CC1">AmmoFlamerFuelRobot</Reference>
+      <Reference ID="00176E54">AmmoCompanion</Reference>
     </Ammo>
-    <EquipmentType Tag="ETYP">BigGuns</EquipmentType>
+    <EquipmentType Tag="ETYP">MeleeWeapons</EquipmentType>
     <EmbeddedWeaponNode Tag="NNAM">ProjectileNode_HeadLaser</EmbeddedWeaponNode>
     <ImpactDataset Tag="INAM">
       <Reference ID="0006C303">FlamerScorchImpactDataSet</Reference>
@@ -93,7 +93,7 @@
         <Min>0.100000001</Min>
         <Max>0.5</Max>
       </SemiAutomaticFireDelay>
-      <Unknown3>0</Unknown3>
+      <Unknown3>0.100000001</Unknown3>
       <Mods>
         <Mod1>
           <Effect>None</Effect>

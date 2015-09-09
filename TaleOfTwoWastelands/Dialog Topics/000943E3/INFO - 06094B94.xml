@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="06094B94">INFO - 06094B94</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>0</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000943EB">FollowersHireRL3</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Surprise</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">That's a hard bargain. But if I wake up with that thing playing revelry at me one more time, I'll go insane.</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Happy</Emotion>
+          <EmotionValue>25</EmotionValue>
+          <ResponseNumber>2</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">I'll just transfer the codes, and you've got a deal, friend. Here's hoping for the best for you and the Sergeant alike!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>500</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetItemCount</Type>
+          <InventoryObject ID="0000000F">Caps001</InventoryObject>
+          <Unused>AAAAAA==</Unused>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>UseGlobal</Flags>
+          <Operator>GreaterThanOrEqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue ID="0004F4D0">SpeechSkillHigh</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetActorValue</Type>
+          <ActorValue>Barter</ActorValue>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Target</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="06036F86">FFER54NPC1</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>7</ReferenceCount>
+        <CompiledSize>73</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HAABAFIQCgACAHIDAG70AQAAHAACAJcQBQABAHIEABUACgByBQBzAQACACAxAxAKAAIAcgYAbgAAAAADEAoAAgByBwBuAAAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">player.removeitem Caps001 500
+RL3REF.addscriptpackage FollowersRL3GreetPlayer
+set FollowersHireRL3.RL3Sold to 1
+setEssential FFER54NPC1 0
+setEssential RL3Follower 0</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0000000F">Caps001</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06094BA8">FollowersRL3GreetPlayer</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000943EB">FollowersHireRL3</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06036F86">FFER54NPC1</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0009426E">RL3Follower</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>8</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAF4QAAA=</CompiledScript>
+        <ScriptSource Tag="SCTX">RL3REF.evp</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="06094285">RL3REF</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">How about this: I'll take him off your hands for 500 caps.</Prompt>
+    <RelatedSkillOrPerk Tag="KNAM">
+      <Reference ID="000004B0">AVBarter</Reference>
+    </RelatedSkillOrPerk>
+  </Subrecords>
+</Record>

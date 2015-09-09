@@ -18,13 +18,19 @@
     <Effects>
       <Effect>
         <Header Tag="PRKE">
-          <Type>Ability</Type>
+          <Type>EntryPoint</Type>
           <Rank>0</Rank>
           <Priority>0</Priority>
         </Header>
         <EffectData Tag="DATA">
-          <Ability ID="000630E7">BobbleEndurance</Ability>
+          <EntryPoint>ModifyDamageThresholdDefender</EntryPoint>
+          <Function>AddValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
         </EffectData>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">5</FunctionData>
+        </EntryPoint>
         <EndMarker Tag="PRKF" />
       </Effect>
     </Effects>

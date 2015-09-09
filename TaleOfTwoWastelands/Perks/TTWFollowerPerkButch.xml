@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="PERK">
+  <Flags>0</Flags>
+  <FormID ID="0C01C731">TTWFollowerPerkButch</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerPerkButch</EditorID>
+    <Name Tag="FULL">Tunnel Snakes Rule</Name>
+    <Description Tag="DESC">Butch is a gang member at heart, and he does better with a sense of belonging. While Butch is in your party, you both gain +5% Damage if he is using the same weapon as you, and you both gain +5% DR if he is using the same armor as you, with an extra +5% DR if they are Tunnel Snake outfits.</Description>
+    <Data Tag="DATA">
+      <IsTrait>No</IsTrait>
+      <MinLevel>0</MinLevel>
+      <Ranks>1</Ranks>
+      <IsPlayable>No</IsPlayable>
+      <IsHidden>No</IsHidden>
+    </Data>
+    <Effects>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>QuestStage</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Quest ID="0C01C735">TTWFollowerButchPerkQuest</Quest>
+          <QuestStage>0</QuestStage>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>Ability</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <Ability ID="0C01C73A">TTWFollowerButchAbility</Ability>
+        </EffectData>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+      <Effect>
+        <Header Tag="PRKE">
+          <Type>EntryPoint</Type>
+          <Rank>0</Rank>
+          <Priority>0</Priority>
+        </Header>
+        <EffectData Tag="DATA">
+          <EntryPoint>CalculateWeaponDamage</EntryPoint>
+          <Function>MultiplyValue</Function>
+          <PerkConditionTabCount>3</PerkConditionTabCount>
+        </EffectData>
+        <Conditions>
+          <Condition>
+            <RunOn Tag="PRKC">PerkOwner</RunOn>
+            <Conditions>
+              <Condition Tag="CTDA">
+                <Comparison>
+                  <Flags>0</Flags>
+                  <Operator>EqualTo</Operator>
+                  <Unused>AAAA</Unused>
+                  <ComparisonValue>1</ComparisonValue>
+                </Comparison>
+                <Function>
+                  <Type>GetQuestVariable</Type>
+                  <Quest ID="0C01C735">TTWFollowerButchPerkQuest</Quest>
+                  <VariableIndex>2</VariableIndex>
+                </Function>
+                <RunOn>Subject</RunOn>
+                <RunOnReference ID="00000000">NullReference</RunOnReference>
+              </Condition>
+            </Conditions>
+          </Condition>
+        </Conditions>
+        <EntryPoint>
+          <FunctionType Tag="EPFT">Float</FunctionType>
+          <FunctionData Tag="EPFD">1.04999995</FunctionData>
+        </EntryPoint>
+        <EndMarker Tag="PRKF" />
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0014F14A">INFO - 0014F14A</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000B16D0">VNPCFollowers</Reference>
+    </Quest>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Neutral</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Okay. Then I guess I'll be back at the 188. Maybe digging in some dirt for scrap metal or something.</ResponseText>
+        <ScriptNotes Tag="NAM2">Guilting.</ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetQuestVariable</Type>
+          <Quest ID="000B16D0">VNPCFollowers</Quest>
+          <VariableIndex>27</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="000E32AA">Veronica</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>11</ReferenceCount>
+        <CompiledSize>280</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">WRALAAEAcgMAAAAAAAAAFQAKAHIBAHMJAAIAIDAVAAoAcgQAcxsAAgAgMBUACgByBABzHAACACAxFQAKAHIEAHM0AAIAIDAVAAoAcgQAcy8AAgAgMBwAAQDFEQcAAQBuAAAAABwAAQCoEQUAAQByBQAcAAIAqBEFAAEAcgYAWRALAAEAcgcAAAAAAAAAHAABAIARBQABAHIIABwAAQAPEAkAAgA5AG4AAAAAFQATAHIEAHMTAAsAIHIEAHMTACAxIC0WABAAAQAMACByBABzEwAgMCA9PRUACgByBABzEgACACAwGQAAABwAAQD6EQAAFgAUAAEAEAAgWDoQBQABAHIJACAwID09eBAIAAIAcgoAcgsAGQAAAA==</CompiledScript>
+      <ScriptSource Tag="SCTX">; -------------------------------------------------------------------------\/ (8_15_10) Added to fix missing commands. -ETB
+
+showmessage FollowerMessageLeaveVeronica
+
+; -------------------------------------------------------------------------/\
+
+set VeronicaREF.Waiting to 0
+set VNPCFollowers.bVeronicaHired to 0
+set VNPCFollowers.bVeronicaFired to 1
+set VNPCFollowers.bVeronicaL38 to 0
+set VNPCFollowers.bHumanoidInParty to 0
+VeronicaREF.SetPlayerTeammate 0
+VeronicaREF.removeperk CompanionSuite
+player.removeperk ScribeAssistant
+showmessage FollowerMessagePerkVeronicaRemove
+VeronicaRef.RemoveFromFaction FollowerFaction
+VeronicaRef.SetAV Assistance 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+VeronicaREF.ResetAI
+
+; When Veronica leaves, if you haven't yet started the Brotherhood quest, stop being allies with the Brotherhood
+if GetStage VMS55 == 0
+     SetEnemy BrotherhoodSteelFaction PlayerFaction
+endif</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="000E32A9">VeronicaREF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0016A221">FollowerMessageLeaveVeronica</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000B16D0">VNPCFollowers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C613">ScribeAssistant</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C625">FollowerMessagePerkVeronicaRemove</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015D79D">VMS55</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001D3FE">BrotherhoodSteelFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0001B2A4">PlayerFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>7</ReferenceCount>
+          <CompiledSize>84</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">FgAIAAIABAAgRwIAWRALAAEAcgMAAAAAAAAAHAABAE8SBQABAHIEABgACAACAAQAIEcFAFkQCwABAHIGAAAAAAAAABwAAQBPEgUAAQByBwAZAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">; JSH 11.05.10 - Teleport Veronica back to 188.
+	if ( bInNVWasteland )
+		ShowMessage FollowerMessageLeaveVeronica;
+		VeronicaREF.MoveToMarkerWithFade VeronicaHomeMarkerREF;
+	elseif ( bInDCWasteland )
+		showmessage TTWFollowerMessageLeaveVeronicaDC
+		VeronicaREF.MoveToMarkerWithFade TTWHomeMarkerVeronicaDC
+	endif</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="000E32A9">VeronicaREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0016A221">FollowerMessageLeaveVeronica</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000E683A">VeronicaHomeMarkerREF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F6">TTWFollowerMessageLeaveVeronicaDC</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C725">TTWHomeMarkerVeronicaDC</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">I just think we should right now.</Prompt>
+  </Subrecords>
+</Record>

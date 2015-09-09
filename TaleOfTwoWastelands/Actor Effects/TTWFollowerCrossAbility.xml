@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SPEL">
+  <Flags>0</Flags>
+  <FormID ID="0C01C73B">TTWFollowerCrossAbility</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">TTWFollowerCrossAbility</EditorID>
+    <Name Tag="FULL">Second Skin</Name>
+    <Data Tag="SPIT">
+      <Type>Ability</Type>
+      <Cost>0</Cost>
+      <Level>0</Level>
+      <Flags>0</Flags>
+    </Data>
+    <Effects>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00031023">IncreaseCarryWeight</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>30</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>CarryWeight</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetEquipped</Type>
+              <InventoryObject ID="0016A0DE">AllPowerArmor</InventoryObject>
+              <UnusedArg2>AgAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+      <Effect>
+        <BaseEffect Tag="EFID">
+          <Reference ID="00015161">IncreaseAgility</Reference>
+        </BaseEffect>
+        <EffectData Tag="EFIT">
+          <Magnitude>1</Magnitude>
+          <Area>0</Area>
+          <Duration>0</Duration>
+          <Type>Self</Type>
+          <ActorValue>Agility</ActorValue>
+        </EffectData>
+        <Conditions>
+          <Condition Tag="CTDA">
+            <Comparison>
+              <Flags>0</Flags>
+              <Operator>EqualTo</Operator>
+              <Unused>AAAA</Unused>
+              <ComparisonValue>1</ComparisonValue>
+            </Comparison>
+            <Function>
+              <Type>GetEquipped</Type>
+              <InventoryObject ID="0016A0DE">AllPowerArmor</InventoryObject>
+              <UnusedArg2>AgAAAA==</UnusedArg2>
+            </Function>
+            <RunOn>Subject</RunOn>
+            <RunOnReference ID="00000000">NullReference</RunOnReference>
+          </Condition>
+        </Conditions>
+      </Effect>
+    </Effects>
+  </Subrecords>
+</Record>

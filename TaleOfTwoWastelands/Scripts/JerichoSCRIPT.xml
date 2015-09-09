@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="SCPT">
+  <Flags>0</Flags>
+  <FormID ID="0601FF02">JerichoSCRIPT</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <EditorID Tag="EDID">JerichoSCRIPT</EditorID>
+    <Data>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>369</CompiledSize>
+        <VariableCount>14</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">HQAAABAABgAAAEcAAAAWAA0ABAAJACBzAQAgMCA9PRYAFwACABMAIFgBEAUAAQByAQAgMTQwMCA8PRUABwBzAQACACAxXhAAABkAAAAZAAAAEQAAABAACAAKABIAAAAAABUACgByAgBzFAACACAxEQAAABAABgAMAIUAAAAWAA8ABwALACBYxhEAACAxID09UBEAAIIRDQACABkAegAAAAAAAFlAghENAAIAGgB6AAAAAAAAWUCCEQ0AAgAbAHoAAAAAAABZQIIRDQACAB0AegAAAAAAAFlAghENAAIAHAB6AAAAAAAAWUCCEQ0AAgAeAHoAAAAAAABZQBkAAAARAAAAEAAIAAoAYwAAAAAAFgAQAAUADAAgcgMAcwYAIDEgPT0VAAoAcgMAcxgAAgAgMBUACgByAwBzBgACACAwWRALAAEAcgQAAAAAAAAAHAABAKgRBQABAHIFAFkQCwABAHIGAAAAAAAAABkAAAARAAAA</CompiledScript>
+      <ScriptSource Tag="SCTX" External="JerichoSCRIPT.fnvscript" />
+      <LocalVariables>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>1</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">DoOnce</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>2</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">HasBeenHired</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>3</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">WeaponOut</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>4</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleRanged</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>5</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">CombatStyleMelee</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>6</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingDefault</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>7</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingShort</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>8</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">IsFollowingLong</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>9</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">Waiting</Name>
+        </Variable>
+        <Variable>
+          <Data Tag="SLSD">
+            <Index>10</Index>
+            <Flags>IsLongOrShort</Flags>
+          </Data>
+          <Name Tag="SCVR">FollowerSwitchAggressive</Name>
+        </Variable>
+      </LocalVariables>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="00000014">UnfoundReference</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="06003B31">DialogueMegaton</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0007252E">FollowerMessageDeadJericho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C733">TTWFollowerPerkJericho</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0C01C702">TTWFollowerMessagePerkJerichoRemove</Reference>
+        </Reference>
+      </References>
+    </Data>
+  </Subrecords>
+</Record>

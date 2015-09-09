@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Record Tag="INFO">
+  <Flags>NoVoiceFilter</Flags>
+  <FormID ID="0C01C757">INFO - 0C01C757</FormID>
+  <FormVersion>15</FormVersion>
+  <CompressionCorrupted>false</CompressionCorrupted>
+  <Subrecords>
+    <Data Tag="DATA">
+      <Type>Topic</Type>
+      <NextSpeaker>Target</NextSpeaker>
+      <Flags>Goodbye, InfoRefusal</Flags>
+    </Data>
+    <Quest Tag="QSTI">
+      <Reference ID="000371D1">Followers</Reference>
+    </Quest>
+    <PreviousDialogResponse Tag="PNAM">
+      <Reference ID="060BD047">INFO - 060BD047</Reference>
+    </PreviousDialogResponse>
+    <Responses>
+      <Response>
+        <ResponseData Tag="TRDT">
+          <Emotion>Surprise</Emotion>
+          <EmotionValue>50</EmotionValue>
+          <ResponseNumber>1</ResponseNumber>
+          <Sound ID="00000000">NullReference</Sound>
+          <UseEmotionAnimation>Yes</UseEmotionAnimation>
+        </ResponseData>
+        <ResponseText Tag="NAM1">Leaving a soldier behind? Very bad form. Making base in Canterbury Commons for when you come to your senses, sir!</ResponseText>
+        <ScriptNotes Tag="NAM2"></ScriptNotes>
+        <Edits Tag="NAM3"></Edits>
+      </Response>
+    </Responses>
+    <Conditions>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetGlobalValue</Type>
+          <Global ID="0C00DFAA">bInNVWasteland</Global>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetScriptVar</Type>
+          <Quest ID="06094285">RL3REF</Quest>
+          <VariableIndex>1</VariableIndex>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+      <Condition Tag="CTDA">
+        <Comparison>
+          <Flags>0</Flags>
+          <Operator>EqualTo</Operator>
+          <Unused>AAAA</Unused>
+          <ComparisonValue>1</ComparisonValue>
+        </Comparison>
+        <Function>
+          <Type>GetIsID</Type>
+          <ObjectReference ID="0009426E">RL3Follower</ObjectReference>
+          <UnusedArg2>AAAAAA==</UnusedArg2>
+        </Function>
+        <RunOn>Subject</RunOn>
+        <RunOnReference ID="00000000">NullReference</RunOnReference>
+      </Condition>
+    </Conditions>
+    <BeginScript>
+      <Data Tag="SCHR">
+        <ReferenceCount>6</ReferenceCount>
+        <CompiledSize>218</CompiledSize>
+        <VariableCount>0</VariableCount>
+        <Type>Object</Type>
+        <Flags>Enabled</Flags>
+      </Data>
+      <CompiledScript Tag="SCDA">FQAKAHICAHMWAAIAIDAVAAoAcgIAcxcAAgAgMRUACgByAgBzJQACACAwFQAKAHIBAHMIAAIAIDAVAAoAcgEAcwUAAgAgMRUACgByAQBzBwACACAwFQAKAHIBAHMGAAIAIDAcAAEAsRAFAAEAcgMAFQAKAHIBAHMDAAIAIDEVAAoAcgEAcwQAAgAgMBwAAQCoEQUAAQByBAAcAAEAxREHAAEAbgAAAAAcAAEAgBEFAAEAcgUAHAABAIARBQABAHIGABwAAQAPEAkAAgA5AG4AAAAAHAABAF4QAAA=</CompiledScript>
+      <ScriptSource Tag="SCTX">
+set Followers.RL3Hired to 0
+set Followers.RL3Fired to 1
+set Followers.bRL3L38 to 0
+set RL3REF.Waiting to 0
+set RL3REF.IsFollowingDefault to 1
+set RL3REF.IsFollowingLong to 0
+set RL3REF.IsFollowingShort to 0
+RL3REF.SetCombatStyle FollowersCombatStyleRanged
+set RL3REF.CombatStyleRanged to 1
+set RL3REF.CombatStyleMelee to 0
+RL3REF.removeperk CompanionSuite
+RL3REF.SetPlayerTeammate 0
+RL3REF.RemoveFromFaction FollowerFaction
+RL3REF.RemoveFromFaction TeammateFaction
+RL3REF.SetAV Assistance 0
+
+RL3REF.evp
+</ScriptSource>
+      <References>
+        <Reference Tag="SCRO">
+          <Reference ID="06094285">RL3REF</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000371D1">Followers</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="000C80B6">FollowersCombatStyleRanged</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="0015C571">CompanionSuite</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00037136">FollowerFaction</Reference>
+        </Reference>
+        <Reference Tag="SCRO">
+          <Reference ID="00046312">TeammateFaction</Reference>
+        </Reference>
+      </References>
+    </BeginScript>
+    <EndScript>
+      <EndScriptMarker Tag="NEXT" />
+      <EmbeddedScript>
+        <Data Tag="SCHR">
+          <ReferenceCount>11</ReferenceCount>
+          <CompiledSize>187</CompiledSize>
+          <VariableCount>0</VariableCount>
+          <Type>Object</Type>
+          <Flags>Enabled</Flags>
+        </Data>
+        <CompiledScript Tag="SCDA">HAABAKgRBQABAHIDAFkQCwABAHIEAAAAAAAAABYACAACAAQAIEcFAFkQCwABAHIGAAAAAAAAABwAAgCeEAUAAQByBwAYAAgAAgAEACBHCABZEAsAAQByCQAAAAAAAAAcAAIAnhAFAAEAcgoAGQAAABUACgByCwBzMAACACAwFQATAHILAHMTAAsAIHILAHMTACAxIC0WABAAAQAMACByCwBzEwAgMCA9PRUACgByCwBzEgACACAwGQAAAA==</CompiledScript>
+        <ScriptSource Tag="SCTX">
+player.RemovePerk TTWFollowerPerkRL3
+showmessage TTWFollowerMessagePerkRL3Remove
+
+if ( bInDCWasteland )
+	ShowMessage FollowerMessageLeaveRL3
+	RL3REF.MoveTo CCBazaarMarker
+elseif ( bInNVWasteland )
+	showmessage TTWFollowerMessageLeaveRL3NV
+	RL3REF.MoveTo TTWHomeMarkerRL3NV
+endif
+
+set VNPCFollowers.bCritterInParty to 0
+set VNPCFollowers.nCurrentFollowers to (VNPCFollowers.nCurrentFollowers - 1)
+if VNPCFollowers.nCurrentFollowers == 0
+     set VNPCFollowers.bPlayerHasFollower to 0
+endif
+
+</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="00000014">UnfoundReference</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06094285">RL3REF</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C72E">TTWFollowerPerkRL3</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6FA">TTWFollowerMessagePerkRL3Remove</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C001E0F">bInDCWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="060A54FD">FollowerMessageLeaveRL3</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="06059413">CCBazaarMarker</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C00DFAA">bInNVWasteland</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6F2">TTWFollowerMessageLeaveRL3NV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="0C01C6D6">TTWHomeMarkerRL3NV</Reference>
+          </Reference>
+          <Reference Tag="SCRO">
+            <Reference ID="000B16D0">VNPCFollowers</Reference>
+          </Reference>
+        </References>
+      </EmbeddedScript>
+    </EndScript>
+    <Prompt Tag="RNAM">You didn't mishear me. Leave.</Prompt>
+  </Subrecords>
+</Record>

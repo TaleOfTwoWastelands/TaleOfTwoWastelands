@@ -13,9 +13,6 @@
     <Quest Tag="QSTI">
       <Reference ID="06062736">FollowersHireCross</Reference>
     </Quest>
-    <PreviousDialogResponse Tag="PNAM">
-      <Reference ID="0607FBE3">INFO - 0607FBE3</Reference>
-    </PreviousDialogResponse>
     <Responses>
       <Response>
         <ResponseData Tag="TRDT">
@@ -87,12 +84,19 @@
       <EndScriptMarker Tag="NEXT" />
       <EmbeddedScript>
         <Data Tag="SCHR">
-          <ReferenceCount>0</ReferenceCount>
-          <CompiledSize>0</CompiledSize>
+          <ReferenceCount>1</ReferenceCount>
+          <CompiledSize>15</CompiledSize>
           <VariableCount>0</VariableCount>
           <Type>Object</Type>
           <Flags>Enabled</Flags>
         </Data>
+        <CompiledScript Tag="SCDA">WRALAAEAcgEAAAAAAAAA</CompiledScript>
+        <ScriptSource Tag="SCTX">showmessage FollowerMessageOneFollower</ScriptSource>
+        <References>
+          <Reference Tag="SCRO">
+            <Reference ID="0007FE0B">FollowerMessageOneFollower</Reference>
+          </Reference>
+        </References>
       </EmbeddedScript>
     </EndScript>
     <Prompt Tag="RNAM">I want you to come with me.</Prompt>
